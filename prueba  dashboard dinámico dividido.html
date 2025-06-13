@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reporte Diario de Requerimientos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-4">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4 text-center">📊 Reporte Diario de Requerimientos</h1>
+    
+    <!-- Botón de carga -->
+    <div class="mb-6 flex justify-center">
+      <input type="file" id="inputExcel" accept=".xlsx" class="bg-white rounded p-2 shadow" />
+    </div>
+
+    <!-- Gráfico general -->
+    <div class="bg-white p-4 rounded shadow mb-6">
+      <canvas id="estadoChart" height="100"></canvas>
+    </div>
+
+    <!-- Contenedor de reportes por estado -->
+    <div id="reportesContainer" class="space-y-4"></div>
+  </div>
+
+  <script>
+    const input = document.getElementById('inputExcel');
+    const reportesContainer = document.getElementById('reportesContainer');
+    let estadosAgrupados = {};
+
+    input.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      const data = await file.arrayBuffer();
+      const workbook = XLSX.read(data);
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const json = XLSX.utils.sheet_to_json(sheet);
+
+      // Agrupar por estado
+      estadosAgrupados = {};
+      json.forEach((fila) => {
+        const estado = fila.ESTADO || 'Sin Estado';
+        if (!estadosAgrupados[estado]) estadosAgrupados[estado] = [];
+        estadosAgrupados[estado].push(fila);
+      });
+
+      renderizarDashboard(estadosAgrupados);
+      renderizarGrafico(estadosAgrupados);
+    });
+
+    function renderizarDashboard(agrupados) {
+      reportesContainer.innerHTML = '';
+      Object.entries(agrupados).forEach(([estado, tareas]) => {
+        const progreso = Math.round((tareas.filter(t => t['Fecha Finalizado']).length / tareas.length) * 100);
+
+        const bloque = document.createElement('div');
+        bloque.className = "bg-white p-4 rounded shadow";
+
+        bloque.innerHTML = `
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-xl font-semibold">${estado} (${tareas.length})</h2>
+            <span class="text-sm text-gray-600">${progreso}% Completado</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+            <div class="bg-green-500 h-2.5 rounded-full" style="width: ${progreso}%;"></div>
+          </div>
+          <button class="verMas text-blue-500 underline text-sm mb-2">Ver más</button>
+          <div class="detalles hidden">
+            <table class="w-full text-sm text-left border">
+              <thead class="bg-gray-100 font-semibold">
+                <tr>
+                  <th class="p-1 border">Jira</th>
+                  <th class="p-1 border">Asignado a</th>
+                  <th class="p-1 border">Requerimiento</th>
+                  <th class="p-1 border">Inicio</th>
+                  <th class="p-1 border">Finalizado</th>
+                  <th class="p-1 border">Observación</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tareas.map(t => `
+                  <tr>
+                    <td class="p-1 border">${t['Jira Caja'] || ''}</td>
+                    <td class="p-1 border">${t['Asignado a'] || ''}</td>
+                    <td class="p-1 border">${t['Requerimiento'] || ''}</td>
+                    <td class="p-1 border">${t['Fecha inicio'] || ''}</td>
+                    <td class="p-1 border">${t['fecha Finalizado'] || ''}</td>
+                    <td class="p-1 border">${t['OBSERVACIÓN'] || ''}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        `;
+
+        bloque.querySelector('.verMas').addEventListener('click', () => {
+          const detalles = bloque.querySelector('.detalles');
+          detalles.classList.toggle('hidden');
+        });
+
+        reportesContainer.appendChild(bloque);
+      });
+    }
+
+    function renderizarGrafico(agrupados) {
+      const labels = Object.keys(agrupados);
+      const data = labels.map(k => agrupados[k].length);
+
+      const ctx = document.getElementById('estadoChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            label: '# de Requerimientos',
+            data,
+            backgroundColor: ['#f87171', '#facc15', '#4ade80'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { mode: 'index' }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { stepSize: 1 }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
