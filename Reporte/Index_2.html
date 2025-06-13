@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Interactivo - Reporte de Requerimientos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- html2pdf.js para exportación a PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- <script type="module" src="tasks.js"></script> -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #1f77b4;
+            padding-top: 20px;
+            transition: all 0.3s;
+        }
+        .sidebar a {
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #aec7e8;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #1f77b4;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        .task-card {
+            margin-bottom: 10px;
+        }
+        .progress {
+            height: 20px;
+            border-radius: 10px;
+        }
+        .plot-container {
+            width: 100%;
+            height: 500px;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+        }
+        .no-results {
+            color: #7f7f7f;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .loading {
+            text-align: center;
+            color: #1f77b4;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script type="module">
+        import tasks from './tasks.js';
+        console.log(tasks);
+    </script>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <h3 class="text-center text-white">Informe Requerimientos</h3>
+        <a href="#resumen">Resumen Ejecutivo</a>
+        <a href="#tareas">Tareas</a>
+        <a href="#estadisticas">Estadísticas</a>
+        <a href="#graficos">Gráficos</a>
+        <a href="#recomendaciones">Recomendaciones</a>
+        <!-- Eliminé el enlace a "Cargar PDF" para que no sea accesible -->
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="content">
+        <h1 class="mb-4">Reporte Final de Requerimientos</h1>
+
+        <!-- Resumen Ejecutivo -->
+        <div id="resumen" class="card">
+            <div class="card-header">
+                <h2>Resumen Ejecutivo</h2>
+            </div>
+            <div class="card-body" id="resumenContent">
+                <p>Cargando resumen...</p>
+            </div>
+        </div>
+
+        <!-- Tareas Interactivas -->
+        <div id="tareas" class="card">
+            <div class="card-header">
+                <h2>Tareas</h2>
+            </div>
+            <div class="card-body">
+                <!-- Filtros y Búsqueda -->
+                <div class="filter-container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="estadoFiltro">Filtrar por Estado:</label>
+                            <select id="estadoFiltro" class="form-select">
+                                <option value="">Todos</option>
+                                <option value="En Proceso">En Proceso</option>
+                                <option value="Entrenamiento">Entrenamiento</option>
+                                <option value="Pruebas Imagine">Pruebas Imagine</option>
+                                <option value="En Test">En Test</option>
+                                <option value="Pruebas Bolívar">Pruebas Bolívar</option>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="Pendiente Bolívar">Pendiente Bolívar</option>
+                                <option value="Pausado">Pausado</option>
+                                <option value="Detenido Bolívar">Detenido Bolívar</option>
+                                <option value="Estimar">Estimar</option>
+                                <option value="Finalizado">Finalizado</option>
+                                <option value="Paso a Producción">Paso a Producción</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="busqueda">Buscar:</label>
+                            <input type="text" id="busqueda" class="form-control" placeholder="Título o Persona">
+                        </div>
+                    </div>
+                </div>
+                <!-- Lista de Tareas -->
+                <div id="taskList">
+                    <p class="no-results">Cargando tareas...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumen Estadístico -->
+        <div id="estadisticas" class="card">
+            <div class="card-header">
+                <h2>Resumen Estadístico</h2>
+            </div>
+            <div class="card-body" id="estadisticasContent">
+                <p>Cargando estadísticas...</p>
+            </div>
+        </div>
+
+        <!-- Gráficos -->
+        <div id="graficos" class="card">
+            <div class="card-header">
+                <h2>Gráficos Interactivos</h2>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="exportToPDF()">Exportar a PDF</button>
+                <button class="btn btn-secondary mb-3" onclick="exportToPNG()">Exportar Gráficos a PNG</button>
+                <div class="loading" id="loadingPie" style="display: none;">Cargando gráfico de distribución...</div>
+                <div id="pie-chart" class="plot-container"></div>
+                <div class="loading" id="loadingBar" style="display: none;">Cargando gráfico de avance...</div>
+                <div id="bar-chart" class="plot-container"></div>
+                <div class="loading" id="loadingAssignments" style="display: none;">Cargando gráfico de asignaciones...</div>
+                <div id="assignments-chart" class="plot-container"></div>
+            </div>
+        </div>
+
+        <!-- Recomendaciones -->
+        <div id="recomendaciones" class="card">
+            <div class="card-header">
+                <h2>Recomendaciones</h2>
+            </div>
+            <div class="card-body">
+                <p>Se recomienda priorizar las tareas en estado 'Pendiente' y revisar la efectividad de los procesos de entrenamiento de IA.</p>
+            </div>
+        </div>
+
+        <!-- Sección para Cargar PDF (Comentada para ocultarla) -->
+        <!--
+        <div class="mb-3">
+            <label for="authKey" class="form-label">Clave de Autorización</label>
+            <input type="text" class="form-control" id="authKey" placeholder="Ingresa la clave">
+        </div>
+        <div class="mb-3">
+            <label for="pdfUpload" class="form-label">Cargar PDF</label>
+            <input type="file" class="form-control" id="pdfUpload" disabled>
+        </div>
+        <div id="pdfPreview"></div>
+        -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Actualizar el título con la fecha actual (sin hora)
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // +1 porque los meses van de 0 a 11
+        const year = today.getFullYear();
+        const formattedDate = `${day}/${month}/${year}`;
+        document.title = `Informe Interactivo - Reporte de Requerimientos ${formattedDate}`;
+        document.querySelector('.content h1').textContent = `Reporte de Requerimientos - ${formattedDate}`;
+
+        // Estructura de datos JSON (40 tareas tras añadir el nuevo requerimiento)
+        /* import tasks from './tasks.js'; */
+        /* console.log(tasks); */
+        // Renderizar Resumen Ejecutivo
+        function updateSummary() {
+            const resumenContent = document.getElementById('resumenContent');
+            const totalTasks = tasks.length;
+            const inProgress = tasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción"].includes(t.state)).length;
+            const pending = tasks.filter(t => ["Pendiente", "Pendiente Bolívar", "Pausado", "Detenido Bolívar", "En Test", "Pruebas Bolívar", "Estimar"].includes(t.state)).length;
+            const completed = tasks.filter(t => t.state === "Finalizado").length;
+            const avgProgress = tasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks || 0;
+
+            resumenContent.innerHTML = `
+                <p><strong>Total de Tareas:</strong> ${totalTasks}</p>
+                <p><strong>En Proceso:</strong> ${inProgress} (${((inProgress / totalTasks) * 100).toFixed(1)}%)</p>
+                <p><strong>Pendientes:</strong> ${pending} (${((pending / totalTasks) * 100).toFixed(1)}%)</p>
+                <p><strong>Completadas:</strong> ${completed} (${((completed / totalTasks) * 100).toFixed(1)}%)</p>
+                <p><strong>Avance Promedio:</strong> ${avgProgress.toFixed(1)}%</p>
+            `;
+        }
+
+        // Renderizar Tareas
+        function renderTasks(filteredTasks = tasks) {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            if (filteredTasks.length === 0) {
+                taskList.innerHTML = '<p class="no-results">No se encontraron tareas con los filtros aplicados.</p>';
+                return;
+            }
+            filteredTasks.forEach(task => {
+                const taskCard = document.createElement('div');
+                taskCard.className = 'card task-card';
+                taskCard.innerHTML = `
+                    <div class="card-body">
+                        <h5>${task.title}</h5>
+                        <p><strong>Persona:</strong> ${task.assigned} | <strong>Estado:</strong> ${task.state} | <strong>% Avance:</strong> ${task.progress}%</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: ${task.progress}%;" aria-valuenow="${task.progress}" aria-valuemin="0" aria-valuemax="100">${task.progress}%</div>
+                        </div>
+                        <a href="#" class="toggle-details" data-id="${task.id}">Más</a>
+                        <div id="details-${task.id}" style="display: none;">
+                            <p><strong>Fecha de Inicio:</strong> ${task.startDate}</p>
+                            ${task.endDate ? `<p><strong>Fecha de Fin:</strong> ${task.endDate}</p>` : ''}
+                            <p><strong>Observaciones:</strong> ${task.observations}</p>
+                        </div>
+                    </div>
+                `;
+                taskList.appendChild(taskCard);
+            });
+
+            document.querySelectorAll('.toggle-details').forEach(button => {
+                button.addEventListener('click', e => {
+                    e.preventDefault();
+                    const taskId = e.target.getAttribute('data-id');
+                    const details = document.getElementById(`details-${taskId}`);
+                    if (details.style.display === 'none') {
+                        details.style.display = 'block';
+                        e.target.textContent = 'Menos';
+                    } else {
+                        details.style.display = 'none';
+                        e.target.textContent = 'Más';
+                    }
+                });
+            });
+        }
+
+        // Actualizar Estadísticas
+        function updateStatistics() {
+            const estadisticasContent = document.getElementById('estadisticasContent');
+            const totalTasks = tasks.length;
+            const avgProgress = tasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks || 0;
+            const topAssigned = Object.entries(tasks.reduce((acc, t) => { acc[t.assigned] = (acc[t.assigned] || 0) + 1; return acc; }, {}))
+                .sort((a, b) => b[1] - a[1])[0];
+
+            estadisticasContent.innerHTML = `
+                <p><strong>Total de Tareas:</strong> ${totalTasks}</p>
+                <p><strong>Avance Promedio:</strong> ${avgProgress.toFixed(1)}%</p>
+                <p><strong>Persona con Más Tareas:</strong> ${topAssigned[0]} (${topAssigned[1]} tareas)</p>
+            `;
+        }
+
+        // Actualizar Gráficos
+        function updateCharts(filteredTasks) {
+            try {
+                // Gráfico de Pastel (siempre usa todas las tareas)
+                document.getElementById('loadingPie').style.display = 'none';
+                const allStates = ["En Proceso", "Paso a Producción", "Entrenamiento", "Pruebas Imagine", "En Test", "Pruebas Bolívar", "Pendiente", "Pendiente Bolívar", "Pausado", "Detenido Bolívar", "Estimar", "Finalizado"];
+                const stateCounts = allStates.reduce((acc, state) => {
+                    acc[state] = tasks.filter(task => task.state === state).length;
+                    return acc;
+                }, {});
+                const pieData = [{
+                    values: Object.values(stateCounts),
+                    labels: Object.keys(stateCounts),
+                    type: 'pie',
+                    marker: { colors: ['#1f77b4', '#7f7f7f', '#2ca02c', '#ff7f0e', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#bcbd22', '#17becf', '#ff9896', '#ffbb78'] },
+                    textinfo: 'label+percent',
+                    hoverinfo: 'label+value+percent',
+                    textposition: 'outside'
+                }];
+                const pieLayout = { 
+                    title: 'Distribución de Tareas por Estado', 
+                    height: 500, 
+                    showlegend: true,
+                    margin: { t: 50, l: 50, r: 50, b: 50 }
+                };
+                Plotly.newPlot('pie-chart', pieData, pieLayout, { responsive: true });
+
+                // Gráfico de Barras (Avance)
+                document.getElementById('loadingBar').style.display = 'none';
+                const barData = [{
+                    x: filteredTasks.map(task => task.progress),
+                    y: filteredTasks.map(task => task.title),
+                    type: 'bar',
+                    orientation: 'h',
+                    marker: { color: '#1f77b4' },
+                    text: filteredTasks.map(task => task.progress + '%'),
+                    textposition: 'auto'
+                }];
+                const barLayout = {
+                    title: 'Avance por Tarea (%)',
+                    height: Math.max(500, filteredTasks.length * 30),
+                    xaxis: { title: '% Avance', range: [0, 100] },
+                    yaxis: { title: 'Tarea', tickfont: { size: 10 }, automargin: true },
+                    margin: { l: 300 }
+                };
+                Plotly.newPlot('bar-chart', barData, barLayout, { responsive: true });
+
+                // Gráfico de Asignaciones
+                document.getElementById('loadingAssignments').style.display = 'none';
+                const assignedCounts = filteredTasks.reduce((acc, task) => {
+                    acc[task.assigned] = (acc[task.assigned] || 0) + 1;
+                    return acc;
+                }, {});
+                const assignmentsData = [{
+                    x: Object.keys(assignedCounts),
+                    y: Object.values(assignedCounts),
+                    type: 'bar',
+                    marker: { color: '#aec7e8' },
+                    text: Object.values(assignedCounts),
+                    textposition: 'auto'
+                }];
+                const assignmentsLayout = {
+                    title: 'Asignaciones por Persona',
+                    height: 500,
+                    xaxis: { title: 'Persona' },
+                    yaxis: { title: 'Número de Tareas' }
+                };
+                Plotly.newPlot('assignments-chart', assignmentsData, assignmentsLayout, { responsive: true });
+            } catch (error) {
+                console.error('Error al renderizar gráficos:', error);
+            }
+        }
+
+        // Filtrar Tareas
+        function filterTasks() {
+            const estado = document.getElementById('estadoFiltro').value;
+            const busqueda = document.getElementById('busqueda').value.toLowerCase();
+            const filteredTasks = tasks.filter(task => {
+                const matchesEstado = estado ? task.state === estado : true;
+                const matchesBusqueda = busqueda ? 
+                    task.title.toLowerCase().includes(busqueda) || task.assigned.toLowerCase().includes(busqueda) : 
+                    true;
+                return matchesEstado && matchesBusqueda;
+            });
+            renderTasks(filteredTasks);
+            updateCharts(filteredTasks);
+        }
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSummary();
+            renderTasks();
+            updateStatistics();
+            updateCharts(tasks);
+            document.getElementById('estadoFiltro').addEventListener('change', filterTasks);
+            document.getElementById('busqueda').addEventListener('input', filterTasks);
+        });
+
+        // Exportar a PDF con fecha dinámica
+        function exportToPDF() {
+            const element = document.querySelector('.content');
+            console.log('Iniciando exportación a PDF...');
+            html2pdf().set({
+                margin: [0.5, 0.5, 0.5, 0.5],
+                filename: `Reporte_Requerimientos_${formattedDate}.pdf`,
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            }).from(element).save().catch(error => {
+                console.error('Error exporting PDF:', error);
+                alert('Error al exportar a PDF. Verifique la consola para más detalles.');
+            });
+        }
+
+        // Exportar gráficos a PNG
+        function exportToPNG() {
+            Plotly.downloadImage('pie-chart', { format: 'png', width: 800, height: 600, filename: 'distribucion_tareas' });
+            Plotly.downloadImage('bar-chart', { format: 'png', width: 800, height: 600, filename: 'avance_tareas' });
+            Plotly.downloadImage('assignments-chart', { format: 'png', width: 800, height: 600, filename: 'asignaciones_personas' });
+        }
+
+        /*
+        // Cargar y previsualizar PDF con autenticación (ya comentado)
+        const authKeyInput = document.getElementById('authKey');
+        const pdfUpload = document.getElementById('pdfUpload');
+        const correctKey = 'tuClaveSecreta'; // Cambia esto por tu clave secreta
+
+        authKeyInput.addEventListener('input', function(e) {
+            if (e.target.value === correctKey) {
+                pdfUpload.disabled = false;
+                alert('Autorización exitosa. Puede cargar un PDF.');
+            } else {
+                pdfUpload.disabled = true;
+            }
+        });
+
+        pdfUpload.addEventListener('change', function(e) {
+            if (authKeyInput.value !== correctKey) {
+                alert('Acceso denegado. Ingrese la clave correcta.');
+                e.target.value = ''; // Limpia la selección
+                return;
+            }
+            const file = e.target.files[0];
+            if (file && file.type === 'application/pdf') {
+                const pdfPreview = document.getElementById('pdfPreview');
+                pdfPreview.innerHTML = `<p>Archivo cargado: <a href="${URL.createObjectURL(file)}" target="_blank">${file.name}</a></p>`;
+                alert('El PDF se ha cargado. Edite manualmente el JSON o las secciones del informe con los requerimientos del PDF.');
+            } else {
+                alert('Por favor, seleccione un archivo PDF válido.');
+            }
+        });
+        */
+    </script>
+</body>
+</html>
