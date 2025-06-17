@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Interactivo - Reporte de Requerimientos 16/06/2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #1f77b4;
+            padding-top: 20px;
+            transition: all 0.3s;
+            z-index: 1000; /* Asegura que esté sobre el contenido */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para mejor separación */
+        }
+        .sidebar a {
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        .sidebar a:hover {
+            background-color: #aec7e8;
+            color: #1f77b4; /* Cambia el color del texto al pasar el ratón */
+        }
+        .sidebar h3 {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #1f77b4;
+            color: white;
+            border-radius: 10px 10px 0 0;
+            padding: 15px 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .task-card {
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0; /* Borde suave para las tarjetas de tarea */
+            transition: transform 0.2s;
+        }
+        .task-card:hover {
+            transform: translateY(-3px); /* Efecto hover sutil */
+        }
+        .progress {
+            height: 20px;
+            border-radius: 10px;
+            background-color: #e9ecef;
+        }
+        .plot-container {
+            width: 100%;
+            height: 500px;
+            margin-bottom: 30px; /* Espacio entre gráficos */
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden; /* Asegura que el gráfico no se salga */
+        }
+        .filter-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e9f0f6;
+            border-radius: 8px;
+            border: 1px solid #d0e0f0;
+        }
+        .filter-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #1f77b4;
+        }
+        .no-results {
+            color: #7f7f7f;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px dashed #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .loading {
+            text-align: center;
+            color: #1f77b4;
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .date-status {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 0.85em; /* Ligeramente más pequeño */
+            padding: 3px 8px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .date-status.green { background-color: #28a745; } /* A tiempo */
+        .date-status.orange { background-color: #ffc107; color: #333; } /* Próximo a vencer */
+        .date-status.red { background-color: #dc3545; } /* Atrasado */
+
+        /* Estilos para el texto de las observaciones colapsables */
+        .toggle-details {
+            cursor: pointer;
+            color: #1f77b4;
+            font-weight: bold;
+        }
+        .toggle-details:hover {
+            text-decoration: underline !important;
+        }
+        .toggle-details i {
+            transition: transform 0.2s;
+        }
+        .toggle-details[aria-expanded="true"] i {
+            transform: rotate(180deg);
+        }
+        .details-content {
+            border-top: 1px dashed #e9ecef;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <h3 class="text-center text-white mb-4">Informe Requerimientos Imagine</h3>
+        <a href="#resumen"><i class="fas fa-chart-pie me-2"></i>Resumen Ejecutivo</a>
+        <a href="#tareas"><i class="fas fa-tasks me-2"></i>Tareas</a>
+        <a href="#estadisticas"><i class="fas fa-chart-bar me-2"></i>Estadísticas</a>
+        <a href="#graficos"><i class="fas fa-chart-line me-2"></i>Gráficos</a>
+        <a href="#recomendaciones"><i class="fas fa-lightbulb me-2"></i>Recomendaciones</a>
+    </nav>
+
+    <div class="content">
+        <h1 class="mb-4">Reporte - <span id="reportDate"></span></h1>
+
+        <div id="resumen" class="card">
+            <div class="card-header">
+                <h2>Resumen Ejecutivo</h2>
+            </div>
+            <div class="card-body" id="resumenContent">
+                <p class="loading">Cargando resumen...</p>
+            </div>
+        </div>
+
+        <div id="tareas" class="card">
+            <div class="card-header">
+                <h2>Tareas</h2>
+            </div>
+            <div class="card-body">
+                <div class="filter-container">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label for="estadoFiltro">Filtrar por Estado:</label>
+                            <select id="estadoFiltro" class="form-select form-select-sm">
+                                <option value="">Todos</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="unidadFiltro">Filtrar por Unidad:</label>
+                            <select id="unidadFiltro" class="form-select form-select-sm">
+                                <option value="">Todas</option>
+                                <option value="Bolivar">Bolívar</option>
+                                <option value="Alfa">Alfa</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="fechaInicioFiltro">Fecha Inicio Desde:</label>
+                            <input type="date" id="fechaInicioFiltro" class="form-control form-control-sm">
+                            </div>
+                        <div class="col-md-3">
+                            <label for="fechaFinFiltro">Fecha Fin Hasta:</label>
+                            <input type="date" id="fechaFinFiltro" class="form-control form-control-sm">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="busqueda">Buscar por Título o Persona:</label>
+                            <input type="text" id="busqueda" class="form-control form-control-sm" placeholder="Título o Persona">
+                        </div>
+                    </div>
+                </div>
+                <div id="taskList">
+                    <p class="no-results">Cargando tareas...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="estadisticas" class="card">
+            <div class="card-header">
+                <h2>Resumen Estadístico</h2>
+            </div>
+            <div class="card-body" id="estadisticasContent">
+                <p class="loading">Cargando estadísticas...</p>
+            </div>
+        </div>
+
+        <div id="graficos" class="card">
+            <div class="card-header">
+                <h2>Gráficos Interactivos</h2>
+            </div>
+            <div class="card-body">
+              <!--   <button class="btn btn-primary mb-3 me-2" onclick="exportToPDF()"><i class="fas fa-file-pdf me-2"></i>Exportar a PDF</button>
+                <button class="btn btn-secondary mb-3" onclick="exportToPNG()"><i class="fas fa-image me-2"></i>Exportar Gráficos a PNG</button> -->
+                <div class="loading" id="loadingPie" style="display: none;">Cargando gráfico de distribución...</div>
+                <div id="pie-chart" class="plot-container"></div>
+                <div class="loading" id="loadingBar" style="display: none;">Cargando gráfico de avance...</div>
+                <div id="bar-chart" class="plot-container"></div>
+                <div class="loading" id="loadingAssignments" style="display: none;">Cargando gráfico de asignaciones...</div>
+                <div id="assignments-chart" class="plot-container"></div>
+            </div>
+        </div>
+
+        <div id="recomendaciones" class="card">
+            <div class="card-header">
+                <h2>Recomendaciones</h2>
+            </div>
+            <div class="card-body">
+                <p>Se recomienda priorizar las tareas en estado 'Pendiente' y revisar la efectividad de los procesos de entrenamiento de IA. Preste atención a las tareas con fecha de fin próxima o vencida para evitar retrasos.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fechas para el reporte (usando la fecha actual para el reporte guardado)
+        // Como se solicitó previamente el 2025-06-16, mantenemos la fecha fija aquí para el reporte.
+        const today = new Date('2025-06-16T17:30:23'); // Fecha y hora actuales de Soacha, Cundinamarca, Colombia
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const year = today.getFullYear();
+        const formattedDate = `${day}/${month}/${year}`;
+        document.title = `Informe Interactivo - Reporte de Requerimientos ${formattedDate}`;
+        document.getElementById('reportDate').textContent = formattedDate;
+
+        // Estructura de datos JSON con unidades Bolívar o Alfa
+        let tasks = [
+            {
+                "id": "MDSB-780227",
+                "title": "Duplicación de actividades en Nativo",
+                "assigned": "JESUS PEÑA",
+                "state": "En Proceso",
+                "progress": 0,
+                "startDate": "17/03/2025",
+                "endDate": "20/06/2025", // Añadida fecha de fin para demostración
+                "observations": "Retomara validación de la incidencia.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "INTERNO",
+                "title": "Mejora informe glosa req GD772-104 Campos glosa aceptada y glosa conciliación",
+                "assigned": "JAIRO NIÑO",
+                "state": "En Proceso",
+                "progress": 50,
+                "startDate": "23/05/2025",
+                "endDate": "",
+                "observations": "Se realizaron pruebas exitosas en producción del nuevo informe, aunque aún no está disponible para descarga, Falta conectar correctamente el enlace que lo activa desde la interfaz del sistema",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "MDSB-820704",
+                "title": "Jira dia a dia Error en generación informe mail 472 (Prefactura)",
+                "assigned": "JESUS PEÑA",
+                "state": "En Proceso",
+                "progress": 0,
+                "startDate": "N/A",
+                "endDate": "",
+                "observations": "Retomara validación de la incidencia",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-69",
+                "title": "Extraccion de Imagenes (API)",
+                "assigned": "JESUS PEÑA",
+                "state": "En Proceso",
+                "progress": 90,
+                "startDate": "09/06/2025",
+                "endDate": "25/06/2025", // Añadida fecha de fin para demostración
+                "observations": "El metodo de incapacidades ya está listo en ambiente de desarrollo (DEV). Se creó un servicio provisional mientras se habilita la URL oficial para pruebas.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-60",
+                "title": "Descarga automatica de informes",
+                "assigned": "JAIRO NIÑO",
+                "state": "En Proceso",
+                "progress": 10,
+                "startDate": "11/06/2025",
+                "endDate": "",
+                "observations": "Pendiente envio del script para realizar solicitud de control de cambios para test.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "CNTI-271",
+                "title": "Vulnerabilidad, CVE-2016-4055 – DoS por expresiones regulares ineficientes en Moment.js (< v2.11.2)",
+                "assigned": "FABIO FORERO",
+                "state": "Pruebas Imagine", // Corregido el estado
+                "progress": 100,
+                "startDate": "13/06/2025",
+                "endDate": "13/06/2025", // Fecha pasada
+                "observations": "Queda disponible el 13 de Junio para pruebas por Imagine en ambientes de test",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "CNTI-96",
+                "title": "Vulnerabilidad, La política de seguridad de los contenidos contiene la directiva “unsafe” / imaginex",
+                "assigned": "DANILO RAMIREZ",
+                "state": "En Proceso", // Corregido el estado
+                "progress": 0,
+                "startDate": "13/06/2025",
+                "endDate": "",
+                "observations": "Actualmente se trabaja en la vulnerabilidad relacionada con la política de seguridad de contenido (CSP) y el uso de unsafe-inline, necesario para integraciones con Google reCAPTCHA y Clarity, se plantea justificar su permanencia y demostrar que el nivel de seguridad general sigue siendo aceptable (B+ cercano a A).",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Sistema automatizado de clasificación de correos médicos con IA",
+                "assigned": "WILSON APONTE",
+                "state": "En Proceso", // Corregido el estado
+                "progress": 70,
+                "startDate": "05/06/2025",
+                "endDate": "",
+                "observations": "Se detecto un problema en los análisis, se trabajo en una posible solución para ello, y es overfitting, que no es otra cosa que corregir estimaciones posiblemente equivocadas. Corregido por medio de scripts de testing y aquí el reporte de los resultados",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "PRV_2025_001",
+                "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO, VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO",
+                "assigned": "Mauricio Figueroa",
+                "state": "En Proceso", // Corregido el estado
+                "progress": 80,
+                "startDate": "03/02/2025",
+                "endDate": "",
+                "observations": "16/06/2025 : Se completó la primera fase de validación y hoy se trabaja en la parte de gestión de pagos",
+                "unit": "Alfa"
+            },
+            {
+                "id": "Interno",
+                "title": "Radicación Express con IA",
+                "assigned": "DANILO RAMIREZ",
+                "state": "En Test",
+                "progress": 90,
+                "startDate": "27/02/2025",
+                "endDate": "28/04/2025", // Fecha pasada
+                "observations": "28/02/2025: modificó el script para entrenar con lenguaje natura28/04/2025: Se entrega para TEST",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Lectura de incapacidadaes por Python",
+                "assigned": "DANILO RAMIREZ",
+                "state": "Entrenamiento",
+                "progress": 90,
+                "startDate": "14/02/2025",
+                "endDate": "",
+                "observations": "13/06/2025: No se ha podido validar el rendimiento del modelo",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-103",
+                "title": "Paso de documentos de fs a s3",
+                "assigned": "DANILO RAMIREZ",
+                "state": "Paso a Producción",
+                "progress": 90,
+                "startDate": "15/04/2025",
+                "endDate": "22/05/2025", // Fecha pasada
+                "observations": "11/06/2025: Pendiente confirmación de Bolívar tras el conteo finalizado el 28 de mayo.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
+                "assigned": "JESUS PEÑA",
+                "state": "Pruebas Imagine",
+                "progress": 95,
+                "startDate": "26/05/2025",
+                "endDate": "06/06/2025", // Fecha pasada
+                "observations": "11/06/2025: Se reporta que algunas imágenes devuelven NIT en lugar de cédula. Se sugirió probar con múltiples imágenes y registrar patrones para mejoras futuras",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-109",
+                "title": "Lectura de nuevos datos de ordenes medicas con IA",
+                "assigned": "DANILO RAMIREZ",
+                "state": "En Proceso",
+                "progress": 75,
+                "startDate": "14/05/2025",
+                "endDate": "",
+                "observations": "11/06/2025: Retomara entre hoy y mañana un espacio de 1 a 2 horas para insertar más registros y así permitir que el sistema se entrene diariamente de forma continua.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Restablecimiento de contraseña en Laravel",
+                "assigned": "JAIRO NIÑO",
+                "state": "En Proceso", // Corregido el estado
+                "progress": 30,
+                "startDate": "05/06/2025",
+                "endDate": "",
+                "observations": "11/06/2025: Se confirmó que no se muestra el mensaje de “usuario no existe” cuando aplica. Para los usuarios nuevos que no pueden iniciar sesión después de restablecer la clave, Fabio realizara pruebas.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Monitoreo de carga y alertas del servidor",
+                "assigned": "Danilo Ramirez", // Corregido el nombre para consistencia
+                "state": "En Proceso", // Corregido el estado
+                "progress": 90,
+                "startDate": "10/06/2025",
+                "endDate": "",
+                "observations": "el 11 de junio se finalizó la implementación del monitoreo de carga, RAM y procesadores, con toma de snapshots cada minuto ante sobrecarga. El envío de alertas por correo quedó pendiente de implementar mediante Exchange para evitar abrir puertos. Se acordó dejarlo “en proceso” para retomarlo más adelante si es necesario.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-88",
+                "title": "Requerimiento gestión Medicamentos fase 2 - Sprint 2",
+                "assigned": "JESUS PEÑA",
+                "state": "Pendiente", // Corregido el estado
+                "progress": 0,
+                "startDate": "N/A",
+                "endDate": "18/06/2025", // Fecha próxima
+                "observations": "Se acordó iniciar el desarrollo el 18 de junio, una vez se finalicen tareas pendientes de giras",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Realizar Imagen de docker de nativo para Jesus",
+                "assigned": "JESUS PEÑA",
+                "state": "Pendiente", // Corregido el estado
+                "progress": 0,
+                "startDate": "N/A",
+                "endDate": "",
+                "observations": "Se reasigna tarea a Jesus debido a que Wilson se encuentra en desarrollo de otra actividad.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Analitica de factura de cuentas medicas (ingresar en el portal de yii) ArL",
+                "assigned": "JAIRO NIÑO",
+                "state": "Pausado", // Corregido el estado
+                "progress": 10,
+                "startDate": "09/05/2025",
+                "endDate": "",
+                "observations": "No se ha retomado el desarrollo. Se planea continuar una vez finalizado la Mejora informe glosa req GD772-104",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "PRV_2025_004",
+                "title": "AUXILIOS FUNERARIOS PAGO AUX. FUNERARIOS",
+                "assigned": "Mauricio Figueroa",
+                "state": "Pausado", // Corregido el estado
+                "progress": 0,
+                "startDate": "19/06/2025",
+                "endDate": "20/06/2025", // Fecha próxima
+                "observations": "16/06/2025: Se comenzarán el jueves 20 de junio. Ya se están creando las vistas necesarias para ese flujo",
+                "unit": "Alfa"
+            },
+            {
+                "id": "PRV_2025_009",
+                "title": "DESARROLLO PREVISIONALES INCAPACIDADES",
+                "assigned": "Mauricio Figueroa",
+                "state": "Pruebas Alfa", // Corregido el estado
+                "progress": 100,
+                "startDate": "09/06/2025",
+                "endDate": "13/06/2025", // Fecha pasada
+                "observations": "13/06/2025:Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado.",
+                "unit": "Alfa"
+            },
+            {
+                "id": "PRV_2025_007",
+                "title": "CALCULO IBL",
+                "assigned": "Mauricio Figueroa",
+                "state": "Pendiente", // Corregido el estado
+                "progress": 0,
+                "startDate": "N/A",
+                "endDate": "",
+                "observations": "16/06/2025: Se requiere una sesion con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.",
+                "unit": "Alfa"
+            },
+            {
+                "id": "PRV_2025_005",
+                "title": "HISTORIA LABORAL",
+                "assigned": "Mauricio Figueroa",
+                "state": "Pendiente", // Corregido el estado
+                "progress": 0,
+                "startDate": "N/A",
+                "endDate": "",
+                "observations": "11/06/2025: Continuara con el desarrollo tras finalizar req PRV_2025_007 CALCULO IBL",
+                "unit": "Alfa"
+            },
+            {
+                "id": "GD772-64",
+                "title": "Api de recobros",
+                "assigned": "DANILO RAMIREZ",
+                "state": "Detenido Bolívar",
+                "progress": 0,
+                "startDate": "27/02/2025",
+                "endDate": "07/03/2025", // Fecha pasada
+                "observations": "28/04/2025: Requerimeinto cancelado por Bolivar.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Comprimir información del body de la tabla cola_correos",
+                "assigned": "DANILO RAMIREZ",
+                "state": "Detenido Bolívar",
+                "progress": 0,
+                "startDate": "31/03/2025",
+                "endDate": "",
+                "observations": "28/04/2025: sin cambios por parte de bolivar.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "MDSB-707440/GD772-74",
+                "title": "Portal reembolsos ARL (FLUJO YII)",
+                "assigned": "JAIRO NIÑO",
+                "state": "Pruebas Bolívar",
+                "progress": 80,
+                "startDate": "02/05/2025",
+                "endDate": "",
+                "observations": "11/06/2025: A la espera de habilitación del ambiente de pruebas para que Bolivar continue con las pruebas, Bolivar debe gestionar la activación para continuar.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-87-Laravel",
+                "title": "Implementar en Laravel la autenticación con QR",
+                "assigned": "JESUS PEÑA",
+                "state": "Pruebas Bolívar",
+                "progress": 90,
+                "startDate": "31/01/2025",
+                "endDate": "12/02/2025", // Fecha pasada
+                "observations": "10/04/2025: Bolívar autorizó ayer iniciarlo en test para los ambientes de Yii y nativo",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-87-Yii-Nativo",
+                "title": "Implementar en Yii y Nativo la autenticación con QR",
+                "assigned": "JESUS PEÑA",
+                "state": "Pruebas Bolívar",
+                "progress": 90,
+                "startDate": "14/04/2025",
+                "endDate": "",
+                "observations": "28/05/2025: El 26 de Mayo se finalizan los ajustes indiecados por Bolivar y se infroma para que realicen las pruebas.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-100",
+                "title": "Cambio de flujo radicación de facturas EPS",
+                "assigned": "JAIRO NIÑO",
+                "state": "Detenido Bolívar",
+                "progress": 0,
+                "startDate": "",
+                "endDate": "",
+                "observations": "Req cancelado por bolivar.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "GD772-81",
+                "title": "Calificador automático (1)",
+                "assigned": "JESUS PEÑA",
+                "state": "Pruebas Bolívar",
+                "progress": 90,
+                "startDate": "28/04/2025",
+                "endDate": "",
+                "observations": "19/05/2025: El viernes 16 de mayo Se realizaron mejoras en la parte de envío físico, mostrando información completa (dirección, teléfono, nombre, etc.) cuando el caso es físico, incluyendo el PDF de salida para nueve tipologías distintas, no solo una. También se configuró el administrador de cartas, permitiendo edición según cada tipología",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Ajustar los portales para ser responsive",
+                "assigned": "DANILO RAMIREZ",
+                "state": "Pausado",
+                "progress": 5,
+                "startDate": "05/05/2025",
+                "endDate": "",
+                "observations": "28/05/2025: Continuara pausado dando prioridad al req GD772-109 Lectura de nuevos datos de ordenes medicas con IA con el fin de dejarlo terinado antes de salir a vacaiones el martes 3 de Junio.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Desarrollo clasificador de imágenes en Python",
+                "assigned": "JESUS PEÑA",
+                "state": "Pausado",
+                "progress": 80,
+                "startDate": "15/05/2025",
+                "endDate": "",
+                "observations": "28/05/2025: Las pruebas realizadas con el clasificador de archivos PDF no han alcanzado los resultados esperados. Se evalúan otras opciones, pero el enfoque actual está en la funcionalidad de Sistematización con IA (Segunda vista de incapacidades en portal).",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "MDSB-812862",
+                "title": "Jira dia a dia Descarga masiva de imágenes (Nativo)",
+                "assigned": "JESUS PEÑA",
+                "state": "Pendiente",
+                "progress": 0,
+                "startDate": "",
+                "endDate": "",
+                "observations": "30/05/2025: Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Implementar cambio de contraseña a 30 dias en los tres aplicativos",
+                "assigned": "JESUS PEÑA",
+                "state": "Pendiente",
+                "progress": 0,
+                "startDate": "",
+                "endDate": "",
+                "observations": "30/05/2025: Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Validación Informes de cuentas medicas y colas de procesamiento",
+                "assigned": "JAIRO NIÑO",
+                "state": "Pendiente",
+                "progress": 65,
+                "startDate": "29/05/2025",
+                "endDate": "",
+                "observations": "13/06/2025: Se continuará investigando otras alternativas para optimizar el proceso",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "Interno",
+                "title": "Automatización cuentas medicas con IA",
+                "assigned": "JAIRO NIÑO",
+                "state": "Pendiente",
+                "progress": 20,
+                "startDate": "03/06/2025",
+                "endDate": "",
+                "observations": "11/06/2025: No se trabajó en los últimos días. Continúa pendiente.",
+                "unit": "Bolivar"
+            },
+            {
+                "id": "CNTI-195",
+                "title": "Vulnerabilidad, Implementación insegura de la integridad de los recursos secundarios (SRI) / imaginex",
+                "assigned": "DANILO RAMIREZ",
+                "state": "Pendiente",
+                "progress": 0,
+                "startDate": "08/07/2025", // Fecha futura
+                "endDate": "",
+                "observations": "No usar SRI permite que recursos externos como scripts o estilos sean manipulados sin ser detectados, exponiendo al sitio a posibles ataques si el servidor externo es comprometido",
+                "unit": "Bolivar"
+            }
+        ];
+
+        // Mapeo de estados a colores para el gráfico de pastel (asegúrate de que coincidan con tus datos)
+        const stateColors = {
+            "En Proceso": '#1f77b4',
+            "Paso a Producción": '#7f7f7f',
+            "Entrenamiento": '#2ca02c',
+            "Pruebas Imagine": '#ff7f0e',
+            "En Test": '#d62728',
+            "Pruebas Bolívar": '#9467bd',
+            "Pendiente": '#8c564b',
+            "Pendiente Bolívar": '#e377c2', // Ejemplo: si tuvieras este estado
+            "Pausado": '#bcbd22',
+            "Detenido Bolívar": '#17becf',
+            "Estimar": '#ff9896',
+            "Finalizado": '#ffbb78',
+            "Pruebas Alfa": '#c5b0d5' // Nuevo estado para 'PRUEBAS ALFA'
+        };
+
+
+        // Función para parsear fechas de dd/mm/yyyy a un objeto Date
+        function parseDate(dateString) {
+            if (!dateString || dateString.toLowerCase() === 'n/a' || dateString === '') return null; // Añadir ''
+            const parts = dateString.split('/');
+            // new Date(year, monthIndex, day)
+            return new Date(parseInt(parts[2]), parseInt(parts[1]) - 1, parseInt(parts[0]));
+        }
+
+        // Función para obtener el estado de la fecha de fin
+        function getDateStatus(endDateString) {
+            if (!endDateString || endDateString.toLowerCase() === 'n/a' || endDateString === '') return { text: 'Sin Fecha Fin', class: '' };
+
+            const endDate = parseDate(endDateString);
+            if (!endDate || isNaN(endDate.getTime())) return { text: 'Fecha Inválida', class: '' };
+
+            // Usar 'today' para la comparación
+            const now = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+            const end = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+
+            const diffTime = end.getTime() - now.getTime();
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays < 0) {
+                return { text: 'Vencida', class: 'red' };
+            } else if (diffDays <= 7 && diffDays >= 0) { // Incluir hoy como "próximo a vencer"
+                return { text: `Vence en ${diffDays} día${diffDays !== 1 ? 's' : ''}`, class: 'orange' };
+            } else {
+                return { text: 'A tiempo', class: 'green' };
+            }
+        }
+
+        // Función para generar las opciones del filtro de estado dinámicamente
+        function populateEstadoFilter(availableTasks) {
+            const estadoFiltro = document.getElementById('estadoFiltro');
+            const currentSelectedValue = estadoFiltro.value; // Guarda el valor seleccionado actualmente
+
+            estadoFiltro.innerHTML = '<option value="">Todos</option>'; // Limpia y añade la opción "Todos"
+
+            // Usar Set para obtener estados únicos y mapear a una capitalización consistente si es necesario,
+            // o simplemente usar los estados tal cual vienen si sabes que tus stateColors los cubren.
+            // Aquí, los tomo tal cual para que coincidan con las claves de stateColors.
+            const uniqueStates = [...new Set(availableTasks.map(task => task.state))].sort();
+
+            uniqueStates.forEach(state => {
+                const option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                estadoFiltro.appendChild(option);
+            });
+
+            // Restaura la selección si el valor anterior todavía existe
+            if (uniqueStates.includes(currentSelectedValue)) {
+                estadoFiltro.value = currentSelectedValue;
+            } else {
+                estadoFiltro.value = ''; // Resetea si el estado ya no está disponible
+            }
+        }
+
+        // Renderizar Resumen Ejecutivo
+        function updateSummary(filteredTasks = tasks) {
+            const resumenContent = document.getElementById('resumenContent');
+            const totalTasks = filteredTasks.length;
+
+            // Contar estados, asegurando que las capitalizaciones de tus datos coincidan con tus claves de stateColors.
+            // Para ser más robusto, se podría normalizar el estado a minúsculas antes de contar.
+            const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
+            const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Bolívar", "Pruebas Bolívar", "Pruebas Alfa"].includes(t.state)).length;
+            const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
+            const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
+
+            resumenContent.innerHTML = `
+                <p><strong>Total de Tareas:</strong> ${totalTasks}</p>
+                <p><strong>En Proceso:</strong> ${inProgress} (${totalTasks > 0 ? ((inProgress / totalTasks) * 100).toFixed(1) : 0}%)</p>
+                <p><strong>Pendientes:</strong> ${pending} (${totalTasks > 0 ? ((pending / totalTasks) * 100).toFixed(1) : 0}%)</p>
+                <p><strong>Completadas:</strong> ${completed} (${totalTasks > 0 ? ((completed / totalTasks) * 100).toFixed(1) : 0}%)</p>
+                <p><strong>Avance Promedio:</strong> ${avgProgress.toFixed(1)}%</p>
+            `;
+        }
+       
+                // Renderizar Tareas
+        function renderTasks(filteredTasks = tasks) {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            if (filteredTasks.length === 0) {
+                taskList.innerHTML = '<p class="no-results">No se encontraron tareas con los filtros aplicados.</p>';
+                return;
+            }
+            filteredTasks.forEach(task => {
+                const taskCard = document.createElement('div');
+                taskCard.className = 'card task-card';
+                taskCard.innerHTML = `
+                    <div class="card-body">
+                        <h5>${task.title}</h5>
+                        <p><strong>Persona:</strong> ${task.assigned} | <strong>Estado:</strong> ${task.state} | <strong>% Avance:</strong> ${task.progress}%</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: ${task.progress}%;" aria-valuenow="${task.progress}" aria-valuemin="0" aria-valuemax="100">${task.progress}%</div>
+                        </div>
+                        <a href="#" class="toggle-details" data-id="${task.id}">Más</a>
+                        <div id="details-${task.id}" style="display: none;">
+                            <p><strong>Fecha de Inicio:</strong> ${task.startDate}</p>
+                            ${task.endDate ? `<p><strong>Fecha de Fin:</strong> ${task.endDate}</p>` : ''}
+                            <p><strong>Observaciones:</strong> ${task.observations}</p>
+                        </div>
+                    </div>
+                `;
+                taskList.appendChild(taskCard);
+            });
+
+            document.querySelectorAll('.toggle-details').forEach(button => {
+                button.addEventListener('click', e => {
+                    e.preventDefault();
+                    const taskId = e.target.getAttribute('data-id');
+                    const details = document.getElementById(`details-${taskId}`);
+                    if (details.style.display === 'none') {
+                        details.style.display = 'block';
+                        e.target.textContent = 'Menos';
+                    } else {
+                        details.style.display = 'none';
+                        e.target.textContent = 'Más';
+                    }
+                });
+            });
+        }
+
+
+        // Renderizar Estadísticas
+        function updateStatistics(filteredTasks = tasks) {
+            const estadisticasContent = document.getElementById('estadisticasContent');
+            estadisticasContent.innerHTML = ''; // Limpia el contenido
+
+            if (filteredTasks.length === 0) {
+                estadisticasContent.innerHTML = '<p class="no-results"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para estadísticas con los filtros aplicados.</p>';
+                return;
+            }
+
+            // Agrupar por estado
+            const statesCount = filteredTasks.reduce((acc, task) => {
+                acc[task.state] = (acc[task.state] || 0) + 1;
+                return acc;
+            }, {});
+
+            let statesHtml = '<h5>Tareas por Estado:</h5><ul>';
+            for (const state in statesCount) {
+                statesHtml += `<li><strong>${state}:</strong> ${statesCount[state]}</li>`;
+            }
+            statesHtml += '</ul>';
+
+            // Agrupar por persona asignada
+            const assignedCount = filteredTasks.reduce((acc, task) => {
+                // Normalizar el nombre a un formato consistente (ej. primera letra de cada palabra en mayúscula)
+                const assignedName = task.assigned ? task.assigned.split(' ').map(namePart => namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase()).join(' ') : 'Sin Asignar';
+                acc[assignedName] = (acc[assignedName] || 0) + 1;
+                return acc;
+            }, {});
+
+            let assignedHtml = '<h5>Tareas por Persona Asignada:</h5><ul>';
+            for (const assigned in assignedCount) {
+                assignedHtml += `<li><strong>${assigned}:</strong> ${assignedCount[assigned]}</li>`;
+            }
+            assignedHtml += '</ul>';
+
+            estadisticasContent.innerHTML = statesHtml + assignedHtml;
+        }
+
+        // --- Funciones para Gráficos ---
+        function plotPieChart(filteredTasks = tasks) {
+            document.getElementById('loadingPie').style.display = 'block';
+            const pieChartDiv = document.getElementById('pie-chart');
+            pieChartDiv.style.display = 'none'; // Ocultar mientras carga
+
+            if (filteredTasks.length === 0) {
+                Plotly.newPlot(pieChartDiv, [], {}, { displayModeBar: false });
+                pieChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de distribución.</p>';
+                document.getElementById('loadingPie').style.display = 'none';
+                pieChartDiv.style.display = 'block';
+                return;
+            }
+
+            const stateCounts = {};
+            filteredTasks.forEach(task => {
+                stateCounts[task.state] = (stateCounts[task.state] || 0) + 1;
+            });
+
+            const data = [{
+                labels: Object.keys(stateCounts),
+                values: Object.values(stateCounts),
+                type: 'pie',
+                hole: .4,
+                marker: {
+                    colors: Object.keys(stateCounts).map(state => stateColors[state] || '#6c757d')
+                },
+                hoverinfo: 'label+percent',
+                textinfo: 'percent', // Muestra solo el porcentaje en la rebanada
+                textposition: 'outside', // Coloca el porcentaje fuera de la rebanada
+                insidetextfont: { color: '#ffffff' } // Color del texto dentro (si se muestra)
+            }];
+
+            const layout = {
+                title: 'Distribución de Tareas por Estado',
+                height: 500,
+                showlegend: true,
+                legend: { "orientation": "h", "xanchor": "center", "x": 0.5, "y": -0.1 }, // Leyenda horizontal centrada
+                margin: { "t": 80, "b": 50, "l": 50, "r": 50 },
+            };
+
+            Plotly.newPlot(pieChartDiv, data, layout, { responsive: true, displayModeBar: false });
+            document.getElementById('loadingPie').style.display = 'none';
+            pieChartDiv.style.display = 'block';
+        }
+
+        function plotBarChart(filteredTasks = tasks) {
+            document.getElementById('loadingBar').style.display = 'block';
+            const barChartDiv = document.getElementById('bar-chart');
+            barChartDiv.style.display = 'none';
+
+            if (filteredTasks.length === 0) {
+                Plotly.newPlot(barChartDiv, [], {}, { displayModeBar: false });
+                barChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de avance.</p>';
+                document.getElementById('loadingBar').style.display = 'none';
+                barChartDiv.style.display = 'block';
+                return;
+            }
+
+            const inProgressTasks = filteredTasks.filter(t => t.state === 'En Proceso' || t.state === 'EN PROCESO'); // Considera ambas capitalizaciones
+            const ids = inProgressTasks.map(task => task.id);
+            const progresses = inProgressTasks.map(task => task.progress);
+            const titles = inProgressTasks.map(task => task.title);
+
+            const data = [{
+                x: ids,
+                y: progresses,
+                type: 'bar',
+                name: 'Avance',
+                marker: { color: '#1f77b4' },
+                hoverinfo: 'text',
+                text: titles.map((title, i) => `<b>ID:</b> ${ids[i]}<br><b>Título:</b> ${title}<br><b>Avance:</b> ${progresses[i]}%`),
+            }];
+
+            const layout = {
+                title: 'Avance de Tareas "En Proceso"',
+                xaxis: { title: 'ID de Tarea', tickangle: -45, automargin: true },
+                yaxis: { title: '% Avance', range: [0, 100] },
+                height: 500,
+                margin: { "t": 80, "b": 150, "l": 50, "r": 50 }, // Margen inferior para etiquetas largas
+                hovermode: 'closest'
+            };
+
+            Plotly.newPlot(barChartDiv, data, layout, { responsive: true, displayModeBar: false });
+            document.getElementById('loadingBar').style.display = 'none';
+            barChartDiv.style.display = 'block';
+        }
+
+        function plotAssignmentsChart(filteredTasks = tasks) {
+            document.getElementById('loadingAssignments').style.display = 'block';
+            const assignmentsChartDiv = document.getElementById('assignments-chart');
+            assignmentsChartDiv.style.display = 'none';
+
+            if (filteredTasks.length === 0) {
+                Plotly.newPlot(assignmentsChartDiv, [], {}, { displayModeBar: false });
+                assignmentsChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de asignaciones.</p>';
+                document.getElementById('loadingAssignments').style.display = 'none';
+                assignmentsChartDiv.style.display = 'block';
+                return;
+            }
+
+            const assignedCounts = filteredTasks.reduce((acc, task) => {
+                // Normalizar el nombre a un formato consistente (ej. primera letra de cada palabra en mayúscula)
+                const assignedName = task.assigned ? task.assigned.split(' ').map(namePart => namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase()).join(' ') : 'Sin Asignar';
+                acc[assignedName] = (acc[assignedName] || 0) + 1;
+                return acc;
+            }, {});
+
+            const data = [{
+                x: Object.keys(assignedCounts),
+                y: Object.values(assignedCounts),
+                type: 'bar',
+                name: 'Número de Tareas Asignadas',
+                marker: { color: '#2ca02c' }
+            }];
+
+            const layout = {
+                title: 'Número de Tareas por Persona Asignada',
+                xaxis: { title: 'Persona Asignada', tickangle: -45, automargin: true },
+                yaxis: { title: 'Número de Tareas' },
+                height: 500,
+                margin: { "t": 80, "b": 150, "l": 50, "r": 50 } // Margen inferior para etiquetas largas
+            };
+
+            Plotly.newPlot(assignmentsChartDiv, data, layout, { responsive: true, displayModeBar: false });
+            document.getElementById('loadingAssignments').style.display = 'none';
+            assignmentsChartDiv.style.display = 'block';
+        }
+
+        // --- Lógica de Filtrado ---
+        function applyFilters() {
+            const estadoFiltro = document.getElementById('estadoFiltro').value;
+            const unidadFiltro = document.getElementById('unidadFiltro').value;
+            const fechaInicioFiltro = document.getElementById('fechaInicioFiltro').value; // Formato YYYY-MM-DD
+            const fechaFinFiltro = document.getElementById('fechaFinFiltro').value;     // Formato YYYY-MM-DD
+            const busqueda = document.getElementById('busqueda').value.toLowerCase();
+
+            let filteredTasks = tasks.filter(task => {
+                // Filtro por Estado
+                const matchesEstado = estadoFiltro === '' || task.state === estadoFiltro;
+
+                // Filtro por Unidad
+                const matchesUnidad = unidadFiltro === '' || task.unit === unidadFiltro;
+
+                // Filtro por Rango de Fecha Inicio
+                const taskStartDate = parseDate(task.startDate);
+                const filterStartDate = fechaInicioFiltro ? new Date(fechaInicioFiltro) : null;
+                const matchesStartDate = !filterStartDate || (taskStartDate && taskStartDate >= filterStartDate);
+
+                // Filtro por Rango de Fecha Fin
+                const taskEndDate = parseDate(task.endDate);
+                const filterEndDate = fechaFinFiltro ? new Date(fechaFinFiltro) : null;
+                const matchesEndDate = !filterEndDate || (taskEndDate && taskEndDate <= filterEndDate);
+
+                // Filtro por Búsqueda (Título o Persona Asignada)
+                const matchesBusqueda = busqueda === '' ||
+                                        (task.title && task.title.toLowerCase().includes(busqueda)) ||
+                                        (task.assigned && task.assigned.toLowerCase().includes(busqueda));
+
+                return matchesEstado && matchesUnidad && matchesStartDate && matchesEndDate && matchesBusqueda;
+            });
+
+            // Actualizar filtros de estado disponibles basados en las tareas filtradas
+            populateEstadoFilter(filteredTasks);
+
+            // Renderizar secciones con las tareas filtradas
+            updateSummary(filteredTasks);
+            renderTasks(filteredTasks);
+            updateStatistics(filteredTasks);
+            plotPieChart(filteredTasks);
+            plotBarChart(filteredTasks);
+            plotAssignmentsChart(filteredTasks);
+        }
+
+        // --- Lógica de Exportación ---
+        function exportToPDF() {
+            const element = document.body; // Exportar todo el cuerpo del documento
+            const opt = {
+                margin: 0.5,
+                filename: `Reporte_Requerimientos_${formattedDate}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            // Mostrar un mensaje de carga
+            const originalBodyContent = document.body.innerHTML;
+            document.body.innerHTML = '<div style="text-align: center; padding: 50px; font-size: 2em; color: #1f77b4;"><i class="fas fa-spinner fa-spin me-2"></i>Generando PDF...</div>';
+
+            // Ocultar la barra lateral para la exportación de PDF
+            document.querySelector('.sidebar').style.display = 'none';
+            document.querySelector('.content').style.marginLeft = '0';
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restaurar el contenido original del cuerpo y mostrar la barra lateral
+                document.body.innerHTML = originalBodyContent;
+                document.querySelector('.sidebar').style.display = 'block';
+                document.querySelector('.content').style.marginLeft = '270px';
+                // Re-inicializar el informe ya que el DOM ha sido recreado
+                // Esto es crucial porque html2pdf manipula el DOM
+                initializeReport();
+                applyFilters(); // Para asegurarse de que los gráficos se carguen de nuevo
+            });
+        }
+
+
+        async function exportToPNG() {
+            // Ocultar la barra lateral para la captura de imágenes
+            document.querySelector('.sidebar').style.display = 'none';
+            document.querySelector('.content').style.marginLeft = '0';
+
+            // Mostrar un mensaje de carga
+            const originalGraphsHtml = document.getElementById('graficos').innerHTML;
+            document.getElementById('graficos').innerHTML = '<div style="text-align: center; padding: 50px; font-size: 2em; color: #1f77b4;"><i class="fas fa-spinner fa-spin me-2"></i>Generando imágenes de gráficos...</div>';
+
+            const chartsToExport = ['pie-chart', 'bar-chart', 'assignments-chart'];
+            const zip = new JSZip();
+
+            for (const chartId of chartsToExport) {
+                const plotDiv = document.getElementById(chartId);
+                if (plotDiv && plotDiv.innerHTML.includes('<svg')) { // Verificar si el gráfico existe y tiene contenido SVG
+                    try {
+                        const imageData = await Plotly.toImage(plotDiv, { format: 'png', height: 600, width: 800 });
+                        const base64Data = imageData.split(',')[1];
+                        zip.file(`${chartId}.png`, base64Data, { base64: true });
+                    } catch (error) {
+                        console.error(`Error al exportar el gráfico ${chartId}:`, error);
+                    }
+                } else {
+                    console.warn(`El div ${chartId} no contiene un gráfico Plotly o está vacío, se omitirá la exportación.`);
+                }
+            }
+
+            // Generar y descargar el ZIP
+            zip.generateAsync({ type: "blob" })
+                .then(function(content) {
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(content);
+                    link.download = `Graficos_Requerimientos_${formattedDate}.zip`;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(link.href);
+                })
+                .finally(() => {
+                    // Restaurar los gráficos y la barra lateral
+                    document.getElementById('graficos').innerHTML = originalGraphsHtml;
+                    document.querySelector('.sidebar').style.display = 'block';
+                    document.querySelector('.content').style.marginLeft = '270px';
+                    // Re-inicializar los gráficos para que sean interactivos de nuevo
+                    // Esto es necesario porque el innerHTML se sobrescribió
+                    plotPieChart(tasks);
+                    plotBarChart(tasks);
+                    plotAssignmentsChart(tasks);
+                });
+        }
+
+
+        // Función para inicializar el reporte (llamada al cargar la página y después de exportar PDF)
+        function initializeReport() {
+            // Rellenar filtros de estado al inicio
+            populateEstadoFilter(tasks);
+
+            // Asignar eventos a los filtros
+            document.getElementById('estadoFiltro').addEventListener('change', applyFilters);
+            document.getElementById('unidadFiltro').addEventListener('change', applyFilters);
+            document.getElementById('fechaInicioFiltro').addEventListener('change', applyFilters);
+            document.getElementById('fechaFinFiltro').addEventListener('change', applyFilters);
+            document.getElementById('busqueda').addEventListener('input', applyFilters); // 'input' para búsqueda en tiempo real
+        }
+
+        // Ejecutar la inicialización y aplicar filtros al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeReport();
+            applyFilters();
+        });
+
+    </script>
+</body>
+</html>
