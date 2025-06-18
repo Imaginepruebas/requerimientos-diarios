@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informe Interactivo - Reporte de Requerimientos 16/06/2025</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <style>
-        body {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informe Interactivo - Reporte</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+
+          body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f7fa;
             color: #333;
@@ -157,8 +160,32 @@
             }
         }
     </style>
+       <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const fecha = new Date();
+      const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      const fechaFormateada = fecha.toLocaleDateString('es-CO', opciones);
+
+      /* // Actualizar el título de la pestaña
+      document.title = `Informe Interactivo - Reporte ${fechaFormateada}`; */
+
+      /* // Actualizar h1 principal
+      const encabezado = document.getElementById('titulo-principal');
+      if (encabezado) {
+        encabezado.textContent = `Informe Interactivo - Reporte ${fechaFormateada}`;
+      } */
+
+      // Actualizar el span con id "reportDate"
+      const reportSpan = document.getElementById('reportDate');
+      if (reportSpan) {
+        reportSpan.textContent = fechaFormateada;
+      }
+    });
+  </script>
 </head>
 <body>
+    <div class="container mt-4">
+      <!-- <h1 id="titulo-principal">Informe Interactivo</h1> -->
     <nav class="sidebar">
         <h3 class="text-center text-white mb-4">Informe Requerimientos Imagine</h3>
         <a href="#resumen"><i class="fas fa-chart-pie me-2"></i>Resumen Ejecutivo</a>
@@ -197,7 +224,7 @@
                             <label for="unidadFiltro">Filtrar por Unidad:</label>
                             <select id="unidadFiltro" class="form-select form-select-sm">
                                 <option value="">Todas</option>
-                                <option value="Bolivar">Bolívar</option>
+                                <option value="Bolívar">Bolívar</option>
                                 <option value="Alfa">Alfa</option>
                             </select>
                         </div>
@@ -265,419 +292,474 @@
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const year = today.getFullYear();
         const formattedDate = `${day}/${month}/${year}`;
-        document.title = `Informe Interactivo - Reporte de Requerimientos ${formattedDate}`;
+        document.title = `Informe Interactivo - Reporte ${formattedDate}`;
         document.getElementById('reportDate').textContent = formattedDate;
 
         // Estructura de datos JSON con unidades Bolívar o Alfa
         let tasks = [
-            {
-                "id": "MDSB-780227",
-                "title": "Duplicación de actividades en Nativo",
-                "assigned": "JESUS PEÑA",
-                "state": "En Proceso",
-                "progress": 0,
-                "startDate": "17/03/2025",
-                "endDate": "20/06/2025", // Añadida fecha de fin para demostración
-                "observations": "Retomara validación de la incidencia.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "INTERNO",
-                "title": "Mejora informe glosa req GD772-104 Campos glosa aceptada y glosa conciliación",
-                "assigned": "JAIRO NIÑO",
-                "state": "En Proceso",
-                "progress": 50,
-                "startDate": "23/05/2025",
-                "endDate": "",
-                "observations": "Se realizaron pruebas exitosas en producción del nuevo informe, aunque aún no está disponible para descarga, Falta conectar correctamente el enlace que lo activa desde la interfaz del sistema",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "MDSB-820704",
-                "title": "Jira dia a dia Error en generación informe mail 472 (Prefactura)",
-                "assigned": "JESUS PEÑA",
-                "state": "En Proceso",
-                "progress": 0,
-                "startDate": "N/A",
-                "endDate": "",
-                "observations": "Retomara validación de la incidencia",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-69",
-                "title": "Extraccion de Imagenes (API)",
-                "assigned": "JESUS PEÑA",
-                "state": "En Proceso",
-                "progress": 90,
-                "startDate": "09/06/2025",
-                "endDate": "25/06/2025", // Añadida fecha de fin para demostración
-                "observations": "El metodo de incapacidades ya está listo en ambiente de desarrollo (DEV). Se creó un servicio provisional mientras se habilita la URL oficial para pruebas.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-60",
-                "title": "Descarga automatica de informes",
-                "assigned": "JAIRO NIÑO",
-                "state": "En Proceso",
-                "progress": 10,
-                "startDate": "11/06/2025",
-                "endDate": "",
-                "observations": "Pendiente envio del script para realizar solicitud de control de cambios para test.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "CNTI-271",
-                "title": "Vulnerabilidad, CVE-2016-4055 – DoS por expresiones regulares ineficientes en Moment.js (< v2.11.2)",
-                "assigned": "FABIO FORERO",
-                "state": "Pruebas Imagine", // Corregido el estado
-                "progress": 100,
-                "startDate": "13/06/2025",
-                "endDate": "13/06/2025", // Fecha pasada
-                "observations": "Queda disponible el 13 de Junio para pruebas por Imagine en ambientes de test",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "CNTI-96",
-                "title": "Vulnerabilidad, La política de seguridad de los contenidos contiene la directiva “unsafe” / imaginex",
-                "assigned": "DANILO RAMIREZ",
-                "state": "En Proceso", // Corregido el estado
-                "progress": 0,
-                "startDate": "13/06/2025",
-                "endDate": "",
-                "observations": "Actualmente se trabaja en la vulnerabilidad relacionada con la política de seguridad de contenido (CSP) y el uso de unsafe-inline, necesario para integraciones con Google reCAPTCHA y Clarity, se plantea justificar su permanencia y demostrar que el nivel de seguridad general sigue siendo aceptable (B+ cercano a A).",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Sistema automatizado de clasificación de correos médicos con IA",
-                "assigned": "WILSON APONTE",
-                "state": "En Proceso", // Corregido el estado
-                "progress": 70,
-                "startDate": "05/06/2025",
-                "endDate": "",
-                "observations": "Se detecto un problema en los análisis, se trabajo en una posible solución para ello, y es overfitting, que no es otra cosa que corregir estimaciones posiblemente equivocadas. Corregido por medio de scripts de testing y aquí el reporte de los resultados",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "PRV_2025_001",
-                "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO, VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO",
-                "assigned": "Mauricio Figueroa",
-                "state": "En Proceso", // Corregido el estado
-                "progress": 80,
-                "startDate": "03/02/2025",
-                "endDate": "",
-                "observations": "16/06/2025 : Se completó la primera fase de validación y hoy se trabaja en la parte de gestión de pagos",
-                "unit": "Alfa"
-            },
-            {
-                "id": "Interno",
-                "title": "Radicación Express con IA",
-                "assigned": "DANILO RAMIREZ",
-                "state": "En Test",
-                "progress": 90,
-                "startDate": "27/02/2025",
-                "endDate": "28/04/2025", // Fecha pasada
-                "observations": "28/02/2025: modificó el script para entrenar con lenguaje natura28/04/2025: Se entrega para TEST",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Lectura de incapacidadaes por Python",
-                "assigned": "DANILO RAMIREZ",
-                "state": "Entrenamiento",
-                "progress": 90,
-                "startDate": "14/02/2025",
-                "endDate": "",
-                "observations": "13/06/2025: No se ha podido validar el rendimiento del modelo",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-103",
-                "title": "Paso de documentos de fs a s3",
-                "assigned": "DANILO RAMIREZ",
-                "state": "Paso a Producción",
-                "progress": 90,
-                "startDate": "15/04/2025",
-                "endDate": "22/05/2025", // Fecha pasada
-                "observations": "11/06/2025: Pendiente confirmación de Bolívar tras el conteo finalizado el 28 de mayo.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
-                "assigned": "JESUS PEÑA",
-                "state": "Pruebas Imagine",
-                "progress": 95,
-                "startDate": "26/05/2025",
-                "endDate": "06/06/2025", // Fecha pasada
-                "observations": "11/06/2025: Se reporta que algunas imágenes devuelven NIT en lugar de cédula. Se sugirió probar con múltiples imágenes y registrar patrones para mejoras futuras",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-109",
-                "title": "Lectura de nuevos datos de ordenes medicas con IA",
-                "assigned": "DANILO RAMIREZ",
-                "state": "En Proceso",
-                "progress": 75,
-                "startDate": "14/05/2025",
-                "endDate": "",
-                "observations": "11/06/2025: Retomara entre hoy y mañana un espacio de 1 a 2 horas para insertar más registros y así permitir que el sistema se entrene diariamente de forma continua.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Restablecimiento de contraseña en Laravel",
-                "assigned": "JAIRO NIÑO",
-                "state": "En Proceso", // Corregido el estado
-                "progress": 30,
-                "startDate": "05/06/2025",
-                "endDate": "",
-                "observations": "11/06/2025: Se confirmó que no se muestra el mensaje de “usuario no existe” cuando aplica. Para los usuarios nuevos que no pueden iniciar sesión después de restablecer la clave, Fabio realizara pruebas.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Monitoreo de carga y alertas del servidor",
-                "assigned": "Danilo Ramirez", // Corregido el nombre para consistencia
-                "state": "En Proceso", // Corregido el estado
-                "progress": 90,
-                "startDate": "10/06/2025",
-                "endDate": "",
-                "observations": "el 11 de junio se finalizó la implementación del monitoreo de carga, RAM y procesadores, con toma de snapshots cada minuto ante sobrecarga. El envío de alertas por correo quedó pendiente de implementar mediante Exchange para evitar abrir puertos. Se acordó dejarlo “en proceso” para retomarlo más adelante si es necesario.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-88",
-                "title": "Requerimiento gestión Medicamentos fase 2 - Sprint 2",
-                "assigned": "JESUS PEÑA",
-                "state": "Pendiente", // Corregido el estado
-                "progress": 0,
-                "startDate": "N/A",
-                "endDate": "18/06/2025", // Fecha próxima
-                "observations": "Se acordó iniciar el desarrollo el 18 de junio, una vez se finalicen tareas pendientes de giras",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Realizar Imagen de docker de nativo para Jesus",
-                "assigned": "JESUS PEÑA",
-                "state": "Pendiente", // Corregido el estado
-                "progress": 0,
-                "startDate": "N/A",
-                "endDate": "",
-                "observations": "Se reasigna tarea a Jesus debido a que Wilson se encuentra en desarrollo de otra actividad.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Analitica de factura de cuentas medicas (ingresar en el portal de yii) ArL",
-                "assigned": "JAIRO NIÑO",
-                "state": "Pausado", // Corregido el estado
-                "progress": 10,
-                "startDate": "09/05/2025",
-                "endDate": "",
-                "observations": "No se ha retomado el desarrollo. Se planea continuar una vez finalizado la Mejora informe glosa req GD772-104",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "PRV_2025_004",
-                "title": "AUXILIOS FUNERARIOS PAGO AUX. FUNERARIOS",
-                "assigned": "Mauricio Figueroa",
-                "state": "Pausado", // Corregido el estado
-                "progress": 0,
-                "startDate": "19/06/2025",
-                "endDate": "20/06/2025", // Fecha próxima
-                "observations": "16/06/2025: Se comenzarán el jueves 20 de junio. Ya se están creando las vistas necesarias para ese flujo",
-                "unit": "Alfa"
-            },
-            {
-                "id": "PRV_2025_009",
-                "title": "DESARROLLO PREVISIONALES INCAPACIDADES",
-                "assigned": "Mauricio Figueroa",
-                "state": "Pruebas Alfa", // Corregido el estado
-                "progress": 100,
-                "startDate": "09/06/2025",
-                "endDate": "13/06/2025", // Fecha pasada
-                "observations": "13/06/2025:Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado.",
-                "unit": "Alfa"
-            },
-            {
-                "id": "PRV_2025_007",
-                "title": "CALCULO IBL",
-                "assigned": "Mauricio Figueroa",
-                "state": "Pendiente", // Corregido el estado
-                "progress": 0,
-                "startDate": "N/A",
-                "endDate": "",
-                "observations": "16/06/2025: Se requiere una sesion con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.",
-                "unit": "Alfa"
-            },
-            {
-                "id": "PRV_2025_005",
-                "title": "HISTORIA LABORAL",
-                "assigned": "Mauricio Figueroa",
-                "state": "Pendiente", // Corregido el estado
-                "progress": 0,
-                "startDate": "N/A",
-                "endDate": "",
-                "observations": "11/06/2025: Continuara con el desarrollo tras finalizar req PRV_2025_007 CALCULO IBL",
-                "unit": "Alfa"
-            },
-            {
-                "id": "GD772-64",
-                "title": "Api de recobros",
-                "assigned": "DANILO RAMIREZ",
-                "state": "Detenido Bolívar",
-                "progress": 0,
-                "startDate": "27/02/2025",
-                "endDate": "07/03/2025", // Fecha pasada
-                "observations": "28/04/2025: Requerimeinto cancelado por Bolivar.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Comprimir información del body de la tabla cola_correos",
-                "assigned": "DANILO RAMIREZ",
-                "state": "Detenido Bolívar",
-                "progress": 0,
-                "startDate": "31/03/2025",
-                "endDate": "",
-                "observations": "28/04/2025: sin cambios por parte de bolivar.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "MDSB-707440/GD772-74",
-                "title": "Portal reembolsos ARL (FLUJO YII)",
-                "assigned": "JAIRO NIÑO",
-                "state": "Pruebas Bolívar",
-                "progress": 80,
-                "startDate": "02/05/2025",
-                "endDate": "",
-                "observations": "11/06/2025: A la espera de habilitación del ambiente de pruebas para que Bolivar continue con las pruebas, Bolivar debe gestionar la activación para continuar.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-87-Laravel",
-                "title": "Implementar en Laravel la autenticación con QR",
-                "assigned": "JESUS PEÑA",
-                "state": "Pruebas Bolívar",
-                "progress": 90,
-                "startDate": "31/01/2025",
-                "endDate": "12/02/2025", // Fecha pasada
-                "observations": "10/04/2025: Bolívar autorizó ayer iniciarlo en test para los ambientes de Yii y nativo",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-87-Yii-Nativo",
-                "title": "Implementar en Yii y Nativo la autenticación con QR",
-                "assigned": "JESUS PEÑA",
-                "state": "Pruebas Bolívar",
-                "progress": 90,
-                "startDate": "14/04/2025",
-                "endDate": "",
-                "observations": "28/05/2025: El 26 de Mayo se finalizan los ajustes indiecados por Bolivar y se infroma para que realicen las pruebas.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-100",
-                "title": "Cambio de flujo radicación de facturas EPS",
-                "assigned": "JAIRO NIÑO",
-                "state": "Detenido Bolívar",
-                "progress": 0,
-                "startDate": "",
-                "endDate": "",
-                "observations": "Req cancelado por bolivar.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "GD772-81",
-                "title": "Calificador automático (1)",
-                "assigned": "JESUS PEÑA",
-                "state": "Pruebas Bolívar",
-                "progress": 90,
-                "startDate": "28/04/2025",
-                "endDate": "",
-                "observations": "19/05/2025: El viernes 16 de mayo Se realizaron mejoras en la parte de envío físico, mostrando información completa (dirección, teléfono, nombre, etc.) cuando el caso es físico, incluyendo el PDF de salida para nueve tipologías distintas, no solo una. También se configuró el administrador de cartas, permitiendo edición según cada tipología",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Ajustar los portales para ser responsive",
-                "assigned": "DANILO RAMIREZ",
-                "state": "Pausado",
-                "progress": 5,
-                "startDate": "05/05/2025",
-                "endDate": "",
-                "observations": "28/05/2025: Continuara pausado dando prioridad al req GD772-109 Lectura de nuevos datos de ordenes medicas con IA con el fin de dejarlo terinado antes de salir a vacaiones el martes 3 de Junio.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Desarrollo clasificador de imágenes en Python",
-                "assigned": "JESUS PEÑA",
-                "state": "Pausado",
-                "progress": 80,
-                "startDate": "15/05/2025",
-                "endDate": "",
-                "observations": "28/05/2025: Las pruebas realizadas con el clasificador de archivos PDF no han alcanzado los resultados esperados. Se evalúan otras opciones, pero el enfoque actual está en la funcionalidad de Sistematización con IA (Segunda vista de incapacidades en portal).",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "MDSB-812862",
-                "title": "Jira dia a dia Descarga masiva de imágenes (Nativo)",
-                "assigned": "JESUS PEÑA",
-                "state": "Pendiente",
-                "progress": 0,
-                "startDate": "",
-                "endDate": "",
-                "observations": "30/05/2025: Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Implementar cambio de contraseña a 30 dias en los tres aplicativos",
-                "assigned": "JESUS PEÑA",
-                "state": "Pendiente",
-                "progress": 0,
-                "startDate": "",
-                "endDate": "",
-                "observations": "30/05/2025: Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Validación Informes de cuentas medicas y colas de procesamiento",
-                "assigned": "JAIRO NIÑO",
-                "state": "Pendiente",
-                "progress": 65,
-                "startDate": "29/05/2025",
-                "endDate": "",
-                "observations": "13/06/2025: Se continuará investigando otras alternativas para optimizar el proceso",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "Interno",
-                "title": "Automatización cuentas medicas con IA",
-                "assigned": "JAIRO NIÑO",
-                "state": "Pendiente",
-                "progress": 20,
-                "startDate": "03/06/2025",
-                "endDate": "",
-                "observations": "11/06/2025: No se trabajó en los últimos días. Continúa pendiente.",
-                "unit": "Bolivar"
-            },
-            {
-                "id": "CNTI-195",
-                "title": "Vulnerabilidad, Implementación insegura de la integridad de los recursos secundarios (SRI) / imaginex",
-                "assigned": "DANILO RAMIREZ",
-                "state": "Pendiente",
-                "progress": 0,
-                "startDate": "08/07/2025", // Fecha futura
-                "endDate": "",
-                "observations": "No usar SRI permite que recursos externos como scripts o estilos sean manipulados sin ser detectados, exponiendo al sitio a posibles ataques si el servidor externo es comprometido",
-                "unit": "Bolivar"
-            }
-        ];
+    {
+        "id": "MDSB-780227",
+        "title": "Duplicación de actividades en Nativo",
+        "assigned": "JESUS PEÑA",
+        "state": "En Proceso",
+        "progress": 0,
+        "startDate": "17/03/2025",
+        "endDate": "",
+        "observations": "Retomara validación de la incidencia.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "INTERNO",
+        "title": "Mejora informe glosa req GD772-104 Campos glosa aceptada y glosa conciliación",
+        "assigned": "JAIRO NIÑO",
+        "state": "Paso a Producción",
+        "progress": 99,
+        "startDate": "23/05/2025",
+        "endDate": "17/06/2025",
+        "observations": "Se ajustó la lógica del informe. Está listo para pasarse a producción entre hoy y mañana.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "MDSB-820704",
+        "title": "Jira dia a dia Error en generación informe mail 472 (Prefactura)",
+        "assigned": "jESUS PEÑA",
+        "state": "Finalizado",
+        "progress": 100,
+        "startDate": "17/06/2025",
+        "endDate": "17/06/2025",
+        "observations": "Se identifica que el problema fue causado por un valor en el campo direccion_destino, donde la descripción de la dirección incluía un punto y coma (;) como parte del texto, Se añadió una codificación UTF-8 al tratamiento del texto, permitiendo omitir o interpretar correctamente el punto y coma, evitando así el desbordamiento de columnas al momento de cargar el archivo .csv",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-69",
+        "title": "Extraccion de Imagenes ( API) (Incapacidades)",
+        "assigned": "jESUS PEÑA",
+        "state": "En Proceso",
+        "progress": 90,
+        "startDate": "09/06/2025",
+        "endDate": "",
+        "observations": "El dominio ya está creado en DEV, pero la base de datos de imágenes no está funcionando correctamente, se acordó garantizar pruebas en DEV antes de migrar a TEST. Se cargarán imágenes de prueba.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-60",
+        "title": "Descarga automática de informes",
+        "assigned": "JAIRO NIÑO",
+        "state": "En Proceso",
+        "progress": 10,
+        "startDate": "11/06/2025",
+        "endDate": "",
+        "observations": "Pendiente envío del script para realizar solicitud de control de cambios para prueba.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "CNTI-271",
+        "title": "Vulnerabilidad, CVE-2016-4055 – DoS por expresiones regulares ineficientes en Moment.js (< v2.11.2)",
+        "assigned": "FABIO FORERO",
+        "state": "Pruebas Imagine",
+        "progress": 100,
+        "startDate": "13/06/2025",
+        "endDate": "",
+        "observations": "Queda disponible el 13 de Junio para pruebas por Imagine en ambientes de prueba",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "CNTI-96",
+        "title": "Vulnerabilidad,La política de seguridad de los contenidos contiene la directiva “unsafe” / imaginex",
+        "assigned": "DANILO RAMIREZ",
+        "state": "En Test",
+        "progress": 0,
+        "startDate": "13/06/2025",
+        "endDate": "",
+        "observations": "Se resolvió la vulnerabilidad relacionada con la política de seguridad de contenidos (CSP), aunque su implementación en producción está limitada por la versión de Apache (actualmente en 2.4.57, mientras que se requiere mínimo 2.4.58).",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Sistema automatizado de clasificación de correos médicos con IA",
+        "assigned": "WILSON APONTE",
+        "state": "En Proceso",
+        "progress": 70,
+        "startDate": "05/06/2025",
+        "endDate": "",
+        "observations": "Se encuentra realizando cambios en mejoras de diccionario de datos y modelos enfocados a conceptos médicos en español",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "PRV_2025_001",
+        "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO,",
+        "assigned": "Mauricio Figueroa",
+        "state": "Pruebas Alfa",
+        "progress": 80,
+        "startDate": "03/02/2025",
+        "endDate": "",
+        "observations": "Se adaptó el grid y los reportes a los distintos roles/permisos. También se incorporaron nuevos campos a solicitud del cliente; pendiente Pruebas por el cliente.",
+        "unit": "Alfa"
+    },
+    {
+        "id": "Interno",
+        "title": "Radicación Express con IA",
+        "assigned": "DANILO RAMIREZ",
+        "state": "En Test",
+        "progress": 90,
+        "startDate": "27/02/2025",
+        "endDate": "28/04/2025",
+        "observations": "28/02/2025: modificó el script para entrenar con lenguaje natural. 28/04/2025: Se entrega para TEST",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Lectura de incapacidades por Python",
+        "assigned": "DANILO RAMIREZ",
+        "state": "Entrenamiento",
+        "progress": 90,
+        "startDate": "14/02/2025",
+        "endDate": "",
+        "observations": "13/06/2025: No se ha podido validar el rendimiento del modelo",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-103",
+        "title": "Paso de documentos de fs a s3",
+        "assigned": "DANILO RAMIREZ",
+        "state": "Paso a Producción",
+        "progress": 90,
+        "startDate": "15/04/2025",
+        "endDate": "22/05/2025",
+        "observations": "11/06/2025: Pendiente confirmación de Bolívar tras el relato finalizado el 28 de mayo.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
+        "assigned": "JESUS PEÑA",
+        "state": "Pruebas Imagine",
+        "progress": 95,
+        "startDate": "26/05/2025",
+        "endDate": "06/06/2025",
+        "observations": "06/11/2025: Se reporta que algunas imágenes devuelven NIT en lugar de cédula. Se sugiere probar con múltiples imágenes y registrar patrones para mejoras futuras.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-109",
+        "title": "Lectura de nuevos datos de órdenes médicas con IA",
+        "assigned": "DANILO RAMIREZ",
+        "state": "En Proceso",
+        "progress": 75,
+        "startDate": "14/05/2025",
+        "endDate": "",
+        "observations": "El modelo no ha sido entrenado aún. Se plantea insertar registros progresivamente (1.000 diarios) para alcanzar una base de 5.000, se revisara hoy",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Restablecimiento de contraseña en Laravel",
+        "assigned": "JAIRO NIÑO",
+        "state": "En Proceso",
+        "progress": 30,
+        "startDate": "05/06/2025",
+        "endDate": "",
+        "observations": "06/11/2025: Se confirma que no se muestra el mensaje de “usuario no existe” cuando aplica. Para los nuevos usuarios que no pueden iniciar sesión después de restablecer la clave, Fabio realizará pruebas.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Monitoreo de carga y alertas del servidor",
+        "assigned": "Danilo Ramirez",
+        "state": "En Proceso",
+        "progress": 90,
+        "startDate": "10/06/2025",
+        "endDate": "",
+        "observations": "el 11 de junio se finalizó la implementación del monitoreo de carga, RAM y procesadores, con toma de instantáneas cada minuto ante sobrecarga. El envío de alertas por correo quedó pendiente de implementar mediante Exchange para evitar abrir puertos. Se acordó dejarlo “en proceso” para retomarlo más adelante si es necesario.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-88",
+        "title": "Requerimiento gestión Medicamentos fase 2 - Sprint 2",
+        "assigned": "JESUS PEÑA",
+        "state": "En Proceso",
+        "progress": 0,
+        "startDate": "18/06/2025",
+        "endDate": "",
+        "observations": "Inicia desarrollo",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Realizar Imagen de docker de nativo para Jesus",
+        "assigned": "JESUS PEÑA",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "N/A",
+        "endDate": "",
+        "observations": "Se reasigna tarea a Jesús debido a que Wilson se encuentra en desarrollo de otra actividad.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Analitica de factura de cuentas medicas (ingresar en el portal de yii) ArL",
+        "assigned": "JAIRO NIÑO",
+        "state": "Finalizado",
+        "progress": 100,
+        "startDate": "09/05/2025",
+        "endDate": "17/06/2025",
+        "observations": "Ya fue desplegada en producción desde el 17 de junio. Pendiente revisión con el cliente (actualmente en vacaciones).",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "PRV_2025_004",
+        "title": "AUXILIOS FUNERARIOS PAGO AUX. FUNERARIOS",
+        "assigned": "Mauricio Figueroa",
+        "state": "Pausado",
+        "progress": 0,
+        "startDate": "19/06/2025",
+        "endDate": "",
+        "observations": "16/06/2025: Se comenzarán el jueves 20 de junio. Ya se están creando las vistas necesarias para ese flujo",
+        "unit": "Alfa"
+    },
+    {
+        "id": "PRV_2025_009",
+        "title": "DESARROLLO PREVISIONAL INCAPACIDADES",
+        "assigned": "Mauricio Figueroa",
+        "state": "Pruebas Alfa",
+        "progress": 100,
+        "startDate": "09/06/2025",
+        "endDate": "",
+        "observations": "13/06/2025:Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado.",
+        "unit": "Alfa"
+    },
+    {
+        "id": "PRV_2025_007",
+        "title": "CÁLCULO IBL",
+        "assigned": "Mauricio Figueroa",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "N/A",
+        "endDate": "",
+        "observations": "16/06/2025: Se requiere una sesión con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.",
+        "unit": "Alfa"
+    },
+    {
+        "id": "PRV_2025_005",
+        "title": "HISTORIA LABORAL",
+        "assigned": "Mauricio Figueroa",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "N/A",
+        "endDate": "",
+        "observations": "11/06/2025: Continuara con el desarrollo tras finalizar req PRV_2025_007 CALCULO IBL",
+        "unit": "Alfa"
+    },
+    {
+        "id": "GD772-64",
+        "title": "API de recobros",
+        "assigned": "DANILO RAMIREZ",
+        "state": "Detenido Bolívar",
+        "progress": 0,
+        "startDate": "27/02/2025",
+        "endDate": "07/03/2025",
+        "observations": "28/04/2025: Requerimeinto cancelado por Bolívar.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Comprimir información del cuerpo de la tabla cola_correos",
+        "assigned": "DANILO RAMIREZ",
+        "state": "Detenido Bolívar",
+        "progress": 0,
+        "startDate": "31/03/2025",
+        "endDate": "",
+        "observations": "28/04/2025: sin cambios por parte de bolívar.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "MDSB-707440/GD772-74",
+        "title": "Portal reembolsos ARL (FLUJO YII)",
+        "assigned": "JAIRO NIÑO",
+        "state": "Pruebas Bolívar",
+        "progress": 80,
+        "startDate": "02/05/2025",
+        "endDate": "14/05/2025",
+        "observations": "Sigue en pruebas por Bolívar.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-87-Laravel",
+        "title": "Implementar en Laravel la autenticación con QR",
+        "assigned": "JESUS PEÑA",
+        "state": "Pruebas Bolívar",
+        "progress": 90,
+        "startDate": "31/01/2025",
+        "endDate": "12/02/2025",
+        "observations": "10/04/2025: Bolívar autorizó ayer iniciarlo en prueba para los ambientes de Yii y nativo",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-87-Yii-Nativo",
+        "title": "Implementar en Yii y Nativo la autenticación con QR",
+        "assigned": "JESUS PEÑA",
+        "state": "Pruebas Bolívar",
+        "progress": 90,
+        "startDate": "14/04/2025",
+        "endDate": "",
+        "observations": "28/05/2025: El 26 de Mayo se finalizan los ajustes indiecados por Bolívar y se informa para que realicen las pruebas.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-100",
+        "title": "Cambio de flujo radicación de facturas EPS",
+        "assigned": "JAIRO NIÑO",
+        "state": "Detenido Bolívar",
+        "progress": 0,
+        "startDate": "N/A",
+        "endDate": "",
+        "observations": "Req cancelado por bolívar.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "GD772-81",
+        "title": "Calificador automático (1)",
+        "assigned": "JESUS PEÑA",
+        "state": "Pruebas Bolívar",
+        "progress": 90,
+        "startDate": "28/04/2025",
+        "endDate": "",
+        "observations": "19/05/2025: El viernes 16 de mayo Se realizaron mejoras en la parte de envío físico, mostrando información completa (dirección, teléfono, nombre, etc.) cuando el caso es, incluyendo el PDF de salida para nueve tipologías distintas, no solo una. También se configuró el administrador de cartas, permitiendo la edición según cada tipología.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Ajustar los portales para ser responsivos",
+        "assigned": "DANILO RAMIREZ",
+        "state": "Pausado",
+        "progress": 5,
+        "startDate": "05/05/2025",
+        "endDate": "",
+        "observations": "28/05/2025: Continuara pausado dando prioridad al req GD772-109 Lectura de nuevos datos de órdenes médicas con IA con el fin de dejarlo terinado antes de salir a vacaciones el martes 3 de Junio.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Desarrollo clasificador de imágenes en Python",
+        "assigned": "JESUS PEÑA",
+        "state": "Pausado",
+        "progress": 80,
+        "startDate": "15/05/2025",
+        "endDate": "",
+        "observations": "28/05/2025: Las pruebas realizadas con el clasificador de archivos PDF no han alcanzado los resultados esperados. Se evalúan otras opciones, pero el enfoque actual está en la funcionalidad de Sistematización con IA (Segunda vista de incapacidades en portal).",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "MDSB-812862",
+        "title": "Jira dia a dia Descarga masiva de imágenes (Nativo)",
+        "assigned": "JESUS PEÑA",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "N/A",
+        "endDate": "",
+        "observations": "30/05/2025: Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Implementar cambio de contraseña a 30 días en los tres aplicativos",
+        "assigned": "JESUS PEÑA",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "N/A",
+        "endDate": "",
+        "observations": "30/05/2025: Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Validación Informes de cuentas médicas y colas de procesamiento",
+        "assigned": "JAIRO NIÑO",
+        "state": "Pendiente",
+        "progress": 65,
+        "startDate": "29/05/2025",
+        "endDate": "",
+        "observations": "13/06/2025: Se continuará investigando otras alternativas para optimizar el proceso",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Automatización cuentas médicas con IA",
+        "assigned": "JAIRO NIÑO",
+        "state": "Pendiente",
+        "progress": 20,
+        "startDate": "03/06/2025",
+        "endDate": "",
+        "observations": "06/11/2025: No se trabajó en los últimos días. Continúa pendiente.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "CNTI-195",
+        "title": "Vulnerabilidad, Implementación insegura de la integridad de los recursos secundarios (SRI) / imaginex",
+        "assigned": "DANILO RAMIREZ",
+        "state": "En Proceso",
+        "progress": 0,
+        "startDate": "17/06/2025",
+        "endDate": "",
+        "observations": "Inicio ayerSe inició el trabajo sobre la vulnerabilidad el 17 de Junio.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Jira dia a dia Marcar como envio certificado tipologia 10665 Solicitud paz y salvo prestadores asistenciales",
+        "assigned": "jESUS PEÑA",
+        "state": "Finalizado",
+        "progress": 100,
+        "startDate": "17/06/2025",
+        "endDate": "",
+        "observations": "Se realiza maracación solicitada para la tipologia 10665 Solicitud paz y salvo prestadores asistenciales.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Automatización de notas crédito",
+        "assigned": "JAIRO NIÑO",
+        "state": "Finalizado",
+        "progress": 100,
+        "startDate": "17/06/2025",
+        "endDate": "17/06/2025",
+        "observations": "Se implementó automatización basada en lectura del XML para reconocer y anular automáticamente notas crédito. Ya se encuentra en producción desde el 17 de Junio.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Crear cuenta en GitHub con correo corporativo",
+        "assigned": "FABIO FORERO",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "",
+        "endDate": "",
+        "observations": "Se propuso integrarlo al GitHub de la organización Imaging SAS para que pueda crear issues directamente relacionados con los desarrollos",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "PRV_2025_001",
+        "title": "VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO",
+        "assigned": "Mauricio Figueroa",
+        "state": "En Proceso",
+        "progress": 0,
+        "startDate": "16/06/2025",
+        "endDate": "",
+        "observations": "El 17 de junio se desarrollan dos informes adicionales: tesorería y porvenir, con definición de estructura en curso.",
+        "unit": "Alfa"
+    },
+    {
+    "id": "GD772-114",
+    "title": "ADICIONAR INFORMACIÓN DE TENGO DUDAS DE MIS REEMBOLSOS AL INFORME CONSOLIDADO",
+    "assigned": "JAIRO NIÑO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "17/06/2025",
+    "endDate": "",
+    "observations": "Requerimiento asignado 17 de junio, en cola de trabajo.",
+    "unit": "Bolívar"
+    }
+];
 
         // Mapeo de estados a colores para el gráfico de pastel (asegúrate de que coincidan con tus datos)
         const stateColors = {
