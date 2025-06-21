@@ -184,8 +184,8 @@
   </script>
 </head>
 <body>
-<div class="container-fluid mt-4 px-4"></div>
-  <!-- <div class="container mt-4"> -->
+      <div class="container-fluid mt-4 px-4"></div>
+    <!-- <div class="container mt-4"> -->
       <!-- <h1 id="titulo-principal">Informe Interactivo</h1> -->
     <nav class="sidebar">
         <h3 class="text-center text-white mb-4">Informe Requerimientos Imagine</h3>
@@ -217,9 +217,9 @@
                     <div class="row g-3">
                         <div class="col-md-3">
                             <label for="estadoFiltro">Filtrar por Estado:</label>
-                            <select id="estadoFiltro" class="form-select form-select-sm">
-                                <option value="">Todos</option>
-                            </select>
+                           <select id="estadoFiltro" class="form-select form-select-sm">
+                          <option value="Todos">Todos</option>
+                 </select>
                         </div>
                         <div class="col-md-3">
                             <label for="unidadFiltro">Filtrar por Unidad:</label>
@@ -227,6 +227,7 @@
                                 <option value="">Todas</option>
                                 <option value="Bolívar">Bolívar</option>
                                 <option value="Alfa">Alfa</option>
+                                <option value="Protección">Protección</option>
                             </select>
                         </div>
                         <div class="col-md-3">
@@ -243,6 +244,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-3">
+  <div class="col-md-12 text-right">
+   <!--  <button id="btnLimpiarFiltros" class="btn btn-secondary btn-sm">Limpiar Filtros</button> -->
+  </div>
+</div>
                 <div id="taskList">
                     <p class="no-results">Cargando tareas...</p>
                 </div>
@@ -296,7 +302,7 @@
         document.title = `Informe Interactivo - Reporte ${formattedDate}`;
         document.getElementById('reportDate').textContent = formattedDate;
 
-        // Estructura de datos JSON con unidades Bolívar o Alfa
+        // Estructura de datos JSON con unidades Bolívar, Protección o Alfa
         let tasks = [
     {
         "id": "MDSB-780227",
@@ -306,7 +312,7 @@
         "progress": 0,
         "startDate": "17/03/2025",
         "endDate": "",
-        "observations": "Retomara validación de la incidencia.",
+        "observations": "Retomará validación de la incidencia.",
         "unit": "Bolívar"
     },
     {
@@ -317,13 +323,13 @@
         "progress": 99,
         "startDate": "23/05/2025",
         "endDate": "17/06/2025",
-        "observations": "Se ajustó la lógica del informe. Está listo para pasarse a producción entre hoy y mañana.",
+        "observations": "Se acordó pasar informe actualizado a producción el martes para no afectar la migración S3",
         "unit": "Bolívar"
     },
     {
         "id": "MDSB-820704",
         "title": "Jira dia a dia Error en generación informe mail 472 (Prefactura)",
-        "assigned": "jESUS PEÑA",
+        "assigned": "JESUS PEÑA",
         "state": "Finalizado",
         "progress": 100,
         "startDate": "17/06/2025",
@@ -333,40 +339,40 @@
     },
     {
         "id": "GD772-69",
-        "title": "Extraccion de Imagenes ( API) (Incapacidades)",
-        "assigned": "jESUS PEÑA",
+        "title": "Extracción de Imágenes (API) (Incapacidades)",
+        "assigned": "JESUS PEÑA",
         "state": "En Proceso",
-        "progress": 90,
+        "progress": 40,
         "startDate": "09/06/2025",
-        "endDate": "",
-        "observations": "El dominio ya está creado en DEV, pero la base de datos de imágenes no está funcionando correctamente, se acordó garantizar pruebas en DEV antes de migrar a TEST. Se cargarán imágenes de prueba.",
+        "endDate": "09/06/2025",
+        "observations": "Danilo escala jira MDSB-833779 a infraestructura debido a que se tiene acceso interno al dominio, pero externamente se recibe un error.",
         "unit": "Bolívar"
     },
     {
         "id": "GD772-60",
         "title": "Descarga automática de informes",
         "assigned": "JAIRO NIÑO",
-        "state": "En Proceso",
-        "progress": 10,
+        "state": "Pruebas Bolívar",
+        "progress": 80,
         "startDate": "11/06/2025",
         "endDate": "",
-        "observations": "Pendiente envío del script para realizar solicitud de control de cambios para prueba.",
+        "observations": "19 de junio se escala control de cambios MDSB-833556 para test, se ejecuta con éxito y se pasa a test e iniciar pruebas por el cliente. A la espera de aprobación de negocio para paso a producción",
         "unit": "Bolívar"
     },
     {
         "id": "CNTI-271",
         "title": "Vulnerabilidad, CVE-2016-4055 – DoS por expresiones regulares ineficientes en Moment.js (< v2.11.2)",
         "assigned": "FABIO FORERO",
-        "state": "Pruebas Imagine",
+        "state": "Finalizado",
         "progress": 100,
         "startDate": "13/06/2025",
-        "endDate": "",
-        "observations": "Queda disponible el 13 de Junio para pruebas por Imagine en ambientes de prueba",
+        "endDate": "19/06/2025",
+        "observations": "19/06/2025: El 19 de junio se realizan pruebas en ambiente de test, no se evidenció un comportamiento anómalo ante entradas no válidas, se considera viable proceder con la implementación en ambiente de producción.",
         "unit": "Bolívar"
     },
     {
         "id": "CNTI-96",
-        "title": "Vulnerabilidad,La política de seguridad de los contenidos contiene la directiva “unsafe” / imaginex",
+        "title": "Vulnerabilidad, La política de seguridad de los contenidos contiene la directiva “unsafe” / imaginex",
         "assigned": "DANILO RAMIREZ",
         "state": "En Test",
         "progress": 0,
@@ -388,13 +394,13 @@
     },
     {
         "id": "PRV_2025_001",
-        "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO,",
+        "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO",
         "assigned": "Mauricio Figueroa",
-        "state": "Pruebas Alfa",
-        "progress": 80,
+        "state": "Paso a Producción",
+        "progress": 90,
         "startDate": "03/02/2025",
-        "endDate": "",
-        "observations": "Se adaptó el grid y los reportes a los distintos roles/permisos. También se incorporaron nuevos campos a solicitud del cliente; pendiente Pruebas por el cliente.",
+        "endDate": "16/06/2025",
+        "observations": "Se notifica por parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria, 09/06/2025: El requerimiento fue pausado 12 mayo de 2025. 10/06/2025: Hoy se definirá si se continúa con el desarrollo o continúa pausado. 11/06/2025: Ya se cuenta con los permisos y el query para la vista. Se sincronizan las reclamaciones de Cifren, pero falta integrar las de Plus (montadas en AWS) y ajustar la identificación del origen de cada reclamación. Se estima que este requerimiento adicional tomará un día de trabajo Iniciando el 12 de Junio. 13/06/2025: Se obtuvo respuesta positiva sobre permisos para acceder a la vista de Plus. Sin embargo, falta que la vista tenga datos reales para completar la sincronización. 16/06/2025: Se completó la primera fase de validación y hoy se trabaja en la parte de gestión de pagos, cliente realizará pruebas hoy. 17/06/2025: Se realizan en ajustes en la mañana de hallazgos reportados por el cliente tras las pruebas, y se entregarán al cliente para sus pruebas. 18/06/2025: Se adaptó el grid y los reportes a los distintos roles/permisos. También se incorporaron nuevos campos a solicitud del cliente; pendiente Pruebas por el cliente. 19/06/2025: Superó pruebas del cliente y se aprueba paso a producción para el día sábado 21 de Junio.",
         "unit": "Alfa"
     },
     {
@@ -405,7 +411,7 @@
         "progress": 90,
         "startDate": "27/02/2025",
         "endDate": "28/04/2025",
-        "observations": "28/02/2025: modificó el script para entrenar con lenguaje natural. 28/04/2025: Se entrega para TEST",
+        "observations": "28/02/2025: Modificó el script para entrenar con lenguaje natural. 28/04/2025: Se entrega para TEST",
         "unit": "Bolívar"
     },
     {
@@ -413,10 +419,10 @@
         "title": "Lectura de incapacidades por Python",
         "assigned": "DANILO RAMIREZ",
         "state": "Entrenamiento",
-        "progress": 90,
+        "progress": 95,
         "startDate": "14/02/2025",
-        "endDate": "",
-        "observations": "13/06/2025: No se ha podido validar el rendimiento del modelo",
+        "endDate": "20/05/2025",
+        "observations": "entrenamiento fines semana",
         "unit": "Bolívar"
     },
     {
@@ -424,10 +430,10 @@
         "title": "Paso de documentos de fs a s3",
         "assigned": "DANILO RAMIREZ",
         "state": "Paso a Producción",
-        "progress": 90,
+        "progress": 95,
         "startDate": "15/04/2025",
         "endDate": "22/05/2025",
-        "observations": "11/06/2025: Pendiente confirmación de Bolívar tras el relato finalizado el 28 de mayo.",
+        "observations": "Para el viernes 20 de junio se programó Ventana de mantenimiento a las 5 pm para realizar paso a producción.",
         "unit": "Bolívar"
     },
     {
@@ -445,11 +451,11 @@
         "id": "GD772-109",
         "title": "Lectura de nuevos datos de órdenes médicas con IA",
         "assigned": "DANILO RAMIREZ",
-        "state": "En Proceso",
-        "progress": 75,
+        "state": "Pausado",
+        "progress": 70,
         "startDate": "14/05/2025",
         "endDate": "",
-        "observations": "El modelo no ha sido entrenado aún. Se plantea insertar registros progresivamente (1.000 diarios) para alcanzar una base de 5.000, se revisara hoy",
+        "observations": "20/06/2025: Se pausa para dar prioridad de la migración S3, se planea iniciar entrenamiento durante la próxima semana.",
         "unit": "Bolívar"
     },
     {
@@ -479,10 +485,10 @@
         "title": "Requerimiento gestión Medicamentos fase 2 - Sprint 2",
         "assigned": "JESUS PEÑA",
         "state": "En Proceso",
-        "progress": 0,
+        "progress": 26,
         "startDate": "18/06/2025",
         "endDate": "",
-        "observations": "Inicia desarrollo",
+        "observations": "20/06/2025: El 19 de junio finalizó el punto 2, continuará con el punto 3.",
         "unit": "Bolívar"
     },
     {
@@ -498,7 +504,7 @@
     },
     {
         "id": "Interno",
-        "title": "Analitica de factura de cuentas medicas (ingresar en el portal de yii) ArL",
+        "title": "Analítica de factura de cuentas médicas (ingresar en el portal de yii) ARL",
         "assigned": "JAIRO NIÑO",
         "state": "Finalizado",
         "progress": 100,
@@ -511,22 +517,22 @@
         "id": "PRV_2025_004",
         "title": "AUXILIOS FUNERARIOS PAGO AUX. FUNERARIOS",
         "assigned": "Mauricio Figueroa",
-        "state": "Pausado",
-        "progress": 0,
+        "state": "En Proceso",
+        "progress": 60,
         "startDate": "19/06/2025",
-        "endDate": "",
-        "observations": "16/06/2025: Se comenzarán el jueves 20 de junio. Ya se están creando las vistas necesarias para ese flujo",
+        "endDate": "25/06/2025",
+        "observations": "Cargue de formatos de formalización y consolidado 100%. Opción de edición y opción de histórico del flujo 100%. Se notifica por parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria. 09/06/2025: El requerimiento fue pausado el 6 de junio de 2025. 16/06/2025: Se comenzarán el jueves 19 de junio. Ya se están creando las vistas necesarias para ese flujo. 19/06/2025: Inicio del desarrollo. 20/06/2025: No se pudo avanzar ayer 19 de junio por ajustes requeridos por el cliente para PRV_2025_001 VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO, Se retomará desarrollo 24 de junio.",
         "unit": "Alfa"
     },
     {
         "id": "PRV_2025_009",
         "title": "DESARROLLO PREVISIONAL INCAPACIDADES",
         "assigned": "Mauricio Figueroa",
-        "state": "Pruebas Alfa",
-        "progress": 100,
+        "state": "Paso a Producción",
+        "progress": 90,
         "startDate": "09/06/2025",
-        "endDate": "",
-        "observations": "13/06/2025:Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado.",
+        "endDate": "12/06/2025",
+        "observations": "09/06/2025: El Objetivo Automatizar el cálculo de incapacidades en el sistema Imagine, replicando el proceso manual actual utilizado por los liquidadores y presentando los resultados en un formato claro y compatible con Excel. Iniciará con el desarrollo. 11/06/2025: Mauricio completó la función de cálculo y está terminando el formulario de consulta. Planea entregar el requerimiento completo hoy para subir a pruebas el jueves. 13/06/2025: Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado. 19/06/2025: Paso a producción para el 21 de junio.",
         "unit": "Alfa"
     },
     {
@@ -548,30 +554,8 @@
         "progress": 0,
         "startDate": "N/A",
         "endDate": "",
-        "observations": "11/06/2025: Continuara con el desarrollo tras finalizar req PRV_2025_007 CALCULO IBL",
+        "observations": "11/06/2025: Continuará con el desarrollo tras finalizar req PRV_2025_007 CÁLCULO IBL",
         "unit": "Alfa"
-    },
-    {
-        "id": "GD772-64",
-        "title": "API de recobros",
-        "assigned": "DANILO RAMIREZ",
-        "state": "Detenido Bolívar",
-        "progress": 0,
-        "startDate": "27/02/2025",
-        "endDate": "07/03/2025",
-        "observations": "28/04/2025: Requerimeinto cancelado por Bolívar.",
-        "unit": "Bolívar"
-    },
-    {
-        "id": "Interno",
-        "title": "Comprimir información del cuerpo de la tabla cola_correos",
-        "assigned": "DANILO RAMIREZ",
-        "state": "Detenido Bolívar",
-        "progress": 0,
-        "startDate": "31/03/2025",
-        "endDate": "",
-        "observations": "28/04/2025: sin cambios por parte de bolívar.",
-        "unit": "Bolívar"
     },
     {
         "id": "MDSB-707440/GD772-74",
@@ -588,33 +572,22 @@
         "id": "GD772-87-Laravel",
         "title": "Implementar en Laravel la autenticación con QR",
         "assigned": "JESUS PEÑA",
-        "state": "Pruebas Bolívar",
-        "progress": 90,
+        "state": "En Proceso",
+        "progress": 95,
         "startDate": "31/01/2025",
         "endDate": "12/02/2025",
-        "observations": "10/04/2025: Bolívar autorizó ayer iniciarlo en prueba para los ambientes de Yii y nativo",
+        "observations": "El 18 de Junio Bolívar informa que realizan las pruebas en test y aún realizando la exclusión de usuario (Listas blancas) se está solicitando doble factor de autenticación. Se identificó que la funcionalidad de Listas Blancas no está operando correctamente desde el navegador debido al score del CAPTCHA. Como propuesta, se sugiere implementar una validación directa por cédula, eliminando la dependencia del CAPTCHA.",
         "unit": "Bolívar"
     },
     {
         "id": "GD772-87-Yii-Nativo",
         "title": "Implementar en Yii y Nativo la autenticación con QR",
         "assigned": "JESUS PEÑA",
-        "state": "Pruebas Bolívar",
-        "progress": 90,
+        "state": "En Proceso",
+        "progress": 95,
         "startDate": "14/04/2025",
-        "endDate": "",
-        "observations": "28/05/2025: El 26 de Mayo se finalizan los ajustes indiecados por Bolívar y se informa para que realicen las pruebas.",
-        "unit": "Bolívar"
-    },
-    {
-        "id": "GD772-100",
-        "title": "Cambio de flujo radicación de facturas EPS",
-        "assigned": "JAIRO NIÑO",
-        "state": "Detenido Bolívar",
-        "progress": 0,
-        "startDate": "N/A",
-        "endDate": "",
-        "observations": "Req cancelado por bolívar.",
+        "endDate": "24/04/2025",
+        "observations": "El 18 de Junio Bolívar informa que realizan las pruebas en test y aún realizando la exclusión de usuario (Listas blancas) se está solicitando doble factor de autenticación. Se identificó que la funcionalidad de Listas Blancas no está operando correctamente desde el navegador debido al score del CAPTCHA. Como propuesta, se sugiere implementar una validación directa por cédula, eliminando la dependencia del CAPTCHA.",
         "unit": "Bolívar"
     },
     {
@@ -636,7 +609,7 @@
         "progress": 5,
         "startDate": "05/05/2025",
         "endDate": "",
-        "observations": "28/05/2025: Continuara pausado dando prioridad al req GD772-109 Lectura de nuevos datos de órdenes médicas con IA con el fin de dejarlo terinado antes de salir a vacaciones el martes 3 de Junio.",
+        "observations": "28/05/2025: Continuará pausado dando prioridad al req GD772-109 Lectura de nuevos datos de órdenes médicas con IA con el fin de dejarlo terminado antes de salir a vacaciones el martes 3 de Junio.",
         "unit": "Bolívar"
     },
     {
@@ -687,11 +660,11 @@
         "id": "Interno",
         "title": "Automatización cuentas médicas con IA",
         "assigned": "JAIRO NIÑO",
-        "state": "Pendiente",
+        "state": "En Proceso",
         "progress": 20,
         "startDate": "03/06/2025",
         "endDate": "",
-        "observations": "06/11/2025: No se trabajó en los últimos días. Continúa pendiente.",
+        "observations": "20/06/2025: Retomará revisión del tema durante el día de hoy.",
         "unit": "Bolívar"
     },
     {
@@ -699,21 +672,21 @@
         "title": "Vulnerabilidad, Implementación insegura de la integridad de los recursos secundarios (SRI) / imaginex",
         "assigned": "DANILO RAMIREZ",
         "state": "En Proceso",
-        "progress": 0,
+        "progress": 15,
         "startDate": "17/06/2025",
-        "endDate": "",
-        "observations": "Inicio ayerSe inició el trabajo sobre la vulnerabilidad el 17 de Junio.",
+        "endDate": "22/07/2025",
+        "observations": "Se trabaja en una vulnerabilidad compleja relacionada con scripts ya, se requiere intervención manual en múltiples páginas.",
         "unit": "Bolívar"
     },
     {
         "id": "Interno",
         "title": "Jira dia a dia Marcar como envio certificado tipologia 10665 Solicitud paz y salvo prestadores asistenciales",
-        "assigned": "jESUS PEÑA",
+        "assigned": "JESUS PEÑA",
         "state": "Finalizado",
         "progress": 100,
         "startDate": "17/06/2025",
         "endDate": "",
-        "observations": "Se realiza maracación solicitada para la tipologia 10665 Solicitud paz y salvo prestadores asistenciales.",
+        "observations": "Se realiza marcación solicitada para la tipología 10665 Solicitud paz y salvo prestadores asistenciales.",
         "unit": "Bolívar"
     },
     {
@@ -739,26 +712,114 @@
         "unit": "Bolívar"
     },
     {
-        "id": "PRV_2025_001",
+        "id": "PRV_2025_001-2",
         "title": "VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO",
         "assigned": "Mauricio Figueroa",
-        "state": "En Proceso",
-        "progress": 0,
+        "state": "Pruebas Alfa",
+        "progress": 60,
         "startDate": "16/06/2025",
-        "endDate": "",
-        "observations": "El 17 de junio se desarrollan dos informes adicionales: tesorería y porvenir, con definición de estructura en curso.",
+        "endDate": "19/06/2025",
+        "observations": "El 16 de junio se inicia desarrollo con fecha estimada de finalización 18 de junio. 18/06/2025: El 17 de junio se desarrollan dos informes adicionales: tesorería y porvenir, con definición de estructura en curso. 19/06/2025: Entrega al cliente para pruebas 19 de junio, Cliente solicita ajuste de vistas y campos necesarios para el proceso.",
         "unit": "Alfa"
     },
     {
-    "id": "GD772-114",
-    "title": "ADICIONAR INFORMACIÓN DE TENGO DUDAS DE MIS REEMBOLSOS AL INFORME CONSOLIDADO",
-    "assigned": "JAIRO NIÑO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "17/06/2025",
-    "endDate": "",
-    "observations": "Requerimiento asignado 17 de junio, en cola de trabajo.",
-    "unit": "Bolívar"
+        "id": "GD772-114",
+        "title": "ADICIONAR INFORMACIÓN DE TENGO DUDAS DE MIS REEMBOLSOS AL INFORME CONSOLIDADO",
+        "assigned": "JAIRO NIÑO",
+        "state": "Estimar",
+        "progress": 0,
+        "startDate": "17/06/2025",
+        "endDate": "",
+        "observations": "20/06/2025: Validará requerimiento y estimará tiempo de desarrollo.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "MDSB-833556",
+        "title": "CDC-T, req GD772-60 Descarga automática de informes",
+        "assigned": "FABIO FORERO",
+        "state": "Finalizado",
+        "progress": 100,
+        "startDate": "19/06/2025",
+        "endDate": "19/06/2025",
+        "observations": "19 de junio Se escala control de cambios en test para alterar una tabla y se crea otra. Control de cambios ejecutado correctamente.",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno",
+        "title": "Desarrollo de informe interactivo de requerimientos",
+        "assigned": "FABIO FORERO",
+        "state": "En Proceso",
+        "progress": 60,
+        "startDate": "12/06/2025",
+        "endDate": "",
+        "observations": "20/06/2025: Se está trabajando en la actualización de req en el informe y en la adición del campo 'Detalle de req'",
+        "unit": "Bolívar"
+    },
+    {
+        "id": "Interno-H-1",
+        "title": "Automatización y migración de lógica a Python",
+        "assigned": "Alejandro Cardona Ocampo",
+        "state": "En Test",
+        "progress": 95,
+        "startDate": "17/06/2025",
+        "endDate": "19/06/2025",
+        "observations": "Actividad: Migración de código en donde se importa el lote tanto física como en bases de datos. 19/06/2025 Se produjeron ciertos errores en la fase de pruebas y se realizaron todas las correcciones para que el nuevo funcionamiento responda y se acople bien",
+        "unit": "Protección"
+    },
+    {
+        "id": "REQ-1-1",
+        "title": "Tratamiento especial al radicar trámites de vejez",
+        "assigned": "Alejandro Cardona Ocampo",
+        "state": "Finalizado",
+        "progress": 100,
+        "startDate": "19/06/2025",
+        "endDate": "19/06/2025",
+        "observations": "Actividad: Revisión de flujo y código. 19/06/2025 Se identificó el código a intervenir y con el cual trabajar en el requerimiento",
+        "unit": "Protección"
+    },
+    {
+        "id": "Interno-H-2",
+        "title": "Automatización y migración de lógica a Python",
+        "assigned": "Alejandro Cardona Ocampo",
+        "state": "En Proceso",
+        "progress": 0,
+        "startDate": "20/06/2025",
+        "endDate": "24/06/2025",
+        "observations": "Actividad: Migración de código en donde se trata toda la lógica y activación de tareas de la indexación del lote. 20/06/2025: Identificación y paso del flujo para la funcionalidad de indexación de lotes de PHP a Python",
+        "unit": "Protección"
+    },
+    {
+        "id": "Interno-H-3",
+        "title": "Automatización y migración de lógica a Python",
+        "assigned": "Alejandro Cardona Ocampo",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "",
+        "endDate": "26/06/2025",
+        "observations": "Actividad: Acoplar lógica faltante en la migración de código",
+        "unit": "Protección"
+    },
+    {
+        "id": "REQ-1-2",
+        "title": "Tratamiento especial al radicar trámites de vejez",
+        "assigned": "Alejandro Cardona Ocampo",
+        "state": "Pendiente",
+        "progress": 0,
+        "startDate": "",
+        "endDate": "",
+        "observations": "Actividad: Reunión con las partes interesadas para identificar los inputs de trabajo.",
+        "unit": "Protección"
+    },
+    {
+        "id": "Interno",
+        "title": "Migración S3 y aplicaciones a EBS",
+        "assigned": "DANILO RAMIREZ",
+        "state": "En Proceso",
+        "progress": 80,
+        "startDate": "19/06/2025",
+        "endDate": "20/06/2025",
+        "observations": "El 19 de junio inicia la migración activa de archivos y logs a nuevo almacenamiento EBS. 20/06/2025: Continúa con la migración y validación de servicios.",
+        "unit": "Bolívar"
     }
 ];
 
@@ -873,21 +934,39 @@
                 taskCard.innerHTML = `
                     <div class="card-body">
                         <h5>${task.title}</h5>
-                        <p><strong>Persona:</strong> ${task.assigned} | <strong>Estado:</strong> ${task.state} | <strong>% Avance:</strong> ${task.progress}%</p>
+                        <p><strong>Persona:</strong> ${task.assigned} | <strong>Estado:</strong> ${task.state} | <strong>% Avance:</strong> ${task.progress}% | <strong>Unidad:</strong> ${task.unit}</p>
                         <div class="progress mb-2">
                             <div class="progress-bar bg-info" role="progressbar" style="width: ${task.progress}%;" aria-valuenow="${task.progress}" aria-valuemin="0" aria-valuemax="100">${task.progress}%</div>
                         </div>
                         <a href="#" class="toggle-details" data-id="${task.id}">Más</a>
                         <div id="details-${task.id}" style="display: none;">
-                            <p><strong>Fecha de Inicio:</strong> ${task.startDate}</p>
-                            ${task.endDate ? `<p><strong>Fecha de Fin:</strong> ${task.endDate}</p>` : ''}
-                            <p><strong>Observaciones:</strong> ${task.observations}</p>
+    <p><strong>Fecha de Inicio:</strong> ${task.startDate}</p>
+    ${task.endDate ? `<p><strong>Fecha de Fin:</strong> ${task.endDate}</p>` : ''}
+    <div class="detail-toggle">
+    <a href="#" class="toggle-detail-text" data-id="${task.id}">[+] Ver Detalle Requerimiento</a>
+    <div id="detail-text-${task.id}" class="detail-text" style="display: none; margin-top: 5px;">
+        <p>${task.detail || 'Sin detalle registrado.'}</p>
+    </div>
+</div>
+    <p><strong>Observaciones:</strong> ${task.observations}</p>
+    
                         </div>
                     </div>
                 `;
                 taskList.appendChild(taskCard);
+                          
             });
-
+// Activar toggle del campo "Detalle Requerimiento"
+document.querySelectorAll('.toggle-detail-text').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = this.dataset.id;
+        const detailDiv = document.getElementById(`detail-text-${id}`);
+        const isVisible = detailDiv.style.display === 'block';
+        detailDiv.style.display = isVisible ? 'none' : 'block';
+        this.textContent = isVisible ? '[+] Ver Detalle Requerimiento' : '[-] Ocultar Detalle Requerimiento';
+    });
+});
             document.querySelectorAll('.toggle-details').forEach(button => {
                 button.addEventListener('click', e => {
                     e.preventDefault();
@@ -1222,5 +1301,19 @@
         });
 
     </script>
+<script>
+
+  document.getElementById('btnLimpiarFiltros').addEventListener('click', () => {
+   /*  // Limpiar filtros
+    document.getElementById('estadoFiltro').value = '';
+    document.getElementById('unidadFiltro').value = '';
+    document.getElementById('fechaInicio').value = '';
+    document.getElementById('fechaFin').value = '';
+    document.getElementById('busquedaTexto').value = '';
+
+    // Volver a mostrar TODAS las tareas
+     applyFilters applyFilters(); */
+  });
+</script>
 </body>
 </html>
