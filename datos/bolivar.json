@@ -200,7 +200,7 @@
     "progress": 100,
     "startDate": "19/06/2025",
     "endDate": "19/06/2025",
-    "observations": "19 de junio Se escala control de cambios en test para alterar una tabla y se crea otra. Control de cambios ejecutado correctamente.",
+    "observations": "19 de junio Se escala control de cambios en test para alterar una tabla y se crea otra. Control de cambios ejecutado correctamente. \n[02/07/2025]: Control de cambios aprobado, se ejecutara 3 de Julio 4pm.",
     "unit": "Varbo",
     "detail": ""
   },
@@ -416,7 +416,7 @@
     "progress": 90,
     "startDate": "26/06/2025",
     "endDate": "",
-    "observations": "[26/06/2025]: Se escala control de cambios para  produccion, Pendiente  que el cliente   pase el req GD772-60 a estado PAP para continuar con el proceso. \n[01/07/2025]: Control de cambios avanza al siguiente  estado (Validación), se estima  sea incluido en el comite de cambios digitales  el 2 de Julio. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy.",
+    "observations": "[26/06/2025]: Se escala control de cambios para  produccion, Pendiente  que el cliente   pase el req GD772-60 a estado PAP para continuar con el proceso. \n[01/07/2025]: Control de cambios avanza al siguiente  estado (Validación), se estima  sea incluido en el comite de cambios digitales  el 2 de Julio. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy. \n[02/07/2025]: Control de cambios aprobado, se ejecutara 3 de Julio 4pm.",
     "unit": "Varbo",
     "detail": ""
     },

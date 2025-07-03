@@ -160,6 +160,36 @@
             }
         }
     </style>
+    <style>
+  .progress-bar-full {
+    background-color: #28a745 !important; /* verde éxito */
+  }
+</style>
+    <style>
+        /*boton ocultar finalizados*/
+  .btn-toggle-finalizados {
+    background-color: hsl(187, 96%, 48%);  /* azul oscuro */
+    color: white;
+    border: none;
+  }
+
+  .btn-toggle-finalizados:hover {
+    background-color: #0069d9; /* azul más claro */
+  }
+
+  .btn-toggle-finalizados.modo-activo {
+    background-color: #f33210; /* gris cuando está activo */
+    color: #fff;
+  }
+</style>
+<style>
+  .bg-verde-finalizado {
+    background-color: #28c76f !important; /* un verde brillante personalizado */
+    color: white;
+  }
+</style>
+
+
        <script>
     window.addEventListener('DOMContentLoaded', () => {
       const fecha = new Date();
@@ -249,7 +279,10 @@
    <!--  <button id="btnLimpiarFiltros" class="btn btn-secondary btn-sm">Limpiar Filtros</button> -->
   </div>
 </div>
-                <div id="taskList">
+                <div class="d-flex justify-content-start mb-2">
+    <button id="toggleFinalizados" class="btn btn-sm btn-toggle-finalizados">Ocultar Finalizados</button>
+</div>
+<div id="taskList">
                     <p class="no-results">Cargando tareas...</p>
                 </div>
             </div>
@@ -425,7 +458,11 @@ console.log("Cargando archivos JSON:", archivos);
        
                 // Renderizar Tareas
         function renderTasks(filteredTasks = tasks) {
-            filteredTasks = filteredTasks.filter(task => task.visible !== false);
+            filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+    return true;
+});
             const taskList = document.getElementById('taskList');
             taskList.innerHTML = '';
             if (filteredTasks.length === 0) {
@@ -440,7 +477,15 @@ console.log("Cargando archivos JSON:", archivos);
                         <h5>${task.id} - ${task.title}</h5>
                         <p><strong>Persona:</strong> ${task.assigned} | <strong>Estado:</strong> ${task.state} | <strong>% Avance:</strong> ${task.progress}% | <strong>Unidad:</strong> ${task.unit}</p>
                         <div class="progress mb-2">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: ${task.progress}%;" aria-valuenow="${task.progress}" aria-valuemin="0" aria-valuemax="100">${task.progress}%</div>
+                            <div class="progress-bar ${task.progress === 100 ? 'bg-verde-finalizado' : 'bg-info'}"
+     role="progressbar"
+     style="width: ${task.progress}%;" 
+     aria-valuenow="${task.progress}" 
+     aria-valuemin="0" 
+     aria-valuemax="100">
+  ${task.progress}%
+</div>
+
                         </div>
                         <a href="#" class="toggle-details" data-id="${task.id}">Más</a>
                         <div id="details-${task.id}" style="display: none;">
@@ -496,7 +541,11 @@ document.querySelectorAll('.toggle-detail-text').forEach(link => {
         // Renderizar Estadísticas
         function updateStatistics(filteredTasks = tasks) {
             // ➤ Filtro para excluir requerimientos invisibles
-    filteredTasks = filteredTasks.filter(task => task.visible !== false);
+    filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+    return true;
+});
             const estadisticasContent = document.getElementById('estadisticasContent');
             estadisticasContent.innerHTML = ''; // Limpia el contenido
 
@@ -537,7 +586,11 @@ document.querySelectorAll('.toggle-detail-text').forEach(link => {
         // --- Funciones para Gráficos ---
         function plotPieChart(filteredTasks = tasks) {
              // ⬇️ Filtro para excluir tareas no visibles
-            filteredTasks = filteredTasks.filter(task => task.visible !== false);
+            filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+    return true;
+});
             document.getElementById('loadingPie').style.display = 'block';
             const pieChartDiv = document.getElementById('pie-chart');
             pieChartDiv.style.display = 'none'; // Ocultar mientras carga
@@ -584,7 +637,11 @@ document.querySelectorAll('.toggle-detail-text').forEach(link => {
 
         function plotBarChart(filteredTasks = tasks) {
             // Filtro para excluir tareas invisibles
-            filteredTasks = filteredTasks.filter(task => task.visible !== false);
+            filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+    return true;
+});
             document.getElementById('loadingBar').style.display = 'block';
             const barChartDiv = document.getElementById('bar-chart');
             barChartDiv.style.display = 'none';
@@ -628,7 +685,11 @@ document.querySelectorAll('.toggle-detail-text').forEach(link => {
 
         function plotAssignmentsChart(filteredTasks = tasks) {
              // Excluir tareas invisibles
-            filteredTasks = filteredTasks.filter(task => task.visible !== false);
+            filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+    return true;
+});
             document.getElementById('loadingAssignments').style.display = 'block';
             const assignmentsChartDiv = document.getElementById('assignments-chart');
             assignmentsChartDiv.style.display = 'none';
@@ -840,5 +901,21 @@ function formatearDetalle(texto) {
      applyFilters applyFilters(); */ -->
   });
 </script>
+
+<script>
+  let mostrarFinalizados = true;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnFinalizados = document.getElementById("toggleFinalizados");
+
+    btnFinalizados.addEventListener("click", () => {
+      mostrarFinalizados = !mostrarFinalizados;
+      btnFinalizados.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
+      btnFinalizados.classList.toggle("modo-activo", !mostrarFinalizados);
+      applyFilters(); // vuelve a renderizar con el filtro aplicado
+    });
+  });
+</script>
+
 </body>
 </html>
