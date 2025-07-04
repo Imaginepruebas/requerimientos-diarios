@@ -2,7 +2,7 @@
   {
     "id": "MDSB-780227",
     "title": "Duplicación de actividades en Nativo",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "17/03/2025",
@@ -14,7 +14,7 @@
   {
     "id": "INTERNO",
     "title": "Mejora informe glosa req GD772-104 Campos glosa aceptada y glosa conciliación",
-    "assigned": "JAIRO NIÑO",
+    "assigned": "JAIRO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "23/05/2025",
@@ -26,7 +26,7 @@
   {
     "id": "MDSB-820704",
     "title": "Jira dia a dia Error en generación informe mail 472 (Prefactura)",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "17/06/2025",
@@ -38,19 +38,19 @@
   {
     "id": "GD772-60",
     "title": "Descarga automática de informes",
-    "assigned": "JAIRO NIÑO",
-    "state": "Paso a Producción",
-    "progress": 90,
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "11/06/2025",
     "endDate": "25/06/2025",
-    "observations": "[09/06/2025]: Se estima tiempo  inicial de desarrollo: 1.5 días\n[11/06/2025]: Se debe crear una tabla que relacione informes con usuarios destino, para replicar informes automáticamente a múltiples usuarios, a un no se confirma fecha de inicio del desarrollo.\n[13/06/2025]: El 11 de junio inicia en la creación de una tabla que permita asignar informes automáticos a múltiples usuarios. Falta desarrollar el panel administrativo y completar los ajustes en la estructura de CMS. hoy se estimae se solicitara control de cambios en test\n[16/06/2025]: Pendiente envio del  script para realizar solicitud de control de  cambios para test.\n[19/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test. Control de cambios ejecutado correctamente.\n[20/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test, se ejecuta con exito y se pasa a test e iniciar pruebas por el cliente. A la espera de aprobación de negocio para paso a producción\n[25/06/2025]:El informe está listo en test, pero pendiente de aprobación por parte del negocio para proceder con el control de cambios para paso a produccion.\n[26/06/2025]: Se recibe aprobacion para  paso a producción, se escala control de  cambios MDSB-837144 \n[27/06/2025]: Pendiente aprobación de control de cambios de parte del cliente. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy.",
+    "observations": "[09/06/2025]: Se estima tiempo  inicial de desarrollo: 1.5 días\n[11/06/2025]: Se debe crear una tabla que relacione informes con usuarios destino, para replicar informes automáticamente a múltiples usuarios, a un no se confirma fecha de inicio del desarrollo.\n[13/06/2025]: El 11 de junio inicia en la creación de una tabla que permita asignar informes automáticos a múltiples usuarios. Falta desarrollar el panel administrativo y completar los ajustes en la estructura de CMS. hoy se estimae se solicitara control de cambios en test\n[16/06/2025]: Pendiente envio del  script para realizar solicitud de control de  cambios para test.\n[19/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test. Control de cambios ejecutado correctamente.\n[20/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test, se ejecuta con exito y se pasa a test e iniciar pruebas por el cliente. A la espera de aprobación de negocio para paso a producción\n[25/06/2025]:El informe está listo en test, pero pendiente de aprobación por parte del negocio para proceder con el control de cambios para paso a produccion.\n[26/06/2025]: Se recibe aprobacion para  paso a producción, se escala control de  cambios MDSB-837144 \n[27/06/2025]: Pendiente aprobación de control de cambios de parte del cliente. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy. \n[03/07/2025]:Se Realiza paso a producciòn con exito.",
     "unit": "Varbo",
     "detail": "Se reuiere implementar la descarga automática diaria de informes relacionados con Salud, ARL, EPS y Vida, incluyendo inconsistencias, desde el 1 de enero del año vigente hasta la fecha actual, y generarlos por radicado para tres usuarios específicos (Johana Ximena Ceballos Ramírez, Mayerly Carolina León Torres y Sandra Patricia Roa Bernal)."
   },
   {
     "id": "CNTI-271",
     "title": "Pruebas-Vulnerabilidad, CVE-2016-4055 – DoS por expresiones regulares ineficientes en Moment.js (< v2.11.2)",
-    "assigned": "FABIO FORERO",
+    "assigned": "FABIO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "13/06/2025",
@@ -62,7 +62,7 @@
   {
     "id": "CNTI-96",
     "title": "Vulnerabilidad, La política de seguridad de los contenidos contiene la directiva “unsafe” / imaginex",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "En Test",
     "progress": 70,
     "startDate": "13/06/2025",
@@ -74,7 +74,7 @@
   {
     "id": "GD772-103",
     "title": "Paso de documentos de fs a s3",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "Paso a Producción",
     "progress": 95,
     "startDate": "15/04/2025",
@@ -87,7 +87,7 @@
   {
     "id": "GD772-109",
     "title": "Lectura de nuevos datos de órdenes médicas con IA",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "Entrenamiento",
     "progress": 70,
     "startDate": "14/05/2025",
@@ -99,7 +99,7 @@
   {
     "id": "GD772-116",
     "title": "Requerimiento gestión Medicamentos fase 2 - Sprint 2",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "En Proceso",
     "progress": 75,
     "startDate": "18/06/2025",
@@ -111,7 +111,7 @@
   {
     "id": "MDSB-707440/GD772-74",
     "title": "Portal reembolsos ARL (FLUJO YII)",
-    "assigned": "JAIRO NIÑO",
+    "assigned": "JAIRO",
     "state": "Pruebas Varbo",
     "progress": 80,
     "startDate": "02/05/2025",
@@ -123,7 +123,7 @@
   {
     "id": "GD772-87-Laravel",
     "title": "Implementar en Laravel la autenticación con QR",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Pruebas Varbo",
     "progress": 95,
     "startDate": "31/01/2025",
@@ -135,7 +135,7 @@
   {
     "id": "GD772-87",
     "title": "Implementar en Yii y Nativo la autenticación con QR",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Pruebas Varbo",
     "progress": 95,
     "startDate": "14/04/2025",
@@ -147,7 +147,7 @@
   {
     "id": "GD772-81",
     "title": "Calificador automático (1)",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Pruebas Varbo",
     "progress": 90,
     "startDate": "28/04/2025",
@@ -159,7 +159,7 @@
   {
     "id": "MDSB-812862",
     "title": "Jira dia a dia Descarga masiva de imágenes (Nativo)",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "N/A",
@@ -171,7 +171,7 @@
   {
     "id": "CNTI-195",
     "title": "Vulnerabilidad, Implementación insegura de la integridad de los recursos secundarios (SRI) / imaginex",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "En Proceso",
     "progress": 40,
     "startDate": "17/06/2025",
@@ -183,7 +183,7 @@
   {
     "id": "GD772-114",
     "title": "ADICIONAR INFORMACIÓN DE TENGO DUDAS DE MIS REEMBOLSOS AL INFORME CONSOLIDADO",
-    "assigned": "JAIRO NIÑO",
+    "assigned": "JAIRO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
@@ -195,7 +195,7 @@
   {
     "id": "MDSB-833556",
     "title": "CDC-T, req GD772-60 Descarga automática de informes",
-    "assigned": "FABIO FORERO",
+    "assigned": "FABIO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "19/06/2025",
@@ -207,7 +207,7 @@
   {
     "id": "Interno",
     "title": "Migración S3 y aplicaciones a EBS",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "En Proceso",
     "progress": 80,
     "startDate": "19/06/2025",
@@ -219,7 +219,7 @@
   {
     "id": "Interno",
     "title": "Restablecimiento de contraseña en Laravel",
-    "assigned": "JAIRO NIÑO",
+    "assigned": "JAIRO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "05/06/2025",
@@ -231,7 +231,7 @@
   {
     "id": "Interno",
     "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Pausado",
     "progress": 60,
     "startDate": "26/05/2025",
@@ -243,7 +243,7 @@
   {
     "id": "Interno",
     "title": "Validación Informes de cuentas medicas y colas de procesamiento",
-    "assigned": "JAIRO NIÑO",
+    "assigned": "JAIRO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "29/05/2025",
@@ -255,7 +255,7 @@
   {
     "id": "GD772-69",
     "title": "DEV,Extraccion de Imágenes ( API) (Incapacidades)",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "09/06/2025",
@@ -267,7 +267,7 @@
   {
     "id": "Interno",
     "title": "Automatización cuentas medicas con IA",
-    "assigned": "JAIRO NIÑO",
+    "assigned": "JAIRO",
     "state": "Pendiente",
     "progress": 20,
     "startDate": "03/06/2025",
@@ -279,7 +279,7 @@
   {
     "id": "CNTI-271",
     "title": "Vulnerabilidad, CVE-2016-4055 – DoS por expresiones regulares ineficientes en Moment.js (< v2.11.2)",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "13/06/2025",
@@ -291,7 +291,7 @@
   {
     "id": "Interno-W",
     "title": "Sistema automatizado de clasificación de correos médicos con IA",
-    "assigned": "WILSON APONTE",
+    "assigned": "WILSON",
     "state": "En Proceso",
     "progress": 85,
     "startDate": "05/06/2025",
@@ -303,7 +303,7 @@
   {
     "id": "Interno",
     "title": "Desarrollo de informe interactivo de requerimientos",
-    "assigned": "FABIO FORERO",
+    "assigned": "FABIO",
     "state": "En Proceso",
     "progress": 70,
     "startDate": "12/06/2025",
@@ -315,7 +315,7 @@
   {
     "id": "Interno",
     "title": "Pruebas listas blancas para factor de doble autenticación",
-    "assigned": "FABIO FORERO",
+    "assigned": "FABIO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
@@ -327,7 +327,7 @@
   {
     "id": "Interno",
     "title": "Solicitud accesos ambiente Dev y Test (Jenry)",
-    "assigned": "FABIO FORERO",
+    "assigned": "FABIO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
@@ -339,7 +339,7 @@
   {
     "id": "MDSB-835580",
     "title": "Jira dia a dia ajustar actividades caso 31012936 incapacidades",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Finalizado",
     "progress":100,
     "startDate": "25/06/2025",
@@ -351,7 +351,7 @@
   {
     "id": "Interno",
     "title": "Apertura de flujo de 4 casos de Preautorizaciones poliza salud - delegacion analistas creados con una sola actividad",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "25/06/2025",  
@@ -363,7 +363,7 @@
   {
     "id": "INTERNO",
     "title": "Radicación Express con IA",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "Pruebas Varbo",
     "progress": 90,
     "startDate": "27/02/2025",
@@ -375,7 +375,7 @@
             {
                 "id": "INTERNO",
                 "title": "Lectura de incapacidades por Python",
-                "assigned": "DANILO RAMIREZ",
+                "assigned": "DANILO",
                 "state": "Finalizado",
                 "progress": 95,
                 "startDate": "14/02/2025",
@@ -387,7 +387,7 @@
             {
                 "id": "INTERNO",
                 "title": "Realizar Imagen de docker de nativo para Jesus",
-                "assigned": "WILSON APONTE",
+                "assigned": "WILSON",
                 "state": "Pendiente",
                 "progress": 0,
                 "startDate": "",
@@ -399,7 +399,7 @@
             {
                 "id": "INTERNO",
                 "title": "Ajustar los portales para ser responsive",
-                "assigned": "DANILO RAMIREZ",
+                "assigned": "DANILO",
                 "state": "Pausado",
                 "progress": 5,
                 "startDate": "05/05/2025",
@@ -411,19 +411,19 @@
   {
     "id": "MDSB-837144",
     "title": "CDC-P, req GD772-60 Descarga automatica de informes",
-    "assigned": "FABIO FORERO",
-    "state": "En Proceso",
-    "progress": 90,
+    "assigned": "FABIO",
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "26/06/2025",
-    "endDate": "",
-    "observations": "[26/06/2025]: Se escala control de cambios para  produccion, Pendiente  que el cliente   pase el req GD772-60 a estado PAP para continuar con el proceso. \n[01/07/2025]: Control de cambios avanza al siguiente  estado (Validación), se estima  sea incluido en el comite de cambios digitales  el 2 de Julio. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy. \n[02/07/2025]: Control de cambios aprobado, se ejecutara 3 de Julio 4pm.",
+    "endDate": "03/07/2025",
+    "observations": "[26/06/2025]: Se escala control de cambios para  produccion, Pendiente  que el cliente   pase el req GD772-60 a estado PAP para continuar con el proceso. \n[01/07/2025]: Control de cambios avanza al siguiente  estado (Validación), se estima  sea incluido en el comite de cambios digitales  el 2 de Julio. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy. \n[02/07/2025]: Control de cambios aprobado, se ejecutara 3 de Julio 4pm.\n[03/07/2025]: Control de cambios ejecutado con exito.",
     "unit": "Varbo",
     "detail": ""
     },
   {
     "id": "Interno",
     "title": "Monitoreo de carga y alertas del servidor",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "En Proceso",
     "progress": 90,
     "startDate": "17/06/2025",
@@ -435,7 +435,7 @@
   {
     "id": "Interno",
     "title": "Desarrollo clasificador de imágenes en Python",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Pausado",
     "progress": 80,
     "startDate": "15/05/2025",
@@ -447,7 +447,7 @@
   {
     "id": "GD772-69",
     "title": "Documentacion APi incapacidades (Seguridad)",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "26/06/2025",
@@ -459,7 +459,7 @@
   {
     "id": "GD772-69",
     "title": "Hacer contrato API incapacidades",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "26/06/2025",
@@ -471,7 +471,7 @@
   {
     "id": "GD772-69",
     "title": "TEST Extraccion de Imagenes ( API) (Incapacidades en test)",
-    "assigned": "JESUS PEÑA",
+    "assigned": "JESUS",
     "state": "En Proceso",
     "progress": 60,
     "startDate": "02/07/2025",
@@ -483,7 +483,7 @@
   {
     "id": "GD772-69",
     "title": "Error de acceso en test con TLS y certificados ( Api incapacidades)",
-    "assigned": "DANILO RAMIREZ",
+    "assigned": "DANILO",
     "state": "En Proceso",
     "progress": 50,
     "startDate": "01/07/2025",
@@ -495,7 +495,7 @@
   {
     "id": "Interno",
     "title": "Mejoras informes  por radicado producto Salud ",
-    "assigned": "JAIRO NIÑO",
+    "assigned": "JAIRO",
     "state": "En Proceso",
     "progress": 70,
     "startDate": "28/06/2025",
@@ -507,7 +507,7 @@
   {
     "id": "Interno-f",
     "title": "Pruebas Sistematización con IA (Segunda vista de incapacidades en portal)",
-    "assigned": "FABIO FORERO",
+    "assigned": "FABIO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -515,5 +515,31 @@
     "observations": "",
     "unit": "Varbo",
     "detail": "Se requiren realizar pruebas y documentarlas  para demostrar avances en el entrenamiento del modelo de lectura de incapacidades por IA."
+  },
+  {
+    "id": "Interno",
+    "title": "Validaciòn apertura de dos actividades en un mismo caso en Nativo.",
+    "assigned": "JESUS",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Varbo",
+    "detail": "Se requiere validar el porque se abren 2 actividades en la Gestion del mismo caso en Mativo ",
+    "visible": false
+    },
+  {
+    "id": "MDSB-838905",
+    "title": "Jiras dia dia Inhabilitar 3 tipologias a 3 usuarios.",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "03/07/2025",
+    "endDate": "03/07/2025",
+    "observations": "[03/07/2025]: se realiza inactivaciòn de  los  usuarios en las  tiplogias (1031) Traslado de Polizas,(10493)Mesa de Conciliacion Presencial y (10494)Mesa de conciliación Virtual ",
+    "unit": "Varbo",
+    "detail": "**SOLICITUD DESHABILITAR TIPOLOGIAS PARA USUARIO**\r\n\r\nBuenos dias, solicitamos por favor inhabilitar las tipologias de “Traslado de Polizas”, “Mesa de Conciliacion Presencial” y “Mesa de conciliación Virtual”, para los siguientes usuarios, esto debido a que los funcionarios van a estar fuera por un tiempo por incapacidad medica y vacaciones.\r\n\r\nJOHN ALEJANDRO MARTÍNEZ __1032366925\r\n\r\nGIOVANNY STIVEN NIETO__1003530364\r\n\r\nNATALIA ROCIO CUBIDES__1007155376",
+    "visible": true
     }
 ]

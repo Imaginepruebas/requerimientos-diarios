@@ -2,7 +2,7 @@
   {
     "id": "PRV_2025_001",
     "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO",
-    "assigned": "Mauricio Figueroa",
+    "assigned": "MAURICIO",
     "state": "Paso a Producción",
     "progress": 99,
     "startDate": "03/02/2025",
@@ -15,20 +15,20 @@
   {
   "id": "PRV_2025_004",
   "title": "AUXILIOS FUNERARIOS PAGO AUX. FUNERARIOS",
-  "assigned": "Mauricio Figueroa",
+  "assigned": "MAURICIO",
   "state": "En Proceso",
   "progress": 90,
   "startDate": "19/06/2025",
   "endDate": "25/06/2025",
   "observations": "Cargue de formatos de formalización y consolidado 100%\nOpción de edición y opción de histórico del flujo 100%\nSe notifica por par parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria\n[09/06/2025] :El requerimirneo fue  pausado  el 6 de junio de 2025.\n[16/06/2025]: Se comenzarán el jueves 19 de junio. Ya se están creando las vistas necesarias para ese flujo\n[19/06/2025]: Inicio del desarrollo.\n[20/06/2025]:No se pudo avanzar ayer 19 de junio por ajustes requeridos por el cliente para PRV_2025_001 VALIDACIÓN DE LOTE PARA PAGO,NOTIFICACIÓN DE PAGO,  Se retomara  desarrollo 24 de junio.\n[24/06/2025]; Se encuentra sincronizando data, se estiman 2 dias para finalizar.\n[25/06/2025]; Se ajustó la lógica del requerimiento tras diferenciarlo claramente del flujo de pagos. Se avanzó en la creación de vistas y en la sincronización inicial de datos. Se espera tener el desarrollo listo para pruebas el jueves 26. Se planea agregar botones para sincronización (Pago,auxilio y exportar) diferenciada según permisos,crear tabla de auxilios x año, ajustar campos (encabezados)de la vista de gestion y ajustar modulo de consulta.\n[26/06/2025]: Se avanzó satisfactoriamente en la creación de la tabla de auxilios por año, el ajuste de encabezados en la vista de gestión y la incorporación de los botones de sincronización según permisos.\nPENDIENTE la solución del error en la sincronización masiva, lo cual impide avanzar con la exportación y cargue de información. También sigue sin ajustes el módulo de consulta para auxilios \n[01/07/2025]: Se ha avanzado en un 75% del desarrollo, incluyendo funcionalidades principales. El cierre del tema está previsto para hoy, Faltan por implementar la generación de informes, la edición de fecha de siniestro y valor, así como la opción de marcar como pendiente. \n[02/07/2025]: El desarrollo del módulo de auxilios funerarios presenta un avance estimado del 90%. Ya se encuentra implementada la funcionalidad principal, incluyendo la creación de vistas, funciones de sincronización y flujo de radicación hasta aprobación. Se están finalizando los ajustes a los reportes en Excel, Se programó una sesión de revisión hoy a las 2:00 p.m. para validación funcional y ajuste de pendientes.",
   "unit": "Fala",
-  "detail": "**REQ No.:** NEGOCIO\n**Código:** PRV-2025-004 AUXILIO FUNERARIO\n**RESPONSABLE:** Carlos Eduardo Rodriguez Medina\n\n**OBJETIVO:**\nDesarrollar módulo de flujo de pago de Auxilios funerarios, con formalizaciones recibidas diariamente, integrada con validaciones realizadas a través de vistas generadas por Seguros de Vida Fala SA.\n\n**FLUJO DE AUXILIO FUNERARIO:**\n1. Desarrollar módulo donde intervienen las siguientes personas:\n- Radicación: Maria del Pilar Casallas\n- Validación: Elizabet Tatiana Guerrero\n- Aprobación: Sandra Patricia Arteaga\n- Pago y Cierre: Elizabet Tatiana Guerrero\n\n2. Tablas entregadas por Seguros de Vida Fala SA\n\n**APLICACIÓN DE VISTAS:**\n- TIPO SINCRONIZACION 1\n- SINCRONIZACION 2 CAMPOS\n- PLUS V_IMAGINE_SINIESTROS_PLUS NUEVO 6:00 a. m.\n- Consulta por FECHA_CREACION para siniestros creados últimamente (2 meses sin siniestro)\n\n**VISTA Fala:**\n- V_TABLA_GENERAL_CARGUE_DIARIO\n- V_TIPO_SINIESTRO_GENERAL\n- V_TIPO_SINIESTRO_PLUS\n- V_IMAGINE_SINIESTROS_PLUS\n\n**TABLAS DE APOYO:**\n- ESTADO AUXILIO\n- MOTIVO DEVOLUCIÓN\n- TIPO AUXILIO\n\n**MODULO DE CONSULTA:**\nConsulta por fechas y filtros de estado del auxilio funerario\n\n**NOTIFICACIONES AUTOMÁTICAS POR ESTADO:**\n1. Estado DEVUELTO → notifica al responsable de radicación\n2. Estado APROBADO → notifica a los de pago\n3. Estado PAGADO → confirma al responsable de cierre\n\n**ROLES INVOLUCRADOS:**\n- Radicador\n- Validador\n- Aprobador\n- Pagador\n- Coordinador Fala",
+  "detail": "**REQ No.:** NEGOCIO\n**Código:** PRV-2025-004 AUXILIO FUNERARIO\n**RESPONSABLE:** Carlos Eduardo Rodriguez Medina\n\n**OBJETIVO:**\nDesarrollar módulo de flujo de pago de Auxilios funerarios, con formalizaciones recibidas diariamente, integrada con validaciones realizadas a través de vistas generadas por Seguros de Vida Fala SA.\n\n**FLUJO DE AUXILIO FUNERARIO:**\n1. Desarrollar módulo donde intervienen las siguientes personas:\n- Radicación: M.P.C\n- Validación: E.T.G\n- Aprobación: S.P.A\n- Pago y Cierre: E.T.G\n\n2. Tablas entregadas por Seguros de Vida Fala SA\n\n**APLICACIÓN DE VISTAS:**\n- TIPO SINCRONIZACION 1\n- SINCRONIZACION 2 CAMPOS\n- PLUS V_IMAGINE_SINIESTROS_PLUS NUEVO 6:00 a. m.\n- Consulta por FECHA_CREACION para siniestros creados últimamente (2 meses sin siniestro)\n\n**VISTA Fala:**\n- V_TABLA_GENERAL_CARGUE_DIARIO\n- V_TIPO_SINIESTRO_GENERAL\n- V_TIPO_SINIESTRO_PLUS\n- V_IMAGINE_SINIESTROS_PLUS\n\n**TABLAS DE APOYO:**\n- ESTADO AUXILIO\n- MOTIVO DEVOLUCIÓN\n- TIPO AUXILIO\n\n**MODULO DE CONSULTA:**\nConsulta por fechas y filtros de estado del auxilio funerario\n\n**NOTIFICACIONES AUTOMÁTICAS POR ESTADO:**\n1. Estado DEVUELTO → notifica al responsable de radicación\n2. Estado APROBADO → notifica a los de pago\n3. Estado PAGADO → confirma al responsable de cierre\n\n**ROLES INVOLUCRADOS:**\n- Radicador\n- Validador\n- Aprobador\n- Pagador\n- Coordinador Fala",
   "visible": true
 },
 {
     "id": "PRV_2025_009",
     "title": "DESARROLLO PREVISIONAL INCAPACIDADES",
-    "assigned": "Mauricio Figueroa",
+    "assigned": "MAURICIO",
     "state": "Paso a Producción",
     "progress": 99,
     "startDate": "09/06/2025",
@@ -41,7 +41,7 @@
   {
     "id": "PRV_2025_007",
     "title": "CÁLCULO IBL",
-    "assigned": "Mauricio Figueroa",
+    "assigned": "MAURICIO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "N/A",
@@ -54,7 +54,7 @@
   {
     "id": "PRV_2025_005",
     "title": "HISTORIA LABORAL",
-    "assigned": "Mauricio Figueroa",
+    "assigned": "MAURICIO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "N/A",
@@ -67,7 +67,7 @@
   {
     "id": "PRV_2025_001-1",
     "title": "VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO",
-    "assigned": "Mauricio Figueroa",
+    "assigned": "MAURICIO",
     "state": "Paso a Producción",
     "progress": 99,
     "startDate": "16/06/2025",
