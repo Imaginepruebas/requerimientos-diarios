@@ -371,7 +371,8 @@ console.log("Cargando archivos JSON:", archivos);
             "Detenido Varbo": '#17becf',
             "Estimar": '#ff9896',
             "Finalizado": '#ffbb78',
-            "Pruebas Fala": '#c5b0d5' // Nuevo estado para 'PRUEBAS ALFA'
+            "Pruebas Fala": '#c5b0d5', // Nuevo estado para 'PRUEBAS ALFA'
+            "Pruebas Cionpro":'#aec7e8'
         };
 
 
@@ -443,7 +444,7 @@ console.log("Cargando archivos JSON:", archivos);
             // Contar estados, asegurando que las capitalizaciones de tus datos coincidan con tus claves de stateColors.
             // Para ser más robusto, se podría normalizar el estado a minúsculas antes de contar.
             const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
-            const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pruebas Fala"].includes(t.state)).length;
+            const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pruebas Fala", "Pruebas Cionpro"].includes(t.state)).length;
             const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
             const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
 

@@ -43,7 +43,7 @@
     "progress": 100,
     "startDate": "11/06/2025",
     "endDate": "25/06/2025",
-    "observations": "[09/06/2025]: Se estima tiempo  inicial de desarrollo: 1.5 días\n[11/06/2025]: Se debe crear una tabla que relacione informes con usuarios destino, para replicar informes automáticamente a múltiples usuarios, a un no se confirma fecha de inicio del desarrollo.\n[13/06/2025]: El 11 de junio inicia en la creación de una tabla que permita asignar informes automáticos a múltiples usuarios. Falta desarrollar el panel administrativo y completar los ajustes en la estructura de CMS. hoy se estimae se solicitara control de cambios en test\n[16/06/2025]: Pendiente envio del  script para realizar solicitud de control de  cambios para test.\n[19/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test. Control de cambios ejecutado correctamente.\n[20/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test, se ejecuta con exito y se pasa a test e iniciar pruebas por el cliente. A la espera de aprobación de negocio para paso a producción\n[25/06/2025]:El informe está listo en test, pero pendiente de aprobación por parte del negocio para proceder con el control de cambios para paso a produccion.\n[26/06/2025]: Se recibe aprobacion para  paso a producción, se escala control de  cambios MDSB-837144 \n[27/06/2025]: Pendiente aprobación de control de cambios de parte del cliente. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy. \n[03/07/2025]:Se Realiza paso a producciòn con exito.",
+    "observations": "[09/06/2025]: Se estima tiempo  inicial de desarrollo: 1.5 días\n[11/06/2025]: Se debe crear una tabla que relacione informes con usuarios destino, para replicar informes automáticamente a múltiples usuarios, a un no se confirma fecha de inicio del desarrollo.\n[13/06/2025]: El 11 de junio inicia en la creación de una tabla que permita asignar informes automáticos a múltiples usuarios. Falta desarrollar el panel administrativo y completar los ajustes en la estructura de CMS. hoy se estimae se solicitara control de cambios en test\n[16/06/2025]: Pendiente envio del  script para realizar solicitud de control de  cambios para test.\n[19/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test. Control de cambios ejecutado correctamente.\n[20/06/2025]: 19 de junio se escala control de cambios MDSB-833556 para test, se ejecuta con exito y se pasa a test e iniciar pruebas por el cliente. A la espera de aprobación de negocio para paso a producción\n[25/06/2025]:El informe está listo en test, pero pendiente de aprobación por parte del negocio para proceder con el control de cambios para paso a produccion.\n[26/06/2025]: Se recibe aprobacion para  paso a producción, se escala control de  cambios MDSB-837144 \n[27/06/2025]: Pendiente aprobación de control de cambios de parte del cliente. 02/07/2025: El 1 de julio se realizaron todas las aprobaciones pendientes. Actualmente, el cambio se encuentra en proceso de validación por parte del líder de Cambios Digitales, y se estima que sea incluido en el Comité de Cambios Digitales programado para el día de hoy. \n[03/07/2025]:Se Realiza paso a producciòn con exito, La funcionalidad de copia automática de informes quedó establecida correctamente corrigiendo un error de totales en Glosas.",
     "unit": "Varbo",
     "detail": "Se reuiere implementar la descarga automática diaria de informes relacionados con Salud, ARL, EPS y Vida, incluyendo inconsistencias, desde el 1 de enero del año vigente hasta la fecha actual, y generarlos por radicado para tres usuarios específicos (Johana Ximena Ceballos Ramírez, Mayerly Carolina León Torres y Sandra Patricia Roa Bernal)."
   },
@@ -79,11 +79,10 @@
     "progress": 95,
     "startDate": "15/04/2025",
     "endDate": "22/05/2025",
-    "observations": "[19/02/2025] se tuvo sesion Con Juan Angel  para validar como hacer la copia de los documentos y se definio un orden para hacer las trasferencias, se programara la tarea para el 20 de Febrero y se validara el 21 de febrero el resultado\n[21/02/2025] La tarea programada para la trasferencia de las imagenes se ejecuto ayer 20 de febrero y hoy se realizara la  validación de  resultados.\n[24/02/2025] Se realizó la validación, pero no se evidenciaron resultados. Se consultará con la persona encargada para determinar la razón por la cual la transferencia no fue exitosa\n[26/02/2025] Se radica ticket MDSB-770619 solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3.\n[27/02/2025] El Ticket MDSB-770619 escalado a bolivar  solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3 se en cuentra en estado en proceso.\n[28/02/2025] El Ticket MDSB-770619 escalado a bolivar  solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3 se en cuentra en estado en proceso.\n[04/03/2025] No hay avances ni respuestas al ticket  MDSB-770619 sobre el paso de documentos;\n[11/03/2025]: Se comenta el ticket MDSB-770619 solicitando avances en la solicitud o si se requiere alguna información adicional o algún ajuste de nuestra parte para avanzar con la sincronización.\n[13/03/2025]: A un no se obtiene avances del progreso del ticket MDSB-770619.\n[28/03/2025]: Depende de Varbo para transferir archivos; no hay avances locales por ahora.\n[02/04/2025]: Ayer Infraestructura de Bolivar  realizo la sincronizacion del primer directorio Sincronización de /opt/storage/img04/arp, e indican que seguiran migrando los directorios en las noches ya que generan  afectacion en el servidor.\n[03/04/2025]: Hoy infraestructura  informa la fecha tentativa de finalizacion es el 4 de abril. el dia de hoy estan terminando la carpeta IMG02\n[04/04/2025]: el 3 de abril  en la noche se detuvo la transferencia de documentos debido a que  ocaciono la  caida del servidor a 10:52 pm.\n[07/04/2025]: Confirman finalizacion del paso de documentos, Se solverificar que el tamaño del disco S3 corresponda al mismo del FS.\n[09/04/2025]: De acuerdo a la sesion con infraestructura de bolivar  se  Construira plan de paso Fs a S3, hoy se pasa el faltante y se expone el s3 a producción.\n[10/04/2025]  se confirma paso de toda la informacion MDSB-770619\n[28/04/2025]: sin cambios por parte de bolivar\n[14/05/2025] : verificar la transferencia de archivos, ya que se completó la transferencia de los documentos faltantes.\n[16/05/2025] : Validara la  cantidad de documentos tranferidos y dara respuesta al correo\n[19/05/2025] : El viernes 16 de mayo se revisó la transferencia de archivos, donde se detectaron diferencias que fueron comentadas en el jira.\n[21/05/2025] : Implementara logica para el conteo de imagenes y  se prepara  para  realizar el cambio del disco el jueves 22 de mayo a las 6pm.\n[23/05/2025]: El 21 de mayo se implementó una lógica para el conteo de archivos transferidos, como parte de la preparación para el paso a producción programado para el lunes 26 de mayo. Las pruebas realizadas el 22 de mayo permitieron validar el montaje del FS en una unidad alternativa, lo cual ofrece flexibilidad para intervenir manualmente en caso de archivos faltantes o fallidos. Infraestructura será responsable de la transferencia de los registros faltantes durante el fin de semana, con posibilidad de apoyo nuestro si es necesario.\n[26/05/2025]: Se avanzó en los conteos correspondientes a img04. Se espera consolidar los resultados en el transcurso del día para dar respuesta formal con evidencias a los correos correspondientes.\n[28/05/2025]: El conteo de datos para FS y S3 sigue pendiente. se planea terminar hoy el conteo y compartir evidencias para análisis, el paso a produccion sigue pendiente.\n[30/05/2025]: El 28  de mayo se termina el conteo y se envian evidencias, pendiente  confirmación de Bolivar.\n[13/06/2025]: Se ajustaron fechas para realizar un nuevo reconteo de archivos transferidos\n[19/06/2025]: Para  el viernes  20 de junio se programo Ventana de mantenimiento a las 5 pm para  realizar paso a producción.\n[25/06/2025]: El viernes 20 de junio se intentó realizar el paso a producción, pero no fue exitoso, ya que al momento de cargar archivos el sistema no lo permitía debido a temas de permisos que no pudieron resolverse en ese momento,Por esta razón, fue necesario reversar la implementación.Se estima realizar nuevamente el paso a producción el día jueves 26 de junio.\n[26/06/2025]: Se reprograma paso a producción para el día miércoles 2 de julio de 10:00 a 11:00 pm \n[02/07/2025]: Para hoy está programado el paso a producción a las 10 Pm.",
+    "observations": "[19/02/2025] se tuvo sesion Con Juan Angel  para validar como hacer la copia de los documentos y se definio un orden para hacer las trasferencias, se programara la tarea para el 20 de Febrero y se validara el 21 de febrero el resultado\n[21/02/2025] La tarea programada para la trasferencia de las imagenes se ejecuto ayer 20 de febrero y hoy se realizara la  validación de  resultados.\n[24/02/2025] Se realizó la validación, pero no se evidenciaron resultados. Se consultará con la persona encargada para determinar la razón por la cual la transferencia no fue exitosa\n[26/02/2025] Se radica ticket MDSB-770619 solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3.\n[27/02/2025] El Ticket MDSB-770619 escalado a bolivar  solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3 se en cuentra en estado en proceso.\n[28/02/2025] El Ticket MDSB-770619 escalado a bolivar  solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3 se en cuentra en estado en proceso.\n[04/03/2025] No hay avances ni respuestas al ticket  MDSB-770619 sobre el paso de documentos;\n[11/03/2025]: Se comenta el ticket MDSB-770619 solicitando avances en la solicitud o si se requiere alguna información adicional o algún ajuste de nuestra parte para avanzar con la sincronización.\n[13/03/2025]: A un no se obtiene avances del progreso del ticket MDSB-770619.\n[28/03/2025]: Depende de Varbo para transferir archivos; no hay avances locales por ahora.\n[02/04/2025]: Ayer Infraestructura de Bolivar  realizo la sincronizacion del primer directorio Sincronización de /opt/storage/img04/arp, e indican que seguiran migrando los directorios en las noches ya que generan  afectacion en el servidor.\n[03/04/2025]: Hoy infraestructura  informa la fecha tentativa de finalizacion es el 4 de abril. el dia de hoy estan terminando la carpeta IMG02\n[04/04/2025]: el 3 de abril  en la noche se detuvo la transferencia de documentos debido a que  ocaciono la  caida del servidor a 10:52 pm.\n[07/04/2025]: Confirman finalizacion del paso de documentos, Se solverificar que el tamaño del disco S3 corresponda al mismo del FS.\n[09/04/2025]: De acuerdo a la sesion con infraestructura de bolivar  se  Construira plan de paso Fs a S3, hoy se pasa el faltante y se expone el s3 a producción.\n[10/04/2025]  se confirma paso de toda la informacion MDSB-770619\n[28/04/2025]: sin cambios por parte de bolivar\n[14/05/2025] : verificar la transferencia de archivos, ya que se completó la transferencia de los documentos faltantes.\n[16/05/2025] : Validara la  cantidad de documentos tranferidos y dara respuesta al correo\n[19/05/2025] : El viernes 16 de mayo se revisó la transferencia de archivos, donde se detectaron diferencias que fueron comentadas en el jira.\n[21/05/2025] : Implementara logica para el conteo de imagenes y  se prepara  para  realizar el cambio del disco el jueves 22 de mayo a las 6pm.\n[23/05/2025]: El 21 de mayo se implementó una lógica para el conteo de archivos transferidos, como parte de la preparación para el paso a producción programado para el lunes 26 de mayo. Las pruebas realizadas el 22 de mayo permitieron validar el montaje del FS en una unidad alternativa, lo cual ofrece flexibilidad para intervenir manualmente en caso de archivos faltantes o fallidos. Infraestructura será responsable de la transferencia de los registros faltantes durante el fin de semana, con posibilidad de apoyo nuestro si es necesario.\n[26/05/2025]: Se avanzó en los conteos correspondientes a img04. Se espera consolidar los resultados en el transcurso del día para dar respuesta formal con evidencias a los correos correspondientes.\n[28/05/2025]: El conteo de datos para FS y S3 sigue pendiente. se planea terminar hoy el conteo y compartir evidencias para análisis, el paso a produccion sigue pendiente.\n[30/05/2025]: El 28  de mayo se termina el conteo y se envian evidencias, pendiente  confirmación de Bolivar.\n[13/06/2025]: Se ajustaron fechas para realizar un nuevo reconteo de archivos transferidos\n[19/06/2025]: Para  el viernes  20 de junio se programo Ventana de mantenimiento a las 5 pm para  realizar paso a producción.\n[25/06/2025]: El viernes 20 de junio se intentó realizar el paso a producción, pero no fue exitoso, ya que al momento de cargar archivos el sistema no lo permitía debido a temas de permisos que no pudieron resolverse en ese momento,Por esta razón, fue necesario reversar la implementación.Se estima realizar nuevamente el paso a producción el día jueves 26 de junio.\n[26/06/2025]: Se reprograma paso a producción para el día miércoles 2 de julio de 10:00 a 11:00 pm \n[02/07/2025]: Para hoy está programado el paso a producción a las 10 Pm.\n[04/07/2025:] El paso  programado para el 2 de julio no fue exitoso debido aque se presentaron  dificultades al levantar el servicio, Varbo propone clonar la máquina actual para probar configuraciones antes hacer el paso a producción. Se acordó que la máquina estaría lista para pruebas el lunes 7 de julio, con la realización de estas programadas para el martes 8 de julio.",
     "unit": "Varbo",
     "detail": ""
   },
-
   {
     "id": "GD772-109",
     "title": "Lectura de nuevos datos de órdenes médicas con IA",
@@ -92,7 +91,7 @@
     "progress": 70,
     "startDate": "14/05/2025",
     "endDate": "",
-    "observations": "20/06/2025: Se pausa para dar prioridad de la migración S3, se planea iniciar entrenamiento durante la próxima semana.\n[27/06/2025]:El fin de semana del 28 de junio se entrenara con mas de 800 registros.",
+    "observations": "20/06/2025: Se pausa para dar prioridad de la migración S3, se planea iniciar entrenamiento durante la próxima semana.\n[27/06/2025]:El fin de semana del 28 de junio se entrenara con mas de 800 registros.\n[04/07/2025]:Se continúa con el entrenamiento del modelo de IA. Se planea insertar aproximadamente 2.000 registros hoy para que el sistema se entrene durante el fin de semana. Debido a las limitaciones del asistente automático, el proceso de carga debe realizarse de forma incremental.",
     "unit": "Varbo",
     "detail": ""
   },
@@ -101,10 +100,10 @@
     "title": "Requerimiento gestión Medicamentos fase 2 - Sprint 2",
     "assigned": "JESUS",
     "state": "En Proceso",
-    "progress": 75,
+    "progress": 85,
     "startDate": "18/06/2025",
     "endDate": "",
-    "observations": "[09/06/2025]: Estimación inicial de desarrollo  9 dias\n[16/06/2025]: Se acordó iniciar el desarrollo el 18 de junio, una vez se finalicen tareas pendientes de giras\n[20/06/2025]:El 19 de junio finalizó el punto 2,continuara con el punto 3.\n[25/06/2025]:El desarrollo avanza en el punto 4 de la fase 2 (creación de tipología y actividades). Se ha completado aproximadamente el 40% del requerimiento \n[27/06/2025]: 27/06/2025: Se reporta un avance del  60%.\n[02/07/2025]:Se avanza en un 75% del desarrollo de la Fase 2 de Medicamentos. Ya se encuentra funcional la creación individual de casos con su trazabilidad completa cuando un proveedor indica no entrega. Se han realizado pruebas exitosas en flujo y visualización. Actualmente se trabaja en la gestión masiva desde Excel para validar múltiples casos simultáneamente y asegurar la correcta apertura e identificación de cada uno. Pendiente finalizar el manejo masivo y ajustes en bandejas administrativas.",
+    "observations": "[09/06/2025]: Estimación inicial de desarrollo  9 dias\n[16/06/2025]: Se acordó iniciar el desarrollo el 18 de junio, una vez se finalicen tareas pendientes de giras\n[20/06/2025]:El 19 de junio finalizó el punto 2,continuara con el punto 3.\n[25/06/2025]:El desarrollo avanza en el punto 4 de la fase 2 (creación de tipología y actividades). Se ha completado aproximadamente el 40% del requerimiento \n[27/06/2025]: 27/06/2025: Se reporta un avance del  60%.\n[02/07/2025]:Se avanza en un 75% del desarrollo de la Fase 2 de Medicamentos. Ya se encuentra funcional la creación individual de casos con su trazabilidad completa cuando un proveedor indica no entrega. Se han realizado pruebas exitosas en flujo y visualización. Actualmente se trabaja en la gestión masiva desde Excel para validar múltiples casos simultáneamente y asegurar la correcta apertura e identificación de cada uno. Pendiente finalizar el manejo masivo y ajustes en bandejas administrativas.\n[04/07/2025]: El desarrollo alcanza un 85% de avance. Ya se construyó la generación de carta para proveedor nuevo. Queda pendiente recibir el modelo de carta de cancelación y completar dos botones adicionales. La validación masiva vía Excel fue pospuesta para el final",
     "unit": "Varbo",
     "detail": ""
   },
@@ -166,17 +165,18 @@
     "endDate": "",
     "observations": "30/05/2025: Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes.",
     "unit": "Varbo",
-    "detail": ""
+    "detail": "",
+    "visible": false
   },
   {
     "id": "CNTI-195",
     "title": "Vulnerabilidad, Implementación insegura de la integridad de los recursos secundarios (SRI) / imaginex",
     "assigned": "DANILO",
     "state": "En Proceso",
-    "progress": 40,
+    "progress": 70,
     "startDate": "17/06/2025",
-    "endDate": "22/07/2025",
-    "observations": "[18/06/2025]: Inicio ayerSe inició el trabajo sobre la vulnerabilidad el 17 de Junio.\n[20/06/2025]: Se trabaja en una vulnerabilidad compleja relacionada con scripts ya que se requiere intervención manual en múltiples páginas.\n[25/06/2025]: Se avanza al 15% en la mitigación de esta vulnerabilidad.\n[27/06/2025]:Continua en desarrollo. \n[02/07/2025]: No se reportan avances, se planea continuar hoy después de solucionar el (Error de acceso en test con TLS y certificados (Api incapacidades)) ",
+    "endDate": " ",
+    "observations": "[18/06/2025]: Inicio ayerSe inició el trabajo sobre la vulnerabilidad el 17 de Junio.\n[20/06/2025]: Se trabaja en una vulnerabilidad compleja relacionada con scripts ya que se requiere intervención manual en múltiples páginas.\n[25/06/2025]: Se avanza al 15% en la mitigación de esta vulnerabilidad.\n[27/06/2025]:Continua en desarrollo. \n[02/07/2025]: No se reportan avances, se planea continuar hoy después de solucionar el (Error de acceso en test con TLS y certificados (Api incapacidades)) \n[04/07/2025]:El avance de la remediación de la vulnerabilidad llega al 70%. Se trabajó con dedicación el día anterior y se proyecta su cierre completo en el transcurso del día si se mantiene el ritmo.",
     "unit": "Varbo",
     "detail": "No usar SRI permite que recursos externos como scripts o estilos sean manipulados sin ser detectados, exponiendo al sitio a posibles ataques si el servidor externo es comprometido"
   },
@@ -272,7 +272,7 @@
     "progress": 20,
     "startDate": "03/06/2025",
     "endDate": "",
-    "observations": "[04/06/2025]:Se está buscando una alternativa para mostrar avances en automatización\n[06/06/2025]: Se han tenido avances en la lógica de radicación, continuará trabajando para lograr un avance significativo y contar con algo funcional que pueda ser mostrado.\n[09/06/2025]: Se trabaja en pruebas con lotes de facturas, validando reconocimiento parcial. Avance estimado en esta tarea: 20 %.\n[11/06/2025]: No se trabajó en los últimos días. Continúa pendiente.\n[20/06/2025]: retomará revisión del tema durante el día de hoy.\n[25/06/2025]:No se reportan avances.",
+    "observations": "[04/06/2025]:Se está buscando una alternativa para mostrar avances en automatización\n[06/06/2025]: Se han tenido avances en la lógica de radicación, continuará trabajando para lograr un avance significativo y contar con algo funcional que pueda ser mostrado.\n[09/06/2025]: Se trabaja en pruebas con lotes de facturas, validando reconocimiento parcial. Avance estimado en esta tarea: 20 %.\n[11/06/2025]: No se trabajó en los últimos días. Continúa pendiente.\n[20/06/2025]: retomará revisión del tema durante el día de hoy.\n[25/06/2025]:No se reportan avances.\n[04/07/2025]: Sin avances técnicos reportados. El desarrollo sigue pendiente por falta de disponibilidad de tiempo, pero se mantiene en la lista de tareas por retomar.",
     "unit": "Varbo",
     "detail": ""
   },
@@ -387,14 +387,15 @@
             {
                 "id": "INTERNO",
                 "title": "Realizar Imagen de docker de nativo para Jesus",
-                "assigned": "WILSON",
+                "assigned": "JESUS",
                 "state": "Pendiente",
                 "progress": 0,
                 "startDate": "",
                 "endDate": "",
                 "observations": "[27/02/2025]: No se ha podido realizar  debido que se encuentra en otras tareas asignadas.\n[16/06/2025]: Se reasigna tarea a Jesus debido a que Wilson  se encuentra en desarrollo de otra actividad.",
                 "unit": "Varbo",
-                "detail": ""
+                "detail": "",
+                "visible": false
             },
             {
                 "id": "INTERNO",
@@ -484,11 +485,11 @@
     "id": "GD772-69",
     "title": "Error de acceso en test con TLS y certificados ( Api incapacidades)",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 50,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "01/07/2025",
-    "endDate": "",
-    "observations": "[02/07/2025]: Se prioriza identificar si el fallo es por cifrado propio o por certificados del proveedor. \n[02/07/2025]:No fue posible solucionar el error, entonces se agregó el comentario al ticket MDSB-837736 solicitando añadir imaginex-test-documentos.segurosbolivar.com a Alternate Domain Names (CNAMEs) del CloudFront.",
+    "endDate": "02/07/2025",
+    "observations": "[02/07/2025]: Se prioriza identificar si el fallo es por cifrado propio o por certificados del proveedor. \n[02/07/2025]:No fue posible solucionar el error, entonces se agregó el comentario al ticket MDSB-837736 solicitando añadir imaginex-test-documentos.segurosbolivar.com a Alternate Domain Names (CNAMEs) del CloudFront.\n[04/07/2025]:El problema de acceso en el ambiente de pruebas fue resuelto el 2 de julio; el API ya se encuentra funcional con el DNS y TLS configurados. Actualmente se identifican problemas de lentitud en las consultas, posiblemente por la firma o consulta de imágenes. Se recomienda evaluar el rendimiento para optimizar el tiempo de respuesta.",
     "unit": "Varbo",
     "detail": "Descripción del Error de Acceso en Ambiente TEST - TLS/Certificados\nContexto:\nDurante las validaciones en el ambiente de pruebas (TEST), se identificó un error persistente al intentar establecer conexión segura con el servicio externo de la FI (presumiblemente una plataforma de terceros). Este acceso requiere protocolo HTTPS y autenticación mediante certificados digitales.\n\nDescripción técnica del error:\nEl sistema no logra establecer una conexión TLS exitosa. Se realizaron intentos de ajuste en los siguientes elementos sin éxito:\n\nCambios en la configuración del protocolo TLS (probando versiones TLS 1.2 y TLS 1.3).\n\nModificación del tipo de cifrado utilizado.\n\nValidación del certificado digital instalado (vigencia, cadena de confianza, nivel de cifrado).\n\nPosibles causas identificadas:\n\nIncompatibilidad de cifrados: El entorno de prueba puede estar utilizando un algoritmo de cifrado no soportado por el servidor destino.\n\nProblemas con el certificado digital: El certificado podría no estar correctamente instalado, o no ser reconocido como válido por el servidor destino.\n\nConfiguración del servidor destino: El error podría estar en el extremo del proveedor, si este no acepta conexiones desde el ambiente de TEST o está filtrando por tipo de certificado.\n\nAcción en curso:\nSe está intentando aislar si el error se debe a:\n\nUn problema local del ambiente TEST (mala configuración de TLS/certificado).\n\nO una restricción del proveedor externo (rechazo del certificado o incompatibilidad de conexión).\n\nPróximos pasos:\n\nContinuar validación detallada de los logs de conexión.\n\nReportar oficialmente al proveedor si se confirma que el certificado y configuración local son correctos.\n\nRegistrar el incidente en el sistema de tickets internos una vez se defina la causa raíz."
     },
@@ -497,10 +498,10 @@
     "title": "Mejoras informes  por radicado producto Salud ",
     "assigned": "JAIRO",
     "state": "En Proceso",
-    "progress": 70,
+    "progress": 90,
     "startDate": "28/06/2025",
-    "endDate": "",
-    "observations": "[02/07/2025]: Se avanzó en un 70% con el desarrollo del informe por radicado específico para el área de Salud. Se separó la lógica del informe de los casos ARL y EPS para facilitar su mantenimiento, y se optimizó la consulta SQL mejorando el rendimiento. Actualmente se están realizando pruebas de validación con datos reales, y se espera replicar mejoras de tiempo similares a las obtenidas en el informe de ARL. Pendiente validación final en ambiente de producción.",
+    "endDate": "03/07/2025",
+    "observations": "[02/07/2025]: Se avanzó en un 70% con el desarrollo del informe por radicado específico para el área de Salud. Se separó la lógica del informe de los casos ARL y EPS para facilitar su mantenimiento, y se optimizó la consulta SQL mejorando el rendimiento. Actualmente se están realizando pruebas de validación con datos reales, y se espera replicar mejoras de tiempo similares a las obtenidas en el informe de ARL. Pendiente validación final en ambiente de producción.\n[04/07/2025]:Se avanzó con pruebas en producción del informe. El query ya está construido y se están realizando validaciones con datos reales.",
     "unit": "Varbo",
     "detail": "**Mejora del Informe por Radicado – Salud**\r\n**Objetivo del requerimiento:**\r\nImplementar una versión optimizada del informe por radicado específicamente para el área de Salud, separada de los informes de ARL y EPS, debido a diferencias en estructura de datos y campos requeridos.\r\n"
     },
@@ -520,14 +521,14 @@
     "id": "Interno",
     "title": "Validaciòn apertura de dos actividades en un mismo caso en Nativo.",
     "assigned": "JESUS",
-    "state": "Pendiente",
+    "state": "En Proceso",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[04/07/2025]: se abordarán posibles inconsistencias con doble actividad en la gestion de casos en nativo.",
     "unit": "Varbo",
     "detail": "Se requiere validar el porque se abren 2 actividades en la Gestion del mismo caso en Mativo ",
-    "visible": false
+    "visible": true
     },
   {
     "id": "MDSB-838905",
@@ -541,5 +542,18 @@
     "unit": "Varbo",
     "detail": "**SOLICITUD DESHABILITAR TIPOLOGIAS PARA USUARIO**\r\n\r\nBuenos dias, solicitamos por favor inhabilitar las tipologias de “Traslado de Polizas”, “Mesa de Conciliacion Presencial” y “Mesa de conciliación Virtual”, para los siguientes usuarios, esto debido a que los funcionarios van a estar fuera por un tiempo por incapacidad medica y vacaciones.\r\n\r\nJOHN ALEJANDRO MARTÍNEZ __1032366925\r\n\r\nGIOVANNY STIVEN NIETO__1003530364\r\n\r\nNATALIA ROCIO CUBIDES__1007155376",
     "visible": true
+    },
+  {
+    "id": "Interno",
+    "title": "Implementar cambio de contraseña a 30 dias en los tres aplicativos.",
+    "assigned": "JESUS",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": " ",
+    "observations": "[30/05/2025]:Se tiene previsto evacuar los requerimientos prioritarios para poder dar inicio a las validaciones correspondientes",
+    "unit": "Varbo",
+    "detail": "Implementar la solicitud automatica de cambio de contraseña a los 30 dias en los tres aplicativos",
+    "visible": false
     }
 ]
