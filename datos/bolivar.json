@@ -555,5 +555,18 @@
     "unit": "Varbo",
     "detail": "Implementar la solicitud automatica de cambio de contraseña a los 30 dias en los tres aplicativos",
     "visible": false
+    },
+  {
+    "id": "MDSB-835432",
+    "title": "Jira dia a dia Error en cargue de anexos de casos en Nativo.",
+    "assigned": "JESUS",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "04/07/2025",
+    "endDate": " ",
+    "observations": "",
+    "unit": "Varbo",
+    "detail": "**Error en cargue de anexos de casos**\nUsuaria reporta que al realizar el cargue de anexos al caso 39172703 por parte del usuario Leidy Mayorga a las 2025-06-24 13:50:11, se identifica que en el caso queda anexo un documento que NO se estaba cargando, ni se encuentra en mi equipo  al momento del cargue (es un documento totalmente ageno a la operación) este queda cargado bajo la imagen 02; sin embargo en ningun momento se realizo el cargue de esta información.\n\nSe realiza la validación del documento y se observa que corresponde al caso 39177232 el cual fue cargado por el usuario AURA VANESSA OLARTE a las 2025-06-24 13:50:17 momento de creación del caso, lo unico que coincide es la hora del cargue",
+    "visible": true
     }
 ]
