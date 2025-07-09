@@ -56,10 +56,10 @@
     "title": "HISTORIA LABORAL",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 50,
+    "progress": 0,
     "startDate": "07/07/2025",
     "endDate": "",
-    "observations": "[11/06/2025]: Continuará con el desarrollo tras finalizar req PRV_2025_007 CÁLCULO IBL.\n[07/07/2025]: Inicia desarrollo.\n[08/07/2025]: Se reporta un avance del 50 % entre analisis y desarrollo del requerimeinto.",
+    "observations": "[11/06/2025]: Continuará con el desarrollo tras finalizar req PRV_2025_007 CÁLCULO IBL.\n[07/07/2025]: Inicia desarrollo.",
     "unit": "Fala",
     "detail": "**REQ No.\tNEGOCIO\r\n2025-005\tPREVISIONALES\r\nRESPONSABLE\r\nCarlos Eduardo Rodriguez Medina\r\nOBJETIVO**\r\n\r\n1.\tRealizar comparación de historia laboral Multifondos Vs SIPREN y PLUS\r\n\r\n\r\n\r\n\r\n**ALCANCE**\r\n\r\n1.\tComparar archivo cargado de multifondos con información registrada en bases de información alfa. Generando la confirmación y/o alerta de diferencias encontradas en la validación. \r\n\r\n**FLUJO DE PAGOS**\r\n\r\n\r\n1.\tRealizar cargue detalle de historia laboral de multifondos en aplicación Imagine.\r\n\r\n2.\tDesarrollar opción donde permita cargar archivo el archivo como vienen de multifondos (csv).\r\n\r\n \r\n\r\n3.\tAl cargar Excel solicitar número de siniestro o identificación y fecha de estructuración. \r\n\r\na.\tLa primera validación debe ser que exista siniestro validando con vistas entregadas por alfa.\r\n-\tPRV.V_IMAGINE_HISTORIA_LABORAL_SIPREN\r\n-\t\r\nb.\tSi el Origen es Sobrevivencia (Muerte) el cálculo de acuerdo con la fecha de estructuración.\r\nc.\tSi el Origen es Invalidez se debe validar los periodos de acuerdo con la fecha de estructuración.\r\nd.\tEl calculo se realiza para los periodos anteriores a la fecha de estructuración.\r\ne.\t**Si la fecha de estructuración tiene días parciales debe fraccionar el periodo para calcular solo hasta la fecha de estructuración. De esta manera permitir exportarlo.**\r\nf.\tTener en cuenta los casos de enfermedades congénitas para invalidez que la fecha es la fecha de nacimiento.\r\n\r\n4.\tLa comparación se debe realizar agrupado por periodo, comparando valores y días.\r\n5.\tPermitir descargar Excel con comparación y en columna adicional mostrar si esta “Correcto” o “Con diferencia”. Ordenado por periodo de menor a mayor.\r\n6.\tPermitir borrar el cálculo realizado.\r\n\r\n\r\n\r\n\r\n**ESTRATEGIA**\r\n\r\n7.\tDescarga IBL SIPREN \r\n\r\n8.\tDescarga IBL PLUS \r\n\r\n \r\n\r\n \r\n",
     "visible": true

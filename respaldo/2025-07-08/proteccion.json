@@ -111,11 +111,11 @@
     "id": "Interno-H4",
     "title": "Automatización y migración de lógica a python (Migración de código para la funcionalidad en donde se consume un web service para la asignación de casos a HRUA)",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
-    "progress": 50,
+    "state": "En Proceso",
+    "progress": 40,
     "startDate": "03/07/2025",
-    "endDate": "07/07/2025",
-    "observations": "[03/07/2025]: Se construye los modelos relacionados, el agente y se le asigna el trabajo que corresponde a la funcionalidad en PHP, faltan migrar características y realizar modificaciones.\n[07/07/2025]: Se migra la lógica faltante y se realiza una prueba básica de flujo debido a que se conecta y consume un servicio web que en el ambiente local no se puede probar, por lo que esta a la espera de pasarlo al ambiente de QA(Pruebas) para probar definitivamente todas las características",
+    "endDate": " ",
+    "observations": "[03/07/2025]: Se construye los modelos relacionados, el agente y se le asigna el trabajo que corresponde a la funcionalidad en PHP, faltan migrar características y realizar modificaciones",
     "unit": "Cionpro",
     "detail": " "
   },
@@ -154,29 +154,5 @@
     "observations": "[02/07/2025]: Se realiza reunión el 1 de julio para la identificación de nuevos requisitos.\n[02/07/2025]: Se Crea vista y lógica para el cargue de documentos y procesamiento de datos.\n Se realizan pruebas de funcionamiento y se está a la espera de que el cliente realice pruebas.",
     "unit": "Cionpro",
     "detail": " Creación de Herramientas adicionales para el tratamiento de información y flujo en el módulo de auxilios funerarios"
-  },
-  {
-    "id": "Interno-H5",
-    "title": "Automatización y migración de lógica a python (**Migración de lógica para el cruce de datos existentes ya en las distintas tablas de pre radicación**)",
-    "assigned": "ALEJANDRO",
-    "state": "En Test",
-    "progress":95,
-    "startDate": "7/07/2025",
-    "endDate": "7/07/2025",
-    "observations": "[07/07/2025]: Se migra toda la lógica de la funcionalidad y se realizan pruebas.",
-    "unit": "Cionpro",
-    "detail": " "
-  },
-  {
-    "id": "Interno-H6",
-    "title": "Automatización y migración de lógica a python (**Análisis y obtención de documentos para iniciar con el proceso de clasificación de imágenes**)",
-    "assigned": "ALEJANDRO",
-    "state": "En Proceso",
-    "progress":0,
-    "startDate": " ",
-    "endDate": " ",
-    "observations": " ",
-    "unit": "Cionpro",
-    "detail": " "
   }
 ]
