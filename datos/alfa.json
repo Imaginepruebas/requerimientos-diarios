@@ -46,7 +46,7 @@
     "progress": 99,
     "startDate": "03/07/2025",
     "endDate": "04/07/2025",
-    "observations": "16/06/2025: Se requiere una sesión con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.\n[04/07/2015]:Se inicia desarrollo con  un avance del 20%. Se ajustaron funciones en Postgres para cálculos correctos según las vistas generadas. El siguiente paso es crear la funcionalidad de consulta por cédula o siniestro y desplegar cálculos de acuerdo a la fecha indicada. Se estima finalizar req hoy   para  realizar paso a produccion el  5 de julio.\n[07/07/2025]: Se realizo paso a producciòn el 5 de Julio sin habiitar el menu, Faltan pruebas formales del cliente para habilitación final.",
+    "observations": "16/06/2025: Se requiere una sesión con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.\n[04/07/2015]:Se inicia desarrollo con  un avance del 20%. Se ajustaron funciones en Postgres para cálculos correctos según las vistas generadas. El siguiente paso es crear la funcionalidad de consulta por cédula o siniestro y desplegar cálculos de acuerdo a la fecha indicada. Se estima finalizar req hoy   para  realizar paso a produccion el  5 de julio.\n[07/07/2025]: Se realizo paso a producciòn el 5 de Julio sin habiitar el menu, Faltan pruebas formales del cliente para habilitación final.\n[11/07/2025]: El 10 de julio se realizó un ajuste para excluir los casos con auxilios funerarios. Ahora, el sistema valida que el origen del caso sea únicamente incapacidad o supervivencia; en caso contrario, se lanza una alerta.",
     "unit": "Fala",
     "detail": "**DESARROLLO PREVISIONALES  IBL**\r\n**OBJETIVO**\r\n1. Realizar calculo IBL de forma automática desde el sistema Imagine de acuerdo con el Origen y factor en consecuencia al año.\r\n**CRUCE IBL**\r\nActualmente la información es descargada desde SIPREN y PLUS para obtener la información de la Historia Laboral.\r\n1.\tDescarga IBL SIPREN \r\n\r\n**DESARROLLO PREVISIONALES  IBL**\r\n\r\n1. Descarga IBL PLUS\r\n\r\n1.Tablas entregadas por Seguros de vida Alfa SA\r\n\r\n**-SIPREN**\r\na.**PENDIENTES:** VISTAS IBL Y CRUZAR CON SINIESTROS PARA OBTENER DATOS \r\n\r\n**2.PLUS**\r\n\r\na.**PENDIENTES:** VISTAS IBL Y CRUZAR CON SINIESTROS PARA OBTENER DATOS \r\n\r\n\r\n1.Realizar cálculos de acuerdo con Plantilla calculo IBL\r\n\r\na.Permitir incluir documento de identificación o siniestro para realizar calculo.\r\nb.Permitir descargar Excel con resultado de cálculo.\r\n\r\n\r\n**Instructivo cálculo IBL**\r\n\r\n\r\n1. Exportar la historia laboral de Sipren (Historia Laboral IBL)\r\n2. Pegar la historia laboral (3650 días)en la hoja de Validación - Columna N a S.\r\n3. Colocar el No. 1, en el campo factor (tabla de actualización - Columna C), en el año de siniestro correspondiente\r\n4. Arrastrar la formula de factor (Columna E) hasta el año de siniestro\r\n5. Copiar las formulas en todos los campos de la tabla de formulación hasta el último registro de la historia laboral\r\n6. Ajustar la formula de suma del IBL hasta el ultimo registro de la HL\r\n6. Actualizar campo \"TOTAL DIAS COTIZADOS\"\r\n",
     "visible": true
@@ -59,7 +59,7 @@
     "progress": 99,
     "startDate": "07/07/2025",
     "endDate": "09/07/2025",
-    "observations": "[11/06/2025]: Continuará con el desarrollo tras finalizar req PRV_2025_007 CÁLCULO IBL.\n[07/07/2025]: Inicia desarrollo.\n[08/07/2025]: Se reporta un avance del 50 % entre analisis y desarrollo del requerimeinto.\n[09/07/2025]: Se Finaliza desarrollo y se entrega al cliente para pruebas.",
+    "observations": "[11/06/2025]: Continuará con el desarrollo tras finalizar req PRV_2025_007 CÁLCULO IBL.\n[07/07/2025]: Inicia desarrollo.\n[08/07/2025]: Se reporta un avance del 50 % entre analisis y desarrollo del requerimeinto.\n[09/07/2025]: Se Finaliza desarrollo y se entrega al cliente para pruebas.\n[11/07/2025]: El 10 de julio se ajustó el reporte para incluir periodos que existan en multifondos pero no en Fala. Se agregó una columna adicional para mostrar el salario mensualizado proveniente de Porvenir. Cambios ya implementados y listos para validación.",
     "unit": "Fala",
     "detail": "**REQ No.\tNEGOCIO\r\n2025-005\tPREVISIONALES\r\nRESPONSABLE\r\nCarlos Eduardo Rodriguez Medina\r\nOBJETIVO**\r\n\r\n1.\tRealizar comparación de historia laboral Multifondos Vs SIPREN y PLUS\r\n\r\n\r\n\r\n\r\n**ALCANCE**\r\n\r\n1.\tComparar archivo cargado de multifondos con información registrada en bases de información alfa. Generando la confirmación y/o alerta de diferencias encontradas en la validación. \r\n\r\n**FLUJO DE PAGOS**\r\n\r\n\r\n1.\tRealizar cargue detalle de historia laboral de multifondos en aplicación Imagine.\r\n\r\n2.\tDesarrollar opción donde permita cargar archivo el archivo como vienen de multifondos (csv).\r\n\r\n \r\n\r\n3.\tAl cargar Excel solicitar número de siniestro o identificación y fecha de estructuración. \r\n\r\na.\tLa primera validación debe ser que exista siniestro validando con vistas entregadas por alfa.\r\n-\tPRV.V_IMAGINE_HISTORIA_LABORAL_SIPREN\r\n-\t\r\nb.\tSi el Origen es Sobrevivencia (Muerte) el cálculo de acuerdo con la fecha de estructuración.\r\nc.\tSi el Origen es Invalidez se debe validar los periodos de acuerdo con la fecha de estructuración.\r\nd.\tEl calculo se realiza para los periodos anteriores a la fecha de estructuración.\r\ne.\t**Si la fecha de estructuración tiene días parciales debe fraccionar el periodo para calcular solo hasta la fecha de estructuración. De esta manera permitir exportarlo.**\r\nf.\tTener en cuenta los casos de enfermedades congénitas para invalidez que la fecha es la fecha de nacimiento.\r\n\r\n4.\tLa comparación se debe realizar agrupado por periodo, comparando valores y días.\r\n5.\tPermitir descargar Excel con comparación y en columna adicional mostrar si esta “Correcto” o “Con diferencia”. Ordenado por periodo de menor a mayor.\r\n6.\tPermitir borrar el cálculo realizado.\r\n\r\n\r\n\r\n\r\n**ESTRATEGIA**\r\n\r\n7.\tDescarga IBL SIPREN \r\n\r\n8.\tDescarga IBL PLUS \r\n\r\n \r\n\r\n \r\n",
     "visible": true
@@ -79,16 +79,16 @@
   },
   {
     "id": "AJUSTES_REN_2025_001-1",
-    "title": "INCLUIR VALIDACION DOCUMENTAL PARA NUEVO URIGEN SUSTITUCION PENSIONAL",
+    "title": "INCLUIR VALIDACION DOCUMENTAL PARA NUEVO ORIGEN SUSTITUCION PENSIONAL",
     "assigned": "MAURICIO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": " ",
-    "endDate": " ",
-    "observations": " ",
+    "state": "Pruebas Imagine",
+    "progress": 90,
+    "startDate": "10/07/2025",
+    "endDate": "10/07/2025",
+    "observations": "[11/07/2025]: Dado que ya se crearon las tablas de referencia, se finalizó este proceso el día 10 de julio. Queda pendiente validar el impacto que estas puedan tener en los diferentes módulos y consultas del sistema para que el cliente realice las pruebas. ",
     "unit": "Fala",
     "detail": "**Requerimiento 2025-001 ajustes Rentas Vitalicias**\n1.\tEn virtud de sesión realizada el 19 de mayo de 2025, se solicita realizar ajustes en la aplicación de rentas vitalicias para mejorar la operatividad y entrega de informes.\n**1.\tINCLUIR VALIDACION DOCUMENTAL PARA NUEVO URIGEN SUSTITUCION PENSIONAL** \n\nSe requiere cargar y cambiar el Origen Sustitución. Esto para cargar documento ACIN (Acta de invalidez) y ACDE (Acta de defunción). Este ajuste se presenta para casos que inicialmente fueron cargados como Invalidez, pero por la muerte del Pensionado, se debe también completar el acta de defunción.\n\na.\tSe debe crear un nuevo Origen “sustitución” en la tabla rentasvitalicias.rentas_origen\n\ncod_origen\tnombre_origen\tabreviatura\tcodigo_origen_super\n1\tMUERTE\tM\t2\n2\tINVALIDEZ\tI\t1\n3\tVEJEZ\tV\t3\n4\tAUXILIO FUNERARIO\tA\t2\n999\tSIN CODIGO\t9\t\n5\tINCAPACIDAD\tINC\t1\n6\tINVALIDEZ SIN SOLICITUD\tISS\t1\n7\tVEJEZ ESPECIAL\tVE\t\n8\tSUSTITUCION\tS\t1\n\nb.\tSe debe crear validación de documentos para nuevo origen, incluyendo el ACDE. Esta validación funciona de la misma manera que INVALIDEZ. Solo se debe agregar para el parentesco EL MISMO el documento ACDE. Tabla rentasvitalicias.rentas_documentos_obligatorios\n\ni.\tTener en cuenta tabla de referencia rentasvitalicias.rentas_clase_documentos para validar códigos de documento ACDE.\n\nsr_doc_obli\torigen\tparentesco\tedad\tdocumento\n83\t8\t1\t0\t2\n84\t8\t1\t0\t9\n85\t8\t11\t0\t5\n86\t8\t11\t0\t9\n87\t8\t11\t0\t1\n88\t8\t11\t0\t14\n89\t8\t11\t0\t10\n90\t8\t11\t0\t2\n91\t8\t11\t0\t6\n92\t8\t19\t0\t10\n93\t8\t19\t0\t2\n94\t8\t19\t0\t5\n95\t8\t19\t0\t9\n96\t8\t3\t0\t9\n97\t8\t3\t0\t3\n98\t8\t3\t0\t2\n99\t8\t4\t>18\t2\n100\t8\t4\t>=7,<=18\t9\n101\t8\t4\t>18\t9\n102\t8\t4\t<7\t9\n103\t8\t4\t>=7,<=18\t2\n\n\nc.\tSe debe validar los siguientes puntos de forma detallada: \n\ni.\tLa Carga de Cotización y contratación\nii.\tLa gestión telefónica realizada por el Call Center. Ver como direcciona las bandejas de llamadas. (Actualizacion invalidez Sobrev) No Efectivos Invalidez Sobrev)\niii.\tEnvío de Portafolios de servicio. “Sobrevivencia”\niv.\tEnvío de Comprobantes de Nomina. “Sobrevivencia”\n\n\nv.\tEl exportar informe de validación documental “Base Total”. Cambiar un JKIcaso real sustitucion (enero – febrero). OK CORRECTO\nvi.\tLa descarga de documentos para el nuevo origen sustitución. “Entrega Ministerio”. OK CORRECTO\n\n\n",
-    "visible": false
+    "visible": true
   },
   {
     "id": "AJUSTES_REN_2025_001-2",
@@ -107,24 +107,24 @@
     "id": "AJUSTES_REN_2025_001-3",
     "title": "CAMBIO DE ESTADO DE IMÁGENES PARA RENTAS NO CONTRATADAS",
     "assigned": "MAURICIO",
-    "state": "Pendiente",
+    "state": "En Proceso",
     "progress": 0,
-    "startDate": " ",
+    "startDate": "11/07/2025",
     "endDate": " ",
     "observations":" ",
     "unit": "Fala",
     "detail": "**Requerimiento 2025-001 ajustes Rentas Vitalicias**\n1.\tEn virtud de sesión realizada el 19 de mayo de 2025, se solicita realizar ajustes en la aplicación de rentas vitalicias para mejorar la operatividad y entrega de informes.\n\n**3.CAMBIO DE ESTADO DE IMÁGENES PARA RENTAS NO CONTRATADAS**\n\nSe requiere marcar como rechazados los documentos relacionados con cotizaciones cargadas nuevamente.\n\ni.\tLa Carga de Cotización y contratación permitir cargar sustitución\n\n\nb.\tAl cargar la base cotizaciones, el sistema Imagine actualiza o inserta nuevos registros en la tabla rentasvitalicias.rentas_cabecera\n\nc.\tSe requiere que al cargar los nuevos casos, si este actualiza un registro “ya existente” también realice un update a la tabla rentasvitalicias.validacion_documental y deje como rechazados los documentos existentes.\n\nd.\tAl cargar la base de cotización en \n\ne.\tTodos los documentos cargados en rentasvitalicias.validacion_documental para el numero_ident o num_doc2 que el campo validación es in (1,0), se debe dejar como validacion =’2’ y usuario =’imagine’\n\n\n\n.",
-    "visible": false
+    "visible": true
   },
   {
     "id": "AJUSTES_REN_2025_001-4",
     "title": "VALIDAR INCONSISTENCIA INFORME RENTAS RCMA – DDEP",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 0,
+    "progress": 99,
     "startDate": "10/07/2025",
     "endDate": "10/07/2025",
-    "observations":"[10/07/2025]: Se inicia desarrollo del ajuste",
+    "observations":"[10/07/2025]: Se inicia desarrollo del ajuste.\n[11/07/2025]: EL 10 de julio Se realizaron pruebas por parte de Carlos. Actualmente, el cambio se encuentra pendiente de ser implementado en el ambiente de producción.",
     "unit": "Fala",
     "detail": "**Requerimiento 2025-001 ajustes Rentas Vitalicias**\n1.\tEn virtud de sesión realizada el 19 de mayo de 2025, se solicita realizar ajustes en la aplicación de rentas vitalicias para mejorar la operatividad y entrega de informes.\n\n**4.VALIDAR INCONSISTENCIA INFORME RENTAS RCMA – DDEP**\n\n-\tValidar error ya que no está mostrando el DDEP validado. \n-\tSi los dos estén rechazados mostrar los dos en el informe.\nNumero Cotizacion\t Tipo Documento\tNumero Identificacion Nombre Causante\t\n722668\tCEDULA\t1032382200\tLOAIZA LOZANO DIOMEDES\n709049\tCEDULA\t1104127840\tDURAN CABRERA CINDY MARIA\n668263\tCEDULA\t39208905\tZAPATA ALZATE LUZ NELLY\n11476\tCEDULA\t39570375\tGARZON TIQUE MARGOTH\n639677\tCEDULA\t51695641\tHOLGUIN MORENO ANA ROSA\n",
     "visible": true
