@@ -477,7 +477,7 @@
       const resumenContent = document.getElementById('resumenContent');
       const totalTasks = filteredTasks.length;
       const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
-      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pruebas Fala", "Pruebas Cacol"].includes(t.state)).length;
+      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo","Pruebas Cionpro", "Pruebas Fala", "Pruebas Cacol"].includes(t.state)).length;
       const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
       const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
       resumenContent.innerHTML = `
