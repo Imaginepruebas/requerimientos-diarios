@@ -366,7 +366,8 @@
     const archivos = [
       'datos/bolivar.json',
       'datos/proteccion.json',
-      'datos/alfa.json'
+      'datos/alfa.json',
+      'datos/Colmedica.json'
     ];
     console.log("Cargando archivos JSON:", archivos);
     Promise.all(archivos.map(url => fetch(url).then(r => {
@@ -401,7 +402,8 @@
       "Detenido Varbo": '#17becf',
       "Estimar": '#ff9896',
       "Finalizado": '#ffbb78',
-      "Pruebas Fala": '#c5b0d5'
+      "Pruebas Fala": '#c5b0d5',
+      "Pruebas Cacol": '#c5b0d5'
     };
 
     // Función para parsear fechas
@@ -475,7 +477,7 @@
       const resumenContent = document.getElementById('resumenContent');
       const totalTasks = filteredTasks.length;
       const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
-      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pruebas Fala"].includes(t.state)).length;
+      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pruebas Fala", "Pruebas Cacol"].includes(t.state)).length;
       const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
       const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
       resumenContent.innerHTML = `
