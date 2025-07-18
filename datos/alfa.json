@@ -107,11 +107,11 @@
     "id": "AJUSTES_REN_2025_001-3",
     "title": "CAMBIO DE ESTADO DE IMÁGENES PARA RENTAS NO CONTRATADAS",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 0,
-    "startDate": "15/07/2025",
-    "endDate": " ",
-    "observations":"[15/07/2025]: Se inician ajustes solicitados",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/07/2025",  
+    "endDate": "16/07/2025",
+    "observations":"[15/07/2025]: Se inician ajustes solicitados.\n[18/07/2025]: Se culminaron los ajustes requeridos por el área, se realiza paso a produccion el 17 de julio.",
     "unit": "Fala",
     "detail": "**Requerimiento 2025-001 ajustes Rentas Vitalicias**\n1.\tEn virtud de sesión realizada el 19 de mayo de 2025, se solicita realizar ajustes en la aplicación de rentas vitalicias para mejorar la operatividad y entrega de informes.\n\n**3.CAMBIO DE ESTADO DE IMÁGENES PARA RENTAS NO CONTRATADAS**\n\nSe requiere marcar como rechazados los documentos relacionados con cotizaciones cargadas nuevamente.\n\ni.\tLa Carga de Cotización y contratación permitir cargar sustitución\n\n\nb.\tAl cargar la base cotizaciones, el sistema Imagine actualiza o inserta nuevos registros en la tabla rentasvitalicias.rentas_cabecera\n\nc.\tSe requiere que al cargar los nuevos casos, si este actualiza un registro “ya existente” también realice un update a la tabla rentasvitalicias.validacion_documental y deje como rechazados los documentos existentes.\n\nd.\tAl cargar la base de cotización en \n\ne.\tTodos los documentos cargados en rentasvitalicias.validacion_documental para el numero_ident o num_doc2 que el campo validación es in (1,0), se debe dejar como validacion =’2’ y usuario =’imagine’\n\n\n\n.",
     "visible": true
@@ -140,6 +140,19 @@
     "observations":"[16/07/2025]: Se finaliza ajuste 15 de julio y se realiza despliegue a produccion el 16 de julio en la mañana.",
     "unit": "Fala",
     "detail": " ",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_011",
+    "title": "ANS - TABLERO DE CONTROL  - dashboard",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 20,
+    "startDate": "17/07/2025",
+    "endDate": " ",
+    "observations":"\n[18/07/2025]: Se completó el query de base. Se trabaja en selección de librería gráfica compatible con Laravel. Se estima un 20% de avance general.",
+    "unit": "Fala",
+    "detail": "**DESARROLLO PREVISIONALES  ANS – TABLERO DE CONTROL**\r\n**OBJETIVO**\r\n1. Mostrar estadísticas de los pagos efectuados a través del flujo. Comparar gráficamente el periodo actual con el mes inmediatamente anterior.\r\nEntregar una herramienta que permita ver el estado de las operaciones en tiempo real\r\n\r\n**ALCANCE**\r\nCrear un tablero de control – dashboard.\r\n\r\n**MODULO INCAPACIDADES**\r\n1. Crear una modulo denominado ANS \r\n2. Permitir seleccionar usuarios quienes al ingresar inmediatamente verán estas estadísticas para el control de las operaciones y toma de decisiones.\r\n**a.\tANS PAGOS:**\r\n-\tSe crea select para agrupar el ANS con el cliente PORVENIR donde se tiene un nivel de servicio de 1 a 8 días.\r\n1. Se toma como fecha inicial de medición la fecha de recibido.\r\n2.\tComo fecha final pera casos pendientes será la fecha actual\r\n3.\tPara casos cerrados se tomará la fecha del estado cerrado como fecha final.\r\n-\tPendiente incluir en esta consulta que solo cuente días hábiles.\r\n-\tPendiente validar que librería grafica podemos utilizar, se debe tener en cuenta los recursos que tenemos disponibles actualmente dentro del servidor.\r\n\r\n1.\tEstados que aplican para el informe de pagos. Según tabla \r\n**id**-\t**name**-\t**agrupación**\r\n1-\tValidación -\tPendiente\r\n2-\tCorrección -\tPendiente\r\n3-\tAprobación -\tPendiente\r\n4-\tRevisado  -\tPendiente\r\n5-\tInconsistente-\tPendiente\r\n6\tPago -\tPendiente\r\n7\tCierre -\tCerrado\r\n\r\n\r\n ",
     "visible": true
   }
 ]
