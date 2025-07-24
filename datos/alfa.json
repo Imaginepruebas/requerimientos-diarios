@@ -147,12 +147,25 @@
     "title": "ANS - TABLERO DE CONTROL  - dashboard",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 20,
+    "progress": 70,
     "startDate": "17/07/2025",
-    "endDate": " ",
+    "endDate": " 19/07/2025",
     "observations":"\n[18/07/2025]: Se completó el query de base. Se trabaja en selección de librería gráfica compatible con Laravel. Se estima un 20% de avance general.\n[21/07/2025]: Se está trabajando en las gráficas de ANS, se estima terminar el 22/07/2025 para paso a pruebas UAT.",
     "unit": "Fala",
     "detail": "**DESARROLLO PREVISIONALES  ANS – TABLERO DE CONTROL**\r\n**OBJETIVO**\r\n1. Mostrar estadísticas de los pagos efectuados a través del flujo. Comparar gráficamente el periodo actual con el mes inmediatamente anterior.\r\nEntregar una herramienta que permita ver el estado de las operaciones en tiempo real\r\n\r\n**ALCANCE**\r\nCrear un tablero de control – dashboard.\r\n\r\n**MODULO INCAPACIDADES**\r\n1. Crear una modulo denominado ANS \r\n2. Permitir seleccionar usuarios quienes al ingresar inmediatamente verán estas estadísticas para el control de las operaciones y toma de decisiones.\r\n**a.\tANS PAGOS:**\r\n-\tSe crea select para agrupar el ANS con el cliente PORVENIR donde se tiene un nivel de servicio de 1 a 8 días.\r\n1. Se toma como fecha inicial de medición la fecha de recibido.\r\n2.\tComo fecha final pera casos pendientes será la fecha actual\r\n3.\tPara casos cerrados se tomará la fecha del estado cerrado como fecha final.\r\n-\tPendiente incluir en esta consulta que solo cuente días hábiles.\r\n-\tPendiente validar que librería grafica podemos utilizar, se debe tener en cuenta los recursos que tenemos disponibles actualmente dentro del servidor.\r\n\r\n1.\tEstados que aplican para el informe de pagos. Según tabla \r\n**id**-\t**name**-\t**agrupación**\r\n1-\tValidación -\tPendiente\r\n2-\tCorrección -\tPendiente\r\n3-\tAprobación -\tPendiente\r\n4-\tRevisado  -\tPendiente\r\n5-\tInconsistente-\tPendiente\r\n6\tPago -\tPendiente\r\n7\tCierre -\tCerrado\r\n\r\n\r\n ",
+    "visible": true
+  },
+  {
+    "id": "AJT PRV_2025_001",
+    "title": "Ajuste flujo de  pagos ",
+    "assigned": "MAURICIO",
+    "state": "Pruebas Fala",
+    "progress": 70,
+    "startDate": "17/07/2025",
+    "endDate": " 22/07/2025",
+    "observations":"[21/07/2025]: El 17/07/2025 Se envía correo por parte de Carlos a Seguros Alfa, solicitando modificar 2 vistas:a. Sipren: Ajustes V_consolidado_reclamaciones_img, b. Plus: AjustesV_consolidado_tramites_plus\nPendiente presentarlo a comité para efectuar el cambio correspondiente en las vistas.\n[El 18/07/2025]: Mauricio realizó un ajuste en el módulo de flujo de pagos, mediante el cual se asocia a cada estado del flujo una ruta u opción de acceso específica. Anteriormente, independientemente del permiso asignado, los usuarios podían visualizar los estados a los que contaban con permiso.\n[23/07/2025]: El 22 de Julio se entrega al cliente  para pruebas, al pendiente de aceptación  para paso a produccion.",
+    "unit": "Fala",
+    "detail": " ",
     "visible": true
   }
 ]
