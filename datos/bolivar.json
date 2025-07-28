@@ -91,7 +91,7 @@
     "progress": 70,
     "startDate": "14/05/2025",
     "endDate": "",
-    "observations": "20/06/2025: Se pausa para dar prioridad de la migración S3, se planea iniciar entrenamiento durante la próxima semana.\n[27/06/2025]:El fin de semana del 28 de junio se entrenara con mas de 800 registros.\n[04/07/2025]:Se continúa con el entrenamiento del modelo de IA. Se planea insertar aproximadamente 2.000 registros hoy para que el sistema se entrene durante el fin de semana. Debido a las limitaciones del asistente automático, el proceso de carga debe realizarse de forma incremental.\n[11/07/2025]: Se ingresarán más registros para continuar con el entrenamiento en el fin de samana.\n[21/07/2025]: Se pretende  iniciar entrenamiento en el ambiente de contingencia (Ambiente generado para probar paso S3).\n[23/07/2025]: Se está ajustando el ambiente de contingencia, el cual fue generado para realizar pruebas relacionadas con el paso a S3. Una vez finalicen los ajustes, se dará inicio al proceso de entrenamiento.\n[25/07/2025]: Como ya quedó ajustado el tema de la instancia, ahora será necesario agregar registros para poder continuar con el entrenamiento del modelo de órdenes médicas.",
+    "observations": "20/06/2025: Se pausa para dar prioridad de la migración S3, se planea iniciar entrenamiento durante la próxima semana.\n[27/06/2025]:El fin de semana del 28 de junio se entrenara con mas de 800 registros.\n[04/07/2025]:Se continúa con el entrenamiento del modelo de IA. Se planea insertar aproximadamente 2.000 registros hoy para que el sistema se entrene durante el fin de semana. Debido a las limitaciones del asistente automático, el proceso de carga debe realizarse de forma incremental.\n[11/07/2025]: Se ingresarán más registros para continuar con el entrenamiento en el fin de samana.\n[21/07/2025]: Se pretende  iniciar entrenamiento en el ambiente de contingencia (Ambiente generado para probar paso S3).\n[23/07/2025]: Se está ajustando el ambiente de contingencia, el cual fue generado para realizar pruebas relacionadas con el paso a S3. Una vez finalicen los ajustes, se dará inicio al proceso de entrenamiento.\n[25/07/2025]: Como ya quedó ajustado el tema de la instancia, ahora será necesario agregar registros para poder continuar con el entrenamiento del modelo de órdenes médicas.\n[28/07/2025]: El viernes 25 se agregaron registros y se actualizó la librería Selerator para corregir incidencias.",
     "unit": "Varbo",
     "detail": ""
   },
@@ -265,7 +265,7 @@
     "detail": "**Requerimiento Detallado: Api’s Acceso y Receptor de Imágenes.**\r\n\r\n**Objetivo General:**\r\nImplementar un sistema centralizado que permita la consulta de imágenes mediante api’s desde diversas aplicaciones, con la capacidad de parametrizar las búsquedas y facilitar el acceso a estas imágenes por parte de aplicaciones que requiera la compañía y de este mismo modo guardar la documentación mediante api’s enviada desde cualquier actor a Imagine, es decir en doble vía.\t\r\n\r\n**Alcance:**\r\n\r\nCrear api’s de consulta y almacenamiento de imágenes, a la cual se puede tener acceso desde cualquier aplicativo designado por la compañía.\r\n\r\n\r\nRequerimiento funcional:\r\n\r\n**Sprint 1**\r\n**CA1.Consulta Parametrizada de Imágenes:** Permitir a las diferentes aplicaciones consultar imágenes basadas en los siguientes criterios opcionales **según la tipología:**\r\nTipificación (Por código asignado según proceso) - Obligatorio\r\n1.1 Incapacidades = COD1+ Minimo un campo opcional del 3 al 5.\r\n1.2 Medicamentos = COD2+ Minimo un campo opcional del 3 al 6\r\n1.3 Fallos de tutela = COD3+ Minimo un campo opcional del 3 al 5\r\n1.4 Cuentas medicas =COD4+ Minino un campo opcional del 3, 4, 5, 9 o 10.\t\r\n1.5 Nativo =COD5+ campo 2 obligatorio + Mínimo un campo opcional del 3 al 8\r\n**Nota:** La tipificación se realiza como propuesta imagine puede establecer una nueva, tener en cuenta que cada proceso nuevo en caso de que no ingrese en la tipificación anterior debe incluirse en la nueva para obtener la información.\r\nTipología del documento en nativo (incapacidades, medicamentos, cuentas médicas - reembolsos, etc., identificando la fuente: nativo, YII, Laravel)\r\nNit o número de documento asociado\r\nRango de fechas (fecha de creación o carga de la imagen), \r\nNúmero de caso Imagine\r\nNumero de solicitud (siniestro)\r\nCronograma \r\nSecuencia \r\nNúmero de Factura\r\nNit del Beneficiario\r\nCondiciones: Puede cumplir uno o varios de los anteriores criterios para la consulta.\r\n- Si la consulta es únicamente por fechas, el rango de fechas debe ser máximo de un periodo de un mes (paramétrico por días).\r\n- Para el caso de ‘Incapacidades’, se escoge dicha Tipología, la ‘Fecha de creación inicial deseada’ y la ‘Fecha de creación final deseada’ (paramétrico)\r\n- Se requiere que al aplicar un filtro se indique a través de un mensaje la cantidad de registros y solicitar un segundo filtro en caso de que el volumen sea alto**\r\n- Sí por peso no es posible entregar la información de manera inmediata se debe generar una alerta de encolamiento para la entrega de la información.\r\n\r\n1. API de Imágenes: Debe permitir consumir vía API las imágenes encontradas a partir de los criterios de búsqueda desde el servicio solicitado, se debe obtener las url prefirmada que contiene los requisitos de seguridad (bajo el mismo modelo del servicio de recobros) \r\n\r\nDicho listado, deberá contener los siguientes datos:\r\n\r\nNumero_radicado_imagine, \r\ntipología, \r\nIdentificación_del_trabajador, \r\nurl de la imagen, \r\nfecha_radicación, \r\nIdentificación_de_persona_o_empresa_que_radica,\r\nNumero_de_solicitud (siniestro)  (aplica sólo en algunas tipologías)\r\nCronograma_SIPAB (aplica sólo en algunas tipologías)\r\nSecuencia_SIPAB (aplica sólo en algunas tipologías)\r\n"
   },
   {
-    "id": "Interno-J1",
+    "id": "Interno-JA1",
     "title": "Automatización cuentas medicas con IA",
     "assigned": "JAIRO",
     "state": "En Proceso",
@@ -582,7 +582,7 @@
     "detail": "En el Portal de Reembolsos A.R.L. se tiene pendiente la elaboración de plantillas para cartas específicas (glosa parcial, glosa total, entre otras), según lineamientos enviados previamente por el cliente. La tarea se había dejado pendiente, pero se prevé retomarla hoy 7 de Julio."
   },
   {
-    "id": "Interno-J2",
+    "id": "Interno-JA2",
     "title": "Mejoras informe total producto Salud.",
     "assigned": "JAIRO",
     "state": "Finalizado",
@@ -621,7 +621,7 @@
     "visible": true
   },
   {
-    "id": "Interno-J3",
+    "id": "Interno-JA3",
     "title": "Devolver a Seguimiento para firmeza el radicado 30949303",
     "assigned": "JAIRO",
     "state": "Finalizado",
@@ -634,7 +634,7 @@
     "visible": true
   },
   {
-    "id": "Interno-J4",
+    "id": "Interno-JA4",
     "title": " Corregir CC a los  casos 31010548 - 31010549 en pensiones",
     "assigned": "JAIRO",
     "state": "Finalizado",
@@ -647,7 +647,7 @@
     "visible": true
   },
   {
-    "id": "Interno-J5",
+    "id": "Interno-JA5",
     "title": "Levantamiento nueva máquina virtual",
     "assigned": "JAIRO",
     "state": "Finalizado",
@@ -660,7 +660,7 @@
     "visible": true
   },
   {
-    "id": "Interno-J6",
+    "id": "Interno-JA6",
     "title": "Revisión  devolución de facturas pensionados",
     "assigned": "JAIRO",
     "state": "Pendiente",
@@ -730,12 +730,12 @@
     "assigned": "JAIRO",
     "state": "Pendiente",
     "progress": 0,
-    "startDate": " ",
+    "startDate": "28/07/2025",
     "endDate": " ",
-    "observations": " ",
+    "observations": "",
     "unit": "Varbo",
     "detail": "Se implementó una restricción inicial para que ciertas facturas solo sean visibles por usuarios autorizados; se requiere un módulo administrativo para gestionar esta configuración.",
-    "visible": false
+    "visible": true
   },
   {
     "id": "GD772-121",
@@ -768,23 +768,23 @@
     "title": "Carga excesiva en servidor de portales",
     "assigned": "DANILO",
     "state": "En Proceso",
-    "progress": 70,
+    "progress": 80,
     "startDate": "22/07/2025",
     "endDate": " ",
-    "observations": "[23/07/2025]: Se ha detectado una saturación de recursos en el servidor durante la ejecución de procesos masivos, particularmente durante el cargue de incapacidades. Este es un problema de comportamiento intermitente, asociado al procesamiento en tiempo real que realiza la aplicación. Actualmente, se está evaluando la posibilidad de enviar estos procesos a colas asíncronas como alternativa para reducir el impacto en los recursos del sistema. Sin embargo, esta solución podría afectar negativamente la experiencia del usuario final al introducir demoras perceptibles. Como medida prioritaria, se recomienda solicitar una ampliación de los recursos de infraestructura (memoria RAM y CPU), lo cual se considera la solución más adecuada para mantener la eficiencia del sistema sin comprometer la experiencia del usuario.",
+    "observations": "[23/07/2025]: Se ha detectado una saturación de recursos en el servidor durante la ejecución de procesos masivos, particularmente durante el cargue de incapacidades. Este es un problema de comportamiento intermitente, asociado al procesamiento en tiempo real que realiza la aplicación. Actualmente, se está evaluando la posibilidad de enviar estos procesos a colas asíncronas como alternativa para reducir el impacto en los recursos del sistema. Sin embargo, esta solución podría afectar negativamente la experiencia del usuario final al introducir demoras perceptibles. Como medida prioritaria, se recomienda solicitar una ampliación de los recursos de infraestructura (memoria RAM y CPU), lo cual se considera la solución más adecuada para mantener la eficiencia del sistema sin comprometer la experiencia del usuario.\n[28/07/2025]: Se analizará la justificación para ampliar recursos del servidor (actualmente con 3 GB RAM y 2 CPU) con el fin de mitigar alertamientos por alta carga.",
     "unit": "Varbo",
     "detail": "**Requerimiento: Validación del Funcionamiento de la Aplicación en Entorno de Producción**\n\n**Descripción:**\nSolicitamos tu colaboración para que, en conjunto con el Aliado de Imaginex, realicemos una validación integral del funcionamiento de la aplicación en el entorno de producción. En el último mes se han presentado varias caídas del servicio asociadas al bloqueo de la máquina con dirección IP 10.66.95.200.\n\n**Contexto:**\nA pesar de haber realizado un incremento en la capacidad de memoria y CPU del servidor, se siguen presentando consumos excesivos de recursos que provocan el bloqueo total de la máquina, obligando a realizar un reinicio como única medida de recuperación.\n\n**Objetivo del requerimiento:**\nIdentificar la causa raíz del comportamiento anómalo que genera el consumo excesivo de recursos del sistema. Esta validación es crítica, ya que todo indica que, independientemente de la capacidad asignada, la aplicación continúa escalando su consumo hasta provocar la caída del entorno.\n\n**Impacto:**\nEste comportamiento afecta gravemente la disponibilidad del servicio y la experiencia del usuario final, por lo que es prioritario determinar el origen del problema y tomar medidas correctivas que aseguren la estabilidad de la plataforma.",
     "visible": true
   },
   {
-    "id": "Interno-J7",
+    "id": "Interno-JA7",
     "title": "Mejoras informe EPS",
     "assigned": "JAIRO",
     "state": "En Proceso",
-    "progress": 50,
+    "progress": 80,
     "startDate": "22/07/2025",
-    "endDate": " ",
-    "observations": "[23/07/2025]: Se inició la validación del query asociado al informe EPS, con el objetivo de optimizar las consultas SQL involucradas. Esta optimización busca reducir el consumo de recursos y mejorar los tiempos de respuesta, manteniendo al mismo tiempo una estructura común y reutilizable para todos los informes. Como parte del plan de trabajo, se espera que el informe EPS esté ajustado y en producción antes del viernes.\n[25/07/2025]: Se completó el query principal del informe EPS y se encuentra en fase de pruebas, con un avance estimado del 50%.",
+    "endDate": "25/07/2025 ",
+    "observations": "[23/07/2025]: Se inició la validación del query asociado al informe EPS, con el objetivo de optimizar las consultas SQL involucradas. Esta optimización busca reducir el consumo de recursos y mejorar los tiempos de respuesta, manteniendo al mismo tiempo una estructura común y reutilizable para todos los informes. Como parte del plan de trabajo, se espera que el informe EPS esté ajustado y en producción antes del viernes.\n[25/07/2025]: Se completó el query principal del informe EPS y se encuentra en fase de pruebas, con un avance estimado del 50%.\n[28/07/2025]: Query principal terminado, se espera subirlo a producción para pruebas con datos reales hoy  antes del mediodía.",
     "unit": "Varbo",
     "detail": "**Justificación de ajuste del informe EPS:**\nAunque inicialmente no se tenía previsto intervenir el informe EPS debido a que el producto al que pertenece está próximo a finalizar, se ha decidido priorizar su ajuste. Actualmente, este informe es el que mayor consumo de recursos está generando y ha sido identificado como el principal causante de las demoras en la generación de reportes. Por esta razón, se hace necesario optimizar su funcionamiento para mitigar el impacto en el rendimiento general del sistema.",
     "visible": true
@@ -845,11 +845,11 @@
     "id": "Interno-Je5",
     "title": "Queries de informacion gestion tipologias  ",
     "assigned": "JESUS",
-    "state": "En Proceso",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": " 24/07/2025",
-    "endDate": " ",
-    "observations": "[25/07/2025]:Se generaron los queries solicitados para cinco datos claves y están listos para ser revisados en conjunto con el equipo.",
+    "endDate": "25/07/2025",
+    "observations": "[25/07/2025]:Se generaron los queries solicitados para cinco datos claves y están listos para ser revisados en conjunto con el equipo.\n[28/07/2025]:La información requerida fue generada en su totalidad el día viernes 25 de julio",
     "unit": "Varbo",
     "detail": " ",
     "visible": true
@@ -866,5 +866,70 @@
     "unit": "Varbo",
     "detail": " ",
     "visible": true
+ } ,
+    {
+    "id": "Interno-D5",
+    "title": "Trasferencia de imagenes pendientes del S3  al FS",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": " 25/07/2025",
+    "endDate": " 25/07/2025",
+    "observations": "[28/07/2025]:Se identificaron imágenes pendientes en S3 que no estaban en el FS; se realizó validación y transferencia para corregir la sincronización.",
+    "unit": "Varbo",
+    "detail": " ",
+    "visible": true
+ },
+    {
+    "id": "Interno-JA8",
+    "title": "Gestión de imágenes en módulo Cartera",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": " 25/07/2025",
+    "endDate": " 25/07/2025",
+    "observations": "[28/07/2025]:0e identificó que al mover archivos a la carpeta de fecha no se completaba el proceso; se implementó un script para validar y restaurar imágenes.",
+    "unit": "Varbo",
+    "detail": " ",
+    "visible": true
+ },
+    {
+    "id": "Interno-JA9",
+    "title": "Gestión de imagenes buzón ARL",
+    "assigned": "JAIRO",
+    "state": "En Proceso",
+    "progress": 100,
+    "startDate": " 28/07/2025",
+    "endDate": " ",
+    "observations": "[28/07/2025]:El dia viernes 25 de julio  a Danilo le escalaron  un error donde casos radicados el 25 no cargaron imágenes ni se registraron en base de datos; se revisaron logs sin hallar causa, Jairo  iniciara validaciòn  para la implementaciòn del script implementado en las imagenes del modulo de cartera.",
+    "unit": "Varbo",
+    "detail": " ",
+    "visible": true
+ },
+    {
+    "id": "Interno-D6",
+    "title": " Plan de trabajo IA – Radicación Express",
+    "assigned": "DANILO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": " 28/07/2025",
+    "endDate": " ",
+    "observations": "[28/07/2025]: Pendiente reunión con Jairo y Liyibet para definir plan de trabajo, tema prioritario que requiere asignación clara de tareas y etapas.",
+    "unit": "Varbo",
+    "detail": " ",
+    "visible": false
+ },
+    {
+    "id": "MDSB-849170",
+    "title": "Modalidades de trabajo – error en cargue",
+    "assigned": "JESUS",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": " 25/07/2025",
+    "endDate": " ",
+    "observations": " ",
+    "unit": "Varbo",
+    "detail": "Usuaria indica que al momento de realizar el cargue masivo de trabajadores en el portal de arl le presenta un error cuando carga el documento de Excel ",
+    "visible": false
  }
-  ]
+ ]
