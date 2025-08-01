@@ -211,13 +211,26 @@
     "id": "PRV_2025_003-1",
     "title": "AVISO A LA RENTA (Desarrollo)",
     "assigned": "MAURICIO",
-    "state": "En proceso",
-    "progress": 50,
+    "state": "En Test",
+    "progress": 99,
     "startDate": "28/07/2025",
     "endDate": " ",
-    "observations":"[28/07/2025], el viernes 25 de julio, debido a una inconsistencia en el aplicativo ALFASST del área SST con unas ordenes de servicio, se tuvo que dar prioridad y Mauricio no pudo iniciar el desarrollo de Avisos a la renta.\nEl día de hoy, luego de terminar validaciones de paso a producción de otros requerimientos, se inicia desarrollo de este requerimiento.\n[30/07/2025: Se reporta un avance del 50% en el desarrollo del módulo de avisos de renta. Ya se visualizan los pagos correctamente y quedan pendientes las funcionalidades de notificación, descarga de Excel y eliminación de registros. Se espera finalizar hoy. ",
+    "observations":"[28/07/2025], el viernes 25 de julio, debido a una inconsistencia en el aplicativo ALFASST del área SST con unas ordenes de servicio, se tuvo que dar prioridad y Mauricio no pudo iniciar el desarrollo de Avisos a la renta.\nEl día de hoy, luego de terminar validaciones de paso a producción de otros requerimientos, se inicia desarrollo de este requerimiento.\n[30/07/2025]: Se reporta un avance del 50% en el desarrollo del módulo de avisos de renta. Ya se visualizan los pagos correctamente y quedan pendientes las funcionalidades de notificación, descarga de Excel y eliminación de registros. Se espera finalizar hoy. \n[01/08/2025]: Al 31 de julio, el reporte se encuentra listo para entrega. El día de hoy, Mauricio presentará su funcionamiento y flujo, con el fin de identificar posibles desviaciones y evaluar la viabilidad de su automatización.",
     "unit": "Fala",
     "detail":"**DETALLE SITUACIÓN ACTUAL APLICACIÓN (ES)**\n\n1. Actualmente, el área de Previsionales realiza entre dos y tres cruces mensuales en Excel con el fin de reportar al área de Rentas Vitalicias los siniestros pagados por concepto de Reliquidación, que hayan generado pagos posteriores a la fecha de expedición de la póliza en Rentas.\n\n**OBJETIVO**\n\n2. Desarrollar un módulo funcional que permita al área de Previsionales descargar los siniestros que deben ser reportados al área de Rentas Vitalicias, específicamente aquellos relacionados con pagos por concepto de Reliquidación posteriores a la fecha de expedición de la póliza.\n\nAdemás, el módulo debe incorporar un mecanismo de control y trazabilidad, que registre qué siniestros han sido reportados, junto con la fecha de reporte, para asegurar seguimiento, evitar duplicidades y facilitar auditorías.\n\n**ALCANCE**\n\n3. Diseñar e implementar un módulo dentro del sistema Imagine que permita al área de Previsionales:\na. Descargar los siniestros que deben ser reportados al área de Rentas Vitalicias, específicamente aquellos con pagos por concepto de Reliquidación posteriores a la fecha de expedición de la póliza.\nb. Generar el archivo de descarga con la estructura definida por el área de Previsionales, asegurando compatibilidad con los formatos utilizados en los reportes actuales.\nc. Incorporar un sistema de control y trazabilidad que registre en Imagine los casos reportados, incluyendo la fecha de reporte, el usuario responsable, y el estado del reporte, con el fin de facilitar el seguimiento, evitar duplicidades y garantizar la integridad del proceso.\n\n**MODULO INCAPACIDADES**\n\n4. Crear una modulo denominado Aviso a la Renta.\n5. Tomar los casos que cumplan los siguientes parámetros:\na. Casos del flujo de pagos\nb. Casos de RELIQUIDACION\nc. Donde el pago_total sea mayor a cero\nd. Su estado sea cerrado. (Ya pagado)\n\nSELECT \n    sol.id AS num_solicitud,\n    sol.fecha_solicitud,\n    sol.aplicacion,\n    sol.no_siniestro,\n    sol.nid_numero_identificacion AS id,\n    dsol.afiliado AS nombre,\n    dsol.nombre_tipo AS concepto_reliquidacion,\n    dsol.comentario_lqp AS concepto_final\nFROM solicitud sol\nLEFT JOIN detalle_solicitud dsol \n    ON dsol.id_solicitud = sol.id \nWHERE dsol.status = true\n  AND dsol.nombre_tipo = 'RELIQUIDACION'\n  AND dsol.pago_total > 0\n  AND sol.nid_estado = '7';\n\n-- Falta agregar por ejemplo en la tabla solicitud una marcación fecha.\n\n6. También se debe incluir validación con la tabla de rentasvitalicias.rentas_cabecera que está en la bd img001 esquema rentasvitalicias y debe cumplir lo siguiente:\na. sol.nid_numero_identificacion = rentas…..numero_ident\nb. num_renta > '0'\nc. Parentesco = '11'  -- “EL MISMO” pensionado.\nd. sol.fecha_solicitud >= rentas……fecha_expedicion\n\n7. Evaluar la posibilidad de marcar en la tabla solicitud los casos que hayan sido reportados, registrando la fecha de exportación de los datos. Esta acción deberá estar sujeta a confirmación explícita por parte del usuario, a través de una opción tipo check o validación en el módulo.\nDe esta manera, se permite la generación del reporte en múltiples ocasiones sin afectar el estado de los registros, asegurando que la actualización en la tabla solicitud solo se realice cuando el usuario confirme que la exportación correspondiente.\n\n8. Mostrar log en la parte inferior donde visualice los registros reportados anteriormente.\n\n9. Por favor incluir las validaciones relacionadas en la imagen como recomendaciones.", 
+    "visible": true
+  },
+  {
+    "id": "Img_2025_001",
+    "title": "Validar servidor de contingencia",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "01/08/2025",
+    "endDate": " ",
+    "observations":"[01/08/2025]: Se realizarà validación del servidor de contingencia el día de hoy, puesto que en meses pasado se presentaron incidencias y debemos garantizar que toda la información se encuentre sincronizada de forma correcta.",
+    "unit": "Fala",
+    "detail":" ", 
     "visible": true
   }
 ]
