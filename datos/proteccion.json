@@ -96,7 +96,7 @@
     "detail": " Se está a la espera de la solicitud formal por parte del cliente"
   },
   {
-    "id": "REQ-4",
+    "id": "REQ-4-1",
     "title": "Migracion de servidor y actualizaciones de tecnologías (Acompañamiento de pruebas y validaciones con el cliente)",
     "assigned": "ALEJANDRO",
     "state": "En Proceso",
@@ -208,10 +208,10 @@
     "title": "Automatización y migración de lógica a python (Creación de script para entrenamiento del modelo de clasificación)",
     "assigned": "ALEJANDRO",
     "state": "En Proceso",
-    "progress": 50,
+    "progress": 75,
     "startDate": "17/07/2025",
     "endDate": " ",
-    "observations":"[17/07/2025]: Se realiza reunión con Danilo para identificar enfoque de manejo de dependencias y entre otros temas.\n[18/07/2025]: Se construye con ayuda de la IA varios scripts que se usaran como modelo e inferencia del proyecto. No se han probado ni tampoco se han acoplado al sistema de agentes.\n[28/07/2025]: Se había detenido la actividad hasta tener todos los recursos al menos en el sistema local para trabajar el modelo de entrenamiento, en este caso faltaba los archivos",
+    "observations":"[17/07/2025]: Se realiza reunión con Danilo para identificar enfoque de manejo de dependencias y entre otros temas.\n[18/07/2025]: Se construye con ayuda de la IA varios scripts que se usaran como modelo e inferencia del proyecto. No se han probado ni tampoco se han acoplado al sistema de agentes.\n[28/07/2025]: Se había detenido la actividad hasta tener todos los recursos al menos en el sistema local para trabajar el modelo de entrenamiento, en este caso faltaba los archivos. \n[28/07/2025]: Se realizan correcciones, pruebas y generación de los primeros 5 recorridos completos por todo el dataset de entrenamiento y se obtiene un modelo con 84% de fiabilidad. Cada recorrido tarda alrededor de 2 horas y genera un esfuerzo moderado al PC, por lo que las demás actividades se ven un poco afectadas, se espera conseguir un modelo de más de 90% de fiabilidad y por lo que serán necesario más entrenamiento, análisis y recorridos por toda la data.\n[29/07/2025]: Se siguen ejecutando el entrenamiento para la búsqueda de un modelo más fiable.",
     "unit": "Cionpro",
     "detail": ""
   },
@@ -286,5 +286,17 @@
     "observations": "[25/07/2025]: Se realiza la descarga de 80000 archivos no sin antes reestructurar el script y acoplarlo para no sobrecargar los procesos y que funcionara.\n[26/07/2025]: Se empieza proceso de carga en local, todo esto debido a que no se puede generar el modelo de entrenamiento en el servidor por capacidad.\n[28/07/2025]: Se termina el proceso de carga en local.",
     "unit": "Cionpro",
     "detail": " "
+  },
+  {
+    "id": "REQ-8-1",
+    "title": "Definición y cambio de flujo en la activación agente - investigación (Análisis de requerimientos, código y modificación de módulo para cumplirnecesidades)",
+    "assigned": "ALEJANDRO",
+    "state": "En Proceso" ,
+    "progress": 20,
+    "startDate": "30/07/2025",
+    "endDate": " ",
+    "observations": "[30/07/2025]: Se inicia el proceso de análisis para la parte de modificación de cargue y se informa de lo encontrado",
+    "unit": "Cionpro",
+    "detail": " Modificación del flujo, cargue y almacenamiento de datos de la fase de investigación. Además, de envió de esa información a filenet "
   }
 ]
