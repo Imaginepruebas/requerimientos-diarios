@@ -1144,14 +1144,14 @@
     "id": "GD772-127",
     "title": "Bloqueos radicación prestadores",
     "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "05/08/2025",
     "endDate": " ",
-    "observations": " ",
+    "observations": "[05/08/2025]: Se esacla control de  cambios para ambiente de pruebas MDSB-859020. ",
     "unit": "Varbo",
     "detail": "Por cierre de  Varbo se requiere que se bloquee la radicación de primera vez y respuesta a glosa para este ramo EPS de los prestadores relacionados en adjunto, con dichos prestadores se cuenta con paz y salvo por todo concepto.",
-    "visible": false
+    "visible": true
 },
  {
     "id": "INTERNO-JA10",
