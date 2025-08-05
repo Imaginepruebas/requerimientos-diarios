@@ -1066,14 +1066,14 @@
     "id": "GD772-122",
     "title": "Habilitar la extensiónes xls, xlsx, xlsm, xltx, xltm y xlt  para la tipología tengo dudas reembolsos, internacional y nacional",
     "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": " ",
-    "endDate": " ",
-    "observations": " ",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/08/2025",
+    "endDate": "05/08/2025",
+    "observations": "[05/08/2025]: Se habilitan las extensiones .xls y .xlsx en la tipología 'Tengo dudas - Reembolsos', en ambiente de producción ",
     "unit": "Varbo",
     "detail": "Se requiere habilitar la extensión excel para la tipología tengo dudas reembolsos, internacional y nacional.\nHabilitar el cargue de archivos xls, xlsx, xlsm, xltx, xltm y xlt",
-    "visible": false
+    "visible": true
  },
     {
     "id": "GD772-124",
@@ -1148,7 +1148,7 @@
     "progress": 50,
     "startDate": "05/08/2025",
     "endDate": " ",
-    "observations": "[05/08/2025]: Se esacla control de  cambios para ambiente de pruebas MDSB-859020. ",
+    "observations": "[05/08/2025]: Se esacla control de  cambios para ambiente de pruebas MDSB-859020. Control de cambios ejecutado con exito. ",
     "unit": "Varbo",
     "detail": "Por cierre de  Varbo se requiere que se bloquee la radicación de primera vez y respuesta a glosa para este ramo EPS de los prestadores relacionados en adjunto, con dichos prestadores se cuenta con paz y salvo por todo concepto.",
     "visible": true
@@ -1216,6 +1216,45 @@
     "observations": "[04/08/2025]:  Se recibió información técnica sobre las vulnerabilidades (Redirect). No se han validado completamente pendiente de análisis",
     "unit": "Varbo",
     "detail": "**Tipo:** Web\n**CVE/CWE:** 201\n**Protocolo:** TCP\n**Puerto:** 443\n**Sinopsis:** El servidor ha respondido con una redirección que parece proporcionar una respuesta de gran tamaño. Esto puede indicar que, aunque el servidor envió una redirección, también respondió con contenido en el cuerpo del mensaje (lo cual puede incluir detalles sensibles, información personal identificable –PII–, etc.).",
+    "visible": true
+},
+ {
+    "id": "INTERNO-JA12",
+    "title": "Restringir la creación de usuarios en yii con igual correo",
+    "assigned": "JAIRO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Varbo",
+    "detail": "",
+    "visible": false
+},
+ {
+    "id": "INTERNO-JA13",
+    "title": "Validar recuperacipon de contraseña para el  usuario 101010",
+    "assigned": "JAIRO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Varbo",
+    "detail": "",
+    "visible": false
+},
+ {
+    "id": "MDSB-856527",
+    "title": "Jiras dia a dia (Error en cargue de adjuntos nativo)",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/08/2025",
+    "endDate": "05/08/2025",
+    "observations": "[05/08/2025]:  La incidencia se originó debido a que el aplicativo reemplazaba los adjuntos al momento de su cargue, por coincidencias en los nombres de archivo. Como medida correctiva, se implementó la adición de un identificador único en el nombre de cada adjunto, lo que evita la sobrescritura y asegura que cada documento se almacene de forma independiente.",
+    "unit": "Varbo",
+    "detail": "**Descripcion**\nAl realizar el cargue de anexos al caso 39403117 por parte del usuarioCLAUDIA MARCELA VALDES a las 2025-07-30 15:38:16, se identifica que en el caso queda anexo un documento que NO se estaba cargando, ni se encuentra en mi equipo  al momento del cargue (es un documento totalmente ageno a la operación) este queda cargado bajo la imagen 03; sin embargo en ningún momento se realizo el cargue de esta información.\n\nSe realiza la validación del documento y se observa que corresponde al caso 39378390 el cual fue cargado por el usuario YAMILYS PAOLA URIBE a las 2025-07-30 15:38:21 , lo unico que coincide es la hora del cargue; esta situación ya habia sido reportada anteriormente ",
     "visible": true
 }
  ]
