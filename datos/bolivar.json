@@ -732,7 +732,7 @@
     "progress": 90,
     "startDate": "30/07/2025",
     "endDate": "04/08/2025",
-    "observations": "30/07/2025: Se tiene previsto iniciar el desarrollo el día de hoy.\n[01/08/2025]: Se encuentra en desarrollo un administrador para gestionar el bloqueo de facturas. Se ha implementado la lógica, pero falta probar la interfaz administrable. El avance fue estimado en un 60%.\n[04/08/2025]: Se escaló el control de cambios MDSB-858377 al ambiente de pruebas (test) y fue ejecutado correctamente. A continuación, se procederá con las pruebas en dicho entorno.\n[06/08/2025]: Desarrollo en el ambiente de pruebas desde 4 de agosto.\n[11/08/2025]: Pendiente implementación de otro control para asignar permisos solo a usuarios autorizados; se espera completarlo para pasar a pruebas en TEST.",
+    "observations": "30/07/2025: Se tiene previsto iniciar el desarrollo el día de hoy.\n[01/08/2025]: Se encuentra en desarrollo un administrador para gestionar el bloqueo de facturas. Se ha implementado la lógica, pero falta probar la interfaz administrable. El avance fue estimado en un 60%.\n[04/08/2025]: Se escaló el control de cambios MDSB-858377 al ambiente de pruebas (test) y fue ejecutado correctamente. A continuación, se procederá con las pruebas en dicho entorno.\n[06/08/2025]: Desarrollo en el ambiente de pruebas desde 4 de agosto.\n[11/08/2025]: Pendiente implementación de otro control para asignar permisos solo a usuarios autorizados; se espera completarlo para pasar a pruebas en TEST.\n[12/08/2025]: Se escala a test el control de cambios MDSB-862990, el cual se encontraba pendiente.Control de cambios ejecutado con exito.",
     "unit": "Varbo",
     "detail": "Se implementó una restricción inicial para que ciertas facturas solo sean visibles por usuarios autorizados; se requiere un módulo administrativo para gestionar esta configuración.",
     "visible": true
@@ -975,11 +975,11 @@
     "id": "INTERNO-JE6",
     "title": "Creación de Script para Anulación de Casos Asociados a un Cargue Masivo",
     "assigned": "JESUS",
-    "state": "Paso a Producción",
-    "progress":90,
+    "state": "Finalizado",
+    "progress":100,
     "startDate": "30/07/2025",
     "endDate": "01/08/2025",
-    "observations": "[30/07/2025]: Se tiene previsto iniciar el desarrollo el día de hoy, Jenry indica que se deben elinimar los casos de la bd  y no dejarlos  ocupando espacio. \n[04/08/2025]: El viernes 1 de agosto se finalizó el query que elimina correctamente el caso y su imagen para los casos nuevos de masivos. Actualmente, se está construyendo el script que permitirá realizar un borrado controlado de las imágenes asociadas a casos antiguos en estado 'Anulado'.\n[06/08/2025]: Se desarrolló comando para eliminar 300.000 casos anulados uno a uno. El proceso está en ejecución y ha eliminado más de 100.000 registros en el ambiente productivo.\n[11/08/2025]: Anulacion de casos completa en produccion, se iniciara  paso a  produccion de la  funcionalidad.",
+    "observations": "[30/07/2025]: Se tiene previsto iniciar el desarrollo el día de hoy, Jenry indica que se deben elinimar los casos de la bd  y no dejarlos  ocupando espacio. \n[04/08/2025]: El viernes 1 de agosto se finalizó el query que elimina correctamente el caso y su imagen para los casos nuevos de masivos. Actualmente, se está construyendo el script que permitirá realizar un borrado controlado de las imágenes asociadas a casos antiguos en estado 'Anulado'.\n[06/08/2025]: Se desarrolló comando para eliminar 300.000 casos anulados uno a uno. El proceso está en ejecución y ha eliminado más de 100.000 registros en el ambiente productivo.\n[11/08/2025]: Anulacion de casos completa en produccion, se iniciara  paso a  produccion de la  funcionalidad.\n[12/08/2025]:Se realiza el paso a producción y se ejecutan pruebas, las cuales arrojan resultados exitosos.",
     "unit": "Varbo",
     "detail": "**Requerimiento: Creación de Script para Anulación de Casos Asociados a un Cargue Masivo**\n\n**Descripción:**\nSe requiere desarrollar un script que permita anular automáticamente todos los casos individuales creados a partir de un proceso de cargue masivo, en los escenarios en que dicho cargue masivo sea anulado por el usuario o administrador.\n\n**Objetivo:**\nAsegurar la consistencia de la información en el sistema, evitando que queden activos casos individuales que derivan de un masivo previamente anulado.\n\n**Alcance del Script:**\n\nIdentificar los casos generados por un identificador de cargue masivo.\n\nValidar el estado del cargue masivo (anulado).\n\nAnular todos los casos vinculados, actualizando su estado a \"Anulado\" o equivalente.\n\nRegistrar la trazabilidad de la acción (usuario, fecha, motivo).\n\n**Observaciones:**\nEste proceso debe ejecutarse de manera automática al anular un masivo, o como función adicional accesible desde la interfaz administrativa.",
     "visible": true
@@ -1105,11 +1105,11 @@
     "id": "INTERNO-D10",
     "title": "Implementacion de almacenamiento temporal de imágenes",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress":15,
+    "state": "En Test",
+    "progress":85,
     "startDate": "01/08/2025",
-    "endDate": " ",
-    "observations": "[04/08/2025]: El viernes 1 de agosto se trabajó parcialmente en la radicación ARL y autorizaciones, pero fue interrumpido por otras tareas.\n[11/08/2025]: Tarea pendiente de ejecución; se espera completarla en la jornada actual.",
+    "endDate": "12/08/2025 ",
+    "observations": "[04/08/2025]: El viernes 1 de agosto se trabajó parcialmente en la radicación ARL y autorizaciones, pero fue interrumpido por otras tareas.\n[11/08/2025]: Tarea pendiente de ejecución; se espera completarla en la jornada actual.\n[12/08/2025]: Se realiza implementación en ambiente de pruebas.",
     "unit": "Varbo",
     "detail": "Se detectó pérdida de imágenes al realizar cambios de infraestructura. Se propuso implementar un almacenamiento temporal de imágenes (buffer de contingencia por al menos 5 días) para evitar pérdida de información crítica en futuras contingencias.",
     "visible": true
@@ -1307,6 +1307,19 @@
     "observations": "[11/08/2025]: Se identificó que el problema se debía a que, al cargar un nuevo archivo, este quedaba con el mismo nombre del archivo utilizado en la radicación, lo que provocaba su reemplazo. Como medida correctiva, se implementó la adición de un identificador único al nombre de cada archivo al momento de su cargue, con el fin de evitar coincidencias y sobrescritas.",
     "unit": "Varbo",
     "detail": "Usuario se comunica indicando que está subiendo informes ya ctas, al generar el caso y tratar de adjuntar el acta este no carga y le duplica uno de lso archivos sea acta o informe (8 veces) ",
+    "visible": true
+},
+ {
+    "id": "INTERNO-JE9",
+    "title": "Control y Validación de Correos ARL vs Casos Radicados en Imagine",
+    "assigned": "JESUS",
+    "state": "Estimar",
+    "progress": 0,
+    "startDate": "",
+    "endDate": " ",
+    "observations": "[12/08/2025]: Se asigna el requerimiento y se solicita proporcionar una estimación para su desarrollo.",
+    "unit": "Varbo",
+    "detail": "**Objetivo del requerimiento**\r\nImplementar un control para la validación de correos enviados a la cuenta arlbolivar@segurosbolivar.com, comparando los correos recibidos con los casos radicados en el sistema Imagine para identificar discrepancias.\r\n________________________________________\r\n**Componentes principales**\r\n**1.\tExtracción de correos recibidos**\r\no\tContar correos radicados en la cuenta arlbolivar@segurosbolivar.com.\r\no\tObtener Remitente, Asunto y Fecha recibido.\r\no\tEjemplo dado en Google Apps Script usando GmailApp.search() para un rango de fecha y hora.\r\n**2.\tConsulta en Imagine**\r\no\tComparar contra la información de casos radicados usando la vista:\r\nyii/radicacion correo/consulta.\r\n**3.\tFiltro de remitentes válidos**\r\no\tValidar solo correos de cuentas/dominios registrados en:\r\nyii/administrador lector correos/ pestaña correos y dominios.\r\n**4.\tGenerar reporte consolidado**\r\no\tNueva opción en la aplicación: Control diario.\r\no\tMostrar datos desde hoy hasta 1 mes atrás.\r\no\tCuadro comparativo:\r\nBuzón ARL\tRadicación Yii\tExcluidos\tDiferencia\tValidar\r\n**5.\tFuncionalidad de validación detallada**\r\no\tSi en la columna “Validar” aparece Sí:\r\n\tAl hacer clic, mostrar Asunto, Destinatario y Fecha del correo con discrepancia.\r\n________________________________________\r\n**Criterios clave de validación**\r\n•\tComparación se hace por remitente/dominio autorizado.\r\n•\tConsolidado debe ser de 30 días hacia atrás.\r\n•\tDiferencia = Buzón ARL − (Radicación Yii + Excluidos).\r\n•\tDetalle visible solo cuando **Diferencia > 0.**\r\n",
     "visible": true
 }
  ]
