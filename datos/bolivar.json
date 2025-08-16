@@ -1317,7 +1317,7 @@
     "progress": 90,
     "startDate": "13/08/2024",
     "endDate": "14/08/2025",
-    "observations": "[12/08/2025]: Se asigna el requerimiento y se solicita proporcionar una estimación para su desarrollo.\n[14/08/2025]: Se implementa un reporte vía correo que informa la cantidad de correos ingresados al buzón, los que fueron radicados en YII, los excluidos y la diferencia con error. Esta diferencia con error corresponde a los correos cuyo estado debe ser validado.",
+    "observations": "[12/08/2025]: Se asigna el requerimiento y se solicita proporcionar una estimación para su desarrollo.\n[14/08/2025]: Se implementa un reporte vía correo que informa la cantidad de correos ingresados al buzón, los que fueron radicados en YII, los excluidos y la diferencia con error. Esta diferencia con error corresponde a los correos cuyo estado debe ser validado.\n[15/08/2025]: El paso a producción permanece pendiente debido a que, al momento de realizar el despliegue, se presentan bloqueos en la URL",
     "unit": "Varbo",
     "detail": "**Objetivo del requerimiento**\r\nImplementar un control para la validación de correos enviados a la cuenta arlbolivar@segurosbolivar.com, comparando los correos recibidos con los casos radicados en el sistema Imagine para identificar discrepancias.\r\n________________________________________\r\n**Componentes principales**\r\n**1.\tExtracción de correos recibidos**\r\no\tContar correos radicados en la cuenta arlbolivar@segurosbolivar.com.\r\no\tObtener Remitente, Asunto y Fecha recibido.\r\no\tEjemplo dado en Google Apps Script usando GmailApp.search() para un rango de fecha y hora.\r\n**2.\tConsulta en Imagine**\r\no\tComparar contra la información de casos radicados usando la vista:\r\nyii/radicacion correo/consulta.\r\n**3.\tFiltro de remitentes válidos**\r\no\tValidar solo correos de cuentas/dominios registrados en:\r\nyii/administrador lector correos/ pestaña correos y dominios.\r\n**4.\tGenerar reporte consolidado**\r\no\tNueva opción en la aplicación: Control diario.\r\no\tMostrar datos desde hoy hasta 1 mes atrás.\r\no\tCuadro comparativo:\r\nBuzón ARL\tRadicación Yii\tExcluidos\tDiferencia\tValidar\r\n**5.\tFuncionalidad de validación detallada**\r\no\tSi en la columna “Validar” aparece Sí:\r\n\tAl hacer clic, mostrar Asunto, Destinatario y Fecha del correo con discrepancia.\r\n________________________________________\r\n**Criterios clave de validación**\r\n•\tComparación se hace por remitente/dominio autorizado.\r\n•\tConsolidado debe ser de 30 días hacia atrás.\r\n•\tDiferencia = Buzón ARL − (Radicación Yii + Excluidos).\r\n•\tDetalle visible solo cuando **Diferencia > 0.**\r\n",
     "visible": true
@@ -1352,11 +1352,11 @@
     "id": "GD772-81_1",
     "title": "Adición de validaciones para el diligenciamiento de la información de envío físico de calificaciones en ambiente de pruebas (test)",
     "assigned": "JESUS",
-    "state": "En Proceso",
-    "progress": 0,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": " 14/08/2025",
-    "endDate": " ",
-    "observations": " ",
+    "endDate": "15/08/2025",
+    "observations": "15/08/2025:Se implementa validaciònes en test para que no permita continuar cuando los campos de envio fìsico esten vacios. ",
     "unit": "Varbo",
     "detail": "**Requerimiento:**\nSe requiere implementar una validación para el diligenciamiento de los datos correspondientes al envío físico dentro del proceso de calificaciones, ya que, según las pruebas realizadas por el cliente, un caso fue marcado como “Envío físico” pero nunca se realizó el envío. Al validar, se evidenció que la información no quedó registrada en la tabla correspondiente.",
     "visible": true
@@ -1385,6 +1385,19 @@
     "observations": " ",
     "unit": "Varbo",
     "detail": "**Reporte**\r\n\r\nUsuaria indica que no le arroja radicado en el proceso de radicación de incapacidad ",
+    "visible": false
+},
+ {
+    "id": "MDSB-864436",
+    "title": "Optimización  informe prefactura 472",
+    "assigned": "JESUS",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": " ",
+    "endDate": " ",
+    "observations": " ",
+    "unit": "Varbo",
+    "detail": "Se estan presentando demoras en la generacion del  informe de prefactura 472 por tanto se requiere optimzar dicho informe ",
     "visible": false
 }
  ]
