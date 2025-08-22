@@ -1,0 +1,57 @@
+[
+  {
+    "id": "Interno-H-1",
+    "title": "Automatización y migración de lógica a Python",
+    "assigned": "Alejandro Cardona Ocampo",
+    "state": "En Test",
+    "progress": 95,
+    "startDate": "17/06/2025",
+    "endDate": "19/06/2025",
+    "observations": "Actividad: Migración de código en donde se importa el lote tanto física como en bases de datos. 19/06/2025 Se produjeron ciertos errores en la fase de pruebas y se realizaron todas las correcciones para que el nuevo funcionamiento responda y se acople bien",
+    "unit": "Protección"
+  },
+  {
+    "id": "REQ-1-1",
+    "title": "Tratamiento especial al radicar trámites de vejez",
+    "assigned": "Alejandro Cardona Ocampo",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "19/06/2025",
+    "endDate": "19/06/2025",
+    "observations": "Actividad: Revisión de flujo y código. 19/06/2025 Se identificó el código a intervenir y con el cual trabajar en el requerimiento",
+    "unit": "Protección"
+  },
+  {
+    "id": "Interno-H-2",
+    "title": "Automatización y migración de lógica a Python",
+    "assigned": "Alejandro Cardona Ocampo",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "20/06/2025",
+    "endDate": "24/06/2025",
+    "observations": "Actividad: Migración de código en donde se trata toda la lógica y activación de tareas de la indexación del lote. 20/06/2025: Identificación y paso del flujo para la funcionalidad de indexación de lotes de PHP a Python",
+    "unit": "Protección"
+  },
+  {
+    "id": "Interno-H-3",
+    "title": "Automatización y migración de lógica a Python",
+    "assigned": "Alejandro Cardona Ocampo",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "26/06/2025",
+    "observations": "Actividad: Acoplar lógica faltante en la migración de código",
+    "unit": "Protección"
+  },
+  {
+    "id": "REQ-1-2",
+    "title": "Tratamiento especial al radicar trámites de vejez",
+    "assigned": "Alejandro Cardona Ocampo",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "Actividad: Reunión con las partes interesadas para identificar los inputs de trabajo.",
+    "unit": "Protección"
+  }
+]

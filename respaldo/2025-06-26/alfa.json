@@ -1,0 +1,80 @@
+[
+  {
+    "id": "PRV_2025_001",
+    "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO",
+    "assigned": "Mauricio Figueroa",
+    "state": "Paso a Producción",
+    "progress": 99,
+    "startDate": "03/02/2025",
+    "endDate": "16/06/2025",
+    "observations": "Se notifica por par parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria,\n[09/06/2025] :El requerimirneo fue  pausado 12 mayo de 2025\n[10/06/2025]: Hoy se definira si se contunua con el desarrollo o continua pausado.\n[11/06/2025]: Ya se cuenta con los permisos y el query para la vista. Se sincronizan las reclamaciones de Cifren, pero falta integrar las de Plus (montadas en AWS) y ajustar la identificación del origen de cada reclamación.\nSe estima que este requerimiento adicional tomará un día de trabajo Iniciando  el 12 de Junio\n[13/06/2025]: Se obtuvo respuesta positiva sobre permisos para acceder a la vista de Plus. Sin embargo, falta que la vista tenga datos reales para completar la sincronización.\n[16/06/2025] : Se completó la primera fase de validación y hoy se trabaja en la parte de gestión de pagos, cliente  realizara pruebas hoy\n[17/06/2025]: Se realizan en ajustes en la mañana de hallasgoz reportados por el cliente tras las pruebas, y se entregaran al cliente para sus pruebas.\n[18/06/2025]: Se adaptó el grid y los reportes a\nlos distintos roles/permisos. También se incorporaron nuevos campos a solicitud del cliente; pendiente Pruebas  por el cliente.\n[19/06/2025]; supero pruebas del cliente  y se aprueba paso a produccion  para el dia sabado 21 de Junio..\n[24/06/2025]; Fala aplazó el paso a produccion para el 5 de julio, debido a que tenían actualizaciones pendientes. Además, dependemos de la disponibilidad de ciertas vistas en el ambiente de producción para continuar con el proceso.",
+    "unit": "Fala",
+    "detail": "",
+    "visible": true
+  },
+  {
+  "id": "PRV_2025_004",
+  "title": "AUXILIOS FUNERARIOS PAGO AUX. FUNERARIOS",
+  "assigned": "Mauricio Figueroa",
+  "state": "En Proceso",
+  "progress": 70,
+  "startDate": "19/06/2025",
+  "endDate": "25/06/2025",
+  "observations": "Cargue de formatos de formalización y consolidado 100%\nOpción de edición y opción de histórico del flujo 100%\nSe notifica por par parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria\n[09/06/2025] :El requerimirneo fue  pausado  el 6 de junio de 2025.\n[16/06/2025]: Se comenzarán el jueves 19 de junio. Ya se están creando las vistas necesarias para ese flujo\n[19/06/2025]: Inicio del desarrollo.\n[20/06/2025]:No se pudo avanzar ayer 19 de junio por ajustes requeridos por el cliente para PRV_2025_001 VALIDACIÓN DE LOTE PARA PAGO,NOTIFICACIÓN DE PAGO,  Se retomara  desarrollo 24 de junio.\n[24/06/2025]; Se encuentra sincronizando data, se estiman 2 dias para finalizar.\n[25/06/2025]; Se ajustó la lógica del requerimiento tras diferenciarlo claramente del flujo de pagos. Se avanzó en la creación de vistas y en la sincronización inicial de datos. Se espera tener el desarrollo listo para pruebas el jueves 26. Se planea agregar botones para sincronización (Pago,auxilio y exportar) diferenciada según permisos,crear tabla de auxilios x año, ajustar campos (encabezados)de la vista de gestion y ajustar modulo de consulta.\n[26/06/2025]: Se avanzó satisfactoriamente en la creación de la tabla de auxilios por año, el ajuste de encabezados en la vista de gestión y la incorporación de los botones de sincronización según permisos.\nPENDIENTE la solución del error en la sincronización masiva, lo cual impide avanzar con la exportación y cargue de información. También sigue sin ajustes el módulo de consulta para auxilios",
+  "unit": "Fala",
+  "detail": "**REQ No.:** NEGOCIO\n**Código:** PRV-2025-004 AUXILIO FUNERARIO\n**RESPONSABLE:** Carlos Eduardo Rodriguez Medina\n\n**OBJETIVO:**\nDesarrollar módulo de flujo de pago de Auxilios funerarios, con formalizaciones recibidas diariamente, integrada con validaciones realizadas a través de vistas generadas por Seguros de Vida Fala SA.\n\n**FLUJO DE AUXILIO FUNERARIO:**\n1. Desarrollar módulo donde intervienen las siguientes personas:\n- Radicación: Maria del Pilar Casallas\n- Validación: Elizabet Tatiana Guerrero\n- Aprobación: Sandra Patricia Arteaga\n- Pago y Cierre: Elizabet Tatiana Guerrero\n\n2. Tablas entregadas por Seguros de Vida Fala SA\n\n**APLICACIÓN DE VISTAS:**\n- TIPO SINCRONIZACION 1\n- SINCRONIZACION 2 CAMPOS\n- PLUS V_IMAGINE_SINIESTROS_PLUS NUEVO 6:00 a. m.\n- Consulta por FECHA_CREACION para siniestros creados últimamente (2 meses sin siniestro)\n\n**VISTA Fala:**\n- V_TABLA_GENERAL_CARGUE_DIARIO\n- V_TIPO_SINIESTRO_GENERAL\n- V_TIPO_SINIESTRO_PLUS\n- V_IMAGINE_SINIESTROS_PLUS\n\n**TABLAS DE APOYO:**\n- ESTADO AUXILIO\n- MOTIVO DEVOLUCIÓN\n- TIPO AUXILIO\n\n**MODULO DE CONSULTA:**\nConsulta por fechas y filtros de estado del auxilio funerario\n\n**NOTIFICACIONES AUTOMÁTICAS POR ESTADO:**\n1. Estado DEVUELTO → notifica al responsable de radicación\n2. Estado APROBADO → notifica a los de pago\n3. Estado PAGADO → confirma al responsable de cierre\n\n**ROLES INVOLUCRADOS:**\n- Radicador\n- Validador\n- Aprobador\n- Pagador\n- Coordinador Fala",
+  "visible": true
+},
+{
+    "id": "PRV_2025_009",
+    "title": "DESARROLLO PREVISIONAL INCAPACIDADES",
+    "assigned": "Mauricio Figueroa",
+    "state": "Paso a Producción",
+    "progress": 99,
+    "startDate": "09/06/2025",
+    "endDate": "12/06/2025",
+    "observations": "[09/06/2025]: El  Objetivo Automatizar el cálculo de incapacidades en el sistema Imagine, replicando el proceso manual actual utilizado por los liquidadores y presentando los resultados en un formato claro y compatible con Excel.\niniciara  con el desarrollo\n[11/06/2025]: Mauricio completó la función de cálculo y está terminando el formulario de consulta. Planea entregar el requerimiento completo hoy para subir a pruebas el jueves.\n[13/06/2025]:Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado.\n!9/06/2025: Paso a produccion para el 21 de junio.\n[24/06/2025]: Fala aplazó  el paso a produccion para el 5 de julio, debido a que tenían actualizaciones pendientes.",
+    "unit": "Fala",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_007",
+    "title": "CÁLCULO IBL",
+    "assigned": "Mauricio Figueroa",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "N/A",
+    "endDate": "",
+    "observations": "16/06/2025: Se requiere una sesión con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.",
+    "unit": "Fala",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "PRV_2025_005",
+    "title": "HISTORIA LABORAL",
+    "assigned": "Mauricio Figueroa",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "N/A",
+    "endDate": "",
+    "observations": "11/06/2025: Continuará con el desarrollo tras finalizar req PRV_2025_007 CÁLCULO IBL",
+    "unit": "Fala",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "PRV_2025_001-1",
+    "title": "VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO",
+    "assigned": "Mauricio Figueroa",
+    "state": "Paso a Producción",
+    "progress": 99,
+    "startDate": "16/06/2025",
+    "endDate": "19/06/2025",
+    "observations": "El 16 de junio se inicia desarrollo confecha estimada de finalizacion  18 de junio.\n[18/06/2025]: El 17 de junio  se desarrollan dos informes adicionales: tesorería y porvenir, con definición de estructura en curso.\n[19/06/2025]: Entrega al cliente para pruebas 19 de junio, Cliente solicita ajuste de vistas y campos  necesarios  para el proceso.\n[24/06/2025]; Fala aplazó el paso a produccion para el 5 de julio, debido a que tenían actualizaciones pendientes",
+    "unit": "Fala",
+    "detail": "",
+    "visible": true
+  }
+]

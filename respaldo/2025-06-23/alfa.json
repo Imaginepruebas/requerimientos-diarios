@@ -1,0 +1,68 @@
+[
+  {
+    "id": "PRV_2025_001",
+    "title": "REVISIÓN DE LIQUIDACIÓN PARA PAGO",
+    "assigned": "Mauricio Figueroa",
+    "state": "Paso a Producción",
+    "progress": 90,
+    "startDate": "03/02/2025",
+    "endDate": "16/06/2025",
+    "observations": "Se notifica por parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria, 09/06/2025: El requerimiento fue pausado 12 mayo de 2025. 10/06/2025: Hoy se definirá si se continúa con el desarrollo o continúa pausado. 11/06/2025: Ya se cuenta con los permisos y el query para la vista. Se sincronizan las reclamaciones de Cifren, pero falta integrar las de Plus (montadas en AWS) y ajustar la identificación del origen de cada reclamación. Se estima que este requerimiento adicional tomará un día de trabajo Iniciando el 12 de Junio. 13/06/2025: Se obtuvo respuesta positiva sobre permisos para acceder a la vista de Plus. Sin embargo, falta que la vista tenga datos reales para completar la sincronización. 16/06/2025: Se completó la primera fase de validación y hoy se trabaja en la parte de gestión de pagos, cliente realizará pruebas hoy. 17/06/2025: Se realizan en ajustes en la mañana de hallazgos reportados por el cliente tras las pruebas, y se entregarán al cliente para sus pruebas. 18/06/2025: Se adaptó el grid y los reportes a los distintos roles/permisos. También se incorporaron nuevos campos a solicitud del cliente; pendiente Pruebas por el cliente. 19/06/2025: Superó pruebas del cliente y se aprueba paso a producción para el día sábado 21 de Junio.",
+    "unit": "Fala"
+  },
+  {
+    "id": "PRV_2025_004",
+    "title": "AUXILIOS FUNERARIOS PAGO AUX. FUNERARIOS",
+    "assigned": "Mauricio Figueroa",
+    "state": "En Proceso",
+    "progress": 60,
+    "startDate": "19/06/2025",
+    "endDate": "25/06/2025",
+    "observations": "Cargue de formatos de formalización y consolidado 100%. Opción de edición y opción de histórico del flujo 100%. Se notifica por parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria. 09/06/2025: El requerimiento fue pausado el 6 de junio de 2025. 16/06/2025: Se comenzarán el jueves 19 de junio. Ya se están creando las vistas necesarias para ese flujo. 19/06/2025: Inicio del desarrollo. 20/06/2025: No se pudo avanzar ayer 19 de junio por ajustes requeridos por el cliente para PRV_2025_001 VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO, Se retomará desarrollo 24 de junio.",
+    "unit": "Fala"
+  },
+  {
+    "id": "PRV_2025_009",
+    "title": "DESARROLLO PREVISIONAL INCAPACIDADES",
+    "assigned": "Mauricio Figueroa",
+    "state": "Paso a Producción",
+    "progress": 90,
+    "startDate": "09/06/2025",
+    "endDate": "12/06/2025",
+    "observations": "09/06/2025: El Objetivo Automatizar el cálculo de incapacidades en el sistema Imagine, replicando el proceso manual actual utilizado por los liquidadores y presentando los resultados en un formato claro y compatible con Excel. Iniciará con el desarrollo. 11/06/2025: Mauricio completó la función de cálculo y está terminando el formulario de consulta. Planea entregar el requerimiento completo hoy para subir a pruebas el jueves. 13/06/2025: Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado. 19/06/2025: Paso a producción para el 21 de junio.",
+    "unit": "Fala"
+  },
+  {
+    "id": "PRV_2025_007",
+    "title": "CÁLCULO IBL",
+    "assigned": "Mauricio Figueroa",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "N/A",
+    "endDate": "",
+    "observations": "16/06/2025: Se requiere una sesión con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.",
+    "unit": "Fala"
+  },
+  {
+    "id": "PRV_2025_005",
+    "title": "HISTORIA LABORAL",
+    "assigned": "Mauricio Figueroa",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "N/A",
+    "endDate": "",
+    "observations": "11/06/2025: Continuará con el desarrollo tras finalizar req PRV_2025_007 CÁLCULO IBL",
+    "unit": "Fala"
+  },
+  {
+    "id": "PRV_2025_001-2",
+    "title": "VALIDACIÓN DE LOTE PARA PAGO, NOTIFICACIÓN DE PAGO",
+    "assigned": "Mauricio Figueroa",
+    "state": "Pruebas Fala",
+    "progress": 60,
+    "startDate": "16/06/2025",
+    "endDate": "19/06/2025",
+    "observations": "El 16 de junio se inicia desarrollo con fecha estimada de finalización 18 de junio. 18/06/2025: El 17 de junio se desarrollan dos informes adicionales: tesorería y porvenir, con definición de estructura en curso. 19/06/2025: Entrega al cliente para pruebas 19 de junio, Cliente solicita ajuste de vistas y campos necesarios para el proceso.",
+    "unit": "Fala"
+  }
+]

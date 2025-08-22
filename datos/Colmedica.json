@@ -1,0 +1,54 @@
+[
+  {
+    "id": "309",
+    "title": "Cuentas Medicas UMD - Lectura OCR - Datos Digitación",
+    "assigned": "JHON",
+    "state": "En Proceso",
+    "progress": 15,
+    "startDate": "03/07/2025",
+    "endDate": " ",
+    "observations": "[27/06/2025]: Nuevo – Imagine.\n[03/07/2025]: Se recupera información para cuentas de cobro",
+    "unit": "Cacol",
+    "detail": "De la Lectura de Texto u OCR tomar información para el proceso de captura de información y validación de los documentos Facturas - Cuentas de Cobrro, y Captura de PILA, una vez tipificadas, tomar la información necesaria para el proceso de digitación.\r\nSegún preguntas para validar para traer información, o marca para saber que si cumple\r\nFactura - Fecha radicación - fecha expedición\r\n\r\n▪ \"CUENTA CON NIT Y RAZON SOCIAL CORRECTA DE UMD\" ( 830001007 - UNIDAD MEDICA Y DE DIAGNOSTICO S.A)\r\n▪ \"CUENTA CON FECHA DE EXPEDICIÓN\"\r\n▪ \"PRESTADOR RADICA DOCUMENTO FACTURA DE VENTA\"\r\n▪ \"LA FACTURA DE VENTA PRESENTA RESOLUCION DIAN VIGENTE\"\r\n▪ \"ID Y NOMBBRE PRESTADOR COINCIDE CON FIRMA DE LA CUENTA\"\r\n▪ \"CUENTA CON FIRMA\"\r\n▪ \"CUENTA CON DETALLE BIEN TOTALIZADO\"\r\n▪ \"VALOR DE LETRAS COINCIDE CON VALOR TOTAL EN NUMEROS DE CUENTA\"\r\n\r\nPila para la captura de la información necesaria\r\nNro Planilla\r\nIBC\r\nFecha de pago - (20250609)\r\nPeriodo - (202506)\r\nEPS – Valor\r\nFondo Pensiones – Valor\r\nArl – Valor\r\nCaja de Compensación – Valor\r\n",
+    "visible": true
+  },
+  {
+    "id": "310",
+    "title": "Afiliaciones PRE - Validación Cancelaciones Apolo (Lectura TXT)",
+    "assigned": "JHON",
+    "state": "En Test",
+    "progress": 80,
+    "startDate": "01/07/2025",
+    "endDate": "03/07/2025",
+    "observations": "[27/06/2025]: Nuevo - Imagine/Cliente\n[01/07/2025]: Se Inicia el desarrollo\n[03/07/2025]: se termina el desarrollo.\n[11/07/2025]: se dispone en el servidor de pruebas para ser revisado por Jennifer.",
+    "unit": "Cacol",
+    "detail": "Como debe quedar como tarea programada el sistema debe tomar la información de la ruta \\imagine\\CarguesPRE\\Reporte_Cancelacion_Exclusion.txt y una vez se tome el archivo y se almacene la información en la tabla renombrarlo.Reporte_Cancelacion_Exclusion_yyyymmdd_HH_ss.txt y moverlo a la carpeta del año actual \\imagine\\CarguesPRE\\añoactual\r\nSe debe crear tabla para almacenar la información del archivo txt\r\nejemplos \\imagine\\CarguesPRE\r\nReporte_Cancelacion_Exclusion20250601_20250615.txt\r\nReporte_Cancelacion_Exclusion20250501_20250531.txt\r\nSolo almacenar en la tabla los registros que Usuario sean estos MRUBIANO, ALICETHR, WilliamB y que la Causal no sea esta (SIN CERTIFICACION EPS)\r\nLa estructura de la tabla es la información del archivo y adicionar estos campos que se modificaran de acuerdo a la revisión realizada, fechainsert defecto, estado defecto 0, solicitud texto defecto 0, usuariogestion, fechahoragestion, observacion\r\nEstado\r\n0 pendiente\r\n1 cargada\r\n2 validada\r\n\r\n1. proceso tarea programada que tome el archivo de una ruta para insertar en la tabla y luego hacer el barrido de lo que esté en la tabla estado 0 solicitud 0 con la siguiente consulta\r\nselect f01 from bkencpre as p, bkdetpre as d where p.sr = d.sr and f28 = 43559206 and d.fechainsert=20250502 group by f01 (variables del query son estos campos Numero de Id,Fecha de ejecucion).\r\nsi encuentra solicitudes guardar los números del f01 en la tabla separados por (,) en el campo nuevo solicitud, dejar el estado en 1, usuariogestion = Sistema\r\n",
+    "visible": true
+  },
+  {
+    "id": "306",
+    "title": "Lectura XML PBS - Afiliaciones POS",
+    "assigned": "JENNIFER",
+    "state": "Pausado", 
+    "progress": 10,
+    "startDate": "01/07/2025",
+    "endDate": "03/07/2025",
+    "observations": "[27/05/2025]: Nuevo Cliente\n[18/06/2025]: Entregan un nuevo ejemplo del XML.\n[22/06/2025]: Revisión y Punteo de información del XML, frente a Formulario, para confirmar que se estuviera recibiendo la información y cómo se iba a recibir\n[24/06/2025]:Reunión con el cliente para contextualización de la revisión del XML\n[27/06/2025]: Entregan tablas paramétricas que se usan para unificar conceptos, e Imagine queda a la espera de un nuevo ejemplo y definición final de cómo llegaría el XML",
+    "unit": "Cacol",
+    "detail": "La información de las afiliaciones de PBS ahora se recibirá en XML, desarrollar la opción para interpretar el XML y posterior ajuste a la plataforma, para relacionarla con las tabla actuales del proceso.",
+    "visible": true
+  },
+  {
+    "id": "304",
+    "title": "verificacion cuentas contables - Cuentas Medicas UMD (valor cuentas contables)",
+    "assigned": "JHON",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "27/05/2025",
+    "endDate": "28/05/2025",
+    "observations": "[27/05/2025]: Ajuste - Mejora Cliente.\n[28/05/2025]: Se realiza ajuste para mostrar los valores de las cuentas contables de digitación.",
+    "unit": "Cacol",
+    "detail": "Mostrar en la pantalla de información de la cuentas, los valores capturados y agrupados según cuenta contable",
+    "visible": true
+  }
+]
