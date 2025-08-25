@@ -390,22 +390,23 @@
 
     // Mapeo de estados a colores
     const stateColors = {
-      "En Proceso": '#1f77b4',
-      "Paso a Producción": '#7f7f7f',
-      "Entrenamiento": '#2ca02c',
-      "Pruebas Imagine": '#ff7f0e',
-      "En Test": '#d62728',
-      "Pruebas Varbo": '#9467bd',
-      "Pendiente": '#8c564b',
-      "Pendiente Varbo": '#e377c2',
-      "Pausado": '#bcbd22',
-      "Detenido Varbo": '#17becf',
-      "Estimar": '#ff9896',
-      "Finalizado": '#ffbb78',
-      "Pruebas Fala": '#c5b0d5',
-      "Pruebas Cacol": '#D48D26',
-      "Pruebas Cionpro":'#B160BE',
-    };
+  "en proceso": "#1f77b4",        // Azul fuerte
+  "paso a produccion": "#ff7f0e", // Naranja
+  "entrenamiento": "#2ca02c",     // Verde
+  "en test": "#d62728",           // Rojo
+  "pendiente": "#bcbd22",         // Verde lima
+  "pendiente varbo": "#e377c2",   // Fucsia
+  "pausado": "#17becf",           // Turquesa
+  "detenido varbo": "#8c564b",    // Marrón
+  "finalizado": "#2ca58d",        // Verde azulado
+  "pruebas imagine": "#9467bd",   // Morado
+  "pruebas varbo": "#ff9896",     // Rosa claro
+  "pruebas fala": "#c49c94",      // Beige rosado
+  "pruebas cacol": "#f7b6d2",     // Rosa pastel
+  "pruebas cionpro": "#7f7f7f",   // Gris
+  "pruebas bolivar": "#aec7e8"    // Azul claro
+};
+
 
     // Función para parsear fechas
     function parseDate(dateStr) {
@@ -629,7 +630,8 @@
         type: 'pie',
         hole: .4,
         marker: {
-          colors: Object.keys(stateCounts).map(state => stateColors[state] || '#6c757d')
+          colors: Object.keys(stateCounts).map(state =>   stateColors[state.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim()
+  ] || '#6c757d')
         },
         hoverinfo: 'label+percent',
         textinfo: 'percent',
