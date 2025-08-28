@@ -367,7 +367,8 @@
       'datos/bolivar.json',
       'datos/proteccion.json',
       'datos/alfa.json',
-      'datos/Colmedica.json'
+      'datos/Colmedica.json',
+      'datos/Tuya.json'
     ];
     console.log("Cargando archivos JSON:", archivos);
     Promise.all(archivos.map(url => fetch(url).then(r => {
@@ -404,7 +405,7 @@
   "pruebas fala": "#c49c94",      // Beige rosado
   "pruebas cacol": "#f7b6d2",     // Rosa pastel
   "pruebas cionpro": "#7f7f7f",   // Gris
-  "pruebas bolivar": "#aec7e8"    // Azul claro
+  "pruebas Yuta": "#aec7e8"    // Azul claro
 };
 
 
@@ -479,7 +480,7 @@
       const resumenContent = document.getElementById('resumenContent');
       const totalTasks = filteredTasks.length;
       const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
-      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pendiente Varbo", "Pruebas Cionpro", "Pruebas Fala", "Pruebas Cacol"].includes(t.state)).length;
+      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pendiente Varbo", "Pruebas Cionpro", "Pruebas Fala", "Pruebas Cacol", "Pruebas Yuta"].includes(t.state)).length;
       const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
       const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
       resumenContent.innerHTML = `
