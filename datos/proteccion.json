@@ -362,5 +362,18 @@
     "unit": "Cionpro",
     "detail": "SOLICITUD MEJORAS IMAGINE PORCESO AUXILIOS FUNERARIOS\n",
     "visible": true
+  },
+  {
+    "id": "Interno-H9",
+    "title": "Creación de un sistema distribuido registro - puerta de enlace - aplicacion, todo dockerizado que sirva como estructura base a las aplicaciones por venir y la que se esta trabajando actualmente de sistema de agentes inteligentes",
+    "assigned": "Alejandro",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "27/08/2025",
+    "endDate": "",
+    "observations": "",
+    "unit": "Cionpro",
+    "detail": "",
+    "visible": true
   }
 ]

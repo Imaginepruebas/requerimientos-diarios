@@ -62,7 +62,7 @@
     "observations": "[21/05/2025] Ajuste - Mejora Imagine\n[29/08/2025] Se realiza ajsutes en paginas para que el usuario se envie de manera correcta ",
     "unit": "Cacol",
     "detail": "Revisar que todas las opciones de registro y almacenamientos queden con el usuario de sesión",
-    "visible": false
+    "visible": true
   },
   {
     "id": "294",
@@ -251,10 +251,10 @@
     "title": "Acreditación - Generacion Bases Vigencias",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 85,
+    "progress": 90,
     "startDate": "22/08/2025",
-    "endDate": "",
-    "observations": "[22/08/2025] Se inicia el desarrollo para generar las bases, ya no se crearan tablas individuales, sino se almacenara directamente en la tabla destino. validación de la estrucutura de tablas para ajustar los insert into.\n[25/08/2025] adicionando las validaciones que hacia el sistema al simular el cargue de los archivos de vigencia, para actualizar algunos usuarios que se pueden acreditar por el cruce con la base de Apolo",
+    "endDate": "26/08/2025",
+    "observations": "[22/08/2025] Se inicia el desarrollo para generar las bases, ya no se crearan tablas individuales, sino se almacenara directamente en la tabla destino. validación de la estrucutura de tablas para ajustar los insert into.\n[25/08/2025] adicionando las validaciones que hacia el sistema al simular el cargue de los archivos de vigencia, para actualizar algunos usuarios que se pueden acreditar por el cruce con la base de Apolo\n[26/08/2025] se publica en pruebas para revisar el proceso",
     "unit": "Cacol",
     "detail": "Permitir que el cargue de la vigencia no dependa de que la persona suba unos archivos para que la información quede publicada para empezar a trabajar, sino que por tarea automática el sistema haga la creación y la deje disponible para la revisión, los días 10 y 25 de cada mes",
     "visible": true
@@ -271,5 +271,18 @@
     "unit": "Cacol",
     "detail": "",
     "visible": false
+  },
+  {
+    "id": "OPT_7",
+    "title": "Afiliaciones POS - Estados de Salud (Muestra Militar)",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 15,
+    "startDate": "28/08/2025",
+    "endDate": "",
+    "observations": "[28/08/2025] Se inicia con el desarrollo, se cerea opción en menu Imagine para crear la bandeja de trabajo - Muestra Militar Estados de SAlud",
+    "unit": "Cacol",
+    "detail": "Ya con los estados de salud capturados, 1. Crear tarea programada para identificar las solicitudes a diario de la muestra militar del del 15%.de lo validado en el día por el proceso automático.\n2. Se debe crear una opción como bandeja de trabajo donde se liste la muestra militar  , para que una persona realice a revisión control de calidad",
+    "visible": true
   }
 ]

@@ -270,7 +270,7 @@
     "observations": "[27/08/2025]: El 26 de agosto se trabajo en el desarrollo del informe general de pagos y auxilios funerarios.",
     "unit": "Fala",
     "detail": "Generar un informe con el detalle de mostrar consulta y la trazabilidad de los casos de los procesos entregados a producciòn en semanas anteriores.",
-    "visible": false
+    "visible": true
   },
   {
     "id": "Img_2025_002",
@@ -449,10 +449,10 @@
     "progress": 100,
     "startDate": "26/08/2025",
     "endDate": "28/08/2025",
-    "observations": "[29/08/2025]: [25/08/2025]: Se solucionaron errores en el módulo de profesionales y se realizaron correcciones funcionales.",
+    "observations": "[29/08/2025]: [25/08/2025]: Se solucionaron errores en el módulo de profesionales y se realizaron correcciones funcionales en ambiente Imagine.",
     "unit": "Fala",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "PRV_2025_013",
@@ -479,6 +479,32 @@
     "unit": "Fala",
     "detail": "",
     "visible": false
+  },
+  {
+    "id": "SST_2025_009",
+    "title": "Ajuste modulo profesionales",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 70,
+    "startDate": "01/09/2025",
+    "endDate": "",
+    "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el clinte tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.",
+    "unit": "Fala",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_015",
+    "title": "Creaciòn Vistas en DLL Alfa",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "29/08/2025",
+    "endDate": "",
+    "observations": "[01/09/2025]: El 29 de agosto a Mauricio se le entregaron credenciales por parte de infraestructura Alfa para permisos y creación de vistas en Desarrollo Sipren Plus, sin embargo, permitió coneción preo no la creación de las vistas.",
+    "unit": "Fala",
+    "detail": "Creaciòn de vistas en ambiente DLL Alfa para desarrollo de requerimientos previsionales",
+    "visible": true
   },
   {
     "id": "PRV_2025_004-8",
