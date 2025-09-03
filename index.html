@@ -314,7 +314,7 @@
         <h2>Recomendaciones</h2>
       </div>
       <div class="card-body">
-        <p>Se recomienda priorizar las tareas en estado 'Pendiente' y revisar la efectividad de los procesos de entrenamiento de IA. Preste atención a las tareas con fecha de fin próxima o vencida para evitar retrasos.</p>
+        <p>Se recomienda priorizar las tareas en estado 'Pendiente' y revisar la efectividad de los procesos de Entrenamiento de IA. Preste atención a las tareas con fecha de fin próxima o vencida para evitar retrasos.</p>
       </div>
     </div>
 
@@ -393,7 +393,7 @@
     const stateColors = {
   "en proceso": "#1f77b4",        // Azul fuerte
   "paso a produccion": "#ff7f0e", // Naranja
-  "entrenamiento": "#2ca02c",     // Verde
+  "Entrenamiento": "#2ca02c",     // Verde
   "en test": "#d62728",           // Rojo
   "pendiente": "#bcbd22",         // Verde lima
   "pendiente varbo": "#e377c2",   // Fucsia
@@ -401,11 +401,8 @@
   "detenido varbo": "#8c564b",    // Marrón
   "finalizado": "#2ca58d",        // Verde azulado
   "pruebas imagine": "#9467bd",   // Morado
-  "pruebas varbo": "#ff9896",     // Rosa claro
-  "pruebas fala": "#c49c94",      // Beige rosado
+  "Pruebas Cliente": "#ff9896",     // Rosa claro
   "pruebas cacol": "#f7b6d2",     // Rosa pastel
-  "pruebas cionpro": "#7f7f7f",   // Gris
-  "pruebas Yuta": "#aec7e8"    // Azul claro
 };
 
 
@@ -480,7 +477,7 @@
       const resumenContent = document.getElementById('resumenContent');
       const totalTasks = filteredTasks.length;
       const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
-      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Varbo", "Pendiente Varbo", "Pruebas Cionpro", "Pruebas Fala", "Pruebas Cacol", "Pruebas Yuta"].includes(t.state)).length;
+      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Varbo", "Pruebas Cliente",].includes(t.state)).length;
       const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
       const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
       resumenContent.innerHTML = `
@@ -604,134 +601,201 @@
       estadisticasContent.innerHTML = statesHtml + assignedHtml;
     }
 
+    // Normaliza estados: quita acentos, pone minúsculas, colapsa espacios
+function normalizarEstado(estado) {
+  return (estado ?? '')
+    .normalize('NFD')                       // separa letras y acentos
+    .replace(/[\u0300-\u036f]/g, '')        // quita los acentos
+    .toLowerCase()                          // pasa todo a minúsculas
+    .replace(/\s+/g, ' ')                   // colapsa espacios múltiples
+    .trim();                                // elimina espacios iniciales/finales
+}
+
     // Gráficos
-    function plotPieChart(filteredTasks = tasks) {
-      filteredTasks = filteredTasks.filter(task => {
-        if (task.visible === false) return false;
-        if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
-        return true;
-      });
-      document.getElementById('loadingPie').style.display = 'block';
-      const pieChartDiv = document.getElementById('pie-chart');
-      pieChartDiv.style.display = 'none';
-      if (filteredTasks.length === 0) {
-        Plotly.newPlot(pieChartDiv, [], {}, { displayModeBar: false });
-        pieChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de distribución.</p>';
-        document.getElementById('loadingPie').style.display = 'none';
-        pieChartDiv.style.display = 'block';
-        return;
-      }
-      const stateCounts = {};
-      filteredTasks.forEach(task => {
-        stateCounts[task.state] = (stateCounts[task.state] || 0) + 1;
-      });
-      const data = [{
-        labels: Object.keys(stateCounts),
-        values: Object.values(stateCounts),
-        type: 'pie',
-        hole: .4,
-        marker: {
-          colors: Object.keys(stateCounts).map(state =>   stateColors[state.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim()
-  ] || '#6c757d')
-        },
-        hoverinfo: 'label+percent',
-        textinfo: 'percent',
-        textposition: 'outside',
-        insidetextfont: { color: '#ffffff' }
-      }];
-      const layout = {
-        title: 'Distribución de Tareas por Estado',
-        height: 500,
-        showlegend: true,
-        legend: { "orientation": "h", "xanchor": "center", "x": 0.5, "y": -0.1 },
-        margin: { "t": 80, "b": 50, "l": 50, "r": 50 },
-      };
-      Plotly.newPlot(pieChartDiv, data, layout, { responsive: true, displayModeBar: false });
-      document.getElementById('loadingPie').style.display = 'none';
-      pieChartDiv.style.display = 'block';
-    }
 
-    function plotBarChart(filteredTasks = tasks) {
-      filteredTasks = filteredTasks.filter(task => {
-        if (task.visible === false) return false;
-        if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
-        return true;
-      });
-      document.getElementById('loadingBar').style.display = 'block';
-      const barChartDiv = document.getElementById('bar-chart');
-      barChartDiv.style.display = 'none';
-      if (filteredTasks.length === 0) {
-        Plotly.newPlot(barChartDiv, [], {}, { displayModeBar: false });
-        barChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de avance.</p>';
-        document.getElementById('loadingBar').style.display = 'none';
-        barChartDiv.style.display = 'block';
-        return;
-      }
-      const inProgressTasks = filteredTasks.filter(t => t.state.toLowerCase() === 'en proceso');
-      const ids = inProgressTasks.map(task => task.id);
-      const progresses = inProgressTasks.map(task => task.progress);
-      const titles = inProgressTasks.map(task => task.title);
-      const data = [{
-        x: ids,
-        y: progresses,
-        type: 'bar',
-        name: 'Avance',
-        marker: { color: '#1f77b4' },
-        hoverinfo: 'text',
-        text: titles.map((title, i) => `<b>ID:</b> ${ids[i]}<br><b>Título:</b> ${title}<br><b>Avance:</b> ${progresses[i]}%`),
-      }];
-      const layout = {
-        title: 'Avance de Tareas "En Proceso"',
-        xaxis: { title: 'ID de Tarea', tickangle: -45, automargin: true },
-        yaxis: { title: '% Avance', range: [0, 100] },
-        height: 500,
-        margin: { "t": 80, "b": 150, "l": 50, "r": 50 },
-        hovermode: 'closest'
-      };
-      Plotly.newPlot(barChartDiv, data, layout, { responsive: true, displayModeBar: false });
-      document.getElementById('loadingBar').style.display = 'none';
-      barChartDiv.style.display = 'block';
-    }
+// Gráfico de distribución de estados
+function plotPieChart(filteredTasks = tasks) {
+  const pieDiv = document.getElementById('pie-chart');
+  document.getElementById('loadingPie').style.display = 'block';
+  pieDiv.style.display = 'none';
 
-    function plotAssignmentsChart(filteredTasks = tasks) {
-      filteredTasks = filteredTasks.filter(task => {
-        if (task.visible === false) return false;
-        if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
-        return true;
-      });
-      document.getElementById('loadingAssignments').style.display = 'block';
-      const assignmentsChartDiv = document.getElementById('assignments-chart');
-      assignmentsChartDiv.style.display = 'none';
-      if (filteredTasks.length === 0) {
-        Plotly.newPlot(assignmentsChartDiv, [], {}, { displayModeBar: false });
-        assignmentsChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de asignaciones.</p>';
-        document.getElementById('loadingAssignments').style.display = 'none';
-        assignmentsChartDiv.style.display = 'block';
-        return;
-      }
-      const assignedCounts = filteredTasks.reduce((acc, task) => {
-        const assignedName = task.assigned ? task.assigned.split(' ').map(namePart => namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase()).join(' ') : 'Sin Asignar';
-        acc[assignedName] = (acc[assignedName] || 0) + 1;
-        return acc;
-      }, {});
-      const data = [{
-        x: Object.keys(assignedCounts),
-        y: Object.values(assignedCounts),
-        type: 'bar',
-        name: 'Número de Tareas Asignadas',
-        marker: { color: '#2ca02c' }
-      }];
-      const layout = {
-        title: 'Número de Tareas por Persona Asignada',
-        xaxis: { title: 'Persona Asignada', tickangle: -45, automargin: true },
-        yaxis: { title: 'Número de Tareas' },
-        height: 500,
-        margin: { "t": 80, "b": 150, "l": 50, "r": 50 }
-      };
-      Plotly.newPlot(assignmentsChartDiv, data, layout, { responsive: true, displayModeBar: false });
-      document.getElementById('loadingAssignments').style.display = 'none';
-      assignmentsChartDiv.style.display = 'block';
-    }
+  if (filteredTasks.length === 0) {
+    Plotly.newPlot(pieDiv, [], {}, { displayModeBar: false });
+    pieDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de estados.</p>';
+    document.getElementById('loadingPie').style.display = 'none';
+    pieDiv.style.display = 'block';
+    return;
+  }
+
+  const stateCounts = filteredTasks.reduce((acc, task) => {
+    acc[task.state] = (acc[task.state] || 0) + 1;
+    return acc;
+  }, {});
+
+  const data = [{
+    labels: Object.keys(stateCounts),
+    values: Object.values(stateCounts),
+    type: 'pie',
+    textinfo: 'label+percent',
+    insidetextorientation: 'radial'
+  }];
+
+  const layout = {
+    title: 'Distribución de Estados',
+    height: 500,
+    margin: { t: 80, b: 50, l: 50, r: 50 }
+  };
+
+  Plotly.newPlot(pieDiv, data, layout, { responsive: true, displayModeBar: false });
+  document.getElementById('loadingPie').style.display = 'none';
+  pieDiv.style.display = 'block';
+}
+
+// Gráfico de avance de tareas
+function plotBarChart(filteredTasks = tasks) {
+  filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+    return true;
+  });
+
+  document.getElementById('loadingBar').style.display = 'block';
+  const barChartDiv = document.getElementById('bar-chart');
+  barChartDiv.style.display = 'none';
+
+  if (filteredTasks.length === 0) {
+    Plotly.newPlot(barChartDiv, [], {}, { displayModeBar: false });
+    barChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de avance.</p>';
+    document.getElementById('loadingBar').style.display = 'none';
+    barChartDiv.style.display = 'block';
+    return;
+  }
+
+  const estadosEnCurso = [
+    "En Proceso",
+    "Entrenamiento",
+    "Pruebas Imagine",
+    "Paso a Producción",
+    "En Test",
+    "Pruebas Cliente"
+  ];
+  console.log("DEBUG estadosEnCurso normalizados:", estadosEnCurso.map(e => normalizarEstado(e)));
+filteredTasks.forEach(t => {
+  console.log(
+    `Task ID ${t.id} => state original: "${t.state}", normalizado: "${normalizarEstado(t.state)}", progress: ${t.progress}`
+  );
+
+});
+
+  const inProgressTasks = filteredTasks.filter(task =>
+    estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(task.state)) &&
+    Number(task.progress) > 0
+  );
+console.log("DEBUG inProgressTasks (los que van al gráfico):", inProgressTasks);
+  if (inProgressTasks.length === 0) {
+    Plotly.newPlot(barChartDiv, [], {}, { displayModeBar: false });
+    barChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-info-circle me-2"></i>No hay tareas en curso con avance mayor a 0%.</p>';
+    document.getElementById('loadingBar').style.display = 'none';
+    barChartDiv.style.display = 'block';
+    return;
+  }
+
+  const ids       = inProgressTasks.map(t => t.id);
+  const progresses= inProgressTasks.map(t => Number(t.progress));
+  const titles    = inProgressTasks.map(t => t.title);
+  const states    = inProgressTasks.map(t => t.state);
+  const estadosPresentes = [...new Set(states)];
+
+  const data = [{
+  x: inProgressTasks.map(t => t.id),
+  y: progresses,
+  type: 'bar',
+  name: 'Avance',
+  marker: { color: '#1f77b4' },
+  hoverinfo: 'text',
+  text: inProgressTasks.map((t, i) =>
+    `<b>ID:</b> ${t.id}<br><b>Título:</b> ${t.title}<br><b>Estado:</b> ${t.state}<br><b>Avance:</b> ${progresses[i]}%`
+  ),
+}];
+
+  const layout = {
+    title: `Avance de Tareas<br><sub>Mostrando: ${estadosPresentes.join(', ')}</sub>`,
+    xaxis: { title: 'ID de Tarea', tickangle: -45, automargin: true },
+    yaxis: { title: '% Avance', range: [0, 100] },
+    height: 500,
+    margin: { t: 90, b: 150, l: 50, r: 50 },
+    hovermode: 'closest'
+  };
+
+  Plotly.newPlot(barChartDiv, data, layout, { responsive: true, displayModeBar: false });
+  document.getElementById('loadingBar').style.display = 'none';
+  barChartDiv.style.display = 'block';
+}
+
+// Gráfico de tareas por persona asignada
+function plotAssignmentsChart(filteredTasks = tasks) {
+  filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+
+    const estadosEnCurso = [
+      "En Proceso",
+      "Entrenamiento",
+      "Pruebas Imagine",
+      "Paso a Producción",
+      "En Test",
+      "Pruebas Cliente"
+    ];
+
+return estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(task.state))
+
+  });
+
+  document.getElementById('loadingAssignments').style.display = 'block';
+  const assignmentsChartDiv = document.getElementById('assignments-chart');
+  assignmentsChartDiv.style.display = 'none';
+
+  if (filteredTasks.length === 0) {
+    Plotly.newPlot(assignmentsChartDiv, [], {}, { displayModeBar: false });
+    assignmentsChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de asignaciones.</p>';
+    document.getElementById('loadingAssignments').style.display = 'none';
+    assignmentsChartDiv.style.display = 'block';
+    return;
+  }
+
+  const assignedCounts = filteredTasks.reduce((acc, task) => {
+    const assignedName = task.assigned
+      ? task.assigned.split(' ')
+          .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+          .join(' ')
+      : 'Sin Asignar';
+    acc[assignedName] = (acc[assignedName] || 0) + 1;
+    return acc;
+  }, {});
+
+  const data = [{
+    x: Object.keys(assignedCounts),
+    y: Object.values(assignedCounts),
+    type: 'bar',
+    name: 'Número de Tareas Asignadas',
+    marker: { color: '#2ca02c' }
+  }];
+
+  const layout = {
+    title: 'Número de Tareas por Persona Asignada',
+    xaxis: { title: 'Persona Asignada', tickangle: -45, automargin: true },
+    yaxis: { title: 'Número de Tareas' },
+    height: 500,
+    margin: { t: 80, b: 150, l: 50, r: 50 }
+  };
+
+  Plotly.newPlot(assignmentsChartDiv, data, layout, { responsive: true, displayModeBar: false });
+  document.getElementById('loadingAssignments').style.display = 'none';
+  assignmentsChartDiv.style.display = 'block';
+}
+
+
+
 
     // Lógica de Filtrado
     function applyFilters() {
