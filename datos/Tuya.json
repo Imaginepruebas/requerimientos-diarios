@@ -390,17 +390,17 @@
     "visible": true
   },
   {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
+    "id": "281",
+    "title": "Solicitud soportes y bases de morosos a corte 31 agosto",
+    "assigned": "Faver",
+    "state": "Pendiente",
     "progress": 0,
-    "startDate": "",
+    "startDate": "04/09/2025",
     "endDate": "",
     "observations": "",
     "unit": "Yuta",
-    "detail": "",
-    "visible": false
+    "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
+    "visible": true
   },
   {
     "id": "",

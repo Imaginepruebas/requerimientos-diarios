@@ -42,7 +42,7 @@
     "id": "306",
     "title": "Lectura XML PBS - Afiliaciones POS",
     "assigned": "JHON",
-    "state": "Pruebas Imagine",
+    "state": "Pruebas Cliente",
     "progress": 99,
     "startDate": "08/08/2025",
     "endDate": "12/08/2025",
@@ -277,12 +277,25 @@
     "title": "Afiliaciones POS - PRE - Estados de Salud (Muestra Militar)",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 25,
+    "progress": 65,
     "startDate": "28/08/2025",
     "endDate": "",
-    "observations": "[28/08/2025] Se inicia con el desarrollo, pagina con la que se debe sacar la muestra militar del 20% y dejar en una tabla marcadas para revisar\n[1/09/2025] pagina de tarea programada terminada, para sacar la muestra e insertar en tabla destino\n[2/09/2025] se genera documentacion tecnica, y se inicia con el desarrollo de la bandeja de trabajo para revisar las solicitudes de la muestra",
+    "observations": "[28/08/2025] Se inicia con el desarrollo, pagina con la que se debe sacar la muestra militar del 20% y dejar en una tabla marcadas para revisar\n[1/09/2025] pagina de tarea programada terminada, para sacar la muestra e insertar en tabla destino\n[2/09/2025] se genera documentacion tecnica, y se inicia con el desarrollo de la bandeja de trabajo para revisar las solicitudes de la muestra\n[3/09/2025] Se adelantó la bandeja de trabajo, ya se listan las solicitudes de la muestra, mostrando la información para realizar la validación.",
     "unit": "Cacol",
     "detail": "Ya con los estados de salud capturados, 1. Crear tarea programada para identificar las solicitudes a diario de la muestra militar del del 15%.de lo validado en el día por el proceso automático.\n2. Se debe crear una opción como bandeja de trabajo donde se liste la muestra militar  , para que una persona realice a revisión control de calidad",
+    "visible": true
+  },
+  {
+    "id": "OPT_8",
+    "title": "Lectura Emails UMD",
+    "assigned": "JHON",
+    "state": "En Proceso",
+    "progress": 60,
+    "startDate": "29/08/2025",
+    "endDate": "",
+    "observations": "[29/08/2025] Se incia desarrollo, paso de funcinalidades de php a python\n[01/08/2025] Creación de servicio para lectura de correo\n[02/08/2025] Consulta a base de datos para recuperar prestador\n[03/08/2025] Creación completa del servicio REST para guardar las imagnes y la data",
+    "unit": "Cacol",
+    "detail": "Se requiere realizar una lectura automática de correos para la recuperación de la información y de los anexos para consiguiente guardar la información en base de datos y los anexos sen una ruta determinada",
     "visible": true
   }
 ]
