@@ -485,10 +485,10 @@
     "title": "Ajuste modulo profesionales",
     "assigned": "MAURICIO",
     "state": "Pruebas Imagine",
-    "progress": 90,
+    "progress": 93,
     "startDate": "01/09/2025",
     "endDate": "02/09/2025",
-    "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el clinte tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.\n[03/09/2025]: El 02 de septiembre queda solucionada la incidencia y queda pendiente realizar pruebas internas antes de entregar a Nohora Carolina de SST para pruebas del área.\n[05/09/2025]: El 04 de septiembre se iniciaron pruebas internas, sin embargo, no fue posible culminarlas debido a una incidenciapresentada con el plan de trabajo en el ambiente QA. ",
+    "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el clinte tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.\n[03/09/2025]: El 02 de septiembre queda solucionada la incidencia y queda pendiente realizar pruebas internas antes de entregar a Nohora Carolina de SST para pruebas del área.\n[05/09/2025]: El 04 de septiembre se iniciaron pruebas internas, sin embargo, no fue posible culminarlas debido a una incidenciapresentada con el plan de trabajo en el ambiente QA. \n[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en el cronograma en ambiente de pruebas, ya se libero presupuesto pero se esta validando porque no carga actividades y programas.",
     "unit": "Fala",
     "detail": "",
     "visible": true
@@ -541,6 +541,19 @@
     "startDate": "03/09/2025",
     "endDate": "",
     "observations": "[04/09/2025]: El 03 de septiembre Mauricio trabaja en realizar ajustes en consultas y procesos de automatización. Continúa pendiente la optimización de querys para mejorar el rendimiento general.\n",
+    "unit": "Fala",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "SST_2025_010",
+    "title": "Conexiones con Ministerio -SAT Independientes",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 60,
+    "startDate": "05/09/2025",
+    "endDate": "",
+    "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.",
     "unit": "Fala",
     "detail": "",
     "visible": true
