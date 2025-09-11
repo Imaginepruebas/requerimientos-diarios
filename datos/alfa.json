@@ -550,10 +550,10 @@
     "title": "Conexiones con Ministerio -SAT Independientes",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 60,
+    "progress": 90,
     "startDate": "05/09/2025",
     "endDate": "",
-    "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.",
+    "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.\n[10/09/2025]: Durante los días 08 y 09 de septiembre, Mauricio ha trabajado en las conexiones SAT del Ministerio para el requerimiento de independientes.",
     "unit": "Fala",
     "detail": "",
     "visible": true
