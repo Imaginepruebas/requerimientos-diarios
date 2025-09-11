@@ -388,5 +388,31 @@
     "unit": "Cionpro",
     "detail": "",
     "visible": true
+  },
+  {
+    "id": "Interno-H10",
+    "title": "Generación de ambiente local a través de lo generado en el ambiente de pruebas, para facilitar la construcción de otros servicios",
+    "assigned": "Alejandro",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "08/09/2025",
+    "endDate": "08/09/2025",
+    "observations": "",
+    "unit": "Cionpro",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "Interno-H11",
+    "title": "Generación de servicio para el tratamiento de datos usando agentes",
+    "assigned": "Alejandro",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "09/09/2025",
+    "endDate": "",
+    "observations": "",
+    "unit": "Cionpro",
+    "detail": "",
+    "visible": true
   }
 ]
