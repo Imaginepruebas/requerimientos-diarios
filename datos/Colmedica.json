@@ -289,11 +289,11 @@
     "id": "OPT_8",
     "title": "Lectura Emails UMD",
     "assigned": "JHON",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 60,
     "startDate": "29/08/2025",
     "endDate": "",
-    "observations": "[29/08/2025] Se incia desarrollo, paso de funcinalidades de php a python\n[01/09/2025] Creación de servicio para lectura de correo\n[02/09/2025] Consulta a base de datos para recuperar prestador\n[03/09/2025] Creación completa del servicio REST para guardar las imagnes y la data\n[5/09/2025] Jennifer-Seguimiento con la persona Cliente para concertar reunión y revisar permisos sobre el buzon\n[9/09/2025] Jennifer-Seguimiento con la persona Cliente para concertar reunión y revisar permisos sobre el buzon",
+    "observations": "[29/08/2025] Se incia desarrollo, paso de funcinalidades de php a python\n[01/09/2025] Creación de servicio para lectura de correo\n[02/09/2025] Consulta a base de datos para recuperar prestador\n[03/09/2025] Creación completa del servicio REST para guardar las imagnes y la data\n[5/09/2025] Jennifer-Seguimiento con la persona Cliente para concertar reunión y revisar permisos sobre el buzon\n[9/09/2025] Jennifer-Seguimiento con la persona Cliente para concertar reunión y revisar permisos sobre el buzon\n[10/09/2025] Jennifer-Seguimiento con la persona Cliente para concertar reunión y revisar permisos sobre el buzon\n[11/09/2025] Jennifer-Seguimiento con la persona Cliente para concertar reunión y revisar permisos sobre el buzon",
     "unit": "Cacol",
     "detail": "Se requiere realizar una lectura automática de correos para la recuperación de la información y de los anexos para consiguiente guardar la información en base de datos y los anexos sen una ruta determinada",
     "visible": true
@@ -309,6 +309,19 @@
     "observations": "Ajuste\n[08/09/2025] Se realiza ajuste en backend y frontend para reestabecer la contraseña",
     "unit": "Cacol",
     "detail": "Se requiere actualizar estado y contraseñas del usuario, por el perfil que ya existe para Mesa de Ayuda, la opción de Reestablecer contraseña debe permitir desbloquear el usuario, no solo reestablecer la contraseña. y así como se busca por Usuario debe permitir buscar por identificación",
+    "visible": true
+  },
+  {
+    "id": "OPT_11",
+    "title": "Novedades - Correo automático falta de imágenes",
+    "assigned": "JHON",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "12/09/2025",
+    "endDate": "",
+    "observations": "",
+    "unit": "Cacol",
+    "detail": "valide en la carpeta  /archivosimagine/huella/ la fecha del día, si no hay se debe enviar un correo electrónico informando que no existe carpeta con las imágenes de novedades Agradezco su revisión porque se valida el repositorio de imágenes de novedades tiff,  y se encuentran faltantes las imágenes correspondientes a : fechadia.\nadicionar en página /var/www/html/procesos/novedadespdf.php",
     "visible": true
   }
 ]

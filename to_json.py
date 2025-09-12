@@ -29,7 +29,7 @@ def excel_to_json_array(archivo_excel):
     - startDate: Columna J
     - endDate: Columna L
     - observations: Columna P
-    - unit: 'Yuta' (valor fijo)
+    - unit: 'Cacol' (valor fijo)
     - detail: Columna D
     - visible: Columna Q
     """
@@ -101,7 +101,7 @@ def excel_to_json_array(archivo_excel):
                 "startDate": start_date,   # Formato DD/MM/YYYY
                 "endDate": end_date,       # Formato DD/MM/YYYY
                 "observations": format_dates_in_observations(row.iloc[15]), # Columna P con fechas formateadas
-                "unit": "Yuta",                                                     # Valor fijo
+                "unit": "Cacol",                                                     # Valor fijo
                 "detail": str(row.iloc[3]) if pd.notna(row.iloc[3]) else "",     # Columna D (índice 3)
                 "visible": bool(row.iloc[16]) if pd.notna(row.iloc[16]) else False # Columna Q (índice 16)
             }
@@ -144,7 +144,7 @@ def mostrar_ejemplo(json_array, num_ejemplos=2):
 # EJEMPLO DE USO PRINCIPAL
 if __name__ == "__main__":
     # Nombre del archivo Excel
-    archivo_excel = "Segumiento_Tuya.xlsx"
+    archivo_excel = "Segumiento_Colmedica.xlsx"
     
     # Convertir Excel a JSON
     json_data = excel_to_json_array(archivo_excel)
@@ -154,7 +154,7 @@ if __name__ == "__main__":
         mostrar_ejemplo(json_data)
         
         # Guardar en archivo JSON
-        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Tuya.json")
+        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Colmedica.json")
         
         # También puedes trabajar directamente con el array
         print(f"\nTotal de registros: {len(json_data)}")
@@ -235,7 +235,7 @@ def excel_to_json_con_validaciones(archivo_excel):
                 "startDate": start_date,
                 "endDate": end_date,
                 "observations": format_dates_in_observations(row.iloc[15]),
-                "unit": "Yuta",  # Valor fijo
+                "unit": "Cacol",  # Valor fijo
                 "detail": str(row.iloc[3]).strip() if pd.notna(row.iloc[3]) else "",
                 "visible": bool(row.iloc[16]) if pd.notna(row.iloc[16]) else False  # Columna Q (índice 16)
             }

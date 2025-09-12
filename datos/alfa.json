@@ -488,7 +488,7 @@
     "progress": 93,
     "startDate": "01/09/2025",
     "endDate": "02/09/2025",
-    "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el clinte tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.\n[03/09/2025]: El 02 de septiembre queda solucionada la incidencia y queda pendiente realizar pruebas internas antes de entregar a Nohora Carolina de SST para pruebas del área.\n[05/09/2025]: El 04 de septiembre se iniciaron pruebas internas, sin embargo, no fue posible culminarlas debido a una incidenciapresentada con el plan de trabajo en el ambiente QA. \n[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en el cronograma en ambiente de pruebas, ya se libero presupuesto pero se esta validando porque no carga actividades y programas.",
+    "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el clinte tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.\n[03/09/2025]: El 02 de septiembre queda solucionada la incidencia y queda pendiente realizar pruebas internas antes de entregar a Nohora Carolina de SST para pruebas del área.\n[05/09/2025]: El 04 de septiembre se iniciaron pruebas internas, sin embargo, no fue posible culminarlas debido a una incidencia presentada con el plan de trabajo en el ambiente QA. \n[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en el cronograma en ambiente de pruebas, ya se libero presupuesto pero se esta validando porque no carga actividades y programas.\n[11/09/2025]: El 10 de septiembre Mauricio continua validando, ajustando incidencias en el ambiente de QA que no han permitido realizar las pruebas correspondientes.",
     "unit": "Fala",
     "detail": "",
     "visible": true
@@ -514,7 +514,7 @@
     "progress": 100,
     "startDate": "01/09/2025",
     "endDate": "03/09/2025",
-    "observations": "[03/09/2025]: [01/09/2025] Mauricio trabaja en la inclusión de la data de Auxilios Funerarios en el tablero de ANS.\n[02/09/2025]: Se trabaja en los graficos de aux funerarios y en la consulta requerida para validar datos de flujo de pagos y aux funerario.\nPendientes pruebas internas para antes de entregar para pruebas por parte del área de previsionales\n[04/09/2025]: el 03 de septiembre el desarrollo del gráfico está en fase final, restando únicamente ajustes de personalización en los tooltips. Se programó una reunión con el cliente para la socialización de avances, debido a que no alcanzo el tiempo, se reprogramo sesión para el jueves 4 de septiembre a las 9:00 am\n\nEl día de hoy 04 de septiembre, se realizan unas pruebas internas antes de entregar al cliente para sus respectivas pruebas y certificaciòn, siendo exitosas. En la sesión al momento de ingresar al aplicativo de pruebas Imagine, el cliente no pudo ya que por politicas de la compañia al parecer les quitaron permisos, se encuentran en validaciòn con el area tecnologica y sin embargo, por parte de Imagine les mostramos el módulo, los graficos, los cambios y los reportes. Se entrega para que apenas tengan acceso puedan validar y confirmar funcionalidad.",
+    "observations": "[03/09/2025]: [01/09/2025] Mauricio trabaja en la inclusión de la data de Auxilios Funerarios en el tablero de ANS.\n[02/09/2025]: Se trabaja en los graficos de aux funerarios y en la consulta requerida para validar datos de flujo de pagos y aux funerario.\nPendientes pruebas internas para antes de entregar para pruebas por parte del área de previsionales\n[04/09/2025]: el 03 de septiembre el desarrollo del gráfico está en fase final, restando únicamente ajustes de personalización en los tooltips. Se programó una reunión con el cliente para la socialización de avances, debido a que no alcanzo el tiempo, se reprogramo sesión para el jueves 4 de septiembre a las 9:00 am\n\nEl día de hoy 04 de septiembre, se realizan unas pruebas internas antes de entregar al cliente para sus respectivas pruebas y certificaciòn, siendo exitosas. En la sesión al momento de ingresar al aplicativo de pruebas Imagine, el cliente no pudo ya que por politicas de la compañia al parecer les quitaron permisos, se encuentran en validaciòn con el area tecnologica y sin embargo, por parte de Imagine les mostramos el módulo, los graficos, los cambios y los reportes. Se entrega para que apenas tengan acceso puedan validar y confirmar funcionalidad.\n[11/09/2025]: Se confirma funcionalidad por parte del área de Previsionales",
     "unit": "Fala",
     "detail": "Se incluye en las graficas aux funerarios",
     "visible": true
@@ -546,14 +546,27 @@
     "visible": true
   },
   {
-    "id": "SST_2025_010",
+    "id": "Img_2025_005",
     "title": "Conexiones con Ministerio -SAT Independientes",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 90,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "05/09/2025",
-    "endDate": "",
-    "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.\n[10/09/2025]: Durante los días 08 y 09 de septiembre, Mauricio ha trabajado en las conexiones SAT del Ministerio para el requerimiento de independientes.",
+    "endDate": "10/09/2025",
+    "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.\n[10/09/2025]: Durante los días 08 y 09 de septiembre, Mauricio ha trabajado en las conexiones SAT del Ministerio para el requerimiento de independientes.\n[11/09/2025]: El 10 de septiembre, Mauricio finalizò la conexiòn en integraciòn con la URL del Ministerio.",
+    "unit": "Fala",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_006",
+    "title": "Conexiones con Ministerio -SAT Independientes",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/09/2025",
+    "endDate": "10/09/2025",
+    "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.\n[10/09/2025]: Durante los días 08 y 09 de septiembre, Mauricio ha trabajado en las conexiones SAT del Ministerio para el requerimiento de independientes.\n[11/09/2025]: El 10 de septiembre, Mauricio finalizò la conexiòn en integraciòn con la URL del Ministerio.",
     "unit": "Fala",
     "detail": "",
     "visible": true
@@ -699,6 +712,19 @@
     "observations": "[22/08/2025]: El día 21 de agosto Mauricio se ha encargado de atender tareas asignadas por Jenry para mejorar el tema de control y seguimiento en ambiente de contingencia:\n- Renombrar las BD en pruebas y restaurar producción\n[25/08/2025]: Entre el viernes 22 y sabado 23 Mauricio realizo la homologaciòn y restauraciòn de las BD",
     "unit": "Fala",
     "detail": "Se requiere realizar la homologación y restauración de las bases de datos en el servidor de pruebas de Imagine, con el fin de garantizar la disponibilidad y consistencia de la información para las validaciones correspondientes, según la solicitud presentada por fala.",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_007",
+    "title": "Servicios SAT Independientes",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 10,
+    "startDate": "10/09/2025",
+    "endDate": "",
+    "observations": "[11/09/2025]: El 10 de septiembre se realizó el despliegue del servicio de Afiliaciones de Independientes en el ambiente de pruebas OnPremise\nFalta realizar pruebas iniciales en el primer servicio de 13 servicios.",
+    "unit": "Fala",
+    "detail": "",
     "visible": true
   }
 ]

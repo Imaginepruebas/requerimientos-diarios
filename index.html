@@ -396,7 +396,7 @@
   "Entrenamiento": "#2ca02c",     // Verde
   "en test": "#d62728",           // Rojo
   "pendiente": "#bcbd22",         // Verde lima
-  "pendiente varbo": "#e377c2",   // Fucsia
+  "pendiente Cliente": "#e377c2",   // Fucsia
   "pausado": "#17becf",           // Turquesa
   "detenido Cliente": "#8c564b",    // Marrón
   "finalizado": "#2ca58d",        // Verde azulado
@@ -477,7 +477,7 @@
       const resumenContent = document.getElementById('resumenContent');
       const totalTasks = filteredTasks.length;
       const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
-      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Cliente", "Pruebas Cliente",].includes(t.state)).length;
+      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Cliente", "Pruebas Cliente","Pendiente Cliente",].includes(t.state)).length;
       const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
       const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
       resumenContent.innerHTML = `
