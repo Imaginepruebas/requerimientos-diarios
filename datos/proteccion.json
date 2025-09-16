@@ -410,9 +410,48 @@
     "progress": 50,
     "startDate": "09/09/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[12/09/2025] Desde el día Mierrcoles 10 de sep no se avanza debido a que se debía de trabajar en requerimientos de mayor impórtancia para el cliente",
     "unit": "Cionpro",
     "detail": "",
+    "visible": true
+  },
+  {
+    "id": "Interno2-1",
+    "title": "Se identificaron, a través de un informe recién creado que había un hueco en la información. ",
+    "assigned": "Alejandro",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "10/09/2025",
+    "endDate": "11/09/2025",
+    "observations": "[12/09/2025] Se identifica los datos, se correlacionan entre sí y se completa 3000 datos de 4000",
+    "unit": "Cionpro",
+    "detail": "Corrección de datos guardados en BD",
+    "visible": true
+  },
+  {
+    "id": "Interno2-1",
+    "title": "Se identificaron, a través de un informe recién creado que había un hueco en la información que debe ser corregido. ",
+    "assigned": "Alejandro",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "10/09/2025",
+    "endDate": "11/09/2025",
+    "observations": "[12/09/2025] Se identifica los datos, se correlacionan entre sí y se completa 3000 datos de 4000",
+    "unit": "Cionpro",
+    "detail": "Corrección de datos guardados en BD",
+    "visible": true
+  },
+  {
+    "id": "REQ-10-1",
+    "title": "Se necesita la descarga de imagenes según varios filtros y necesidades del usuario",
+    "assigned": "Alejandro",
+    "state": "En Proceso",
+    "progress": 80,
+    "startDate": "10/09/2025",
+    "endDate": "",
+    "observations": "[12/09/2025] Se realiza la descarga y se esta en la espera de habilitación del punto de carga. Además, se indica que se debe de hacer un proceso de descarga adicional",
+    "unit": "Cionpro",
+    "detail": "Descarga de archivos relacionados a un cargue de datos, que identifican tipo de documento, año y a quien pertenece",
     "visible": true
   }
 ]

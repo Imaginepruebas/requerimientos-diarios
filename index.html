@@ -476,7 +476,7 @@
       filteredTasks = filteredTasks.filter(t => t.visible !== false);
       const resumenContent = document.getElementById('resumenContent');
       const totalTasks = filteredTasks.length;
-      const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso a Producción", "En Test", "Estimar"].includes(t.state)).length;
+      const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "paso a produccion", "En Test", "Estimar"].includes(t.state)).length;
       const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Cliente", "Pruebas Cliente","Pendiente Cliente",].includes(t.state)).length;
       const completed = filteredTasks.filter(t => t.state === "Finalizado").length;
       const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
@@ -678,7 +678,7 @@ function plotBarChart(filteredTasks = tasks) {
     "En Proceso",
     "Entrenamiento",
     "Pruebas Imagine",
-    "Paso a Producción",
+    "paso a produccion",
     "En Test",
     "Pruebas Cliente"
   ];
@@ -745,7 +745,7 @@ function plotAssignmentsChart(filteredTasks = tasks) {
       "En Proceso",
       "Entrenamiento",
       "Pruebas Imagine",
-      "Paso a Producción",
+      "paso a produccion",
       "En Test",
       "Pruebas Cliente"
     ];

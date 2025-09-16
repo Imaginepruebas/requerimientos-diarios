@@ -312,16 +312,68 @@
     "visible": true
   },
   {
+    "id": "OPT_10",
+    "title": "Afiliaciones PBS - Separar Marcacion de Soportes - Digitación",
+    "assigned": "",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Cacol",
+    "detail": "",
+    "visible": false
+  },
+  {
     "id": "OPT_11",
     "title": "Novedades - Correo automático falta de imágenes",
+    "assigned": "JHON",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "12/09/2025",
+    "endDate": "12/09/2025",
+    "observations": "[12/09/2025] Se agrega la opción para validar carpeta y se agrega la opción para enviar correo\n[12/09/2025] Se agrega la opción de administrar correo al menu de procesos imgine",
+    "unit": "Cacol",
+    "detail": "valide en la carpeta  /archivosimagine/huella/ la fecha del día, si no hay se debe enviar un correo electrónico informando que no existe carpeta con las imágenes de novedades Agradezco su revisión porque se valida el repositorio de imágenes de novedades tiff,  y se encuentran faltantes las imágenes correspondientes a : fechadia.\nadicionar en página /var/www/html/procesos/novedadespdf.php",
+    "visible": true
+  },
+  {
+    "id": "315",
+    "title": "Afiliaciones PRE - Reporte de Sarlaf Solicitudes en Lista",
+    "assigned": "",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Cacol",
+    "detail": "Proceso automático para crear a diario lo que quede devuelto por listas tabla devvarias 200-Falta Documento 166 -Soporte Sarlaft Titular reportado en listas donde fecha insert se el dia actual. con el numero de solicitud y buscarlo en consulta_sarlaft para sacar información que se debe colocar en un excel que se debe enviar por correo electronico",
+    "visible": false
+  },
+  {
+    "id": "314",
+    "title": "Afiliaciones PRE - No devolver la solicitud Listas Sarlaft",
+    "assigned": "",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Cacol",
+    "detail": "En la opción 6 \\var\\www\\html\\modulo_imagine\\core\\imagine\\indexaprocesosafiliaciones.php donde se va a insertar la devolución por listas se debe adicionar la validación si el titular tiene otra solicitud dentro de los ultimos 3 meses en estado CARGADA, no se debe hacer la devolución, de lo contrario si hacerla. y continua el proceso",
+    "visible": false
+  },
+  {
+    "id": "313",
+    "title": "Afiliaciones PRE - Lectura del PDF respuesta Sarlaft",
     "assigned": "JHON",
     "state": "En Proceso",
     "progress": 0,
     "startDate": "12/09/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[15/09/2025] Se realiza lectura ocr para recuperar estacals del archivo PDF",
     "unit": "Cacol",
-    "detail": "valide en la carpeta  /archivosimagine/huella/ la fecha del día, si no hay se debe enviar un correo electrónico informando que no existe carpeta con las imágenes de novedades Agradezco su revisión porque se valida el repositorio de imágenes de novedades tiff,  y se encuentran faltantes las imágenes correspondientes a : fechadia.\nadicionar en página /var/www/html/procesos/novedadespdf.php",
+    "detail": "Cargue de Archivos Perfil de riesgo Al momento de cargar los PDF de la respuesta de las consulta de SArlaft, se debe agregar la lectura del PDF para saber si esta en listas o no, y si lo está almacenar las escalas encontradas (Crear campo nuevo para almacenar la escala(s) en la tabla consulta_sarlaft), si tiene el aviso \"No se obtuvieron resultados para la búsqueda realizada.\" debe ser NO en listas, y si trae Escalas el campo listas debe quedar en SI. adicinar en esta pagina la actualización mencionada \\var\\www\\html\\salud\\cargadearchivos\\renombrarArchivosSarlaft.php, dejando el update sobre la tabla update consulta_sarlaft set listas =,escala  where afiliacion='$plani' and estado = 1 .\nAdicional una vez almacenada esta información se debe cerrar el registro, invocando pag \\var\\www\\html\\modulo_imagine\\core\\imagine\\indexaprocesosafiliaciones.php opcion 6, la cual deja el registro tramitado",
     "visible": true
   }
 ]
