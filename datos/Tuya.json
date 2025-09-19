@@ -403,17 +403,17 @@
     "visible": true
   },
   {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "id": "291",
+    "title": "Creacion anexo",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/09/2025",
+    "endDate": "18/09/2025",
+    "observations": "Se realiza la asignación del anexo en las familias y se le informa al usuario",
     "unit": "Yuta",
-    "detail": "",
-    "visible": false
+    "detail": "Creación documento para varias familias",
+    "visible": true
   },
   {
     "id": "",

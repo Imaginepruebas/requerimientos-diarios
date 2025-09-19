@@ -264,10 +264,10 @@
     "title": "Afiliaciones PRE - Generacion de Kits",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 25,
+    "progress": 35,
     "startDate": "09/09/2025",
     "endDate": "",
-    "observations": "[9/09/2025] Se inicia con el levantamiento de información para iniciar con el desarrollo\n[11/09/2025] Creación de schema-tabla principal - el resto se revisarán si son necesarias o como se ajusta seguramente se puedan omitir\n[12/09/2025] Se inicia el desarrollo para traer la información (Pagina principal - página de funciones)\n[16/09/2025] ",
+    "observations": "[9/09/2025] Se inicia con el levantamiento de información para iniciar con el desarrollo\n[11/09/2025] Creación de schema-tabla principal - el resto se revisarán si son necesarias o como se ajusta seguramente se puedan omitir\n[12/09/2025] Se inicia el desarrollo para traer la información (Pagina principal - página de funciones)\n[16/09/2025] Avance en los tipos de proceso que se ejectutan Normal,Chevron,Puntual\n[19/09/2025]",
     "unit": "Cacol",
     "detail": "Cambiar la plataforma del Access - Crear archivos planos enviados al proveedor que hace el envío de los Kits a los clientes de medicina prepagada, a partir del correo que ya se envía de confirmación del cargue de las preexistencias. Si todo esta Cargado, generar archivos planos, conectarse a la ruta y dejar los archivos, enviar correo notificando de la generación. En caso de que las preexistencias no esten todas cargadas, no se genera nada autmático, sin embargo se dispondrá una opción desde el Sitio Web de Imagine para que se generen dihos archivos.",
     "visible": true
@@ -353,27 +353,40 @@
   {
     "id": "314",
     "title": "Afiliaciones PRE - No devolver la solicitud Listas Sarlaft",
-    "assigned": "",
-    "state": "En Proceso",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "assigned": "JHON",
+    "state": "Finalizado",
+    "progress": 60,
+    "startDate": "17/09/2025",
+    "endDate": "18/09/2025",
+    "observations": "[17/09/2025] Se realiza analisis y paso a pruebas la validación de devoluciones",
     "unit": "Cacol",
     "detail": "En la opción 6 \\var\\www\\html\\modulo_imagine\\core\\imagine\\indexaprocesosafiliaciones.php donde se va a insertar la devolución por listas se debe adicionar la validación si el titular tiene otra solicitud dentro de los ultimos 3 meses en estado CARGADA, no se debe hacer la devolución, de lo contrario si hacerla. y continua el proceso",
-    "visible": false
+    "visible": true
   },
   {
     "id": "313",
     "title": "Afiliaciones PRE - Lectura del PDF respuesta Sarlaft",
     "assigned": "JHON",
-    "state": "En Proceso",
-    "progress": 10,
+    "state": "Finalizado",
+    "progress": 90,
     "startDate": "12/09/2025",
     "endDate": "17/09/2025",
     "observations": "[15/09/2025] Se realiza lectura ocr para recuperar estacals del archivo PDF\n[16/09/2025] Relizar el servicio para la lectura del PDF y guardado en la base de datos",
     "unit": "Cacol",
     "detail": "Cargue de Archivos Perfil de riesgo Al momento de cargar los PDF de la respuesta de las consulta de SArlaft, se debe agregar la lectura del PDF para saber si esta en listas o no, y si lo está almacenar las escalas encontradas (Crear campo nuevo para almacenar la escala(s) en la tabla consulta_sarlaft), si tiene el aviso \"No se obtuvieron resultados para la búsqueda realizada.\" debe ser NO en listas, y si trae Escalas el campo listas debe quedar en SI. adicinar en esta pagina la actualización mencionada \\var\\www\\html\\salud\\cargadearchivos\\renombrarArchivosSarlaft.php, dejando el update sobre la tabla update consulta_sarlaft set listas =,escala  where afiliacion='$plani' and estado = 1 .\nAdicional una vez almacenada esta información se debe cerrar el registro, invocando pag \\var\\www\\html\\modulo_imagine\\core\\imagine\\indexaprocesosafiliaciones.php opcion 6, la cual deja el registro tramitado",
+    "visible": true
+  },
+  {
+    "id": "OPT_12",
+    "title": "Consolidados Procesos Pendientes Afiliaciones PRE-Afiliaciones POS-Llamadas Acreditación-UMD-Hojas de Vida",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 40,
+    "startDate": "17/09/2025",
+    "endDate": "",
+    "observations": "[17/09/2025] se empieza con la informacion recibida en el correo de produccion pendiente para optimizar su análisis y la organización para el trabajo, identificando que se necesita mostrar en grafica para una mejor visualiación\n[18/09/2025] Se crea pagina para la creacion de las graficas, y se incluye dentro de la principal de la web de Imagine una vez se loguean\n[19/09/2025] ",
+    "unit": "Cacol",
+    "detail": "Crear graficas de la produccion diaria pendiente que no sea mediante un correo electronico, y se visuelice al ingresar en el sitio web de Imagine para los usuarios de Imagine, y puedan identificar de manera más oportuna lo pendiente",
     "visible": true
   }
 ]
