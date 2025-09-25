@@ -484,11 +484,11 @@
     "id": "SST_2025_009",
     "title": "Ajuste modulo profesionales",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 97,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "01/09/2025",
-    "endDate": "",
-    "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el cliente tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.\n[03/09/2025]: El 02 de septiembre queda solucionada la incidencia y queda pendiente realizar pruebas internas antes de entregar a Nohora Carolina de SST para pruebas del área.\n[05/09/2025]: El 04 de septiembre se iniciaron pruebas internas, sin embargo, no fue posible culminarlas debido a una incidencia presentada con el plan de trabajo en el ambiente QA. \n[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en el cronograma en ambiente de pruebas, ya se libero presupuesto pero se esta validando porque no carga actividades y programas.\n[11/09/2025]: El 10 de septiembre Mauricio continua validando, ajustando incidencias en el ambiente de QA que no han permitido realizar las pruebas correspondientes.\n[15/09/2025]: El viernes 12 de septiembre Mauricio se enfoco en seguri revisando errores que se estan presentando en el módulo de cronogramas y edición de ordenes de servicios\n[18/09/2025]: Durante los días del 15 al 17 Mauricio detecto errores en el desarrollo y ha trabajado en corregir y mejorar su funcionalidad, adicional de mejorar la apariencia siendo mas intuitivo para el usuario.\nSe refactorizo el diseño de la gestión de profesionales a acreditar  y la gestión de proveedores.",
+    "endDate": "19/09/2025",
+    "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el cliente tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.\n[03/09/2025]: El 02 de septiembre queda solucionada la incidencia y queda pendiente realizar pruebas internas antes de entregar a Nohora Carolina de SST para pruebas del área.\n[05/09/2025]: El 04 de septiembre se iniciaron pruebas internas, sin embargo, no fue posible culminarlas debido a una incidencia presentada con el plan de trabajo en el ambiente QA. \n[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en el cronograma en ambiente de pruebas, ya se libero presupuesto pero se esta validando porque no carga actividades y programas.\n[11/09/2025]: El 10 de septiembre Mauricio continua validando, ajustando incidencias en el ambiente de QA que no han permitido realizar las pruebas correspondientes.\n[15/09/2025]: El viernes 12 de septiembre Mauricio se enfoco en seguri revisando errores que se estan presentando en el módulo de cronogramas y edición de ordenes de servicios\n[18/09/2025]: Durante los días del 15 al 17 Mauricio detecto errores en el desarrollo y ha trabajado en corregir y mejorar su funcionalidad, adicional de mejorar la apariencia siendo mas intuitivo para el usuario.\nSe refactorizo el diseño de la gestión de profesionales a acreditar  y la gestión de proveedores.\n[22/09/2025]: El viernes 19 de septiembre, Mauricio subió los ajustes de los modulos de profesionales y cronograma de trabajo.",
     "unit": "Fala",
     "detail": "Se requiere validar y realizar ajustes de errores e incidencias que se están presentando en el módulo para realizar las pruebas por parte del cliente y sea certificado el paso a producción",
     "visible": true
@@ -777,6 +777,32 @@
     "observations": "[18/09/2025]: El 17 de septiembre se creo el servicio de Cambio de Ocupación en Independientes Voluntarios de Trabajadores Independientes. \nPendiente ajuste en el maestro de empleados.",
     "unit": "Fala",
     "detail": "Crear servicio del Ministerio de Salud y Protección Social de Cambio de Ocupación en Independientes Voluntarios",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_018",
+    "title": "ANS - TABLERO DE CONTROL  - Ajuste",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "19/09/2025",
+    "endDate": "19/09/2025",
+    "observations": "[22/09/2025]: El 19 de septiembre, Mauricio trabajo en la correcciòn del error Bad Request y se agrego un nuevo estado Anulado a flujos de pagos y auxilios funerarios.\nPendientes las pruebas por parte de Imagine para posterior entrega actualizaciones al cliente y certifiquen el ajuste.",
+    "unit": "Fala",
+    "detail": "Se requiere crear un nuevo grupo para incluir los estados ANULADOS, en las gráficas del tablero de estadisticas",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_012",
+    "title": "Servicios SAT Independientes - Consultas",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 70,
+    "startDate": "22/09/2025",
+    "endDate": "",
+    "observations": "[22/09/2025]: Desarrollar formulario de consulta para servicios del Ministerio:\n- Consulta de trabajadores independientes de afiliaciòn activa a la ARL, incluyendo traslados y retractaciones de afiliaciòn.\n- Consulta de trabajadores independientes trasladables de ARL.\n[25/09/2025]: Entre los días 22 y 23 de septiembre, Mauricio ha trabajado en la consulta de independientes activos y en mora",
+    "unit": "Fala",
+    "detail": "Desarrollar consultas de los servicios creados en SAT para independientes",
     "visible": true
   }
 ]
