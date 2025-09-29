@@ -416,17 +416,17 @@
     "visible": true
   },
   {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
+    "id": "292",
+    "title": "Solicitud soportes y bases de morosos a corte 23 septiembre",
+    "assigned": "Faver y \nNatalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "24/09/2025",
+    "endDate": "26/09/2025",
     "observations": "",
     "unit": "Yuta",
-    "detail": "",
-    "visible": false
+    "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
+    "visible": true
   },
   {
     "id": "",

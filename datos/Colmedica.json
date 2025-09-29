@@ -404,15 +404,28 @@
   },
   {
     "id": "OPT_14",
-    "title": "Afiliaciones Pre - Sarlaft derivado del REQ-303",
+    "title": "Afiliaciones Pre - Sarlaft derivado del REQ-313",
     "assigned": "JHON",
-    "state": "En Proceso",
+    "state": "Finalizado",
     "progress": 10,
     "startDate": "25/09/2025",
-    "endDate": "",
-    "observations": "",
+    "endDate": "25/09/2025",
+    "observations": "[25/09/2025] Se valida el funcionamiento del script encargado y su proceso corresponde a la descripcion del req",
     "unit": "Cacol",
     "detail": "validar cantidades del excel vs los pdf, cambiar el renombre de los archivos tomando como base el excel e ir a buscar la cc en el nombre del archivo y así asignarle la solicitud, al final imprima mensaje indicando si algo quedó en estado 1 o estado 2 \"Quedaron solicitudes en estado pendiente\" - \"Todo procesado correctamente\"",
     "visible": true
+  },
+  {
+    "id": "",
+    "title": "Acreditación - Consulta Puntual en BDEX",
+    "assigned": "",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Cacol",
+    "detail": "Consulta de usuarios en régimen especial, de manera automática en página del Adres. se necesita homologar logueo con usuario y contraseña, y al momento de la consulta de cada identificación revisar el captchap que se muestra. generar consultas en intervalo de tiempos para no generar algun tipo de laerta, dado que se usan logueos del cliente",
+    "visible": false
   }
 ]
