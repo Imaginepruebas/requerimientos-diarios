@@ -314,7 +314,7 @@
   {
     "id": "OPT_10",
     "title": "Afiliaciones PBS - Separar Marcacion de Soportes - Digitación",
-    "assigned": "",
+    "assigned": "JOHN",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -393,13 +393,13 @@
     "id": "OPT_13",
     "title": "Consolidados Pendientes Proceso - Estados UMD",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 20,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[23/09/2025] Se inicia con la identificación de lo que se desea mostrar, primera imagens seguimiento del periodo en curso con estados, valores y cantidades",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "23/09/2025",
+    "endDate": "25/09/2025",
+    "observations": "[23/09/2025] Se inicia con la identificación de lo que se desea mostrar, primera imagens seguimiento del periodo en curso con estados, valores y cantidades\n[25/09/2025] se termina de ajustar la grafica para mostrar proceso actual, estados y los valores correspondientes. Se dispone en ambiente de pruebas para revisar que funciona de manera correcta.\n[26/09/2025] se pasa a produccion las páginas realizadas y se deja disponible para la visualizacion tanto del área operativa como del cliente",
     "unit": "Cacol",
-    "detail": "",
+    "detail": "Crear graficas de la produccion del proceso actual, para mostrar estados, valores",
     "visible": true
   },
   {
@@ -416,16 +416,29 @@
     "visible": true
   },
   {
-    "id": "",
+    "id": "316",
     "title": "Acreditación - Consulta Puntual en BDEX",
-    "assigned": "",
-    "state": "Pendiente",
+    "assigned": "JHON",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "29/09/2025",
+    "endDate": "",
+    "observations": "[29/09/2025] Jennifer - se contextualiza a Jhon lo que se require\n[30/09/2025] Jennifer - Radicación requerimiento en la plataforma",
+    "unit": "Cacol",
+    "detail": "Consulta de usuarios en régimen especial los pendinetes por acreditar de las vigencias activas para revisar, de manera automática en página del Adres. se necesita homologar logueo con usuario y contraseña, y al momento de la consulta de cada identificación revisar el captchap que se muestra. generar consultas en intervalo de tiempos para no generar algun tipo de laerta, dado que se usan logueos del cliente. Dejar usuarios y contraseñas administrables (POS-PRE). Si la fecha de nacimiento del usuario es mayor a 20000131\ny en la base esta como CC y la respuesta no devuelve nada, se puede consultar como TI o RC\ny en la base esta como TI y la respuesta no devuelve nada, se puede consultar como CC o RC\ny en la base esta como RC y la respuesta no devuelve nada, se puede consultar como CC o TI\nSi la respuesta de la consulta es que si se encuentra en Regimen especial, se debe guardar un pdf con el nombre xxxxxxxx_REG010.pdf donde xxxxxx es el número de identificación y el REG010 la EPS, el cual se toma de una tla según el nombre que entrega la consulta del adres, y guardar en la ruta del servidor\nSe debe crear archivo de 7 columnas, para dejar resgitros de la consulta puntual del régimen especial 7 columnas:, Nombre Vigencia, Contrato, Tipo ID contratante, Número ID contratante, Tipo ID beneficiario, Número ID beneficiario, Código Gestion (44 - Consulta Puntual RES) y que se pueda ejecutar por debajo la función de la opción Acreditación - Gestion - Registrar Gestión Búsqueda Puntual",
+    "visible": true
+  },
+  {
+    "id": "OPT_15",
+    "title": "Acreditación - Usuarios Aliansalud subsidiado",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[30/09/2025] Se inicia con el desarrollo, creando campo nuevo que permite la identificación de si el usuario está en contributivo o subsidiado, según resultado de consulta Adres.",
     "unit": "Cacol",
-    "detail": "Consulta de usuarios en régimen especial, de manera automática en página del Adres. se necesita homologar logueo con usuario y contraseña, y al momento de la consulta de cada identificación revisar el captchap que se muestra. generar consultas en intervalo de tiempos para no generar algun tipo de laerta, dado que se usan logueos del cliente",
-    "visible": false
+    "detail": "Al cargar la respuesta del adres de la consulta, si se recibe un usuario en Aliansalud - sbsidiado, se debe identificar en la tabla de afiliados pos como subsidiado - fecha de última consulta. En el proceso diario y de carga de las consultas se debe ajustar que no se puedan acreditas usuarios de Aliansalud que en la base de afiliados pos tengan la marca de subsidiado",
+    "visible": true
   }
 ]
