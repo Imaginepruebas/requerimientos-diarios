@@ -8,7 +8,7 @@
     "startDate": "10/01/2025",
     "endDate": "",
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Sistema Operativo, PHP",
     "visible": true
   },
@@ -21,7 +21,7 @@
     "startDate": "10/01/2025",
     "endDate": "",
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Realizar pruebas con el fin de validar el correcto funcionamiento del aplicativo",
     "visible": true
   },
@@ -34,7 +34,7 @@
     "startDate": "10/01/2025",
     "endDate": "",
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Sistema Operativo, PHP",
     "visible": true
   },
@@ -47,7 +47,7 @@
     "startDate": "10/01/2025",
     "endDate": "",
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Realizar pruebas con el fin de validar el correcto funcionamiento del aplicativo",
     "visible": true
   },
@@ -60,7 +60,7 @@
     "startDate": "10/01/2025",
     "endDate": "",
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Se realiza reporte de 9 incidentes luego de pruebas realizadas en el aplicativo\n Se valida y a la fecha han sido solucionados 5 incidentes",
     "visible": true
   },
@@ -73,7 +73,7 @@
     "startDate": "10/01/2025",
     "endDate": "",
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Sistema Operativo, PHP",
     "visible": true
   },
@@ -86,7 +86,7 @@
     "startDate": "10/01/2025",
     "endDate": "",
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Realizar pruebas con el fin de validar el correcto funcionamiento del aplicativo",
     "visible": true
   },
@@ -99,7 +99,7 @@
     "startDate": "24/06/2025",
     "endDate": "",
     "observations": "\"Estamos a la espera de la instalación de una librería para conexión a PCO, pero es Tuya quien hace dicha instalación, pero aún no hay fecha.\n[11/07/2025]: se tuvo una reunión en la cual realizaron una ampliación de requerimiento para que los anexos que no tengan una solicitud se queden en cola dos o tres días máximo, y cuando llegue la solicitud se indexen\"",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Crear un cliente en nodejs que una vez que se detecten los tipos de anexo envíe vía API el detalle de acuerdo a cada solicitud.\n\n\n",
     "visible": true
   },
@@ -112,7 +112,7 @@
     "startDate": "24/06/2025",
     "endDate": "",
     "observations": "[27/06/2025]: Se realizó modificación del codigo de oficina como opcional",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "El viernes 11 de julio, se tuvo una reunión en la cual realizaron una ampliación de requerimiento para que los anexos que no tengan una solicitud se queden en cola dos o tres días máximo, y cuando llegue la solicitud se indexen\"",
     "visible": true
   },
@@ -125,7 +125,7 @@
     "startDate": "24/06/2025",
     "endDate": "",
     "observations": "[27/06/2025]: Se realizaron ajustes necesarios y se modificó el documento con respecto a mensajes de error",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "",
     "visible": true
   },
@@ -138,7 +138,7 @@
     "startDate": "24/06/2025",
     "endDate": "",
     "observations": "[24/07/2025]: Este pundo depende del cliente que se construye con el punto 1. la funcionalidad de envio a pendientes serviria para ambos servicios.\n[13/08/2025]: en el momento el cliente se encuentra haciendo pruebas de la indexación de anexos, y la cola de espera.\nEn cuanto el 3 punto, estamos en espera de la instalación de una libreria para el consumo de un servicio de Soap, esto ya que por medio de métodos manuales no fue posible para todos los casos. Apenas tenga la autorización lo único que haría falta es desarrollar el cliente y traer los datos que se requieren para indexar la solicitud y sus anexos.\nTambién en la reunión de entrega surgieron unas validaciones adicionales, pero de esa parte no nos han enviado el requerimiento ya que depende de definiciones de ellos.\n[20/08/2025]: con respecto a el desarrollo del Api, se realizó lo requerido, sin embargo surgió un cambio muy necesario al recibir los documentos, es el siguiente: \"Espero que te encuentres bien. Después de revisar la duda planteada, te cuento que:\nEl control para la operación de .zip\nSi la solicitud existe - no se vuelve a indexar\nSi los anexos existen – no se vuelven a indexar\nSi los anexos no existen – se adicionan a los documentos.\nEn caso de que todos los documentos existan devolver:  No se requieren agregar nuevamente los documentos.\nSi, se agrega al menos un documento: Los anexos faltantes fueron agregados a la solicitud.\nSi, todos se agregan: Proceso exitoso.\"\nVoy a agregar la lógica para estas validaciones y realizar pruebas nuevamente con la usuaria, con esto daríamos por finalizado este desarrollo, solo quedaría actualizar la documentación y el paso a producción.\n[22/08/2025]: en cuanto al Api, se realizó la entrega del último método con todos los ajustes y validaciones requeridas, adicionalmente se entregó la documentación técnica al día\nQueda la implementación por parte de ellos, pruebas de integración y paso a producción.\n[27/08/2025]: Se revisa en conjunto con el cliente  de funcionamiento del ultimo método, punto 4, se realizan ajustes de forma en la generación de mensajes de éxito y se ajusta documentación \nSe realiza ajuste para q reciba solamente documentación de la solicitud sin anexo, esto en caso de falla al momento de la generación de los anexos.",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Este proceso en una unica operación, la cual debe consumir el API de pendientes para registrar los documentos enviados",
     "visible": true
   },
@@ -151,7 +151,7 @@
     "startDate": "",
     "endDate": "",
     "observations": "[14/08/2025]: En cuanto a los desarrollo del Api, ayer definieron que no vamos a realizar la conexión si no que ellos nos envían los datos necesarios, les expliqué la lógica al respecto y como nos deben enviar los datos, surge el cambio en el servicio para recibir y validar los datos.\nEn este caso no quisieron avalar la librería solicitada y para poder poner la que nos ofrecieron nos tocaba migrar todo el Api.\nEn este caso ellos deben validar y enviar la información del producto a ingresar, realmente no es mucho lo que deben hacer para consultar y traer los datos que requerimos\nEn otras palabras es algo que genera un impacto muy bajo de quien lo deba hacer.",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Ddefinieron que no vamos a realizar la conexión si no que ellos nos envían los datos necesarios,",
     "visible": true
   },
@@ -164,7 +164,7 @@
     "startDate": "19/06/2025",
     "endDate": "",
     "observations": "Se realiza validación en el sistema y se envía respuesta al usuario solicitante",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Se requiere que con la base de datos que comparten, identificar si tienen documento de solicitud de crédito en Imagine",
     "visible": true
   },
@@ -177,7 +177,7 @@
     "startDate": "19/06/2025",
     "endDate": "",
     "observations": "Se realiza validación en el sistema y se envía respuesta al usuario solicitante",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Validación de 36665 clientes, por medio de archivo adjunto, donde se pueda identificar que clientes cuentan con una autorización de tratamiento de datos personales",
     "visible": true
   },
@@ -190,7 +190,7 @@
     "startDate": "20/06/2025",
     "endDate": "",
     "observations": "Esta pendiente de aprobación por Tuya",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "En la opción de Consulta Área de crédito, validar si es posible, donde se realiza la comparación que se pueda discriminar cuando en una misma familia el cliente tenga varias solicitudes.",
     "visible": true
   },
@@ -203,7 +203,7 @@
     "startDate": "20/06/2025",
     "endDate": "",
     "observations": "Esta pendiente de aprobación por Tuya",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Usuario envía archivo con clientes mororos de créditos, para validar soportes existentes en Imagine para los números de cédula enviados. Los documentos son Solicitud de crédito o actualización de datos del deudor y Anexo1 aceptación, autorización.",
     "visible": true
   },
@@ -211,12 +211,12 @@
     "id": "141",
     "title": "Realizar trazabilidad de las solicitudes que anulan y desanulan de los documentos en los anexos.",
     "assigned": "Faver",
-    "state": "Pendiente",
+    "state": "En Test",
     "progress": 0,
     "startDate": "25/06/2025",
     "endDate": "",
-    "observations": "Esta pendiente de aprobación por Tuya",
-    "unit": "Yuta",
+    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 2: se determina un tiempo de desarrollo de 4 semanas\noct 10: se realizan pruebas de cambios ejecutados en el aplicativo",
+    "unit": "Tuya",
     "detail": "Hoy en día se cuenta con un log de solo 10 días, pero en el nuevo requerimiento se solicita que no tenga tiempo límite.",
     "visible": true
   },
@@ -224,12 +224,12 @@
     "id": "151",
     "title": "Retirar candado consulta",
     "assigned": "Faver",
-    "state": "Pendiente",
+    "state": "En Test",
     "progress": 0,
     "startDate": "25/06/2025",
     "endDate": "",
-    "observations": "Esta pendiente de aprobación por Tuya",
-    "unit": "Yuta",
+    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 10: se realizan pruebas de cambios ejecutados en el aplicativo",
+    "unit": "Tuya",
     "detail": "Se solicita retirar el candado que se tiene actualmente en la consulta inicial, debido a que dicha opción no se encuentra actualizada y se tiene “consulta área de crédito“ para realizar el proceso de comparación",
     "visible": true
   },
@@ -242,7 +242,7 @@
     "startDate": "25/06/2025",
     "endDate": "",
     "observations": "Esta pendiente de aprobación por Tuya",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Se debe crear un nuevo método en el API en el cual se recibe archivo .zip y adicional el listado de tipos de documento que contiene de manera que se agregue un nuevo lote con un documento principal y sus anexos y adicionalmente se reporte a PCO vía API REST los documentos según configuración.",
     "visible": true
   },
@@ -255,7 +255,7 @@
     "startDate": "14/07/2025",
     "endDate": "17/07/2025",
     "observations": "[16/07/2025]: se tuvo reunión en la cual dieron contexto de las pruebas que realizaron y que les esta fallando\n[17/07/2025]: Se realiza validaciones, se determina que en las p ruebas que realizaron se esta recibiendo codigos no parametrizados para la solicitud que tratan de procesar. ",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Ayudar a Jhon Humberto para validar una solicitud en Ambiente de pruebas por que tiene malo el causal desde PCO",
     "visible": true
   },
@@ -268,7 +268,7 @@
     "startDate": "14/07/2025",
     "endDate": "17/07/2025",
     "observations": "[16/07/2025]: se tuvo reunión para validación con el usuario para validar bien la informaciòn que requieren.\n[17/07/2025]: luego de validar la información que se brindo en la reunión se genero el informe y se envío al usuario solicitante",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Se requiere que con la base de datos que comparten, identificar si tienen documento de solicitud de crédito en Imagine",
     "visible": true
   },
@@ -281,7 +281,7 @@
     "startDate": "14/07/2025",
     "endDate": "15/07/2025",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Generar por favor link de descarga de documentos que requeire el equipo de operaiones para un proceso de la compañia. Adjuntan archivo",
     "visible": true
   },
@@ -294,7 +294,7 @@
     "startDate": "22/07/2025",
     "endDate": "22/07/2025",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Se solicita creación de nueva oficina por apertura de nueva sede",
     "visible": true
   },
@@ -307,7 +307,7 @@
     "startDate": "",
     "endDate": "22/07/2025",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Es una solicitud para mitigar una vulnerabilidad en un client secret, este se usa para consumir las APIs, por politicas de seguridad se pidio que no se almacene en texto plano, se debe encriptar para evitar la exposición del valor real del secret.",
     "visible": true
   },
@@ -320,7 +320,7 @@
     "startDate": "18/07/2025",
     "endDate": "23/07/2025",
     "observations": "[22/07/2025]: se valida la solicitud del cliente, se socializa con Don Hernan y Jenry, y se les indica que nosotros solo debemos confirmar si se usa o si pueden retirarlo, ya que no deberia estar configurado, ya que ellos tienen unas configuraciones ya establecidas para los nombres de host en los servidores.",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Es un reporte que nos realizan desde infraestructura que en los ambientes productivos se tiene asociado a la IP local de lo servidores un hostname personalizado, nos indican que si no es necesario para nuestros procesos deben retirarlo.",
     "visible": true
   },
@@ -333,7 +333,7 @@
     "startDate": "23/07/2025",
     "endDate": "28/07/2025",
     "observations": "[25/07/2025]: Este requerimiento no se pudo validar dado atender hoy debido a que se ha realizado el acompañamiento y seguimiento en Colpatria por la novedad presentada",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
     "visible": true
   },
@@ -346,7 +346,7 @@
     "startDate": "05/08/2025",
     "endDate": "06/08/2025",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
     "visible": true
   },
@@ -359,7 +359,7 @@
     "startDate": "13/08/2025",
     "endDate": "14/08/2025",
     "observations": "[14/08/2025]: Se informa que el día 13 de agosto, se hizo el cambio de los certificados,  pero un certificado estaba mal, ya se reporto y esperamos nos envien de nuevo para realizar el ajuste antes del 16 de agosto",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "certificados digitales para los aplicativos de virtualizacion y legalizaciones para el día 13 de agosto con tecnología",
     "visible": true
   },
@@ -372,7 +372,7 @@
     "startDate": "15/08/2025",
     "endDate": "20/08/2025",
     "observations": "[19/08/2025]: se realiza sesión para la generaciónn de la información pero estaba quedando muy pesado el archivo, ya que eran demasiados registros,  por lo que la entrega se va a realizar por paquetes para evitar problemas con la red\n[20/08/2025]: se realiza generación de varios paquetes para entregar información al usuario.\n",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Nos solitan entregar un paquete con los extractos bancarios de 10mil solicitudes, para un proceso del cliente de un modelo que van a probar",
     "visible": true
   },
@@ -385,7 +385,7 @@
     "startDate": "22/08/2025",
     "endDate": "25/08/2025",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Realizar consulta de clientes del mes de junio.",
     "visible": true
   },
@@ -398,7 +398,7 @@
     "startDate": "04/09/2025",
     "endDate": "04/09/2025",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
     "visible": true
   },
@@ -411,7 +411,7 @@
     "startDate": "16/09/2025",
     "endDate": "18/09/2025",
     "observations": "Se realiza la asignación del anexo en las familias y se le informa al usuario",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Creación documento para varias familias",
     "visible": true
   },
@@ -424,7 +424,7 @@
     "startDate": "24/09/2025",
     "endDate": "26/09/2025",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
     "visible": true
   },
@@ -436,23 +436,23 @@
     "progress": 0,
     "startDate": "29/09/2025",
     "endDate": "",
-    "observations": "",
-    "unit": "Yuta",
+    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 2: se determina un tiempo de desarrollo de 4 semanas",
+    "unit": "Tuya",
     "detail": "se requiere esta opción en el aparte de anexos, con el fin de que no se devuelva la acción de anulación. Se debe informar al usuario si esta seguro de realizar la anulación.",
-    "visible": false
+    "visible": true
   },
   {
     "id": "294",
     "title": "Ampliar plazo",
     "assigned": "Faver",
-    "state": "Pendiente",
+    "state": "En Test",
     "progress": 0,
     "startDate": "29/09/2025",
     "endDate": "",
-    "observations": "",
-    "unit": "Yuta",
+    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 2: se determina un tiempo de desarrollo de 4 semanas\noct 10: se realizan pruebas de cambios ejecutados en el aplicativo",
+    "unit": "Tuya",
     "detail": "en la opción de informe de documentos eliminados, se requiere que sea de al menos 6 meses hacia atrás, para revisión de anulación de documentos",
-    "visible": false
+    "visible": true
   },
   {
     "id": "",
@@ -463,7 +463,7 @@
     "startDate": "",
     "endDate": "",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "",
     "visible": false
   },
@@ -476,7 +476,7 @@
     "startDate": "",
     "endDate": "",
     "observations": "",
-    "unit": "Yuta",
+    "unit": "Tuya",
     "detail": "",
     "visible": false
   }
