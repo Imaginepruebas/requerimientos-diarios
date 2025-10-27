@@ -1,7 +1,7 @@
 [
   {
     "id": "SCTASK0316185",
-    "title": "SCTASK0316185",
+    "title": "Actualizacion informacion beneficiario final",
     "assigned": "Brayan Diaz",
     "state": "Paso A Produccion",
     "progress": 100,
@@ -9,7 +9,7 @@
     "endDate": "15/10/2025",
     "observations": "Se entrega el requerimiento de acuerdo con la solicitud del cliente",
     "unit": "Colmena",
-    "detail": "Favor tener en cuenta las observaciones relacionadas en   archivo   para  actualización de campos en formato Beneficiario Final",
+    "detail": "Se solicita que al momento de capturar la informacion del formato de beneficiario final, el formulario que este marcado como NO tome los nuevos campos",
     "visible": true
   },
   {
@@ -22,7 +22,7 @@
     "endDate": "",
     "observations": "",
     "unit": "Colmena",
-    "detail": "nforme REPORTE ZEHUX – Hoja 2\nIncluir en esta hoja la causal de devolución y la observación correspondiente.\n\nFormulario de creación de usuario\nReemplazar el campo de Sucursal por Regionales.",
+    "detail": "El archivo originalmente enviado por Imagine incluye el historial completo de devoluciones, incluyendo aquellas dirigidas a áreas como Configuración, Sistemas, entre otros. Es necesario depurar este documento, dejando únicamente las observaciones de devolución que correspondan a la Sucursal en cada caso. \nReemplazar el campo de Sucursal por Regionales",
     "visible": true
   },
   {
@@ -52,22 +52,22 @@
     "visible": true
   },
   {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
+    "id": "SCTASK0340882",
+    "title": "Envio masivo de correos",
+    "assigned": "Brayan Diaz",
+    "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
     "observations": "",
     "unit": "Colmena",
-    "detail": "",
-    "visible": false
+    "detail": "Solicitamos su atención con  con el envío masivo de correos electrónicos - adjuntamos correo formal",
+    "visible": true
   },
   {
     "id": "",
     "title": "",
-    "assigned": "",
+    "assigned": "Brayan Diaz",
     "state": "",
     "progress": 0,
     "startDate": "",

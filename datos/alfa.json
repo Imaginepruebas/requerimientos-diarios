@@ -1084,8 +1084,8 @@
     "assigned": "MAURICIO",
     "state": "Finalizado",
     "progress": 100,
-    "startDate": "",
-    "endDate": "",
+    "startDate": "20/10/2025",
+    "endDate": "21/10/2025",
     "observations": "[20/10/2025]: La solicitud original requeria ejecutar la tarea todos los viernes a las 6 pm con el ajuste al día anterior si era festivo, lo cual ha cambiado.  Ahora se requiere la ejecución diaria, de lunes a viernes a las 6pm",
     "unit": "Alfa",
     "detail": "Se requiere corregir programación de la tarea.",
@@ -1102,6 +1102,32 @@
     "observations": "[17/10/2025]: Al finalizar el proceso de sincronización (Anexo 1), se agrogo la funcionalidad de exportar un reporte detallado. Este reporte ahora incluye el conteo de cuantos casos de procesos juridicos se tienen por aplicación (Sipren Plus o Sipren Tierra)",
     "unit": "Alfa",
     "detail": "Se requiere export con el  reporte de casos",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_031",
+    "title": "Modulo Objeciones y Devoluciones - Ajuste",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "22/10/2025",
+    "endDate": "22/10/2025",
+    "observations": "[24/10/2025]: Se implementó la opción de agregar indicadores de gestión",
+    "unit": "Alfa",
+    "detail": "Se requiere agregar ANS",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_032",
+    "title": "Modulo Objeciones y Devoluciones - Ajuste",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "22/10/2025",
+    "endDate": "23/10/2025",
+    "observations": "[24/10/2025]: Se ajusto la tarea programada para jecutar diariamente de lunes a viernes y días hábiles.",
+    "unit": "Alfa",
+    "detail": "Ajustar tarea programada para envío de notificaciones",
     "visible": true
   }
 ]
