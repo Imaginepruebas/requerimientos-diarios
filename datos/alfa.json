@@ -537,10 +537,10 @@
     "title": "Consultas y optimización de vistas (Alfa)",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 90,
+    "progress": 95,
     "startDate": "03/09/2025",
     "endDate": "",
-    "observations": "[04/09/2025]: El 03 de septiembre Mauricio trabaja en realizar ajustes en consultas y procesos de automatización. Continúa pendiente la optimización de querys para mejorar el rendimiento general.\n[18/09/2025]: Durante los ultimos dìas Mauricio se ha encargado de identificar mejoras en las consultas",
+    "observations": "[04/09/2025]: El 03 de septiembre Mauricio trabaja en realizar ajustes en consultas y procesos de automatización. Continúa pendiente la optimización de querys para mejorar el rendimiento general.\n[18/09/2025]: Durante los ultimos dìas Mauricio se ha encargado de identificar mejoras en las consultas\n[29/10/2025]: El viernes 24 de octubre Mauricio estuvo validando mejoras en consultas y mejorar el rendimiento del aplicativo.",
     "unit": "Alfa",
     "detail": "Se requiere optimizar rendimiento y capacidad de las funciones del aplicativo Alfasst",
     "visible": true
@@ -1119,6 +1119,19 @@
   },
   {
     "id": "PRV_2025_032",
+    "title": "Modulo Objeciones y Devoluciones - Ajuste",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "22/10/2025",
+    "endDate": "23/10/2025",
+    "observations": "[24/10/2025]: Se ajusto la tarea programada para jecutar diariamente de lunes a viernes y días hábiles.",
+    "unit": "Alfa",
+    "detail": "Ajustar tarea programada para envío de notificaciones",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_033",
     "title": "Modulo Objeciones y Devoluciones - Ajuste",
     "assigned": "MAURICIO",
     "state": "Finalizado",
