@@ -179,7 +179,7 @@
     "observations": "[17/10/2025]: El 15 de octubre se termino el desarrollo del requerimiento Anexo 1, posteriormente se han realizado validaciones y ajustes que se cruzan con otros requerimientos, con el fin de no presentar incindencias",
     "unit": "Alfa",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "PRV_2025_001",
@@ -439,7 +439,7 @@
     "observations": "[29/08/2025]: [25/08/2025]: Incluir en el reporte:\n* fecha_cierre\n* número de solicitud\n* fecha de envío de correo\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[20/10/2025]: Se incluyen campos solicitados por el área",
     "unit": "Alfa",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "SST_2025_008",
@@ -478,7 +478,7 @@
     "observations": "[29/08/2025]: [25/08/2025]: Automatizar el envío del informe:\nFrecuencia: todos los viernes a las 6:00 a.m.\nEn caso de festivo, el informe debe enviarse el día hábil anterior.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[20/10/2025]: El viernes 17 de octubre se agrego la funcionalidad para la ejecución del proceso Aviso a la Renta, mediante las tareas programadas. ",
     "unit": "Alfa",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "SST_2025_009",
@@ -1132,15 +1132,28 @@
   },
   {
     "id": "PRV_2025_033",
-    "title": "Modulo Objeciones y Devoluciones - Ajuste",
+    "title": "Modulo Honorarios Jurídicos",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 20,
+    "startDate": "27/10/2025",
+    "endDate": "",
+    "observations": "[29/10/2025]: Se avanza en el análisis y diseño del mòdulo requerido por el área de previsionales.",
+    "unit": "Alfa",
+    "detail": "Implementar módulo de pago de honorarios juridicos del área Previsionales",
+    "visible": true
+  },
+  {
+    "id": "REN_2025_06",
+    "title": "Validación Documental_Ajuste",
     "assigned": "MAURICIO",
     "state": "Finalizado",
     "progress": 100,
-    "startDate": "22/10/2025",
-    "endDate": "23/10/2025",
-    "observations": "[24/10/2025]: Se ajusto la tarea programada para jecutar diariamente de lunes a viernes y días hábiles.",
+    "startDate": "27/10/2025",
+    "endDate": "28/10/2025",
+    "observations": "[29/10/2025]: Se soluciona la incidencia reportada en la validación documental para la tipificación DDEP",
     "unit": "Alfa",
-    "detail": "Ajustar tarea programada para envío de notificaciones",
+    "detail": "Validar y parametrizar los documentos en validacion documental en tipificación de documentos",
     "visible": true
   }
 ]

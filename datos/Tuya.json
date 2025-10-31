@@ -433,10 +433,10 @@
     "title": "Habilitar función de anular el pagaré",
     "assigned": "Faver",
     "state": "Pruebas Cliente",
-    "progress": 90,
+    "progress": 95,
     "startDate": "29/09/2025",
     "endDate": "",
-    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 2: se determina un tiempo de desarrollo de 4 semanas\noct 16: Faver realiza validación del requerimiento, con el fin de tener mas claridad de la solicitud por parte del cliente y el impacto que genera en el aplicativo \noct 23: Se realizan pruebas y se envían evidencias al cliente para pruebas por parte de ellos",
+    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 2: se determina un tiempo de desarrollo de 4 semanas\noct 16: Faver realiza validación del requerimiento, con el fin de tener mas claridad de la solicitud por parte del cliente y el impacto que genera en el aplicativo \noct 23: Se realizan pruebas y se envían evidencias al cliente para pruebas por parte de ellos\noct 31: el cliente informa que las pruebas por parte de ellos fueron exitosas, se esta a la espera del paso a producción",
     "unit": "Tuya",
     "detail": "se requiere esta opción en el aparte de anexos, con el fin de que no se devuelva la acción de anulación. Se debe informar al usuario si esta seguro de realizar la anulación.",
     "visible": true
@@ -490,7 +490,72 @@
     "endDate": "24/10/2025",
     "observations": "",
     "unit": "Tuya",
-    "detail": "Realizar consulta de clientes.",
-    "visible": false
+    "detail": "Realizar consulta de clientes., primer paquete",
+    "visible": true
+  },
+  {
+    "id": "298",
+    "title": "Solicitudes Venta Cartera en Imagine",
+    "assigned": "Faver",
+    "state": "En Proceso",
+    "progress": 100,
+    "startDate": "24/10/2025",
+    "endDate": "",
+    "observations": "Se deben coordinar tiempos con Tuya",
+    "unit": "Tuya",
+    "detail": "Realizar consulta de clientes., segundo paquete",
+    "visible": true
+  },
+  {
+    "id": "299",
+    "title": "Soporte Caso Sarita",
+    "assigned": "Natalia",
+    "state": "Finalizado",
+    "progress": 0,
+    "startDate": "30/10/2025",
+    "endDate": "30/10/2025",
+    "observations": "Se valida caso y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Cliente radica caso en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "300",
+    "title": "Soporte Caso Sarita",
+    "assigned": "Natalia",
+    "state": "Finalizado",
+    "progress": 0,
+    "startDate": "31/10/2025",
+    "endDate": "31/10/2025",
+    "observations": "Se valida caso y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Cliente radica caso en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "301",
+    "title": "Cambiar Servidor",
+    "assigned": "Faver",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "01/10/2025",
+    "endDate": "",
+    "observations": "Se deben coordinar tiempos con Tuya",
+    "unit": "Tuya",
+    "detail": "Se debe realilzar cambio de servidor donde se encuenta aplicativo",
+    "visible": true
+  },
+  {
+    "id": "302",
+    "title": "Montar nuevo volumen",
+    "assigned": "Faver",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "31/10/2025",
+    "endDate": "",
+    "observations": "Se deben solicitar permisos para los servidores de almacenamiento",
+    "unit": "Tuya",
+    "detail": "Se debe realizar montaje de nuevo volumen de almacenamiento",
+    "visible": true
   }
 ]

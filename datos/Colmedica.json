@@ -85,7 +85,7 @@
     "progress": 60,
     "startDate": "01/10/2025",
     "endDate": "",
-    "observations": "[1/10/2025] se prepara el query con el que se debe entregar la información al cliente, y crear una opción por el navegador que permita descargar dicha data",
+    "observations": "[1/10/2025] se prepara el query con el que se debe entregar la información al cliente, y crear una opción por el navegador que permita descargar dicha data\n[3/10/2025] ya disponible la opción nueva y asignar los permisos al rol necesario y inicio gestion para descargar la información\n[6/10/2025] \n[7/10/2025]",
     "unit": "Colmedica",
     "detail": "Base de Usuarios de las vigencias del mes inmediatamente anterior con corte al primero del mes, actualmente se hace manual, crear opción para que se pueda programar tarea automática un correo con el excel generado, las fechas del query corresponden a las vigencias del mes inmediatamente anterior\nselect nombrevigencia,* from tbl_afiliados_informe where nombrevigencia in (20250201,20250215) and fuentelegalizado is null\nand causaexclusiactual in (0,64)\norder by nombrevigencia\ndebe generar un excel con los siquientes campos vigencia,contrato,numben ,tipoid,identificacion,primerapellido,segundoapellido,nombre,plan,vigini,vigfin,tipodecontrato,nit colectivo",
     "visible": true
@@ -442,9 +442,9 @@
     "visible": true
   },
   {
-    "id": "",
+    "id": "OPT_16",
     "title": "Afiliaciones Pos - Menores Duplicados - RC-CN",
-    "assigned": "",
+    "assigned": "JENNIFER",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -452,6 +452,32 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "Control de menores Recien Nacido - Registro Civil duplicados, identificación dentro de contratos diferentes por misma fecha de nacimiento, primer apellido CN es igual al segunto apellido del RC, crear reporte semanal para poder validarlos",
-    "visible": false
+    "visible": true
+  },
+  {
+    "id": "OPT_16",
+    "title": "Afiliaciones Pre - Base datos Inclusiones diarias Cargue",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "31/10/2025",
+    "endDate": "",
+    "observations": "[31/10/2025] Se inicia creando el query para extraer la información que se necesita reportar, y se envía muestra al cliente para que confirme si así estaria bien la entrega",
+    "unit": "Colmedica",
+    "detail": "sea remitir una base diaria de las solicitudes de inclusiones con los datos de residencia y correspondencia del contratante, para poder actualizarlos en Apolo.",
+    "visible": true
+  },
+  {
+    "id": "OPT_17",
+    "title": "Clasificacion Tributaria",
+    "assigned": "JENNIFER",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "Captura de información o datos básico de documento Perfil tributario desde la radicación desde el módulo de convenios médicos, y que alimente lo de clasificacion tributaria",
+    "visible": true
   }
 ]

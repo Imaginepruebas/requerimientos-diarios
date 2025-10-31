@@ -43,7 +43,7 @@
     "title": "Proceso Archivo Nomina Pendiente",
     "assigned": "Faver Lopez",
     "state": "Finalizado",
-    "progress": 90,
+    "progress": 100,
     "startDate": "01/10/2025",
     "endDate": "24/10/2025",
     "observations": "[22/08/2025]: Se crea la estructura y la lectura del archivo, se mapean algunos campos del excel\n[09/09/2025]: Se trabajo en las validacions de devolución y en las transformaciones de las columnas\n[09/09/2025]: Se pasara al ambiente de QA los cambios iniciales\n[19/09/2025]: Se tiene mapeado un 95% de los valores y las reglas a aplicar\n[03/10/2025]: Se completo el mapeo de las columnas del arhcivo de nomina y sus reglas.\n[03/10/2025]: Se han agregado mejoras y procesamiento de diferentes columnas\n",
