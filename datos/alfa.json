@@ -1135,10 +1135,10 @@
     "title": "Modulo Honorarios Jurídicos",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 20,
+    "progress": 80,
     "startDate": "27/10/2025",
     "endDate": "",
-    "observations": "[29/10/2025]: Se avanza en el análisis y diseño del mòdulo requerido por el área de previsionales.",
+    "observations": "[29/10/2025]: Se avanza en el análisis y diseño del mòdulo requerido por el área de previsionales.\n[05/11/2025]: Se avanzo en la construcción de validaciones para consolidar los valores a pagar.\nSe finaliza el modulo para cargar el formato de prefactura y visualizar los casos pendientes de pago.",
     "unit": "Alfa",
     "detail": "Implementar módulo de pago de honorarios juridicos del área Previsionales",
     "visible": true
@@ -1154,6 +1154,45 @@
     "observations": "[29/10/2025]: Se soluciona la incidencia reportada en la validación documental para la tipificación DDEP",
     "unit": "Alfa",
     "detail": "Validar y parametrizar los documentos en validacion documental en tipificación de documentos",
+    "visible": true
+  },
+  {
+    "id": "REN_2025_07",
+    "title": "Validación Documental_Ajuste",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "31/10/2025",
+    "endDate": "31/10/2025",
+    "observations": "[05/11/2025]:Se brinda apoyo a rentas vitalicias en cuanto a la validación documental y unos errores que se estaban presentando con una tipología.",
+    "unit": "Alfa",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "SST_2025_012",
+    "title": "Soporte a Seguridad y Salud en el Trabajo - SST",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "04/11/2025",
+    "endDate": "04/11/2025",
+    "observations": "[05/11/2025]: Se brinda soporte en ALFASST, para la definición de actividades transversales",
+    "unit": "Alfa",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_020",
+    "title": "Soporte a Wilson Aponte",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/11/2025",
+    "endDate": "05/11/2025",
+    "observations": "[05/11/2025]: Se brinda soporte en el ambiente de pruebas de Imaginex para el proceso masivo de certificados",
+    "unit": "Alfa",
+    "detail": "",
     "visible": true
   }
 ]
