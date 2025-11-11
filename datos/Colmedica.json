@@ -492,5 +492,44 @@
     "unit": "Colmedica",
     "detail": "Una vez se cargue la base de correos de los colectivos enviados, se debe enviar dicha base de manera automática al equipo de manteniemento de colectivos del área de Fidelización",
     "visible": false
+  },
+  {
+    "id": "OPT_20",
+    "title": "Afiliaciones Pre - Base datos usuarios menores sin datos de ubicación",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 35,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "envío de una base con la información “si en la solicitud de ingreso los menores de edad vienen con los campos vacíos o en cero en dirección de residencia, teléfono residencia, ciudad, email y celular, se replique la información del contratante y se carguen con los mismos datos. Esto solo para menores de edad y solo si los campos no vienen diligenciados o vienen con dato cero “0”.” De manera semanal , todos los lunes",
+    "visible": true
+  },
+  {
+    "id": "OPT_21",
+    "title": "Afiliaciones Pre - Base datos usuarios mayores que traen los mismos datos de ubicacion del titular",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 35,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "envío de una base con la información “sobre los casos en los que los datos de afiliación de los beneficiarios mayores de edad presenten coincidencias en el correo electrónico y el número de teléfono. Este reporte tiene como objetivo identificar y analizar a los beneficiarios cuya información de contacto sea la misma.”. De manera mensual",
+    "visible": true
+  },
+  {
+    "id": "OPT_22",
+    "title": "Comercial - Error al guardar observación en el Reingreso",
+    "assigned": "JENNIFER",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "",
+    "visible": false
   }
 ]
