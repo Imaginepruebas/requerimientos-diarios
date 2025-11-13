@@ -36,7 +36,7 @@
     "observations": "[19/02/2025] se tuvo sesion Con Juan Angel  para validar como hacer la copia de los documentos y se definio un orden para hacer las trasferencias, se programara la tarea para el 20 de Febrero y se validara el 21 de febrero el resultado \n[21/02/2025] La tarea programada para la trasferencia de las imagenes se ejecuto ayer 20 de febrero y hoy se realizara la  validación de  resultados.\n[24/02/2025] Se realizó la validación, pero no se evidenciaron resultados. Se consultará con la persona encargada para determinar la razón por la cual la transferencia no fue exitosa\n[26/02/2025] Se radica ticket MDSB-770619 solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3.\n[27/02/2025] El Ticket MDSB-770619 escalado a bolivar  solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3 se en cuentra en estado en proceso.\n[28/02/2025] El Ticket MDSB-770619 escalado a bolivar  solicitando apoyo para ejecutar la transferencia de archivos desde el disco FS hacia el bucket S3 se en cuentra en estado en proceso.\n[04/03/2025] No hay avances ni respuestas al ticket  MDSB-770619 sobre el paso de documentos;\n[11/03/2025]: Se comenta el ticket MDSB-770619 solicitando avances en la solicitud o si se requiere alguna información adicional o algún ajuste de nuestra parte para avanzar con la sincronización.\n[13/03/2025]: A un no se obtiene avances del progreso del ticket MDSB-770619.\n[28/03/2025]: Depende de Bolívar para transferir archivos; no hay avances locales por ahora.\n[02/04/2025]: Ayer Infraestructura de Bolivar  realizo la sincronizacion del primer directorio Sincronización de /opt/storage/img04/arp, e indican que seguiran migrando los directorios en las noches ya que generan  afectacion en el servidor.\n[03/04/2025]: Hoy infraestructura  informa la fecha tentativa de finalizacion es el 4 de abril. el dia de hoy estan terminando la carpeta IMG02\n[04/04/2025]: el 3 de abril  en la noche se detuvo la transferencia de documentos debido a que  ocaciono la  caida del servidor a 10:52 pm. \n[07/04/2025]: Confirman finalizacion del paso de documentos, Se solverificar que el tamaño del disco S3 corresponda al mismo del FS.\n[09/04/2025]: De acuerdo a la sesion con infraestructura de bolivar  se  Construira plan de paso Fs a S3, hoy se pasa el faltante y se expone el s3 a producción.\n[10/04/2025]  se confirma paso de toda la informacion MDSB-770619 \n[01/10/2025]: Se tiene previsto iniciar el trabajo de migración alrededor del 15 de octubre. Actualmente infraestructura ya realizó una transferencia hacia un repositorio intermedio (“grandote”), pero es necesario garantizar que la información también se replique en nuestro entorno para validar la integridad de los datos. Se sugiere solicitar a infraestructura un avance formal del estado de la migración, dado que el proceso lleva aproximadamente un mes en ejecución. El equipo considera importante iniciar desde ya la planeación de las pruebas de validación para asegurar que la transferencia se haya completado de manera correcta y sin pérdida de información.\n[06/10/2025]: Se estima un tiempo de implementación de aproximadamente una semana, considerando revisión de sincronizaciones y definición del punto de partida\n[08/10/2025]: Entre el 6 y 7 de octubre se avanzó en el mapeo de campos relacionados con las rutas de almacenamiento (campo BAT) y en la normalización de URLs para garantizar la correcta transferencia de archivos. Se detectaron registros fuera de estándar que serán reportados. Se implementa la lógica para transferencias diarias y eliminación de archivos con más de 90 días, con trazabilidad mediante logs. Se acordó definir una variable de entorno para el almacenamiento híbrido (local y S3), asegurando compatibilidad en los visores y consultas de archivos.\n[09/10/2025]: Se escala control de cambios a test MDSB-907732 para la creación del esquema  auditoria y de la tabla auditoria.verificacion_efs_s3. Control de cambios ejecutado con exito.    \n[09/10/2025]:  Se escala control de cambios a Producción MDSB-907823 para la creación del esquema  auditoria y de la tabla auditoria.verificacion_efs_s3.\n[10/10/2025]: Durante los días anteriores se avanzó en múltiples tareas asociadas al requerimiento.\nSe implementó y probó con éxito la lógica de sincronización diaria de los archivos del día anterior, con un tiempo promedio de ejecución de 6 minutos.\nSe desarrolló e implementó la lógica para eliminación automática de archivos del disco FS con más de 90 días de antigüedad, validada en el entorno PRUN mediante pruebas exitosas.\nSe ajustó la lógica de consulta de archivos desde las aplicaciones, la cual ya se encuentra funcional.\nSe creó un control de certificación de migración, que valida la existencia de los archivos en S3\n[15/10/2025]: El proceso de migración se encuentra finalizado en un 95 %. Falta aprobación del control de cambios para ejecutar las pruebas en producción y completar la verificación de registros. El script de validación está implementado y funcional.\n[17/10/2025]: A la espera de la aprobación de control de cambios para ejecutar los scripts en producción y validar la integridad de la información migrada.\n[20/10/2025]: En espera de aprobación del control de cambios por parte del  QA (Ricardo) para poder continuar con la sincronización de archivos\n[24/10/2025]: El control de cambios se ejecutó correctamente en el ambiente de producción; sin embargo, se evidenció que faltan los permisos necesarios para acceder a la tabla. \n[27/10/2025]: Se escala control de cambios MDSB-918655 para los permisos requeridos.\n[29/10/2025]: Control de cambios  MDSB-918655 ya obtuvo las aprovaciones necesarias para avanzar, se estima sea incluido en el comité  de cambios digitales de hoy, una vez ejecutado se continuará con la verificación y validación de las imágenes transferidas. \n[05/11/2025]: Control de cambios  MDSB-918655 ejwcutado con exito el  29 de octubre, a hoy no se \n[11/11/2025]: Requerimiento cancelado según instrucción de la gerencia de Imagine.",
     "unit": "Bolivar",
     "detail": "Fecha de entrega al clente: 10/11/2025",
-    "visible": true
+    "visible": false
   },
   {
     "id": "GD772-64",
@@ -289,11 +289,11 @@
     "id": "GD772-109",
     "title": "Lectura de nuevos datos de ordenes medicas  con IA",
     "assigned": "DANILO",
-    "state": "Cancelado",
-    "progress": 70,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "14/05/2025",
     "endDate": "11/11/2025",
-    "observations": "[11/08/2025]: El viernes 8 de agosto se agregan nuevos registros para entrenamiento. Se prevé entregar esta semana un porcentaje estimado de precisión del modelo.\n[20/08/2025]: El 15 de agosto se agregó nueva información de órdenes médicas para entrenamiento. El modelo ya alcanza más del 70% de efectividad en lecturas. Se prevé que con poca información adicional quede listo para uso.\n[29/08/2025]: Se realizara adicion de registros para entrenamiento durante el fin de semana.\n[07/11/2025]: Proximo a reiniciar ejecucion, Se acordó enfocar el entrenamiento en dos formatos específicos para optimizar tiempo y precisión. El ajuste se realizará tanto en la lógica como en las expresiones regulares (regex) para mejorar la identificación de los formatos. Se estima un tiempo de uno a dos días para completar los ajustes y pruebas.\n[11/11/2025]: Requerimiento cancelado según instrucción de la gerencia de Imagine",
+    "observations": "[11/08/2025]: El viernes 8 de agosto se agregan nuevos registros para entrenamiento. Se prevé entregar esta semana un porcentaje estimado de precisión del modelo.\n[20/08/2025]: El 15 de agosto se agregó nueva información de órdenes médicas para entrenamiento. El modelo ya alcanza más del 70% de efectividad en lecturas. Se prevé que con poca información adicional quede listo para uso.\n[29/08/2025]: Se realizara adicion de registros para entrenamiento durante el fin de semana.\n[07/11/2025]: Proximo a reiniciar ejecucion, Se acordó enfocar el entrenamiento en dos formatos específicos para optimizar tiempo y precisión. El ajuste se realizará tanto en la lógica como en las expresiones regulares (regex) para mejorar la identificación de los formatos. Se estima un tiempo de uno a dos días para completar los ajustes y pruebas.\n[11/11/2025]: Requerimiento Finalizado según instrucción de la gerencia de Imagine",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -565,10 +565,10 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
-    "endDate": "24/06/2025",
-    "observations": "",
+    "endDate": "25/06/2025",
+    "observations": "[24/06/2025]: Se inicia ajuste\n[25/06/2025]: Se realiza paso a producción ",
     "unit": "Bolivar",
-    "detail": "",
+    "detail": "ADICIONAR INFORMACIÓN DE TENGO DUDAS DE MIS REEMBOLSOS AL INFORME CONSOLIDADO",
     "visible": true
   },
   {
@@ -855,7 +855,7 @@
     "observations": "[03/09/2025]: La revisión aún no ha sido iniciada. Se requiere programación de espacio de tiempo para ejecutar esta validación.\n [07/11/2025]: No se continúa utilizando herramientas alternas, el requerimiento se da por  cancelado.",
     "unit": "Bolivar",
     "detail": "",
-    "visible": true
+    "visible": false
   },
   {
     "id": "GD772-119",
@@ -886,15 +886,15 @@
   {
     "id": "GD772-120_1",
     "title": "Documentación técnica (\nBloqueo de facturas radicadas con información sensible y de manejo confidencial)",
-    "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "assigned": "FABIO",
+    "state": "En Proceso",
+    "progress": 80,
+    "startDate": "17/09/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[17/09/2025]: Ducumentación tecnica entregada por Jairo\n",
     "unit": "Bolivar",
     "detail": "",
-    "visible": true
+    "visible": false
   },
   {
     "id": "INTERNO-JA021",
@@ -1206,7 +1206,7 @@
     "observations": "[30/07/2025]: Se está explorando un modelo híbrido de almacenamiento entre FS y S3. FS almacenaría temporalmente, S3 como histórico (>30 días).\n[01/08/2025]: El tema aún no ha sido abordado ni discutido con Bolívar. Se está a la espera de su decisión respecto a la implementación de días hábiles y detalles del modelo.\n[04/08/2025]:  Se dejó en pausa para atender el requerimiento del informe de reembolsos.\n  [07/11/2025]: Se definió no continuar con la implementación, se da por cancelado  por la gerencia.",
     "unit": "Bolivar",
     "detail": "",
-    "visible": true
+    "visible": false
   },
   {
     "id": "GD772-123",
@@ -1303,11 +1303,11 @@
     "id": "GD772-124_1",
     "title": "Error de Esquema en Tablas (Cuentas Médicas / Public) Req actualización de datos y quiero ser proveedor ",
     "assigned": "JAIRO",
-    "state": "Reanudar",
-    "progress": 0,
-    "startDate": "",
+    "state": "Control Cambios Test",
+    "progress": 50,
+    "startDate": "12/11/2025",
     "endDate": "",
-    "observations": "[29/10/2025]: Pendiente ejecutar un control de cambios en test para unificar esquemas y asegurar la coherencia entre ambientes.\n[07/11/2025]: Se estima solicitar hoy el cambio requerido.",
+    "observations": "[29/10/2025]: Pendiente ejecutar un control de cambios en test para unificar esquemas y asegurar la coherencia entre ambientes.\n[07/11/2025]: Se estima solicitar hoy el cambio requerido.\n[12/11/2025]: Se escala control de cambios a test  MDSB-928600",
     "unit": "Bolivar",
     "detail": "Se identificó un error en la creación de tablas en el esquema equivocado (TES: public / Producción: cuentas médicas).",
     "visible": true
@@ -1770,7 +1770,7 @@
   {
     "id": "INTERNO-JA018",
     "title": "Documento tecnico GD852-72Ajustar lago de datos  (informes Cuentas Médicas)",
-    "assigned": "JAIRO",
+    "assigned": "FABIO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -1778,6 +1778,32 @@
     "observations": "",
     "unit": "Bolivar",
     "detail": "",
+    "visible": true
+  },
+  {
+    "id": "INTERNO-F011",
+    "title": "Actualización de requerimientos de Reembolsos en el tablero.",
+    "assigned": "FABIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "12/11/2025",
+    "endDate": "12/11/2025",
+    "observations": "[12/11/2025]: Se realiza actualizacion ",
+    "unit": "Bolivar",
+    "detail": "Se necesita actualiza o incluir todos los  requerimientos que se han desarrollado  para reembolsos",
+    "visible": true
+  },
+  {
+    "id": "MDSB-928468",
+    "title": "Jiras dia a dia (NO PERMITE GENERAR REEMBOLSO POR POLIZA DE SALUD )",
+    "assigned": "FABIO",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "13/11/2025",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "“NO PERMITE GENERAR REEMBOLSO POR POLIZA DE SALUD “\n\nNO PERMITE GENERAR REEMBOLSO POR POLIZA DE SALUD \n\nPor favor contactarse con la cliente para valdiar el proceso se adjunta video con  la explicación de la cliente \n\nAlejandra Parra\n18 mayo 1991\nalejandraparrasalazar@gmail.com\n3188645467\n\n1136883142",
     "visible": true
   },
   {
@@ -1931,7 +1957,7 @@
     "progress": 65,
     "startDate": "16/09/2025",
     "endDate": "24/10/2025",
-    "observations": "[16/09/2025]: El 15 de septiembre se escala  ticket MDSB-891056  solicitando el aprovisionamiento de una máquina en la nube para el entrenamiento del modelo AI de Oficina Express,\n[19/09/2025]: No se reportan avances recientes, el progreso depende de otro integrante (Cliente) y no ha habido movimientos en el requerimiento.\n[22/09/2025]: El Viernes 20 de septiembre se resolvieron las dudas en reunión previa y se avanzó en el desarrollo.\n[23/09/2025]: 22 de septiembre confirman creación de la maquina solicitada.\n[24/09/2025]: Se avanzó en la implementación del modelo y del backend con su respectivo API, incluyendo entrenamiento inicial y pruebas. Se instaló la librería en la nueva instancia y se trabaja en la configuración de DNS para permitir el consumo desde otras instancias.\n[25/09/2025]: Se esta montando el modelo en la instancia y probando la conexión con el dataset\n[26/09/2025]: Se encuentra implementando la  instancia, y  se  identificó que la instancia entregada tiene menor capacidad de la solicitada lo cual sera reportado hoy.\n\n[29/09/2025]: se reportó por correo que dicha instancia no cumplía con las especificaciones indicadas en el ticket, situación que fue corregida mediante el cambio a una nueva instancia. Sin embargo, la instancia anterior fue eliminada, por lo que actualmente se encuentra en proceso de reinstalación de librerías y configuración en la nueva instancia.”, Se espera finalizar instalación y publicación en test del servicio API.\n[01/10/2025]: El modelo ya fue montado en la instancia y se encuentra en entrenamiento con datos reales. Sin embargo, el avance está limitado por la falta de comunicación entre servidores, necesaria para exponer el modelo como API y realizar pruebas de consumo. También se requiere acceso a la base de datos de producción para facilitar la extracción de información y garantizar un entrenamiento más alineado con el entorno final.\n[03/10/2025]:  Se avanzó en el entrenamiento del modelo con tipologías depuradas, ajustando la información a 29 clases, aunque actualmente solo se entrenan 8 por falta de insumos. Persiste la limitación de conexión directa a producción, pero el proceso está casi listo para pruebas de radicación.\nSe identificó que no existía conexión desde la instancia imaginex_ec2_private1 (i-01100c19c4e024efe) hacia la nueva instancia oficinaexpress-new-imaginex-stage-ec2. La situación se escaló mediante el ticket MDSB-903680, en el cual informan que ya se realizaron los ajustes requeridos para habilitar la conexión\nProbando modelo con datos extraidos de producciñon\n[06/10/2025]: Se avanzó en la implementación de la lógica para la radicación de casos; sin embargo, persisten dificultades de acceso a los ambientes de pruebas (TES), las cuales se espera resolver hoy. Se logró restablecer las credenciales de la VPN y se prevé finalizar el desarrollo entre hoy y mañana, dependiendo del restablecimiento de accesos.\n[22/10/2025]: El 21 de Octubre se realizó el análisis de la documentación enviada por Freddy y se depuró el listado de tipologías a entrenar, quedando en 48 tipologías seleccionadas para el modelo con el fin de reducir ruido y mejorar estabilidad.\n[23/10/2025]: Se reciben manuales de autorizaciones, Reembolsos e incapacidades, faltando  modalidades  y proveedores.\nSe definen 63 tipologias finales para el entrebamiento del modelo.\n[24/10/2025]: El requerimiento presenta avance significativo en la lógica y configuración del modelo IA, con resultados estables en local. Está previsto desplegar los cambios en ambiente de Test durante el día para iniciar pruebas la próxima semana.\n[27/10/2025]: El componente ya fue desplegado en ambiente de test el 24 de octubre e integrado con los elementos funcionales requeridos. Actualmente se trabaja en el entrenamiento con datos reales para incrementar el nivel de confianza en las respuestas del modelo\n[29/10/2025]: Se continúa con el mejoramiento de la lógica y diseño del modelo, además del entrenamiento\n[31/10/2025]: El modelo se encuentra en fase de entrenamiento y ajuste de parámetros\nPendiente: Finalizar entrenamiento y entregar el modelo con datos ajustados antes de finalizar la semana.\n[05/11/2025]: Se realizó la presentación del desarrollo al cliente, mostrando el funcionamiento del modelo de inteligencia artificial en la clasificación de solicitudes dentro de Oficina Express.\nDurante la sesión, se definió que el modelo debe permitir, además, radicar los casos una vez finalizada la clasificación, iniciando el proceso formal de radicación de solicitudes ARL.\nEn atención a esta nueva necesidad, se acordó iniciar el desarrollo complementario\n despues de realizar la clasificación, para lo cual se debe iniciar con el desarrollo \n[07/11/2025]: Se avanzó en la configuración de parámetros y consumo de servicios. Se está utilizando información histórica de la base de datos para pruebas mientras se definen los insumos definitivos.\n[10/11/2025]: Pendiente reactivar pruebas una vez se solucione el problema de replicación y AJUSTE VENTANA ERROR EN PORTALES",
+    "observations": "[16/09/2025]: El 15 de septiembre se escala  ticket MDSB-891056  solicitando el aprovisionamiento de una máquina en la nube para el entrenamiento del modelo AI de Oficina Express,\n[19/09/2025]: No se reportan avances recientes, el progreso depende de otro integrante (Cliente) y no ha habido movimientos en el requerimiento.\n[22/09/2025]: El Viernes 20 de septiembre se resolvieron las dudas en reunión previa y se avanzó en el desarrollo.\n[23/09/2025]: 22 de septiembre confirman creación de la maquina solicitada.\n[24/09/2025]: Se avanzó en la implementación del modelo y del backend con su respectivo API, incluyendo entrenamiento inicial y pruebas. Se instaló la librería en la nueva instancia y se trabaja en la configuración de DNS para permitir el consumo desde otras instancias.\n[25/09/2025]: Se esta montando el modelo en la instancia y probando la conexión con el dataset\n[26/09/2025]: Se encuentra implementando la  instancia, y  se  identificó que la instancia entregada tiene menor capacidad de la solicitada lo cual sera reportado hoy.\n\n[29/09/2025]: se reportó por correo que dicha instancia no cumplía con las especificaciones indicadas en el ticket, situación que fue corregida mediante el cambio a una nueva instancia. Sin embargo, la instancia anterior fue eliminada, por lo que actualmente se encuentra en proceso de reinstalación de librerías y configuración en la nueva instancia.”, Se espera finalizar instalación y publicación en test del servicio API.\n[01/10/2025]: El modelo ya fue montado en la instancia y se encuentra en entrenamiento con datos reales. Sin embargo, el avance está limitado por la falta de comunicación entre servidores, necesaria para exponer el modelo como API y realizar pruebas de consumo. También se requiere acceso a la base de datos de producción para facilitar la extracción de información y garantizar un entrenamiento más alineado con el entorno final.\n[03/10/2025]:  Se avanzó en el entrenamiento del modelo con tipologías depuradas, ajustando la información a 29 clases, aunque actualmente solo se entrenan 8 por falta de insumos. Persiste la limitación de conexión directa a producción, pero el proceso está casi listo para pruebas de radicación.\nSe identificó que no existía conexión desde la instancia imaginex_ec2_private1 (i-01100c19c4e024efe) hacia la nueva instancia oficinaexpress-new-imaginex-stage-ec2. La situación se escaló mediante el ticket MDSB-903680, en el cual informan que ya se realizaron los ajustes requeridos para habilitar la conexión\nProbando modelo con datos extraidos de producciñon\n[06/10/2025]: Se avanzó en la implementación de la lógica para la radicación de casos; sin embargo, persisten dificultades de acceso a los ambientes de pruebas (TES), las cuales se espera resolver hoy. Se logró restablecer las credenciales de la VPN y se prevé finalizar el desarrollo entre hoy y mañana, dependiendo del restablecimiento de accesos.\n[22/10/2025]: El 21 de Octubre se realizó el análisis de la documentación enviada por Freddy y se depuró el listado de tipologías a entrenar, quedando en 48 tipologías seleccionadas para el modelo con el fin de reducir ruido y mejorar estabilidad.\n[23/10/2025]: Se reciben manuales de autorizaciones, Reembolsos e incapacidades, faltando  modalidades  y proveedores.\nSe definen 63 tipologias finales para el entrebamiento del modelo.\n[24/10/2025]: El requerimiento presenta avance significativo en la lógica y configuración del modelo IA, con resultados estables en local. Está previsto desplegar los cambios en ambiente de Test durante el día para iniciar pruebas la próxima semana.\n[27/10/2025]: El componente ya fue desplegado en ambiente de test el 24 de octubre e integrado con los elementos funcionales requeridos. Actualmente se trabaja en el entrenamiento con datos reales para incrementar el nivel de confianza en las respuestas del modelo\n[29/10/2025]: Se continúa con el mejoramiento de la lógica y diseño del modelo, además del entrenamiento\n[31/10/2025]: El modelo se encuentra en fase de entrenamiento y ajuste de parámetros\nPendiente: Finalizar entrenamiento y entregar el modelo con datos ajustados antes de finalizar la semana.\n[05/11/2025]: Se realizó la presentación del desarrollo al cliente, mostrando el funcionamiento del modelo de inteligencia artificial en la clasificación de solicitudes dentro de Oficina Express.\nDurante la sesión, se definió que el modelo debe permitir, además, radicar los casos una vez finalizada la clasificación, iniciando el proceso formal de radicación de solicitudes ARL.\nEn atención a esta nueva necesidad, se acordó iniciar el desarrollo complementario\n despues de realizar la clasificación, para lo cual se debe iniciar con el desarrollo \n[07/11/2025]: Se avanzó en la configuración de parámetros y consumo de servicios. Se está utilizando información histórica de la base de datos para pruebas mientras se definen los insumos definitivos.\n[10/11/2025]: Pendiente reactivar pruebas una vez se solucione el problema de replicación y AJUSTE VENTANA ERROR EN PORTALES\n[12/11/2025]: Se realiza presentacion de avances el grupo  de imagiene y gerencia.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -2594,7 +2620,7 @@
     "progress": 70,
     "startDate": "05/11/2025",
     "endDate": "",
-    "observations": "[05/11/2025]: Se dara inicio a los ajustes  deacuardo al requrimiento.\n[07/11/2025]:  Se estima entregar el 50% el martes  11 de noviembre  y  el otro 50%  el martes 18.\n[10/11/2025]: Se avanza en ajustes, restan los temas de valores y cambio de área para permitir digitación. La mayoría de puntos están listos para pasar a test.\n[11/10/2025]: Se solicita extender el plazo de entrega por incidencias en la radicación automática de facturas presentadas el 11 de noviembre.Nuevas fechas: 2 de noviembre (1.ª entrega) y 21 de noviembre (2.ª entrega).",
+    "observations": "[05/11/2025]: Se dara inicio a los ajustes  deacuardo al requrimiento.\n[07/11/2025]:  Se estima entregar el 50% el martes  11 de noviembre  y  el otro 50%  el martes 18.\n[10/11/2025]: Se avanza en ajustes, restan los temas de valores y cambio de área para permitir digitación. La mayoría de puntos están listos para pasar a test.\n[11/10/2025]: Se solicita extender el plazo de entrega por incidencias en la radicación automática de facturas presentadas el 11 de noviembre.Nuevas fechas: 2 de noviembre (1.ª entrega) y 21 de noviembre (2.ª entrega).\n[12/11/2025]: De los 8 puntos del desarrollo, se completaron 6. Quedan pendientes el ajuste de cambio de área (a la espera de definición del usuario) y el cambio de valor, que requiere una reingeniería más amplia para no alterar los cálculos",
     "unit": "Bolivar",
     "detail": "OBJETIVO:\nSe requiere realizar ajustes en el desarrollo actual de reembolsos con el fin de optimizar tiempos en la gestión de respuesta\n\nREQUERIMIENTOS FUNCIONALES:\n\n1. INCLUIR NOTA EN LA COMUNICACIÓN DE DEVOLUCIÓN DE REEMBOLSOS \nSe requiere que cuando se de clic en el botón denominado “ devolución de reembolso “ se agregue a la notificación remitida por el correo la observación por la cual se está realizando la devolución, esta nota se captura en el campo de observación que se muestra a continuación:\nEsta observación debe alimentar el formato de respuesta el cual se relaciona a continuación : Devolución Reembolsos\n\n\n2. TRASLADAR CASO DE SALUD A ARL Y DE ARL A SALUD\nSe requiere habilitar un botón en la gestión del caso que permita trasladar el caso a la gestión de REE SALUD, para que quede en la actividad digitación de reembolso en salud y allí se capture la información correspondiente ,\n\n3. Editar el valor capturado\n\nSe requiere habilitar el botón editar sobre el campo total con el fin de que el perfil de analista pueda editar el valor digitado , esta actividad solo se podrá realizar solamente antes de que se dispare el botón “ radicación sisalud reembolso”\n\n4. Habilitar botón de retoma de casos \n\nSe requiere habilitar el botón de retoma de caso para los perfiles de auditoría y analista en los casos que se encuentran en estado pendiente:\n\n\n5 Agregar tipo de documento\n\nSe requiere agregar a la lista de documentos el documento que se encuentra creado como PT “ Permiso Temporal “ esto con el fin de poder realizar el envío de servicio entre sisalud e imagine con este tipo de documento:\n\n6.Inscripción de cuenta radicación \nSe requiere que cuando los asegurados realicen la radicación y marquen que no tiene una cuenta inscrita en el aplicativo se habilita únicamente el formulario de inscripción de cuenta, tal como se muestra a continuación:\n\nSe requiere un hablador que indique lo siguiente : “Para garantizar el pago de los reembolsos a cuenta bancaria o billetera electrónica, se requiere el diligenciamiento del formulario.”\n7.Adjuntos en la respuesta\n\nSe requiere que para todas las causales de respuesta“ devolución reembolsos, glosa total reembolsos , Glosa parcial, pagado en validación” , se habilite un campo de examinar para poder remitir archivos complementarios en la respuesta , los formatos que se pueden adjuntar allí son “ xlsx, csv, pdf jpg png..” este campo no será obligatorio para la gestión de la respuesta\n\n8. Modificación texto de radicación respuestas:\n\nSe requiere ajustar todas las plantillas de respuesta debido a la modificación que se tiene de radicación se adjunta documento con las modificaciones realizadas\n\n\n\n\n\n\n",
     "visible": true
@@ -2909,6 +2935,214 @@
     "observations": "[27/10/2025]: Iniciara con la configuración de los sitios en local \n[31/10/2025]: Se avanza en la implementación del segundo factor de autenticación con validaciones de usuario y contraseña operativas en Laravel.\nPendiente:\nAjustar el control del flujo de autenticación para evitar logueo sin validación.\nIntegrar el flujo de listas blancas (usuarios exentos del doble factor).\nDefinir tiempo de expiración del token según políticas de seguridad (30 minutos actuales deben revisarse). \nSe escala Control de cambios MDSB-921839 a test.\nControl de cambios genero error  por lo cual se genero el MDSB-922162\n[04/11/2025]: Control de cambios ejecutado con exito \n[05/11/2025]: Se continúa con el ajuste final del desarrollo en Laravel, una vez concluya las pruebas locales, procederá a migrar el desarrollo a los demás sitios uno a uno y dejarlo en ambiente de test, para posteriormente definir quién realizará el despliegue a producción.\n[07/11/2025]: El 28 de octubre se envian HU  al cliente para su aprobación,Pendiente confirmación de tiempos de vigencia del token y unificación del proceso de autenticación. Enviada solicitud a Seguridad para definir tiempos de expiración\n[07/11/2025]: Ciente confirma que el tiempo del token debe ser de 1 minuto y no autorizan la unificación del proceso de autenticación.\n",
     "unit": "Bolivar",
     "detail": "Fecha de entrega al cliente: 14/11/2025\n\nDoble factor de autenticación  \n1. DESCRIPCIÓN DEL REQUERIMIENTO   \nSe requiere crear un doble factor de autenticación como control de seguridad en   \nambientes de test y producción para todos los aplicativos (nativo, YII, laravel)  \n1.2 OBJETIVO  \n Crear un doble factor de autenticación por correo electrónico  \n1.3 EQUIPO DE TRABAJO  \nNombre Área  \nLeidy Mayorga Administrativo  \n2. REQUERIMIENTOS FUNCIONALES  \n2.1 Creación de un doble factor de autenticación  \nSe requiere que al momento de loguearse los aplicativos nativo, YII y laravel soliciten   \nun doble factor de autenticación, el cual deberá ser remitido al correo electrónico   \nregistrado, teniendo en cuenta:  \n1. Si el usuario únicamente está en nativo deberá tomar el correo electrónico   \nregistrado   \n2. Si el usuario está en nativo y otro aplicativo (YII y laravel), deberá tomar el   \ncorreo electrónico registrado en nativo y homologarlo en todos los aplicativo;   \ngarantizando que en todos los aplicativos tenga el mismo correo electrónico.  \n3. Cuando se actualice un correo electrónico automáticamente se debe actualizar   \npara el doble factor de autenticación.  \nUna vez llegue el código del doble factor al correo electrónico, el usuario deberá   \nregistrarlo en el aplicativo para el acceso.  \nEl doble factor debe salir por Exchange.\nSEGUROS BOLÍVAR S.A.  \nOFICINA DE PROYECTOS (PMO)  \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO DE USUARIO   \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO _ Versión Septiembre 2012  \nEste documento es propiedad intelectual de Seguros Bolívar S.A. Prohibido el uso, reproducción y/o distribución sin autorización de la compañía.  \n2  \n2.2 Omisión en listas blancas por usuario  \nSe requiere que al momento de loguearse no solicite el doble factor de autenticación   \npara los usuarios o IP que registran en las listas blancas, la omisión deberá aplicar para   \nnativo, YII y laravel.   \nSe debe poder incluir y eliminar IP y usuarios de la lista.  \nEsto con el propósito de mantener los RPA actuales.  \n2.3 Consulta listas blancas  \nSe requiere que las restricciones de listas blancas sean identificadas, por lo cual es   \nnecesario que en el módulo de consulta registre:  \n IP o usuario  \n Fecha en la cual se registro  \n Usuario que registró  \n Estado (activo o inactivo de la lista blanca)  \nEsto con el objetivo de conocer el estado de los usuarios e IP omitidas sin necesidad   \nde consultar el usuario puntual , si no que muestre las existentes.",
+    "visible": true
+  },
+  {
+    "id": "GD772-65",
+    "title": "Ajuste informe de Reembolsos ",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "07/01/2025",
+    "endDate": "08/01/2025",
+    "observations": "[13/01/2025]: Se realizo gestión de JIRA el pasado [08/01/2025]",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-72",
+    "title": " ( GD772-101) Requerimiento Captura de datos e informe (Reembolsos)",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "10/03/2025",
+    "endDate": "11/04/2025",
+    "observations": "[10/03/2025]: Inicia con el desarrollo del requerimiento.\n[11/03/2025]: Completó el CRUD de RETUS y la tabla de tipos de documentos, avanzando al 20% en este requerimiento.\n[12/03/2025]: El dia 11 de marzo se pausa desarrollo  ya que se encuentra trabajando en la presentación del modulo de facturas para Colmena.\n[13/03/2025] Retoma desarrollo del requerimiento, después de la entrega GD772-85 Cambio en el 2do envio de EPS (Imprimir valores del IVA).\n[14/03/2025]: Se encuentre trabajando en el CRUD de la tabla de proveedores.\n[17/03/2025]: El viernes completo los puntos 3, 4 y 5, y está en el sexto \" Creacion de tabla terceros autorizados\"\n[18/03/2025]: Avanzó en el sexto punto, creando la tabla de terceros y mostrando datos en la consulta; hoy trabajará en los informes, se escala control de cambios MDSB-782279 para test.\n[19/03/2025]: Terminó el query del punto 6 y lo pasó a control de cambios en test; tiene el informe casi listo (falta probarlo por falta de datos), y hoy subirá los cambios parciales, dejando pendientes el informe de digitación, retoma y adición de dudas \n[20/03/2025]: Está en test; ayer hizo pruebas preliminares con Jenry, faltan afinar el informe principal y comenzar el informe de digitación y retoma de dudas.\n[20/03/2025] : Se escala otr control de cambios en test  MDSB-784341 \n[21/03/2025]: Está en test; ayer corrigió el informe principal (aún sin pasar), y se ejecutó el control de cambios MDSB-784341 para añadir una columna a ctaslocalfactura_br; pendiente iniciar el informe de digitación y retoma de dudas.\n[25/03/2025]:  Resolvió el informe de digitación (punto 8); faltan el punto 9 (Retoma Caso Dudas sobre Mis Reembolsos) y el punto 10 (Adición de Dudas sobre Mis Reembolsos), que trabajará hoy.\n[26/03/2025]:Avanzó en el punto 9 (Retoma Caso Dudas sobre Mis Reembolsos), pero tuvo dudas al no poder usar la misma vista; espera terminarlo hoy, faltando el punto 10 (Adición de Dudas).\n[27/03/2025]:  Falta completar el informe \"Dudas de Reembolsos\"  recolecta datos tras correcciones y lo subirá a test cuando esté listo.  \n[28/03/2025]: Terminó todo (informes y reasignación de dudas); hoy lo subirá a test para pruebas.\n[31/03/2025]: El viernes mostró a Santiago los cambios solicitados; terminó el informe de digitación con analítica de datos (usando Python, Pandas y React), que está listo en local y se planea subir a producción tras validación, El requerimiento queda en pruebas por Bolivar.\n[01/04/2025]: Ayer mostro el informe de digitación a Jenry y lo subio a test.\n[03/04/2025]: Ayer subió a test la retoma del caso, número en consistencia y paso de moneda extranjera a Auditor; se programará reunión con Santiago para validar.\n[04/04/2025]: Bolivar confirma paso a produccion, se debera solicitar control de cambios en produccion.\n[09/04/2025]: Se escala control de cambios MDSB-794007 a producción\n[10/04/2025]: Ayer se aprobo el control de  cambios  MDSB-794007 y se ejecutara hoy a las 4 pm.\n[11/04/2025]: Ayer pasó a producción (sin tipología internacional); hoy enviará un script con índices para control de cambios en producción para atar este requerimiento; pendiente añadir roles y permisos.\n[11/04/2025]: Se crea control de cambios en test  MDSB-795919 (indices).",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-73",
+    "title": "GD772-73  Agregar al informe de numero de solicitu  que devuelve el servicio",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "20/01/2025",
+    "endDate": "21/01/2025",
+    "observations": "[20/01/2025]: Se inicia requerimiento el día de hoy [20/01/2025] se entregara el [22/01/2025]\n[21/01/2025]: Se finaliza req se encuentra en prod",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-75",
+    "title": "Simular radicación cuando el servicio sisalud arroja error agregrar tipo y número de documento ",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/01/2025",
+    "endDate": "23/01/2025",
+    "observations": "[21/01/2025]: Se realiza radicación de JIRA\n[23/01/2025]: Se finaliza req se encuentra en prod",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-76",
+    "title": "Contar días habiles despues de reabierto el caso y ajuste en el informe ",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/01/2025",
+    "endDate": "23/01/2025",
+    "observations": "[21/01/2025]: Se realiza radicación de JIRA\n[23/01/2025]: Se finaliza req se encuentra en prod",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-77",
+    "title": "Informe de inconsistencias ",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/01/2025",
+    "endDate": "23/01/2025",
+    "observations": "[21/01/2025]: Se realiza radicación de JIRA\n[23/01/2025]: Se finaliza req se encuentra en prod",
+    "unit": "Bolivar",
+    "detail": "Se requiere informe de inconsistencias par areembolsos salud tal como se tiene actualmente en cuentas médicas se adjunta estrcutra requerida",
+    "visible": true
+  },
+  {
+    "id": "GD772-91",
+    "title": "Tipología sin flujo de radicación sisalud (Escalar dudas Reembolsos)",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "07/02/2025",
+    "endDate": "13/03/2025",
+    "observations": "[06/03/2025]: El control de cambios sigue pendiente de aprobación por QA; Santiago subió evidencias, y esperan la colaboración de Luz para avanzar en JIRA.\n\n[07/03/2025] ; Control de cambios MDSB-772592 aprobado por QA y se encuentra pendiente por aprobación de Aprobación PO / Usuario Final.\n[10/03/2025]; El control de cambio se encuentra programado  para hoy al comité de cambios digitales\n[11/03/2025]: El control de cambios para la nueva tipología ya se ejecutó; está listo para pasar a producción hoy.\n[12/03/2025]: Realizara paso a producción al final de la tarde.\n[13/03/2025] : Se realiza paso a produccion ayer en la tarde,se notifica al  clente para  realizar pruebas funcionales.",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-92",
+    "title": "Malla CUPS en Nativo",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "20/03/2025",
+    "endDate": "02/04/2025",
+    "observations": "[20/03/2025]: Creará scripts para solicitar control de cambios en test e iniciará el desarrollo hoy.\n[21/03/2025]:Creó un script para una nueva tabla y solicitó el control de cambios MDSB-784148 en test ayer; está terminando la vista del cargue del archivo y luego añadirá el campo para ingresar el número CUPS en el visor de imágenes en  la actividad “Atención de la solicitud”.  \n[25/03/2025]: El viernes terminó el cargue del documento con el listado de CUPS (carga/actualiza); avanzó en la vista de imágenes con un botón y lógica condicional para la actividad específica, pero está pendiente la ejecucion del control de cambios MDSB-784148 en test. .\n[26/03/2025]: Ayer terminó hasta el punto 3 (Regla de asignación), pero necesita más pruebas; falta el punto 4 (informe), en el que trabajará hoy.\n[27/03/2025]: Ayer optimizó consultas para reducir costo computacional y está terminando el informe (punto 4); todo estará listo a las 10 a.m. para test.\n[31/03/2025]: El viernes en la tarde realiza ajustes  de los hallasgos reportados en las pruebas, hoy se validaran en test..\n[01/04/2025]: Se realizara los  ajustes  pendientes y los que sugan de las pruebas de hoy.\n[02/04/2025].trabajara  en la administración de tipologías, activar los flujos para su edición\n[03/04/2025]: Finaliza  ajuste en  en la administración de tipologías, Ayer  se presento desarrollo al cliente  y aprueba  paso  a produccion, se escala control de cambios MDSB-790997.\n[04/04/2025]: Pendiente cargue al requriemiento de las pruebas de Bolivar en test  para  continuar con el proceso del control de cambios MDSB-790997.\n[07/04/2025]: Pruebas adjuntas al  requerimiento y control de cambios MDSB-790997 pasa a Aprobacion QA de bolivar\n[09/04/2025]: Ayer Se realiza  paso a produccion.",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-93",
+    "title": "Ajuste comunicado Glosa Parcial",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "20/03/2025",
+    "endDate": "10/04/2025",
+    "observations": "[01/04/2025]: Se encuentra pendiente de iniciar hasta que termine los ajustes de glosa parcial \n[08/04/2025]: Se realiza paso a produccion el dia 10 de abril\n[10/04/2025]: Se realiza paso a producción ",
+    "unit": "Bolivar",
+    "detail": "Se requiere ajustar el texto de la plantilla de respuesta de Glosa Parcial tal como se muestra en el siguiente enlace",
+    "visible": true
+  },
+  {
+    "id": "GD772-94 ",
+    "title": "tablero de analisis de la operación de reembolsos",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "09/04/2025",
+    "endDate": "12/04/2025",
+    "observations": "[07/04/2025]:Iniciara tan pronto finalice las vulnerabilidades pendientes.\n[09/04/2025]: Ayer Danilo no avanzó por vulnerabilidades; hoy inicia la implementación, coordinará con Jairo (extrae datos del informe); estiman 3-4 días (hasta el jueves o viernes)\n[10/04/2025]: No avanzó ayer por otras prioridades; hoy dedicará tiempo y coordinará con Jairo para el contexto; estiman 3-4 días. \n[11/04/2025]: Ayer ajustó el API del informe de digitación (puerto 888 en producción); hoy termina ajustes finales y avanza en la implementación en Yii, coordinado con Jairo para evitar duplicidad; Se solicita control de cambios MDSB-795762 en test, quedo ejecutado con exito y se escala control de  cambios a produccion MDSB-796132.\n[14/04/2025]: Se encentra  terminando los ajustes necesarios  para  pasar el  req a test para  pruebas.\n[22/04/2025]: Se realiza paso a producción.",
+    "unit": "Bolivar",
+    "detail": "Se requiere tablero de analisis de la operación de reembolsos",
+    "visible": true
+  },
+  {
+    "id": "GD772-102",
+    "title": "Ajuste informe Autorizaciones salud (2) ",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "02/05/2025",
+    "endDate": "02/05/2025",
+    "observations": "[22/04/2025]: Se encuentra pendiente por confirmar tiempo de desarrollo\n[02/05/2025]: Inicia desarrollo y se entrega en test\n[05/5/2025]: Se entrega a producción 5 de Mayo\n",
+    "unit": "Bolivar",
+    "detail": "Se requiere ajustar el informe de autorizaciones salud con el fin de que se tenga la siguiente estructura , este debe contemplar tanto los abiertos como los cerrados",
+    "visible": true
+  },
+  {
+    "id": "GD772-107",
+    "title": "Accesos usuarios linea médica reembolsos ",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "07/05/2025",
+    "endDate": "07/05/2025",
+    "observations": "[07/05/2025]: Se realiza asignacion de roles segun archivo adjunto \n[13/05/2025]: Se confirma con Ewein que ya se encuentran los usuarios asignados para consulta de reembolsos ",
+    "unit": "Bolivar",
+    "detail": "Se requiere acceso al modulo de reembolsos para los usuarios de la lista adjunta",
+    "visible": true
+  },
+  {
+    "id": "GD772-112",
+    "title": "Ajuste tablas comunicado Glosa Parcial ",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "03/06/2025",
+    "endDate": "05/06/2025",
+    "observations": "[03/06/2025]: Se crea GD información , se encuentra pendiente de confirmación de imagine  de tiempo de desarrollo \n[05/06/2025]: Se realiza paso a producción.",
+    "unit": "Bolivar",
+    "detail": "Se requiere ajuste de comunicado de glosa parcial",
+    "visible": true
+  },
+  {
+    "id": "GD772-113",
+    "title": "Captura información ordenes médicas a través de IA",
+    "assigned": "DANILO",
+    "state": "Estimar",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "INTERNO-D030",
+    "title": "Informe uso aplicaciones Bolivar ( Desacoplar componentes)",
+    "assigned": "DANILO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[12/11/2025]: Compromiso de entrega 14 de noviembre",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "GD772-160",
+    "title": "Ajustar Titulo Información Paciente",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/10/2025",
+    "endDate": "17/10/2025",
+    "observations": "[17/10/2025]: Cambio aplicado ",
+    "unit": "Bolivar",
+    "detail": "",
     "visible": true
   }
 ]
