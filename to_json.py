@@ -242,7 +242,7 @@ def excel_to_json_con_validaciones(archivo_excel):
             
             json_array.append(json_obj)
         
-        return json_arrayS
+        return json_array
     except Exception as e:
         print(f"Error: {e}")
         return []
