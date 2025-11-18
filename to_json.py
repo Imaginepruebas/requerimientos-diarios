@@ -1,6 +1,18 @@
 import pandas as pd
 import json
 import re
+def parse_visible(value):
+    if pd.isna(value):
+        return False
+    
+    value = str(value).strip().lower()
+
+    if value in ["true", "verdadero", "1", "si", "sí", "y", "yes"]:
+        return True
+    if value in ["false", "falso", "0", "no", "n"]:
+        return False
+    
+    return False
 
 def format_dates_in_observations(text: str) -> str:
     """
@@ -29,7 +41,7 @@ def excel_to_json_array(archivo_excel):
      - startDate: Columna J
     - endDate: Columna L
     - observations: Columna P
-    - unit: 'Bolivar' (valor fijo)
+    - unit: 'Alfa' (valor fijo)
     - detail: Columna D
     - visible: Columna Q
     """
@@ -101,9 +113,9 @@ def excel_to_json_array(archivo_excel):
                 "startDate": start_date,   # Formato DD/MM/YYYY
                 "endDate": end_date,       # Formato DD/MM/YYYY
                 "observations": format_dates_in_observations(row.iloc[15]), # Columna P con fechas formateadas
-                "unit": "Bolivar",                                                     # Valor fijo
+                "unit": "Alfa",                                                     # Valor fijo
                 "detail": str(row.iloc[3]) if pd.notna(row.iloc[3]) else "",     # Columna D (índice 3)
-                "visible": bool(row.iloc[16]) if pd.notna(row.iloc[16]) else False # Columna Q (índice 16)
+                "visible": parse_visible(row.iloc[16]) # Columna Q (índice 16)
             }
             
             json_array.append(json_obj)
@@ -144,7 +156,7 @@ def mostrar_ejemplo(json_array, num_ejemplos=2):
 # EJEMPLO DE USO PRINCIPAL
 if __name__ == "__main__":
     # Nombre del archivo Excel
-    archivo_excel = "Bolivar.xlsx"
+    archivo_excel = "Alfa.xlsx"
     
     # Convertir Excel a JSON
     json_data = excel_to_json_array(archivo_excel)
@@ -154,7 +166,7 @@ if __name__ == "__main__":
         mostrar_ejemplo(json_data)
         
         # Guardar en archivo JSON
-        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Bolivar.json")
+        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Alfa.json")
         
         # También puedes trabajar directamente con el array
         print(f"\nTotal de registros: {len(json_data)}")
@@ -235,9 +247,9 @@ def excel_to_json_con_validaciones(archivo_excel):
                 "startDate": start_date,
                 "endDate": end_date,
                 "observations": format_dates_in_observations(row.iloc[15]),
-                "unit": "Bolivar",  # Valor fijo
+                "unit": "Alfa",  # Valor fijo
                 "detail": str(row.iloc[3]).strip() if pd.notna(row.iloc[3]) else "",
-                "visible": bool(row.iloc[16]) if pd.notna(row.iloc[16]) else False  # Columna Q (índice 16)
+                "visible": parse_visible(row.iloc[16])  # Columna Q (índice 16)
             }
             
             json_array.append(json_obj)
