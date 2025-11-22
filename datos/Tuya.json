@@ -588,13 +588,39 @@
     "id": "305",
     "title": "Reporte Clientes con Guia ed Financiera",
     "assigned": "Faver",
-    "state": "Pendiente",
-    "progress": 0,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "19/11/2025",
-    "endDate": "",
+    "endDate": "21/11/2025",
     "observations": "",
     "unit": "Tuya",
     "detail": "Solicitud de usuario para validar documentos para cobros",
+    "visible": true
+  },
+  {
+    "id": "306",
+    "title": "Soporte ",
+    "assigned": "Faver y \nNatalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/11/2025",
+    "endDate": "21/11/2025",
+    "observations": "Usuario radica caso con inconvenientes con solicitud, se valida y se evidencia que fue eliminada por parte de Tuya",
+    "unit": "Tuya",
+    "detail": "Radican caso ",
+    "visible": true
+  },
+  {
+    "id": "307",
+    "title": "Soporte ",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/11/2025",
+    "endDate": "21/11/2025",
+    "observations": "",
+    "unit": "Tuya",
+    "detail": "Radican caso ",
     "visible": true
   }
 ]

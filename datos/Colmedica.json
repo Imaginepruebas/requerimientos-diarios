@@ -497,11 +497,11 @@
     "id": "OPT_20",
     "title": "Afiliaciones Pre - Base datos usuarios menores sin datos de ubicación",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 35,
-    "startDate": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "07/11/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[20/11/2025] se envía correo al cliente confirmando el el asunto del correo Menores sin datos en Afiliaciones Prepagadas cargadas y que el envío de la informacion corresponderá a lo cargado la semana inmediatamente anterior lunes a domingo. y se enviará de manera automática todos los lunes",
     "unit": "Colmedica",
     "detail": "envío de una base con la información “si en la solicitud de ingreso los menores de edad vienen con los campos vacíos o en cero en dirección de residencia, teléfono residencia, ciudad, email y celular, se replique la información del contratante y se carguen con los mismos datos. Esto solo para menores de edad y solo si los campos no vienen diligenciados o vienen con dato cero “0”.” De manera semanal , todos los lunes",
     "visible": true
@@ -510,11 +510,11 @@
     "id": "OPT_21",
     "title": "Afiliaciones Pre - Base datos usuarios mayores que traen los mismos datos de ubicacion del titular",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 35,
-    "startDate": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "07/11/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[20/11/2025] se envía correo al cliente confirmando el el asunto del correo Mayores con datos igual al Titular en Afiliaciones Prepagadas cargadas y que el envío de la informacion corresponderá a lo cargado el mes inmediatamente anterior, se vniará de manera automática el primer día del mes.",
     "unit": "Colmedica",
     "detail": "envío de una base con la información “sobre los casos en los que los datos de afiliación de los beneficiarios mayores de edad presenten coincidencias en el correo electrónico y el número de teléfono. Este reporte tiene como objetivo identificar y analizar a los beneficiarios cuya información de contacto sea la misma.”. De manera mensual",
     "visible": true
@@ -531,5 +531,18 @@
     "unit": "Colmedica",
     "detail": "",
     "visible": false
+  },
+  {
+    "id": "OPT_23",
+    "title": "Afiliaciones Pos - Consulta Afilicion PBS Nuevas ",
+    "assigned": "JENNIFER",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "20/11/2025",
+    "endDate": "",
+    "observations": "[20/11/2025] se ajusta en la página de consulta para seguimiento de las solicitudes de PBS el largo de la numeración, dado los cambios de las nuevas afiliaciones PBS WEB",
+    "unit": "Colmedica",
+    "detail": "Afiliaciones nuevas de PBS WEB cambio la numeración y en la consulta se tiene restringido el largo",
+    "visible": true
   }
 ]
