@@ -1138,7 +1138,7 @@
     "progress": 85,
     "startDate": "27/10/2025",
     "endDate": "",
-    "observations": "[29/10/2025]: Se avanza en el análisis y diseño del mòdulo requerido por el área de previsionales.\n[05/11/2025]: Se avanzo en la construcción de validaciones para consolidar los valores a pagar.\nSe finaliza el modulo para cargar el formato de prefactura y visualizar los casos pendientes de pago.\n[07/11/2025]: Se crea grid como estaba la vista.\nPendiente validaciòn para pagos.\n[08/11/2025]: Se continua trabajando en mejoras del diseño y visualizaciòn de datos y se genera el export del informe de honorarios juridicos a pagar.\n[10/11/2025]: Con ayuda del jefe de unidad se valida y se verifican las validaciones que se deben tener en cuenta para los casos que van a ser objetados y pagados, revisando que las reglas si cumplan con la necesidad del cliente. Se reafina la vista y el grid.\n[11/11/2025]: Se procede a integrar opción de edición directamente en la grid para los casos que no se sabe si se van a objetar o a pagar. Se incluye un combo con estado de \"PAGAR\" Y  \"OBJETAR\".\n[12/11/2025]: Se termina de ajustar la funcionalidad para que el grid se pueda pagar y objetar, se agrega campo de observaciones y se agrega validaciones al momento de seleccionar el combo.\nSe crea funcionalidad de cierre masivo.\nEl módulo se divide en dos pestañas: gestión de casos y el histórico.\n[13/11/2025]: Se continua con la creacion de la pestaña de historico, donde se debe visualizar los casos cerrados y permitir exportar los formatos que se reportan a cada una de las areas correspondientes como PLUS, SIPREN y Tesoreria.\nSe sostiene reunión con el área de previsionales para mostar los avances, pendiente por parte del cliente validar la información de los formatos si están acordes con el proceso.",
+    "observations": "[29/10/2025]: Se avanza en el análisis y diseño del mòdulo requerido por el área de previsionales.\n[05/11/2025]: Se avanzo en la construcción de validaciones para consolidar los valores a pagar.\nSe finaliza el modulo para cargar el formato de prefactura y visualizar los casos pendientes de pago.\n[07/11/2025]: Se crea grid como estaba la vista.\nPendiente validaciòn para pagos.\n[08/11/2025]: Se continua trabajando en mejoras del diseño y visualizaciòn de datos y se genera el export del informe de honorarios juridicos a pagar.\n[10/11/2025]: Con ayuda del jefe de unidad se valida y se verifican las validaciones que se deben tener en cuenta para los casos que van a ser objetados y pagados, revisando que las reglas si cumplan con la necesidad del cliente. Se reafina la vista y el grid.\n[11/11/2025]: Se procede a integrar opción de edición directamente en la grid para los casos que no se sabe si se van a objetar o a pagar. Se incluye un combo con estado de \"PAGAR\" Y  \"OBJETAR\".\n[12/11/2025]: Se termina de ajustar la funcionalidad para que el grid se pueda pagar y objetar, se agrega campo de observaciones y se agrega validaciones al momento de seleccionar el combo.\nSe crea funcionalidad de cierre masivo.\nEl módulo se divide en dos pestañas: gestión de casos y el histórico.\n[13/11/2025]: Se continua con la creacion de la pestaña de historico, donde se debe visualizar los casos cerrados y permitir exportar los formatos que se reportan a cada una de las areas correspondientes como PLUS, SIPREN y Tesoreria.\nSe sostiene reunión con el área de previsionales para mostar los avances, pendiente por parte del cliente validar la información de los formatos si están acordes con el proceso.\n[14/11/2025]: Se termina opciòn de històrico de honorarios jurìdicos, con cada una de las funcionalidades requeridas como descargar los formatos de SIPREN, Plus y Tesorerìa, se agrego funcionalidad de notificar cuando se hace el cierre manual.\n[18/11/2025]: Reuniòn con el cliente para probar el mòdulo, realizando el cargue de la prefactura, cierre y gestiòn del proceso. De esta reunion surgieron recomendaciones y ajustes:\n1. Que al descargar la prefactura baje tal cual como sube y permita agregar el estado \"OBJETAR\" y \"PAGAR\", que se agregue la causal de devoluciòn.\n2. Que cuando se cargue nuevamente cambie el estado y la causal masivamente.\n[19/11/2025]: Se continua realizando los ajustes solicitados en la reuniòn.\nSe realiza sesiòn y se presenta nuevamente el mòdulo y genero issu en el cargue. Donde sale consumo de memoria. Se revisa el problema el cual se sigio presnetando hasta el 20 de noviembre, por lo que se requiriò una refactorizaciòn en el cargue..",
     "unit": "Alfa",
     "detail": "Implementar módulo de pago de honorarios juridicos del área Previsionales",
     "visible": true
@@ -1297,6 +1297,84 @@
     "observations": "[13/11/2025]: Solicitan habilitar gestión de documentos para que muestre todos los documentos de todos los beneficiarios y no solo prioridad de unas rentas en particular, para unos temas de auditoría. Ya finalizada la auditoría se realizó actualización y reversión del ajuste.",
     "unit": "Alfa",
     "detail": "Se requiere un ajuste para que muestre todos los beneficiarios de las rentas y no solo prioridad",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_025",
+    "title": "Soporte a Wilson Aponte",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "18/11/2025",
+    "endDate": "18/11/2025",
+    "observations": "[18/11/2025]: Se brinda soporte a Wilson Aponte para bajar cambios de este modulo nuevo en producciòn y en pruebas. Durante el proceso se presento inconveniente con el repositorio debido a connection time out.",
+    "unit": "Alfa",
+    "detail": "Se requiere soporte para despliegue a producciòn y pruebas del modulo certificados masivos",
+    "visible": true
+  },
+  {
+    "id": "SST_2025_015",
+    "title": "Soporte a Seguridad y Salud en el Trabajo - SST",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "19/11/2025",
+    "endDate": "19/11/2025",
+    "observations": "[19/11/2025]: El àrea reporta lentitud en el proceso de auditoria de prefactura, donde se generaba un error 500. Este error indicaba que el servidor se quedo sin espacio, lo que impedia finalizar o cerrar OS, se procede a dar soluciòn reubicando los soportes y actas a un disco con mas capacidad.\n",
+    "unit": "Alfa",
+    "detail": "Validar incidencia reportada por el àrea en cierre de ordenes de servicio",
+    "visible": true
+  },
+  {
+    "id": "SST_2025_016",
+    "title": "Soporte a Seguridad y Salud en el Trabajo - SST",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "20/11/2025",
+    "endDate": "20/11/2025",
+    "observations": "[20/11/2025]: Nos reportan incidencia en el cargue de los soportes por parte de los proveedores, por lo cual se procediò a corregir el tema debido a la contingencia reportada el dia anterior, no se tuvo en cuenta los permisos de carpeta, se corrige y se notifica al cliente.",
+    "unit": "Alfa",
+    "detail": "Validar incidencia reportada por el àrea para el cargue de documentos por parte de los proveedores",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_034",
+    "title": "Informe Anexo 1",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 80,
+    "startDate": "20/11/2025",
+    "endDate": "",
+    "observations": "[20/11/2025]: Se refactoriza script de anexo 1, acorde a lo enviado por el àrea para ser ajustadocon base a la lògica solicitada. Se realiza el ajuste pertinente , sin embargo se presenta inconsistencia con la informaciòn, en espera de respuesta del àrea para finalizar el tema.",
+    "unit": "Alfa",
+    "detail": "Se requiere reajustar la vista del requerimiento",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_026",
+    "title": "Soporte modulo Imaginex",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/11/2025",
+    "endDate": "21/11/2025",
+    "observations": "[21/11/2025]: Se brindo apoyo para el cambio de contraseña a la Doc Claudia Vargas, ya que generaba error al redirigirla en la opciòn de cambiar la contraseña",
+    "unit": "Alfa",
+    "detail": "Se requiere validaciòn en cambio de contraseña, arroja error",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_027",
+    "title": "Soporte a Wilson Aponte",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "20/11/2025",
+    "endDate": "20/11/2025",
+    "observations": "[20/11/2025]: Se monta caso a tecnologia notificando que nos encontramos sin conexiòn con el repositorio. En horas de la tarde en sesiòn con Jenry Henao, nos manifesto que este inconveniente se presento debido a una falla en github, lo que impedia realizar Pull. Una vez restabecido el servicio, se procediò a desplegar los cambios en pruebas y producciòn.",
+    "unit": "Alfa",
+    "detail": "Se requiere soporte para despliegue a producciòn y pruebas del modulo certificados masivos",
     "visible": true
   }
 ]
