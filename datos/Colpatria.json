@@ -375,57 +375,5 @@
     "unit": "Colpatria",
     "detail": "Se requiere migrar la libreria de componentes del FrontEnd Imagine  a la versión 6 de Ant Desing, este cambio requiere de ajustes en algunos componentes, mejora la compatibilidad con React 19 por defecto.",
     "visible": true
-  },
-  {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
-    "unit": "Colpatria",
-    "detail": "",
-    "visible": false
-  },
-  {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
-    "unit": "Colpatria",
-    "detail": "",
-    "visible": false
-  },
-  {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
-    "unit": "Colpatria",
-    "detail": "",
-    "visible": false
-  },
-  {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
-    "unit": "Colpatria",
-    "detail": "",
-    "visible": false
   }
 ]
