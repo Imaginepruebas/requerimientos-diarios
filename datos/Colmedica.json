@@ -491,7 +491,7 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "Una vez se cargue la base de correos de los colectivos enviados, se debe enviar dicha base de manera automática al equipo de manteniemento de colectivos del área de Fidelización",
-    "visible": false
+    "visible": true
   },
   {
     "id": "OPT_20",
@@ -544,5 +544,70 @@
     "unit": "Colmedica",
     "detail": "Afiliaciones nuevas de PBS WEB cambio la numeración y en la consulta se tiene restringido el largo",
     "visible": true
+  },
+  {
+    "id": "OPT_24",
+    "title": "Afiliaciones Pos - Proceso nuevas afiliaciones ",
+    "assigned": "JENNIFER",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "inconsistencia en la generación de los lotes por imágenes de más y que son informativas, Adicionar al proceso la eliminación de estos archivos para que el sistema no las tenga en cuenta al momento del loteo",
+    "visible": true
+  },
+  {
+    "id": "OPT_25",
+    "title": "Afiliaciones Pre - Parentescos XML",
+    "assigned": "JENNIFER",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "Ajustar un parentesco que no se estaba cargando desde el xml por cambio en su escritura",
+    "visible": true
+  },
+  {
+    "id": "OPT_26",
+    "title": "Afiliaciones Pos - Documentos con extension errada",
+    "assigned": "JENNIFER",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[13/11/2025] se detecta que las imagenes no se pueden visualizar y es por un error de la extensión, asi que se hace desarrollo para que el sistema identifique si llega jpg y es pdf, le cambia la extención, para que cuando se arme el lote, el documento ya tenga la extensión correcta. \n[14/11/2025] Reporte de la inconsistencia para que corrigan desde el origen(otro proveedor)",
+    "unit": "Colmedica",
+    "detail": "Seguimiento nuevas afiliaciones en la marcación de soportes hay imágenes que no se pueden visualizar, y se detecta que llegan con una extensión que no corresponde al tipo de archivo real",
+    "visible": true
+  },
+  {
+    "id": "OPT_27",
+    "title": "Afiliaciones Pre - Llegan casos con imágenes repetidas en el xml, generando imágenes incompletas en el proceso",
+    "assigned": "JENNIFER",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "Opción para eliminar imágenes duplicadas dentro de la ya actual de reproceso de Afiliaciones Pre",
+    "visible": false
+  },
+  {
+    "id": "",
+    "title": "Afiliaciones Pos - Más imágenes de las reportadas en el XML",
+    "assigned": "",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "Opción para adicionar documentos, algunas solicitudes quedan pendiente de proceso por que llegan más imágenes de las reportadas en el xml, generando inconsistencia",
+    "visible": false
   }
 ]
