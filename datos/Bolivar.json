@@ -130,16 +130,16 @@
     "visible": true
   },
   {
-    "id": "GD772-116_3",
-    "title": "Adicion de columnas informe medicamentos fase2",
+    "id": "GD772-161",
+    "title": "Automatización actas de prevención Formato AT- 031 Agr”",
     "assigned": "JESUS",
-    "state": "Pruebas Cliente",
-    "progress": 70,
-    "startDate": "29/09/2025",
-    "endDate": "30/09/2025",
-    "observations": "[29/09/2025]: Se Inicia con la adición de Columnas el informe de medicamentos\n[01/10/2025]: “El informe de medicamentos se encuentra prácticamente finalizado; únicamente está pendiente una aclaración con el equipo solicitante respecto a la inclusión de la columna ‘Número de autorización’, con el fin de proceder con su cierre.\n[08/10/2025]: Tras sesion aclaratoria con el ciente el 7 de octubre  se da claridad a las columnas que finalmente  se deben adicionar en el informe.\nEl infrome es entregado  para iniciar pruebas en test.\n[20/10/2025]:Finalizan las pruebas del informe  y se le informa al cliente para que realice las pruebas y autorice el paso a producción.\n",
+    "state": "En Proceso",
+    "progress": 90,
+    "startDate": "27/11/2025",
+    "endDate": "09/12/2025",
+    "observations": "[29/09/2025]: Requerimiento aún en etapa de entendimiento. Reunión próxima con el cliente para detallar proceso y asignar responsables.\n[01/10/2025]: El requerimiento se encuentra en etapa de análisis; hasta el momento solo se han revisado documentos y definiciones iniciales. No se han realizado desarrollos técnicos ni configuraciones. Se requiere concertar con el área de tecnología los posibles ajustes a implementar para definir un plan de trabajo.\n[28/10/2025]: Se estima 20 dias habiles de desarrollo.\n[04/11/2025]: Se envia al cliente las historias de usuario para validación y aprobación.\n[10/11/2025]: Cliente confirma aceptación de las HU\n[27/11/2025]: Se inicia con el desarrollo.\n[01/12/2025]: El desarrollo avanzó al 35%. Ya se tienen listas las carpetas (.zip) en la ruta correspondiente y hoy se inicia el procesamiento de los activos según el requerimiento. Se estima terminar antes del tiempo inicialmente previsto.\n[03/12/2025]: El desarrollo se encuentra en un avance aproximado del 70%. El comando ya crea los casos correctamente. Pendiente implementar lectura de PDF, extracción del correo y los pasos finales del flujo antes de completar el desarrollo. Se trabajará en ello durante el día.\n[05/12/2025]: El desarrollo ya enlaza correctamente la lectura de PDF y la asociación de cada archivo a un caso independiente. Está listo para envío de correos certificados, pero se requiere ajustar el correo destino utilizado en Test y validar el cuerpo del correo para presentación a las 4 p.m. Solo faltan ajustes menores en visualización y pruebas finales del flujo.\n[10/12/2025]: Se corrigieron las validaciones de nombres de archivos encontradas por Fabio. Se creó un nuevo comando para el envío de correos masivos y se logró el envío correcto utilizando la plantilla oficial. El único pendiente es guardar el correo enviado en PDF como adjunto del caso, lo cual será abordado hoy\n[11/12/2025]: Se encuentran pendientes los siguientes ajustes:\n1. Ajustar que los casos que presenten error de envío por ausencia de correo en el PDF queden asignados al usuario responsable que realizó el cargue masivo, con el fin de que pueda efectuar el envío manual correspondiente.\n\n2. Ajustar que los casos que generen “devolución mail” queden igualmente asignados al usuario que realizó el cargue masivo, para que pueda gestionarlos manualmente.",
     "unit": "Bolivar",
-    "detail": "Se requiere tener informes de la operación con el que se pueda medir la prestación efectiva de cada proveedor el informe debe seguir la siguiente estructura:\n\nEn este primer informe se debe poder visualizar un status actual de la operación y contendrá la siguiente estructura:\n",
+    "detail": "Fecha entrega al cliente:\n\n\n1. DESCRIPCIÓN DEL REQUERIMIENTO Se requiere crear una funcionalidad que permita la creación masiva de casos a partir de adjuntos y generación de respuesta por correo electrónico certificado bajo la tipología “Formato AT- 031 Agr”. 1.2 OBJETIVO Automatizar el proceso de envío de actas 1.3 EQUIPO DE TRABAJO Nombre Área ANA MILDRED BURGOS M Innovación y Desarrollo ARL FREDY DIAZ HERRERA Gerencia ARL VANESSA ESTHER ALVAREZ R Subgerencia de Prevención ARL 2. REQUERIMIENTOS FUNCIONALES Se requiere crear una funcionalidad que permita la creación masiva de casos a partir de adjuntos y generación de respuesta por correo electrónico certificado bajo la tipología “Formato AT- 031 Agr”. 2.1 Módulo para creación de casos 2.1.1 Cargue de pdf Se requiere la creación de un módulo en el cual se pueda realizar el cargue de archivos en formato pdf de manera masiva para la creación y generación de respuesta por correo electrónico certificado bajo la tipología “Formato AT- 031 Agr”. Modelo de pdf\\r\\nOpción 1 - Url de Drive. En el módulo se debe poder seleccionar la tipología (Formato AT 031 Agr) y el sistema debe solicitar la url de drive para traer la información, una vez el usuario coloque la url, el sistema deberá de guardar esa url para cargues futuro y únicamente solicitar la confirmación del usuario; sin embargo en cualquier momento el usuario podrá cambiar la url de cargue. Opción 2 - Selección de carpeta. En el módulo se debe poder seleccionar la tipología (Formato AT- 031 Agr) y el sistema debe solicitar los archivos en pdf sobre los cuales se requiere la creación del caso, para lo cual el usuario deberá de seleccionar la carpeta del PC y el sistema deberá de tomar todos los pdf que registren en dicha carpeta. 2.1.1 Creación de casos Una vez cargado los pdf el sistema deberá realizar la creación de los casos con la información que está nombrado en el pdf, se propone la siguiente estructura: NIT_NOMBREEMPRESA_CRONOGRAMA_SECUENCIA_CONSECUTIVO (CANTIDAD DE HOJAS), con esta información el sistema deberá realizar la creación de los casos. Si el pdf coincide en Nit,nombre,cronograma y secuencia en dos archivos o mas, se deberá de anexar la cantidad de pdf´s a un solo caso. Los datos obligatorios para la creación del caso son: nit, nombre , cronograma y secuencia. Si hay algún dato faltante para la creación del caso, este no deberá crear y se deberá notificar el error. De deberá de notificar al usuario los casos creados con la siguiente estructura: Si no es posible la creación del caso deberá indicar el error. 2.1.2 Proforma de respuesta Esta tipología deberá tener la proforma de respuesta con los campos variables indicados (ver anexo). 2.1.2 Generación de respuesta y envío Los casos creados por esta funcionalidad, deberán generar respuesta de manera automática al cliente por correo electrónico certificado, remitiendo los adjuntos cargados y la proforma anexa a este requerimiento (ver anexo). El correo electrónico del envío se deberá leer desde el pdf cargado. Tanto la actividad de generación de respuesta como la de radicación, deberá quedar a nombre del usuario que realiza el proceso. En caso de Los envíos no deben quedar en la misma cola de los masivos, estos deben salir el mismo día de radicación.devolución el caso debe quedar en la bandeja del usuario que radicó para gestión individual.\\r\\n",
     "visible": true
   },
   {
@@ -156,17 +156,17 @@
     "visible": true
   },
   {
-    "id": "GD772-146 ",
-    "title": "Doble factor de autenticación",
-    "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "id": "GD772-177",
+    "title": "Mejora oficina entidades",
+    "assigned": "jESUS",
+    "state": "En Proceso",
+    "progress": 30,
+    "startDate": "11/11/2025",
     "endDate": "",
-    "observations": "[01/10/2025]: Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico. Tras analizar la solicitud, se acordó implementar un plan B que contemple ambas opciones (Authenticator o correo), con el fin de no perder el trabajo ya desarrollado y mantener flexibilidad. La estimación de entrega es para el 10 de noviembre de 2025, considerando que la implementación estructural requiere rehacer parte de la lógica actual.",
+    "observations": "[10/12/2025]: El equipo validará nuevamente para estimar tiempos. La actividad está en revisión inicial.\n[12/12/2025]: El desarrollo inició el 11 de diciembre. Aunque la estimación de tiempo aún no estaba completamente definida, podría considerarse un plazo de tres días, con entrega prevista para el martes 16 de diciembre. A la fecha, ya se encuentran creadas las dos opciones de cargue: individual y masivo. ",
     "unit": "Bolivar",
-    "detail": "Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico.",
-    "visible": false
+    "detail": "",
+    "visible": true
   },
   {
     "id": "GD772-116_2",
@@ -182,30 +182,30 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE024",
-    "title": "Documento tecnico GD772-116 Requerimiento gestión Medicamentos fase 2 - Sprint 2",
+    "id": "GD772-146_4",
+    "title": "Eliminar posibilidad en laravel de actualizar correo",
     "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "12/12/2025",
+    "endDate": "12/12/2025",
+    "observations": "[12/12/2025]: Opcion de actualización de correo elininada en test y producción ",
     "unit": "Bolivar",
-    "detail": "",
+    "detail": "Por favor ingresar dentro de los pendientes esta solicitud,  va relacionada al Jira doble factor de autenticación. \n\nEliminar posibilidad de actualizar el campo correo electrónico en  laravel \n\nOpción perfi / correo electrónico\n\n",
     "visible": true
   },
   {
-    "id": "INTERNO-JE001",
-    "title": "Realizar Imagen de docker de nativo para Jesus",
+    "id": "MDSB-943252",
+    "title": "Jiras día a día( El radicado que arroja el portal ARL en la radicación de autorizaciones no se visualiza en nativo.",
     "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "10/12/2025",
     "endDate": "",
-    "observations": "[27/02/2025]: No se ha podido realizar  debido que se encuentra en otras tareas asignadas.",
+    "observations": "[10/12/2025]: Se reportó un error intermitente donde el número de radicado generado no coincide con el que queda registrado en Nativo. Se presentaron tres casos recientes. El equipo identificó que el origen probablemente está en un job que se ejecuta desde Portales y podría estar produciendo inconsistencias. Jesús revisará el job para determinar si hay fallas puntuales o si puede estar afectando más usuarios de los que han reportado el problema.\n[12/12/2025]:El 11 de diciembre se crea validación para consultar caso y así no se duplique el numero de radicado, se encuentra en test pero se presenta  error la pagina en portales expirando demasiado rapido con error 419.\n",
     "unit": "Bolivar",
-    "detail": "",
-    "visible": false
+    "detail": "LA PAGINA WEB ESTÁ ARROJANDO UN RADICADO Y LUEGO NO APARECE “\n\nBuenos días\n\nSolicito su colaboración, porque estoy radicando archivos por la pagina web y me arroja un radicado, luego voy a consultar ese radicado para cambiarle la tipología o asignarlo al medico encargado y no aparecen, consulto con la cedula del trabajador y me aparece el caso creado, pero con otro radicado, esto pasa desde la semana pasada, pero apenas hoy noto que es repetitivo y adjunto evidencia de  dos casos en esta mañana.\n\nCordialmente",
+    "visible": true
   },
   {
     "id": "GD772-100",
@@ -299,43 +299,43 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE002",
-    "title": "Desarrollo clasificador de imágenes en Python (IA)",
+    "id": "MDSB-944059",
+    "title": "Jiras día a día( SOLICITUD HABILITAR E INHABILITAR DE 3 TIPOLOGIAS A 3 USUARIOS.",
     "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 80,
-    "startDate": "15/05/2025",
-    "endDate": "",
-    "observations": "[16/05/2025] : Ya se encuentra  funcional en local, Se planteó la necesidad de buscar imágenes similares almacenadas en el disco compartido (IMG04) para   realizar  pruebas\n[19/05/2025] : el clasificador de imágenes está en ambiente de prueba, pero aún se requieren imágenes para probarlo adecuadamente. Se discute la posibilidad de generar imágenes desde archivos PDF si no se encuentran imágenes reales\n[26/05/2025]: El Viernes 23 de mayo se implemento en el lector de PDF,  clasifica correctamente los archivos visuales, pero aún no segmenta adecuadamente los PDFs por tipo, agrupándolos en una sola carpeta. Se continuarán pruebas con PDFs diversos para refinar la lógica de clasificación.\n[28/05/2025]: Las pruebas realizadas con el clasificador de archivos PDF no han alcanzado los resultados esperados. Se evalúan otras opciones, pero el enfoque actual está en la funcionalidad de Sistematización con IA (Segunda vista de incapacidades en portal).",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "12/12/2025",
+    "endDate": "12/12/2025",
+    "observations": "[12/12/2025]: Se realizó la habilitación e inhabilitación de usuarios en las tipologías solicitadas. Adicionalmente, se adjunta la relación de usuarios actualmente asignados a dichas tipologías.  user_actividades_desc.csv ",
     "unit": "Bolivar",
-    "detail": "",
+    "detail": ":\n1. favor habiiltar a JOHN ALEJANDRO MARTÍNEZ _1032366925  y a   GIOVANNY STIVEN NIETO1003530364 en las tipologías Mesa de conciliacion presencial, Mesa de conciliacion Virtual y Traslado de polizas, dejar por favor las mismas actividades con las que cuenta el usuario NATALIA ROCIO CUBIDES_1007155376.\n2.  Por favor inhabilitar a LILIA ANDREA VELASQUEZ__1015430797 de las tipologias Mesa de conciliacion presencial, Mesa de conciliacion Virtual y Traslado de polizas, por vacaciones del funcionario.\n3.  Solicitamos pro favor nos puedan confirmar qué usuarios se encuentran actualmente activos en las tres tipologías: Mesa de Conciliación Presencial, Mesa de Conciliación Virtual y Traslado de Pólizas",
     "visible": true
   },
   {
-    "id": "INTERNO-JE003",
-    "title": "Implementar cambio de contraseña a 30 dias en los tres aplicativos",
+    "id": "GD772-116_3",
+    "title": "Adicion de columnas informe medicamentos fase2",
+    "assigned": "JESUS",
+    "state": "Pruebas Cliente",
+    "progress": 70,
+    "startDate": "29/09/2025",
+    "endDate": "30/09/2025",
+    "observations": "[29/09/2025]: Se Inicia con la adición de Columnas el informe de medicamentos\n[01/10/2025]: “El informe de medicamentos se encuentra prácticamente finalizado; únicamente está pendiente una aclaración con el equipo solicitante respecto a la inclusión de la columna ‘Número de autorización’, con el fin de proceder con su cierre.\n[08/10/2025]: Tras sesion aclaratoria con el ciente el 7 de octubre  se da claridad a las columnas que finalmente  se deben adicionar en el informe.\nEl infrome es entregado  para iniciar pruebas en test.\n[20/10/2025]:Finalizan las pruebas del informe  y se le informa al cliente para que realice las pruebas y autorice el paso a producción.\n[12/12/2025]: Pendiente confirmación de paso a producción.",
+    "unit": "Bolivar",
+    "detail": "Se requiere tener informes de la operación con el que se pueda medir la prestación efectiva de cada proveedor el informe debe seguir la siguiente estructura:\n\nEn este primer informe se debe poder visualizar un status actual de la operación y contendrá la siguiente estructura:\n",
+    "visible": true
+  },
+  {
+    "id": "GD772-146 ",
+    "title": "Doble factor de autenticación",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[01/10/2025]: Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico. Tras analizar la solicitud, se acordó implementar un plan B que contemple ambas opciones (Authenticator o correo), con el fin de no perder el trabajo ya desarrollado y mantener flexibilidad. La estimación de entrega es para el 10 de noviembre de 2025, considerando que la implementación estructural requiere rehacer parte de la lógica actual.",
     "unit": "Bolivar",
-    "detail": "",
+    "detail": "Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico.",
     "visible": false
-  },
-  {
-    "id": "INTERNO-JE004",
-    "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
-    "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 60,
-    "startDate": "26/05/2025",
-    "endDate": "",
-    "observations": "",
-    "unit": "Bolivar",
-    "detail": "",
-    "visible": true
   },
   {
     "id": "INTERNO-JA003",
@@ -416,16 +416,16 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JA004",
-    "title": "Automatización cuentas medicas ",
+    "id": "GD772-136",
+    "title": "Cruce automatico Autorizado Vs Cobrado",
     "assigned": "JAIRO",
-    "state": "En Proceso",
-    "progress": 98,
-    "startDate": "26/09/2025",
-    "endDate": "",
-    "observations": "[26/09/2025]: Ya se tiene parte lógica para iniciar desarrollo en PHP. Se prevé reactivar requerimeinto la próxima semana una vez finalicen pendientes de proveedores.\n[10/10/2025]: Implementado flujo de radicación hacia tablas mediante RIPS, con validaciones preliminares.\n[27/10/2025]: El desarrollo presenta un avance estimado del 60%. Se completaron las validaciones principales utilizando datos de producción en modo borrador. Está pendiente definir el orden de ejecución de los procesos (cambio de ciudad previo a homologación) y realizar la entrega parcial durante la semana.\n[05/11/2025]:  Se iniciara   primer avance funcional de automatización despues de finalizar  req GD772-172 Ajustes de reembolsos ARL\n[10/11/2025]: Actividad prioritaria del día, con objetivo de entregar una presentación funcional para el 12 de Noviembre\n[11/11/2025]: Se realiza presentación del avance de la automatización.\n[13/11/2025]: Continuara con ajustes en la automatización.\n[14/11/2025]: Hoy continuara  con los ajustes automatización cuentas medicas.\n[18/11/2025]: Se reporta un avance del 95% en el Sistema de Automatización de Facturas. Las funcionalidades implementadas incluyen: validación mejorada de autorizaciones, incorporación de lógica para evitar reprocesos por usuario, normalización de ciudades con comparación flexible, procesamiento para facturas inferiores a $100,000 con selección aleatoria, mejoras en el dashboard (dropdown optimizado), botón de confirmación con su lógica implementada, manejo de campos soportes y total_pagar, y limpieza de mensajes de workflow para eliminar caracteres no deseados. El sistema se encuentra próximo a finalizar.\nSe realizará la validación completa del sistema de automatización implementado, abarcando la verificación integral de los flujos de procesamiento, reglas de validación y procesos de confirmación.\n[19/11/2025]: Ayer 18 de noviembre Se realizaron ajustes en el procesamiento de facturas BR, incluyendo corrección de lógica, adición del campo producto y depuración de variables.\nSe optimizó el proceso de autorización mediante un nuevo flag de control y mejoras en las validaciones.\nSe fortaleció el feedback al usuario con validaciones más claras y corrección de mensajes.\nFinalmente, se aplicaron optimizaciones generales al código, eliminando redundancias y simplificando el workflow.\n[26/11/2025]: La automatización está lista para la presentación del día de hoy. Se detectó que las facturas de gran tamaño generan retrasos, por lo que se requiere ajustar la homologación de RIPs para mejorar rendimiento. Se planean nuevas pruebas después de la presentación.\n[26/11/2025]: Se implementación de limpieza de caracteres no numéricos en los números de identificación (cédulas) para estandarizar su uso en claves, alertas y datos de usuario .\nMejora en el registro de errores (logging) para capturar excepciones completas y facilitar la depuración.\n[27/11/2025]:  Primeras pruebas en caliente, validando casos y llevando a algunas correcciones:\nNueva validación para detectar facturas donde el pago total calculado no coincide con el total reportado en BIRC.\nInclusión de campos de IVA en las consultas BIRC y validación de facturas que contienen valores de IVA.\nOptimización del código para evitar decodificaciones JSON redundantes, agregando validaciones de tipo array previas.\nMejora en el flujo de procesamiento de facturas: separación de facturas con errores generales en una categoría de \"no procesadas\", para que no se envien a guardar aquellas que retornaron con error\n[01/11/2025]:Se procesaron más de 2.000 facturas durante las pruebas de jueves 27 y viernes 28 de noviembre. Se identificaron incidencias en la comparación de valores, las cuales ya fueron corregidas. Se continúa monitoreando y ajustando según se presente alguna necesidad.\n[03/12/2025]: Se continúa con la validación y corrección de incidencias tras el paso a producción. Se agregaron nuevas validaciones y se implementó un log para detectar errores adicionales.\n[05/12/2025]: Se encontró que el procedimiento guardaba un número incorrecto para el consecutivo de detalle. Se corrigió el error y se ajustaron manualmente algunos registros en Sisalud. El proceso ya está operando en producción y ha procesado cerca de 5.000 facturas de forma correcta. Se considera estable.\n[10/12/2025]: Se realizaron actualizaciones para manejar variaciones en el origen de datos (archivos o registros con formatos inesperados). Se añadieron excepciones para evitar que estos casos afecten el proceso de automatización. Se mantienen ajustes incrementales según los patrones que continúen apareciendo.",
+    "state": "Paso A Produccion",
+    "progress": 90,
+    "startDate": "16/10/2025",
+    "endDate": "06/11/2025",
+    "observations": "[10/09/2025]: Revisión preliminar realizada.\n[22/10/2025]: Se solicita control de cambios en test MDSB-915793\n[28/10/2025]: Control de cambios ejecutado con éxito \n\n[21/11/2025]. Se escala control de cambios a test MDSB-934083 para la creación de  la tabla cm_actualizacion_facturas_sisalud y modificación de las tablas cm_pagos_masivos_generados y ctas_proveedores\nControl de cambios MDSB-934083 ejecutado.\n[26/11/2025]: Se avanzó en la implementación del cruce y la construcción de las bandejas de resultado. Falta validar el comportamiento del cruce asociado a proveedores y  solicitar la creación  de la tabla en producción. Continúan ajustes menores previos a las pruebas finales.\n[27/11/2025]: Se escala control de cambios en producción MDSB-937531\n[01/12/2025]: Control de cambios aun se encuentra pendiente por QA del cliente\n[03/12/2025]: Control de cambios programado hoy  para aprobación por comité.\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[10/12/2025]: A un esta pendientes de pruebas para realizar paso a produncción.\n[12/12/2025]: Se encuentra pendiente la ejecución del paso a producción y la realización de las pruebas en caliente una vez se despliegue el ajuste.",
     "unit": "Bolivar",
-    "detail": "La gerencia de Imagine solicita la implementación de un proceso de automatización para las cuentas médicas, con el fin de optimizar la gestión, reducir tiempos operativos y minimizar errores manuales.",
+    "detail": "Descripción\n\nSe requiere realizar el cruce automatico de lo autorizado, ya sea cargado de forma manual o por API con el lago vs lo cobrado en las facturas por el proveedor.\n\nUna vez realizada esta comparacion, los registro en los que el valor cobrado, sea igual o menor al valor autorizado, se deben  asignar al usuario definido para pago masivo,  Asi mismo debe permitir seleccionar todos o algunos casos, para realizar la notificacion y el cierre de caso masivo.\n\nLos caso cuyo valor cobrado es mayor al valor autorizado, deben pasar segun las reglas de asignación a los diferentes perfiles, en caso de que exista tarifa pactada, el usuario debe poder visualizar la tarifa pactada, autorizada y cobrada para su evaluacion.",
     "visible": true
   },
   {
@@ -715,17 +715,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE007",
-    "title": "Validaciòn apertura de dos actividades en un mismo caso en Nativo",
+    "id": "INTERNO-JE024",
+    "title": "Documento tecnico GD772-116 Requerimiento gestión Medicamentos fase 2 - Sprint 2",
     "assigned": "JESUS",
     "state": "Pendiente",
-    "progress": 80,
-    "startDate": "04/07/2025",
+    "progress": 0,
+    "startDate": "",
     "endDate": "",
     "observations": "",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "MDSB-838905",
@@ -832,17 +832,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JA010",
-    "title": "Revisión  devolución de facturas pensionados",
+    "id": "GD772-159_2",
+    "title": "Ajuste en descargar volúmenes grandes (Valores de factura vs valores pendientes (validaciones del masivo) Gasto medico)",
     "assigned": "JAIRO",
-    "state": "Pausado",
-    "progress": 20,
-    "startDate": "21/08/2025",
-    "endDate": "",
-    "observations": "[20/08/2025]: Requiere retomarse. Se definió como prioridad continuar después de finalizar el req GD772-123 Asignación y Gestión de Tareas en la Solución de Cuentas Médicas, ya que implica rehacer parte de la tabla de facturas de devolución y validar nuevamente con control de cambios.\n[22/08/2025]: Avance estimado en 20%. Se fusionó rama de máster y se está ajustando la consulta para filtrar correctamente los casos listos para evolución.\n[01/09/2025]: No se reportan mas avances ",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "09/12/2025",
+    "endDate": "11/11/2025",
+    "observations": "[10/12/2025]: Se identificaron problemas en la lógica cuando los usuarios intentan descargar volúmenes grandes (más de 500 registros). Aunque se aplicó un ajuste rápido para permitir continuidad en pruebas, el componente aún falla en cargas altas. Se revisará la lógica para corregir errores en descargas masivas y depurar la validación de autorizaciones y estados\n[12/12/2025]: El 11 de diciembre  se trabajó en el ajuste del tiempo de respuesta al momento de descargar el RPA, incrementándolo ligeramente para garantizar la correcta generación y disponibilidad del archivo.",
     "unit": "Bolivar",
-    "detail": "",
-    "visible": true
+    "detail": "Se identificaron problemas en la lógica cuando los usuarios intentan descargar volúmenes grandes (más de 500 registros). Aunque se aplicó un ajuste rápido para permitir continuidad en pruebas, el componente aún falla en cargas altas. Se revisará la lógica para corregir errores en descargas masivas y depurar la validación de autorizaciones y estados",
+    "visible": false
   },
   {
     "id": "GD772-116_1",
@@ -936,14 +936,27 @@
     "visible": true
   },
   {
-    "id": "GD772-121",
-    "title": "Identificar notas crédito radicadas por los prestado como estado nota crédito",
+    "id": "GD772-117",
+    "title": "Reporte glosas para la Superfinanciera (migración a lago de datos de los 2 informes de glosas (arl y salud)",
     "assigned": "JAIRO",
-    "state": "Pendiente Cliente",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "28/10/2025",
+    "endDate": "04/11/2025",
+    "observations": "[29/10/2025]: Se escala control de cambios MDSB-920698 a test.\n[30/10/2025]: Control de cambios ejecutado pendiente validación de desarrollo la creacion  de las tablas solicitdas\n[31/10/2025]: El informe total de ARL fue mejorado para evitar duplicidad de valores; solo resta ajustar la lógica de repetición en los campos numéricos.\nLos otros cuatro informes (RIPS, Glosas, Detallado L y Detallado Salud) ya cuentan con SQL listos y sin complejidad técnica.\nPendiente: Crear las tablas faltantes (una de ellas para el informe de detalle) y subir todos los informes a ambiente de test.\n[31/10/2025]: Se escala nuevo control de cambios en test MDSB-921949 para la creación de las tablas informe_detallado_arl  y  informe_detallado_salud\n[04/11/2025]: Control de cambios  ejecutado con exito.\n[05/10/2025]: Se confirmó que el 4 de noviembre quedaron  todos los informes del Lago de Datos (Glosas, Detallado ARL, Detallado Salud y RIPS) ya se encuentran desplegados en ambiente de test \nSe entrega informe de Glosas para sus pruebas. \nPendiente preparar y cuadrar el control de cambios para paso a producción, sujeto a aprobación del cliente.\n[19/11/2025] : Se escala control de cambios a producción MDSB-932138 y MDSB-932173.\n[24/11/2025]: Los controles fueron aprobados por comite y ejecutados en la tarde como resultado exitoso para el  MDSB-932173 y se presento error en el script  del control MDSB-932138  para lo cual se debera escalar un nuevo control.\n[25/11/2025]: Se escala nuevo control de cambios  MDSB-935841\n[01/12/2025]: Control de cambios pendiente por aprobación de QA cliente.\n[03/12/2025]: Control de cambios ejecutado con exito el 01 de diciembre\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[05/12/2025]: El requerimiento fue pasado a producción pero presenta un problema puntual con una fecha mal formateada en la data. Se corregirá un ajuste menor en el código. El resto del módulo asociado a largos de datos ya se encuentra en funcionamiento.\n[12/12/2025]: El 8 de diciembre se ejecutaron y se corrigieron los errores presentados.",
+    "unit": "Bolivar",
+    "detail": "Entrega al cliente: 4/11/2025\nSolicitamos disponer del reporte de glosa en el ambiente que pueda ser migrado al lago de datos de Seguros Bolívar, por cuanto es una de las fuentes principales para el reporte que se debe  transmitir cada mes a la Superfinanciera. Es importante que debe de traer todo el histórico de transacciones realizadas en Imagine.",
+    "visible": true
+  },
+  {
+    "id": "GD772-117_1",
+    "title": "Documentación tecnica. Reporte glosas para la Superfinanciera (migración a lago de datos de los 2 informes de glosas (arl y salud)",
+    "assigned": "JAIRO",
+    "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": " Se planteó la creación de un nuevo estado llamado “Cruce de notas crédito” para mejorar la clasificación y control de estos registros.\n[07/11/2025]: Pendiente la aclaración por parte del cliente sobre el requerimiento a realizar",
+    "observations": "",
     "unit": "Bolivar",
     "detail": "",
     "visible": false
@@ -1014,17 +1027,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE009",
-    "title": "Funcionalidad para inhabilitar modificación de tipologías en Nativo",
+    "id": "INTERNO-JE001",
+    "title": "Realizar Imagen de docker de nativo para Jesus",
     "assigned": "JESUS",
-    "state": "Pausado",
-    "progress": 70,
+    "state": "Pendiente",
+    "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "Es necesario restringir cambios en tipologías una vez el portal esté activo, para evitar errores en procesos dependientes.\n[04/08/2025]: El juenes 31 de julio se inactiva el menú de modificación de tipologías ubicado en Radicador > Administración, dejando habilitada únicamente la opción disponible en Radicación Workflow para un conjunto específico de cédulas de ciudadanía (CC). La intención es crear o mejorar la funcionalidad de administración de tipologías en la nueva aplicación de Nativo, la cual se planea actualizar próximamente",
+    "observations": "[27/02/2025]: No se ha podido realizar  debido que se encuentra en otras tareas asignadas.",
     "unit": "Bolivar",
     "detail": "",
-    "visible": true
+    "visible": false
   },
   {
     "id": "INTERNO-JE010",
@@ -1235,16 +1248,16 @@
     "visible": false
   },
   {
-    "id": "GD772-123",
-    "title": "Asignación y Gestión de Tareas en la Solución de Cuentas Médicas (Salud y ARL)",
+    "id": "INTERNO-JA004",
+    "title": "Automatización cuentas medicas ",
     "assigned": "JAIRO",
-    "state": "Reanudar",
-    "progress": 50,
-    "startDate": "12/08/2025",
-    "endDate": "11/09/2025",
-    "observations": "[13/08/2025]: Se inició el 12 de agosto con la adaptación de la bandeja a un formato más interactivo según los requerimientos solicitados. La prioridad está en entregar la funcionalidad de asignación antes que otros entregables. Se continúa con ajustes a consultas y pruebas.\n[20/08/2025]: Se trabajó en la bandeja, realizando ajustes visuales y validaciones con Henry. Falta incluir los registros antiguos y revisar a fondo la parte de asignación, por lo que el avance se estima en un 50%.\n[22/08/2025]: Se presentó la vista inicial con filtros y gráficas. Avance inicial, pendiente la implementación de la lógica de asignación de casos.\n[25/08/2025]: Se avanzó en la mejora de la bandeja y se incluiran dos temas pendientes relacionados con inconsistencias: “sí” e “inconsistencias: no”. \n[29/08/2025]: Se avanzó en cambios de la bandera. Persisten ajustes en la bandeja de consulta debido a lentitud en la ejecución de consultas y validación de inconsistencias. Se están revisando alternativas (consultas completas vs parciales con Ajax).\n[01/09/2025]: Se realizaron pruebas locales y se avanza en la incorporación de control de capacity.\n[03/03/2025]: El 2 de septiembre se realizó un paso parcial del módulo de asignación, implementando la nueva bandeja de pendientes\n[09/09/2025]: Se escala control de cambios MDSB-887065 para la adicion de dos columna a dos tablas existentes. Control de cambios ejecutado con exito.\n[10/09/2025]: Avance en queries para indicadores de ANS, se estima entregar esta semana.\n[12/09/2025]: Se presentó el desarrollo a Sandra, quien lo revisó y lo aprobó de manera preliminar. El componente de lógica ya está implementado, incluyendo la corrección de la bandeja, la asignación por radicados y el control de capacidad, Actualmente esta en construcción los dashboards de administración para evaluar la eficiencia de los auditores\nSe está a la espera del visto bueno para pasar a producción y validar con datos reales.\n[15/09/2025]: Se escala control de cambio a producción con el jira MDSB-890559.\n[25/09/2025]: El control de cambios aún se encuentra pendiente de aprobación por parte del QA del cliente.\n[01/10/2025]: Control de cambios ejecutado el 29 de septiembre,  Se realiza paso a producción de la  implementación en salud, de acuerdo al  resultado se iniciara implementación en ARL",
+    "state": "En Proceso",
+    "progress": 99,
+    "startDate": "26/09/2025",
+    "endDate": "05/11/2025",
+    "observations": "[26/09/2025]: Ya se tiene parte lógica para iniciar desarrollo en PHP. Se prevé reactivar requerimeinto la próxima semana una vez finalicen pendientes de proveedores.\n[10/10/2025]: Implementado flujo de radicación hacia tablas mediante RIPS, con validaciones preliminares.\n[27/10/2025]: El desarrollo presenta un avance estimado del 60%. Se completaron las validaciones principales utilizando datos de producción en modo borrador. Está pendiente definir el orden de ejecución de los procesos (cambio de ciudad previo a homologación) y realizar la entrega parcial durante la semana.\n[05/11/2025]:  Se iniciara   primer avance funcional de automatización despues de finalizar  req GD772-172 Ajustes de reembolsos ARL\n[10/11/2025]: Actividad prioritaria del día, con objetivo de entregar una presentación funcional para el 12 de Noviembre\n[11/11/2025]: Se realiza presentación del avance de la automatización.\n[13/11/2025]: Continuara con ajustes en la automatización.\n[14/11/2025]: Hoy continuara  con los ajustes automatización cuentas medicas.\n[18/11/2025]: Se reporta un avance del 95% en el Sistema de Automatización de Facturas. Las funcionalidades implementadas incluyen: validación mejorada de autorizaciones, incorporación de lógica para evitar reprocesos por usuario, normalización de ciudades con comparación flexible, procesamiento para facturas inferiores a $100,000 con selección aleatoria, mejoras en el dashboard (dropdown optimizado), botón de confirmación con su lógica implementada, manejo de campos soportes y total_pagar, y limpieza de mensajes de workflow para eliminar caracteres no deseados. El sistema se encuentra próximo a finalizar.\nSe realizará la validación completa del sistema de automatización implementado, abarcando la verificación integral de los flujos de procesamiento, reglas de validación y procesos de confirmación.\n[19/11/2025]: Ayer 18 de noviembre Se realizaron ajustes en el procesamiento de facturas BR, incluyendo corrección de lógica, adición del campo producto y depuración de variables.\nSe optimizó el proceso de autorización mediante un nuevo flag de control y mejoras en las validaciones.\nSe fortaleció el feedback al usuario con validaciones más claras y corrección de mensajes.\nFinalmente, se aplicaron optimizaciones generales al código, eliminando redundancias y simplificando el workflow.\n[26/11/2025]: La automatización está lista para la presentación del día de hoy. Se detectó que las facturas de gran tamaño generan retrasos, por lo que se requiere ajustar la homologación de RIPs para mejorar rendimiento. Se planean nuevas pruebas después de la presentación.\n[26/11/2025]: Se implementación de limpieza de caracteres no numéricos en los números de identificación (cédulas) para estandarizar su uso en claves, alertas y datos de usuario .\nMejora en el registro de errores (logging) para capturar excepciones completas y facilitar la depuración.\n[27/11/2025]:  Primeras pruebas en caliente, validando casos y llevando a algunas correcciones:\nNueva validación para detectar facturas donde el pago total calculado no coincide con el total reportado en BIRC.\nInclusión de campos de IVA en las consultas BIRC y validación de facturas que contienen valores de IVA.\nOptimización del código para evitar decodificaciones JSON redundantes, agregando validaciones de tipo array previas.\nMejora en el flujo de procesamiento de facturas: separación de facturas con errores generales en una categoría de \"no procesadas\", para que no se envien a guardar aquellas que retornaron con error\n[01/11/2025]:Se procesaron más de 2.000 facturas durante las pruebas de jueves 27 y viernes 28 de noviembre. Se identificaron incidencias en la comparación de valores, las cuales ya fueron corregidas. Se continúa monitoreando y ajustando según se presente alguna necesidad.\n[03/12/2025]: Se continúa con la validación y corrección de incidencias tras el paso a producción. Se agregaron nuevas validaciones y se implementó un log para detectar errores adicionales.\n[05/12/2025]: Se encontró que el procedimiento guardaba un número incorrecto para el consecutivo de detalle. Se corrigió el error y se ajustaron manualmente algunos registros en Sisalud. El proceso ya está operando en producción y ha procesado cerca de 5.000 facturas de forma correcta. Se considera estable.\n[10/12/2025]: Se realizaron actualizaciones para manejar variaciones en el origen de datos (archivos o registros con formatos inesperados). Se añadieron excepciones para evitar que estos casos afecten el proceso de automatización. Se mantienen ajustes incrementales según los patrones que continúen apareciendo.\n[12/12/2025]: El 10 de diciembre se avanzó en las mejoras específicas para NIT con particularidades en el envío de RIPS, iniciando con el NIT 900047874 (Grupo Afin). Se implementó la lógica ciudad_afin, incluyendo cálculo, validación condicional, persistencia y limpieza del número de autorización; se desarrollaron funciones para el parseo de archivos XML y extracción de ítems de línea; se incorporó el procesamiento particular de ítems de factura tipo FLETE como “otros servicios”; y se realizaron ajustes en la agrupación de ítems, corrigiendo variables y optimizando el cálculo de cantidades y valores totales\nEl 11 de diciembre se realizó el refinamiento del código relacionado con la agrupación de ítems, incluyendo la conversión de cantidad_total a tipo float y la eliminación de actualizaciones redundantes en los totales por grupo. Adicionalmente, se mejoró el manejo de errores mediante la incorporación de la categoría ‘system.web’ en los mensajes registrados con Yii::log, con el fin de fortalecer la trazabilidad y facilitar las actividades de diagnóstico y depuración.\nLo informado ya se encuentra en producción y podríamos considerarlo al 100%; sin embargo, diariamente se identifican casos de mejora orientados a incrementar el volumen de aceptados. Por esta razón, dejamos el avance en un 99%, dado que se continuará trabajando en optimizaciones adicionales.",
     "unit": "Bolivar",
-    "detail": "**Requisitos de Asignación y Gestión de Tareas en la Solución de Cuentas Médicas**\n\nEste documento detalla los requisitos específicos para la funcionalidad de asignación y gestión de tareas dentro de la solución de cuentas médicas, El objetivo es asegurar una distribución eficiente, equitativa y trazable de las solicitudes de cuentas médicas, optimizando los tiempos de respuesta y la operatividad.\n\n**1. Configuración de ANS y Priorización de Solicitudes**\n\nLa solución debe permitir:\n\n**● Parametrizar el Acuerdo de Nivel de Servicio (ANS)** para cada tipo de solicitud de cuentas médicas (ej. Pronto Pago, Glosa), asegurando que el sistema priorice las tareas según estos parámetros.\n\n**● Priorizar la asignación en bandeja por fecha de radicado**, mostrando desde el más antiguo al más reciente en la primera vista y manteniendo los pendientes ordenados de lo más antiguo a lo más nuevo. Esta priorización debe ser rápida y eficiente, sin demoras en la búsqueda u ordenamiento, reflejando la fecha de radicado de Sisalud.\n\n**● Priorizar las solicitudes próximas a vencer** según el ANS parametrizado, considerando la fecha de radicación.\n\n**2. Asignación de Tareas por Radicado**\n\nLa solución debe asegurar que la asignación de tareas se realice de la siguiente manera:\n\n**● Generar la asignación por número de radicado**, no por factura individual.\n\n**● Asignar sin fraccionar las facturas**: Todos los radicados asociados a una misma factura deben ser asignados a una única persona, garantizando la continuidad en la gestión.\n\n**● Parametrizar el tiempo de cada actividad** para incorporarlo en el plan de trabajo y en la asignación.\n\n**● Respuestas a glosa**: Deben asignarse automáticamente al usuario que generó la glosa (o al área correspondiente, como auditoría médica). Si el usuario está inhabilitado (ej. por vacaciones), el sistema debe reasignar a otra persona del mismo perfil, considerando la carga de trabajo pendiente.\n\n**3. Filtrado y Visualización de Bandejas**\n\nLa plataforma debe contar con las siguientes capacidades de filtrado y visualización:\n\n**● Crear un filtro de cantidad** que muestre el número de facturas con respuesta a glosa, escalados, pronto pago y los pendientes de cuentas médicas.\n\n**● Permitir filtrar la bandeja por la condición deseada** (ej. fecha de radicación, del más antiguo al más reciente), manteniendo el filtro activo hasta que el usuario desee desactivarlo.\n\n**● Habilitar filtros por rango de fechas** en todas las pantallas.\n\n**4. Reasignación Flexible y Equitativa**\n\nLas bandejas de trabajo deben permitir la reasignación con las siguientes características:\n\n**● Reasignar sin perder la equidad** en la distribución de la carga de trabajo.\n\n**● Reasignar de forma individual o masiva por**: perfil, usuario, proveedor, complejidad, ramo, tipo de servicio, valor, fechas de radicación y pronto pago.\n\n**● Reasignar por distribución de cargas o no**, sin existir bloqueante para el administrador.\n\n**● Permitir asignar a una persona específica o distribuir equitativamente** entre usuarios correspondientes al mismo perfil.\n\n**● Los casos reasignados deben visualizarse en la bandeja respetando la antigüedad y ** original del registro.\n\n**5. Depuración y Actualización de Bandejas (Imagine)**\n\nSe requiere que la solución realice una depuración automática de las bandejas de Imagine de la siguiente manera:\n\n**● Realizar depuración de las bandejas de Imagine solo dejando las facturas en periodo vigente.**\n\n**● Si la factura fue pagada según reporte de Sisalud en un 90%**, dejarla en estado inactivo. En caso de que llegue una conciliación, reactivar y reasignar.\n\n**● Si la factura está en estado pagado en Sisalud totalmente**, dejarla en estado pagado.\n\n**● Si la factura está en estado glosado en Sisalud**, dejarla en estado glosado.\n\n**Si la factura está en estado pagado glosado**, dejarla en estado glosado.\n\n**● Si el radicado se encuentra en estado anulado en Sisalud**, realizar el cruce con Sisalud para conocer el número de radicado con el que se pagó.\n\n**● Todas las facturas deben continuar con los perfiles actuales** del administrador (como reasignar facturas, cambios de ramo según usuario), sin que exista ningún bloqueante.\n\n**● Permitir habilitar y deshabilitar los ramos para cada usuario**, incluyendo la opción de tener acceso a dos ramos si es necesario, bajo gestión del administrador.\n\n**● Permitir la habilitación del capacity por usuario y por perfil**: el administrador podrá parametrizar cuántos casos puede gestionar el usuario por día. Si se supera el capacity definido, se deberá generar una alerta.\n\n**● Los perfiles deben estar atados al ramo a trabajar**. El administrador debe poder asignar o reasignar facturas según necesidad. En el momento en que se cambie de ramo, no puede continuar habilitado para que se le asignen facturas que no corresponden a este. A partir de la asignación del ramo por parte del administrador, Imagine no debe asignar un ramo diferente al perfil.\n\n**6. Equidad en la Asignación y Control de Reglas\n\nLa asignación debe garantizar:**\n\n**● Equidad**: Es decir, igual o similar número de radicados para cada analista, teniendo en cuenta el tipo de servicio y la complejidad en la asignación sin perder las reglas de negocio establecidas. El contador debe considerar el acumulado para lograr radicados similares.\n\n**● Validación de Reglas del Motor**: Se deben validar nuevamente las reglas del motor para baja, media y alta complejidad según monto y tipo de servicio. Se revisará la tabla de reglas del motor que trabaja Imagine.\n\n**7. Tableros de Control y Reportería Detallada**\n\nLa solución debe ofrecer las siguientes herramientas de monitoreo:\n\n**● Tableros de control y gestión con base en reportes de Sisalud.** Se buscaría acceso a Sisalud Salud.\n\n**● Permitir que el administrador pueda actualizar los radicados** sin necesidad de solicitar apertura a la factura y que quede la traza de los dos radicados, definiendo una regla para decidir de forma automática con cuál se pagó.\n\n**● Reportes para administrador y analistas** del número de casos realizados, en tiempo real, acumulado, día, mes, año. Se basarán en el cruce de Imagine y Sisalud para lo gestionado y lo escalado. Deben indicar cuántos casos le faltan para cumplir la meta.\n\n**● Para cartera, que se pueda visualizar una marca y filtrar** por la misma de facturas ya conciliadas y/o con paz y salvo.\n\n**● Debe existir un tablero o un informe** que indique cuántos radicados está gestionando cada usuario por día, que muestre los tiempos de gestión para cada\n\nradicado, poder validar los pendientes al momento de la consulta y una gráfica de la gestión realizada día a día.\n\nDe forma atenta me permito enviar solicitud de creación de carpetas para cada uno de los auditores con el fin de que las distribuciones de las facturas sean equitativas para los que tienen perfil de enfermería y a los médicos les sean asignadas las cuentas iguales o mayores a $50.000.000.\n\nCon respecto a la respuesta a glosa, lo ideal es que le sea asignada a la persona que revisó. En sus inicios debería ser asignada a mi bandeja ya que el usuario que está revisando las facturas es el mío y posterior cuando empiecen a llegar las respuestas de las vistas por cada uno de los usuarios, a ellos mismos.\n\n**A continuación, relaciono los perfiles con la parametrización requerida.**\n\nCARGOCCNOMBREPerfilProfesional en enfermería55069610Claudia Lorena Montealegre GarciaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería53108492Sandra Patricia Aranzales OchoaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería1010204648Diego Ferney Castellanos FlórezAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería39813915Maria Marcela Bermudez TautivaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería93.237.264Edwin Giovanni Ayala PavaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería53048074Leidy Tatiana Figueroa MorenoAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en medicina1020792806Brandon Arevalo BernalAuditor de cuentas iguales o > $50.00.000 de forma aleatoria indiferente del proveedorProfesional en medicina36068234Astrid Lliana Muñoz AñazcoAuditor de cuentas iguales o > $50.00.000 de forma aleatoria indiferente del proveedorProfesional en medicina39789340Sandra Zoraya Munevar AvilaAuditor de cuentas iguales o > $50.00.000 de forma aleatoria indiferente del proveedor",
+    "detail": "La gerencia de Imagine solicita la implementación de un proceso de automatización para las cuentas médicas, con el fin de optimizar la gestión, reducir tiempos operativos y minimizar errores manuales.",
     "visible": true
   },
   {
@@ -1300,17 +1313,17 @@
     "visible": true
   },
   {
-    "id": "GD772-123_2",
-    "title": "Dashboard de pendientes y Administrativo ARL",
+    "id": "INTERNO-JA010",
+    "title": "Revisión  devolución de facturas pensionados",
     "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "state": "Pausado",
+    "progress": 20,
+    "startDate": "21/08/2025",
     "endDate": "",
-    "observations": "[15/09/2025]: Se está construyendo el dashboard de pendientes, que mostrará la distribución de actividades y facturas. Se espera completar esta semana.\n[22/09/2025]: Pendiente de desarrollo tras cierre del Dashboard de eficiencia en producción",
+    "observations": "[20/08/2025]: Requiere retomarse. Se definió como prioridad continuar después de finalizar el req GD772-123 Asignación y Gestión de Tareas en la Solución de Cuentas Médicas, ya que implica rehacer parte de la tabla de facturas de devolución y validar nuevamente con control de cambios.\n[22/08/2025]: Avance estimado en 20%. Se fusionó rama de máster y se está ajustando la consulta para filtrar correctamente los casos listos para evolución.\n[01/09/2025]: No se reportan mas avances ",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "GD772-124",
@@ -1625,17 +1638,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE014",
-    "title": "Optimización de reporte \"General de pendientes\" en Nativo",
+    "id": "INTERNO-JE002",
+    "title": "Desarrollo clasificador de imágenes en Python (IA)",
     "assigned": "JESUS",
     "state": "Pendiente",
-    "progress": 0,
-    "startDate": "11/08/2025",
+    "progress": 80,
+    "startDate": "15/05/2025",
     "endDate": "",
-    "observations": "[06/08/2025]: Se identificó problema de rendimiento en el código. Se solicitará apoyo a Jairo para reutilizar funciones existentes y optimizar el informe.\n[08/08/2025]: La optimizaciòn se realizara en la nuenva version de nativo  tras realizar la Actuallizaciòn nativo a PHP 8 en local.\n[11/08/2025]: Inicia optimización del informe.",
+    "observations": "[16/05/2025] : Ya se encuentra  funcional en local, Se planteó la necesidad de buscar imágenes similares almacenadas en el disco compartido (IMG04) para   realizar  pruebas\n[19/05/2025] : el clasificador de imágenes está en ambiente de prueba, pero aún se requieren imágenes para probarlo adecuadamente. Se discute la posibilidad de generar imágenes desde archivos PDF si no se encuentran imágenes reales\n[26/05/2025]: El Viernes 23 de mayo se implemento en el lector de PDF,  clasifica correctamente los archivos visuales, pero aún no segmenta adecuadamente los PDFs por tipo, agrupándolos en una sola carpeta. Se continuarán pruebas con PDFs diversos para refinar la lógica de clasificación.\n[28/05/2025]: Las pruebas realizadas con el clasificador de archivos PDF no han alcanzado los resultados esperados. Se evalúan otras opciones, pero el enfoque actual está en la funcionalidad de Sistematización con IA (Segunda vista de incapacidades en portal).",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "MDSB-860939",
@@ -1729,8 +1742,8 @@
     "visible": true
   },
   {
-    "id": "MDSB-855049",
-    "title": "ERROR CONTEO DE DIAS BANDEJA DE PENDIENTES VRS INFORME DE EFECTIVIDAD",
+    "id": "INTERNO-JE003",
+    "title": "Implementar cambio de contraseña a 30 dias en los tres aplicativos",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
@@ -1768,16 +1781,16 @@
     "visible": true
   },
   {
-    "id": "GD772-129",
-    "title": "Ajuste facturas duplicadas Salud",
+    "id": "GD772-121",
+    "title": "Identificar notas crédito radicadas por los prestado como estado nota crédito",
     "assigned": "JAIRO",
     "state": "Pendiente Cliente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "Se solicita identificar las facturas duplicadas, marcar si se deben  reprocesar las facturas debido a este incidente reportado por Sisalud salud.\n[07/11/2025]: Pendiente cliente ajustes del cliente  en sisalud.",
+    "observations": " Se planteó la creación de un nuevo estado llamado “Cruce de notas crédito” para mejorar la clasificación y control de estos registros.\n[07/11/2025]: Pendiente la aclaración por parte del cliente sobre el requerimiento a realizar",
     "unit": "Bolivar",
-    "detail": "Se detectó que, en casos de timeout, las facturas pueden quedar duplicadas. Se definió como solución la inclusión de un campo adicional en el JSON para diferenciar reprocesos de radicaciones nuevas.",
+    "detail": "",
     "visible": false
   },
   {
@@ -1833,16 +1846,16 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JA017",
-    "title": "Restricción para Glosas menores a $6.000",
+    "id": "GD772-123",
+    "title": "Asignación y Gestión de Tareas en la Solución de Cuentas Médicas (Salud y ARL)",
     "assigned": "JAIRO",
-    "state": "Pausado",
-    "progress": 0,
-    "startDate": "25/08/2025",
-    "endDate": "",
-    "observations": "[22/08/2025]: Pendiente ajuste de la restricción para evitar glosas completas en facturas de menor valor.\n[25/08/2025]: Se tiene pendiente la implementación de un ajuste menor que se planea ejecutar en la jornada actual.\n[29/08/2025]: Pausado hasta finalizar  Req GD772-123.",
+    "state": "Reanudar",
+    "progress": 50,
+    "startDate": "12/08/2025",
+    "endDate": "11/09/2025",
+    "observations": "[13/08/2025]: Se inició el 12 de agosto con la adaptación de la bandeja a un formato más interactivo según los requerimientos solicitados. La prioridad está en entregar la funcionalidad de asignación antes que otros entregables. Se continúa con ajustes a consultas y pruebas.\n[20/08/2025]: Se trabajó en la bandeja, realizando ajustes visuales y validaciones con Henry. Falta incluir los registros antiguos y revisar a fondo la parte de asignación, por lo que el avance se estima en un 50%.\n[22/08/2025]: Se presentó la vista inicial con filtros y gráficas. Avance inicial, pendiente la implementación de la lógica de asignación de casos.\n[25/08/2025]: Se avanzó en la mejora de la bandeja y se incluiran dos temas pendientes relacionados con inconsistencias: “sí” e “inconsistencias: no”. \n[29/08/2025]: Se avanzó en cambios de la bandera. Persisten ajustes en la bandeja de consulta debido a lentitud en la ejecución de consultas y validación de inconsistencias. Se están revisando alternativas (consultas completas vs parciales con Ajax).\n[01/09/2025]: Se realizaron pruebas locales y se avanza en la incorporación de control de capacity.\n[03/03/2025]: El 2 de septiembre se realizó un paso parcial del módulo de asignación, implementando la nueva bandeja de pendientes\n[09/09/2025]: Se escala control de cambios MDSB-887065 para la adicion de dos columna a dos tablas existentes. Control de cambios ejecutado con exito.\n[10/09/2025]: Avance en queries para indicadores de ANS, se estima entregar esta semana.\n[12/09/2025]: Se presentó el desarrollo a Sandra, quien lo revisó y lo aprobó de manera preliminar. El componente de lógica ya está implementado, incluyendo la corrección de la bandeja, la asignación por radicados y el control de capacidad, Actualmente esta en construcción los dashboards de administración para evaluar la eficiencia de los auditores\nSe está a la espera del visto bueno para pasar a producción y validar con datos reales.\n[15/09/2025]: Se escala control de cambio a producción con el jira MDSB-890559.\n[25/09/2025]: El control de cambios aún se encuentra pendiente de aprobación por parte del QA del cliente.\n[01/10/2025]: Control de cambios ejecutado el 29 de septiembre,  Se realiza paso a producción de la  implementación en salud, de acuerdo al  resultado se iniciara implementación en ARL",
     "unit": "Bolivar",
-    "detail": "Se identificó que el sistema no permite glosar facturas cuyo valor neto es inferior a $6.000, incluso si la factura original supera ese monto. Se revisó el caso y se determinó que debe ajustarse la validación para permitir Glosas en esos escenarios.",
+    "detail": "**Requisitos de Asignación y Gestión de Tareas en la Solución de Cuentas Médicas**\n\nEste documento detalla los requisitos específicos para la funcionalidad de asignación y gestión de tareas dentro de la solución de cuentas médicas, El objetivo es asegurar una distribución eficiente, equitativa y trazable de las solicitudes de cuentas médicas, optimizando los tiempos de respuesta y la operatividad.\n\n**1. Configuración de ANS y Priorización de Solicitudes**\n\nLa solución debe permitir:\n\n**● Parametrizar el Acuerdo de Nivel de Servicio (ANS)** para cada tipo de solicitud de cuentas médicas (ej. Pronto Pago, Glosa), asegurando que el sistema priorice las tareas según estos parámetros.\n\n**● Priorizar la asignación en bandeja por fecha de radicado**, mostrando desde el más antiguo al más reciente en la primera vista y manteniendo los pendientes ordenados de lo más antiguo a lo más nuevo. Esta priorización debe ser rápida y eficiente, sin demoras en la búsqueda u ordenamiento, reflejando la fecha de radicado de Sisalud.\n\n**● Priorizar las solicitudes próximas a vencer** según el ANS parametrizado, considerando la fecha de radicación.\n\n**2. Asignación de Tareas por Radicado**\n\nLa solución debe asegurar que la asignación de tareas se realice de la siguiente manera:\n\n**● Generar la asignación por número de radicado**, no por factura individual.\n\n**● Asignar sin fraccionar las facturas**: Todos los radicados asociados a una misma factura deben ser asignados a una única persona, garantizando la continuidad en la gestión.\n\n**● Parametrizar el tiempo de cada actividad** para incorporarlo en el plan de trabajo y en la asignación.\n\n**● Respuestas a glosa**: Deben asignarse automáticamente al usuario que generó la glosa (o al área correspondiente, como auditoría médica). Si el usuario está inhabilitado (ej. por vacaciones), el sistema debe reasignar a otra persona del mismo perfil, considerando la carga de trabajo pendiente.\n\n**3. Filtrado y Visualización de Bandejas**\n\nLa plataforma debe contar con las siguientes capacidades de filtrado y visualización:\n\n**● Crear un filtro de cantidad** que muestre el número de facturas con respuesta a glosa, escalados, pronto pago y los pendientes de cuentas médicas.\n\n**● Permitir filtrar la bandeja por la condición deseada** (ej. fecha de radicación, del más antiguo al más reciente), manteniendo el filtro activo hasta que el usuario desee desactivarlo.\n\n**● Habilitar filtros por rango de fechas** en todas las pantallas.\n\n**4. Reasignación Flexible y Equitativa**\n\nLas bandejas de trabajo deben permitir la reasignación con las siguientes características:\n\n**● Reasignar sin perder la equidad** en la distribución de la carga de trabajo.\n\n**● Reasignar de forma individual o masiva por**: perfil, usuario, proveedor, complejidad, ramo, tipo de servicio, valor, fechas de radicación y pronto pago.\n\n**● Reasignar por distribución de cargas o no**, sin existir bloqueante para el administrador.\n\n**● Permitir asignar a una persona específica o distribuir equitativamente** entre usuarios correspondientes al mismo perfil.\n\n**● Los casos reasignados deben visualizarse en la bandeja respetando la antigüedad y ** original del registro.\n\n**5. Depuración y Actualización de Bandejas (Imagine)**\n\nSe requiere que la solución realice una depuración automática de las bandejas de Imagine de la siguiente manera:\n\n**● Realizar depuración de las bandejas de Imagine solo dejando las facturas en periodo vigente.**\n\n**● Si la factura fue pagada según reporte de Sisalud en un 90%**, dejarla en estado inactivo. En caso de que llegue una conciliación, reactivar y reasignar.\n\n**● Si la factura está en estado pagado en Sisalud totalmente**, dejarla en estado pagado.\n\n**● Si la factura está en estado glosado en Sisalud**, dejarla en estado glosado.\n\n**Si la factura está en estado pagado glosado**, dejarla en estado glosado.\n\n**● Si el radicado se encuentra en estado anulado en Sisalud**, realizar el cruce con Sisalud para conocer el número de radicado con el que se pagó.\n\n**● Todas las facturas deben continuar con los perfiles actuales** del administrador (como reasignar facturas, cambios de ramo según usuario), sin que exista ningún bloqueante.\n\n**● Permitir habilitar y deshabilitar los ramos para cada usuario**, incluyendo la opción de tener acceso a dos ramos si es necesario, bajo gestión del administrador.\n\n**● Permitir la habilitación del capacity por usuario y por perfil**: el administrador podrá parametrizar cuántos casos puede gestionar el usuario por día. Si se supera el capacity definido, se deberá generar una alerta.\n\n**● Los perfiles deben estar atados al ramo a trabajar**. El administrador debe poder asignar o reasignar facturas según necesidad. En el momento en que se cambie de ramo, no puede continuar habilitado para que se le asignen facturas que no corresponden a este. A partir de la asignación del ramo por parte del administrador, Imagine no debe asignar un ramo diferente al perfil.\n\n**6. Equidad en la Asignación y Control de Reglas\n\nLa asignación debe garantizar:**\n\n**● Equidad**: Es decir, igual o similar número de radicados para cada analista, teniendo en cuenta el tipo de servicio y la complejidad en la asignación sin perder las reglas de negocio establecidas. El contador debe considerar el acumulado para lograr radicados similares.\n\n**● Validación de Reglas del Motor**: Se deben validar nuevamente las reglas del motor para baja, media y alta complejidad según monto y tipo de servicio. Se revisará la tabla de reglas del motor que trabaja Imagine.\n\n**7. Tableros de Control y Reportería Detallada**\n\nLa solución debe ofrecer las siguientes herramientas de monitoreo:\n\n**● Tableros de control y gestión con base en reportes de Sisalud.** Se buscaría acceso a Sisalud Salud.\n\n**● Permitir que el administrador pueda actualizar los radicados** sin necesidad de solicitar apertura a la factura y que quede la traza de los dos radicados, definiendo una regla para decidir de forma automática con cuál se pagó.\n\n**● Reportes para administrador y analistas** del número de casos realizados, en tiempo real, acumulado, día, mes, año. Se basarán en el cruce de Imagine y Sisalud para lo gestionado y lo escalado. Deben indicar cuántos casos le faltan para cumplir la meta.\n\n**● Para cartera, que se pueda visualizar una marca y filtrar** por la misma de facturas ya conciliadas y/o con paz y salvo.\n\n**● Debe existir un tablero o un informe** que indique cuántos radicados está gestionando cada usuario por día, que muestre los tiempos de gestión para cada\n\nradicado, poder validar los pendientes al momento de la consulta y una gráfica de la gestión realizada día a día.\n\nDe forma atenta me permito enviar solicitud de creación de carpetas para cada uno de los auditores con el fin de que las distribuciones de las facturas sean equitativas para los que tienen perfil de enfermería y a los médicos les sean asignadas las cuentas iguales o mayores a $50.000.000.\n\nCon respecto a la respuesta a glosa, lo ideal es que le sea asignada a la persona que revisó. En sus inicios debería ser asignada a mi bandeja ya que el usuario que está revisando las facturas es el mío y posterior cuando empiecen a llegar las respuestas de las vistas por cada uno de los usuarios, a ellos mismos.\n\n**A continuación, relaciono los perfiles con la parametrización requerida.**\n\nCARGOCCNOMBREPerfilProfesional en enfermería55069610Claudia Lorena Montealegre GarciaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería53108492Sandra Patricia Aranzales OchoaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería1010204648Diego Ferney Castellanos FlórezAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería39813915Maria Marcela Bermudez TautivaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería93.237.264Edwin Giovanni Ayala PavaAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en enfermería53048074Leidy Tatiana Figueroa MorenoAuditor de cuentas hasta $49.999.999 de forma aleatoria indiferente del proveedorProfesional en medicina1020792806Brandon Arevalo BernalAuditor de cuentas iguales o > $50.00.000 de forma aleatoria indiferente del proveedorProfesional en medicina36068234Astrid Lliana Muñoz AñazcoAuditor de cuentas iguales o > $50.00.000 de forma aleatoria indiferente del proveedorProfesional en medicina39789340Sandra Zoraya Munevar AvilaAuditor de cuentas iguales o > $50.00.000 de forma aleatoria indiferente del proveedor",
     "visible": true
   },
   {
@@ -1867,19 +1880,6 @@
     "startDate": "08/09/2025",
     "endDate": "20/09/2025",
     "observations": "Una vez habilitado el ambiente de dev, se realizará la actualización a la nueva versión de PHP, junto con las librerías asociadas (ej. PostgreSQL, Apache). Se resaltó la importancia de revisar compatibilidad y replicar las librerías en la nueva versión.\n[03/09/2025]: No ha sido posible aplicar actualizaciones dado que el ambiente continúa inestable. El requerimiento permanece bloqueado hasta la disponibilidad de la instancia.\n[10/09/2025]: Migración a PHP 8.2 en curso; incidencias ya documentadas y solucionadas. Se Validara compatibilidad completa de aplicaciones.\n[12/09/2025]: Las nuevas versiones ya fueron instaladas en el servidor. Falta ejecutar pruebas para validar su correcto funcionamiento, lo cual está bloqueado por el acceso al ambiente.\n[15/09/2025]: Se realizaron avances en la actualización de la versión de PHP y sus librerías asociadas en el ambiente de desarrollo. La actividad está supeditada a la disponibilidad del entorno, que aún presenta bloqueos de acceso.\n[22/09/2025]: Ajustes realizados en Virtual Host para unificación de versiones PHP que tienen pues como todos los ambientes en este momento.",
-    "unit": "Bolivar",
-    "detail": "",
-    "visible": true
-  },
-  {
-    "id": "INTERNO-JE023",
-    "title": "Documento tecnico GD772-130   Modalidad Teletrabajo Transnacional",
-    "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -2015,16 +2015,16 @@
     "visible": true
   },
   {
-    "id": "GD772-161",
-    "title": "Automatización actas de prevención Formato AT- 031 Agr”",
+    "id": "INTERNO-JE004",
+    "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
     "assigned": "JESUS",
-    "state": "En Proceso",
-    "progress": 80,
-    "startDate": "27/11/2025",
-    "endDate": "09/12/2025",
-    "observations": "[29/09/2025]: Requerimiento aún en etapa de entendimiento. Reunión próxima con el cliente para detallar proceso y asignar responsables.\n[01/10/2025]: El requerimiento se encuentra en etapa de análisis; hasta el momento solo se han revisado documentos y definiciones iniciales. No se han realizado desarrollos técnicos ni configuraciones. Se requiere concertar con el área de tecnología los posibles ajustes a implementar para definir un plan de trabajo.\n[28/10/2025]: Se estima 20 dias habiles de desarrollo.\n[04/11/2025]: Se envia al cliente las historias de usuario para validación y aprobación.\n[10/11/2025]: Cliente confirma aceptación de las HU\n[27/11/2025]: Se inicia con el desarrollo.\n[01/12/2025]: El desarrollo avanzó al 35%. Ya se tienen listas las carpetas (.zip) en la ruta correspondiente y hoy se inicia el procesamiento de los activos según el requerimiento. Se estima terminar antes del tiempo inicialmente previsto.\n[03/12/2025]: El desarrollo se encuentra en un avance aproximado del 70%. El comando ya crea los casos correctamente. Pendiente implementar lectura de PDF, extracción del correo y los pasos finales del flujo antes de completar el desarrollo. Se trabajará en ello durante el día.\n[05/12/2025]: El desarrollo ya enlaza correctamente la lectura de PDF y la asociación de cada archivo a un caso independiente. Está listo para envío de correos certificados, pero se requiere ajustar el correo destino utilizado en Test y validar el cuerpo del correo para presentación a las 4 p.m. Solo faltan ajustes menores en visualización y pruebas finales del flujo.\n[10/12/2025]: Se corrigieron las validaciones de nombres de archivos encontradas por Fabio. Se creó un nuevo comando para el envío de correos masivos y se logró el envío correcto utilizando la plantilla oficial. El único pendiente es guardar el correo enviado en PDF como adjunto del caso, lo cual será abordado hoy",
+    "state": "Pendiente",
+    "progress": 60,
+    "startDate": "26/05/2025",
+    "endDate": "",
+    "observations": "",
     "unit": "Bolivar",
-    "detail": "Fecha entrega al cliente:\n\n\n1. DESCRIPCIÓN DEL REQUERIMIENTO Se requiere crear una funcionalidad que permita la creación masiva de casos a partir de adjuntos y generación de respuesta por correo electrónico certificado bajo la tipología “Formato AT- 031 Agr”. 1.2 OBJETIVO Automatizar el proceso de envío de actas 1.3 EQUIPO DE TRABAJO Nombre Área ANA MILDRED BURGOS M Innovación y Desarrollo ARL FREDY DIAZ HERRERA Gerencia ARL VANESSA ESTHER ALVAREZ R Subgerencia de Prevención ARL 2. REQUERIMIENTOS FUNCIONALES Se requiere crear una funcionalidad que permita la creación masiva de casos a partir de adjuntos y generación de respuesta por correo electrónico certificado bajo la tipología “Formato AT- 031 Agr”. 2.1 Módulo para creación de casos 2.1.1 Cargue de pdf Se requiere la creación de un módulo en el cual se pueda realizar el cargue de archivos en formato pdf de manera masiva para la creación y generación de respuesta por correo electrónico certificado bajo la tipología “Formato AT- 031 Agr”. Modelo de pdf\\r\\nOpción 1 - Url de Drive. En el módulo se debe poder seleccionar la tipología (Formato AT 031 Agr) y el sistema debe solicitar la url de drive para traer la información, una vez el usuario coloque la url, el sistema deberá de guardar esa url para cargues futuro y únicamente solicitar la confirmación del usuario; sin embargo en cualquier momento el usuario podrá cambiar la url de cargue. Opción 2 - Selección de carpeta. En el módulo se debe poder seleccionar la tipología (Formato AT- 031 Agr) y el sistema debe solicitar los archivos en pdf sobre los cuales se requiere la creación del caso, para lo cual el usuario deberá de seleccionar la carpeta del PC y el sistema deberá de tomar todos los pdf que registren en dicha carpeta. 2.1.1 Creación de casos Una vez cargado los pdf el sistema deberá realizar la creación de los casos con la información que está nombrado en el pdf, se propone la siguiente estructura: NIT_NOMBREEMPRESA_CRONOGRAMA_SECUENCIA_CONSECUTIVO (CANTIDAD DE HOJAS), con esta información el sistema deberá realizar la creación de los casos. Si el pdf coincide en Nit,nombre,cronograma y secuencia en dos archivos o mas, se deberá de anexar la cantidad de pdf´s a un solo caso. Los datos obligatorios para la creación del caso son: nit, nombre , cronograma y secuencia. Si hay algún dato faltante para la creación del caso, este no deberá crear y se deberá notificar el error. De deberá de notificar al usuario los casos creados con la siguiente estructura: Si no es posible la creación del caso deberá indicar el error. 2.1.2 Proforma de respuesta Esta tipología deberá tener la proforma de respuesta con los campos variables indicados (ver anexo). 2.1.2 Generación de respuesta y envío Los casos creados por esta funcionalidad, deberán generar respuesta de manera automática al cliente por correo electrónico certificado, remitiendo los adjuntos cargados y la proforma anexa a este requerimiento (ver anexo). El correo electrónico del envío se deberá leer desde el pdf cargado. Tanto la actividad de generación de respuesta como la de radicación, deberá quedar a nombre del usuario que realiza el proceso. En caso de Los envíos no deben quedar en la misma cola de los masivos, estos deben salir el mismo día de radicación.devolución el caso debe quedar en la bandeja del usuario que radicó para gestión individual.\\r\\n",
+    "detail": "",
     "visible": true
   },
   {
@@ -2087,7 +2087,7 @@
     "progress": 85,
     "startDate": "14/11/2025",
     "endDate": "",
-    "observations": "[18/11/2025]:  El 14 de noviembre se da Inicio de la construcción de la base de datos a partir de registros productivos para alimentar el modelo y los procesos de radicación\n[19/11/2025]: Se continuó con la obtención y depuración de registros productivos, validando campos clave para que la base de datos soporte de forma consistente el entrenamiento del modelo y los procesos de radicación.\n[24/11/2025]: Actividad continua y progresiva. Actualmente estimada en 60%, pero seguirá ejecutándose mientras sea necesaria para enriquecer el entrenamiento del modelo.\n[26/11/2025]: La extracción completa aún no inicia debido a que no se cuenta con acceso autorizado en producción. La intención es reutilizar el modelo validado en Test y completar el entrenamiento una vez se habiliten los permisos para realizar la descarga masiva.\nEl 24 de noviembre  imgine entregó la información y correcciones solicitadas al cliente para la implermentación de la instancia en producción. La radicación de la solicitud a infraestructura  por medio de Jira  queda ahora en manos del cliente.\n[01/12/2025]: La extracción es un proceso continuo. Se realizaron nuevas pruebas con datos que anteriormente fallaban y ahora funcionan correctamente. El avance estimado se actualiza al 80%.\n[03/12/2025]: El avance de extracción se actualizó al 85%. Se continúa extrayendo información real para usar en el entrenamiento y en la validación del flujo. No se registran bloqueos en esta actividad",
+    "observations": "[18/11/2025]:  El 14 de noviembre se da Inicio de la construcción de la base de datos a partir de registros productivos para alimentar el modelo y los procesos de radicación\n[19/11/2025]: Se continuó con la obtención y depuración de registros productivos, validando campos clave para que la base de datos soporte de forma consistente el entrenamiento del modelo y los procesos de radicación.\n[24/11/2025]: Actividad continua y progresiva. Actualmente estimada en 60%, pero seguirá ejecutándose mientras sea necesaria para enriquecer el entrenamiento del modelo.\n[26/11/2025]: La extracción completa aún no inicia debido a que no se cuenta con acceso autorizado en producción. La intención es reutilizar el modelo validado en Test y completar el entrenamiento una vez se habiliten los permisos para realizar la descarga masiva.\nEl 24 de noviembre  imgine entregó la información y correcciones solicitadas al cliente para la implermentación de la instancia en producción. La radicación de la solicitud a infraestructura  por medio de Jira  queda ahora en manos del cliente.\n[01/12/2025]: La extracción es un proceso continuo. Se realizaron nuevas pruebas con datos que anteriormente fallaban y ahora funcionan correctamente. El avance estimado se actualiza al 80%.\n[03/12/2025]: El avance de extracción se actualizó al 85%. Se continúa extrayendo información real para usar en el entrenamiento y en la validación del flujo. No se registran bloqueos en esta actividad\n[10/12/2025]:  Inicio de la construcción de la base de datos a partir de registros productivos para alimentar el modelo y los procesos de radicación.",
     "unit": "Bolivar",
     "detail": " Extracción de información real en producción para la construcción de la base de datos de Oficina Express.",
     "visible": true
@@ -2109,13 +2109,52 @@
     "id": "GD772-141_3",
     "title": "OFICINA  EXPRES  ARL -IA Entrenamiento del modelo en ambiente de test",
     "assigned": "DANILO",
-    "state": "Pausado",
-    "progress": 90,
+    "state": "En Proceso",
+    "progress": 85,
     "startDate": "14/11/2025",
     "endDate": "18/11/2025",
-    "observations": "[18/11/2025]: El 14 de noviembre se realiza   Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo.\n[19/11/2025]: Ayer 18 de noviembre  se dejo con un entrenamiento y se esta a la espera de resultados de las pruebas.\n[24/11/2025]: El modelo ha mejorado el entendimiento de contexto tras pruebas del viernes. Se incrementa su avance estimado a 80%. A partir de resultados de pruebas nuevas, se corregirán inconsistencias y se completará el entrenamiento.\n[26/11/2025]: El modelo mostró buen comportamiento en las pruebas recientes, pero se detectaron inconsistencias asociadas a los cambios aplicados el viernes 21 de noviembre. Hoy se revisarán las incidencias para determinar si es necesario ejecutar un nuevo ciclo de entrenamiento y ajustar el entendimiento contextual del modelo.\n[03/12/2025]: Se incrementó el avance del entrenamiento al 90%. Se extrajo nueva información desde producción para mejorar los datos de entrenamiento en Test. El modelo está respondiendo mejor, pero está pendiente una validación final dependiendo de la resolución del problema de replicación en Nativo.\n[05/12/2025]:  No se realizaron avances en entrenamiento durante los últimos días, debido a que se priorizó el ambiente de desarrollo. El requerimiento se mantiene pausado hasta que se concluya la estabilización completa del entorno.\n[10/12/2025]: El entrenamiento del modelo no presenta avances recientes debido a que se estaba en etapa de pruebas y aún no se ha recibido feedback de los resultados anteriores. El requerimiento permanece en espera de la retroalimentación funcional.",
+    "observations": "[18/11/2025]: El 14 de noviembre se realiza   Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo.\n[19/11/2025]: Ayer 18 de noviembre  se dejo con un entrenamiento y se esta a la espera de resultados de las pruebas.\n[24/11/2025]: El modelo ha mejorado el entendimiento de contexto tras pruebas del viernes. Se incrementa su avance estimado a 80%. A partir de resultados de pruebas nuevas, se corregirán inconsistencias y se completará el entrenamiento.\n[26/11/2025]: El modelo mostró buen comportamiento en las pruebas recientes, pero se detectaron inconsistencias asociadas a los cambios aplicados el viernes 21 de noviembre. Hoy se revisarán las incidencias para determinar si es necesario ejecutar un nuevo ciclo de entrenamiento y ajustar el entendimiento contextual del modelo.\n[03/12/2025]: Se incrementó el avance del entrenamiento al 90%. Se extrajo nueva información desde producción para mejorar los datos de entrenamiento en Test. El modelo está respondiendo mejor, pero está pendiente una validación final dependiendo de la resolución del problema de replicación en Nativo.\n[05/12/2025]:  No se realizaron avances en entrenamiento durante los últimos días, debido a que se priorizó el ambiente de desarrollo. El requerimiento se mantiene pausado hasta que se concluya la estabilización completa del entorno.\n[10/12/2025]: El entrenamiento del modelo no presenta avances recientes debido a que se estaba en etapa de pruebas y aún no se ha recibido feedback de los resultados anteriores. El requerimiento permanece en espera de la retroalimentación funcional.\n[10/12/2025] Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo",
     "unit": "Bolivar",
     "detail": " Entrenamiento del modelo en el ambiente de pruebas.",
+    "visible": true
+  },
+  {
+    "id": "GD772-141_4",
+    "title": "OFICINA  EXPRES  ARL -IA Reglas de validación dinámicas (Yii / Administración)",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "10/12/2025",
+    "endDate": "10/12/2025",
+    "observations": "[12/12/2025]: El 10 de diciembre se habilitaron los campos y adjuntos obligatorios desde la administración, con impacto directo en la validación del proceso en Oficina Express.",
+    "unit": "Bolivar",
+    "detail": "Configuración de reglas de validación dinámicas para campos y adjuntos de Oficina Express administrados desde Yii.",
+    "visible": true
+  },
+  {
+    "id": "GD772-141_5",
+    "title": "OFICINA  EXPRES  ARL -IA Despliegue en la instancia privada de test)",
+    "assigned": "DANILO",
+    "state": "En Proceso",
+    "progress": 99,
+    "startDate": "11/12/2025",
+    "endDate": "",
+    "observations": "[12/12/2025]: El 11 de diciembre la actividad no se pudo completar, no fue posible acceder a la instancia desde la consola de administración de AWS. Se reportó en el ticket MDSB-944861.",
+    "unit": "Bolivar",
+    "detail": "Despliegue de cambios de Oficina Express en la instancia privada.",
+    "visible": true
+  },
+  {
+    "id": "GD772-141_6",
+    "title": "OFICINA  EXPRES  ARL -IA Despliegue en producción)",
+    "assigned": "DANILO",
+    "state": "En Proceso",
+    "progress": 90,
+    "startDate": "11/12/2025",
+    "endDate": "",
+    "observations": "[12/12/2025]: El 11 de diciembre el despliegue avanza; sin embargo, no hay comunicación desde la instancia imaginex_ec2_private1 hacia la nueva instancia de Oficina Express, lo que impide finalizar las pruebas y el pase completo a producción. El bloqueo está radicado en el ticket MDSB-945314.",
+    "unit": "Bolivar",
+    "detail": "Despliegue del servicio de Oficina Express en ambiente productivo.",
     "visible": true
   },
   {
@@ -2135,8 +2174,8 @@
     "id": "INTERNO-D028",
     "title": "Migración y creación de nueva instancia en Snapchat para el ambiente de desarrollo",
     "assigned": "DANILO",
-    "state": "Pausado",
-    "progress": 80,
+    "state": "En Proceso",
+    "progress": 90,
     "startDate": "31/10/2025",
     "endDate": "",
     "observations": "[31/10/2025]: Se  reporta  en el  ticket  MDSB-921872 error en el arranque de la estancia de dev , y Se propone crear la instancia de DEV a partir de la de test, aprovechando su estabilidad y evitando reprocesos de instalación.\"\n[04/11/2025]: Informan que no se puede copiar la instancia i-0656b5dc31eab8a8d porque al hacerlo se dañan los paquetes de Python y la instancia no inicia. Se sugiere hacer los ajustes directamente en la instancia imaginen_imaginez_5_dev y solicitar una copia antes de realizar cambios que puedan afectarla.\n[05/11/2025]: Informan que cuando  se tengan lista la instancia con todo instalado, se les informa para crear la Imagen.\n[07/11/2025]: La instancia no se logró levantar por conflictos con ejecuciones de Python. Se debe reinstalar y configurar nuevamente el ambiente, estimado en dos días.\n[24/11/2025]: Instancia entregada y funcional. Pendiente iniciar instalación de paquetes y configuración para que las aplicaciones operen correctamente. Se deja en pausa hasta que se revise y retome.\n[26/11/2025]: La instancia ya está desplegada, pero el proceso está en pausa a la espera de instalar paquetes, configurar dependencias y habilitar la ejecución de scripts.\n[03/12/2025]: Se retomará el orden del ambiente de Desarrollo, para separar adecuadamente los ambientes Desarrollo, Pruebas y Producción, evitando la mezcla actual. El objetivo es reorganizar el flujo de despliegues.\n[05/12/2025]: Se reinstaló desde cero el ambiente de desarrollo, se instalaron librerías necesarias y se clonaron todos los repositorios. Sin embargo, el DNS aún apunta a una instancia anterior, lo que impide visualizar logs externos por CloudFront. Se radicará un ticket para que infraestructura actualice la asociación del DNS. También se organizarán las ramas, ya que DEV está desactualizada y se alineará con TEST según lo acordado.\n[10/12/2025]: El trabajo en el ambiente de desarrollo continúa bloqueado por falta de actualización del DNS. El ticket MDSB-942275 fue radicado desde el viernes 5 de diciembre y aún no ha sido atendido. Una vez se habilite el dominio correcto, se terminará la estabilización del entorno.",
@@ -2353,16 +2392,16 @@
     "visible": true
   },
   {
-    "id": "GD772-134",
-    "title": "Mejoras REE Salud",
+    "id": "GD772-123_2",
+    "title": "Dashboard de pendientes y Administrativo ARL",
     "assigned": "JAIRO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[10/12/2025]: Se revisó nuevamente el requerimiento 134, que incluye múltiples mejoras sobre el portal de reembolsos de salud. Se acordó organizar el trabajo en bloques funcionales para priorizar lo más rápido y dejar por separado las tareas más complejas.\nAdicionalmente, se discutió la necesidad de definir si el equipo desarrollará los ajustes UX basándose en lineamientos visuales o si el cliente deberá entregar un FIGMA completo, ya que el diseño responsivo requiere decidir la reorganización de elementos para móviles. El grupo considera necesario solicitar el FIGMA para los componentes de responsividad y para evitar ambigüedades posteriores.",
+    "observations": "[15/09/2025]: Se está construyendo el dashboard de pendientes, que mostrará la distribución de actividades y facturas. Se espera completar esta semana.\n[22/09/2025]: Pendiente de desarrollo tras cierre del Dashboard de eficiencia en producción",
     "unit": "Bolivar",
-    "detail": "Se requiere implementar un mecanismo que permita marcar la prioridad de los casos al momento de su registro, de manera que en la actividad de digitación estos se visualicen con una distinción clara. Esto permitirá que el analista identifique fácilmente los casos prioritarios y realice la digitación de forma oportuna.",
+    "detail": "",
     "visible": false
   },
   {
@@ -2405,17 +2444,17 @@
     "visible": true
   },
   {
-    "id": "GD772-136",
-    "title": "Cruce automatico Autorizado Vs Cobrado",
+    "id": "GD772-129",
+    "title": "Ajuste facturas duplicadas Salud",
     "assigned": "JAIRO",
-    "state": "Paso A Produccion",
-    "progress": 90,
-    "startDate": "16/10/2025",
-    "endDate": "06/11/2025",
-    "observations": "[10/09/2025]: Revisión preliminar realizada.\n[22/10/2025]: Se solicita control de cambios en test MDSB-915793\n[28/10/2025]: Control de cambios ejecutado con éxito \n\n[21/11/2025]. Se escala control de cambios a test MDSB-934083 para la creación de  la tabla cm_actualizacion_facturas_sisalud y modificación de las tablas cm_pagos_masivos_generados y ctas_proveedores\nControl de cambios MDSB-934083 ejecutado.\n[26/11/2025]: Se avanzó en la implementación del cruce y la construcción de las bandejas de resultado. Falta validar el comportamiento del cruce asociado a proveedores y  solicitar la creación  de la tabla en producción. Continúan ajustes menores previos a las pruebas finales.\n[27/11/2025]: Se escala control de cambios en producción MDSB-937531\n[01/12/2025]: Control de cambios aun se encuentra pendiente por QA del cliente\n[03/12/2025]: Control de cambios programado hoy  para aprobación por comité.\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[10/12/2025]: A un esta pendientes de pruebas para realizar paso a produncción.",
+    "state": "Pendiente Cliente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "Se solicita identificar las facturas duplicadas, marcar si se deben  reprocesar las facturas debido a este incidente reportado por Sisalud salud.\n[07/11/2025]: Pendiente cliente ajustes del cliente  en sisalud.",
     "unit": "Bolivar",
-    "detail": "Descripción\n\nSe requiere realizar el cruce automatico de lo autorizado, ya sea cargado de forma manual o por API con el lago vs lo cobrado en las facturas por el proveedor.\n\nUna vez realizada esta comparacion, los registro en los que el valor cobrado, sea igual o menor al valor autorizado, se deben  asignar al usuario definido para pago masivo,  Asi mismo debe permitir seleccionar todos o algunos casos, para realizar la notificacion y el cierre de caso masivo.\n\nLos caso cuyo valor cobrado es mayor al valor autorizado, deben pasar segun las reglas de asignación a los diferentes perfiles, en caso de que exista tarifa pactada, el usuario debe poder visualizar la tarifa pactada, autorizada y cobrada para su evaluacion.",
-    "visible": true
+    "detail": "Se detectó que, en casos de timeout, las facturas pueden quedar duplicadas. Se definió como solución la inclusión de un campo adicional en el JSON para diferenciar reprocesos de radicaciones nuevas.",
+    "visible": false
   },
   {
     "id": "GD852-72-1",
@@ -2444,17 +2483,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JA023",
-    "title": "Corrección en anulación de casos (sincronización entre sistemas Nativo y Yii)",
+    "id": "INTERNO-JA017",
+    "title": "Restricción para Glosas menores a $6.000",
     "assigned": "JAIRO",
-    "state": "Pendiente",
+    "state": "Pausado",
     "progress": 0,
-    "startDate": "",
+    "startDate": "25/08/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[22/08/2025]: Pendiente ajuste de la restricción para evitar glosas completas en facturas de menor valor.\n[25/08/2025]: Se tiene pendiente la implementación de un ajuste menor que se planea ejecutar en la jornada actual.\n[29/08/2025]: Pausado hasta finalizar  Req GD772-123.",
     "unit": "Bolivar",
-    "detail": "Se detectó que al anular un caso en Nativo no se refleja la anulación en el sistema Yii. Se acordó no procesar manualmente los casos pendientes hasta corregir el código, para que en adelante la anulación se propague correctamente en ambos sistemas.",
-    "visible": false
+    "detail": "Se identificó que el sistema no permite glosar facturas cuyo valor neto es inferior a $6.000, incluso si la factura original supera ese monto. Se revisó el caso y se determinó que debe ajustarse la validación para permitir Glosas en esos escenarios.",
+    "visible": true
   },
   {
     "id": "GD772-147",
@@ -2483,17 +2522,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JA026",
-    "title": "Problemas intermitentes con 472 (envío de correos)",
+    "id": "GD772-134",
+    "title": "Mejoras REE Salud",
     "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "state": "En Proceso",
+    "progress": 20,
+    "startDate": "10/11/2025",
     "endDate": "",
-    "observations": "[26/09/2025]: De momento quedara penndiente hasta escarlar propuesta al cliente y apruebe la implementación.",
+    "observations": "[10/12/2025]: Se revisó nuevamente el requerimiento 134, que incluye múltiples mejoras sobre el portal de reembolsos de salud. Se acordó organizar el trabajo en bloques funcionales para priorizar lo más rápido y dejar por separado las tareas más complejas.\nAdicionalmente, se discutió la necesidad de definir si el equipo desarrollará los ajustes UX basándose en lineamientos visuales o si el cliente deberá entregar un FIGMA completo, ya que el diseño responsivo requiere decidir la reorganización de elementos para móviles. El grupo considera necesario solicitar el FIGMA para los componentes de responsividad y para evitar ambigüedades posteriores.\n[12/12/2025]: El 10 de diciembre se inició con los ajustes definidos para el proceso, implementando el cambio de lógica para utilizar una plantilla para la carta y otra para el cuerpo del correo, conforme a lo socializado con Liyi, estableciendo puntos rápidos para realizar dos entregas. Adicionalmente, se incorporó la verificación de respuesta_glosa en la condición de decisión para actividades de baja complejidad; se crearon múltiples nuevas plantillas de correo para distintos escenarios de devolución (total, parcial, validación, no efectivo, entre otros); y se mejoró la función de devolución de correos, adicionando el campo de observación del analista.\n\nEl 11 de diciembre se realizó la revisión y validación de las plantillas de correo implementadas el día anterior, garantizando su funcionamiento según lo esperado. Adicionalmente, se avanzó en la preparación para la primera entrega de los ajustes acordados con Liyi.",
     "unit": "Bolivar",
-    "detail": "Se identificó que cuando el servicio no está disponible, genera errores. Se debe implementar un manejo de estados de servicio para dejar correos en estado “pendiente de envío” sin bloquear procesos.",
-    "visible": false
+    "detail": "Se requiere implementar un mecanismo que permita marcar la prioridad de los casos al momento de su registro, de manera que en la actividad de digitación estos se visualicen con una distinción clara. Esto permitirá que el analista identifique fácilmente los casos prioritarios y realice la digitación de forma oportuna.",
+    "visible": true
   },
   {
     "id": "GD772-144",
@@ -2574,29 +2613,29 @@
     "visible": true
   },
   {
-    "id": "GD772-159_1",
-    "title": "Documentación tecnica. ( Valores de factura vs valores pendientes )",
-    "assigned": "jaIRO",
+    "id": "INTERNO-JA023",
+    "title": "Corrección en anulación de casos (sincronización entre sistemas Nativo y Yii)",
+    "assigned": "JAIRO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[01/12/2025]: Tam pronto se realice el paso a producción se le solicitara a  Jairo los script.",
+    "observations": "",
     "unit": "Bolivar",
-    "detail": "",
+    "detail": "Se detectó que al anular un caso en Nativo no se refleja la anulación en el sistema Yii. Se acordó no procesar manualmente los casos pendientes hasta corregir el código, para que en adelante la anulación se propague correctamente en ambos sistemas.",
     "visible": false
   },
   {
-    "id": "GD772-159_2",
-    "title": "Ajuste en descargar volúmenes grandes (Valores de factura vs valores pendientes (validaciones del masivo) Gasto medico)",
+    "id": "INTERNO-JA026",
+    "title": "Problemas intermitentes con 472 (envío de correos)",
     "assigned": "JAIRO",
-    "state": "En Proceso",
-    "progress": 30,
-    "startDate": "09/12/2025",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
     "endDate": "",
-    "observations": "[10/12/2025]: Se identificaron problemas en la lógica cuando los usuarios intentan descargar volúmenes grandes (más de 500 registros). Aunque se aplicó un ajuste rápido para permitir continuidad en pruebas, el componente aún falla en cargas altas. Se revisará la lógica para corregir errores en descargas masivas y depurar la validación de autorizaciones y estados",
+    "observations": "[26/09/2025]: De momento quedara penndiente hasta escarlar propuesta al cliente y apruebe la implementación.",
     "unit": "Bolivar",
-    "detail": "Se identificaron problemas en la lógica cuando los usuarios intentan descargar volúmenes grandes (más de 500 registros). Aunque se aplicó un ajuste rápido para permitir continuidad en pruebas, el componente aún falla en cargas altas. Se revisará la lógica para corregir errores en descargas masivas y depurar la validación de autorizaciones y estados",
+    "detail": "Se identificó que cuando el servicio no está disponible, genera errores. Se debe implementar un manejo de estados de servicio para dejar correos en estado “pendiente de envío” sin bloquear procesos.",
     "visible": false
   },
   {
@@ -2626,16 +2665,29 @@
     "visible": true
   },
   {
-    "id": "GD772-162",
-    "title": "Ajuste servicio de Olimpia - Registraduria  API",
+    "id": "INTERNO-JE007",
+    "title": "Validaciòn apertura de dos actividades en un mismo caso en Nativo",
     "assigned": "JESUS",
+    "state": "Pendiente",
+    "progress": 80,
+    "startDate": "04/07/2025",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "GD772-159_1",
+    "title": "Documentación tecnica. ( Valores de factura vs valores pendientes )",
+    "assigned": "jaIRO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[22/10/2025]: Se Iniciara  tan pronto finalice el desarrollo del req  GD772-159 (Jira).\n[24/10/2025]: El requerimiento será abordado por Wilson, quien reutilizará estructuras y rutas ya desarrolladas. Se debe crear una nueva tabla para almacenar tokens y marcar los asociados al servicio de Olimpia. Se coordinó con Jairo para brindar contexto técnico durante la implementación.\n[26/11/2025]: Este requerimeinto es reasignado a Jesus .",
+    "observations": "[01/12/2025]: Tam pronto se realice el paso a producción se le solicitara a  Jairo los script.",
     "unit": "Bolivar",
-    "detail": "Implementar la integración con el servicio externo Olimpia para la validación de identidad ciudadana (registraduría).\nEl sistema deberá recibir, almacenar y gestionar los tokens de autenticación que provee Olimpia, garantizando seguridad y trazabilidad en los procesos de validación.\nSe busca unificar el manejo de tokens utilizados en los diferentes módulos  en una sola tabla centralizada, evitando duplicidad de estructuras\n",
+    "detail": "",
     "visible": false
   },
   {
@@ -2647,19 +2699,6 @@
     "startDate": "",
     "endDate": "",
     "observations": "[05/12/2025]: Pendiente solicitar script a jairo  para elaborar la docuemntación.",
-    "unit": "Bolivar",
-    "detail": "",
-    "visible": false
-  },
-  {
-    "id": "INTERNO-JA027",
-    "title": "Ajuste  consulta autorizaciones en Laravel ",
-    "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
     "unit": "Bolivar",
     "detail": "",
     "visible": false
@@ -2704,17 +2743,17 @@
     "visible": true
   },
   {
-    "id": "GD772-156",
-    "title": "ASIGNACION MEDICO BOLIVAR",
+    "id": "INTERNO-JA027",
+    "title": "Ajuste  consulta autorizaciones en Laravel ",
     "assigned": "JAIRO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[27/10/2025]: Se analizar el detalle del GIRA 156 para aplicar los cambios de asignación en la tabla de usuarios.\n[28/11/2025]: Se iniciara la realización de algunos cambios en el cruce de facturas\n[03/12/2025] : Se ",
+    "observations": "",
     "unit": "Bolivar",
-    "detail": "De forma atenta me permito enviar solicitud de creación de carpetas para cada uno de los auditores con el fin de que las distribuciones de las facturas sea equitativa para los que tienen perfil de enfermería y a los médicos les sean asignadas las cuentas iguales o mayores a $50.000.000.\n\nCon respecto a la respuesta a glosa, lo ideal es que le sea asignada a la persona que revisó. En sus inicios debería ser asignada a mi(S.R.) bandeja ya que el usuario que está revisando las facturas es el mío (S.R.) y posterior cuando empiecen a llegar las respuestas de las vistas por cada uno de los usuarios, a ellos mismos.\n",
-    "visible": true
+    "detail": "",
+    "visible": false
   },
   {
     "id": "MDSB-919192",
@@ -2756,16 +2795,16 @@
     "visible": true
   },
   {
-    "id": "GD772-117",
-    "title": "Reporte glosas para la Superfinanciera (migración a lago de datos de los 2 informes de glosas (arl y salud)",
+    "id": "GD772-156",
+    "title": "ASIGNACION MEDICO BOLIVAR",
     "assigned": "JAIRO",
-    "state": "Paso A Produccion",
-    "progress": 98,
-    "startDate": "28/10/2025",
-    "endDate": "04/11/2025",
-    "observations": "[29/10/2025]: Se escala control de cambios MDSB-920698 a test.\n[30/10/2025]: Control de cambios ejecutado pendiente validación de desarrollo la creacion  de las tablas solicitdas\n[31/10/2025]: El informe total de ARL fue mejorado para evitar duplicidad de valores; solo resta ajustar la lógica de repetición en los campos numéricos.\nLos otros cuatro informes (RIPS, Glosas, Detallado L y Detallado Salud) ya cuentan con SQL listos y sin complejidad técnica.\nPendiente: Crear las tablas faltantes (una de ellas para el informe de detalle) y subir todos los informes a ambiente de test.\n[31/10/2025]: Se escala nuevo control de cambios en test MDSB-921949 para la creación de las tablas informe_detallado_arl  y  informe_detallado_salud\n[04/11/2025]: Control de cambios  ejecutado con exito.\n[05/10/2025]: Se confirmó que el 4 de noviembre quedaron  todos los informes del Lago de Datos (Glosas, Detallado ARL, Detallado Salud y RIPS) ya se encuentran desplegados en ambiente de test \nSe entrega informe de Glosas para sus pruebas. \nPendiente preparar y cuadrar el control de cambios para paso a producción, sujeto a aprobación del cliente.\n[19/11/2025] : Se escala control de cambios a producción MDSB-932138 y MDSB-932173.\n[24/11/2025]: Los controles fueron aprobados por comite y ejecutados en la tarde como resultado exitoso para el  MDSB-932173 y se presento error en el script  del control MDSB-932138  para lo cual se debera escalar un nuevo control.\n[25/11/2025]: Se escala nuevo control de cambios  MDSB-935841\n[01/12/2025]: Control de cambios pendiente por aprobación de QA cliente.\n[03/12/2025]: Control de cambios ejecutado con exito el 01 de diciembre\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[05/12/2025]: El requerimiento fue pasado a producción pero presenta un problema puntual con una fecha mal formateada en la data. Se corregirá un ajuste menor en el código. El resto del módulo asociado a largos de datos ya se encuentra en funcionamiento.",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[27/10/2025]: Se analizar el detalle del GIRA 156 para aplicar los cambios de asignación en la tabla de usuarios.\n[28/11/2025]: Se iniciara la realización de algunos cambios en el cruce de facturas\n[03/12/2025] : Se ",
     "unit": "Bolivar",
-    "detail": "Entrega al cliente: 4/11/2025\nSolicitamos disponer del reporte de glosa en el ambiente que pueda ser migrado al lago de datos de Seguros Bolívar, por cuanto es una de las fuentes principales para el reporte que se debe  transmitir cada mes a la Superfinanciera. Es importante que debe de traer todo el histórico de transacciones realizadas en Imagine.",
+    "detail": "De forma atenta me permito enviar solicitud de creación de carpetas para cada uno de los auditores con el fin de que las distribuciones de las facturas sea equitativa para los que tienen perfil de enfermería y a los médicos les sean asignadas las cuentas iguales o mayores a $50.000.000.\n\nCon respecto a la respuesta a glosa, lo ideal es que le sea asignada a la persona que revisó. En sus inicios debería ser asignada a mi(S.R.) bandeja ya que el usuario que está revisando las facturas es el mío (S.R.) y posterior cuando empiecen a llegar las respuestas de las vistas por cada uno de los usuarios, a ellos mismos.\n",
     "visible": true
   },
   {
@@ -2925,17 +2964,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE019",
-    "title": "Tarea programada de borrado de archivos en carpeta conciliacionMasivaPDF",
+    "id": "INTERNO-JE009",
+    "title": "Funcionalidad para inhabilitar modificación de tipologías en Nativo",
     "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
+    "state": "Pausado",
+    "progress": 70,
     "startDate": "",
     "endDate": "",
-    "observations": "[01/09/2025]: Se iniciara  implementaciòn  tras finalizar  ajustes de  GD772-130 Modalidad Teletrabajo Transnacional\n",
+    "observations": "Es necesario restringir cambios en tipologías una vez el portal esté activo, para evitar errores en procesos dependientes.\n[04/08/2025]: El juenes 31 de julio se inactiva el menú de modificación de tipologías ubicado en Radicador > Administración, dejando habilitada únicamente la opción disponible en Radicación Workflow para un conjunto específico de cédulas de ciudadanía (CC). La intención es crear o mejorar la funcionalidad de administración de tipologías en la nueva aplicación de Nativo, la cual se planea actualizar próximamente",
     "unit": "Bolivar",
-    "detail": "Se requiere programar una tarea automática que, el primer día hábil de cada mes, realice el borrado de los archivos almacenados en la carpeta conciliacionMasivaPDF.",
-    "visible": false
+    "detail": "",
+    "visible": true
   },
   {
     "id": "INTERNO-JE020",
@@ -3068,16 +3107,16 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE022",
-    "title": "control automático para detección de fallas en el envío de correos masivos",
+    "id": "INTERNO-JE014",
+    "title": "Optimización de reporte \"General de pendientes\" en Nativo",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
-    "startDate": "",
+    "startDate": "11/08/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[06/08/2025]: Se identificó problema de rendimiento en el código. Se solicitará apoyo a Jairo para reutilizar funciones existentes y optimizar el informe.\n[08/08/2025]: La optimizaciòn se realizara en la nuenva version de nativo  tras realizar la Actuallizaciòn nativo a PHP 8 en local.\n[11/08/2025]: Inicia optimización del informe.",
     "unit": "Bolivar",
-    "detail": "Se detectaron inconvenientes en el envío de correos masivos, presentando fallas desde las 6:40 a.m. del 3 de septiembre.Se requiere implementar un control automático que permita identificar interrupciones de forma oportuna",
+    "detail": "",
     "visible": false
   },
   {
@@ -3094,9 +3133,9 @@
     "visible": true
   },
   {
-    "id": "GD772-137_5",
-    "title": "Ducumentación tecnica -Mejoras Modalidad teletrabajo transnacional (Flujo)",
-    "assigned": "jESUS",
+    "id": "MDSB-855049",
+    "title": "ERROR CONTEO DE DIAS BANDEJA DE PENDIENTES VRS INFORME DE EFECTIVIDAD",
+    "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -3133,17 +3172,17 @@
     "visible": true
   },
   {
-    "id": "GD772-177",
-    "title": "Mejora oficina entidades",
-    "assigned": "jESUS",
-    "state": "Estimar",
+    "id": "GD772-162",
+    "title": "Ajuste servicio de Olimpia - Registraduria  API",
+    "assigned": "JESUS",
+    "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[10/12/2025]: El equipo validará nuevamente para estimar tiempos. La actividad está en revisión inicial.",
+    "observations": "[22/10/2025]: Se Iniciara  tan pronto finalice el desarrollo del req  GD772-159 (Jira).\n[24/10/2025]: El requerimiento será abordado por Wilson, quien reutilizará estructuras y rutas ya desarrolladas. Se debe crear una nueva tabla para almacenar tokens y marcar los asociados al servicio de Olimpia. Se coordinó con Jairo para brindar contexto técnico durante la implementación.\n[26/11/2025]: Este requerimeinto es reasignado a Jesus .",
     "unit": "Bolivar",
-    "detail": "",
-    "visible": true
+    "detail": "Implementar la integración con el servicio externo Olimpia para la validación de identidad ciudadana (registraduría).\nEl sistema deberá recibir, almacenar y gestionar los tokens de autenticación que provee Olimpia, garantizando seguridad y trazabilidad en los procesos de validación.\nSe busca unificar el manejo de tokens utilizados en los diferentes módulos  en una sola tabla centralizada, evitando duplicidad de estructuras\n",
+    "visible": false
   },
   {
     "id": "GD772-137_4",
@@ -3172,16 +3211,16 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE026",
-    "title": "Validación  imagenes empresa 900959051 Y 830094679",
+    "id": "INTERNO-JE019",
+    "title": "Tarea programada de borrado de archivos en carpeta conciliacionMasivaPDF",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[01/09/2025]: Se iniciara  implementaciòn  tras finalizar  ajustes de  GD772-130 Modalidad Teletrabajo Transnacional\n",
     "unit": "Bolivar",
-    "detail": "Se reportó que un NIT específico no muestra información en el año 2024. El incidente genera dudas, ya que en otras fuentes sí aparece información parcial. Para avanzar en la validación, se requiere revisar directamente en la base de datos los registros asociados al NIT y confirmar si la información fue cargada o si existe algún error de consulta.",
+    "detail": "Se requiere programar una tarea automática que, el primer día hábil de cada mes, realice el borrado de los archivos almacenados en la carpeta conciliacionMasivaPDF.",
     "visible": false
   },
   {
@@ -3289,17 +3328,17 @@
     "visible": true
   },
   {
-    "id": "GD772-146",
-    "title": "Doble factor de autentticación (Correo)",
+    "id": "INTERNO-JE022",
+    "title": "control automático para detección de fallas en el envío de correos masivos",
     "assigned": "JESUS",
-    "state": "Pruebas Cliente",
-    "progress": 80,
-    "startDate": "27/10/2025",
-    "endDate": "21/11/2025",
-    "observations": "[27/10/2025]: Iniciara con la configuración de los sitios en local \n[31/10/2025]: Se avanza en la implementación del segundo factor de autenticación con validaciones de usuario y contraseña operativas en Laravel.\nPendiente:\nAjustar el control del flujo de autenticación para evitar logueo sin validación.\nIntegrar el flujo de listas blancas (usuarios exentos del doble factor).\nDefinir tiempo de expiración del token según políticas de seguridad (30 minutos actuales deben revisarse). \nSe escala Control de cambios MDSB-921839 a test.\nControl de cambios genero error  por lo cual se genero el MDSB-922162\n[04/11/2025]: Control de cambios ejecutado con exito \n[05/11/2025]: Se continúa con el ajuste final del desarrollo en Laravel, una vez concluya las pruebas locales, procederá a migrar el desarrollo a los demás sitios uno a uno y dejarlo en ambiente de test, para posteriormente definir quién realizará el despliegue a producción.\n[07/11/2025]: El 28 de octubre se envian HU  al cliente para su aprobación,Pendiente confirmación de tiempos de vigencia del token y unificación del proceso de autenticación. Enviada solicitud a Seguridad para definir tiempos de expiración\n[07/11/2025]: Ciente confirma que el tiempo del token debe ser de 1 minuto y no autorizan la unificación del proceso de autenticación.\n[20/11/2025]: Se realiza sesión con Wilson y Jesús para la entrega de los avances desarrollados por Wilson a Jesús.\nJesús continuará con la implementación de la autenticación por correo en los aplicativos Yii y Nativo, así como con la incorporación de las listas blancas correspondientes.\n[24/11/2025]: Se integró el trabajo previo con la lógica del Authenticator ajustando tablas y unificando la validación para las tres aplicaciones. Queda pendiente aplicar estilos al correo del código de verificación. Funcionalidad general opera correctamente\n[25/11/2025]: El 24 de noviembre se entrega desarrollo al cliente para sus pruebas y aprobación de paso a producción\n[26/11/2025]: El cliente esta realizando pruebas ayer y hoy. La funcionalidad está estable; pendiente acompañamiento para resolver cualquier incidencia que se presente durante su validación.",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
     "unit": "Bolivar",
-    "detail": "Fecha de entrega al cliente: 14/11/2025\n\nDoble factor de autenticación  \n1. DESCRIPCIÓN DEL REQUERIMIENTO   \nSe requiere crear un doble factor de autenticación como control de seguridad en   \nambientes de test y producción para todos los aplicativos (nativo, YII, laravel)  \n1.2 OBJETIVO  \n Crear un doble factor de autenticación por correo electrónico  \n1.3 EQUIPO DE TRABAJO  \nNombre Área  \nLeidy Mayorga Administrativo  \n2. REQUERIMIENTOS FUNCIONALES  \n2.1 Creación de un doble factor de autenticación  \nSe requiere que al momento de loguearse los aplicativos nativo, YII y laravel soliciten   \nun doble factor de autenticación, el cual deberá ser remitido al correo electrónico   \nregistrado, teniendo en cuenta:  \n1. Si el usuario únicamente está en nativo deberá tomar el correo electrónico   \nregistrado   \n2. Si el usuario está en nativo y otro aplicativo (YII y laravel), deberá tomar el   \ncorreo electrónico registrado en nativo y homologarlo en todos los aplicativo;   \ngarantizando que en todos los aplicativos tenga el mismo correo electrónico.  \n3. Cuando se actualice un correo electrónico automáticamente se debe actualizar   \npara el doble factor de autenticación.  \nUna vez llegue el código del doble factor al correo electrónico, el usuario deberá   \nregistrarlo en el aplicativo para el acceso.  \nEl doble factor debe salir por Exchange.\nSEGUROS BOLÍVAR S.A.  \nOFICINA DE PROYECTOS (PMO)  \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO DE USUARIO   \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO _ Versión Septiembre 2012  \nEste documento es propiedad intelectual de Seguros Bolívar S.A. Prohibido el uso, reproducción y/o distribución sin autorización de la compañía.  \n2  \n2.2 Omisión en listas blancas por usuario  \nSe requiere que al momento de loguearse no solicite el doble factor de autenticación   \npara los usuarios o IP que registran en las listas blancas, la omisión deberá aplicar para   \nnativo, YII y laravel.   \nSe debe poder incluir y eliminar IP y usuarios de la lista.  \nEsto con el propósito de mantener los RPA actuales.  \n2.3 Consulta listas blancas  \nSe requiere que las restricciones de listas blancas sean identificadas, por lo cual es   \nnecesario que en el módulo de consulta registre:  \n IP o usuario  \n Fecha en la cual se registro  \n Usuario que registró  \n Estado (activo o inactivo de la lista blanca)  \nEsto con el objetivo de conocer el estado de los usuarios e IP omitidas sin necesidad   \nde consultar el usuario puntual , si no que muestre las existentes.",
-    "visible": true
+    "detail": "Se detectaron inconvenientes en el envío de correos masivos, presentando fallas desde las 6:40 a.m. del 3 de septiembre.Se requiere implementar un control automático que permita identificar interrupciones de forma oportuna",
+    "visible": false
   },
   {
     "id": "GD772-146_3",
@@ -3315,8 +3354,21 @@
     "visible": true
   },
   {
-    "id": "GD772-146_4",
-    "title": "Eliminar posibilidad en laravel de actualizar correo",
+    "id": "GD772-137_5",
+    "title": "Ducumentación tecnica -Mejoras Modalidad teletrabajo transnacional (Flujo)",
+    "assigned": "jESUS",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "INTERNO-JE026",
+    "title": "Validación  imagenes empresa 900959051 Y 830094679",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
@@ -3324,8 +3376,21 @@
     "endDate": "",
     "observations": "",
     "unit": "Bolivar",
-    "detail": "Por favor ingresar dentro de los pendientes esta solicitud,  va relacionada al Jira doble factor de autenticación. \n\nEliminar posibilidad de actualizar el campo correo electrónico en  laravel \n\nOpción perfi / correo electrónico\n\n",
+    "detail": "Se reportó que un NIT específico no muestra información en el año 2024. El incidente genera dudas, ya que en otras fuentes sí aparece información parcial. Para avanzar en la validación, se requiere revisar directamente en la base de datos los registros asociados al NIT y confirmar si la información fue cargada o si existe algún error de consulta.",
     "visible": false
+  },
+  {
+    "id": "GD772-146",
+    "title": "Doble factor de autentticación (Correo)",
+    "assigned": "JESUS",
+    "state": "Pruebas Cliente",
+    "progress": 80,
+    "startDate": "27/10/2025",
+    "endDate": "21/11/2025",
+    "observations": "[27/10/2025]: Iniciara con la configuración de los sitios en local \n[31/10/2025]: Se avanza en la implementación del segundo factor de autenticación con validaciones de usuario y contraseña operativas en Laravel.\nPendiente:\nAjustar el control del flujo de autenticación para evitar logueo sin validación.\nIntegrar el flujo de listas blancas (usuarios exentos del doble factor).\nDefinir tiempo de expiración del token según políticas de seguridad (30 minutos actuales deben revisarse). \nSe escala Control de cambios MDSB-921839 a test.\nControl de cambios genero error  por lo cual se genero el MDSB-922162\n[04/11/2025]: Control de cambios ejecutado con exito \n[05/11/2025]: Se continúa con el ajuste final del desarrollo en Laravel, una vez concluya las pruebas locales, procederá a migrar el desarrollo a los demás sitios uno a uno y dejarlo en ambiente de test, para posteriormente definir quién realizará el despliegue a producción.\n[07/11/2025]: El 28 de octubre se envian HU  al cliente para su aprobación,Pendiente confirmación de tiempos de vigencia del token y unificación del proceso de autenticación. Enviada solicitud a Seguridad para definir tiempos de expiración\n[07/11/2025]: Ciente confirma que el tiempo del token debe ser de 1 minuto y no autorizan la unificación del proceso de autenticación.\n[20/11/2025]: Se realiza sesión con Wilson y Jesús para la entrega de los avances desarrollados por Wilson a Jesús.\nJesús continuará con la implementación de la autenticación por correo en los aplicativos Yii y Nativo, así como con la incorporación de las listas blancas correspondientes.\n[24/11/2025]: Se integró el trabajo previo con la lógica del Authenticator ajustando tablas y unificando la validación para las tres aplicaciones. Queda pendiente aplicar estilos al correo del código de verificación. Funcionalidad general opera correctamente\n[25/11/2025]: El 24 de noviembre se entrega desarrollo al cliente para sus pruebas y aprobación de paso a producción\n[26/11/2025]: El cliente esta realizando pruebas ayer y hoy. La funcionalidad está estable; pendiente acompañamiento para resolver cualquier incidencia que se presente durante su validación.",
+    "unit": "Bolivar",
+    "detail": "Fecha de entrega al cliente: 14/11/2025\n\nDoble factor de autenticación  \n1. DESCRIPCIÓN DEL REQUERIMIENTO   \nSe requiere crear un doble factor de autenticación como control de seguridad en   \nambientes de test y producción para todos los aplicativos (nativo, YII, laravel)  \n1.2 OBJETIVO  \n Crear un doble factor de autenticación por correo electrónico  \n1.3 EQUIPO DE TRABAJO  \nNombre Área  \nLeidy Mayorga Administrativo  \n2. REQUERIMIENTOS FUNCIONALES  \n2.1 Creación de un doble factor de autenticación  \nSe requiere que al momento de loguearse los aplicativos nativo, YII y laravel soliciten   \nun doble factor de autenticación, el cual deberá ser remitido al correo electrónico   \nregistrado, teniendo en cuenta:  \n1. Si el usuario únicamente está en nativo deberá tomar el correo electrónico   \nregistrado   \n2. Si el usuario está en nativo y otro aplicativo (YII y laravel), deberá tomar el   \ncorreo electrónico registrado en nativo y homologarlo en todos los aplicativo;   \ngarantizando que en todos los aplicativos tenga el mismo correo electrónico.  \n3. Cuando se actualice un correo electrónico automáticamente se debe actualizar   \npara el doble factor de autenticación.  \nUna vez llegue el código del doble factor al correo electrónico, el usuario deberá   \nregistrarlo en el aplicativo para el acceso.  \nEl doble factor debe salir por Exchange.\nSEGUROS BOLÍVAR S.A.  \nOFICINA DE PROYECTOS (PMO)  \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO DE USUARIO   \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO _ Versión Septiembre 2012  \nEste documento es propiedad intelectual de Seguros Bolívar S.A. Prohibido el uso, reproducción y/o distribución sin autorización de la compañía.  \n2  \n2.2 Omisión en listas blancas por usuario  \nSe requiere que al momento de loguearse no solicite el doble factor de autenticación   \npara los usuarios o IP que registran en las listas blancas, la omisión deberá aplicar para   \nnativo, YII y laravel.   \nSe debe poder incluir y eliminar IP y usuarios de la lista.  \nEsto con el propósito de mantener los RPA actuales.  \n2.3 Consulta listas blancas  \nSe requiere que las restricciones de listas blancas sean identificadas, por lo cual es   \nnecesario que en el módulo de consulta registre:  \n IP o usuario  \n Fecha en la cual se registro  \n Usuario que registró  \n Estado (activo o inactivo de la lista blanca)  \nEsto con el objetivo de conocer el estado de los usuarios e IP omitidas sin necesidad   \nde consultar el usuario puntual , si no que muestre las existentes.",
+    "visible": true
   },
   {
     "id": "INTERNO-JE027",
@@ -3354,17 +3419,17 @@
     "visible": false
   },
   {
-    "id": "MDSB-943252",
-    "title": "Jiras día a día( El radicado que arroja el portal ARL en la radicación de autorizaciones no se visualiza en nativo.",
+    "id": "MDSB-945492",
+    "title": "jiras dia adia ( tipología malla de asignación no funciona)",
     "assigned": "JESUS",
-    "state": "En Proceso",
+    "state": "Pendiente",
     "progress": 0,
-    "startDate": "10/12/2025",
+    "startDate": "",
     "endDate": "",
-    "observations": "[10/12/2025]: Se reportó un error intermitente donde el número de radicado generado no coincide con el que queda registrado en Nativo. Se presentaron tres casos recientes. El equipo identificó que el origen probablemente está en un job que se ejecuta desde Portales y podría estar produciendo inconsistencias. Jesús revisará el job para determinar si hay fallas puntuales o si puede estar afectando más usuarios de los que han reportado el problema.",
+    "observations": "[12/12/2025]: Fabio: Se valida y se confirma que el NIT relacionado en el Jira no está incluido en la malla de asignación. Sin embargo, al realizar varias pruebas adicionales con NIT que sí se encuentran configurados en la malla, se evidencia que la asignación no está respetando dicha configuración. Actualmente, todos los casos están siendo asignados únicamente al usuario definido en el flujo, independientemente de la malla de asignación.",
     "unit": "Bolivar",
-    "detail": "LA PAGINA WEB ESTÁ ARROJANDO UN RADICADO Y LUEGO NO APARECE “\n\nBuenos días\n\nSolicito su colaboración, porque estoy radicando archivos por la pagina web y me arroja un radicado, luego voy a consultar ese radicado para cambiarle la tipología o asignarlo al medico encargado y no aparecen, consulto con la cedula del trabajador y me aparece el caso creado, pero con otro radicado, esto pasa desde la semana pasada, pero apenas hoy noto que es repetitivo y adjunto evidencia de  dos casos en esta mañana.\n\nCordialmente",
-    "visible": true
+    "detail": "Nos encontramos escalando un caso a través de imagine para la tipología 10617- Datos Contacto - Riesgo Biológico, esta tipología se encuentra parametrizada en la asignación de tipologías por malla, sin embargo al realizar la radicación del caso se evidencia que no esta asignando de acuerdo a este parámetro , se realizaron pruebas con el número de documento 1147941511 que de acuerdo a la malla se debe asignar al usuario Erika Nathaly Martinez, sin embargo lo asigna a la persona que se encuentra creada en el flujo",
+    "visible": false
   },
   {
     "id": "INTERNO-JE028",

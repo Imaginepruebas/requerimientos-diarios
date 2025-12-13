@@ -579,7 +579,7 @@
     "progress": 100,
     "startDate": "",
     "endDate": "",
-    "observations": "[13/11/2025] se detecta que las imagenes no se pueden visualizar y es por un error de la extensión, asi que se hace desarrollo para que el sistema identifique si llega jpg y es pdf, le cambia la extención, para que cuando se arme el lote, el documento ya tenga la extensión correcta. \n[14/11/2025] Reporte de la inconsistencia para que corrigan desde el origen(otro proveedor)",
+    "observations": "[13/11/2025] se detecta que las imagenes no se pueden visualizar y es por un error de la extensión, asi que se hace desarrollo para que el sistema identifique si llega jpg y es pdf, le cambia la extención y se hace seguimiento del cambio\n[14/11/2025] Reporte de la inconsistencia para que corrigan desde el origen(otro proveedor)\n[18/11/2025] - [21/11/2025] ajuste de los lotes ya armados corrigiendo mediante página la extensión de los archivos\n[24/11/2025] Adicionar al proceso de organización de imágenes para el loteo, la validación del tipo de imagen para que se corrija antes de la generación de lotes",
     "unit": "Colmedica",
     "detail": "Seguimiento nuevas afiliaciones en la marcación de soportes hay imágenes que no se pueden visualizar, y se detecta que llegan con una extensión que no corresponde al tipo de archivo real",
     "visible": true
@@ -598,9 +598,9 @@
     "visible": false
   },
   {
-    "id": "",
+    "id": "OPT_28",
     "title": "Afiliaciones Pos - Más imágenes de las reportadas en el XML",
-    "assigned": "",
+    "assigned": "JENNIFER",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -609,5 +609,57 @@
     "unit": "Colmedica",
     "detail": "Opción para adicionar documentos, algunas solicitudes quedan pendiente de proceso por que llegan más imágenes de las reportadas en el xml, generando inconsistencia",
     "visible": false
+  },
+  {
+    "id": "OPT_29",
+    "title": "Acreditación - Validación de casos para saber su ultima acreditacion Desarrollo",
+    "assigned": "JENNIFER",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "OPT_30",
+    "title": "Cuentas Umd - Cambio cargue de archivo precuentas",
+    "assigned": "JENNIFER",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[27/11/2025] Según reunión, necesitan hacer un ajuste a la estructura para cargar nuevas cuentas contables\n[9/11/2025] se carga el archivo con la estructura actual, y el valor de la cuenta contable nueva, lo cargan en una ya existente y desde Imagine se hace el ajuste a la nueva cuenta contable. se recibe la estructura nueva para poder iniciar el desarrollo",
+    "unit": "Colmedica",
+    "detail": "Se crearan nuevas cuentas contables y se necesita modificar la estructura para el cargue respectivo según el archivo arrojado por el sistema de UMD",
+    "visible": true
+  },
+  {
+    "id": "OPT_31",
+    "title": "Recobros - Opcion para ejecucion del proceso documental",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 15,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[28/11/2025] Creacion de botón que permita la ajecución del proceso de busqueda documental",
+    "unit": "Colmedica",
+    "detail": "Crear boton, para que puedan ejecutar el proceso, cuando lo necesite la parte operativa y nose dependa de Imagine\n",
+    "visible": true
+  },
+  {
+    "id": "OPT_32",
+    "title": "Afiliaciones PBS - Consumo de Imagenes",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[10/12/2025] Entrega de web service por parte de Colmedica url de pruebas y documentacion",
+    "unit": "Colmedica",
+    "detail": "Crear página que realice el consumo para poder traernos las imágenes de PBS, y evitar que Colmédica las deje de manera manual en un repositorio",
+    "visible": true
   }
 ]

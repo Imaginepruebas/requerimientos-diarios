@@ -287,6 +287,10 @@
     <label for="fechaFinFiltro">Fecha Fin Hasta:</label>
     <input type="date" id="fechaFinFiltro" class="form-control form-control-sm">
   </div>
+  <div class="col-md-2">
+  <label for="idFiltro">Filtrar por ID:</label>
+  <input type="text" id="idFiltro" class="form-control form-control-sm" placeholder="ID Requerimiento">
+</div>
   <div class="col-md-3">
     <label for="busqueda">Buscar por Título o Persona:</label>
     <input type="text" id="busqueda" class="form-control form-control-sm" placeholder="Título o Persona">
@@ -827,34 +831,72 @@ return estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(ta
 
     // Lógica de Filtrado
     function applyFilters() {
-      const estadoFiltro = document.getElementById('estadoFiltro').value;
-      const unidadFiltro = document.getElementById('unidadFiltro').value;
-      const fechaInicioFiltro = document.getElementById('fechaInicioFiltro').value;
-      const fechaFinFiltro = document.getElementById('fechaFinFiltro').value;
-      const busqueda = document.getElementById('busqueda').value.toLowerCase();
-      let filteredTasks = tasks.filter(task => {
-        if (task.visible === false) return false;
-        const matchesEstado = estadoFiltro === '' || task.state.toLowerCase() === estadoFiltro.toLowerCase();
-        const matchesUnidad = unidadFiltro === '' || (task.unit && task.unit.toLowerCase() === unidadFiltro.toLowerCase());        const taskStartDate = parseDate(task.startDate);
-        const filterStartDate = fechaInicioFiltro ? new Date(fechaInicioFiltro) : null;
-        const matchesStartDate = !filterStartDate || (taskStartDate && taskStartDate >= filterStartDate);
-        const taskEndDate = parseDate(task.endDate);
-        const filterEndDate = fechaFinFiltro ? new Date(fechaFinFiltro) : null;
-        const matchesEndDate = !filterEndDate || (taskEndDate && taskEndDate <= filterEndDate);
-        const matchesBusqueda = busqueda === '' ||
-          (task.title && task.title.toLowerCase().includes(busqueda)) ||
-          (task.assigned && task.assigned.toLowerCase().includes(busqueda));
-        return matchesEstado && matchesUnidad && matchesStartDate && matchesEndDate && matchesBusqueda;
-      });
-      populateEstadoFilter(filteredTasks);
-      populateUnidadFilter(filteredTasks);
-      updateSummary(filteredTasks);
-      renderTasks(filteredTasks);
-      updateStatistics(filteredTasks);
-      plotPieChart(filteredTasks);
-      plotBarChart(filteredTasks);
-      plotAssignmentsChart(filteredTasks);
-    }
+  const estadoFiltro = document.getElementById('estadoFiltro').value.trim();
+  const unidadFiltro = document.getElementById('unidadFiltro').value.trim();
+  const fechaInicioFiltro = document.getElementById('fechaInicioFiltro').value.trim();
+  const fechaFinFiltro = document.getElementById('fechaFinFiltro').value.trim();
+  const idFiltro = document.getElementById('idFiltro').value.toLowerCase().trim();
+  const busqueda = document.getElementById('busqueda').value.toLowerCase().trim();
+
+  let filteredTasks = tasks.filter(task => {
+
+    // 1. Filtro "visible"
+    if (task.visible === false) return false;
+
+    // 2. Filtro ID (nuevo)
+    const matchesId = 
+      idFiltro === '' || 
+      (task.id && task.id.toLowerCase().includes(idFiltro));
+
+    // 3. Filtro Estado
+    const matchesEstado = 
+      estadoFiltro === '' ||
+      task.state.toLowerCase() === estadoFiltro.toLowerCase();
+
+    // 4. Filtro Unidad
+    const matchesUnidad =
+      unidadFiltro === '' ||
+      (task.unit && task.unit.toLowerCase() === unidadFiltro.toLowerCase());
+
+    // 5. Filtro fechas
+    const taskStartDate = parseDate(task.startDate);
+    const filterStartDate = fechaInicioFiltro ? new Date(fechaInicioFiltro) : null;
+    const matchesStartDate =
+      !filterStartDate || (taskStartDate && taskStartDate >= filterStartDate);
+
+    const taskEndDate = parseDate(task.endDate);
+    const filterEndDate = fechaFinFiltro ? new Date(fechaFinFiltro) : null;
+    const matchesEndDate =
+      !filterEndDate || (taskEndDate && taskEndDate <= filterEndDate);
+
+    // 6. Filtro búsqueda libre
+    const matchesBusqueda =
+      busqueda === '' ||
+      (task.title && task.title.toLowerCase().includes(busqueda)) ||
+      (task.assigned && task.assigned.toLowerCase().includes(busqueda));
+
+    // Validación final: debe cumplir TODOS
+    return (
+      matchesId &&
+      matchesEstado &&
+      matchesUnidad &&
+      matchesStartDate &&
+      matchesEndDate &&
+      matchesBusqueda
+    );
+  });
+
+  // Actualizar UI con los resultados filtrados
+  populateEstadoFilter(filteredTasks);
+  populateUnidadFilter(filteredTasks);
+  updateSummary(filteredTasks);
+  renderTasks(filteredTasks);
+  updateStatistics(filteredTasks);
+  plotPieChart(filteredTasks);
+  plotBarChart(filteredTasks);
+  plotAssignmentsChart(filteredTasks);
+}
+
 
     // Exportación a PDF
     function exportToPDF() {
@@ -943,11 +985,16 @@ return estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(ta
       document.getElementById('fechaInicioFiltro').addEventListener('change', applyFilters);
       document.getElementById('fechaFinFiltro').addEventListener('change', applyFilters);
       document.getElementById('busqueda').addEventListener('input', applyFilters);
+      document.getElementById('idFiltro').addEventListener('input', applyFilters);
+// opcional: permite filtrar al presionar Enter
+document.getElementById('idFiltro').addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
+
       document.getElementById('btnLimpiarFiltros').addEventListener('click', () => {
         document.getElementById('estadoFiltro').value = '';
         document.getElementById('unidadFiltro').value = '';
         document.getElementById('fechaInicioFiltro').value = '';
         document.getElementById('fechaFinFiltro').value = '';
+        document.getElementById('idFiltro').value = ''; // <<< NUEVA
         document.getElementById('busqueda').value = '';
         applyFilters();
       });

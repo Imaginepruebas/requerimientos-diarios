@@ -653,11 +653,11 @@
     "id": "310",
     "title": "Ajustar Reporte Documentos",
     "assigned": "Faver",
-    "state": "Pendiente",
-    "progress": 0,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "27/11/2025",
-    "endDate": "",
-    "observations": "",
+    "endDate": "11/12/2025",
+    "observations": "[12/12/2025]: Se realiza ajuste del proceso de egeneración de los informes por documentos, familias y otras, el problema se debia al campo de anulado que no solo tenia en cuenta valores null y no los que estaban en 0. De acuerdo con las pruebas todo quedo de forma correcta",
     "unit": "Tuya",
     "detail": "Se solicita adicionar un documento que no esta saliendo en el reporte por documento",
     "visible": true
@@ -725,6 +725,19 @@
     "observations": "Se realiza la inactivacion del aplicativo por terminación de contrato",
     "unit": "Tuya",
     "detail": "Se realiza inactivacion aplicativo",
+    "visible": true
+  },
+  {
+    "id": "316",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Natalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "10/12/2025",
+    "endDate": "10/12/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
     "visible": true
   }
 ]
