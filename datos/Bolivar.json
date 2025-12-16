@@ -133,7 +133,7 @@
     "id": "GD772-161",
     "title": "Automatización actas de prevención Formato AT- 031 Agr”",
     "assigned": "JESUS",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 90,
     "startDate": "27/11/2025",
     "endDate": "09/12/2025",
@@ -160,10 +160,10 @@
     "title": "Mejora oficina entidades",
     "assigned": "jESUS",
     "state": "En Proceso",
-    "progress": 30,
+    "progress": 50,
     "startDate": "11/11/2025",
     "endDate": "",
-    "observations": "[10/12/2025]: El equipo validará nuevamente para estimar tiempos. La actividad está en revisión inicial.\n[12/12/2025]: El desarrollo inició el 11 de diciembre. Aunque la estimación de tiempo aún no estaba completamente definida, podría considerarse un plazo de tres días, con entrega prevista para el martes 16 de diciembre. A la fecha, ya se encuentran creadas las dos opciones de cargue: individual y masivo. ",
+    "observations": "[10/12/2025]: El equipo validará nuevamente para estimar tiempos. La actividad está en revisión inicial.\n[12/12/2025]: El desarrollo inició el 11 de diciembre. Aunque la estimación de tiempo aún no estaba completamente definida, podría considerarse un plazo de tres días, con entrega prevista para el martes 16 de diciembre. A la fecha, ya se encuentran creadas las dos opciones de cargue: individual y masivo. \n[15/12/2025]: Se avanzó al 50 % en el requerimiento, El objetivo es finalizar el desarrollo entre el día siguiente y, como máximo, el miércoles en la mañana, sujeto a pruebas finales.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -202,7 +202,7 @@
     "progress": 50,
     "startDate": "10/12/2025",
     "endDate": "",
-    "observations": "[10/12/2025]: Se reportó un error intermitente donde el número de radicado generado no coincide con el que queda registrado en Nativo. Se presentaron tres casos recientes. El equipo identificó que el origen probablemente está en un job que se ejecuta desde Portales y podría estar produciendo inconsistencias. Jesús revisará el job para determinar si hay fallas puntuales o si puede estar afectando más usuarios de los que han reportado el problema.\n[12/12/2025]:El 11 de diciembre se crea validación para consultar caso y así no se duplique el numero de radicado, se encuentra en test pero se presenta  error la pagina en portales expirando demasiado rapido con error 419.\n",
+    "observations": "[10/12/2025]: Se reportó un error intermitente donde el número de radicado generado no coincide con el que queda registrado en Nativo. Se presentaron tres casos recientes. El equipo identificó que el origen probablemente está en un job que se ejecuta desde Portales y podría estar produciendo inconsistencias. Jesús revisará el job para determinar si hay fallas puntuales o si puede estar afectando más usuarios de los que han reportado el problema.\n[12/12/2025]:El 11 de diciembre se crea validación para consultar caso y así no se duplique el numero de radicado, se encuentra en test pero se presenta  error la pagina en portales expirando demasiado rapido con error 419.\n[15/12/2025]: Fabio; Se valida y a un persite el inconveniente en test.",
     "unit": "Bolivar",
     "detail": "LA PAGINA WEB ESTÁ ARROJANDO UN RADICADO Y LUEGO NO APARECE “\n\nBuenos días\n\nSolicito su colaboración, porque estoy radicando archivos por la pagina web y me arroja un radicado, luego voy a consultar ese radicado para cambiarle la tipología o asignarlo al medico encargado y no aparecen, consulto con la cedula del trabajador y me aparece el caso creado, pero con otro radicado, esto pasa desde la semana pasada, pero apenas hoy noto que es repetitivo y adjunto evidencia de  dos casos en esta mañana.\n\nCordialmente",
     "visible": true
@@ -312,6 +312,19 @@
     "visible": true
   },
   {
+    "id": "MDSB-945492",
+    "title": "jiras dia adia ( tipología malla de asignación no funciona)",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "15/12/2025",
+    "endDate": "16/12/2025",
+    "observations": "[12/12/2025]: Fabio: Se valida y se confirma que el NIT relacionado en el Jira no está incluido en la malla de asignación. Sin embargo, al realizar varias pruebas adicionales con NIT que sí se encuentran configurados en la malla, se evidencia que la asignación no está respetando dicha configuración. Actualmente, todos los casos están siendo asignados únicamente al usuario definido en el flujo, independientemente de la malla de asignación.\n[15/12/2025]: Jesus iniciara validación  de la incidencia reportada.\n[16/12/2025]: Durante el análisis se identificó que, si bien la tipología se encontraba parametrizada en la asignación por malla, esta tenía activa la asignación por flujo, lo cual generaba que el sistema priorizara dicha asignación sobre la asignación por célula, provocando que los casos se direccionaran al flujo “Neli Bonet” y no al usuario definido en la malla",
+    "unit": "Bolivar",
+    "detail": "Nos encontramos escalando un caso a través de imagine para la tipología 10617- Datos Contacto - Riesgo Biológico, esta tipología se encuentra parametrizada en la asignación de tipologías por malla, sin embargo al realizar la radicación del caso se evidencia que no esta asignando de acuerdo a este parámetro , se realizaron pruebas con el número de documento 1147941511 que de acuerdo a la malla se debe asignar al usuario Erika Nathaly Martinez, sin embargo lo asigna a la persona que se encuentra creada en el flujo",
+    "visible": true
+  },
+  {
     "id": "GD772-116_3",
     "title": "Adicion de columnas informe medicamentos fase2",
     "assigned": "JESUS",
@@ -323,19 +336,6 @@
     "unit": "Bolivar",
     "detail": "Se requiere tener informes de la operación con el que se pueda medir la prestación efectiva de cada proveedor el informe debe seguir la siguiente estructura:\n\nEn este primer informe se debe poder visualizar un status actual de la operación y contendrá la siguiente estructura:\n",
     "visible": true
-  },
-  {
-    "id": "GD772-146 ",
-    "title": "Doble factor de autenticación",
-    "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[01/10/2025]: Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico. Tras analizar la solicitud, se acordó implementar un plan B que contemple ambas opciones (Authenticator o correo), con el fin de no perder el trabajo ya desarrollado y mantener flexibilidad. La estimación de entrega es para el 10 de noviembre de 2025, considerando que la implementación estructural requiere rehacer parte de la lógica actual.",
-    "unit": "Bolivar",
-    "detail": "Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico.",
-    "visible": false
   },
   {
     "id": "INTERNO-JA003",
@@ -420,13 +420,26 @@
     "title": "Cruce automatico Autorizado Vs Cobrado",
     "assigned": "JAIRO",
     "state": "Paso A Produccion",
-    "progress": 90,
+    "progress": 99,
     "startDate": "16/10/2025",
     "endDate": "06/11/2025",
-    "observations": "[10/09/2025]: Revisión preliminar realizada.\n[22/10/2025]: Se solicita control de cambios en test MDSB-915793\n[28/10/2025]: Control de cambios ejecutado con éxito \n\n[21/11/2025]. Se escala control de cambios a test MDSB-934083 para la creación de  la tabla cm_actualizacion_facturas_sisalud y modificación de las tablas cm_pagos_masivos_generados y ctas_proveedores\nControl de cambios MDSB-934083 ejecutado.\n[26/11/2025]: Se avanzó en la implementación del cruce y la construcción de las bandejas de resultado. Falta validar el comportamiento del cruce asociado a proveedores y  solicitar la creación  de la tabla en producción. Continúan ajustes menores previos a las pruebas finales.\n[27/11/2025]: Se escala control de cambios en producción MDSB-937531\n[01/12/2025]: Control de cambios aun se encuentra pendiente por QA del cliente\n[03/12/2025]: Control de cambios programado hoy  para aprobación por comité.\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[10/12/2025]: A un esta pendientes de pruebas para realizar paso a produncción.\n[12/12/2025]: Se encuentra pendiente la ejecución del paso a producción y la realización de las pruebas en caliente una vez se despliegue el ajuste.",
+    "observations": "[10/09/2025]: Revisión preliminar realizada.\n[22/10/2025]: Se solicita control de cambios en test MDSB-915793\n[28/10/2025]: Control de cambios ejecutado con éxito \n\n[21/11/2025]. Se escala control de cambios a test MDSB-934083 para la creación de  la tabla cm_actualizacion_facturas_sisalud y modificación de las tablas cm_pagos_masivos_generados y ctas_proveedores\nControl de cambios MDSB-934083 ejecutado.\n[26/11/2025]: Se avanzó en la implementación del cruce y la construcción de las bandejas de resultado. Falta validar el comportamiento del cruce asociado a proveedores y  solicitar la creación  de la tabla en producción. Continúan ajustes menores previos a las pruebas finales.\n[27/11/2025]: Se escala control de cambios en producción MDSB-937531\n[01/12/2025]: Control de cambios aun se encuentra pendiente por QA del cliente\n[03/12/2025]: Control de cambios programado hoy  para aprobación por comité.\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[10/12/2025]: A un esta pendientes de pruebas para realizar paso a produncción.\n[12/12/2025]: Se encuentra pendiente la ejecución del paso a producción y la realización de las pruebas en caliente una vez se despliegue el ajuste.\n[15/12/2025]: El desarrollo principal ya se encuentra en producción, incluyendo la tabla y el código. Sin embargo, el proceso aún no se ha ejecutado de forma completa, ya que el cruce consulta facturas antiguas una a una contra el API. Se acordó no ejecutarlo aún y, por recomendación funcional, crear bandejas adicionales para gestionar los casos no cruzados o glosados, antes de activar el proceso masivo.",
     "unit": "Bolivar",
     "detail": "Descripción\n\nSe requiere realizar el cruce automatico de lo autorizado, ya sea cargado de forma manual o por API con el lago vs lo cobrado en las facturas por el proveedor.\n\nUna vez realizada esta comparacion, los registro en los que el valor cobrado, sea igual o menor al valor autorizado, se deben  asignar al usuario definido para pago masivo,  Asi mismo debe permitir seleccionar todos o algunos casos, para realizar la notificacion y el cierre de caso masivo.\n\nLos caso cuyo valor cobrado es mayor al valor autorizado, deben pasar segun las reglas de asignación a los diferentes perfiles, en caso de que exista tarifa pactada, el usuario debe poder visualizar la tarifa pactada, autorizada y cobrada para su evaluacion.",
     "visible": true
+  },
+  {
+    "id": "GD772-136_1",
+    "title": "Documentación tecnica. Reporte glosas para la Superfinanciera (Cruce automatico Autorizado Vs Cobrado)",
+    "assigned": "JAIRO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false
   },
   {
     "id": "INTERNO-JA005",
@@ -715,17 +728,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE024",
-    "title": "Documento tecnico GD772-116 Requerimiento gestión Medicamentos fase 2 - Sprint 2",
+    "id": "GD772-146 ",
+    "title": "Doble factor de autenticación",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[01/10/2025]: Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico. Tras analizar la solicitud, se acordó implementar un plan B que contemple ambas opciones (Authenticator o correo), con el fin de no perder el trabajo ya desarrollado y mantener flexibilidad. La estimación de entrega es para el 10 de noviembre de 2025, considerando que la implementación estructural requiere rehacer parte de la lógica actual.",
     "unit": "Bolivar",
-    "detail": "",
-    "visible": true
+    "detail": "Inicialmente el doble factor se implementó con Authenticator, pero el cliente solicitó cambiarlo por validación vía correo electrónico.",
+    "visible": false
   },
   {
     "id": "MDSB-838905",
@@ -956,7 +969,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[12/12/2025]: Se solicita docuemntación a Jairo",
     "unit": "Bolivar",
     "detail": "",
     "visible": false
@@ -1027,17 +1040,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE001",
-    "title": "Realizar Imagen de docker de nativo para Jesus",
+    "id": "INTERNO-JE024",
+    "title": "Documento tecnico GD772-116 Requerimiento gestión Medicamentos fase 2 - Sprint 2",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[27/02/2025]: No se ha podido realizar  debido que se encuentra en otras tareas asignadas.",
+    "observations": "",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "INTERNO-JE010",
@@ -1638,17 +1651,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE002",
-    "title": "Desarrollo clasificador de imágenes en Python (IA)",
+    "id": "INTERNO-JE001",
+    "title": "Realizar Imagen de docker de nativo para Jesus",
     "assigned": "JESUS",
     "state": "Pendiente",
-    "progress": 80,
-    "startDate": "15/05/2025",
+    "progress": 0,
+    "startDate": "",
     "endDate": "",
-    "observations": "[16/05/2025] : Ya se encuentra  funcional en local, Se planteó la necesidad de buscar imágenes similares almacenadas en el disco compartido (IMG04) para   realizar  pruebas\n[19/05/2025] : el clasificador de imágenes está en ambiente de prueba, pero aún se requieren imágenes para probarlo adecuadamente. Se discute la posibilidad de generar imágenes desde archivos PDF si no se encuentran imágenes reales\n[26/05/2025]: El Viernes 23 de mayo se implemento en el lector de PDF,  clasifica correctamente los archivos visuales, pero aún no segmenta adecuadamente los PDFs por tipo, agrupándolos en una sola carpeta. Se continuarán pruebas con PDFs diversos para refinar la lógica de clasificación.\n[28/05/2025]: Las pruebas realizadas con el clasificador de archivos PDF no han alcanzado los resultados esperados. Se evalúan otras opciones, pero el enfoque actual está en la funcionalidad de Sistematización con IA (Segunda vista de incapacidades en portal).",
+    "observations": "[27/02/2025]: No se ha podido realizar  debido que se encuentra en otras tareas asignadas.",
     "unit": "Bolivar",
     "detail": "",
-    "visible": true
+    "visible": false
   },
   {
     "id": "MDSB-860939",
@@ -1742,17 +1755,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE003",
-    "title": "Implementar cambio de contraseña a 30 dias en los tres aplicativos",
+    "id": "INTERNO-JE002",
+    "title": "Desarrollo clasificador de imágenes en Python (IA)",
     "assigned": "JESUS",
     "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "progress": 80,
+    "startDate": "15/05/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[16/05/2025] : Ya se encuentra  funcional en local, Se planteó la necesidad de buscar imágenes similares almacenadas en el disco compartido (IMG04) para   realizar  pruebas\n[19/05/2025] : el clasificador de imágenes está en ambiente de prueba, pero aún se requieren imágenes para probarlo adecuadamente. Se discute la posibilidad de generar imágenes desde archivos PDF si no se encuentran imágenes reales\n[26/05/2025]: El Viernes 23 de mayo se implemento en el lector de PDF,  clasifica correctamente los archivos visuales, pero aún no segmenta adecuadamente los PDFs por tipo, agrupándolos en una sola carpeta. Se continuarán pruebas con PDFs diversos para refinar la lógica de clasificación.\n[28/05/2025]: Las pruebas realizadas con el clasificador de archivos PDF no han alcanzado los resultados esperados. Se evalúan otras opciones, pero el enfoque actual está en la funcionalidad de Sistematización con IA (Segunda vista de incapacidades en portal).",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "MDSB-864436",
@@ -2015,27 +2028,27 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE004",
-    "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
+    "id": "INTERNO-JE003",
+    "title": "Implementar cambio de contraseña a 30 dias en los tres aplicativos",
     "assigned": "JESUS",
     "state": "Pendiente",
-    "progress": 60,
-    "startDate": "26/05/2025",
+    "progress": 0,
+    "startDate": "",
     "endDate": "",
     "observations": "",
     "unit": "Bolivar",
     "detail": "",
-    "visible": true
+    "visible": false
   },
   {
     "id": "GD772-161_2",
     "title": "Pruebas  Automatización actas de prevención Formato AT- 031 Agr”",
     "assigned": "FABIO",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 70,
     "startDate": "05/12/2025",
     "endDate": "",
-    "observations": "[05/12/2025]:Se realizan pruebas iniciales satisfactorias y se identifican algunos detalles de forma que fueron solucionados durante el proceso. Se espera que el martes 9 de diciembre finalice el envío del caso certificado y, posteriormente, se continuará con las pruebas correspondientes.\n[09/12/2025]: Se continua con las pruebas  identificando errores en la validación de los adjuntos, y se adelanta la documentación de las  pruebas.\n[10/12/2025]:Se realizarán validaciones sobre los ajustes implementados por Jesús y se continuará con las pruebas relacionadas con la extracción del correo desde el PDF para el envío de la respuesta, así como la verificación de que el adjunto correspondiente quede correctamente asociado al caso.",
+    "observations": "[05/12/2025]:Se realizan pruebas iniciales satisfactorias y se identifican algunos detalles de forma que fueron solucionados durante el proceso. Se espera que el martes 9 de diciembre finalice el envío del caso certificado y, posteriormente, se continuará con las pruebas correspondientes.\n[09/12/2025]: Se continua con las pruebas  identificando errores en la validación de los adjuntos, y se adelanta la documentación de las  pruebas.\n[10/12/2025]:Se realizarán validaciones sobre los ajustes implementados por Jesús y se continuará con las pruebas relacionadas con la extracción del correo desde el PDF para el envío de la respuesta, así como la verificación de que el adjunto correspondiente quede correctamente asociado al caso.\n[12/12/2025]: Las pruebas de extracción de correo y la carta de respuesta  adjunta al  caso, fueron exitosas.\nQueda pendiente la  implementación de la asignación del usuario responsable a la devolución mail y la asignación al usuario responsable  de los casos que el pdf no con tenga correo para que se gestionen manualmente.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -2526,10 +2539,10 @@
     "title": "Mejoras REE Salud",
     "assigned": "JAIRO",
     "state": "En Proceso",
-    "progress": 20,
+    "progress": 30,
     "startDate": "10/11/2025",
     "endDate": "",
-    "observations": "[10/12/2025]: Se revisó nuevamente el requerimiento 134, que incluye múltiples mejoras sobre el portal de reembolsos de salud. Se acordó organizar el trabajo en bloques funcionales para priorizar lo más rápido y dejar por separado las tareas más complejas.\nAdicionalmente, se discutió la necesidad de definir si el equipo desarrollará los ajustes UX basándose en lineamientos visuales o si el cliente deberá entregar un FIGMA completo, ya que el diseño responsivo requiere decidir la reorganización de elementos para móviles. El grupo considera necesario solicitar el FIGMA para los componentes de responsividad y para evitar ambigüedades posteriores.\n[12/12/2025]: El 10 de diciembre se inició con los ajustes definidos para el proceso, implementando el cambio de lógica para utilizar una plantilla para la carta y otra para el cuerpo del correo, conforme a lo socializado con Liyi, estableciendo puntos rápidos para realizar dos entregas. Adicionalmente, se incorporó la verificación de respuesta_glosa en la condición de decisión para actividades de baja complejidad; se crearon múltiples nuevas plantillas de correo para distintos escenarios de devolución (total, parcial, validación, no efectivo, entre otros); y se mejoró la función de devolución de correos, adicionando el campo de observación del analista.\n\nEl 11 de diciembre se realizó la revisión y validación de las plantillas de correo implementadas el día anterior, garantizando su funcionamiento según lo esperado. Adicionalmente, se avanzó en la preparación para la primera entrega de los ajustes acordados con Liyi.",
+    "observations": "[10/12/2025]: Se revisó nuevamente el requerimiento 134, que incluye múltiples mejoras sobre el portal de reembolsos de salud. Se acordó organizar el trabajo en bloques funcionales para priorizar lo más rápido y dejar por separado las tareas más complejas.\nAdicionalmente, se discutió la necesidad de definir si el equipo desarrollará los ajustes UX basándose en lineamientos visuales o si el cliente deberá entregar un FIGMA completo, ya que el diseño responsivo requiere decidir la reorganización de elementos para móviles. El grupo considera necesario solicitar el FIGMA para los componentes de responsividad y para evitar ambigüedades posteriores.\n[12/12/2025]: El 10 de diciembre se inició con los ajustes definidos para el proceso, implementando el cambio de lógica para utilizar una plantilla para la carta y otra para el cuerpo del correo, conforme a lo socializado con Liyi, estableciendo puntos rápidos para realizar dos entregas. Adicionalmente, se incorporó la verificación de respuesta_glosa en la condición de decisión para actividades de baja complejidad; se crearon múltiples nuevas plantillas de correo para distintos escenarios de devolución (total, parcial, validación, no efectivo, entre otros); y se mejoró la función de devolución de correos, adicionando el campo de observación del analista.\n\nEl 11 de diciembre se realizó la revisión y validación de las plantillas de correo implementadas el día anterior, garantizando su funcionamiento según lo esperado. Adicionalmente, se avanzó en la preparación para la primera entrega de los ajustes acordados con Liyi.\n[15/12/2025]: El 12 de diciembre se avanzó en los ajustes considerados “fáciles”, como cambios de valores y carga de archivos adicionales en glosas, los cuales ya fueron desplegados en Test.\n",
     "unit": "Bolivar",
     "detail": "Se requiere implementar un mecanismo que permita marcar la prioridad de los casos al momento de su registro, de manera que en la actividad de digitación estos se visualicen con una distinción clara. Esto permitirá que el analista identifique fácilmente los casos prioritarios y realice la digitación de forma oportuna.",
     "visible": true
@@ -2665,17 +2678,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE007",
-    "title": "Validaciòn apertura de dos actividades en un mismo caso en Nativo",
+    "id": "INTERNO-JE004",
+    "title": "Sistematización con IA (Segunda vista de incapacidades en portal)",
     "assigned": "JESUS",
     "state": "Pendiente",
-    "progress": 80,
-    "startDate": "04/07/2025",
+    "progress": 60,
+    "startDate": "26/05/2025",
     "endDate": "",
     "observations": "",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "GD772-159_1",
@@ -2685,7 +2698,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[01/12/2025]: Tam pronto se realice el paso a producción se le solicitara a  Jairo los script.",
+    "observations": "[01/12/2025]: Tam pronto se realice el paso a producción se le solicitara a  Jairo los script.\n[12/12/2025]: Se solicita docuemntación a Jairo",
     "unit": "Bolivar",
     "detail": "",
     "visible": false
@@ -2698,7 +2711,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[05/12/2025]: Pendiente solicitar script a jairo  para elaborar la docuemntación.",
+    "observations": "[05/12/2025]: Pendiente solicitar script a jairo  para elaborar la docuemntación.\n[12/12/2025]: Se solicita docuemntación a Jairo",
     "unit": "Bolivar",
     "detail": "",
     "visible": false
@@ -2964,17 +2977,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE009",
-    "title": "Funcionalidad para inhabilitar modificación de tipologías en Nativo",
+    "id": "INTERNO-JE007",
+    "title": "Validaciòn apertura de dos actividades en un mismo caso en Nativo",
     "assigned": "JESUS",
-    "state": "Pausado",
-    "progress": 70,
-    "startDate": "",
+    "state": "Pendiente",
+    "progress": 80,
+    "startDate": "04/07/2025",
     "endDate": "",
-    "observations": "Es necesario restringir cambios en tipologías una vez el portal esté activo, para evitar errores en procesos dependientes.\n[04/08/2025]: El juenes 31 de julio se inactiva el menú de modificación de tipologías ubicado en Radicador > Administración, dejando habilitada únicamente la opción disponible en Radicación Workflow para un conjunto específico de cédulas de ciudadanía (CC). La intención es crear o mejorar la funcionalidad de administración de tipologías en la nueva aplicación de Nativo, la cual se planea actualizar próximamente",
+    "observations": "",
     "unit": "Bolivar",
     "detail": "",
-    "visible": true
+    "visible": false
   },
   {
     "id": "INTERNO-JE020",
@@ -3032,11 +3045,11 @@
     "id": "INTERNO-F012",
     "title": "Reorganización directorio en Nativo para adjuntar documentación tecnica. ",
     "assigned": "FABIO",
-    "state": "Pausado",
-    "progress": 70,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "19/11/2025",
-    "endDate": "",
-    "observations": "",
+    "endDate": "15/12/2025",
+    "observations": "[15/12/2025]: El directorio ya se encuentra organizado y se ira alimentando con la documentación tecnica que se vaya generando.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -3053,6 +3066,19 @@
     "unit": "Bolivar",
     "detail": "“ERROR DE FLUJO “\n\nBuenos dias \n\nSolicito amablemente la ayuda con la validación del caso 43510302 ya que está presentando inconsistencia al momento de gestionarlo , no permite pasarlo al área encargada y se queda nuevamente en nuestra área quedando en la bandeja de algunos de nuestros compañeros. ",
     "visible": false
+  },
+  {
+    "id": "INTERNO-F014",
+    "title": "HU nuevo proceso de incapacidades ARL",
+    "assigned": "FABIO",
+    "state": "En Proceso",
+    "progress": 90,
+    "startDate": "15/12/2025",
+    "endDate": "16/12/2025",
+    "observations": "[16/12/2025]: Se finalizan historias de usuario y se envian a Liyibet y Jenry, se recibe retroalimentación ya que se debe modificar la HU3 donde se indica que el usuario podia modificar o completar la información que se generaba despues de la extraccion lo cual se debe quitar ya que no fue aprobado por el cliente, pendiente realizar dicha modificación. ",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true
   },
   {
     "id": "INTERNO-F013",
@@ -3107,17 +3133,17 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE014",
-    "title": "Optimización de reporte \"General de pendientes\" en Nativo",
+    "id": "INTERNO-JE009",
+    "title": "Funcionalidad para inhabilitar modificación de tipologías en Nativo",
     "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "11/08/2025",
+    "state": "Pausado",
+    "progress": 70,
+    "startDate": "",
     "endDate": "",
-    "observations": "[06/08/2025]: Se identificó problema de rendimiento en el código. Se solicitará apoyo a Jairo para reutilizar funciones existentes y optimizar el informe.\n[08/08/2025]: La optimizaciòn se realizara en la nuenva version de nativo  tras realizar la Actuallizaciòn nativo a PHP 8 en local.\n[11/08/2025]: Inicia optimización del informe.",
+    "observations": "Es necesario restringir cambios en tipologías una vez el portal esté activo, para evitar errores en procesos dependientes.\n[04/08/2025]: El juenes 31 de julio se inactiva el menú de modificación de tipologías ubicado en Radicador > Administración, dejando habilitada únicamente la opción disponible en Radicación Workflow para un conjunto específico de cédulas de ciudadanía (CC). La intención es crear o mejorar la funcionalidad de administración de tipologías en la nueva aplicación de Nativo, la cual se planea actualizar próximamente",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "GD772-137",
@@ -3133,14 +3159,14 @@
     "visible": true
   },
   {
-    "id": "MDSB-855049",
-    "title": "ERROR CONTEO DE DIAS BANDEJA DE PENDIENTES VRS INFORME DE EFECTIVIDAD",
+    "id": "INTERNO-JE014",
+    "title": "Optimización de reporte \"General de pendientes\" en Nativo",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
-    "startDate": "",
+    "startDate": "11/08/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[06/08/2025]: Se identificó problema de rendimiento en el código. Se solicitará apoyo a Jairo para reutilizar funciones existentes y optimizar el informe.\n[08/08/2025]: La optimizaciòn se realizara en la nuenva version de nativo  tras realizar la Actuallizaciòn nativo a PHP 8 en local.\n[11/08/2025]: Inicia optimización del informe.",
     "unit": "Bolivar",
     "detail": "",
     "visible": false
@@ -3172,16 +3198,16 @@
     "visible": true
   },
   {
-    "id": "GD772-162",
-    "title": "Ajuste servicio de Olimpia - Registraduria  API",
+    "id": "MDSB-855049",
+    "title": "ERROR CONTEO DE DIAS BANDEJA DE PENDIENTES VRS INFORME DE EFECTIVIDAD",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[22/10/2025]: Se Iniciara  tan pronto finalice el desarrollo del req  GD772-159 (Jira).\n[24/10/2025]: El requerimiento será abordado por Wilson, quien reutilizará estructuras y rutas ya desarrolladas. Se debe crear una nueva tabla para almacenar tokens y marcar los asociados al servicio de Olimpia. Se coordinó con Jairo para brindar contexto técnico durante la implementación.\n[26/11/2025]: Este requerimeinto es reasignado a Jesus .",
+    "observations": "",
     "unit": "Bolivar",
-    "detail": "Implementar la integración con el servicio externo Olimpia para la validación de identidad ciudadana (registraduría).\nEl sistema deberá recibir, almacenar y gestionar los tokens de autenticación que provee Olimpia, garantizando seguridad y trazabilidad en los procesos de validación.\nSe busca unificar el manejo de tokens utilizados en los diferentes módulos  en una sola tabla centralizada, evitando duplicidad de estructuras\n",
+    "detail": "",
     "visible": false
   },
   {
@@ -3211,16 +3237,16 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE019",
-    "title": "Tarea programada de borrado de archivos en carpeta conciliacionMasivaPDF",
+    "id": "GD772-162",
+    "title": "Ajuste servicio de Olimpia - Registraduria  API",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[01/09/2025]: Se iniciara  implementaciòn  tras finalizar  ajustes de  GD772-130 Modalidad Teletrabajo Transnacional\n",
+    "observations": "[22/10/2025]: Se Iniciara  tan pronto finalice el desarrollo del req  GD772-159 (Jira).\n[24/10/2025]: El requerimiento será abordado por Wilson, quien reutilizará estructuras y rutas ya desarrolladas. Se debe crear una nueva tabla para almacenar tokens y marcar los asociados al servicio de Olimpia. Se coordinó con Jairo para brindar contexto técnico durante la implementación.\n[26/11/2025]: Este requerimeinto es reasignado a Jesus .",
     "unit": "Bolivar",
-    "detail": "Se requiere programar una tarea automática que, el primer día hábil de cada mes, realice el borrado de los archivos almacenados en la carpeta conciliacionMasivaPDF.",
+    "detail": "Implementar la integración con el servicio externo Olimpia para la validación de identidad ciudadana (registraduría).\nEl sistema deberá recibir, almacenar y gestionar los tokens de autenticación que provee Olimpia, garantizando seguridad y trazabilidad en los procesos de validación.\nSe busca unificar el manejo de tokens utilizados en los diferentes módulos  en una sola tabla centralizada, evitando duplicidad de estructuras\n",
     "visible": false
   },
   {
@@ -3328,16 +3354,16 @@
     "visible": true
   },
   {
-    "id": "INTERNO-JE022",
-    "title": "control automático para detección de fallas en el envío de correos masivos",
+    "id": "INTERNO-JE019",
+    "title": "Tarea programada de borrado de archivos en carpeta conciliacionMasivaPDF",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[01/09/2025]: Se iniciara  implementaciòn  tras finalizar  ajustes de  GD772-130 Modalidad Teletrabajo Transnacional\n",
     "unit": "Bolivar",
-    "detail": "Se detectaron inconvenientes en el envío de correos masivos, presentando fallas desde las 6:40 a.m. del 3 de septiembre.Se requiere implementar un control automático que permita identificar interrupciones de forma oportuna",
+    "detail": "Se requiere programar una tarea automática que, el primer día hábil de cada mes, realice el borrado de los archivos almacenados en la carpeta conciliacionMasivaPDF.",
     "visible": false
   },
   {
@@ -3352,6 +3378,19 @@
     "unit": "Bolivar",
     "detail": "",
     "visible": true
+  },
+  {
+    "id": "INTERNO-JE022",
+    "title": "control automático para detección de fallas en el envío de correos masivos",
+    "assigned": "JESUS",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "Se detectaron inconvenientes en el envío de correos masivos, presentando fallas desde las 6:40 a.m. del 3 de septiembre.Se requiere implementar un control automático que permita identificar interrupciones de forma oportuna",
+    "visible": false
   },
   {
     "id": "GD772-137_5",
@@ -3416,19 +3455,6 @@
     "observations": "[01/12/2025]: Se solicita obtener las imágenes asociadas al lote 344988. El caso muestra que la imagen está indexada, pero no aparece en la tabla de imágenes. Pendiente identificar la ruta correcta o el origen del índice para entregar las evidencias requeridas. Se ennvian datos a Jenry  pavra ubicar las imagenes solicitdas.",
     "unit": "Bolivar",
     "detail": " Solicito de si colaboración con un imagine del cual requiero una información pero no se evidencia para ser mas precisa, la carta de inconformidad y sustento enviado por esta Arl en su debido momento, se evidencia que se realizo la notificación en físico pero no se evidencian los archivos que se enviaron, en el imagine 20748983 hay un numero de lote donde se guardaron los archivos, quisiera saber si es posible validar que documentos existen dentro del mismo, es un caso del año 2018 quedo atenta gracias.\n\nCC 37933021\nNYDIA TORRES TORRES\nIE0012952\nIMAGINE : 20748983\nNo. lote: 344980",
-    "visible": false
-  },
-  {
-    "id": "MDSB-945492",
-    "title": "jiras dia adia ( tipología malla de asignación no funciona)",
-    "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[12/12/2025]: Fabio: Se valida y se confirma que el NIT relacionado en el Jira no está incluido en la malla de asignación. Sin embargo, al realizar varias pruebas adicionales con NIT que sí se encuentran configurados en la malla, se evidencia que la asignación no está respetando dicha configuración. Actualmente, todos los casos están siendo asignados únicamente al usuario definido en el flujo, independientemente de la malla de asignación.",
-    "unit": "Bolivar",
-    "detail": "Nos encontramos escalando un caso a través de imagine para la tipología 10617- Datos Contacto - Riesgo Biológico, esta tipología se encuentra parametrizada en la asignación de tipologías por malla, sin embargo al realizar la radicación del caso se evidencia que no esta asignando de acuerdo a este parámetro , se realizaron pruebas con el número de documento 1147941511 que de acuerdo a la malla se debe asignar al usuario Erika Nathaly Martinez, sin embargo lo asigna a la persona que se encuentra creada en el flujo",
     "visible": false
   },
   {
