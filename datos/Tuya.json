@@ -739,5 +739,44 @@
     "unit": "Tuya",
     "detail": "Clientes radican casos en plataforma ",
     "visible": true
+  },
+  {
+    "id": "317",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Faver y \nNatalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "15/12/2025",
+    "endDate": "15/12/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "318",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Faver y \nNatalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/12/2025",
+    "endDate": "16/12/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "319",
+    "title": "Solicitud busqueda de documentos Preventa",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/12/2025",
+    "endDate": "16/12/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Solicitud de usuario para consultar lista clientes para preventas",
+    "visible": true
   }
 ]
