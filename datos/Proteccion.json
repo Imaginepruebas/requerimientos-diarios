@@ -654,12 +654,38 @@
     "title": "Proceso de validación, estabilidad y modificación del proyecto",
     "assigned": "Alejandro",
     "state": "En Proceso",
-    "progress": 20,
+    "progress": 40,
     "startDate": "09/12/2025",
     "endDate": "",
-    "observations": "",
+    "observations": "[16/12/2025] Se actualiza el proyecto adicionandole mejoras de visualización de documento. Una opción para abrir el visor en [16/12/2025] Se realizan pruebas de funcionamiento y a excepción de una modificación todo funciona bien",
     "unit": "Proteccion",
     "detail": "Migración de lógica de FILENET para gestionar validaciones en IMAGINE",
+    "visible": true
+  },
+  {
+    "id": "Interno-H16",
+    "title": "Identificación de procesos y validación del proyecto",
+    "assigned": "Alejandro",
+    "state": "En Proceso",
+    "progress": 75,
+    "startDate": "15/12/2025",
+    "endDate": "",
+    "observations": "[16/11/2025] Se corrigienron un gran número de casos de AUF",
+    "unit": "Proteccion",
+    "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
+    "visible": true
+  },
+  {
+    "id": "REQ-16",
+    "title": "Se están identificando muchos casos en varios frentes de soporte caausados para malas prácticas , por ahora se esta identificando las causales y corrigiendo casos manualmente",
+    "assigned": "Alejandro",
+    "state": "En Proceso",
+    "progress": 25,
+    "startDate": "11/12/2025",
+    "endDate": "",
+    "observations": "[16/11/2025] Se corrigienron un gran número de casos de AUF\n[17/11/2025] Se analizaron manualmente una gran cantidad de casos solicitados\n[18/11/2025] Se realizó reunió para el analisis de casos que no abrieron notificación",
+    "unit": "Proteccion",
+    "detail": "Identificación y corrección de servicios de consumo en Imagine",
     "visible": true
   }
 ]

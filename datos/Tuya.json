@@ -774,9 +774,48 @@
     "progress": 100,
     "startDate": "16/12/2025",
     "endDate": "16/12/2025",
-    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "observations": "Se gestiona solicitud del cliente",
     "unit": "Tuya",
     "detail": "Solicitud de usuario para consultar lista clientes para preventas",
+    "visible": true
+  },
+  {
+    "id": "320",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Faver y \nNatalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "17/12/2025",
+    "endDate": "17/12/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "321",
+    "title": "Reunión para validación de Caso reportado por usuario en aplicativo",
+    "assigned": "Faver y \nNatalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "18/12/2025",
+    "endDate": "18/12/2025",
+    "observations": "Se realiza reunión con usuario",
+    "unit": "Tuya",
+    "detail": "Se realiza reunión con usuario para explicación de respuesta enviada a caso radicado",
+    "visible": true
+  },
+  {
+    "id": "322",
+    "title": "Reunión para Revision de Solicitudes Indexadas con una Familia que no corresponde",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "18/12/2025",
+    "endDate": "18/12/2025",
+    "observations": "[18/12/2025]: Se realiza reunión con las personas del cliente, se da claridad en el proceso, se hace seguimiento de varios casos y asi determinar en donde se esta presentando el problema",
+    "unit": "Tuya",
+    "detail": "Se realiza reunión las personas del proceso, se revisan como es el proceso de PCO y la información que se enctrega al consultar una solicitud",
     "visible": true
   }
 ]

@@ -1486,10 +1486,10 @@
     "title": "Plan de Trabajo ALFASST - Productos",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 20,
+    "progress": 70,
     "startDate": "10/12/2025",
     "endDate": "",
-    "observations": "[10/12/2025] y [11/12/2025]:  Se inició el trabajo de refactorización del módulo de productos, enfocándose en todo el proceso de creación y modificación. Esto se debe al cambio en la estructura de datos: la anterior (programa, actividades, categoría y concepto) fue reemplazada por la nueva (programa, temática y actividades).",
+    "observations": "[10/12/2025] y [11/12/2025]:  Se inició el trabajo de refactorización del módulo de productos, enfocándose en todo el proceso de creación y modificación. Esto se debe al cambio en la estructura de datos: la anterior (programa, actividades, categoría y concepto) fue reemplazada por la nueva (programa, temática y actividades).\n[15/12/2025], [17/12/2025] y [18/12/2025]: Continúa el proceso de refactorización en la creación y modificación de productos. Se está adaptando toda la lógica a la nueva estructura: pasando del modelo anterior (programa, actividades, categoría y concepto) al nuevo esquema de programa, temática y actividades.",
     "unit": "Alfa",
     "detail": "Validar Productos",
     "visible": true
@@ -1499,10 +1499,10 @@
     "title": "Modulo Honorarios Jurídicos - Ajuste",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 0,
+    "progress": 70,
     "startDate": "10/12/2025",
     "endDate": "",
-    "observations": "[10/12/2025]: Se realizó una sesión con el cliente para validar formatos y pagos, resultando en los siguientes ajustes y nuevos alcances (Incidentes):\n\n        Crear un parámetro para ingresar el número de factura que aparecerá en la observación. Solo se permitirá modificarlo en el periodo vigente.\n\n        La plantilla de pago SIPREN debe ir sin títulos, sin formato en los campos y sin totales.\n\n        La plantilla de pago PLUS debe ir sin formato en los campos y sin totales.\n\n        El formato de la plantilla SIPREN debe ser de tipo CSV separado por comas (\",\").\n\n        En el informe de Tesorería, quitar la validación de número de giro para que traiga toda la información (tenga o no el número) y así se pueda gestionar.\n\n        Se validará si el tema de investigaciones entra por control de cambios o por una Fase II.\n\n        Definir la plantilla de salida en el correo que se envía cuando Laura realiza el cierre (debe incluir: aplicativo, cantidad y valor). (El formato se enviará por correo aparte).",
+    "observations": "[16/12/2025]: Se completaron los siguientes requerimientos:\n\n        Parámetro de factura: Creación del campo para observaciones (solo modificable en periodo vigente). (100%)\n\n        Plantilla SIPREN: Ajuste de formato (sin títulos, formatos de campo ni totales). (100%)\n\n        Plantilla PLUS: Ajuste de formato (sin formatos de campo ni totales). (100%)\n\n        Formato CSV: Configuración de salida SIPREN con separador \";\" (punto y coma). (100%)\n\n        Informe Tesorería: Se eliminó la validación del número de giro para permitir la gestión total de la información. (100%)\n\n        Investigaciones: Análisis de viabilidad para control de cambios o Fase II. (PENDIENTE)\n\n        Notificación de Cierre: Ajuste de la plantilla de correo (aplicativo, cantidad y valor). \n\n[18/12/2025]: Se llevó a cabo una sesión con el cliente para realizar la revisión y validación de los ajustes desarrollados en el módulo de Honorarios Jurídicos.",
     "unit": "Alfa",
     "detail": "Validar de pagos y formatos",
     "visible": true
@@ -1518,6 +1518,19 @@
     "observations": "[12/12/2025]: Se asignarán permisos de administrador a los funcionarios solicitados por el área de previsionales.\n\n        Se realizará una reunión con el jefe de unidad para analizar y contextualizar temas solicitados.",
     "unit": "Alfa",
     "detail": "Validar permisos",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_040",
+    "title": "Soporte Previsionales - Modulo Dev y Objeciones",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 80,
+    "startDate": "18/12/2025",
+    "endDate": "",
+    "observations": "[18/12/2025]: Notificaciones: Se ajustó el envío masivo para que opere exclusivamente en días hábiles (lunes a viernes).\n\n        Exportación: Se corrigió el generador de archivos (export); el despliegue a producción queda pendiente.\n\n        Inventario: Se inició la validación de casos duplicados asociados al mismo siniestro.\n",
+    "unit": "Alfa",
+    "detail": "Validar incidencias reportadas para el módulo de Devoluciones y Objeciones",
     "visible": true
   }
 ]

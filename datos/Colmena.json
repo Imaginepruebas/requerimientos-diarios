@@ -33,7 +33,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "20251218 sigue en espera la  confimacion del cliente para paso a produccion",
     "unit": "Colmena",
     "detail": "Se requiere la creacion de un (chek) para cargue de afiliaciones contratos no vinculados que permita seleccionar varios contratos y de esta manera me genere los planos de los contratos seleccionaos en un solo LOG para garantizar un solo cargue que evite las demoras que actualmente se presentan al cargar estos contratos.",
     "visible": true
@@ -82,10 +82,10 @@
     "title": "Lectura, clasificación y extracción de información desde imágenes de incapacidades",
     "assigned": "Danilo Ramirez",
     "state": "En Proceso",
-    "progress": 50,
+    "progress": 55,
     "startDate": "27/10/2025",
     "endDate": "",
-    "observations": "[28/10/2025]: Se han realizado las primeras extracciones con muy poco entrenamiento y ajustando regex como filtro inicial.\n[31/10/2025]: Se continúa trabajando en la extracción automatizada de información de documentos. Se prevé la entrega parcial de resultados durante la jornada, con la funcionalidad lista para validar en ambiente local.\n[05/11/2025]: El modelo ya identifica correctamente cuándo un documento corresponde a una incapacidad y cuándo no.\nAdemás, devuelve la información clave de la incapacidad, incluyendo el número de la hoja en la que se encuentra dentro del documento.\nSe implementó también el nuevo campo “Prórroga”, el cual está siendo extraído correctamente por el modelo durante el proceso de análisis.\nActualmente, se planea realizar la implementación en el ambiente de test para validar el comportamiento integral del desarrollo.\n[24/11/2025]: Se recibió información inicial y hubo primera reunión. Aún no se ha analizado la documentación recibida; avance estimado en 5%. Pendiente estructurar el análisis y organizar los insumos.\nSe presentó fallo por conflicto con una librería y cambios no deseados en la IP pública. Se desinstaló la VPN afectada. Hoy se destinará tiempo para intentar reinstalar paquetes o aprovechar el ambiente test existente.\n[26/11/2025]: Pendiente retomar los ajustes solicitados por Colmena. Se dedicará parte del día a trabajar con Jenry para avanzar, ya que no se pudo atender este requerimiento en días anteriores por priorización de otros temas.\n[03/12/2025]: El ambiente ya está funcional y con los paquetes listos. Se inicia la revisión de las tablas involucradas para identificar dónde se insertan las incapacidades. La idea es automatizar la extracción de datos mediante un trigger para sincronizarlas con la aplicación del tercero. Se avanza en paralelo mientras se trabajan tareas de desarrollo de Bolívar.\n[05/12/2025]: Se continúa avanzando pero con dificultad debido a la disponibilidad de la VPN, que es compartida por varios usuarios. Se realizaron avances parciales, pero no se ha podido dedicar tiempo continuo al requerimiento.",
+    "observations": "[28/10/2025]: Se han realizado las primeras extracciones con muy poco entrenamiento y ajustando regex como filtro inicial.\n[31/10/2025]: Se continúa trabajando en la extracción automatizada de información de documentos. Se prevé la entrega parcial de resultados durante la jornada, con la funcionalidad lista para validar en ambiente local.\n[05/11/2025]: El modelo ya identifica correctamente cuándo un documento corresponde a una incapacidad y cuándo no.\nAdemás, devuelve la información clave de la incapacidad, incluyendo el número de la hoja en la que se encuentra dentro del documento.\nSe implementó también el nuevo campo “Prórroga”, el cual está siendo extraído correctamente por el modelo durante el proceso de análisis.\nActualmente, se planea realizar la implementación en el ambiente de test para validar el comportamiento integral del desarrollo.\n[24/11/2025]: Se recibió información inicial y hubo primera reunión. Aún no se ha analizado la documentación recibida; avance estimado en 5%. Pendiente estructurar el análisis y organizar los insumos.\nSe presentó fallo por conflicto con una librería y cambios no deseados en la IP pública. Se desinstaló la VPN afectada. Hoy se destinará tiempo para intentar reinstalar paquetes o aprovechar el ambiente test existente.\n[26/11/2025]: Pendiente retomar los ajustes solicitados por Colmena. Se dedicará parte del día a trabajar con Jenry para avanzar, ya que no se pudo atender este requerimiento en días anteriores por priorización de otros temas.\n[03/12/2025]: El ambiente ya está funcional y con los paquetes listos. Se inicia la revisión de las tablas involucradas para identificar dónde se insertan las incapacidades. La idea es automatizar la extracción de datos mediante un trigger para sincronizarlas con la aplicación del tercero. Se avanza en paralelo mientras se trabajan tareas de desarrollo de Bolívar.\n[05/12/2025]: Se continúa avanzando pero con dificultad debido a la disponibilidad de la VPN, que es compartida por varios usuarios. Se realizaron avances parciales, pero no se ha podido dedicar tiempo continuo al requerimiento.\n[17/12/2025]: Se trabajó parcialmente en el requerimiento de incapacidades. El avance se vio afectado por múltiples problemas de conexión VPN y acceso a equipos remotos (especialmente el equipo asignado a Henry), lo que obligó a reinstalar clientes y usar equipos alternos.\nA pesar de las dificultades, se avanzó en la implementación de una nueva tabla para almacenar la información extraída, logrando un progreso adicional estimado del 5%. El avance fue menor al esperado debido a los bloqueos técnicos.",
     "unit": "Colmena",
     "detail": "Requerimiento:\nSe necesita que el sistema identifique, clasifique y extraiga automáticamente la información contenida en las imágenes de incapacidades médicas  radicadas, para agilizar la validación y registro de estos documentos dentro del flujo de gestión de incapacidades.\n\nEl proceso debe utilizar modelos de inteligencia artificial y procesamiento de imágenes (OCR) para reconocer los tipos de documento incluidos en los archivos PDF (por ejemplo: incapacidades, historias clínicas, cédulas, otros anexos) y tomar únicamente las páginas que correspondan a incapacidades médicas, almacenando la información validada y su respectiva hoja de origen.\n\nJustificación:\nActualmente, los documentos  contienen múltiples tipos de imágenes dentro de un mismo archivo, lo que dificulta la extracción manual de la información requerida para el análisis de incapacidades.\nEste requerimiento busca automatizar la clasificación y extracción de datos relevantes, mejorando la precisión del proceso, reduciendo tiempos de validación y evitando errores humanos en la identificación de archivos.",
     "visible": true
@@ -101,6 +101,58 @@
     "observations": "[28/10/2025] Se valida método de consulta de manera manual y se descubre que a partir del consumo de una URL se puede hacer la consulta completa con los resultados que la plataforma retorna de manera visual\n[29/10/2025] Se ajusta script para filtrar y trasformar la información de tal manera que sea útil para utilizarla\n[30/10/2025] Ajuste del scritp para mejorar el la respuesta\n[31/10/2025] Se ejecutan la lista de NIT´s pendientes",
     "unit": "Colmena",
     "detail": "Requerimiento:\nSe requiere desarrollar un proceso que permita ingresar a la plataforma SBSeguros utilizando credenciales de autenticación válidas, con el propósito de consultar, validar y extraer información asociada a un documento específico.\n\nEl proceso deberá realizar las siguientes acciones:\n\n1.  Autenticación: Ingresar a la plataforma SBSeguros empleando las credenciales de inicio de sesión autorizadas para el proceso de consulta.\n2. Validación de información: Verificar si el documento consultado cuenta con información registrada en la plataforma.\n\n3. Extracción de datos:\n\n*Desde la sección “Información Básica” o “RUT”, obtener y almacenar el código CIIU correspondiente.\n*Desde la sección “Información Financiera”, recuperar el valor reportado en el campo “Ingresos Mensuales”.\n\n4.Resultado del proceso: Registrar y/o devolver los datos obtenidos para su uso en procesos posteriores de validación o integración.",
+    "visible": true
+  },
+  {
+    "id": "AUT0_3",
+    "title": "Buzon enfermedad laboral",
+    "assigned": "Jhon Bermudez",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "",
+    "title": "causales devolucion zehux",
+    "assigned": "Brayan Diaz",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "15/12/2025",
+    "endDate": "16/12/2025",
+    "observations": "[16/12/2025] se realizaron los cambios solicitados ",
+    "unit": "Colmena",
+    "detail": "Unificar las causales de devolución y que se vean reflajadas en el informe",
+    "visible": true
+  },
+  {
+    "id": "",
+    "title": "modulo punteo",
+    "assigned": "Brayan Diaz",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "se requiere reunion para aclaracion del requerimiento",
+    "unit": "Colmena",
+    "detail": "Hacer un modulo de punteo de los PTC y EHB",
+    "visible": false
+  },
+  {
+    "id": "",
+    "title": "Automatizacion de SAT independientes",
+    "assigned": "Brayan Diaz",
+    "state": "Pausado",
+    "progress": 15,
+    "startDate": "",
+    "endDate": "",
+    "observations": "20251218, se requiere permisos para conmexion a las urls de consumo del api, se valida con\n tecnologia de colmena, aun no dan el permiso solicitado, por lo tanto se mantiene en espera ",
+    "unit": "Colmena",
+    "detail": "Automatizacion de SAT independientes",
     "visible": true
   }
 ]

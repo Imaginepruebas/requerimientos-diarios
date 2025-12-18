@@ -627,7 +627,106 @@
         assignedHtml += `<li><strong>${assigned}:</strong> ${assignedCount[assigned]}</li>`;
       }
       assignedHtml += '</ul>';
-      estadisticasContent.innerHTML = statesHtml + assignedHtml;
+      estadisticasContent.innerHTML = statesHtml + assignedHtml + '<hr><div id="lastUpdateByUnitContainer"></div>';
+    }
+
+    // --------------------------------------------------
+    // Última actualización por unidad
+    // --------------------------------------------------
+    // Extrae fechas entre corchetes [dd/mm/yyyy] dentro de un texto
+    function extractDatesFromText(text) {
+      if (!text || typeof text !== 'string') return [];
+      const regex = /\[(\d{1,2}\/\d{1,2}\/\d{4})\]/g;
+      const matches = [];
+      let m;
+      while ((m = regex.exec(text)) !== null) {
+        matches.push(m[1]);
+      }
+      return matches;
+    }
+
+    // Calcula y muestra la última fecha por unidad y tareas asociadas
+    function updateLastUpdatePerUnit(filteredTasks = tasks) {
+      const container = document.getElementById('lastUpdateByUnitContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const byUnit = {};
+
+      filteredTasks.forEach(task => {
+        if (task.visible === false) return;
+        const unit = task.unit || 'Sin Unidad';
+
+        // Recolectar posibles fechas de la tarea
+        const candidates = [];
+        if (task.startDate) candidates.push(task.startDate);
+        if (task.endDate) candidates.push(task.endDate);
+        if (task.observations) {
+          const obsDates = extractDatesFromText(task.observations);
+          candidates.push(...obsDates);
+        }
+
+        // Parsear y mantener fechas válidas
+        const parsed = candidates
+          .map(d => parseDate(d))
+          .filter(d => d && !isNaN(d.getTime()));
+
+        if (parsed.length === 0) return;
+
+        const maxDate = parsed.reduce((a, b) => (a > b ? a : b));
+
+        if (!byUnit[unit] || byUnit[unit].date < maxDate) {
+          byUnit[unit] = { date: maxDate, tasks: [{ id: task.id, title: task.title, state: task.state, progress: task.progress }] };
+        } else if (byUnit[unit].date.getTime() === maxDate.getTime()) {
+          byUnit[unit].tasks.push({ id: task.id, title: task.title, state: task.state, progress: task.progress });
+        }
+      });
+
+      // Construir tabla HTML
+      const rows = Object.keys(byUnit).sort().map(unit => {
+        const info = byUnit[unit];
+        const date = info.date;
+        const dateStr = date ? `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}` : '-';
+        const tasksHtml = info.tasks.map(t => `<div><strong>${t.id}</strong> - ${t.title} (${t.state}, ${t.progress}%)</div>`).join('');
+        return `<tr><td>${unit}</td><td>${dateStr}</td><td>${tasksHtml}</td></tr>`;
+      }).join('');
+
+      const html = `
+        <h5>Última actualización por Unidad:</h5>
+        <button id="export-last-update" class="btn btn-sm btn-secondary mb-2">Exportar CSV</button>
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead><tr><th>Unidad</th><th>Última Fecha</th><th>Tareas (ID - Título - Estado - %)</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `;
+
+      container.innerHTML = html;
+
+      // Añadir evento para exportar CSV
+      document.getElementById('export-last-update').addEventListener('click', () => {
+        const data = Object.keys(byUnit).map(u => ({ unit: u, date: byUnit[u].date, tasks: byUnit[u].tasks }));
+        exportLastUpdateCSV(data);
+      });
+    }
+
+    // Exportar CSV
+    function exportLastUpdateCSV(data) {
+      const lines = ['Unidad,Última Fecha,Tareas'];
+      data.forEach(row => {
+        const d = row.date;
+        const dateStr = d ? `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}` : '';
+        const tasksStr = row.tasks.map(t => `${t.id} - ${t.title} (${t.state} ${t.progress}%)`).join(' | ').replace(/"/g, '""');
+        lines.push(`"${row.unit}","${dateStr}","${tasksStr}"`);
+      });
+      const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `Ultima_Actualizacion_Por_Unidad_${formattedDate}.csv`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
     // Normaliza estados: quita acentos, pone minúsculas, colapsa espacios
@@ -892,6 +991,7 @@ return estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(ta
   updateSummary(filteredTasks);
   renderTasks(filteredTasks);
   updateStatistics(filteredTasks);
+  updateLastUpdatePerUnit(filteredTasks);
   plotPieChart(filteredTasks);
   plotBarChart(filteredTasks);
   plotAssignmentsChart(filteredTasks);
