@@ -160,10 +160,10 @@
     "title": "Mejora oficina entidades",
     "assigned": "jESUS",
     "state": "En Proceso",
-    "progress": 70,
+    "progress": 80,
     "startDate": "11/11/2025",
     "endDate": "",
-    "observations": "[10/12/2025]: El equipo validará nuevamente para estimar tiempos. La actividad está en revisión inicial.\n[12/12/2025]: El desarrollo inició el 11 de diciembre. Aunque la estimación de tiempo aún no estaba completamente definida, podría considerarse un plazo de tres días, con entrega prevista para el martes 16 de diciembre. A la fecha, ya se encuentran creadas las dos opciones de cargue: individual y masivo. \n[15/12/2025]: Se avanzó al 50 % en el requerimiento, El objetivo es finalizar el desarrollo entre el día siguiente y, como máximo, el miércoles en la mañana, sujeto a pruebas finales.\n[17/12/2025]: Se avanzó significativamente en el requerimiento de juntas, pasando de un 50% a un 70%. El principal cambio consiste en modificar la lógica de radicación individual a radicación masiva, lo que implicó analizar cómo generar múltiples IDs por sesión para cada registro.\nSe configuró la carta de notificación y se realizaron varios ajustes adicionales. El requerimiento no se finalizará hoy debido a retrasos por priorización de otras tareas, pero se espera completarlo entre la mañana.\n[18/12/2025]: Hoy se esta validando el envio del correo de radicación Y  migrando los job creados de portales a bolivar para quitarle procesos a ese servidor ",
+    "observations": "[10/12/2025]: El equipo validará nuevamente para estimar tiempos. La actividad está en revisión inicial.\n[12/12/2025]: El desarrollo inició el 11 de diciembre. Aunque la estimación de tiempo aún no estaba completamente definida, podría considerarse un plazo de tres días, con entrega prevista para el martes 16 de diciembre. A la fecha, ya se encuentran creadas las dos opciones de cargue: individual y masivo. \n[15/12/2025]: Se avanzó al 50 % en el requerimiento, El objetivo es finalizar el desarrollo entre el día siguiente y, como máximo, el miércoles en la mañana, sujeto a pruebas finales.\n[17/12/2025]: Se avanzó significativamente en el requerimiento de juntas, pasando de un 50% a un 70%. El principal cambio consiste en modificar la lógica de radicación individual a radicación masiva, lo que implicó analizar cómo generar múltiples IDs por sesión para cada registro.\nSe configuró la carta de notificación y se realizaron varios ajustes adicionales. El requerimiento no se finalizará hoy debido a retrasos por priorización de otras tareas, pero se espera completarlo entre la mañana.\n[18/12/2025]: Hoy se esta validando el envio del correo de radicación Y  migrando los job creados de portales a bolivar para quitarle procesos a ese servidor \n[19/12/2025]: Se finalizó la lógica de radicación masiva de juntas, ajustando el procesamiento de jobs para evitar el envío de correos uno a uno. Actualmente, el sistema agrupa los casos y envía una notificación consolidada. La radicación y réplica funcionan correctamente. Quedan pendientes ajustes visuales menores y edición de algunos campos, ya habilitados para modificación",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -198,11 +198,11 @@
     "id": "MDSB-943252",
     "title": "Jiras día a día( El radicado que arroja el portal ARL en la radicación de autorizaciones no se visualiza en nativo.",
     "assigned": "JESUS",
-    "state": "Paso A Produccion",
+    "state": "En Proceso",
     "progress": 90,
     "startDate": "10/12/2025",
     "endDate": "",
-    "observations": "[10/12/2025]: Se reportó un error intermitente donde el número de radicado generado no coincide con el que queda registrado en Nativo. Se presentaron tres casos recientes. El equipo identificó que el origen probablemente está en un job que se ejecuta desde Portales y podría estar produciendo inconsistencias. Jesús revisará el job para determinar si hay fallas puntuales o si puede estar afectando más usuarios de los que han reportado el problema.\n[12/12/2025]:El 11 de diciembre se crea validación para consultar caso y así no se duplique el numero de radicado, se encuentra en test pero se presenta  error la pagina en portales expirando demasiado rapido con error 419.\n[15/12/2025]: Fabio; Se valida y a un persite el inconveniente en test.\n[17/12/2025]: Se soluciono la conexcion a  la instancia privada de test,  se rpueba pero los casos no replican, se espera ayuda para subir la cola  job_queue_portales en test. \n[18/12/2025]: Se realiza prueba de radicación en test y radica bien, se debe pasar ajuste a producción  ",
+    "observations": "[10/12/2025]: Se reportó un error intermitente donde el número de radicado generado no coincide con el que queda registrado en Nativo. Se presentaron tres casos recientes. El equipo identificó que el origen probablemente está en un job que se ejecuta desde Portales y podría estar produciendo inconsistencias. Jesús revisará el job para determinar si hay fallas puntuales o si puede estar afectando más usuarios de los que han reportado el problema.\n[12/12/2025]:El 11 de diciembre se crea validación para consultar caso y así no se duplique el numero de radicado, se encuentra en test pero se presenta  error la pagina en portales expirando demasiado rapido con error 419.\n[15/12/2025]: Fabio; Se valida y a un persite el inconveniente en test.\n[17/12/2025]: Se soluciono la conexcion a  la instancia privada de test,  se rpueba pero los casos no replican, se espera ayuda para subir la cola  job_queue_portales en test. \n[18/12/2025]: Se realiza prueba de radicación en test y radica bien, se debe pasar ajuste a producción  \n[19/12/2025]: El ajuste de radicación del portal está temporalmente detenido debido a una decisión arquitectónica relacionada con el manejo de colas.Se acordó centralizar la ejecución de jobs en el servidor Laravel (servidor público) y no en el servidor privado de portales, con el fin de evitar saturación, duplicidad de procesos y problemas de mantenimiento. Se requieren pruebas adicionales antes de liberar el ajuste.",
     "unit": "Bolivar",
     "detail": "LA PAGINA WEB ESTÁ ARROJANDO UN RADICADO Y LUEGO NO APARECE “\n\nBuenos días\n\nSolicito su colaboración, porque estoy radicando archivos por la pagina web y me arroja un radicado, luego voy a consultar ese radicado para cambiarle la tipología o asignarlo al medico encargado y no aparecen, consulto con la cedula del trabajador y me aparece el caso creado, pero con otro radicado, esto pasa desde la semana pasada, pero apenas hoy noto que es repetitivo y adjunto evidencia de  dos casos en esta mañana.\n\nCordialmente",
     "visible": true
@@ -423,7 +423,7 @@
     "progress": 99,
     "startDate": "16/10/2025",
     "endDate": "06/11/2025",
-    "observations": "[10/09/2025]: Revisión preliminar realizada.\n[22/10/2025]: Se solicita control de cambios en test MDSB-915793\n[28/10/2025]: Control de cambios ejecutado con éxito \n\n[21/11/2025]. Se escala control de cambios a test MDSB-934083 para la creación de  la tabla cm_actualizacion_facturas_sisalud y modificación de las tablas cm_pagos_masivos_generados y ctas_proveedores\nControl de cambios MDSB-934083 ejecutado.\n[26/11/2025]: Se avanzó en la implementación del cruce y la construcción de las bandejas de resultado. Falta validar el comportamiento del cruce asociado a proveedores y  solicitar la creación  de la tabla en producción. Continúan ajustes menores previos a las pruebas finales.\n[27/11/2025]: Se escala control de cambios en producción MDSB-937531\n[01/12/2025]: Control de cambios aun se encuentra pendiente por QA del cliente\n[03/12/2025]: Control de cambios programado hoy  para aprobación por comité.\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[10/12/2025]: A un esta pendientes de pruebas para realizar paso a produncción.\n[12/12/2025]: Se encuentra pendiente la ejecución del paso a producción y la realización de las pruebas en caliente una vez se despliegue el ajuste.\n[15/12/2025]: El desarrollo principal ya se encuentra en producción, incluyendo la tabla y el código. Sin embargo, el proceso aún no se ha ejecutado de forma completa, ya que el cruce consulta facturas antiguas una a una contra el API. Se acordó no ejecutarlo aún y, por recomendación funcional, crear bandejas adicionales para gestionar los casos no cruzados o glosados, antes de activar el proceso masivo.\n[17/12/2025]: Se avanzó en la construcción de bandejas de gestión necesarias cuando el cruce en producción presenta fallos. Dichas bandejas están casi finalizadas e incluyen la lógica para gestión manual de casos (por ejemplo, cambios de estado en Salud).",
+    "observations": "[10/09/2025]: Revisión preliminar realizada.\n[22/10/2025]: Se solicita control de cambios en test MDSB-915793\n[28/10/2025]: Control de cambios ejecutado con éxito \n\n[21/11/2025]. Se escala control de cambios a test MDSB-934083 para la creación de  la tabla cm_actualizacion_facturas_sisalud y modificación de las tablas cm_pagos_masivos_generados y ctas_proveedores\nControl de cambios MDSB-934083 ejecutado.\n[26/11/2025]: Se avanzó en la implementación del cruce y la construcción de las bandejas de resultado. Falta validar el comportamiento del cruce asociado a proveedores y  solicitar la creación  de la tabla en producción. Continúan ajustes menores previos a las pruebas finales.\n[27/11/2025]: Se escala control de cambios en producción MDSB-937531\n[01/12/2025]: Control de cambios aun se encuentra pendiente por QA del cliente\n[03/12/2025]: Control de cambios programado hoy  para aprobación por comité.\n[04/12/2025]:  Control de cambios ejecutado con exito el 3 de diciembre.\n[10/12/2025]: A un esta pendientes de pruebas para realizar paso a produncción.\n[12/12/2025]: Se encuentra pendiente la ejecución del paso a producción y la realización de las pruebas en caliente una vez se despliegue el ajuste.\n[15/12/2025]: El desarrollo principal ya se encuentra en producción, incluyendo la tabla y el código. Sin embargo, el proceso aún no se ha ejecutado de forma completa, ya que el cruce consulta facturas antiguas una a una contra el API. Se acordó no ejecutarlo aún y, por recomendación funcional, crear bandejas adicionales para gestionar los casos no cruzados o glosados, antes de activar el proceso masivo.\n[17/12/2025]: Se avanzó en la construcción de bandejas de gestión necesarias cuando el cruce en producción presenta fallos. Dichas bandejas están casi finalizadas e incluyen la lógica para gestión manual de casos (por ejemplo, cambios de estado en Salud).\n[19/12/2025]: Se avanzó en la construcción de la bandeja para el cruce de facturas versus estado de pago, especialmente para facturas asociadas a un solo usuario. La funcionalidad se encuentra estable y en proceso de validación, aunque persisten definiciones pendientes sobre el manejo de casos especiales (valores elevados o inconsistencias). El desarrollo continúa en evolución.",
     "unit": "Bolivar",
     "detail": "Descripción\n\nSe requiere realizar el cruce automatico de lo autorizado, ya sea cargado de forma manual o por API con el lago vs lo cobrado en las facturas por el proveedor.\n\nUna vez realizada esta comparacion, los registro en los que el valor cobrado, sea igual o menor al valor autorizado, se deben  asignar al usuario definido para pago masivo,  Asi mismo debe permitir seleccionar todos o algunos casos, para realizar la notificacion y el cierre de caso masivo.\n\nLos caso cuyo valor cobrado es mayor al valor autorizado, deben pasar segun las reglas de asignación a los diferentes perfiles, en caso de que exista tarifa pactada, el usuario debe poder visualizar la tarifa pactada, autorizada y cobrada para su evaluacion.",
     "visible": true
@@ -439,7 +439,7 @@
     "observations": "[18/12/2025]: Jairo engtrega documentación en .md. se realizara  ajuste de formato y estilos",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "INTERNO-JA005",
@@ -952,11 +952,11 @@
     "id": "GD772-117_1",
     "title": "Documentación tecnica. Reporte glosas para la Superfinanciera (migración a lago de datos de los 2 informes de glosas (arl y salud)",
     "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "12/12/2025",
-    "endDate": "",
-    "observations": "[12/12/2025]: Se solicita docuemntación a Jairo\n",
+    "endDate": "18/12/2025",
+    "observations": "[12/12/2025]: Se solicita docuemntación a Jairo\n[19/12/2025]: Jairo confirma que la documentacion para este requerimiento es una sola, va con la generada  para el requerimiento GD772-163_1 EXPORTAR  RIPS PRESTADORES y  GD772-136_1 \n. Reporte glosas para la Superfinanciera",
     "unit": "Bolivar",
     "detail": "",
     "visible": false
@@ -1025,6 +1025,45 @@
     "unit": "Bolivar",
     "detail": "",
     "visible": true
+  },
+  {
+    "id": "INTERNO-JE029",
+    "title": "centralizar la ejecución de jobs en el servidor Laravel",
+    "assigned": "JESUS",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "19/12/2025",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "Se acordó centralizar la ejecución de jobs en el servidor Laravel (servidor público) y no en el servidor privado de portales, con el fin de evitar saturación, duplicidad de procesos y problemas de mantenimiento",
+    "visible": true
+  },
+  {
+    "id": "GD772-162",
+    "title": "Ajuste servicio de Olimpia - Registraduria  API",
+    "assigned": "JESUS",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[22/10/2025]: Se Iniciara  tan pronto finalice el desarrollo del req  GD772-159 (Jira).\n[24/10/2025]: El requerimiento será abordado por Wilson, quien reutilizará estructuras y rutas ya desarrolladas. Se debe crear una nueva tabla para almacenar tokens y marcar los asociados al servicio de Olimpia. Se coordinó con Jairo para brindar contexto técnico durante la implementación.\n[26/11/2025]: Este requerimeinto es reasignado a Jesus .\n[19/12/2025]: Jairo explicara a Jesus el desarrollo del requerimeinto.",
+    "unit": "Bolivar",
+    "detail": "Implementar la integración con el servicio externo Olimpia para la validación de identidad ciudadana (registraduría).\nEl sistema deberá recibir, almacenar y gestionar los tokens de autenticación que provee Olimpia, garantizando seguridad y trazabilidad en los procesos de validación.\nSe busca unificar el manejo de tokens utilizados en los diferentes módulos  en una sola tabla centralizada, evitando duplicidad de estructuras\n",
+    "visible": true
+  },
+  {
+    "id": "INTERNO-JE030",
+    "title": "Nuevo proceso de incapacidades ARL",
+    "assigned": "JESUS",
+    "state": "Estimar",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "19/122/2025: Jesus estima 6 dias de desarrollo",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false
   },
   {
     "id": "INTERNO-JE024",
@@ -1980,10 +2019,10 @@
     "title": "OFICINA  EXPRES  ARL -IA",
     "assigned": "DANILO",
     "state": "En Proceso",
-    "progress": 95,
+    "progress": 98,
     "startDate": "16/09/2025",
     "endDate": "",
-    "observations": "[16/09/2025]: El 15 de septiembre se escala  ticket MDSB-891056  solicitando el aprovisionamiento de una máquina en la nube para el entrenamiento del modelo AI de Oficina Express,\n[19/09/2025]: No se reportan avances recientes, el progreso depende de otro integrante (Cliente) y no ha habido movimientos en el requerimiento.\n[22/09/2025]: El Viernes 20 de septiembre se resolvieron las dudas en reunión previa y se avanzó en el desarrollo.\n[23/09/2025]: 22 de septiembre confirman creación de la maquina solicitada.\n[24/09/2025]: Se avanzó en la implementación del modelo y del backend con su respectivo API, incluyendo entrenamiento inicial y pruebas. Se instaló la librería en la nueva instancia y se trabaja en la configuración de DNS para permitir el consumo desde otras instancias.\n[25/09/2025]: Se esta montando el modelo en la instancia y probando la conexión con el dataset\n[26/09/2025]: Se encuentra implementando la  instancia, y  se  identificó que la instancia entregada tiene menor capacidad de la solicitada lo cual sera reportado hoy.\n\n[29/09/2025]: se reportó por correo que dicha instancia no cumplía con las especificaciones indicadas en el ticket, situación que fue corregida mediante el cambio a una nueva instancia. Sin embargo, la instancia anterior fue eliminada, por lo que actualmente se encuentra en proceso de reinstalación de librerías y configuración en la nueva instancia.”, Se espera finalizar instalación y publicación en test del servicio API.\n[01/10/2025]: El modelo ya fue montado en la instancia y se encuentra en entrenamiento con datos reales. Sin embargo, el avance está limitado por la falta de comunicación entre servidores, necesaria para exponer el modelo como API y realizar pruebas de consumo. También se requiere acceso a la base de datos de producción para facilitar la extracción de información y garantizar un entrenamiento más alineado con el entorno final.\n[03/10/2025]:  Se avanzó en el entrenamiento del modelo con tipologías depuradas, ajustando la información a 29 clases, aunque actualmente solo se entrenan 8 por falta de insumos. Persiste la limitación de conexión directa a producción, pero el proceso está casi listo para pruebas de radicación.\nSe identificó que no existía conexión desde la instancia imaginex_ec2_private1 (i-01100c19c4e024efe) hacia la nueva instancia oficinaexpress-new-imaginex-stage-ec2. La situación se escaló mediante el ticket MDSB-903680, en el cual informan que ya se realizaron los ajustes requeridos para habilitar la conexión\nProbando modelo con datos extraidos de producciñon\n[06/10/2025]: Se avanzó en la implementación de la lógica para la radicación de casos; sin embargo, persisten dificultades de acceso a los ambientes de pruebas (TES), las cuales se espera resolver hoy. Se logró restablecer las credenciales de la VPN y se prevé finalizar el desarrollo entre hoy y mañana, dependiendo del restablecimiento de accesos.\n[22/10/2025]: El 21 de Octubre se realizó el análisis de la documentación enviada por Freddy y se depuró el listado de tipologías a entrenar, quedando en 48 tipologías seleccionadas para el modelo con el fin de reducir ruido y mejorar estabilidad.\n[23/10/2025]: Se reciben manuales de autorizaciones, Reembolsos e incapacidades, faltando  modalidades  y proveedores.\nSe definen 63 tipologias finales para el entrebamiento del modelo.\n[24/10/2025]: El requerimiento presenta avance significativo en la lógica y configuración del modelo IA, con resultados estables en local. Está previsto desplegar los cambios en ambiente de Test durante el día para iniciar pruebas la próxima semana.\n[27/10/2025]: El componente ya fue desplegado en ambiente de test el 24 de octubre e integrado con los elementos funcionales requeridos. Actualmente se trabaja en el entrenamiento con datos reales para incrementar el nivel de confianza en las respuestas del modelo\n[29/10/2025]: Se continúa con el mejoramiento de la lógica y diseño del modelo, además del entrenamiento\n[31/10/2025]: El modelo se encuentra en fase de entrenamiento y ajuste de parámetros\nPendiente: Finalizar entrenamiento y entregar el modelo con datos ajustados antes de finalizar la semana.\n[05/11/2025]: Se realizó la presentación del desarrollo al cliente, mostrando el funcionamiento del modelo de inteligencia artificial en la clasificación de solicitudes dentro de Oficina Express.\nDurante la sesión, se definió que el modelo debe permitir, además, radicar los casos una vez finalizada la clasificación, iniciando el proceso formal de radicación de solicitudes ARL.\nEn atención a esta nueva necesidad, se acordó iniciar el desarrollo complementario\n despues de realizar la clasificación, para lo cual se debe iniciar con el desarrollo \n[07/11/2025]: Se avanzó en la configuración de parámetros y consumo de servicios. Se está utilizando información histórica de la base de datos para pruebas mientras se definen los insumos definitivos.\n[10/11/2025]: Pendiente reactivar pruebas una vez se solucione el problema de replicación y AJUSTE VENTANA ERROR EN PORTALES\n[12/11/2025]:  se ajustaron los parámetros y se realizaron pruebas adicionales.\nSe realiza presentacion de avances el grupo  de imagiene y gerencia.\n [14/11/2025]:  Ayer se extrajo información desde producción para construir la base de datos de Oficina Express (50%), se desplegaron y validaron los cambios en test (100%), se avanzó en la radicación del caso (85%) y se entrenó el modelo en test (60%). Hoy se continúa trabajando en la radicación del caso y en el ajuste del entrenamiento del modelo en ambiente de test (progreso actual 50%). Quedan pendientes completar la radicación y finalizar los ajustes del modelo para alcanzar los objetivos de precisión.\n[18/11/2025]: Se realiza entrega al cliente para inicio de las  poruebas. y pendiente de poarte del  cliente la entrega  de los manuales para las tarjetas faltantes del portal\n[24/11/2025]: El Viernes 21 de noviembre se recibió un documento con evidencias de pruebas. Pendiente revisión detallada para identificar ajustes adicionales y validar si se requiere nuevo entrenamiento del modelo.\n[26/11/2025]: Se avanza en un 95% en la radicación del caso, quedando pendientes ajustes en datos básicos y la revisión de incidencias detectadas en pruebas del cliente. El modelo en ambiente de Test mantiene buen desempeño, aunque se evaluará si se requiere un nuevo ciclo de entrenamiento según las inconsistencias encontradas. La extracción de información desde producción aún no inicia por falta de acceso autorizado, pero está previsto reutilizar el modelo validado en Test para el despliegue final. Adicionalmente, La información enviada por Imagine respecto al despliegue de la instancia de Oficina Express y al escalamiento de recursos en producción indica que, a partir de este punto, corresponde al cliente la creación del ticket en Jira para solicitar el escalamiento a infraestructura. Este paso es un requisito necesario para poder continuar con la siguiente fase del flujo de Oficina Express.\n [01/12/2025]: El viernas 28 de noviembre se implementaron casi todas las recomendaciones entregadas por IBEC. Únicamente falta ajustar la carta de la respuesta. El avance general del entregable se mantiene en 95%.\n[10/12/2025]: Entre el 4 y 9 de diciembre se avanzó en la implementación de las reglas de Oficina Virtual dentro de Oficina Express, actividad que no se realizó inicialmente porque las tipologías recibidas correspondían a Nativo, donde no existen dichas reglas. Con la matriz final entregada por Fred, el desarrollo avanza y se encuentra próximo a finalizar. El objetivo del día es completar la implementación. Se estima entregar los ajustes antes del mediodía para continuar con otras tareas.\n[17/12/2025]: Se revisaron incidencias encontradas durante las pruebas realizadas por el equipo funcional. No se resolvieron aún, ya que se esperaba el cierre del ciclo completo de pruebas para abordarlas de manera conjunta\n[18/12/2025]: Se informa al cliente que pueden realizar validaciones controladas en Producción únicamente con el siguiente nit 123456789 para identificar fácilmente que son pruebas y no se deben gestionar los casos.   https://imaginex-arlbolivar.segurosbolivar.com/oficina/express/1 ",
+    "observations": "[16/09/2025]: El 15 de septiembre se escala  ticket MDSB-891056  solicitando el aprovisionamiento de una máquina en la nube para el entrenamiento del modelo AI de Oficina Express,\n[19/09/2025]: No se reportan avances recientes, el progreso depende de otro integrante (Cliente) y no ha habido movimientos en el requerimiento.\n[22/09/2025]: El Viernes 20 de septiembre se resolvieron las dudas en reunión previa y se avanzó en el desarrollo.\n[23/09/2025]: 22 de septiembre confirman creación de la maquina solicitada.\n[24/09/2025]: Se avanzó en la implementación del modelo y del backend con su respectivo API, incluyendo entrenamiento inicial y pruebas. Se instaló la librería en la nueva instancia y se trabaja en la configuración de DNS para permitir el consumo desde otras instancias.\n[25/09/2025]: Se esta montando el modelo en la instancia y probando la conexión con el dataset\n[26/09/2025]: Se encuentra implementando la  instancia, y  se  identificó que la instancia entregada tiene menor capacidad de la solicitada lo cual sera reportado hoy.\n\n[29/09/2025]: se reportó por correo que dicha instancia no cumplía con las especificaciones indicadas en el ticket, situación que fue corregida mediante el cambio a una nueva instancia. Sin embargo, la instancia anterior fue eliminada, por lo que actualmente se encuentra en proceso de reinstalación de librerías y configuración en la nueva instancia.”, Se espera finalizar instalación y publicación en test del servicio API.\n[01/10/2025]: El modelo ya fue montado en la instancia y se encuentra en entrenamiento con datos reales. Sin embargo, el avance está limitado por la falta de comunicación entre servidores, necesaria para exponer el modelo como API y realizar pruebas de consumo. También se requiere acceso a la base de datos de producción para facilitar la extracción de información y garantizar un entrenamiento más alineado con el entorno final.\n[03/10/2025]:  Se avanzó en el entrenamiento del modelo con tipologías depuradas, ajustando la información a 29 clases, aunque actualmente solo se entrenan 8 por falta de insumos. Persiste la limitación de conexión directa a producción, pero el proceso está casi listo para pruebas de radicación.\nSe identificó que no existía conexión desde la instancia imaginex_ec2_private1 (i-01100c19c4e024efe) hacia la nueva instancia oficinaexpress-new-imaginex-stage-ec2. La situación se escaló mediante el ticket MDSB-903680, en el cual informan que ya se realizaron los ajustes requeridos para habilitar la conexión\nProbando modelo con datos extraidos de producciñon\n[06/10/2025]: Se avanzó en la implementación de la lógica para la radicación de casos; sin embargo, persisten dificultades de acceso a los ambientes de pruebas (TES), las cuales se espera resolver hoy. Se logró restablecer las credenciales de la VPN y se prevé finalizar el desarrollo entre hoy y mañana, dependiendo del restablecimiento de accesos.\n[22/10/2025]: El 21 de Octubre se realizó el análisis de la documentación enviada por Freddy y se depuró el listado de tipologías a entrenar, quedando en 48 tipologías seleccionadas para el modelo con el fin de reducir ruido y mejorar estabilidad.\n[23/10/2025]: Se reciben manuales de autorizaciones, Reembolsos e incapacidades, faltando  modalidades  y proveedores.\nSe definen 63 tipologias finales para el entrebamiento del modelo.\n[24/10/2025]: El requerimiento presenta avance significativo en la lógica y configuración del modelo IA, con resultados estables en local. Está previsto desplegar los cambios en ambiente de Test durante el día para iniciar pruebas la próxima semana.\n[27/10/2025]: El componente ya fue desplegado en ambiente de test el 24 de octubre e integrado con los elementos funcionales requeridos. Actualmente se trabaja en el entrenamiento con datos reales para incrementar el nivel de confianza en las respuestas del modelo\n[29/10/2025]: Se continúa con el mejoramiento de la lógica y diseño del modelo, además del entrenamiento\n[31/10/2025]: El modelo se encuentra en fase de entrenamiento y ajuste de parámetros\nPendiente: Finalizar entrenamiento y entregar el modelo con datos ajustados antes de finalizar la semana.\n[05/11/2025]: Se realizó la presentación del desarrollo al cliente, mostrando el funcionamiento del modelo de inteligencia artificial en la clasificación de solicitudes dentro de Oficina Express.\nDurante la sesión, se definió que el modelo debe permitir, además, radicar los casos una vez finalizada la clasificación, iniciando el proceso formal de radicación de solicitudes ARL.\nEn atención a esta nueva necesidad, se acordó iniciar el desarrollo complementario\n despues de realizar la clasificación, para lo cual se debe iniciar con el desarrollo \n[07/11/2025]: Se avanzó en la configuración de parámetros y consumo de servicios. Se está utilizando información histórica de la base de datos para pruebas mientras se definen los insumos definitivos.\n[10/11/2025]: Pendiente reactivar pruebas una vez se solucione el problema de replicación y AJUSTE VENTANA ERROR EN PORTALES\n[12/11/2025]:  se ajustaron los parámetros y se realizaron pruebas adicionales.\nSe realiza presentacion de avances el grupo  de imagiene y gerencia.\n [14/11/2025]:  Ayer se extrajo información desde producción para construir la base de datos de Oficina Express (50%), se desplegaron y validaron los cambios en test (100%), se avanzó en la radicación del caso (85%) y se entrenó el modelo en test (60%). Hoy se continúa trabajando en la radicación del caso y en el ajuste del entrenamiento del modelo en ambiente de test (progreso actual 50%). Quedan pendientes completar la radicación y finalizar los ajustes del modelo para alcanzar los objetivos de precisión.\n[18/11/2025]: Se realiza entrega al cliente para inicio de las  poruebas. y pendiente de poarte del  cliente la entrega  de los manuales para las tarjetas faltantes del portal\n[24/11/2025]: El Viernes 21 de noviembre se recibió un documento con evidencias de pruebas. Pendiente revisión detallada para identificar ajustes adicionales y validar si se requiere nuevo entrenamiento del modelo.\n[26/11/2025]: Se avanza en un 95% en la radicación del caso, quedando pendientes ajustes en datos básicos y la revisión de incidencias detectadas en pruebas del cliente. El modelo en ambiente de Test mantiene buen desempeño, aunque se evaluará si se requiere un nuevo ciclo de entrenamiento según las inconsistencias encontradas. La extracción de información desde producción aún no inicia por falta de acceso autorizado, pero está previsto reutilizar el modelo validado en Test para el despliegue final. Adicionalmente, La información enviada por Imagine respecto al despliegue de la instancia de Oficina Express y al escalamiento de recursos en producción indica que, a partir de este punto, corresponde al cliente la creación del ticket en Jira para solicitar el escalamiento a infraestructura. Este paso es un requisito necesario para poder continuar con la siguiente fase del flujo de Oficina Express.\n [01/12/2025]: El viernas 28 de noviembre se implementaron casi todas las recomendaciones entregadas por IBEC. Únicamente falta ajustar la carta de la respuesta. El avance general del entregable se mantiene en 95%.\n[10/12/2025]: Entre el 4 y 9 de diciembre se avanzó en la implementación de las reglas de Oficina Virtual dentro de Oficina Express, actividad que no se realizó inicialmente porque las tipologías recibidas correspondían a Nativo, donde no existen dichas reglas. Con la matriz final entregada por Fred, el desarrollo avanza y se encuentra próximo a finalizar. El objetivo del día es completar la implementación. Se estima entregar los ajustes antes del mediodía para continuar con otras tareas.\n[17/12/2025]: Se revisaron incidencias encontradas durante las pruebas realizadas por el equipo funcional. No se resolvieron aún, ya que se esperaba el cierre del ciclo completo de pruebas para abordarlas de manera conjunta\n[18/12/2025]: Se informa al cliente que pueden realizar validaciones controladas en Producción únicamente con el siguiente nit 123456789 para identificar fácilmente que son pruebas y no se deben gestionar los casos.   https://imaginex-arlbolivar.segurosbolivar.com/oficina/express/1 \n[19/12/2025]: El sistema se encuentra operativo en producción y ya está siendo probado por el equipo funcional, evidenciando correcta radicación, réplica del caso nativo y asignación de tipologías",
     "unit": "Bolivar",
     "detail": "",
     "visible": true
@@ -2113,7 +2152,7 @@
     "progress": 90,
     "startDate": "14/11/2025",
     "endDate": "18/11/2025",
-    "observations": "[18/11/2025]: El 14 de noviembre se realiza   Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo.\n[19/11/2025]: Ayer 18 de noviembre  se dejo con un entrenamiento y se esta a la espera de resultados de las pruebas.\n[24/11/2025]: El modelo ha mejorado el entendimiento de contexto tras pruebas del viernes. Se incrementa su avance estimado a 80%. A partir de resultados de pruebas nuevas, se corregirán inconsistencias y se completará el entrenamiento.\n[26/11/2025]: El modelo mostró buen comportamiento en las pruebas recientes, pero se detectaron inconsistencias asociadas a los cambios aplicados el viernes 21 de noviembre. Hoy se revisarán las incidencias para determinar si es necesario ejecutar un nuevo ciclo de entrenamiento y ajustar el entendimiento contextual del modelo.\n[03/12/2025]: Se incrementó el avance del entrenamiento al 90%. Se extrajo nueva información desde producción para mejorar los datos de entrenamiento en Test. El modelo está respondiendo mejor, pero está pendiente una validación final dependiendo de la resolución del problema de replicación en Nativo.\n[05/12/2025]:  No se realizaron avances en entrenamiento durante los últimos días, debido a que se priorizó el ambiente de desarrollo. El requerimiento se mantiene pausado hasta que se concluya la estabilización completa del entorno.\n[10/12/2025]: El entrenamiento del modelo no presenta avances recientes debido a que se estaba en etapa de pruebas y aún no se ha recibido feedback de los resultados anteriores. El requerimiento permanece en espera de la retroalimentación funcional.\n[10/12/2025] Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo\n[17/12/2025]: Las incidencias asociadas al entrenamiento ya están identificadas y se consideran de rápida solución;\n[18/12/2025]: Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo.",
+    "observations": "[18/11/2025]: El 14 de noviembre se realiza   Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo.\n[19/11/2025]: Ayer 18 de noviembre  se dejo con un entrenamiento y se esta a la espera de resultados de las pruebas.\n[24/11/2025]: El modelo ha mejorado el entendimiento de contexto tras pruebas del viernes. Se incrementa su avance estimado a 80%. A partir de resultados de pruebas nuevas, se corregirán inconsistencias y se completará el entrenamiento.\n[26/11/2025]: El modelo mostró buen comportamiento en las pruebas recientes, pero se detectaron inconsistencias asociadas a los cambios aplicados el viernes 21 de noviembre. Hoy se revisarán las incidencias para determinar si es necesario ejecutar un nuevo ciclo de entrenamiento y ajustar el entendimiento contextual del modelo.\n[03/12/2025]: Se incrementó el avance del entrenamiento al 90%. Se extrajo nueva información desde producción para mejorar los datos de entrenamiento en Test. El modelo está respondiendo mejor, pero está pendiente una validación final dependiendo de la resolución del problema de replicación en Nativo.\n[05/12/2025]:  No se realizaron avances en entrenamiento durante los últimos días, debido a que se priorizó el ambiente de desarrollo. El requerimiento se mantiene pausado hasta que se concluya la estabilización completa del entorno.\n[10/12/2025]: El entrenamiento del modelo no presenta avances recientes debido a que se estaba en etapa de pruebas y aún no se ha recibido feedback de los resultados anteriores. El requerimiento permanece en espera de la retroalimentación funcional.\n[10/12/2025] Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo\n[17/12/2025]: Las incidencias asociadas al entrenamiento ya están identificadas y se consideran de rápida solución;\n[18/12/2025]: Ajuste de parámetros y pruebas sobre el modelo para mejorar la clasificación y comportamiento antes de su uso definitivo.\n[19/12/2025]: Se identificaron ajustes menores de entrenamiento del modelo, principalmente en la clasificación de solicitudes relacionadas con afiliaciones (nuevas afiliaciones y retiros), los cuales serán corregidos mediante entrenamiento adicional de baja complejidad.",
     "unit": "Bolivar",
     "detail": " Entrenamiento del modelo en el ambiente de pruebas.",
     "visible": true
@@ -2161,11 +2200,11 @@
     "id": "GD772-141_7",
     "title": "OFICINA  EXPRES  ARL -IA Solución de incidentes",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 90,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "18/12/2025",
     "endDate": "",
-    "observations": "[18/12/2025]: Identificación del incidente, aplicación de las correcciones y revisión desde los ambientes(test/prod)",
+    "observations": "[18/12/2025]: Identificación del incidente, aplicación de las correcciones y revisión desde los ambientes(test/prod)\n[19/12/2025]: El 18 de diciembre  se finalizaron y cerraron al 100 % las incidencias reportadas previamente en Oficina Express.",
     "unit": "Bolivar",
     "detail": "Solución de incidentes reportados en Oficina Express.",
     "visible": true
@@ -2187,11 +2226,11 @@
     "id": "INTERNO-D028",
     "title": "Migración y creación de nueva instancia en Snapchat para el ambiente de desarrollo",
     "assigned": "DANILO",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 90,
     "startDate": "31/10/2025",
     "endDate": "",
-    "observations": "[31/10/2025]: Se  reporta  en el  ticket  MDSB-921872 error en el arranque de la estancia de dev , y Se propone crear la instancia de DEV a partir de la de test, aprovechando su estabilidad y evitando reprocesos de instalación.\"\n[04/11/2025]: Informan que no se puede copiar la instancia i-0656b5dc31eab8a8d porque al hacerlo se dañan los paquetes de Python y la instancia no inicia. Se sugiere hacer los ajustes directamente en la instancia imaginen_imaginez_5_dev y solicitar una copia antes de realizar cambios que puedan afectarla.\n[05/11/2025]: Informan que cuando  se tengan lista la instancia con todo instalado, se les informa para crear la Imagen.\n[07/11/2025]: La instancia no se logró levantar por conflictos con ejecuciones de Python. Se debe reinstalar y configurar nuevamente el ambiente, estimado en dos días.\n[24/11/2025]: Instancia entregada y funcional. Pendiente iniciar instalación de paquetes y configuración para que las aplicaciones operen correctamente. Se deja en pausa hasta que se revise y retome.\n[26/11/2025]: La instancia ya está desplegada, pero el proceso está en pausa a la espera de instalar paquetes, configurar dependencias y habilitar la ejecución de scripts.\n[03/12/2025]: Se retomará el orden del ambiente de Desarrollo, para separar adecuadamente los ambientes Desarrollo, Pruebas y Producción, evitando la mezcla actual. El objetivo es reorganizar el flujo de despliegues.\n[05/12/2025]: Se reinstaló desde cero el ambiente de desarrollo, se instalaron librerías necesarias y se clonaron todos los repositorios. Sin embargo, el DNS aún apunta a una instancia anterior, lo que impide visualizar logs externos por CloudFront. Se radicará un ticket para que infraestructura actualice la asociación del DNS. También se organizarán las ramas, ya que DEV está desactualizada y se alineará con TEST según lo acordado.\n[10/12/2025]: El trabajo en el ambiente de desarrollo continúa bloqueado por falta de actualización del DNS. El ticket MDSB-942275 fue radicado desde el viernes 5 de diciembre y aún no ha sido atendido. Una vez se habilite el dominio correcto, se terminará la estabilización del entorno.\n[17/12/2025]: El montaje del ambiente de desarrollo estuvo bloqueado debido a que los dominios apuntaban a un balanceador incorrecto. Inicialmente, infraestructura entregó solo un formato genérico, pero tras un nuevo reporte el problema fue corregido. El ambiente ya permite continuar con la migración y creación, aunque actualmente no se considera prioridad inmediata frente a otros frentes activos. queda en pausa.\n[18/12/2025]: Se avanzó en la preparación del ambiente de desarrollo, actualmente se presenta bloqueo porque los subdominios de Desarrollo continúan apuntando al CloudFront del DNS anterior. El caso está radicado en el ticket MDSB-942275.",
+    "observations": "[31/10/2025]: Se  reporta  en el  ticket  MDSB-921872 error en el arranque de la estancia de dev , y Se propone crear la instancia de DEV a partir de la de test, aprovechando su estabilidad y evitando reprocesos de instalación.\"\n[04/11/2025]: Informan que no se puede copiar la instancia i-0656b5dc31eab8a8d porque al hacerlo se dañan los paquetes de Python y la instancia no inicia. Se sugiere hacer los ajustes directamente en la instancia imaginen_imaginez_5_dev y solicitar una copia antes de realizar cambios que puedan afectarla.\n[05/11/2025]: Informan que cuando  se tengan lista la instancia con todo instalado, se les informa para crear la Imagen.\n[07/11/2025]: La instancia no se logró levantar por conflictos con ejecuciones de Python. Se debe reinstalar y configurar nuevamente el ambiente, estimado en dos días.\n[24/11/2025]: Instancia entregada y funcional. Pendiente iniciar instalación de paquetes y configuración para que las aplicaciones operen correctamente. Se deja en pausa hasta que se revise y retome.\n[26/11/2025]: La instancia ya está desplegada, pero el proceso está en pausa a la espera de instalar paquetes, configurar dependencias y habilitar la ejecución de scripts.\n[03/12/2025]: Se retomará el orden del ambiente de Desarrollo, para separar adecuadamente los ambientes Desarrollo, Pruebas y Producción, evitando la mezcla actual. El objetivo es reorganizar el flujo de despliegues.\n[05/12/2025]: Se reinstaló desde cero el ambiente de desarrollo, se instalaron librerías necesarias y se clonaron todos los repositorios. Sin embargo, el DNS aún apunta a una instancia anterior, lo que impide visualizar logs externos por CloudFront. Se radicará un ticket para que infraestructura actualice la asociación del DNS. También se organizarán las ramas, ya que DEV está desactualizada y se alineará con TEST según lo acordado.\n[10/12/2025]: El trabajo en el ambiente de desarrollo continúa bloqueado por falta de actualización del DNS. El ticket MDSB-942275 fue radicado desde el viernes 5 de diciembre y aún no ha sido atendido. Una vez se habilite el dominio correcto, se terminará la estabilización del entorno.\n[17/12/2025]: El montaje del ambiente de desarrollo estuvo bloqueado debido a que los dominios apuntaban a un balanceador incorrecto. Inicialmente, infraestructura entregó solo un formato genérico, pero tras un nuevo reporte el problema fue corregido. El ambiente ya permite continuar con la migración y creación, aunque actualmente no se considera prioridad inmediata frente a otros frentes activos. queda en pausa.\n[18/12/2025]: Se avanzó en la preparación del ambiente de desarrollo, actualmente se presenta bloqueo porque los subdominios de Desarrollo continúan apuntando al CloudFront del DNS anterior. El caso está radicado en el ticket MDSB-942275.\n[19/12/2025]: El ambiente de desarrollo ya se encuentra creado y funcional. Quedan pendientes ajustes finales menores, los cuales no se han priorizado debido a que el enfoque actual del equipo está en el requerimiento de Incapacidades de Colmena.",
     "unit": "Bolivar",
     "detail": "Descripción:\n\nComo equipo de desarrollo, se requiere reactivar y normalizar el ambiente de desarrollo (Dev), actualmente fuera de servicio por error 503, con el fin de disponer de un entorno funcional, estable y sincronizado con el ambiente de test.\n\nEste ambiente permitirá realizar pruebas internas, validar integraciones y revisar nuevos desarrollos antes de su despliegue en test, evitando depender de la ejecución de controles de cambio para validaciones iniciales.",
     "visible": true
@@ -2666,16 +2705,16 @@
   },
   {
     "id": "INTERNO-JA026",
-    "title": "Problemas intermitentes con 472 (envío de correos)",
+    "title": "Ajuste de Correo Certificado – Manejo de Errores",
     "assigned": "JAIRO",
-    "state": "Pendiente",
+    "state": "En Proceso",
     "progress": 0,
-    "startDate": "",
+    "startDate": "19/12/2025",
     "endDate": "",
-    "observations": "[26/09/2025]: De momento quedara penndiente hasta escarlar propuesta al cliente y apruebe la implementación.",
+    "observations": "",
     "unit": "Bolivar",
-    "detail": "Se identificó que cuando el servicio no está disponible, genera errores. Se debe implementar un manejo de estados de servicio para dejar correos en estado “pendiente de envío” sin bloquear procesos.",
-    "visible": false
+    "detail": "Se requiere ajustar el proceso de envío de correo certificado para controlar adecuadamente los errores que se presentan durante la ejecución. Actualmente, cuando el envío falla, el sistema no retorna una respuesta clara ni deja trazabilidad suficiente, lo que dificulta la identificación del problema y puede generar ejecuciones parciales o inconsistentes. El ajuste busca que, ante cualquier falla, el sistema capture el error, registre la información correspondiente y notifique de forma controlada, sin afectar la continuidad del proceso principal.",
+    "visible": true
   },
   {
     "id": "MDSB-905675",
@@ -2727,7 +2766,7 @@
     "observations": "[01/12/2025]: Tam pronto se realice el paso a producción se le solicitara a  Jairo los script.\n[12/12/2025]: Se solicita docuemntación a Jairo\n[18/12/2025]: Jairo engtrega documentación en .md. se realizara  ajuste de formato y estilos",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "GD772-163_1",
@@ -2740,7 +2779,7 @@
     "observations": "[05/12/2025]: Pendiente solicitar script a jairo  para elaborar la docuemntación.\n[12/12/2025]: Se solicita docuemntación a Jairo\n[17/12/2025]: Jairo engtrega documentación en .md. se realizara  ajuste de formato y estilos",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false
+    "visible": true
   },
   {
     "id": "MDSB-916570",
@@ -2849,6 +2888,19 @@
   {
     "id": "INTERNO-JA029",
     "title": "VALIDACIONES Y LOG EN LOS FLUJOS DE  Yii",
+    "assigned": "JAIRO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "INTERNO-JA033",
+    "title": "Portal Incapacidades Alfa ",
     "assigned": "JAIRO",
     "state": "Pendiente",
     "progress": 0,
@@ -3261,19 +3313,6 @@
     "unit": "Bolivar",
     "detail": "Se requiere adicionar al informe actual una columna que incluya el dato correspondiente al número de radicado.",
     "visible": true
-  },
-  {
-    "id": "GD772-162",
-    "title": "Ajuste servicio de Olimpia - Registraduria  API",
-    "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[22/10/2025]: Se Iniciara  tan pronto finalice el desarrollo del req  GD772-159 (Jira).\n[24/10/2025]: El requerimiento será abordado por Wilson, quien reutilizará estructuras y rutas ya desarrolladas. Se debe crear una nueva tabla para almacenar tokens y marcar los asociados al servicio de Olimpia. Se coordinó con Jairo para brindar contexto técnico durante la implementación.\n[26/11/2025]: Este requerimeinto es reasignado a Jesus .",
-    "unit": "Bolivar",
-    "detail": "Implementar la integración con el servicio externo Olimpia para la validación de identidad ciudadana (registraduría).\nEl sistema deberá recibir, almacenar y gestionar los tokens de autenticación que provee Olimpia, garantizando seguridad y trazabilidad en los procesos de validación.\nSe busca unificar el manejo de tokens utilizados en los diferentes módulos  en una sola tabla centralizada, evitando duplicidad de estructuras\n",
-    "visible": false
   },
   {
     "id": "MDSB-903228",
@@ -3705,6 +3744,19 @@
     "visible": true
   },
   {
+    "id": "INTERNO-D035",
+    "title": "Portal  Libranzas  Alfa",
+    "assigned": "DANILO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false
+  },
+  {
     "id": "GD772-113",
     "title": "Captura información ordenes médicas a través de IA",
     "assigned": "DANILO",
@@ -3721,11 +3773,11 @@
     "id": "INTERNO-D034",
     "title": "Infraestructura - Informe de volumetría para instancia imaginex_ec2_private1",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 50,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "18/12/2025",
     "endDate": "",
-    "observations": "[18/12/2025]:  Levantamiento de métricas (CPU, RAM, disco, I/O, red), análisis y picos, entrega para mejorar los recursos.",
+    "observations": "[18/12/2025]:  Levantamiento de métricas (CPU, RAM, disco, I/O, red), análisis y picos, entrega para mejorar los recursos.\n[19/12/2025]: El reporte de volumetrías fue completamente elaborado y enviado. Se confirma su finalización al 100 % para las instancias correspondientes, sin pendientes asociados.",
     "unit": "Bolivar",
     "detail": "El motivo del siguiente correo es solicitar su apoyo con las volumetrías que nos permitan elegir de manera correcta los recursos para la instancia imaginex_ec2_private1 (i-09c4f03e8ed0749c6). Por favor compartir los siguientes datos últimos 12 meses y proyección:\n1. Volumen de carga\n•\tNúmero de archivos por mes, por día y pico por hora.\n•\tEstacionalidad (meses con picos) y crecimiento mensual esperado.\n2. Tamaño y tipo de archivos\n•\tTamaño promedio y los más pesados(MB).\n•\tTipos más frecuentes (PDF, imágenes, ZIP).\n3. Procesamiento actual\n•\tTiempo promedio por archivo (validaciones, conversiones).\n•\tNúmero de procesos simultáneos en picos.\n4. Métricas técnicas\n•\tUso promedio y pico de CPU y memoria durante cargas altas.\n•\tLongitud promedio de la cola / retrabajos si aplica.\n5. Proyección a 3 años\n•\tCrecimiento orgánico esperado y multiplicadores por temporada (Por ejemplo diciembre temporada alta).\n",
     "visible": true
