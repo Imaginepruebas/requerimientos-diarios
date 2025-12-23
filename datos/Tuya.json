@@ -817,5 +817,18 @@
     "unit": "Tuya",
     "detail": "Se realiza reunión las personas del proceso, se revisan como es el proceso de PCO y la información que se enctrega al consultar una solicitud",
     "visible": true
+  },
+  {
+    "id": "323",
+    "title": "Solicitud soportes y bases de morosos a corte 20 diciembre",
+    "assigned": "Faver y \nNatalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "22/12/2025",
+    "endDate": "23/12/2025",
+    "observations": "Se realiza envio de informe a usuario con información ",
+    "unit": "Tuya",
+    "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
+    "visible": true
   }
 ]
