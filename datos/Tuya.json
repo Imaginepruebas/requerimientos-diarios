@@ -830,5 +830,31 @@
     "unit": "Tuya",
     "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
     "visible": true
+  },
+  {
+    "id": "324",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Natalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "26/12/2025",
+    "endDate": "26/12/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "325",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Natalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "29/12/2025",
+    "endDate": "29/12/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true
   }
 ]
