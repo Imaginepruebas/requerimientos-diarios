@@ -442,30 +442,30 @@
     "visible": true
   },
   {
-    "id": "",
-    "title": "",
+    "id": "COLP25-0034",
+    "title": "Cargue de Festivos 2026",
     "assigned": "Faver Lopez",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "31/12/2025",
+    "endDate": "31/12/2025",
+    "observations": "[31/12/2025]: Se crean las query y se realiza el cargue en las tablas de las diferentes base de datos de Imagine",
     "unit": "Colpatria",
-    "detail": "",
-    "visible": false
+    "detail": "Se requiere agregar los festivos en las bases de datos para el año 2026",
+    "visible": true
   },
   {
-    "id": "",
-    "title": "",
+    "id": "COLP25-0035",
+    "title": "Crear un Informe para radicador masivos",
     "assigned": "Faver Lopez",
-    "state": "",
+    "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
     "observations": "",
     "unit": "Colpatria",
-    "detail": "",
-    "visible": false
+    "detail": "Se solicito en la reunion de seguimiento mensual con el cliente que se agregue un informe para descargar el detalle de los radicados masivos.",
+    "visible": true
   },
   {
     "id": "",
