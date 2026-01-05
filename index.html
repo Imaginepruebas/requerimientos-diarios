@@ -216,6 +216,9 @@
     <h3 class="text-center text-white mb-4">Informe Requerimientos Imagine</h3>
     <a href="#resumen"><i class="fas fa-chart-pie me-2"></i>Resumen Ejecutivo</a>
     <a href="#tareas"><i class="fas fa-tasks me-2"></i>Tareas</a>
+    <a href="#lastUpdateByUnitContainer">
+  <i class="fas fa-clock me-2"></i>Última actualización por Unidad
+</a>
     <a href="#estadisticas"><i class="fas fa-chart-bar me-2"></i>Estadísticas</a>
     <a href="#graficos"><i class="fas fa-chart-line me-2"></i>Gráficos</a>
     <!-- <a href="#recomendaciones"><i class="fas fa-lightbulb me-2"></i>Recomendaciones</a> -->
@@ -310,6 +313,15 @@
         </div>
       </div>
     </div>
+    
+    <div id="lastUpdateByUnit" class="card mt-3">
+  <div class="card-header">
+    <h2>Última actualización por Unidad</h2>
+  </div>
+  <div class="card-body">
+    <div id="lastUpdateByUnitContainer"></div>
+  </div>
+</div>
 
     <div id="estadisticas" class="card">
       <div class="card-header">
@@ -444,7 +456,13 @@
   const [day, month, year] = dateStr.split('/');
   if (!day || !month || !year) return null;
 
-  return new Date(`${year}-${month}-${day}`);
+ // ⚠️ Forzar fecha en horario local (evita desfase UTC)
+  return new Date(
+    Number(year),
+    Number(month) - 1,
+    Number(day),
+    12, 0, 0
+  );
 }
 
     // Función para obtener el estado de la fecha de fin
@@ -626,8 +644,7 @@
       for (const assigned in assignedCount) {
         assignedHtml += `<li><strong>${assigned}:</strong> ${assignedCount[assigned]}</li>`;
       }
-      assignedHtml += '</ul>';
-      estadisticasContent.innerHTML = statesHtml + assignedHtml + '<hr><div id="lastUpdateByUnitContainer"></div>';
+      assignedHtml += '</ul>';      estadisticasContent.innerHTML = statesHtml + assignedHtml + '<hr><div id="lastUpdateByUnitContainer"></div>';
     }
 
     // --------------------------------------------------
@@ -661,10 +678,28 @@
         const candidates = [];
         if (task.startDate) candidates.push(task.startDate);
         if (task.endDate) candidates.push(task.endDate);
-        if (task.observations) {
-          const obsDates = extractDatesFromText(task.observations);
-          candidates.push(...obsDates);
-        }
+        let lastObservationText = null;
+let lastObservationDate = null;
+
+if (task.observations && typeof task.observations === 'string') {
+  const regex = /\[(\d{1,2}\/\d{1,2}\/\d{4})\]([\s\S]*?)(?=\[\d{1,2}\/\d{1,2}\/\d{4}\]|$)/g;
+  let match;
+
+  while ((match = regex.exec(task.observations)) !== null) {
+    const dateStr = match[1];
+    const text = match[2].trim();
+
+    const parsedDate = parseDate(dateStr);
+    if (!parsedDate) continue;
+
+    candidates.push(dateStr);
+
+    if (!lastObservationDate || parsedDate > lastObservationDate) {
+      lastObservationDate = parsedDate;
+      lastObservationText = text;
+    }
+  }
+}
 
         // Parsear y mantener fechas válidas
         const parsed = candidates
@@ -676,9 +711,9 @@
         const maxDate = parsed.reduce((a, b) => (a > b ? a : b));
 
         if (!byUnit[unit] || byUnit[unit].date < maxDate) {
-          byUnit[unit] = { date: maxDate, tasks: [{ id: task.id, title: task.title, state: task.state, progress: task.progress }] };
+          byUnit[unit] = { date: maxDate, tasks: [{ id: task.id, title: task.title, state: task.state, progress: task.progress, lastObservation: lastObservationText }] };
         } else if (byUnit[unit].date.getTime() === maxDate.getTime()) {
-          byUnit[unit].tasks.push({ id: task.id, title: task.title, state: task.state, progress: task.progress });
+          byUnit[unit].tasks.push({ id: task.id, title: task.title, state: task.state, progress: task.progress, lastObservation: lastObservationText });
         }
       });
 
@@ -687,22 +722,92 @@
         const info = byUnit[unit];
         const date = info.date;
         const dateStr = date ? `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}` : '-';
-        const tasksHtml = info.tasks.map(t => `<div><strong>${t.id}</strong> - ${t.title} (${t.state}, ${t.progress}%)</div>`).join('');
-        return `<tr><td>${unit}</td><td>${dateStr}</td><td>${tasksHtml}</td></tr>`;
-      }).join('');
+        const MAX_LEN = 120;
+ // 1️⃣ PRIMER BLOQUE
+  const rowsByTask = info.tasks.map(t => {
+  const safeId = t.id.replace(/[^a-zA-Z0-9_-]/g, '');
+  const hasObs = !!t.lastObservation;
 
+  const fullText = hasObs ? t.lastObservation.trim() : '';
+  const isLong = fullText.length > MAX_LEN;
+  const shortText = isLong ? fullText.slice(0, MAX_LEN) + '...' : fullText;
+
+  return `
+    <tr>
+      <td style="vertical-align:top; padding:4px 6px;">
+        <strong>${t.id}</strong> - ${t.title}
+        (${t.state}, ${t.progress}%)
+      </td>
+      <td style="vertical-align:top; padding:4px 6px; word-wrap:break-word; white-space:normal;">
+        ${hasObs
+          ? `
+            <span id="obs-short-${safeId}">${shortText}</span>
+            <span id="obs-full-${safeId}" style="display:none;">${fullText}</span>
+            ${isLong
+              ? `<a href="#"
+                   data-id="${safeId}"
+                   class="toggle-obs"
+                   style="margin-left:6px; font-size:0.85em;">
+                   ver más
+                 </a>`
+              : ''}
+          `
+          : '-'}
+      </td>
+    </tr>
+  `;
+}).join('');
+
+
+  // 3️⃣ RETORNO FINAL
+ return `
+  <tr>
+    <td style="vertical-align:top;">${unit}</td>
+    <td style="vertical-align:top;">${dateStr}</td>
+    <td colspan="2" style="vertical-align:top;">
+      <table style="width:100%; border-collapse:collapse; text-align:left; table-layout:fixed;">
+        ${rowsByTask}
+      </table>
+    </td>
+  </tr>
+`;
+
+}).join('');
       const html = `
-        <h5>Última actualización por Unidad:</h5>
         <button id="export-last-update" class="btn btn-sm btn-secondary mb-2">Exportar CSV</button>
         <div class="table-responsive">
-          <table class="table table-sm">
-            <thead><tr><th>Unidad</th><th>Última Fecha</th><th>Tareas (ID - Título - Estado - %)</th></tr></thead>
+          <table class="table table-sm" style="table-layout:fixed; width:100%;">
+           <thead>
+             <tr>
+             <th style="width:05%;">Unidad</th>
+             <th style="width:10%;">Última Actualización</th>
+             <th style="width:30%;">Tareas (ID - Título - Estado - %)</th>
+             <th style="width:40%; text-align:center;">Última observación</th>
+            </tr>
+            </thead>
             <tbody>${rows}</tbody>
           </table>
         </div>
       `;
 
       container.innerHTML = html;
+      container.querySelectorAll('.toggle-obs').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const id = link.dataset.id;
+    const shortEl = document.getElementById(`obs-short-${id}`);
+    const fullEl = document.getElementById(`obs-full-${id}`);
+
+    if (!shortEl || !fullEl) return;
+
+    const expanded = fullEl.style.display === 'inline';
+    fullEl.style.display = expanded ? 'none' : 'inline';
+    shortEl.style.display = expanded ? 'inline' : 'none';
+    link.textContent = expanded ? 'ver más' : 'ver menos';
+  });
+});
+
 
       // Añadir evento para exportar CSV
       document.getElementById('export-last-update').addEventListener('click', () => {
@@ -713,21 +818,54 @@
 
     // Exportar CSV
     function exportLastUpdateCSV(data) {
-      const lines = ['Unidad,Última Fecha,Tareas'];
-      data.forEach(row => {
-        const d = row.date;
-        const dateStr = d ? `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}` : '';
-        const tasksStr = row.tasks.map(t => `${t.id} - ${t.title} (${t.state} ${t.progress}%)`).join(' | ').replace(/"/g, '""');
-        lines.push(`"${row.unit}","${dateStr}","${tasksStr}"`);
-      });
-      const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = `Ultima_Actualizacion_Por_Unidad_${formattedDate}.csv`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+  const SEP = ','; // separador CSV
+  const lines = [
+    `Unidad${SEP}Última Actualización${SEP}Requerimiento${SEP}Estado${SEP}Progreso${SEP}Última observación`
+  ];
+
+  data.forEach(row => {
+    const d = row.date;
+    const dateStr = d
+      ? `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`
+      : '';
+
+    row.tasks.forEach(t => {
+      const obs = (t.lastObservation || '')
+  .replace(/(\r\n|\n|\r)/g, ' ')   // elimina TODOS los saltos de línea
+  .replace(/\s+/g, ' ')           // colapsa espacios múltiples
+  .replace(/"/g, '""')            // escapa comillas
+  .trim();
+
+      const title = (t.title || '')
+  .replace(/(\r\n|\n|\r)/g, ' ')
+  .replace(/\s+/g, ' ')
+  .replace(/"/g, '""')
+  .trim();
+
+      const state = (t.state || '').replace(/"/g, '""');
+
+      lines.push(
+        `"${row.unit}"${SEP}` +
+        `"${dateStr}"${SEP}` +
+        `"${t.id} - ${title}"${SEP}` +
+        `"${state}"${SEP}` +
+        `"${t.progress}%"${SEP}` +
+        `"${obs}"`
+      );
+    });
+  });
+
+  // BOM UTF-8 para Excel
+  const csvContent = '\uFEFF' + lines.join('\n');
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `Ultima_Actualizacion_Por_Unidad_${formattedDate}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
     // Normaliza estados: quita acentos, pone minúsculas, colapsa espacios
 function normalizarEstado(estado) {
@@ -1163,12 +1301,15 @@ function loadObservations() {
     .then(response => response.json())
     .then(data => {
       const contenedor = document.getElementById('saved-observations');
-
-      if (!data || data.length === 0) {
-        contenedor.innerHTML = '<p class="no-results">Aún no hay observaciones registradas.</p>';
-        return;
-      }
-
+// ⛔ CONTENEDOR NO EXISTE → salir sin error
+  if (!contenedor) {
+    console.warn('saved-observations no existe en el DOM, se omite carga.');
+    return;
+  }
+ if (!data || data.length === 0) {
+    contenedor.innerHTML = '<p class="no-results">Aún no hay observaciones registradas.</p>';
+    return;
+  }
       contenedor.innerHTML = '';
       data.reverse().forEach(obs => {
         const texto = obs["Escribe tu observación"] || "";
