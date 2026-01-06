@@ -895,5 +895,44 @@
     "unit": "Tuya",
     "detail": "Solicitan ayuda a Imagine para revisar el estado del servicio de backups de un servidor de contingencia",
     "visible": true
+  },
+  {
+    "id": "329",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Natalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/01/2025",
+    "endDate": "05/01/2025",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "330",
+    "title": "Soporte Imagine",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/01/2026",
+    "endDate": "12/01/2026",
+    "observations": "[05/01/2026]: Se realizan las validaciones sobre las solicitudes reprotadas, se hace un analisis de los los y se brinda la información sobre el proceso para las imagenes eliminadas y como funciona la revisión de los logs.",
+    "unit": "Tuya",
+    "detail": "Solicitaron revision de reporte de imagenes eliminadas ya que no encuentran las imagenes",
+    "visible": true
+  },
+  {
+    "id": "331",
+    "title": "Ajuste Log API Imagine",
+    "assigned": "Faver",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Tuya",
+    "detail": "Se recibe requerimiento en el cual se solicita ajustar los logs del API de Imagine para que guarde el body que se esta enviando en las peticiones que fallan al entregar documentos al servicio del cliente",
+    "visible": true
   }
 ]

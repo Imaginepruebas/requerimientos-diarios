@@ -117,7 +117,7 @@
     "visible": false
   },
   {
-    "id": "",
+    "id": "MEJORA_1",
     "title": "causales devolucion zehux",
     "assigned": "Brayan Diaz",
     "state": "Finalizado",
@@ -130,20 +130,20 @@
     "visible": true
   },
   {
-    "id": "",
+    "id": "MEJORA_2",
     "title": "modulo punteo",
     "assigned": "Brayan Diaz",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "se requiere reunion para aclaracion del requerimiento",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "27/12/2025",
+    "endDate": "29/12/2025",
+    "observations": "se requiere reunion para aclaracion del requerimiento\n[29/12/2025] se entrega implementado en produccion ",
     "unit": "Colmena",
     "detail": "Hacer un modulo de punteo de los PTC y EHB",
-    "visible": false
+    "visible": true
   },
   {
-    "id": "",
+    "id": "MEJORA_3",
     "title": "Automatizacion de SAT independientes",
     "assigned": "Brayan Diaz",
     "state": "Pausado",
@@ -153,6 +153,58 @@
     "observations": "20251218, se requiere permisos para conmexion a las urls de consumo del api, se valida con\n tecnologia de colmena, aun no dan el permiso solicitado, por lo tanto se mantiene en espera ",
     "unit": "Colmena",
     "detail": "Automatizacion de SAT independientes",
+    "visible": true
+  },
+  {
+    "id": "MEJORA_4",
+    "title": "mejoras Enfermedad Laboral",
+    "assigned": "Brayan Diaz",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "23/12/2025",
+    "endDate": "05/01/2026",
+    "observations": "20260105 se realiza paso a produccion\n20260106 se realizan ajustes por errores presentados en el paso a produccion ",
+    "unit": "Colmena",
+    "detail": "mejorar las vistas de gestion del modulo de enfermedad laboral",
+    "visible": true
+  },
+  {
+    "id": "MEJORA_5",
+    "title": "opcion modificar radicados zehux",
+    "assigned": "Brayan Diaz",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "29/12/2025",
+    "endDate": "02/01/2026",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "MEJORA_6",
+    "title": "validacion error separacion imagenes",
+    "assigned": "Brayan Diaz",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "29/12/2025",
+    "endDate": "05/01/2026",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "",
+    "visible": true
+  },
+  {
+    "id": "MEJORA_7",
+    "title": "actualizacion cargue masivo listados ",
+    "assigned": "Brayan Diaz",
+    "state": "Pruebas Imagine",
+    "progress": 95,
+    "startDate": "29/12/2025",
+    "endDate": "06/01/2026",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "",
     "visible": true
   }
 ]

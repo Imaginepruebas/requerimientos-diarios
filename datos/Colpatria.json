@@ -468,17 +468,17 @@
     "visible": true
   },
   {
-    "id": "",
-    "title": "",
+    "id": "COLP26-0001",
+    "title": "Revisionde Modulo Sarlaft",
     "assigned": "Faver Lopez",
-    "state": "",
+    "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
     "observations": "",
     "unit": "Colpatria",
-    "detail": "",
-    "visible": false
+    "detail": "Se esta evidenciando que al momento de cambiar de estado los registros de sarlaft estos pierden referencia al archivo con la información de la composición accionaria",
+    "visible": true
   },
   {
     "id": "",
