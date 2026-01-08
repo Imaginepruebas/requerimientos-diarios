@@ -661,5 +661,18 @@
     "unit": "Colmedica",
     "detail": "Crear página que realice el consumo para poder traernos las imágenes de PBS, y evitar que Colmédica las deje de manera manual en un repositorio",
     "visible": true
+  },
+  {
+    "id": "OPT_21",
+    "title": "Comercial - Modulo de Normalización",
+    "assigned": "JENNIFER",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes",
+    "unit": "Colmedica",
+    "detail": "Mejoras al módulo para agilizar la auditoria y revisión de inconsistencias por parte de las Gestoras, ver inforción importante, eliminar datos innecesarios, mejorar ventana para visualización de información",
+    "visible": true
   }
 ]

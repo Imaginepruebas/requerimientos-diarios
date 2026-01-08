@@ -390,7 +390,7 @@
     "visible": true
   },
   {
-    "id": "COLP25-0030",
+    "id": "COLP25-0036",
     "title": "Mitigación de Vulnerabilidades",
     "assigned": "Faver Lopez",
     "state": "Finalizado",
@@ -458,8 +458,8 @@
     "id": "COLP25-0035",
     "title": "Crear un Informe para radicador masivos",
     "assigned": "Faver Lopez",
-    "state": "Pendiente",
-    "progress": 0,
+    "state": "En Proceso",
+    "progress": 60,
     "startDate": "",
     "endDate": "",
     "observations": "",
@@ -481,16 +481,16 @@
     "visible": true
   },
   {
-    "id": "",
-    "title": "",
+    "id": "COLP26-0002",
+    "title": "Ajuste Devoluciones Radicador",
     "assigned": "Faver Lopez",
-    "state": "",
+    "state": "Pendiente",
     "progress": 0,
     "startDate": "",
     "endDate": "",
     "observations": "",
     "unit": "Colpatria",
-    "detail": "",
-    "visible": false
+    "detail": "Solicitan modificar el proceso de notificacion de devoluciones de radicados, se requiere que estas devoluciones se realicen directamente al usuario radicador",
+    "visible": true
   }
 ]
