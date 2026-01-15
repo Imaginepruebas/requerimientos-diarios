@@ -706,12 +706,25 @@
     "title": "Creacion de servicio para la captura y trabajo dentro de la plataforma de bonos",
     "assigned": "Alejandro",
     "state": "En Proceso",
-    "progress": 75,
+    "progress": 90,
     "startDate": "30/12/2025",
     "endDate": "",
     "observations": "[05/01/2026] Se crea servicio que se comunica con la extracción de filente y que además captura el inicio de sesión de la plataforma para empezar a trabajar automatizadamente con esta ",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
+    "visible": true
+  },
+  {
+    "id": "REQ-16",
+    "title": "Identificación de documentos y modificación de necesidad",
+    "assigned": "Alejandro",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "06/01/2026",
+    "endDate": "07/01/2026",
+    "observations": "[07/01/2026] Se termina la identificación y se modifica el proceso",
+    "unit": "Proteccion",
+    "detail": "Modificación de documentos abligatorios para cesantías",
     "visible": true
   }
 ]

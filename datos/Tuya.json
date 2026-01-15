@@ -934,5 +934,31 @@
     "unit": "Tuya",
     "detail": "Se recibe requerimiento en el cual se solicita ajustar los logs del API de Imagine para que guarde el body que se esta enviando en las peticiones que fallan al entregar documentos al servicio del cliente",
     "visible": true
+  },
+  {
+    "id": "332",
+    "title": "Soporte Usuario",
+    "assigned": "Natalia",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "09/01/2025",
+    "endDate": "09/01/2025",
+    "observations": "Se realiza reunion con usuario para validación de caso presentado en aplicativo, se da solucion",
+    "unit": "Tuya",
+    "detail": "Reunion con Usuario",
+    "visible": true
+  },
+  {
+    "id": "333",
+    "title": "Solicitud Reporte de Existencia Guia Financiera",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "09/01/2026",
+    "endDate": "09/01/2026",
+    "observations": "[09/01/2026]: Se genera el reporte con la información y se envia al usuario.",
+    "unit": "Tuya",
+    "detail": "Se solicita un reprote de existencias de guias financieras para temas de cobranza",
+    "visible": true
   }
 ]

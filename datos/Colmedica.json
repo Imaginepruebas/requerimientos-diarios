@@ -674,5 +674,70 @@
     "unit": "Colmedica",
     "detail": "Mejoras al módulo para agilizar la auditoria y revisión de inconsistencias por parte de las Gestoras, ver inforción importante, eliminar datos innecesarios, mejorar ventana para visualización de información",
     "visible": true
+  },
+  {
+    "id": "OPT_22",
+    "title": "Afiliaciones Pre - Validación 7 campos",
+    "assigned": "JENNIFER",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "13/01/2026",
+    "endDate": "",
+    "observations": "[13/01/2026] en la opción de selección de lote que llena la tabla con la info del lote a validar con las identificaciones de titular y beneficiarios, se adiciona query para traer datos de la base de afiliados pre.",
+    "unit": "Colmedica",
+    "detail": "En la validación de los 7 campos importantes que se toman del soporte de identificación, si ya existe en la base de afiliados se completará la información con dicha data para que en la operación no la capturen pero si la validen",
+    "visible": true
+  },
+  {
+    "id": "OPT_23",
+    "title": "Afiliaciones Pos - Validación 7 campos",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "14/01/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "En la validación de los 7 campos importantes que se toman del soporte de identificación, si ya existe en la base de afiliados se completará la información con dicha data para que en la operación no la capturen pero si la validen",
+    "visible": true
+  },
+  {
+    "id": "",
+    "title": "",
+    "assigned": "",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "",
+    "title": "",
+    "assigned": "",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "",
+    "visible": false
+  },
+  {
+    "id": "",
+    "title": "",
+    "assigned": "",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "",
+    "visible": false
   }
 ]

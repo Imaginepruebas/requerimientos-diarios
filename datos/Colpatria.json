@@ -433,7 +433,7 @@
     "title": "AUTOMATIZACIONES IMAGINE - Generar Planos Novedades Masivas",
     "assigned": "Faver Lopez",
     "state": "En Test",
-    "progress": 90,
+    "progress": 100,
     "startDate": "01/11/2025",
     "endDate": "",
     "observations": "[18/12/2025]: Se creo el proceso para lotear, guardar y generar planos de las novedades masivas",
@@ -458,11 +458,11 @@
     "id": "COLP25-0035",
     "title": "Crear un Informe para radicador masivos",
     "assigned": "Faver Lopez",
-    "state": "En Proceso",
-    "progress": 60,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "En Test",
+    "progress": 100,
+    "startDate": "05/01/2026",
+    "endDate": "09/01/2026",
+    "observations": "[31/12/2025]: Se pase el desarrollo al mabiente de QA para pruebas correspondientes",
     "unit": "Colpatria",
     "detail": "Se solicito en la reunion de seguimiento mensual con el cliente que se agregue un informe para descargar el detalle de los radicados masivos.",
     "visible": true
@@ -491,6 +491,19 @@
     "observations": "",
     "unit": "Colpatria",
     "detail": "Solicitan modificar el proceso de notificacion de devoluciones de radicados, se requiere que estas devoluciones se realicen directamente al usuario radicador",
+    "visible": true
+  },
+  {
+    "id": "COLP26-0003",
+    "title": "Ajuste Reporte General 2",
+    "assigned": "Faver Lopez",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colpatria",
+    "detail": "Solicitan revisión y ajuste del reporte general 2 ya que este no esta siendo consistente en los datos, lo que dificulta interpretar el estado de los radicados.",
     "visible": true
   }
 ]
