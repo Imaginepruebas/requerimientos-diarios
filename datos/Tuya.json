@@ -958,7 +958,46 @@
     "endDate": "09/01/2026",
     "observations": "[09/01/2026]: Se genera el reporte con la información y se envia al usuario.",
     "unit": "Tuya",
-    "detail": "Se solicita un reprote de existencias de guias financieras para temas de cobranza",
+    "detail": "Se solicita un reporte de existencias de guias financieras para temas de cobranza",
+    "visible": true
+  },
+  {
+    "id": "334",
+    "title": "Solicitud Reporte de Existencia Guia Financiera",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "15/01/2026",
+    "endDate": "15/01/2026",
+    "observations": "[15/01/2026]: Se genera el reporte con la información y se envia al usuario.",
+    "unit": "Tuya",
+    "detail": "Se solicita un reporte de existencias de guias financieras",
+    "visible": true
+  },
+  {
+    "id": "335",
+    "title": "Solicitud Reporte de Existencia Guia Financiera ",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "15/01/2026",
+    "endDate": "15/01/2026",
+    "observations": "[15/01/2026]: Se genera el reporte con la información y se envia al usuario.",
+    "unit": "Tuya",
+    "detail": "Se solicita un reporte de existencias de guias financieras, para analisis",
+    "visible": true
+  },
+  {
+    "id": "336",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "13/01/2026",
+    "endDate": "13/01/2026",
+    "observations": "[13/01/2026]: Se validan casos y se genera respuesta",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
     "visible": true
   }
 ]

@@ -469,7 +469,7 @@
   },
   {
     "id": "COLP26-0001",
-    "title": "Revisionde Modulo Sarlaft",
+    "title": "Revisión Modulo Sarlaft",
     "assigned": "Faver Lopez",
     "state": "Pendiente",
     "progress": 0,
@@ -505,5 +505,31 @@
     "unit": "Colpatria",
     "detail": "Solicitan revisión y ajuste del reporte general 2 ya que este no esta siendo consistente en los datos, lo que dificulta interpretar el estado de los radicados.",
     "visible": true
+  },
+  {
+    "id": "COLP26-0004",
+    "title": "Nuevo Estado Radicación Masivos",
+    "assigned": "Faver Lopez",
+    "state": "En Test",
+    "progress": 100,
+    "startDate": "13/01/2026",
+    "endDate": "15/01/2026",
+    "observations": "[15/01/2026]: Se agrega nuevo estado de anulado",
+    "unit": "Colpatria",
+    "detail": "Se requiere poder anular radicados masivos en estado de devolución",
+    "visible": true
+  },
+  {
+    "id": "COLP26-0005",
+    "title": "Migrar a Nextjs 16",
+    "assigned": "Faver Lopez",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colpatria",
+    "detail": "Realizar migración del framework a la version 16",
+    "visible": false
   }
 ]

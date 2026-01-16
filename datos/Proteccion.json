@@ -693,7 +693,7 @@
     "title": "Creación de la base del proyecto para la extrrasión de datos de filenet",
     "assigned": "Alejandro",
     "state": "En Test",
-    "progress": 80,
+    "progress": 90,
     "startDate": "19/12/2025",
     "endDate": "29/12/2025",
     "observations": "[29/12/2025] Se habia aplazado en muchos momentos durante diciembre y debido a permisos en la bandeja se dificultó el acceso",
@@ -705,11 +705,11 @@
     "id": "Interno-H16-3",
     "title": "Creacion de servicio para la captura y trabajo dentro de la plataforma de bonos",
     "assigned": "Alejandro",
-    "state": "En Proceso",
+    "state": "En Test",
     "progress": 90,
     "startDate": "30/12/2025",
-    "endDate": "",
-    "observations": "[05/01/2026] Se crea servicio que se comunica con la extracción de filente y que además captura el inicio de sesión de la plataforma para empezar a trabajar automatizadamente con esta ",
+    "endDate": "13/01/2026",
+    "observations": "[05/01/2026] Se crea servicio que se comunica con la extracción de filente y que además captura el inicio de sesión de la plataforma para empezar a trabajar automatizadamente con esta \n[13/01/2026] se completa el servicio, se se divide la lógica en tareas ejecutables y se desarrolla la persistencia ",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true
@@ -725,6 +725,32 @@
     "observations": "[07/01/2026] Se termina la identificación y se modifica el proceso",
     "unit": "Proteccion",
     "detail": "Modificación de documentos abligatorios para cesantías",
+    "visible": true
+  },
+  {
+    "id": "Interno-H16-4",
+    "title": "Creacion de servicio place holder con agentes para la identificación de información capturada y análisis OCR",
+    "assigned": "Alejandro",
+    "state": "En Proceso",
+    "progress": 10,
+    "startDate": "14/01/2026",
+    "endDate": "",
+    "observations": "[14/01/2026] Se crea lógica de persistencia para activar servicio ",
+    "unit": "Proteccion",
+    "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
+    "visible": true
+  },
+  {
+    "id": "REQ-17",
+    "title": "Radicados con fallos en la trazabilidad se deben analizar y de corregir",
+    "assigned": "Alejandro",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "14/01/2026",
+    "endDate": "14/01/2026",
+    "observations": "[14/01/2026] Se analiza y se corrige la trazabilidad para mas de 100 radicados con situación de falla",
+    "unit": "Proteccion",
+    "detail": "Modificación de trazabilidad radicados prestaciones",
     "visible": true
   }
 ]
