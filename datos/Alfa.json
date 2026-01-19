@@ -1499,10 +1499,10 @@
     "title": "Modulo Honorarios Jurídicos - Ajuste",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 70,
+    "progress": 80,
     "startDate": "10/12/2025",
     "endDate": "",
-    "observations": "[16/12/2025]: Se completaron los siguientes requerimientos:\n\n        Parámetro de factura: Creación del campo para observaciones (solo modificable en periodo vigente). (100%)\n\n        Plantilla SIPREN: Ajuste de formato (sin títulos, formatos de campo ni totales). (100%)\n\n        Plantilla PLUS: Ajuste de formato (sin formatos de campo ni totales). (100%)\n\n        Formato CSV: Configuración de salida SIPREN con separador \";\" (punto y coma). (100%)\n\n        Informe Tesorería: Se eliminó la validación del número de giro para permitir la gestión total de la información. (100%)\n\n        Investigaciones: Análisis de viabilidad para control de cambios o Fase II. (PENDIENTE)\n\n        Notificación de Cierre: Ajuste de la plantilla de correo (aplicativo, cantidad y valor). \n\n[18/12/2025]: Se llevó a cabo una sesión con el cliente para realizar la revisión y validación de los ajustes desarrollados en el módulo de Honorarios Jurídicos.",
+    "observations": "[16/12/2025]: Se completaron los siguientes requerimientos:\n\n        Parámetro de factura: Creación del campo para observaciones (solo modificable en periodo vigente). (100%)\n\n        Plantilla SIPREN: Ajuste de formato (sin títulos, formatos de campo ni totales). (100%)\n\n        Plantilla PLUS: Ajuste de formato (sin formatos de campo ni totales). (100%)\n\n        Formato CSV: Configuración de salida SIPREN con separador \";\" (punto y coma). (100%)\n\n        Informe Tesorería: Se eliminó la validación del número de giro para permitir la gestión total de la información. (100%)\n\n        Investigaciones: Análisis de viabilidad para control de cambios o Fase II. (PENDIENTE)\n\n        Notificación de Cierre: Ajuste de la plantilla de correo (aplicativo, cantidad y valor). \n\n[18/12/2025]: Se llevó a cabo una sesión con el cliente para realizar la revisión y validación de los ajustes desarrollados en el módulo de Honorarios Jurídicos.\n\n[19/01/2026]: Se realizó exitosamente el despliegue del módulo en el ambiente de producción. Actualmente, se está a la espera de que el cliente envíe el archivo consolidado con la información histórica hasta el cierre del año 2025",
     "unit": "Alfa",
     "detail": "Validar de pagos y formatos",
     "visible": true
@@ -1531,6 +1531,32 @@
     "observations": "[18/12/2025]: Notificaciones: Se ajustó el envío masivo para que opere exclusivamente en días hábiles (lunes a viernes).\n\n        Exportación: Se corrigió el generador de archivos (export); el despliegue a producción queda pendiente.\n\n        Inventario: Se inició la validación de casos duplicados asociados al mismo siniestro.\n",
     "unit": "Alfa",
     "detail": "Validar incidencias reportadas para el módulo de Devoluciones y Objeciones",
+    "visible": true
+  },
+  {
+    "id": "PRV_2025_041",
+    "title": "Cálculo de Intereses",
+    "assigned": "MAURICIO",
+    "state": "En Proceso",
+    "progress": 40,
+    "startDate": "13/01/2026",
+    "endDate": "",
+    "observations": "[13/01/2026] - [19/01/2026]: Se está trabajando en el desarrollo de un nuevo requerimiento que permite la carga masiva de información desde archivos Excel para procesar y ejecutar los cálculos de valor de mesada correspondientes a cada periodo.",
+    "unit": "Alfa",
+    "detail": "Se requiere opciòn para cargue de archivos excel",
+    "visible": true
+  },
+  {
+    "id": "Img_2025_031",
+    "title": "Transferencia de Aportes",
+    "assigned": "MAURICIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "19/01/2026",
+    "endDate": "19/01/2026",
+    "observations": "[19/01/2026]: Se completó el despliegue del módulo en el ambiente de pruebas. El proceso queda pendiente únicamente de la ejecución y validación de las pruebas por parte de los interesados.",
+    "unit": "Alfa",
+    "detail": "Subir al ambiente de pruebas el desarrollo",
     "visible": true
   }
 ]

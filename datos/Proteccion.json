@@ -731,11 +731,11 @@
     "id": "Interno-H16-4",
     "title": "Creacion de servicio place holder con agentes para la identificación de información capturada y análisis OCR",
     "assigned": "Alejandro",
-    "state": "En Proceso",
-    "progress": 10,
+    "state": "En Test",
+    "progress": 100,
     "startDate": "14/01/2026",
-    "endDate": "",
-    "observations": "[14/01/2026] Se crea lógica de persistencia para activar servicio ",
+    "endDate": "16/01/2026",
+    "observations": "[14/01/2026] Se crea lógica de persistencia para activar servicio\n[16/01/2026] Se completa la llógica del servicio, se construye la base y se da respuesta constante para luego poder realizar implementación",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true
@@ -751,6 +751,19 @@
     "observations": "[14/01/2026] Se analiza y se corrige la trazabilidad para mas de 100 radicados con situación de falla",
     "unit": "Proteccion",
     "detail": "Modificación de trazabilidad radicados prestaciones",
+    "visible": true
+  },
+  {
+    "id": "Interno-H16-5",
+    "title": "Construcción y conexiónd del Front con la lógica generada hasta el momento",
+    "assigned": "Alejandro",
+    "state": "En Proceso",
+    "progress": 20,
+    "startDate": "19/01/2026",
+    "endDate": "",
+    "observations": "[19/01/2026] Se crea la base del front ",
+    "unit": "Proteccion",
+    "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true
   }
 ]
