@@ -999,5 +999,44 @@
     "unit": "Tuya",
     "detail": "Clientes radican casos en plataforma ",
     "visible": true
+  },
+  {
+    "id": "337",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Faver",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": false
+  },
+  {
+    "id": "338",
+    "title": "Eliminar Documentos",
+    "assigned": "Faver",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Tuya",
+    "detail": "Se recibe un requerimiento con aprobación del área de credito para que se eliminen documentos de una solicitud que fueron cargados de forma erronea a la solicitud que eran de otra",
+    "visible": false
+  },
+  {
+    "id": "337",
+    "title": "Soporte Casos Sarita",
+    "assigned": "Natalia y Faver",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "20/01/2026",
+    "endDate": "20/01/2026",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true
   }
 ]
