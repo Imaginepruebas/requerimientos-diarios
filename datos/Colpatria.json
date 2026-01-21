@@ -471,11 +471,11 @@
     "id": "COLP26-0001",
     "title": "Revisión Modulo Sarlaft",
     "assigned": "Faver Lopez",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/01/2026",
+    "endDate": "21/01/2026",
+    "observations": "[31/12/2025]: Se realiza ajustes para evitar perdida de la ruta del archivo del sarlaft",
     "unit": "Colpatria",
     "detail": "Se esta evidenciando que al momento de cambiar de estado los registros de sarlaft estos pierden referencia al archivo con la información de la composición accionaria",
     "visible": true
@@ -510,7 +510,7 @@
     "id": "COLP26-0004",
     "title": "Nuevo Estado Radicación Masivos",
     "assigned": "Faver Lopez",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "13/01/2026",
     "endDate": "15/01/2026",
@@ -530,6 +530,6 @@
     "observations": "",
     "unit": "Colpatria",
     "detail": "Realizar migración del framework a la version 16",
-    "visible": false
+    "visible": true
   }
 ]

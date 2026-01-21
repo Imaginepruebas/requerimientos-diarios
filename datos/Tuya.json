@@ -1004,30 +1004,30 @@
     "id": "337",
     "title": "Soporte Casos Sarita",
     "assigned": "Faver",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "19/01/2026",
+    "endDate": "19/01/2026",
+    "observations": "[19/01/2026]: Se validan casos y se genera respuesta",
     "unit": "Tuya",
     "detail": "Clientes radican casos en plataforma ",
-    "visible": false
+    "visible": true
   },
   {
     "id": "338",
     "title": "Eliminar Documentos",
     "assigned": "Faver",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "21/01/2026",
+    "endDate": "21/01/2026",
+    "observations": "[19/01/2026]: Se realiza proceso de eliminación de las imagenes en la base de datos y se cierra el requerimiento del cliente.",
     "unit": "Tuya",
     "detail": "Se recibe un requerimiento con aprobación del área de credito para que se eliminen documentos de una solicitud que fueron cargados de forma erronea a la solicitud que eran de otra",
-    "visible": false
+    "visible": true
   },
   {
-    "id": "337",
+    "id": "339",
     "title": "Soporte Casos Sarita",
     "assigned": "Natalia y Faver",
     "state": "Finalizado",
@@ -1037,6 +1037,19 @@
     "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
     "unit": "Tuya",
     "detail": "Clientes radican casos en plataforma ",
+    "visible": true
+  },
+  {
+    "id": "340",
+    "title": "Modicar Tarea Programada",
+    "assigned": "Faver",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "21/01/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Tuya",
+    "detail": "Se solicita la modificación de los tiempos de ejecución de la tarea programada para el procesamiento de los ADTP (Autorizacion de Tratamiento Datos Personales)",
     "visible": true
   }
 ]
