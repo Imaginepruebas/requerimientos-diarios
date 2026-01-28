@@ -10,7 +10,12 @@
     "observations": "Se notifica por par parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria, \n[09/06/2025] :El requerimirneo fue  pausado 12 mayo de 2025\n[10/06/2025]: Hoy se definira si se contunua con el desarrollo o continua pausado.\n[11/06/2025]: Ya se cuenta con los permisos y el query para la vista. Se sincronizan las reclamaciones de Cifren, pero falta integrar las de Plus (montadas en AWS) y ajustar la identificación del origen de cada reclamación.\nSe estima que este requerimiento adicional tomará un día de trabajo Iniciando  el 12 de Junio\n[13/06/2025]: Se obtuvo respuesta positiva sobre permisos para acceder a la vista de Plus. Sin embargo, falta que la vista tenga datos reales para completar la sincronización. \n[16/06/2025] : Se completó la primera fase de validación y hoy se trabaja en la parte de gestión de pagos, cliente  realizara pruebas hoy \n[17/06/2025]: Se realizan en ajustes en la mañana de hallasgoz reportados por el cliente tras las pruebas, y se entregaran al cliente para sus pruebas. \n[18/06/2025]: Se adaptó el grid y los reportes a \nlos distintos roles/permisos. También se incorporaron nuevos campos a solicitud del cliente; pendiente Pruebas  por el cliente.\n[19/06/2025]; supero pruebas del cliente  y se aprueba paso a produccion  para el dia sabado 21 de Junio..\n[24/06/2025]; Alfa aplazó el paso a produccion para el 5 de julio, debido a que tenían actualizaciones pendientes. Además, dependemos de la disponibilidad de ciertas vistas en el ambiente de producción para continuar con el proceso. \n[07/07/2025]: Se realiza paso a produccion el 5 de julio.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "13/06/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 96,
+    "produccion": "05/07/2025"
   },
   {
     "id": "PRV_2025_001_2",
@@ -23,7 +28,12 @@
     "observations": "El 16 de junio se inicia desarrollo confecha estimada de finalizacion  18 de junio. \n[18/06/2025]: El 17 de junio  se desarrollan dos informes adicionales: tesorería y porvenir, con definición de estructura en curso.\n[19/06/2025]: Entrega al cliente para pruebas 19 de junio, Cliente solicita ajuste de vistas y campos  necesarios  para el proceso.\n[24/06/2025]; Alfa aplazó el paso a produccion para el 5 de julio, debido a que tenían actualizaciones pendientes\n[07/07/2025]: Se realiza paso a produccion el 5 de julio.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "18/06/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": "05/07/2025"
   },
   {
     "id": "PRV_2025_004",
@@ -36,7 +46,12 @@
     "observations": "Cargue de formatos de formalización y consolidado 100%\nOpción de edición y opción de histórico del flujo 100%\n\nSe notifica por par parte del jefe de unidad inconsistencias en Vistas de las fuentes de información entregadas. Carecen de data necesaria\n[09/06/2025] :El requerimirneo fue  pausado  el 6 de junio de 2025.\n[16/06/2025]: Se comenzarán el jueves 19 de junio. Ya se están creando las vistas necesarias para ese flujo\n[19/06/2025]: Inicio del desarrollo.\n[20/06/2025]:No se pudo avanzar ayer 19 de junio por ajustes requeridos por el cliente para PRV_2025_001 VALIDACIÓN DE LOTE PARA PAGO,NOTIFICACIÓN DE PAGO,  Se retomara  desarrollo 24 de junio.\n[24/06/2025]; Se encuentra sincronizando data, se estiman 2 dias para finalizar.\n[25/06/2025]:Se ajustó la lógica del requerimiento tras diferenciarlo claramente del flujo de pagos. Se avanzó en la creación de vistas y en la sincronización inicial de datos. Se espera tener el desarrollo listo para pruebas el jueves 26. Se planea agregar botones para sincronización (Pago,auxilio y exportar) diferenciada según permisos,crear tabla de auxilios x año, ajustar campos (encabezados)de la vista de gestion y ajustar modulo de consulta.\n[26/06/2025]: Se avanzó satisfactoriamente en la creación de la tabla de auxilios por año, el ajuste de encabezados en la vista de gestión y la incorporación de los botones de sincronización según permisos. PENDIENTE, Está pendiente la solución del error en la sincronización masiva, lo cual impide avanzar con la exportación y cargue de información. También sigue sin ajustes el módulo de consulta para auxilios.\n\n[27/06/2025]: \npendiente: 1. asignar opcion de pendientes\n2. Ver consolidado pagos. (se envia masivamente y aprueba por el flujo para pasar a pagos).\n\n3. Generar informe radicacion pagos plus.\n\nSe estima toda la entrega para hoy\n\n[01/07/2025]: Se ha avanzado en un 75% del desarrollo, incluyendo funcionalidades principales. El cierre del tema está previsto para hoy, Faltan por implementar la generación de informes, la edición de fecha de siniestro y valor, así como la opción de marcar como pendiente.\n[02/07/2025]:El desarrollo del módulo de auxilios funerarios presenta un avance estimado del 90%. Ya se encuentra implementada la funcionalidad principal, incluyendo la creación de vistas, funciones de sincronización y flujo de radicación hasta aprobación. Se están finalizando los ajustes a los reportes en Excel, Se programó una sesión de revisión hoy a las 2:00 p.m. para validación funcional y ajuste de pendientes.\n[04/07/2025]: Se resolvió un error en la validación de pagos, el módulo ya está funcional. Se finalizó el desarrollo y se ajustaron validaciones necesarias para la gestión masiva y manual. Solo queda pendiente la validación del cliente, ya que la sesión programada fue cancelada.\n[07/07/2025]: Se Pasado a producción el 5 de julio sin habilitar el menú. Faltan validaciones finales por el cliiente.\n[16/07/2025]: Las pruebas no se han culminado por un error en el sistema del cliente al cargar unos registros. Sin estos registros no puedo ver la data que necesitamos en Imagine.\n[29/07/2025]: Se proyecta acompañar al àrea para realizar pruebas con los recursos existentes para ya dejar cerrado el requerimiento\n[01/08/2025]: Hoy se retoma el módulo con el cliente, para validar que se tiene hasta el momento, funcionalidad y posibles desviaciones, para dar gestion y cierre del requerimiento\n[04/08/2025]: Se continùa validaciones y ajustes correspondientes para proyectar paso a producciòn el viernes 08 de agosto\n[12/08/2025]: Debido a incidencia presentada en la conexión Plus + UAT , no fue posible el paso a producciòn el viernes 08 de agosto, por tanto se proyecta el despliegue para el viernes 15 de agosto\n[20/08/2025]: Despliegue a produccion realizado en 15 de Agosto.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "25/06/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 11,
+    "produccion": "05/07/2025"
   },
   {
     "id": "PRV_2025_009",
@@ -49,7 +64,12 @@
     "observations": "[09/06/2025]: El Objetivo Automatizar el cálculo de incapacidades en el sistema Imagine, replicando el proceso manual actual utilizado por los liquidadores y presentando los resultados en un formato claro y compatible con Excel.\\niniciara  con el desarrollo.\n[11/06/2025]: Mauricio completó la función de cálculo y está terminando el formulario de consulta. Planea entregar el requerimiento completo hoy para subir a pruebas el jueves.\n[13/06/2025]: Ya fue entregado en ambiente de pruebas para validación del cliente. Está funcionando correctamente y aplicando los cálculos según lo solicitado.\n[9/06/2025]: Paso a produccion para el 21 de junio.\n[24/06/2025]: Fala aplazó el paso a produccion para el 5 de julio, debido a que tenían actualizaciones pendientes.\n[07/07/2025]: Igual que Auxilios se paso a producciòn el 5 de julio sin habilitar el menu. Se requiere validación del cliente para habilitar.\n[16/07/2025]: Requerimiento funcional en produccion con el menu habiitado.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "11/06/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": "05/07/2025"
   },
   {
     "id": "PRV_2025_007",
@@ -62,7 +82,12 @@
     "observations": "[11/06/2025]: Continuara con el desarrollo tras finalizar  req PRV_2025_001  REVISIÓN DE LIQUIDACIÓN PARA PAGO\n[13/06/2025]:Se programó su inicio para hoy. Mauricio confirmara la estimación del tiempo de desarrollo.\n[16/06/2025]: Se requiere una sesion con Carlos, Jenry, Mauricio y Fabio para entender el detalle de validaciones. Aún no se tiene fecha ni estimación.\n[04/07/2015]:Se inicia desarrollo con  un avance del 20%. Se ajustaron funciones en Postgres para cálculos correctos según las vistas generadas. El siguiente paso es crear la funcionalidad de consulta por cédula o siniestro y desplegar cálculos de acuerdo a la fecha indicada. Se estima finalizar req hoy   para  realizar paso a produccion el  5 de julio.\n[07/07/2025]: Se realizo paso a producciòn el 5 de Julio sin habiitar el menu, Faltan pruebas formales del cliente para habilitación final.\n[11/07/2025]: El 10 de julio se realizó un ajuste para excluir los casos con auxilios funerarios. Ahora, el sistema valida que el origen del caso sea únicamente incapacidad o supervivencia; en caso contrario, se lanza una alerta.\n[16/07/2025]: Se realiza paso a producción el 14 de julio en la noche.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "04/07/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": "14/07/2025"
   },
   {
     "id": "PRV_2025_005",
@@ -75,7 +100,12 @@
     "observations": "[11/06/2025]: Continuara con el desarrollo tras finalizar  req  PRV_2025_007 CALCULO IBL\n[07/07/2025]: Inicia desarrollo \n[08/07/2025]: Se reporta un avance del 50 % entre analisis y desarrollo del requerimeinto. \n[09/07/2025]: Se Finaliza desarrollo y se entrega al cliente  para pruebas.\n[14/07/2025]: El 10 de julio se ajustó el reporte para incluir los períodos que existen en Multifondos pero no en Alfa. Adicionalmente, se incorporó una nueva columna que muestra el salario mensualizado proveniente de Porvenir. Los cambios ya fueron implementados y se encuentran listos para validación.\n[16/07/2025]: Se realiza paso a producción el 14 de julio en la noche.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": "14/07/2025"
   },
   {
     "id": "AJUST_REN_2025_001_1",
@@ -88,7 +118,12 @@
     "observations": "[11/07/2025]: Dado que ya se crearon las tablas de referencia, se finalizó este proceso el día 10 de julio. Queda pendiente validar el impacto que estas puedan tener en los diferentes módulos y consultas del sistema para que el cliente realice las pruebas.\n[14/07/2025]:  El viernes 11 se  valida en ambiente de pruebas los ajustes realizados, confirmando funcionamiento correcto en: cargue de cotización y contratación, gestión telefónica desde call center, exportación del informe de Presidencia y descarga de documentos. Quedan pendientes por validar: envío de correos del portafolio de servicios, envío de comprobantes de nómina y validación de consultas.\\n Hoy se trabajará en los informes que deben reflejar esta nueva parametrización y se verificará si afecta portafolios o comprobantes de nómina.\n[15/07/2025]: El lunes 14 de julio se finalizó el desarrollo del ajuste, se realizaron las pruebas correspondientes con resultados exitosos y se procedió con el paso a producción.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": -19,
+    "produccion": "14/07/2025"
   },
   {
     "id": "AJUST_REN_2025_001_2",
@@ -101,7 +136,12 @@
     "observations": "[10/07/2025]: Se realizaron los ajustes solicitados por el área y estos ya fueron entregados en el ambiente de producción. El cliente efectuó las pruebas correspondientes y confirmó que el ajuste fue aplicado correctamente.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "AJUST_REN_2025_001_3",
@@ -114,7 +154,12 @@
     "observations": "[15/07/2025]: Se inician ajustes solicitados\n[18/07/2025] Se culminaron los ajustes requeridos por el área, se realiza paso a produccion el 17 de julio.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": "17/07/2025"
   },
   {
     "id": "AJUST_REN_2025_001_4",
@@ -127,7 +172,12 @@
     "observations": "[11/07/2025]: EL 10 de julio Se realizaron pruebas por parte de Carlos Rodríguez. Actualmente, el cambio se encuentra pendiente de ser implementado en el ambiente de producción.\n[15/07/2025]:Se realizó el paso a producción el día 14 de julio.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": -23,
+    "produccion": "14/07/2025"
   },
   {
     "id": "AJUST_REN_2025_001_5",
@@ -140,7 +190,12 @@
     "observations": "[16/07/2025]: Se finaliza ajuste 15 de julio y se realiza despliegue a produccion el 16 de julio en la mañana.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_011",
@@ -153,7 +208,12 @@
     "observations": "[18/07/2025]: Se completó el query de base. Se trabaja en selección de librería gráfica compatible con Laravel. Se estima un 20% de avance general.\n[21/07/2025]: Se esta trabajando en las graficas de ANS, se estima terminar el 22 de julio para paso a pruebas UAT\n[24/07/2025]: El [22/07/2025] se continua en gestión del tablero de control ANS, sacaba error en los gráficos, se estima terminar el [23/07/2025] por compromiso con el cliente.\n[23/07/2025]: Se terminan los gráficos del tablero de control.\n[24/07/2025]: Se trabaja en el export de la data de las estadisticas\n[25/07/2025]. Se entrega al área tablero de ANS finalizado, programado subir los cambios para paso a producción el [25/07/2025] a las 5:00 pm",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "19/07/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 6,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_002",
@@ -166,7 +226,12 @@
     "observations": "[21/07/2025]: Carlos esta adelantando el levantamiento del requerimiento, para proyectar entrega\n[23/07/2025]: Se encuentra en definición con el cliente, para establecer algunas prioridades en los requerimientos siguientes\n[25/08/2025]: Se retoma el levantamiento del requerimiento  y se proyecta entrega a Mauricio para desarrollo el día de mañana, sin embargo, se estan priorizando informes propios de la operación de Imagine.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[26/09/2025]: El 22 de septiembre se termino el levantamiento del requerimiento, en el transcurso de la semana se han estado elaborando vistas, sin embargo, Imagine no tiene acceso y permisos para editar o crear vistas en DLL, AUT ni producción.\n[03/10/2025]: El 02 de octubre se obtienen los permisos y se inicia con la creación de las vistas \n[14/10/2025]: Se proyecta finalizar el levantamiento del requerimiento para pasar a desarrollo",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 4,
+    "fechaEstimadaEntrega": "27/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 62,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_002-1",
@@ -179,7 +244,12 @@
     "observations": "[17/10/2025]: El 15 de octubre se termino el desarrollo del requerimiento Anexo 1, posteriormente se han realizado validaciones y ajustes que se cruzan con otros requerimientos, con el fin de no presentar incindencias",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "16/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 8,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_001",
@@ -192,12 +262,17 @@
     "observations": "[21/07/2025]: El [17/07/2025] Se envía correo por parte de Carlos a Seguros Alfa, solicitando modificar 2 vistas:\na. Sipren: Ajustes V_consolidado_reclamaciones_img\nb. Plus: AjustesV_consolidado_tramites_plus\nPendiente presentarlo a comité para efectuar el cambio correspondiente en las vistas.\nEl [18/07/2025], Mauricio realizó un ajuste en el módulo de flujo de pagos, mediante el cual se asocia a cada estado del flujo una ruta u opción de acceso específica. Anteriormente, independientemente del permiso asignado, los usuarios podían visualizar los estados a los que contaban con permiso.\n[23/07/2025]: El 22 de Julio se entrega al cliente  para pruebas, al pendiente de aceptacion  para paso a produccion.\n[24/07/2025]: Se solicita a Mauricio subir los cambios de flujo de pagos modificados en las vistas que actualizò Carlos. Validar los cambios y ajustes requeridos por el cliente en requerimientos ya cerrados para paso a producción.\n[25/07/2025]: Se finalizan los ajustes solicitados por el área (un campo llamado parentesco y mostrarlo en el export, en el Excel que exporta el cliente). Programado subir cambios para paso a producción el [25/07/2025] a las 5:00 pm\n[28/07/2025]: El viernes 25 de julio sobre las 6:00 pm hasta las 7:30 pm se realiza el despliegue a producción.\nEl dìa de hoy se encuentra validando que los cambiosy ajustes en el paso a producciòn están funcionando correctamente.\nSe evidencia que hubo una inconsistencia en los datos que Alfa suministra en el cambio a producción. Se encuentra en validación.\n[01/08/2025]: Se vuelve a validar con Alfa la información reportada en el script, sin embargo, se encuentran a la espera de que el área de producción entregue el DLL que se envió en el despliegue. Por parte de Imagine no hay pendientes.\n[08/08/2025]: El 06 de Agosto a raíz de la reunión con el área Previsionales el día 05 de agosto, surgieron ajustes solicitados por parte del vicepresidente de Alfa.\n1.        Incluir el cálculo IBL dentro del flujo. Validar primero el nombre de las etiquetas.\n2. Convertir en cero al exportar el Excel los valores negativos. Solicitud de Patricia Arteaga\n3. Resaltar el nombre de la columna Pago Total para que se ubiquen los usuarios.\n4. Validar las etiquetas dentro del editar. Falta información\n5. Revisar información que sale en la parte izquierda en el editar, ya que no se sale un valor, según valido Hugo Gómez\n\nEl día de hoy 08 de agosto, se trabaja en en control de cambios en Flujo de pagos solicitado por el Vicepresidente de Alfa.\n[20/08/2025]: Se pasa a producciòn el 16 de agosto",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": "16/08/2025"
   },
   {
     "id": "PRV_2025_003",
     "title": "AVISO A LA RENTA (Levantamiento del requerimiento)",
-    "assigned": "Carlos y Cindy",
+    "assigned": "CARLOS Y CINDY",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "25/07/2025",
@@ -205,7 +280,12 @@
     "observations": "[25/07/2025]: Carlos y Cindy estan trabajando en el levantamiento del requerimiento para pasar a Mauricio y que inicie con el desarrollo para que quede en el paso a producción programado para el [25/07/2025] a las 5:00 pm\n[28/07/2025]: El viernes 25 de julio se hace socializaciòn del requerimiento con Mauricio y Jairo.\n[20/08/2025]: El sabado 16 se realizo el paso a producciòn",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "25/07/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 16,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_003-1",
@@ -218,7 +298,12 @@
     "observations": "[28/07/2025], el viernes 25 de julio, debido a una inconsistencia en el aplicativo ALFASST del área SST con unas ordenes de servicio, se tuvo que dar prioridad y Mauricio no pudo iniciar el desarrollo de Avisos a la renta.\nEl día de hoy, luego de terminar validaciones de paso a producción de otros requerimientos, se inicia desarrollo de este requerimiento.\n[29/07/2025]: Mauricio se enfocarà en terminar el requerimiento completamente.\n[30/07/2025]: Se reporta un avance del 50% en el desarrollo del módulo de avisos de renta. Ya se visualizan los pagos correctamente y quedan pendientes las funcionalidades de notificación, descarga de Excel y eliminación de registros. Se espera finalizar hoy.\n[01/08/2025]: A 31 de julio ya esta por entregar, Mauricio el dìa de hoy mostrara el funcionamiento y el flujo del reporte, para identificar posibles desviaciones y validar si es posible automatizarlo.\n[04/08/2025]: El 01 de agosto quedo funcional el requerimiento, esta proyectado para paso a producción el viernes 08 de agosto\n[13/08/2025]. Se proyecta paso a producción el sabado 16 de agosto.\n[20/08/2025]: Paso a produccion realizado 16 de Agosto.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/07/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 5,
+    "produccion": "16/08/2025"
   },
   {
     "id": "Img_2025_001",
@@ -231,7 +316,12 @@
     "observations": "[01/08/2025]: Se realizarà validación del servidor de contingencia el día de hoy, puesto que en meses pasado se presentaron incidencias y debemos garantizar que toda la información se encuentre sincronizada de forma correcta.\n[04/08/2025]: Se programo sesiòn con Wilson y Mauricio para validaciòn y acompañamiento en la sincronización de la contingencia.\n[08/08/2025]: Validación de error de la sincronización de contingencia, con Alfa y Claro - Onpremise\n2. Validación cambio de llaves AWS.\n[12/08/2025]: Se encuentra pendiente ajuste a permisos de carpetas para la sincronización y notificación por correo del error  en la sincronización o éxito en la misma.\nLa reunión del viernes para cambio de llaves AWS, se reprogramo para hoy a las 9:00 am hasta las 10:15 am aproximadamente.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "01/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 6,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-1",
@@ -244,7 +334,12 @@
     "observations": "[08/08/2025]: el 05 de Agosto, se realiza acompañamiento en la sesión del área de Previsionales con Blanca Romero, Elizabeth Guerrero y Hugo Gomez, por si surgen dudas u observaciones.\nSe trabaja en informes de Pagos y Auxilios Funerarios.\n\n[11/08/2025]: A raíz de la sesión del viernes surgieron ajustes adicionales:\n1. Incluir el cálculo del IBL dentro del flujo\n2. Convertir en cero al exportar el Excel los valores negativos. Solicitud de Patricia Arteaga\n3. Resaltar el nombre de la columna Pago Total para que se ubiquen los usuarios\n4. Validar las etiquetas dentro del editar. Falta información\n5. Revisar información que sale en la parte izquierda en el editar, ya que no sale un valor, según valido Hugo Gomez.\nEstos puntos ya quedaron gestionados el día de ayer en un 90%, falta culminar:\n- Control de cambios en flujo de pagos\n- Incluir el cálculo del IBL dentro del flujo. Validar nombre de las etiquetas\n\n[12/08/2025]: El viernes hubo incidencia en el cargue del Excel archivo de formalización de Auxilios Funerarios, sin embargo, este ya quedo solucionado. Se continúa trabajando en los ajustes faltantes requeridos por vicepresidencia de Seguridad Social.\n\n[13/08/2025]: Reunión con el área de coordinación y desarrollo para instrucciones de entrega de documentación.\n- Creación de documentos técnicos requeridos por Alfa para paso a comité de cambios el día de hoy 13 de agosto y mañana 14. \n- Ajustes por pruebas de usuario en error de cargue de archivo y mejora de la consulta.\n- Se proyecta paso a producción de aviso a la renta y auxilios funerarios el sabado 16 de agosto.\n[20/08/2025]: El dìa sabado 16 se realiza paso a producciòn",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 7,
+    "produccion": "16/08/2025"
   },
   {
     "id": "PRV_2025_004-2",
@@ -257,7 +352,12 @@
     "observations": "[14/08/2025]: Ajuste a bugs reportados por el cliente para Auxilios Funerarios y Aviso a la Renta (formatos y consultas). Ya el dìa de hoy se certifico por parte del cliente el paso a producciòn, el cual se progrma realizar por parte de Mauricio el sabado 16 de agosto.\nSe requiriò acompañamiento de Mauricio en las sesiones para solucionar de forma inmediata las inconsistencias, durante las horas de la mañana y tarde.\n[20/08/2025]: EL sabado 16 se realizo paso a producciòn",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": "16/08/2025"
   },
   {
     "id": "PRV_2025_004-3",
@@ -270,7 +370,12 @@
     "observations": "[27/08/2025]: El 26 de agosto se trabajo en el desarrollo del informe general de pagos y auxilios funerarios.",
     "unit": "Alfa",
     "detail": "Generar un informe con el detalle de mostrar consulta y la trazabilidad de los casos de los procesos entregados a producciòn en semanas anteriores.",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_002",
@@ -283,7 +388,12 @@
     "observations": "[15/08/2025]: Se reconfiguraron los permisos y Mauricio estarà validando el tema el día de hoy, sincronizaciòn y funcionamiento\n[20/08/2025]: Al 19 de agosto, se encuentra pendiente reporte por parte de Claro informando las actividades realizadas el dìa viernes de acuerdo al refresh de la llave.\nPendiente por parte Mauricio crear .bash para notificar cuando sincronice las bases de datos\n[25/08/2025]: El viernes 22 de agosto se creo el .bash solicitado, sin embargo, se esta presentando una incidencia en la actualización, que no actualiza en la base de datos a diferencia del que corre a las 3 am. Mauricio estará validando otras funcionalidades y en caso de que continue la inconsistencia, se apoyará con Jairo  y Jenry\n[27/08/2025]: El 25 de agosto se valido con tecnologìa el tema de crear una conexión SSH, el día de hoy 27 de agosto, dieron respuesta que se puede realizar sin problema.\n[03/09/2025]: Mauricio indica que queda pendiente el sabado 06 de septiembre validar la sincronizaciòn y Carlos Rodriguez debe realizar la documentación de la sincronización para presentar a Alfa.\n[20/10/2025]: El 17 de octubre se realizó sincronización manual de producción a contingencia, debido a que el procesos automático de las 3 am, dejo algunos archivos corruptos",
     "unit": "Alfa",
     "detail": "Crear .bash para notificar  sincronización en base de datos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "22/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 46,
+    "produccion": ""
   },
   {
     "id": "SST_2025_001",
@@ -296,7 +406,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Los desarrollos para esta aplicación se encontraban detenidos desde el año pasado. Por lo cual los ambientes no se encontraban actualizados y/o con data actualizada para pruebas.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": ""
   },
   {
     "id": "SST_2025_002",
@@ -309,7 +424,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Se retomaron las pruebas en los entornos QA y PT para validar nuevos requerimientos y hacer seguimiento al estado de aquellos que aún se encuentran pendientes por ser desplegados en producción.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": ""
   },
   {
     "id": "SST_2025_003",
@@ -322,7 +442,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Durante este proceso, se identificaron algunas incidencias en los servidores, por lo que fue necesario realizar ajustes y correcciones técnicas para garantizar un entorno estable que permitiera continuar con la validación de los cambios.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": ""
   },
   {
     "id": "SST_2025_004",
@@ -335,7 +460,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Se restablecieron los cronogramas del año vigente en los entornos QA y PT para habilitar el nuevo módulo de profesionales y permitir sus respectivas pruebas.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": ""
   },
   {
     "id": "SST_2025_005",
@@ -348,7 +478,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Se solucionaron errores en el módulo de profesionales y se realizaron correcciones funcionales.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "SST_2025_006",
@@ -361,7 +496,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Se refrescaron claves y accesos, especialmente en el servidor de pruebas, que presentaba problemas de ingreso.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "SST_2025_007",
@@ -374,7 +514,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Se ajustó la configuración de pgAdmin para garantizar la conexión con las distintas bases de datos de ALFASST.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_006",
@@ -387,7 +532,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Se implementó el ajuste para que, al cambiar un caso de estado CORRECCIÓN → REVISADO, se ejecute la sincronización individual del valor, considerando posibles modificaciones.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_0011",
@@ -400,7 +550,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Queda pendiente el desarrollo de la sincronización masiva, lo cual implica ajustes en las funciones de sincronización entre bases de datos.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[01/10/2025]: El 30 de septiembre se obtienen permisos pendientes, lo cual permitio finalizar el desarrollo del requerimiento",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "01/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 25,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_008",
@@ -413,7 +568,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Permitir la modificación del campo VALOR_PAGO en casos específicos, exclusivamente dentro del primer flujo del proceso.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[01/10/2025]: El 30 de septiembre se habilita la ediciòn del campo VALOR_PAGO ya que algunos casos lo requieren, modificaciòn restringida unicamente al primer flujo",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "01/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_012",
@@ -426,7 +586,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Sincronizar y actualizar automáticamente la fecha de siniestro según información proveniente de Porvenir.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[01/10/2025]: El 30 de septiembre se creo opciòn para cuando se sincronicen las solicitudes permitan actualizar las fechas de siniestro",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "01/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_010",
@@ -439,7 +604,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Incluir en el reporte:\n* fecha_cierre\n* número de solicitud\n* fecha de envío de correo\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[20/10/2025]: Se incluyen campos solicitados por el área",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "01/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_008",
@@ -452,7 +622,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Se solucionaron errores en el módulo de profesionales y se realizaron correcciones funcionales en ambiente Imagine.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_013",
@@ -465,7 +640,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Al cargar el archivo de Excel, debe ejecutarse automáticamente el proceso de sincronización asociado.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[08/10/2025]: El 30 de septiembre se creo opciòn para cuando se sincronicen las solicitudes permitan actualizar las fechas de siniestro",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "02/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_014",
@@ -478,7 +658,12 @@
     "observations": "[29/08/2025]: [25/08/2025]: Automatizar el envío del informe:\nFrecuencia: todos los viernes a las 6:00 a.m.\nEn caso de festivo, el informe debe enviarse el día hábil anterior.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[20/10/2025]: El viernes 17 de octubre se agrego la funcionalidad para la ejecución del proceso Aviso a la Renta, mediante las tareas programadas. ",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "10/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 8,
+    "produccion": ""
   },
   {
     "id": "SST_2025_009",
@@ -491,7 +676,12 @@
     "observations": "[01/09/2025]: El 30 de agosto Mauricio realizando otras pruebas identifico un error en el modulo de profesionales en el ambiente de pruebas Alfa, por tanto se radica caso el 01 de septiembre para soporte de AWS y se contacta co Oscar Pérez para que nos ayuden con la incidencia reportada. Ya que hasta no sea solucionado no podremos realizar pruebas y el cliente tampoco.\nLa fecha estimada relacionada es solo si nos gestionan en soporte ALFA el día de hoy, de lo contrario se verá afectada y cambiará de acuerdo con la solución del caso radicado.\n[03/09/2025]: El 02 de septiembre queda solucionada la incidencia y queda pendiente realizar pruebas internas antes de entregar a Nohora Carolina de SST para pruebas del área.\n[05/09/2025]: El 04 de septiembre se iniciaron pruebas internas, sin embargo, no fue posible culminarlas debido a una incidencia presentada con el plan de trabajo en el ambiente QA. \n[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en el cronograma en ambiente de pruebas, ya se libero presupuesto pero se esta validando porque no carga actividades y programas.\n[11/09/2025]: El 10 de septiembre Mauricio continua validando, ajustando incidencias en el ambiente de QA que no han permitido realizar las pruebas correspondientes.\n[15/09/2025]: El viernes 12 de septiembre Mauricio se enfoco en seguri revisando errores que se estan presentando en el módulo de cronogramas y edición de ordenes de servicios\n[18/09/2025]: Durante los días del 15 al 17 Mauricio detecto errores en el desarrollo y ha trabajado en corregir y mejorar su funcionalidad, adicional de mejorar la apariencia siendo mas intuitivo para el usuario.\nSe refactorizo el diseño de la gestión de profesionales a acreditar  y la gestión de proveedores.\n[22/09/2025]: El viernes 19 de septiembre, Mauricio subió los ajustes de los modulos de profesionales y cronograma de trabajo.",
     "unit": "Alfa",
     "detail": "Se requiere validar y realizar ajustes de errores e incidencias que se están presentando en el módulo para realizar las pruebas por parte del cliente y sea certificado el paso a producción",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "03/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 15,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_015",
@@ -504,7 +694,12 @@
     "observations": "[01/09/2025]: El 29 de agosto a Mauricio se le entregaron credenciales por parte de infraestructura Alfa para permisos y creación de vistas en Desarrollo Sipren Plus, sin embargo, permitió coneción preo no la creación de las vistas.\n[03/09/2025]: Requerimiento en pausa debido a que Imaginex actualmente no cuenta con permisos para creación de vistas, se encuentra en validación por infraestructura para una solución.\n[01/10/2025]: Desde el 30 de septiembre se obtuvieron los permisos pendientes y se esta adelantando la creaciòn de vistas de los requerimientos que se han levantado\n[03/10/2025]: el 02 de octubre se asignan nuevas vistas en la función de sincronización",
     "unit": "Alfa",
     "detail": "Creaciòn de vistas en ambiente DLL Alfa para desarrollo de requerimientos previsionales",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 10,
+    "fechaEstimadaEntrega": "03/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 25,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_016",
@@ -517,7 +712,12 @@
     "observations": "[03/09/2025]: [01/09/2025] Mauricio trabaja en la inclusión de la data de Auxilios Funerarios en el tablero de ANS.\n[02/09/2025]: Se trabaja en los graficos de aux funerarios y en la consulta requerida para validar datos de flujo de pagos y aux funerario.\nPendientes pruebas internas para antes de entregar para pruebas por parte del área de previsionales\n[04/09/2025]: el 03 de septiembre el desarrollo del gráfico está en fase final, restando únicamente ajustes de personalización en los tooltips. Se programó una reunión con el cliente para la socialización de avances, debido a que no alcanzo el tiempo, se reprogramo sesión para el jueves 4 de septiembre a las 9:00 am\n\nEl día de hoy 04 de septiembre, se realizan unas pruebas internas antes de entregar al cliente para sus respectivas pruebas y certificaciòn, siendo exitosas. En la sesión al momento de ingresar al aplicativo de pruebas Imagine, el cliente no pudo ya que por politicas de la compañia al parecer les quitaron permisos, se encuentran en validaciòn con el area tecnologica y sin embargo, por parte de Imagine les mostramos el módulo, los graficos, los cambios y los reportes. Se entrega para que apenas tengan acceso puedan validar y confirmar funcionalidad.\n[11/09/2025]: Se confirma funcionalidad por parte del área de Previsionales",
     "unit": "Alfa",
     "detail": "Se incluye en las graficas aux funerarios",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "03/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "Img_2025_004",
@@ -530,20 +730,30 @@
     "observations": "[04/09/2025]: Se identificaron cambios en la configuración, por lo que se programó la reconfiguración de servicios en horas de la tarde.\n",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "03/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_017",
     "title": "Consultas y optimización de vistas (Alfa)",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 95,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "03/09/2025",
-    "endDate": "",
-    "observations": "[04/09/2025]: El 03 de septiembre Mauricio trabaja en realizar ajustes en consultas y procesos de automatización. Continúa pendiente la optimización de querys para mejorar el rendimiento general.\n[18/09/2025]: Durante los ultimos dìas Mauricio se ha encargado de identificar mejoras en las consultas\n[29/10/2025]: El viernes 24 de octubre Mauricio estuvo validando mejoras en consultas y mejorar el rendimiento del aplicativo.",
+    "endDate": "19/01/2026",
+    "observations": "[04/09/2025]: El 03 de septiembre Mauricio trabaja en realizar ajustes en consultas y procesos de automatización. Continúa pendiente la optimización de querys para mejorar el rendimiento general.\n[18/09/2025]: Durante los ultimos dìas Mauricio se ha encargado de identificar mejoras en las consultas\n[29/10/2025]: El viernes 24 de octubre Mauricio estuvo validando mejoras en consultas y mejorar el rendimiento del aplicativo.\n[19/01/2026]: Se realizaron ajustes técnicos en las vistas del sistema para optimizar el rendimiento y la velocidad de respuesta.",
     "unit": "Alfa",
     "detail": "Se requiere optimizar rendimiento y capacidad de las funciones del aplicativo Alfasst",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "05/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 99,
+    "produccion": ""
   },
   {
     "id": "Img_2025_005",
@@ -556,7 +766,12 @@
     "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.\n[10/09/2025]: Durante los días 08 y 09 de septiembre, Mauricio ha trabajado en las conexiones SAT del Ministerio para el requerimiento de independientes.\n[11/09/2025]: El 10 de septiembre, Mauricio finalizò la conexiòn en integraciòn con la URL del Ministerio.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "10/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": ""
   },
   {
     "id": "Img_2025_006",
@@ -569,7 +784,12 @@
     "observations": "[08/09/2025]: El viernes 05 de septiembre, Mauricio trabajo en la restructuración de BD del ambiente local ya que se encuentra desactualizada para realizar pruebas con el Ministerio.\n[10/09/2025]: Durante los días 08 y 09 de septiembre, Mauricio ha trabajado en las conexiones SAT del Ministerio para el requerimiento de independientes.\n[11/09/2025]: El 10 de septiembre, Mauricio finalizò la conexiòn en integraciòn con la URL del Ministerio.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "10/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 4,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-8",
@@ -582,7 +802,12 @@
     "observations": "[15/08/2025]: El dìa de hoy se tuvo incidencia debido a una restauraciòn de las bases de datos en SIPREN, en ambiente de pruebas, se borraron algunas vistas. Carlos realizó solicitud de nuevo de los permisos para lectura de tablas y vistas en ambiente de pruebas Sipren y Plus de unavez, ya que el dìa de hoy o mañana tambien realizaran restauración de bases de datos.\n[20/08/2025]: Al 19 de agosto ya se encuentran los permisos e Imagine se encuntra en proceso de restauraciòn de las vistas y tablas borradas",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-4",
@@ -595,7 +820,12 @@
     "observations": "[21/08/2025]: El día 20 de agosto, luego del paso a producciòn y de las pruebas realizadas por el cliente, se identificaron incidencias en los requerimientos que se subiron en el despliegue, para el modulo de pagos, se presentaron las siguientes:\nIncidencia: En el Excel de reportes se estaban duplicando los registros.\nSolución: Se ajustó la consulta  incorporando la condición WHERE status = TRUE para filtrar únicamente los registros válidos.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-5",
@@ -608,7 +838,12 @@
     "observations": "[21/08/2025]: El día 20 de agosto, luego del paso a producciòn y de las pruebas realizadas por el cliente, se identificaron incidencias en los requerimientos que se subiron en el despliegue, para el modulo de pagos, se presentaron las siguientes:\nIncidencia: Los valores del último pago no coincidían.\nSolución: Se modificó la vista ultimo_pago para incluir el cod_concepto = 2 y se corrigió el cálculo, que anteriormente sumaba pago_total en lugar de valor_concepto.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-6",
@@ -621,7 +856,12 @@
     "observations": "[21/08/2025]: El día 20 de agosto, luego del paso a producciòn y de las pruebas realizadas por el cliente, se identificaron incidencias en los requerimientos que se subiron en el despliegue, para aviso a la renta, se presentaron las siguientes:\nIncidencia: Se solicitó revisar el SELECT de la consulta utilizada para el aviso a la renta.\nSolución: Se validó la formulación de la consulta y se confirmó que es correcta.\nNota: Carlos Rodríguez solicitó revisar y analizar el detalle de dicha consulta.\n",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-7",
@@ -634,7 +874,12 @@
     "observations": "[21/08/2025]: El día 20 de agosto, luego del paso a producciòn y de las pruebas realizadas por el cliente, se identificaron incidencias en los requerimientos que se subieron en el despliegue, para auxilios funerarios, se presentaron las siguientes:\nIncidencia: Error al cargar el formato Excel de auxilios cuando contiene varias hojas.\nSolución: Se identificó que el sistema solo procesa correctamente la hoja activa. Se intentó ajustar para cargar únicamente esa hoja; sin embargo, por agilidad operativa, se solicita al usuario dejar una sola hoja en el archivo antes del cargue, mediante validación al cargar y un mensaje informativo.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-9",
@@ -647,7 +892,12 @@
     "observations": "[21/08/2025]: El día 20 de agosto, luego del paso a producciòn y de las pruebas realizadas por el cliente, se identificaron incidencias en los requerimientos que se subiron en el despliegue, para auxilios funerarios, se presentaron las siguientes:\nIncidencia: Falta de valor del auxilio funerario.\nSolución: Se incluyó un ajuste final que complementa la información con la fecha esto solucionando el 70% del trabajo del analista. Se detectó que no se estaba completando el valor calculado del pago; por ello, se actualizó la condición WHERE para que también actualizara dicho valor.\n",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_004-10",
@@ -660,7 +910,12 @@
     "observations": "[21/08/2025]: El día 20 de agosto, luego del paso a producciòn y de las pruebas realizadas por el cliente, se identificaron incidencias en los requerimientos que se subiron en el despliegue, para auxilios funerarios, se presentaron las siguientes:\nIncidencia: Algunas funciones no fueron desplegadas en producción el día 16 de agosto.\nSolución: Se realizó la creación e implementación de las funciones faltantes en el ambiente productivo.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_002-1",
@@ -673,7 +928,12 @@
     "observations": "[22/08/2025]: El día 21 de agosto Mauricio se ha encargado de atender tareas asignadas por Jenry para mejorar el tema de control y seguimiento en ambiente de contingencia:\n- Parametrizar el mostrar los tiempos que demora la sincronización",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "22/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_002-2",
@@ -686,7 +946,12 @@
     "observations": "[22/08/2025]: El día 21 de agosto Mauricio se ha encargado de atender tareas asignadas por Jenry para mejorar el tema de control y seguimiento en ambiente de contingencia:\n- Crear .bash que muestre los registros de contingencia con producción\n[25/08/2025]: El viernes 22 de agosto se creo el .bash solicitado",
     "unit": "Alfa",
     "detail": "Crear .bash para mostrar registros de contingencia en producción",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "22/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_002-3",
@@ -699,7 +964,12 @@
     "observations": "[22/08/2025]: El día 21 de agosto Mauricio se ha encargado de atender tareas asignadas por Jenry para mejorar el tema de control y seguimiento en ambiente de contingencia:\n- Revisar cada cuanto se sincronizan las imagenes, si cada hora de lunes a viernes",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "22/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_003",
@@ -712,7 +982,12 @@
     "observations": "[22/08/2025]: El día 21 de agosto Mauricio se ha encargado de atender tareas asignadas por Jenry para mejorar el tema de control y seguimiento en ambiente de contingencia:\n- Renombrar las BD en pruebas y restaurar producción\n[25/08/2025]: Entre el viernes 22 y sabado 23 Mauricio realizo la homologaciòn y restauraciòn de las BD",
     "unit": "Alfa",
     "detail": "Se requiere realizar la homologación y restauración de las bases de datos en el servidor de pruebas de Imagine, con el fin de garantizar la disponibilidad y consistencia de la información para las validaciones correspondientes, según la solicitud presentada por fala.",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "23/08/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "Img_2025_007",
@@ -725,7 +1000,12 @@
     "observations": "[11/09/2025]: El 10 de septiembre se realizó el despliegue del servicio de Afiliaciones de Independientes en el ambiente de pruebas OnPremise\nFalta realizar pruebas iniciales en el primer servicio de 13 servicios.\n[18/09/2025]: Se culmina el desarrollo, falta que el Ministerio certifique funcionalidad.\n[08/10/2025]: Se terminan desarrollos del servicio SAT afiliaciones independientes",
     "unit": "Alfa",
     "detail": "Crear servicio del Ministerio de Salud y Protección Social de Afiliaciones Independientes",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "12/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 20,
+    "produccion": ""
   },
   {
     "id": "Img_2025_008",
@@ -738,7 +1018,12 @@
     "observations": "[15/09/2025]: El viernes 12 de septiembre se realizó el despliegue del servicio de Retractación de afiliaciones de Trabajadores Independientes en el ambiente de pruebas OnPremise\nFalta realizar pruebas\n[18/09/2025]: Se culmina el desarrollo, falta que el Ministerio certifique funcionalidad.\n[08/10/2025]: Se terminan desarrollos del servicio SAT retractacciones independientes",
     "unit": "Alfa",
     "detail": "Crear servicio del Ministerio de Salud y Protección Social de Retractación ",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "15/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 18,
+    "produccion": ""
   },
   {
     "id": "Img_2025_009",
@@ -751,7 +1036,12 @@
     "observations": "[15/09/2025]: El viernes 12 de septiembre se realizó el despliegue del servicio de Terminaciòn de afiliaciones de la ARL de Trabajadores Independientes en el ambiente de pruebas OnPremise\nFalta realizar pruebas\n[18/09/2025]: Se culmina el desarrollo, falta que el Ministerio certifique funcionalidad.\n[08/10/2025]: Se terminan desarrollos del servicio SAT terminacion de afiliacion independientes",
     "unit": "Alfa",
     "detail": "Crear servicio del Ministerio de Salud y Protección Social de Terminación de Afiliación",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "15/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 18,
+    "produccion": ""
   },
   {
     "id": "Img_2025_010",
@@ -764,7 +1054,12 @@
     "observations": "[18/09/2025]: El 17 de septiembre se creo el servicio de Traslado de ARL de Trabajadores Independientes. \nPendiente ajuste en el maestro de empleados.\n[08/10/2025]: Se terminan desarrollos en el servicio SAT para traslado de ARL independientes",
     "unit": "Alfa",
     "detail": "Crear servicio del Ministerio de Salud y Protección Social de Traslado de ARL",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "19/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 15,
+    "produccion": ""
   },
   {
     "id": "Img_2025_011",
@@ -777,7 +1072,12 @@
     "observations": "[18/09/2025]: El 17 de septiembre se creo el servicio de Cambio de Ocupación en Independientes Voluntarios de Trabajadores Independientes. \nPendiente ajuste en el maestro de empleados.\n[08/10/2025]: Se terminan desarrollos del servicio SAT cambio de ocupacion u oficio en independientes voluntarios",
     "unit": "Alfa",
     "detail": "Crear servicio del Ministerio de Salud y Protección Social de Cambio de Ocupación en Independientes Voluntarios",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "19/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 15,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_018",
@@ -790,7 +1090,12 @@
     "observations": "[22/09/2025]: El 19 de septiembre, Mauricio trabajo en la correcciòn del error Bad Request y se agrego un nuevo estado Anulado a flujos de pagos y auxilios funerarios.\nPendientes las pruebas por parte de Imagine para posterior entrega actualizaciones al cliente y certifiquen el ajuste.",
     "unit": "Alfa",
     "detail": "Se requiere crear un nuevo grupo para incluir los estados ANULADOS, en las gráficas del tablero de estadisticas",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "19/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_012",
@@ -803,7 +1108,12 @@
     "observations": "[22/09/2025]: Desarrollar formulario de consulta para servicios del Ministerio:\n- Consulta de trabajadores independientes de afiliaciòn activa a la ARL, incluyendo traslados y retractaciones de afiliaciòn.\n- Consulta de trabajadores independientes trasladables de ARL.\n[25/09/2025]: Entre los días 22 y 23 de septiembre, Mauricio ha trabajado en la consulta de independientes activos y en mora\n[26/09/2025]:El 25 de septiembre se trabajo en la consulta de Independiente afiliación activa ARL\nPendiente: Actualmente el servicio Consulta Trabajador Independiente  Mora ARL, no esta arrojando resultados. Ya fue notificado al área encargada para revisión.\n[08/10/2025]: Se termina la consulta de afiliaciones activas",
     "unit": "Alfa",
     "detail": "Desarrollar consultas de los servicios creados en SAT para independientes de afiliaciones activas",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 12,
+    "produccion": ""
   },
   {
     "id": "Img_2025_013",
@@ -816,7 +1126,12 @@
     "observations": "[22/09/2025]: Desarrollar formulario de consulta para servicios del Ministerio:\n- Consulta de trabajadores independientes de afiliaciòn activa a la ARL, incluyendo traslados y retractaciones de afiliaciòn.\n- Consulta de trabajadores independientes trasladables de ARL.\n[25/09/2025]: Entre los días 22 y 23 de septiembre, Mauricio ha trabajado en la consulta de independientes activos y en mora\n[26/09/2025]:El 25 de septiembre se trabajo en la consulta de Independiente afiliación activa ARL\nPendiente: Actualmente el servicio Consulta Trabajador Independiente  Mora ARL, no esta arrojando resultados. Ya fue notificado al área encargada para revisión.\n[08/10/2025]: Se termina la consulta de independiente en Mora ARL",
     "unit": "Alfa",
     "detail": "Desarrollar consultas de los servicios creados en SAT para independientes en Mora ARL",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 12,
+    "produccion": ""
   },
   {
     "id": "REN_2025_05",
@@ -829,7 +1144,12 @@
     "observations": "[26/09/2025]: El 25 de septiembre, se brinda soporte a Rentas, dando solución a una incidencia presentada en la parametrización de origen de archivos de Sustitucion con el parentesco Hijos.",
     "unit": "Alfa",
     "detail": "Validar y parametrizar los documentos en validacion documental para el nuevo origen Sustitucion, sin embargo, en el parentesco Hijos no mostraba informaciòn correcta",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "25/09/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_010",
@@ -842,7 +1162,12 @@
     "observations": "[03/10/2025]: El 02 de octubre, Mauricio valida incidencia en la lentitud o no cargue al editar en modulo de profesionales en el rol Gestor en pruebas.",
     "unit": "Alfa",
     "detail": "Se requiere validar el modulo de profesionales ya que en pruebas no carga para realizar el test correspondiente, adicional presenta lentitud en algunas funciones",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "02/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_019",
@@ -855,7 +1180,12 @@
     "observations": "[03/10/2025]: Se recibe caso reportado por el área, sobre un error de restricción de URL/Bad Request. Se proyecta que hoy Mauricio inicie soluciòn a estas incidencias presentadas.\n[06/10/2025]: El sabado 04 de octubre Mauricio con apoyo de Jairo Niño, resuelve la incidencia presentada",
     "unit": "Alfa",
     "detail": "Validar error de restricción de URL/Bad Request",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "04/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_020",
@@ -868,7 +1198,12 @@
     "observations": "[03/10/2025]: Se recibe caso reportado por el área, sobre notificación de correos dobles en el flujo de pagos. Se proyecta que hoy Mauricio inicie soluciòn a estas incidencias presentadas.\n[06/10/2025]: El sabado 04 de octubre Mauricio con apoyo de Jairo Niño, resuelve la incidencia presentada",
     "unit": "Alfa",
     "detail": "Validar error de generación de doble correo en flujo de pagos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "04/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
   },
   {
     "id": "Img_2025_014",
@@ -881,7 +1216,12 @@
     "observations": "[03/10/2025]: Hoy se creará el plan de trabajo para restaurar las bases de datos de producción en el ambiente de pruebas., Esto incluyendo la revisión de tablas, funciones, procedimientos y disparadores (triggers).\n[06/10/2025]: El 04 de octubre se procedió con la restauración de la base de datos de pruebas. Se realizó la homologación de tablas, funciones, procedimientos y demás elementos.\nQueda pendiente realizar pruebas funcionales de las aplicaciones",
     "unit": "Alfa",
     "detail": "Se requiere realizar la homologación y restauración de las bases de datos en el servidor de pruebas de Imagine, con el fin de garantizar la disponibilidad y consistencia de la información para las validaciones correspondientes, según la solicitud presentada por Alfa",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "04/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_021",
@@ -894,7 +1234,12 @@
     "observations": "[08/10/2025]: Entre 06 y 07 de octubre, se crea modulo para el requerimiento de notificaciòn Objeciones y Devoluciones, asociado a casos sincronizados con la vista de inventario.\nPendiente: Crear tarea programada para que se ejecute a diario de lunes a viernes a las 4 pm.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "07/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_022",
@@ -907,7 +1252,12 @@
     "observations": "[08/10/2025]: El 07 de octubre se agregan los campos de fecha cierre y fecha de notificaciòn, solicitados por el área.\nPendientes: Automatizar envio de informe y correr sincronizacion al cargar el Excel",
     "unit": "Alfa",
     "detail": "Se requiere agregar campos solicitados por el cliente",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "07/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "Img_2025_015",
@@ -920,7 +1270,12 @@
     "observations": "[08/10/2025]: Entre 06 y 07 de octubre, se realizó el despliegue del servicio de Reporte de mora, acuerdos de pago e incumplimiento de Independientes en el ambiente de pruebas OnPremise",
     "unit": "Alfa",
     "detail": "Crear servicio del Ministerio de Salud y Protección Social de Reporte en Mora",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "07/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "Img_2025_016",
@@ -933,7 +1288,12 @@
     "observations": "[08/10/2025]: Entre 06 y 07 de octubre, se desarrolla formulario de consulta para servicios del Ministerio del detalle de afiliaciones activas en la ARL",
     "unit": "Alfa",
     "detail": "Desarrollar consultas de los servicios creados en SAT para independientes de detalle de afiliaciones activas",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "07/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "Img_2025_017",
@@ -946,7 +1306,12 @@
     "observations": "[08/10/2025]: Entre 06 y 07 de octubre, se desarrolla formulario de consulta para servicios del Ministerio de Trabajadores Independientes Trasladables de ARL.",
     "unit": "Alfa",
     "detail": "Desarrollar consultas de los servicios creados en SAT para independientes de trabajadores trasladables",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "07/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_023",
@@ -959,7 +1324,12 @@
     "observations": "[14/10/2025]: El 08 de octubre Mauricio implementò la opcion de tarea programada en el modulo de Objeciones y Devoluciones, para notificación diaria a las 4 pm",
     "unit": "Alfa",
     "detail": "Implementar tarea programada para envío de notificaciones",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "09/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_024",
@@ -972,7 +1342,12 @@
     "observations": "[14/10/2025]: El 09 de octubre, Mauricio desarrolla el modulo de indicadores de pendientes, el cual muestra los casos sin resolver, clasificados por rangos de tiempo: Del dia 1 al dia 8, y mas de 8 dias. Este informe se presenta por usuario",
     "unit": "Alfa",
     "detail": "Se implementa modulo para mostrar los casos sin resolucion",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "10/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_018",
@@ -985,7 +1360,12 @@
     "observations": "[14/10/2025]: El viernes 10 de octubre, se notifico al area de TI Alfa, sobre la imposobilidad de sincronizar el servidor de produccion con el servidor de contingencia",
     "unit": "Alfa",
     "detail": "Sincronizacion BD",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "10/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_011",
@@ -998,7 +1378,12 @@
     "observations": "[14/10/2025]: El 10 de octubre, Mauricio realiza validacion y ajustes correspondientes en la incidencia presentada en cuanto al cargue de documentos como hoja de vida y licencia en la creaciòn de un profesional.",
     "unit": "Alfa",
     "detail": "Se requiere validar el cargue de documentos en la creacion del profesional, ya que no quedan adjuntos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "10/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_025",
@@ -1011,7 +1396,12 @@
     "observations": "[15/10/2025]: El 14 de octubre se agrega opción para exportar informe.\nPendiente definir por el área que campos se mostrarán, ya que actualmente exporta todos los datos",
     "unit": "Alfa",
     "detail": "Crear export de detalles",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "14/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_019",
@@ -1024,7 +1414,12 @@
     "observations": "[15/10/2025]: El 14 de octubre se realiza ajuste a la vista de búsqueda de los servicios SAT Independientes",
     "unit": "Alfa",
     "detail": "Ajuste en vista",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "14/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_026",
@@ -1037,7 +1432,12 @@
     "observations": "[15/10/2025]: El 14 de octubre se crea tarea programada para la sincronización de inventarios cada media hora.",
     "unit": "Alfa",
     "detail": "Crear tarea programada",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "14/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_027",
@@ -1050,7 +1450,12 @@
     "observations": "[17/10/2025]: El 15 de octubre Se refactorizó el módulo de procesos jurídicos, implementando un botón para la sincronización de información",
     "unit": "Alfa",
     "detail": "Se requiere crear opción de sincronizaciòn de información",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "15/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_028",
@@ -1063,7 +1468,12 @@
     "observations": "[17/10/2025]: Actualmente se esta trabajando en el cargue masivo de procesos juridicos.\n[20/10/2025]: Se realiza la corrección en el cargue masivo, para evitar errores",
     "unit": "Alfa",
     "detail": "Ajustar el cargue masivo",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "20/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_029",
@@ -1076,7 +1486,12 @@
     "observations": "[17/10/2025]: Al finalizar el proceso de sincronización (Anexo 1), se agrogo la funcionalidad de exportar un reporte detallado. Este reporte ahora incluye el conteo de cuantos casos de procesos juridicos se tienen por aplicación (Sipren Plus o Sipren Tierra)",
     "unit": "Alfa",
     "detail": "Se requiere export con el  reporte de casos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "17/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_030",
@@ -1089,7 +1504,12 @@
     "observations": "[20/10/2025]: La solicitud original requeria ejecutar la tarea todos los viernes a las 6 pm con el ajuste al día anterior si era festivo, lo cual ha cambiado.  Ahora se requiere la ejecución diaria, de lunes a viernes a las 6pm",
     "unit": "Alfa",
     "detail": "Se requiere corregir programación de la tarea.",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "22/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_029_1",
@@ -1102,7 +1522,12 @@
     "observations": "[17/10/2025]: Al finalizar el proceso de sincronización (Anexo 1), se agrogo la funcionalidad de exportar un reporte detallado. Este reporte ahora incluye el conteo de cuantos casos de procesos juridicos se tienen por aplicación (Sipren Plus o Sipren Tierra)",
     "unit": "Alfa",
     "detail": "Se requiere export con el  reporte de casos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "17/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_031",
@@ -1115,7 +1540,12 @@
     "observations": "[24/10/2025]: Se implementó la opción de agregar indicadores de gestión",
     "unit": "Alfa",
     "detail": "Se requiere agregar ANS",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "23/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_032",
@@ -1128,7 +1558,12 @@
     "observations": "[24/10/2025]: Se ajusto la tarea programada para jecutar diariamente de lunes a viernes y días hábiles.",
     "unit": "Alfa",
     "detail": "Ajustar tarea programada para envío de notificaciones",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "23/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_033",
@@ -1141,7 +1576,12 @@
     "observations": "[29/10/2025]: Se avanza en el análisis y diseño del mòdulo requerido por el área de previsionales.\n[05/11/2025]: Se avanzo en la construcción de validaciones para consolidar los valores a pagar.\nSe finaliza el modulo para cargar el formato de prefactura y visualizar los casos pendientes de pago.\n[07/11/2025]: Se crea grid como estaba la vista.\nPendiente validaciòn para pagos.\n[08/11/2025]: Se continua trabajando en mejoras del diseño y visualizaciòn de datos y se genera el export del informe de honorarios juridicos a pagar.\n[10/11/2025]: Con ayuda del jefe de unidad se valida y se verifican las validaciones que se deben tener en cuenta para los casos que van a ser objetados y pagados, revisando que las reglas si cumplan con la necesidad del cliente. Se reafina la vista y el grid.\n[11/11/2025]: Se procede a integrar opción de edición directamente en la grid para los casos que no se sabe si se van a objetar o a pagar. Se incluye un combo con estado de \"PAGAR\" Y  \"OBJETAR\".\n[12/11/2025]: Se termina de ajustar la funcionalidad para que el grid se pueda pagar y objetar, se agrega campo de observaciones y se agrega validaciones al momento de seleccionar el combo.\nSe crea funcionalidad de cierre masivo.\nEl módulo se divide en dos pestañas: gestión de casos y el histórico.\n[13/11/2025]: Se continua con la creacion de la pestaña de historico, donde se debe visualizar los casos cerrados y permitir exportar los formatos que se reportan a cada una de las areas correspondientes como PLUS, SIPREN y Tesoreria.\nSe sostiene reunión con el área de previsionales para mostar los avances, pendiente por parte del cliente validar la información de los formatos si están acordes con el proceso.\n[14/11/2025]: Se termina opciòn de històrico de honorarios jurìdicos, con cada una de las funcionalidades requeridas como descargar los formatos de SIPREN, Plus y Tesorerìa, se agrego funcionalidad de notificar cuando se hace el cierre manual.\n[18/11/2025]: Reuniòn con el cliente para probar el mòdulo, realizando el cargue de la prefactura, cierre y gestiòn del proceso. De esta reunion surgieron recomendaciones y ajustes:\n1. Que al descargar la prefactura baje tal cual como sube y permita agregar el estado \"OBJETAR\" y \"PAGAR\", que se agregue la causal de devoluciòn.\n2. Que cuando se cargue nuevamente cambie el estado y la causal masivamente.\n[19/11/2025]: Se continua realizando los ajustes solicitados en la reuniòn.\nSe realiza sesiòn y se presenta nuevamente el mòdulo y genero issu en el cargue. Donde sale consumo de memoria. Se revisa el problema el cual se sigio presnetando hasta el 20 de noviembre, por lo que se requiriò una refactorizaciòn en el cargue..\n[24/11/2025]: Se estuvo probando el modulo de honorarios juridicos, surgieron ajustes y control de cambios para el modulo.\n[25/11/2025]: Entre el 24 y 25 se diò gestiòn a estos ajustes de incidencia, los de control de cambio se adelantan en un 70%",
     "unit": "Alfa",
     "detail": "Implementar módulo de pago de honorarios juridicos del área Previsionales",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "15/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 22,
+    "produccion": ""
   },
   {
     "id": "REN_2025_06",
@@ -1154,7 +1594,12 @@
     "observations": "[29/10/2025]: Se soluciona la incidencia reportada en la validación documental para la tipificación DDEP",
     "unit": "Alfa",
     "detail": "Validar y parametrizar los documentos en validacion documental en tipificación de documentos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "29/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "REN_2025_07",
@@ -1167,7 +1612,12 @@
     "observations": "[05/11/2025]:Se brinda apoyo a rentas vitalicias en cuanto a la validación documental y unos errores que se estaban presentando con una tipología.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "31/10/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_012",
@@ -1180,7 +1630,12 @@
     "observations": "[05/11/2025]: Se brinda soporte en ALFASST, para la definición de actividades transversales",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "05/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_020",
@@ -1193,7 +1648,12 @@
     "observations": "[05/11/2025]: Se brinda soporte en el ambiente de pruebas de Imaginex para el proceso masivo de certificados",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "05/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_021",
@@ -1206,7 +1666,12 @@
     "observations": "[06/11/2025]: Se clona maquina local y se genera export por solicitud de Wilson Aponte, para montar el ambiente en su maquina virtual.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "06/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_022",
@@ -1219,7 +1684,12 @@
     "observations": "[06/11/2025]: El dìa 06 de noviembre Mauricio no tuvo conexiòn debido al traslado de equipo fisico a otro punto. Por tanto, no pudo avanzar en requerimientos.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "06/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_013",
@@ -1232,7 +1702,12 @@
     "observations": "[07/11/2025]: Se brinda soporte a SST en el módulo Alfasst ya que presentaba incidencia en la creaciòn de una OD en el cronograma",
     "unit": "Alfa",
     "detail": "Validar incidencia en creaciòn de cronograma",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "07/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "REN_2025_08",
@@ -1245,7 +1720,12 @@
     "observations": "[07/11/2025]: Se brinda soporte a Rentas Vitalicias ya que estaba presentando error en el cargue de unas imagenes.",
     "unit": "Alfa",
     "detail": "",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "07/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_023",
@@ -1258,7 +1738,12 @@
     "observations": "[09/11/2025]: Se realiza despliegue de los modulos Inventario, Devoluciòn y Objeciones y ANS Devoluciones y Objeciones. El proceso arranco a las 11:00 am y finalizó a las 3:00 pm",
     "unit": "Alfa",
     "detail": "Realizar paso a producciòn de 3 requerimientos de Previsionales",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "09/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
   },
   {
     "id": "Img_2025_024",
@@ -1271,20 +1756,30 @@
     "observations": "[11/11/2025]: Se desplegó en el ambiente de pruebas de Imagine, nueva funcionalidad de generaciòn de certificados masivos.",
     "unit": "Alfa",
     "detail": "Subir funcionalidad de certificados masivos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "11/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_014",
     "title": "Soporte a Seguridad y Salud en el Trabajo - SST",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "13/11/2025",
-    "endDate": "",
-    "observations": "[13/11/2025]: El área de SST reportan que necesitan eliminar unos archivos que se adjuntaron a la OS amp-118-2025, que no corresponden a la misma. Se procede a dar gestión y solución.\nPendiente novedad que al momento del usuario eliminar no borró y lo lleva a la pestaña de adjunto.",
+    "endDate": "18/01/2026",
+    "observations": "[13/11/2025]: El área de SST reportan que necesitan eliminar unos archivos que se adjuntaron a la OS amp-118-2025, que no corresponden a la misma. Se procede a dar gestión y solución.\nPendiente novedad que al momento del usuario eliminar no borró y lo lleva a la pestaña de adjunto.\n[18/01/2026]: Gestiòn de Archivos: Se ejecutó el borrado masivo de las imágenes solicitadas en los repositorios correspondientes.",
     "unit": "Alfa",
     "detail": "Se requiere eliminar imagenes",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "18/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 47,
+    "produccion": ""
   },
   {
     "id": "REN_2025_09",
@@ -1297,7 +1792,12 @@
     "observations": "[13/11/2025]: Solicitan habilitar gestión de documentos para que muestre todos los documentos de todos los beneficiarios y no solo prioridad de unas rentas en particular, para unos temas de auditoría. Ya finalizada la auditoría se realizó actualización y reversión del ajuste.",
     "unit": "Alfa",
     "detail": "Se requiere un ajuste para que muestre todos los beneficiarios de las rentas y no solo prioridad",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "13/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_025",
@@ -1310,7 +1810,12 @@
     "observations": "[18/11/2025]: Se brinda soporte a Wilson Aponte para bajar cambios de este modulo nuevo en producciòn y en pruebas. Durante el proceso se presento inconveniente con el repositorio debido a connection time out.",
     "unit": "Alfa",
     "detail": "Se requiere soporte para despliegue a producciòn y pruebas del modulo certificados masivos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "18/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_015",
@@ -1323,7 +1828,12 @@
     "observations": "[19/11/2025]: El àrea reporta lentitud en el proceso de auditoria de prefactura, donde se generaba un error 500. Este error indicaba que el servidor se quedo sin espacio, lo que impedia finalizar o cerrar OS, se procede a dar soluciòn reubicando los soportes y actas a un disco con mas capacidad.\n",
     "unit": "Alfa",
     "detail": "Validar incidencia reportada por el àrea en cierre de ordenes de servicio",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "19/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_016",
@@ -1336,7 +1846,12 @@
     "observations": "[20/11/2025]: Nos reportan incidencia en el cargue de los soportes por parte de los proveedores, por lo cual se procediò a corregir el tema debido a la contingencia reportada el dia anterior, no se tuvo en cuenta los permisos de carpeta, se corrige y se notifica al cliente.",
     "unit": "Alfa",
     "detail": "Validar incidencia reportada por el àrea para el cargue de documentos por parte de los proveedores",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "20/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_034",
@@ -1349,7 +1864,12 @@
     "observations": "[20/11/2025]: Se refactoriza script de anexo 1, acorde a lo enviado por el àrea para ser ajustadocon base a la lògica solicitada. Se realiza el ajuste pertinente , sin embargo se presenta inconsistencia con la informaciòn, en espera de respuesta del àrea para finalizar el tema.",
     "unit": "Alfa",
     "detail": "Se requiere reajustar la vista del requerimiento",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "31/01/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 49,
+    "produccion": ""
   },
   {
     "id": "Img_2025_026",
@@ -1362,7 +1882,12 @@
     "observations": "[21/11/2025]: Se brindo apoyo para el cambio de contraseña a la Doc Claudia Vargas, ya que generaba error al redirigirla en la opciòn de cambiar la contraseña",
     "unit": "Alfa",
     "detail": "Se requiere validaciòn en cambio de contraseña, arroja error",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_027",
@@ -1375,7 +1900,12 @@
     "observations": "[20/11/2025]: Se monta caso a tecnologia notificando que nos encontramos sin conexiòn con el repositorio. En horas de la tarde en sesiòn con Jenry Henao, nos manifesto que este inconveniente se presento debido a una falla en github, lo que impedia realizar Pull. Una vez restabecido el servicio, se procediò a desplegar los cambios en pruebas y producciòn.",
     "unit": "Alfa",
     "detail": "Se requiere soporte para despliegue a producciòn y pruebas del modulo certificados masivos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "20/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "Img_2025_028",
@@ -1388,7 +1918,12 @@
     "observations": "[25/11/2025]: Llega solicitud que el envio masivo de incumplimiento esta llegando con fecha de pago incorrecta por lo cual nos solicitan corregir esto con base a los días hábiles de acuerdo a los rangos de los últimos dos dígitos del nit.\nSe está analizando el codigo que realiza el proceso o si no aplicar funcionalidad para obtener los días hábiles de acuerdo a las reglas establecidas.",
     "unit": "Alfa",
     "detail": "Se require validar fechas de envio de notificaciones de aviso de incumplimiento",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "26/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_035",
@@ -1401,20 +1936,30 @@
     "observations": "[26/11/2025]: En la sesión tenia con el cliente surgieron algunos temas de mejoras, se procedió a realizar los ajustes requeridos y se solucionaron los issus reportados.  \n[28/11/2025]: se realiza sesión para revisar los temas propuestos en las sesiones pasadas, se realizan las pruebas satisfactoriamente, a excepción de dos cosas que no realizo cierre del mes de junio y se debe ajustar el campo rubro ya que hay formatos donde llega item-rubro. \n[04/12/2025]: Se tuvo reunión con el cliente para la realización de pruebas por parte de la funcionaria que realiza los pagos, y pidieron ajuste en los formatos de plus, sipren y tesoreria.\nSe realizo el respectivo a ajuste. ",
     "unit": "Alfa",
     "detail": "Validar incidencias y cambios de control que surgieron en sesiòn de pruebas UAT",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "27/11/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 7,
+    "produccion": ""
   },
   {
     "id": "Img_2025_029",
     "title": "Notificaciòn de Alto Flujo de Memoria Servidor de Pruebas",
     "assigned": "MAURICIO",
-    "state": "Pausado",
-    "progress": 0,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "28/11/2025",
-    "endDate": "",
-    "observations": "[28/11/2025]: Se valida el servidor para identificar que proceso esta generando alto consumo de memoria y no se lograr evidenciar causa. Se solicita a tecnología que por favor que cuando se presente alto consumo, notificarnos con pantallazo del proceso que lo causa.",
+    "endDate": "15/01/2026",
+    "observations": "[28/11/2025]: Se valida el servidor para identificar que proceso esta generando alto consumo de memoria y no se lograr evidenciar causa. Se solicita a tecnología que por favor que cuando se presente alto consumo, notificarnos con pantallazo del proceso que lo causa.\n[15/01/2026]: Se realizó la depuración de logs y la deshabilitación de tareas obsoletas. Asimismo, se notificó al área de Tecnología la necesidad de aumentar la capacidad del servidor de contingencia.",
     "unit": "Alfa",
     "detail": "Validar consumo de memoria",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "15/01/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 35,
+    "produccion": ""
   },
   {
     "id": "SST_2025_017",
@@ -1427,7 +1972,12 @@
     "observations": "[01/12/2025]: Se requiere que el plan de trabajo se pueda agendar las ordene de servicio por periodo y ajustar tarifa para que tenga parametrización mas como lo es temática.  El dia de hoy se analizara el requerimiento con el jefe de unidad.\n[02/12/2025]: Se estuvo analizando este nuevo ajuste el módulo de plan de trabajo, donde se requieren varios ajustes al módulo en cuanto a parámetros, productos, cronogramas y validar si no afecta modulo de profesionales.   \n[03/12/2025]: Se realizó acompañamiento al jefe de unidad en la construcción del mockup del modulo de productos  y afinando estos nuevos ajustes.\nPosterior se tuvo reunión con el cliente, para mostrar los mockups de cómo va ir quedando los modulo y despejar dudas frente a estos nuevos cambios.",
     "unit": "Alfa",
     "detail": "Validar cambios que se requieren para la elaboraciòn de Cronograma, generaciòn de OD",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "05/12/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
   },
   {
     "id": "Img_2025_030",
@@ -1440,7 +1990,12 @@
     "observations": "[03/12/2025]: Se presenta issu en el cargue de archivos debido a que el sistema tiene limitado el cargue 2MB, por lo tanto, de aumenta tamaño a 5MB ",
     "unit": "Alfa",
     "detail": "Validar consumo de memoria",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "03/12/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_036",
@@ -1453,7 +2008,12 @@
     "observations": "[03/12/2025]: Solicitan asignar nuevos permisos a dos integrantes a los modulos que actualmente maneja Blanca.",
     "unit": "Alfa",
     "detail": "Asignar permisos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "03/12/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_018",
@@ -1466,7 +2026,12 @@
     "observations": "[05/12/2025]: Se estuvo ajustando el módulo de productos, para que en los parametros de temáticas se puede asociar a un programa.\nPara las actividades se les puede asociar un valor.",
     "unit": "Alfa",
     "detail": "Validar parámetros",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "05/12/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_037",
@@ -1479,72 +2044,102 @@
     "observations": "[05/12/2025]: Nos notifican que esta teniendo problemas con el cambio de contraseña, se realiza refactorización de url y se le notifica al cliente. ",
     "unit": "Alfa",
     "detail": "Validar cambios de contraseña",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "05/12/2025",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   },
   {
     "id": "SST_2025_019",
     "title": "Plan de Trabajo ALFASST - Productos",
     "assigned": "MAURICIO",
     "state": "En Proceso",
-    "progress": 70,
+    "progress": 30,
     "startDate": "10/12/2025",
     "endDate": "",
-    "observations": "[10/12/2025] y [11/12/2025]:  Se inició el trabajo de refactorización del módulo de productos, enfocándose en todo el proceso de creación y modificación. Esto se debe al cambio en la estructura de datos: la anterior (programa, actividades, categoría y concepto) fue reemplazada por la nueva (programa, temática y actividades).\n[15/12/2025], [17/12/2025] y [18/12/2025]: Continúa el proceso de refactorización en la creación y modificación de productos. Se está adaptando toda la lógica a la nueva estructura: pasando del modelo anterior (programa, actividades, categoría y concepto) al nuevo esquema de programa, temática y actividades.",
+    "observations": "[10/12/2025] y [11/12/2025]:  Se inició el trabajo de refactorización del módulo de productos, enfocándose en todo el proceso de creación y modificación. Esto se debe al cambio en la estructura de datos: la anterior (programa, actividades, categoría y concepto) fue reemplazada por la nueva (programa, temática y actividades).\n[15/12/2025], [17/12/2025] y [18/12/2025]: Continúa el proceso de refactorización en la creación y modificación de productos. Se está adaptando toda la lógica a la nueva estructura: pasando del modelo anterior (programa, actividades, categoría y concepto) al nuevo esquema de programa, temática y actividades.\n\n[26/01/2026]: Reestructuración de Plan de Trabajo: Se trabaja en la adaptación del cronograma a la nueva estructura (Programas, Temáticas y Actividades). Esto conlleva la refactorización integral de los módulos de Parámetros, Productos, Proveedores, Profesionales y Órdenes de Servicio.",
     "unit": "Alfa",
     "detail": "Validar Productos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 35,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_038",
     "title": "Modulo Honorarios Jurídicos - Ajuste",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "10/12/2025",
-    "endDate": "",
-    "observations": "[16/12/2025]: Se completaron los siguientes requerimientos:\n\n        Parámetro de factura: Creación del campo para observaciones (solo modificable en periodo vigente). (100%)\n\n        Plantilla SIPREN: Ajuste de formato (sin títulos, formatos de campo ni totales). (100%)\n\n        Plantilla PLUS: Ajuste de formato (sin formatos de campo ni totales). (100%)\n\n        Formato CSV: Configuración de salida SIPREN con separador \";\" (punto y coma). (100%)\n\n        Informe Tesorería: Se eliminó la validación del número de giro para permitir la gestión total de la información. (100%)\n\n        Investigaciones: Análisis de viabilidad para control de cambios o Fase II. (PENDIENTE)\n\n        Notificación de Cierre: Ajuste de la plantilla de correo (aplicativo, cantidad y valor). \n\n[18/12/2025]: Se llevó a cabo una sesión con el cliente para realizar la revisión y validación de los ajustes desarrollados en el módulo de Honorarios Jurídicos.\n\n[19/01/2026]: Se realizó exitosamente el despliegue del módulo en el ambiente de producción. Actualmente, se está a la espera de que el cliente envíe el archivo consolidado con la información histórica hasta el cierre del año 2025",
+    "endDate": "23/01/2026",
+    "observations": "[16/12/2025]: Se completaron los siguientes requerimientos:\n\n        Parámetro de factura: Creación del campo para observaciones (solo modificable en periodo vigente). (100%)\n\n        Plantilla SIPREN: Ajuste de formato (sin títulos, formatos de campo ni totales). (100%)\n\n        Plantilla PLUS: Ajuste de formato (sin formatos de campo ni totales). (100%)\n\n        Formato CSV: Configuración de salida SIPREN con separador \";\" (punto y coma). (100%)\n\n        Informe Tesorería: Se eliminó la validación del número de giro para permitir la gestión total de la información. (100%)\n\n        Investigaciones: Análisis de viabilidad para control de cambios o Fase II. (PENDIENTE)\n\n        Notificación de Cierre: Ajuste de la plantilla de correo (aplicativo, cantidad y valor). \n\n[18/12/2025]: Se llevó a cabo una sesión con el cliente para realizar la revisión y validación de los ajustes desarrollados en el módulo de Honorarios Jurídicos.\n\n[19/01/2026]: Se realizó exitosamente el despliegue del módulo en el ambiente de producción. Actualmente, se está a la espera de que el cliente envíe el archivo consolidado con la información histórica hasta el cierre del año 2025\n\n[23/01/2026]: Tras el despliegue en producción, se recibió el consolidado histórico hasta el año 2025. Se realizó el cargue completo de la información en el sistema con el apoyo del jefe de unidad.",
     "unit": "Alfa",
     "detail": "Validar de pagos y formatos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "19/01/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 33,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_039",
     "title": "Soporte y Gestòn",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 5,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "12/12/2025",
-    "endDate": "",
-    "observations": "[12/12/2025]: Se asignarán permisos de administrador a los funcionarios solicitados por el área de previsionales.\n\n        Se realizará una reunión con el jefe de unidad para analizar y contextualizar temas solicitados.",
+    "endDate": "21/01/2026",
+    "observations": "[12/12/2025]: Se asignarán permisos de administrador a los funcionarios solicitados por el área de previsionales.\n\n        Se realizará una reunión con el jefe de unidad para analizar y contextualizar temas solicitados.\n[21/01/2026]: Se completó la asignación de roles de usuario y se realizó la validación de acceso junto con el cliente.",
     "unit": "Alfa",
     "detail": "Validar permisos",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/01/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 29,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_040",
     "title": "Soporte Previsionales - Modulo Dev y Objeciones",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "18/12/2025",
-    "endDate": "",
-    "observations": "[18/12/2025]: Notificaciones: Se ajustó el envío masivo para que opere exclusivamente en días hábiles (lunes a viernes).\n\n        Exportación: Se corrigió el generador de archivos (export); el despliegue a producción queda pendiente.\n\n        Inventario: Se inició la validación de casos duplicados asociados al mismo siniestro.\n",
+    "endDate": "21/01/2026",
+    "observations": "[18/12/2025]: Notificaciones: Se ajustó el envío masivo para que opere exclusivamente en días hábiles (lunes a viernes).\n\n        Exportación: Se corrigió el generador de archivos (export); el despliegue a producción queda pendiente.\n\n        Inventario: Se inició la validación de casos duplicados asociados al mismo siniestro.\n\n[21/01/2026]: Se aplicaron los ajustes finales al módulo y se realizó el despliegue exitoso en el ambiente de producción.",
     "unit": "Alfa",
     "detail": "Validar incidencias reportadas para el módulo de Devoluciones y Objeciones",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "21/01/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 25,
+    "produccion": ""
   },
   {
     "id": "PRV_2025_041",
     "title": "Cálculo de Intereses",
     "assigned": "MAURICIO",
-    "state": "En Proceso",
-    "progress": 40,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "13/01/2026",
-    "endDate": "",
-    "observations": "[13/01/2026] - [19/01/2026]: Se está trabajando en el desarrollo de un nuevo requerimiento que permite la carga masiva de información desde archivos Excel para procesar y ejecutar los cálculos de valor de mesada correspondientes a cada periodo.",
+    "endDate": "22/01/2026",
+    "observations": "[13/01/2026] - [19/01/2026]: Se está trabajando en el desarrollo de un nuevo requerimiento que permite la carga masiva de información desde archivos Excel para procesar y ejecutar los cálculos de valor de mesada correspondientes a cada periodo.\n[22/01/2026]: Se desarrolló el requerimiento para la carga de archivos Excel y el posterior cálculo del valor de la mesada por periodo. El módulo fue finalizado y entregado exitosamente al cliente.",
     "unit": "Alfa",
     "detail": "Se requiere opciòn para cargue de archivos excel",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "23/01/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 8,
+    "produccion": ""
   },
   {
     "id": "Img_2025_031",
@@ -1557,6 +2152,11 @@
     "observations": "[19/01/2026]: Se completó el despliegue del módulo en el ambiente de pruebas. El proceso queda pendiente únicamente de la ejecución y validación de las pruebas por parte de los interesados.",
     "unit": "Alfa",
     "detail": "Subir al ambiente de pruebas el desarrollo",
-    "visible": true
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "19/01/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   }
 ]

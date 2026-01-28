@@ -1,332 +1,133 @@
 import pandas as pd
 import json
 import re
-def safe_value(value):
-    if pd.isna(value):
-        return ""
-    return str(value).strip()
+
+
 def parse_visible(value):
     if pd.isna(value):
         return False
-    
+
     value = str(value).strip().lower()
 
     if value in ["true", "verdadero", "1", "si", "sí", "y", "yes"]:
         return True
     if value in ["false", "falso", "0", "no", "n"]:
         return False
-    
+
     return False
 
-def format_dates_in_observations(text: str) -> str:
-    """
-    Encuentra fechas en formato DD/MM/YYYY y las encierra entre corchetes
-    """
+
+def format_dates_in_observations(text):
     if not text or pd.isna(text):
         return ""
-    
-    # Patrón para fechas DD/MM/YYYY
+
     pattern = r'\b(\d{1,2}/\d{1,2}/\d{4})\b'
-    
-    # Reemplazar fechas encontradas encerrándolas en corchetes
-    formatted_text = re.sub(pattern, r'[\1]', str(text))
-    
-    return formatted_text
+    return re.sub(pattern, r'[\1]', str(text))
+
 
 def excel_to_json_array(archivo_excel):
-    """
-    Convierte un archivo Excel a un arreglo de objetos JSON
-    Mapeo de columnas:
-    - id: Columna B
-    - title: Columna C  
-    - assigned: Columna A
-    - state: Columna F
-    - progress: Columna G
-    - startDate: Columna J
-    - endDate: Columna L
-    - observations: Columna P
-    - unit: 'Bolivar' (valor fijo)
-    - detail: Columna D
-    - visible: Columna Q
-    - Fecha compromiso cliente: Columna N
-    """
-    
+
     try:
-        # Leer la primera hoja del Excel
         df = pd.read_excel(archivo_excel)
-        
-        print(f"✓ Archivo Excel leído correctamente")
-        print(f"  Dimensiones: {df.shape[0]} filas × {df.shape[1]} columnas")
-        print(f"  Columnas disponibles: {list(df.columns)}")
-        
-        # Crear lista para almacenar los objetos JSON
+
+        print("✓ Archivo Excel leído correctamente")
+        print(f"Dimensiones: {df.shape[0]} filas × {df.shape[1]} columnas")
+        print("Columnas:", list(df.columns))
+
         json_array = []
-        
-        # Recorrer cada fila (saltando la cabecera que ya fue procesada por pandas)
+
         for index, row in df.iterrows():
-            # Formatear fechas al formato DD/MM/YYYY
-            start_date = ""
-            end_date = ""
 
-            fecha_estimada_entrega = ""
-            fecha_compromiso_cliente = ""
-            fecha_produccion = ""
-             # Inicializar variables numéricas
+            # ================= PROGRESS (UNICO Y CORRECTO) =================
             progress_val = 0
-            dias_estimados = 0
-            dias_total = 0
 
-            # Procesar startDate
-            if pd.notna(row.iloc[9]):
-                try:
-                    if isinstance(row.iloc[9], pd.Timestamp):
-                        start_date = row.iloc[9].strftime("%d/%m/%Y")
-                    else:
-                        fecha_temp = pd.to_datetime(str(row.iloc[9]).strip(), errors='coerce')
-                        if pd.notna(fecha_temp):
-                            start_date = fecha_temp.strftime("%d/%m/%Y")
-                except (ValueError, TypeError):
-                    start_date = ""
-            
-            # Procesar endDate
-            if pd.notna(row.iloc[11]):
-                try:
-                    if isinstance(row.iloc[11], pd.Timestamp):
-                        end_date = row.iloc[11].strftime("%d/%m/%Y")
-                    else:
-                        fecha_temp = pd.to_datetime(str(row.iloc[11]).strip(), errors='coerce')
-                        if pd.notna(fecha_temp):
-                            end_date = fecha_temp.strftime("%d/%m/%Y")
-                except (ValueError, TypeError):
-                    end_date = ""
+            if "% Avance" in df.columns:
+                valor = row["% Avance"]
+            else:
+                valor = row.iloc[6]
 
-                    # Procesar fechaEstimadaEntrega (columna 10)
-            if pd.notna(row.iloc[10]):
+            if pd.notna(valor):
                 try:
-                    if isinstance(row.iloc[10], pd.Timestamp):
-                        fecha_estimada_entrega = row.iloc[10].strftime("%d/%m/%Y")
-                    else:
-                        fecha_temp = pd.to_datetime(str(row.iloc[10]).strip(), errors='coerce')
-                        if pd.notna(fecha_temp):
-                            fecha_estimada_entrega = fecha_temp.strftime("%d/%m/%Y")
-                except (ValueError, TypeError):
-                    fecha_estimada_entrega = ""
+                    num = float(str(valor).replace("%", "").strip())
+                    
 
-                # Procesar fechaCompromisoCliente (columna 13)
-            if pd.notna(row.iloc[13]):
-                try:
-                    if isinstance(row.iloc[13], pd.Timestamp):
-                        fecha_compromiso_cliente = row.iloc[13].strftime("%d/%m/%Y")
+                    if num <= 1:
+                        progress_val = int(num * 100)
                     else:
-                        fecha_temp = pd.to_datetime(str(row.iloc[13]).strip(), errors='coerce')
-                        if pd.notna(fecha_temp):
-                            fecha_compromiso_cliente = fecha_temp.strftime("%d/%m/%Y")
-                except (ValueError, TypeError):
-                    fecha_compromiso_cliente = ""
-
-                                # Procesar PRODUCCION (columna 15)
-            if pd.notna(row.iloc[15]):
-                try:
-                    if isinstance(row.iloc[15], pd.Timestamp):
-                        fecha_produccion = row.iloc[15].strftime("%d/%m/%Y")
-                    else:
-                        fecha_temp = pd.to_datetime(str(row.iloc[15]).strip(), errors='coerce')
-                        if pd.notna(fecha_temp):
-                            fecha_produccion = fecha_temp.strftime("%d/%m/%Y")
-                except (ValueError, TypeError):
-                    fecha_produccion = ""
-
-                    # Procesar progress (manejar formato de porcentaje)
-                try:
-                    if pd.notna(row.iloc[6]):
-                        progress_raw = str(row.iloc[6]).strip()
-                        # Si es un porcentaje con %, extraer el número
-                        if progress_raw.endswith('%'):
-                            progress_val = int(float(progress_raw.replace('%', '')))
-                        # Si es un decimal (ej: 0.75 = 75%)
-                        elif '.' in progress_raw and float(progress_raw) <= 1:
-                            progress_val = int(float(progress_raw) * 100)
-                        else:
-                            progress_val = int(float(progress_raw))
-                except (ValueError, TypeError):
+                        progress_val = int(num)
+                except:
                     progress_val = 0
-                                # Convertir días a enteros
-                dias_estimados = 0
-                dias_total = 0
+            # ===============================================================
 
+            # Fechas
+            def parse_fecha(v):
+                if pd.isna(v):
+                    return ""
+                if isinstance(v, pd.Timestamp):
+                    return v.strftime("%d/%m/%Y")
                 try:
-                    if pd.notna(row.iloc[7]):
-                        dias_estimados = int(float(row.iloc[7]))
-                except (ValueError, TypeError):
-                    dias_estimados = 0
+                    f = pd.to_datetime(str(v).strip(), errors="coerce")
+                    if pd.notna(f):
+                        return f.strftime("%d/%m/%Y")
+                except:
+                    pass
+                return ""
 
-                try:
-                    if pd.notna(row.iloc[12]):
-                        dias_total = int(float(row.iloc[12]))
-                except (ValueError, TypeError):
-                         dias_total = 0
-            
-            # Crear objeto JSON para cada fila
+            start_date = parse_fecha(row.iloc[9])
+            fecha_estimada_entrega = parse_fecha(row.iloc[10])
+            end_date = parse_fecha(row.iloc[11])
+            fecha_compromiso_cliente = parse_fecha(row.iloc[13])
+            fecha_produccion = parse_fecha(row.iloc[15])
+
+            dias_estimados = int(row.iloc[7]) if pd.notna(row.iloc[7]) else 0
+            dias_total = int(row.iloc[12]) if pd.notna(row.iloc[12]) else 0
+
             json_obj = {
-                "id": str(row.iloc[1]) if pd.notna(row.iloc[1]) else "",           # Columna B (índice 1)
-                "title": str(row.iloc[2]) if pd.notna(row.iloc[2]) else "",       # Columna C (índice 2)
-                "assigned": str(row.iloc[0]) if pd.notna(row.iloc[0]) else "",    # Columna A (índice 0)
-                "state": str(row.iloc[5]).title() if pd.notna(row.iloc[5]) else "",  # Columna F (índice 5) - Title Case
-                "progress": progress_val,     # Valor numérico del porcentaje
-                "startDate": start_date,   # Formato DD/MM/YYYY
-                "endDate": end_date,       # Formato DD/MM/YYYY
-                "observations": format_dates_in_observations(row.iloc[16]), # Columna P con fechas formateadas
-                "unit": "Bolivar",                                                     # Valor fijo
-                "detail": str(row.iloc[3]) if pd.notna(row.iloc[3]) else "",     # Columna D (índice 3)
-                "visible": parse_visible(row.iloc[17]), # Columna Q (índice 16)
+                "id": str(row.iloc[1]) if pd.notna(row.iloc[1]) else "",
+                "title": str(row.iloc[2]) if pd.notna(row.iloc[2]) else "",
+                "assigned": str(row.iloc[0]).strip().upper() if pd.notna(row.iloc[0]) else "",
+                "state": str(row.iloc[5]).title() if pd.notna(row.iloc[5]) else "",
+                "progress": progress_val,
+                "startDate": start_date,
+                "endDate": end_date,
+                "observations": format_dates_in_observations(row.iloc[16]),
+                "unit": "Tuya",
+                "detail": str(row.iloc[3]) if pd.notna(row.iloc[3]) else "",
+                "visible": parse_visible(row.iloc[17]),
                 "diasEstimadosDesarrollo": dias_estimados,
                 "fechaEstimadaEntrega": fecha_estimada_entrega,
                 "fechaCompromisoCliente": fecha_compromiso_cliente,
                 "diasTotalDesarrollo": dias_total,
                 "produccion": fecha_produccion
-
             }
-            
+
             json_array.append(json_obj)
-        
+
         print(f"✓ Se procesaron {len(json_array)} filas")
         return json_array
-        
-    except FileNotFoundError:
-        print(f"❌ Error: El archivo '{archivo_excel}' no existe")
-        return []
+
     except Exception as e:
-        print(f"❌ Error al procesar el archivo: {e}")
+        print("❌ Error:", e)
         return []
 
-def guardar_json(json_array, archivo_salida="datos.json"):
-    """
-    Guarda el arreglo JSON en un archivo
-    """
-    try:
-        with open(archivo_salida, 'w', encoding='utf-8') as f:
-            json.dump(json_array, f, indent=2, ensure_ascii=False)
-        print(f"✓ JSON guardado en: {archivo_salida}")
-    except Exception as e:
-        print(f"❌ Error al guardar JSON: {e}")
 
-def mostrar_ejemplo(json_array, num_ejemplos=2):
-    """
-    Muestra algunos ejemplos del JSON generado
-    """
-    print(f"\n{'='*60}")
-    print("EJEMPLOS DEL JSON GENERADO:")
-    print('='*60)
-    
-    for i, item in enumerate(json_array[:num_ejemplos]):
-        print(f"\nEjemplo {i+1}:")
-        print(json.dumps(item, indent=2, ensure_ascii=False))
+def guardar_json(json_array, archivo):
+    with open(archivo, "w", encoding="utf-8") as f:
+        json.dump(json_array, f, indent=2, ensure_ascii=False)
 
-# EJEMPLO DE USO PRINCIPAL
+    print("✓ JSON guardado en:", archivo)
+
+
 if __name__ == "__main__":
-    # Nombre del archivo Excel
-    archivo_excel = "Bolivar.xlsx"
-    
-    # Convertir Excel a JSON
+
+    archivo_excel = "Tuya.xlsx"
+
     json_data = excel_to_json_array(archivo_excel)
-    
+
     if json_data:
-        # Mostrar algunos ejemplos
-        mostrar_ejemplo(json_data)
-        
-        # Guardar en archivo JSON
-        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Bolivar.json")
-        
-        # También puedes trabajar directamente con el array
-        print(f"\nTotal de registros: {len(json_data)}")
-        
-        # Ejemplo: filtrar por estado
-        en_proceso = [item for item in json_data if item['state'] == 'En Proceso']
-        print(f"Registros 'En Proceso': {len(en_proceso)}")
-        
-        # Ejemplo: obtener todos los asignados únicos
-        asignados = list(set(item['assigned'] for item in json_data if item['assigned']))
-        print(f"Personas asignadas: {asignados}")
+        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Tuya.json")
 
-# FUNCIÓN ALTERNATIVA SI QUIERES MÁS CONTROL
-def excel_to_json_con_validaciones(archivo_excel):
-    """
-    Versión con más validaciones y limpieza de datos
-    """
-    try:
-        df = pd.read_excel(archivo_excel)
-        json_array = []
-        
-        for index, row in df.iterrows():
-            # Limpiar y validar datos
-            id_val = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
-            progress_val = 0
-            
-            # Validar progress como número (manejar formato de porcentaje)
-            try:
-                if pd.notna(row.iloc[6]):
-                    progress_raw = str(row.iloc[6]).strip()
-                    # Si es un porcentaje con %, extraer el número
-                    if progress_raw.endswith('%'):
-                        progress_val = int(float(progress_raw.replace('%', '')))
-                    # Si es un decimal (ej: 0.75 = 75%)
-                    elif '.' in progress_raw and float(progress_raw) <= 1:
-                        progress_val = int(float(progress_raw) * 100)
-                    else:
-                        progress_val = int(float(progress_raw))
-            except (ValueError, TypeError):
-                progress_val = 0
-            
-            # Formatear fechas al formato DD/MM/YYYY
-            start_date = ""
-            end_date = ""
+        print("Total registros:", len(json_data))
 
-            fecha_estimada_entrega = ""
-            fecha_compromiso_cliente = ""
-            
-            # Procesar startDate
-            if pd.notna(row.iloc[9]):
-                try:
-                    if isinstance(row.iloc[9], pd.Timestamp):
-                        start_date = row.iloc[9].strftime("%d/%m/%Y")
-                    else:
-                        # Intentar convertir string a fecha
-                        fecha_temp = pd.to_datetime(str(row.iloc[9]).strip(), errors='coerce')
-                        if pd.notna(fecha_temp):
-                            start_date = fecha_temp.strftime("%d/%m/%Y")
-                except (ValueError, TypeError, AttributeError):
-                    start_date = ""
-            
-            # Procesar endDate
-            if pd.notna(row.iloc[11]):
-                try:
-                    if isinstance(row.iloc[11], pd.Timestamp):
-                        end_date = row.iloc[11].strftime("%d/%m/%Y")
-                    else:
-                        # Intentar convertir string a fecha
-                        fecha_temp = pd.to_datetime(str(row.iloc[11]).strip(), errors='coerce')
-                        if pd.notna(fecha_temp):
-                            end_date = fecha_temp.strftime("%d/%m/%Y")
-                except (ValueError, TypeError, AttributeError):
-                    end_date = ""
-            
-            json_obj = {
-                "id": id_val,
-                "title": str(row.iloc[2]).strip() if pd.notna(row.iloc[2]) else "",
-                "assigned": str(row.iloc[0]).strip() if pd.notna(row.iloc[0]) else "",
-                "state": str(row.iloc[5]).strip().title() if pd.notna(row.iloc[5]) else "",  # Title Case
-                "progress": progress_val,
-                "startDate": start_date,
-                "endDate": end_date,
-                "observations": format_dates_in_observations(row.iloc[15]),
-                "unit": "Bolivar",  # Valor fijo
-                "detail": str(row.iloc[3]).strip() if pd.notna(row.iloc[3]) else "",
-                "visible": parse_visible(row.iloc[16])  # Columna Q (índice 16)
-            }
-            
-            json_array.append(json_obj)
-        
-        return json_array
-    except Exception as e:
-        print(f"Error: {e}")
-        return []
+        asignados = list(set(x["assigned"] for x in json_data if x["assigned"]))
+        print("Personas asignadas:", asignados)

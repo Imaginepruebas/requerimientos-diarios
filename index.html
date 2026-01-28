@@ -306,7 +306,7 @@
 
         <div class="d-flex justify-content-start mb-2">
           
-          <button id="toggleFinalizados" class="btn btn-sm btn-toggle-finalizados">Ocultar Finalizados</button>
+          <button id="toggleFinalizados" class="btn btn-sm btn-toggle-finalizados">Mostrar Finalizados</button>
         </div>
         <div id="taskList">
           <p class="no-results">Cargando tareas...</p>
@@ -537,7 +537,7 @@
     }
 
     // Renderizar Tareas
-    let mostrarFinalizados = true;
+    let mostrarFinalizados = false;// El tablero inicia ocultando los terminados
     function renderTasks(filteredTasks = tasks) {
       filteredTasks = filteredTasks.filter(task => {
         if (task.visible === false) return false;
@@ -551,12 +551,43 @@
         return;
       }
       filteredTasks.forEach(task => {
+            // Lógica de alerta por fecha de compromiso
+      const fechaCompromiso = parseDate(task.fechaCompromisoCliente);
+      let colorTitulo = '#1a1a1a'; // Color negro por defecto
+      
+      // NUEVO: Solo evaluar si NO está finalizado y NO está al 100%
+      const estaPendiente = task.progress < 100 && task.state !== "Finalizado";
+
+      if (fechaCompromiso && estaPendiente) {
+        const hoy = new Date();
+        // Normalizamos "hoy" para que la comparación sea solo por días
+        hoy.setHours(0, 0, 0, 0); 
+        
+        const diferenciaTiempo = fechaCompromiso - hoy;
+        const diasRestantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24));
+
+        if (diasRestantes <= 3) {
+          colorTitulo = '#dc3545'; // Rojo: ¡Crítico!
+        } else if (diasRestantes <= 7) {
+          colorTitulo = '#fd7e14'; // Naranja: Atención
+        }
+      }
         const taskCard = document.createElement('div');
         taskCard.className = 'card task-card';
         taskCard.innerHTML = `
           <div class="card-body">
-            <h5>${task.id} - ${task.title}</h5>
-            <p><strong>Persona:</strong> ${task.assigned} | <strong>Estado:</strong> ${task.state} | <strong>% Avance:</strong> ${task.progress}% | <strong>Unidad:</strong> ${task.unit}</p>
+            <h5 style="color: ${colorTitulo}; font-weight: bold;">
+              ${task.id} - ${task.title} 
+              ${colorTitulo === '#dc3545' ? ' <i class="fas fa-exclamation-triangle"></i>' : ''}
+            </h5>
+            <div class="d-flex flex-wrap gap-3 mb-2" style="font-size: 0.9em; color: #555;">
+            <div><strong>Persona:</strong> ${task.assigned}</div>
+            <div><strong>Estado:</strong> ${task.state}</div>
+            <div><strong>Avance:</strong> ${task.progress}%</div>
+            <div><strong>Unidad:</strong> ${task.unit}</div>
+            <div><strong>Compromiso:</strong> ${task.fechaCompromisoCliente || 'Pendiente'}</div>
+            <div><strong>Producción:</strong> ${task.produccion || 'N/A'}</div>
+          </div>
             <div class="progress mb-2">
               <div class="progress-bar ${task.progress === 100 ? 'bg-verde-finalizado' : 'bg-info'}"
                 role="progressbar"
@@ -568,19 +599,30 @@
               </div>
             </div>
             <a href="#" class="toggle-details" data-id="${task.id}">Más</a>
-            <div id="details-${task.id}" style="display: none;">
-              <p><strong>Fecha de Inicio:</strong> ${task.startDate}</p>
-              ${task.endDate ? `<p><strong>Fecha de Fin:</strong> ${task.endDate}</p>` : ''}
-              <div class="detail-toggle">
-                <a href="#" class="toggle-detail-text" data-id="${task.id}">[+] Ver Detalle Requerimiento</a>
+
+           <div id="details-${task.id}" style="display: none; border-top: 1px dashed #ccc; margin-top: 10px; padding-top: 10px;">
+          
+          <div class="d-flex flex-wrap gap-3 mb-3" style="font-size: 0.95em;">
+          <div><strong>Fecha Inicio:</strong> ${task.startDate || 'N/A'}</div>
+          <div><strong>Entrega Estimada:</strong> ${task.fechaEstimadaEntrega || 'Pendiente'}</div>
+          <div><strong>Días Estimados:</strong> ${task.diasEstimadosDesarrollo || 0}</div>
+          ${task.endDate ? `<div><strong>Fecha Fin:</strong> ${task.endDate}</div>` : ''}
+          <div>
+            <strong>Días Totales:</strong> 
+            <span style="color: ${task.diasTotalDesarrollo > task.diasEstimadosDesarrollo ? '#dc3545' : '#28a745'}; font-weight: bold;">
+              ${task.diasTotalDesarrollo || 0}
+            </span>
+          </div>
+        </div>
+
+          <div class="detail-toggle">
+         <a href="#" class="toggle-detail-text" data-id="${task.id}">[+] Ver Detalle Requerimiento</a>
                 <div id="detail-text-${task.id}" class="detail-text" style="display: none; margin-top: 5px;">
                   <div class="detail-text">${formatearDetalle(task.detail)}</div>
                 </div>
               </div>
               <p><strong>Observaciones:</strong><br>
-                <pre style="white-space: pre-wrap; font-family: inherit;">
-                  ${(task.observations || '').replace(/\[(.*?)\]/g, '<strong>$1</strong>')}
-                </pre>
+               <pre style="white-space: pre-wrap; font-family: inherit;">${(task.observations || '').replace(/\[(.*?)\]/g, '<strong>$1</strong>')}</pre>
               </p>
             </div>
           </div>
@@ -1248,16 +1290,27 @@ document.getElementById('idFiltro').addEventListener('keydown', (e) => { if (e.k
         .replace(/(<li>.*<\/li>)/g, '<ul>$1</ul>');
     }
 
-    // Toggle para tareas finalizadas
-    document.addEventListener('DOMContentLoaded', () => {
-      const btnFinalizados = document.getElementById("toggleFinalizados");
-      btnFinalizados.addEventListener("click", () => {
-        mostrarFinalizados = !mostrarFinalizados;
+          // Toggle para tareas finalizadas
+        document.addEventListener('DOMContentLoaded', () => {
+        const btnFinalizados = document.getElementById("toggleFinalizados");
+        
+        // 1. Sincronizamos el texto inicial del botón con nuestra variable (que es false)
         btnFinalizados.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
-        btnFinalizados.classList.toggle("modo-activo", !mostrarFinalizados);
-        applyFilters();
+        btnFinalizados.classList.toggle("modo-activo", mostrarFinalizados);
+
+        btnFinalizados.addEventListener("click", () => {
+          mostrarFinalizados = !mostrarFinalizados;
+          
+          // 2. Cambiamos el texto dinámicamente
+          btnFinalizados.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
+          
+          // 3. Cambiamos la clase visual
+          btnFinalizados.classList.toggle("modo-activo", mostrarFinalizados);
+          
+          // 4. Ejecutamos los filtros para que el tablero se actualice
+          applyFilters(); 
+        });
       });
-    });
 
     // Función para enviar observaciones al Google Form
 function submitObservation() {
