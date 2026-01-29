@@ -606,7 +606,7 @@
           <div><strong>Fecha Inicio:</strong> ${task.startDate || 'N/A'}</div>
           <div><strong>Entrega Estimada:</strong> ${task.fechaEstimadaEntrega || 'Pendiente'}</div>
           <div><strong>Días Estimados:</strong> ${task.diasEstimadosDesarrollo || 0}</div>
-          ${task.endDate ? `<div><strong>Fecha Fin:</strong> ${task.endDate}</div>` : ''}
+          <div><strong>Fecha Fin:</strong> ${task.endDate || 'Sin Finalizar'}</div>
           <div>
             <strong>Días Totales:</strong> 
             <span style="color: ${task.diasTotalDesarrollo > task.diasEstimadosDesarrollo ? '#dc3545' : '#28a745'}; font-weight: bold;">
