@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "20/07/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 132,
+    "diasTotalDesarrollo": 133,
     "produccion": ""
   },
   {
@@ -378,7 +378,7 @@
     "produccion": ""
   },
   {
-    "id": "REQ-4-1",
+    "id": "REQ-4-2",
     "title": "Migracion de servidor y actualizaciones de tecnologías (Acompañamiento de pruebas y validaciones con el cliente)",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -468,7 +468,7 @@
     "produccion": ""
   },
   {
-    "id": "Interno-H8",
+    "id": "Interno-H8_1",
     "title": "Creación de un sistema distribuido registro - puerta de enlace - aplicacion, todo dockerizado que sirva como estructura base a las aplicaciones por venir y la que se esta trabajando actualmente de sistema de agentes inteligentes",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -522,7 +522,7 @@
     "produccion": ""
   },
   {
-    "id": "Interno-H9",
+    "id": "Interno-H10",
     "title": "Desacople de agente de clasificación y su lógica y acople del mismo dento del sistema distribuido. Adicionalmente, acople de la plataforma de agentes y todas las otras aplicaciones del sistema",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -540,7 +540,7 @@
     "produccion": ""
   },
   {
-    "id": "Interno-H10",
+    "id": "Interno-H12",
     "title": "Generación de ambiente local a través de lo generado en el ambiente de pruebas, para facilitar la construcción de otros servicios",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -594,7 +594,7 @@
     "produccion": ""
   },
   {
-    "id": "Interno2-1",
+    "id": "Interno2-2",
     "title": "Se identificaron, a través de un informe recién creado que había un hueco en la información que debe ser corregido. ",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "01/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 86,
+    "diasTotalDesarrollo": 87,
     "produccion": ""
   },
   {
@@ -684,7 +684,7 @@
     "produccion": ""
   },
   {
-    "id": "REQ-11-1",
+    "id": "REQ-11-2",
     "title": "Se necesita la asociación de registros relacionados con pagos de AUF",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -990,7 +990,7 @@
     "produccion": ""
   },
   {
-    "id": "REQ-16",
+    "id": "REQ-21",
     "title": "Identificación de documentos y modificación de necesidad",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -1047,11 +1047,11 @@
     "id": "Interno-H16-5",
     "title": "Construcción y conexiónd del Front con la lógica generada hasta el momento",
     "assigned": "ALEJANDRO",
-    "state": "Pausado",
-    "progress": 75,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "19/01/2026",
-    "endDate": "",
-    "observations": "[19/01/2026] Se crea la base del front ",
+    "endDate": "28/01/2026",
+    "observations": "[26/01/2026] Se retoma el trabajo después de identificar las correcciones y nuevos elementos por analizar en el back. Sin embargo, hace falta un escenario por parametrizar que no se pudo encontrar un ejemplo",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1080,7 +1080,7 @@
     "produccion": "20/01/2026"
   },
   {
-    "id": "REQ-17",
+    "id": "REQ-18",
     "title": "Radicados con fallos en la trazabilidad se deben analizar y de corregir",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -1112,11 +1112,11 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "23/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 6,
+    "diasTotalDesarrollo": 7,
     "produccion": ""
   },
   {
-    "id": "REQ-18",
+    "id": "REQ-20",
     "title": "Existen trámites a los que les llegan actualizaciones de estados de terceros, estas actualizaciones se analizaron y parecen que en algunos casos son enviadas una de trás de otra presentando problemas a la hora del procesamiento. Se debe de construir un sistema que ponga en encolamiento las tareas y procese el primero según el momento de llegada y añadir un log para la identificación de ese momento",
     "assigned": "ALEJANDRO",
     "state": "Finalizado",
@@ -1152,57 +1152,57 @@
     "produccion": "22/01/2026"
   },
   {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "id": "Interno-H16-8",
+    "title": "Conexión front - servicio - filenet para la visualización de archivos y gestionar aprovaciones y rechazos",
+    "assigned": "ALEJANDRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "23/01/2026",
+    "endDate": "28/01/2026",
+    "observations": "[28/01/2026] Se encontraron dificultades en el acomplamiento de los servicios sobre todo hacia filenet, pero se puedo implementar todo el flujo",
     "unit": "Proteccion",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
+    "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
+    "visible": true,
+    "diasEstimadosDesarrollo": 6,
+    "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
+    "id": "Interno-H16-9",
+    "title": "Acople de resultados con procesos ya existentes en Imagine",
+    "assigned": "ALEJANDRO",
+    "state": "Pruebas Imagine",
+    "progress": 80,
+    "startDate": "28/01/2026",
     "endDate": "",
-    "observations": "",
+    "observations": "[29/01/2026] Se termina la implementación y me encuentro en pruebas de funcionamiento",
     "unit": "Proteccion",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
+    "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "29/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
-    "id": "",
-    "title": "",
-    "assigned": "",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
+    "id": "Interno-H16-10",
+    "title": "Creación de pestaña de consultas de radicados y cédulas tanto para procesos históricos y procesos gestionados con la herramienta",
+    "assigned": "ALEJANDRO",
+    "state": "Pruebas Imagine",
+    "progress": 80,
+    "startDate": "29/01/2026",
     "endDate": "",
-    "observations": "",
+    "observations": "[29/01/2026] Se termina la implementación y me encuentro en pruebas de funcionamiento",
     "unit": "Proteccion",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
+    "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {

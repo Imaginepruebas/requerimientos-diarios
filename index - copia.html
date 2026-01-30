@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informe Interactivo - Reporte</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #1f77b4;
+      padding-top: 20px;
+      transition: all 0.3s;
+      z-index: 1000;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    .sidebar a {
+      color: white;
+      padding: 10px 20px;
+      display: block;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .sidebar a:hover {
+      background-color: #aec7e8;
+      color: #1f77b4;
+    }
+    .sidebar h3 {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    .content {
+      margin-left: 270px;
+      padding: 20px;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .card-header {
+      background-color: #1f77b4;
+      color: white;
+      border-radius: 10px 10px 0 0;
+      padding: 15px 20px;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .task-card {
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
+      transition: transform 0.2s;
+    }
+    .task-card:hover {
+      transform: translateY(-3px);
+    }
+    .progress {
+      height: 20px;
+      border-radius: 10px;
+      background-color: #e9ecef;
+    }
+    .plot-container {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 30px;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .filter-container {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #e9f0f6;
+      border-radius: 8px;
+      border: 1px solid #d0e0f0;
+    }
+    .filter-container label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+      color: #1f77b4;
+    }
+    .no-results {
+      color: #7f7f7f;
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px dashed #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .loading {
+      text-align: center;
+      color: #1f77b4;
+      margin: 20px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .date-status {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 0.85em;
+      padding: 3px 8px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    .date-status.green { background-color: #28a745; }
+    .date-status.orange { background-color: #ffc107; color: #333; }
+    .date-status.red { background-color: #dc3545; }
+    .toggle-details {
+      cursor: pointer;
+      color: #1f77b4;
+      font-weight: bold;
+    }
+    .toggle-details:hover {
+      text-decoration: underline !important;
+    }
+    .toggle-details i {
+      transition: transform 0.2s;
+    }
+    .toggle-details[aria-expanded="true"] i {
+      transform: rotate(180deg);
+    }
+    .details-content {
+      border-top: 1px dashed #e9ecef;
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .content {
+        margin-left: 0;
+      }
+    }
+    .progress-bar-full {
+      background-color: #28a745 !important;
+    }
+    .btn-toggle-finalizados {
+      background-color: hsl(187, 96%, 48%);
+      color: white;
+      border: none;
+    }
+    .btn-toggle-finalizados:hover {
+      background-color: #0069d9;
+    }
+    .btn-toggle-finalizados.modo-activo {
+      background-color: #f33210;
+      color: #fff;
+    }
+    .bg-verde-finalizado {
+      background-color: #28c76f !important;
+      color: white;
+    }
+    #observaciones-input {
+      resize: vertical;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #d0e0f0;
+    }
+    #saved-observations p {
+      background-color: #e9f0f6;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border-left: 4px solid #1f77b4;
+      font-size: 0.95em;
+      word-break: break-word;
+    }
+    #saved-observations {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+    
+  </style>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const fecha = new Date();
+      const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      const fechaFormateada = fecha.toLocaleDateString('es-CO', opciones);
+      const reportSpan = document.getElementById('reportDate');
+      if (reportSpan) {
+        reportSpan.textContent = fechaFormateada;
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="container-fluid mt-4 px-4"></div>
+  <nav class="sidebar">
+    <h3 class="text-center text-white mb-4">Informe Requerimientos Imagine</h3>
+    <a href="#resumen"><i class="fas fa-chart-pie me-2"></i>Resumen Ejecutivo</a>
+    <a href="#tareas"><i class="fas fa-tasks me-2"></i>Tareas</a>
+    <a href="#lastUpdateByUnitContainer">
+  <i class="fas fa-clock me-2"></i>Última actualización por Unidad
+</a>
+    <a href="#estadisticas"><i class="fas fa-chart-bar me-2"></i>Estadísticas</a>
+    <a href="#graficos"><i class="fas fa-chart-line me-2"></i>Gráficos</a>
+    <!-- <a href="#recomendaciones"><i class="fas fa-lightbulb me-2"></i>Recomendaciones</a> -->
+   <!--  <a href="#observaciones"><i class="fas fa-comment me-2"></i>Observaciones</a> -->
+  </nav>
+
+  <div class="content">
+    <!-- Encabezado del reporte -->
+<div style="
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+">
+  <h1 style="
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+  ">
+    Reporte - <span id="reportDate"></span>
+  </h1>
+  <img src="Imagenes/Logo_imagine.jpg" alt="Logo"
+       style="
+         height: 80px;
+         object-fit: contain;
+         margin-right: 10px;
+         margin-top: 5px;
+       ">
+</div>
+
+    <div id="resumen" class="card">
+      <div class="card-header">
+        <h2>Resumen Ejecutivo</h2>
+      </div>
+      <div class="card-body" id="resumenContent">
+        <p class="loading">Cargando resumen...</p>
+      </div>
+    </div>
+
+    <div id="tareas" class="card">
+      <div class="card-header">
+        <h2>Tareas</h2>
+      </div>
+      <div class="card-body">
+        <div class="filter-container">
+          <div class="row g-3">
+            <div class="row align-items-end">
+  <div class="col-md-2">
+    <label for="estadoFiltro">Filtrar por Estado:</label>
+    <select id="estadoFiltro" class="form-control form-control-sm">
+      <option value="Todos">Todos</option>
+      <!-- más opciones -->
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="unidadFiltro">Filtrar por Unidad:</label>
+    <select id="unidadFiltro" class="form-control form-control-sm">
+      <option value="">Falta</option>
+      <!-- más opciones -->
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="fechaInicioFiltro">Fecha Inicio Desde:</label>
+    <input type="date" id="fechaInicioFiltro" class="form-control form-control-sm">
+  </div>
+  <div class="col-md-2">
+    <label for="fechaFinFiltro">Fecha Fin Hasta:</label>
+    <input type="date" id="fechaFinFiltro" class="form-control form-control-sm">
+  </div>
+  <div class="col-md-2">
+  <label for="idFiltro">Filtrar por ID:</label>
+  <input type="text" id="idFiltro" class="form-control form-control-sm" placeholder="ID Requerimiento">
+</div>
+  <div class="col-md-3">
+    <label for="busqueda">Buscar por Título o Persona:</label>
+    <input type="text" id="busqueda" class="form-control form-control-sm" placeholder="Título o Persona">
+  </div>
+  <div class="col-md-1">
+    <label class="d-none d-md-block">&nbsp;</label>
+    <button id="btnLimpiarFiltros" class="btn btn-secondary btn-sm">Limpiar</button>
+  </div>
+</div>
+
+        <div class="d-flex justify-content-start mb-2">
+          
+          <button id="toggleFinalizados" class="btn btn-sm btn-toggle-finalizados">Mostrar Finalizados</button>
+        </div>
+        <div id="taskList">
+          <p class="no-results">Cargando tareas...</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="lastUpdateByUnit" class="card mt-3">
+  <div class="card-header">
+    <h2>Última actualización por Unidad</h2>
+  </div>
+  <div class="card-body">
+    <div id="lastUpdateByUnitContainer"></div>
+  </div>
+</div>
+
+    <div id="estadisticas" class="card">
+      <div class="card-header">
+        <h2>Resumen Estadístico</h2>
+      </div>
+      <div class="card-body" id="estadisticasContent">
+        <p class="loading">Cargando estadísticas...</p>
+      </div>
+    </div>
+
+    <div id="graficos" class="card">
+      <div class="card-header">
+        <h2>Gráficos Interactivos</h2>
+      </div>
+      <div class="card-body">
+        <!--<button class="btn btn-primary mb-3 me-2" onclick="exportToPDF()"><i class="fas fa-file-pdf me-2"></i>Exportar a PDF</button>
+        <button class="btn btn-secondary mb-3" onclick="exportToPNG()"><i class="fas fa-image me-2"></i>Exportar Gráficos a PNG</button>-->
+        <div class="loading" id="loadingPie" style="display: none;">Cargando gráfico de distribución...</div>
+        <div id="pie-chart" class="plot-container"></div>
+        <div class="loading" id="loadingBar" style="display: none;">Cargando gráfico de avance...</div>
+        <div id="bar-chart" class="plot-container"></div>
+        <div class="loading" id="loadingAssignments" style="display: none;">Cargando gráfico de asignaciones...</div>
+        <div id="assignments-chart" class="plot-container"></div>
+      </div>
+    </div>
+
+    <!-- <div id="recomendaciones" class="card">
+      <div class="card-header">
+        <h2>Recomendaciones</h2>
+      </div>
+      <div class="card-body">
+        <p>Se recomienda priorizar las tareas en estado 'Pendiente' y revisar la efectividad de los procesos de Entrenamiento de IA. Preste atención a las tareas con fecha de fin próxima o vencida para evitar retrasos.</p>
+      </div>
+    </div> -->
+
+    <!-- <div id="observaciones" class="card">
+  <div class="card-header">
+    <h2>Observaciones</h2>
+  </div>
+  <div class="card-body"> -->
+    <!-- Campo para el nombre -->
+    <!-- <label for="nombre-observador" class="form-label">
+  Tu nombre <span style="color: red">*</span>
+</label> -->
+<!-- <input
+  id="nombre-observador"
+  type="text"
+  class="form-control mb-2"
+  placeholder="Ej. Juan "
+/> -->
+
+    <!-- Campo para la observación -->
+    <!-- <textarea id="observaciones-input" class="form-control" placeholder="Escribe tus observaciones aquí..." rows="4"></textarea> -->
+
+    <!-- Botón -->
+    <!-- <button class="btn btn-primary mt-3" onclick="submitObservation()">
+      <i class="fas fa-save me-2"></i>Guardar Observación
+    </button> -->
+
+    <!-- Observaciones guardadas -->
+    <!-- <div id="saved-observations" class="mt-3">
+      <p class="loading">Cargando observaciones...</p>
+    </div>
+  </div>
+</div> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fechas para el reporte
+    const today = new Date('2025-06-16T17:30:23'); // Fecha fija como en el código original
+    // Alternativa: const today = new Date(); // Descomentar para usar fecha actual
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+    const formattedDate = `${day}/${month}/${year}`;
+    document.title = `Informe Interactivo - Reporte ${formattedDate}`;
+    document.getElementById('reportDate').textContent = formattedDate;
+
+    // Estructura de datos JSON
+    let tasks = [];
+    const archivos = [
+      'datos/Bolivar.json',
+      'datos/Proteccion.json',
+      'datos/Alfa.json',
+      'datos/Colmedica.json',
+      'datos/Tuya.json',
+      'datos/Colmena.json',
+      'datos/Colpatria.json'
+    ];
+    console.log("Cargando archivos JSON:", archivos);
+    Promise.all(archivos.map(url => fetch(url).then(r => {
+      if (!r.ok) throw new Error(`No se pudo cargar ${url}`);
+      return r.json();
+    })))
+      .then(respuestas => {
+        tasks = respuestas.flat();
+        if (tasks.length === 0) {
+          document.getElementById('taskList').innerHTML = '<p class="no-results">No se encontraron tareas en los datos cargados.</p>';
+          return;
+        }
+        initializeReport();
+        applyFilters();
+      })
+      .catch(error => {
+        console.error("Error al cargar los archivos JSON:", error);
+        document.getElementById('taskList').innerHTML = `<p class="no-results">Error al cargar los datos: ${error.message}</p>`;
+      });
+
+    // Mapeo de estados a colores
+    const stateColors = {
+  "en proceso": "#1f77b4",        // Azul fuerte
+  "Paso A Produccion": "#ff7f0e", // Naranja
+  "Entrenamiento": "#2ca02c",     // Verde
+  "en test": "#d62728",           // Rojo
+  "pendiente": "#bcbd22",         // Verde lima
+  "pendiente Cliente": "#e377c2",   // Fucsia
+  "pausado": "#17becf",           // Turquesa
+  "detenido Cliente": "#8c564b",    // Marrón
+  "finalizado": "#2ca58d",        // Verde azulado
+  "pruebas imagine": "#9467bd",   // Morado
+  "Pruebas Cliente": "#ff9896",     // Rosa claro
+  "pruebas cacol": "#f7b6d2",     // Rosa pastel
+};
+
+
+    // Función para parsear fechas
+    function parseDate(dateStr) {
+  if (!dateStr || typeof dateStr !== 'string' || !dateStr.includes('/')) {
+    return null;
+  }
+
+  const [day, month, year] = dateStr.split('/');
+  if (!day || !month || !year) return null;
+
+ // ⚠️ Forzar fecha en horario local (evita desfase UTC)
+  return new Date(
+    Number(year),
+    Number(month) - 1,
+    Number(day),
+    12, 0, 0
+  );
+}
+
+    // Función para obtener el estado de la fecha de fin
+    function getDateStatus(endDateString) {
+      if (!endDateString || endDateString.toLowerCase() === 'n/a' || endDateString === '') return { text: 'Sin Fecha Fin', class: '' };
+      const endDate = parseDate(endDateString);
+      if (!endDate || isNaN(endDate.getTime())) return { text: 'Fecha Inválida', class: '' };
+      const now = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const end = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+      const diffTime = end.getTime() - now.getTime();
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      if (diffDays < 0) {
+        return { text: 'Vencida', class: 'red' };
+      } else if (diffDays <= 7 && diffDays >= 0) {
+        return { text: `Vence en ${diffDays} día${diffDays !== 1 ? 's' : ''}`, class: 'orange' };
+      } else {
+        return { text: 'A tiempo', class: 'green' };
+      }
+    }
+
+    // Función para generar opciones del filtro de estado
+    function populateEstadoFilter(availableTasks) {
+      const estadoFiltro = document.getElementById('estadoFiltro');
+      const currentSelectedValue = estadoFiltro.value;
+      estadoFiltro.innerHTML = '<option value="">Todos</option>';
+      const uniqueStates = [...new Set(availableTasks.map(task => task.state))].sort();
+      uniqueStates.forEach(state => {
+        const option = document.createElement('option');
+        option.value = state;
+        option.textContent = state;
+        estadoFiltro.appendChild(option);
+      });
+      if (uniqueStates.includes(currentSelectedValue)) {
+        estadoFiltro.value = currentSelectedValue;
+      } else {
+        estadoFiltro.value = '';
+      }
+    }
+    function populateUnidadFilter(availableTasks) {
+  const unidadFiltro = document.getElementById('unidadFiltro');
+  const currentSelectedValue = unidadFiltro.value;
+  unidadFiltro.innerHTML = '<option value="">Todos</option>';
+  const uniqueUnits = [...new Set(availableTasks.map(task => task.unit).filter(Boolean))].sort();
+  uniqueUnits.forEach(unit => {
+    const option = document.createElement('option');
+    option.value = unit;
+    option.textContent = unit;
+    unidadFiltro.appendChild(option);
+  });
+  if (uniqueUnits.includes(currentSelectedValue)) {
+    unidadFiltro.value = currentSelectedValue;
+  } else {
+    unidadFiltro.value = '';
+  }
+}
+    // Renderizar Resumen Ejecutivo
+    function updateSummary(filteredTasks = tasks) {
+      filteredTasks = filteredTasks.filter(t => t.visible !== false);
+      const resumenContent = document.getElementById('resumenContent');
+      const totalTasks = filteredTasks.length;
+      const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso A Produccion", "En Test", "Estimar"].includes(t.state)).length;
+      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Cliente", "Pruebas Cliente","Pendiente Cliente","Reanudar","Control De Cambios Produccion"].includes(t.state)).length;
+      const completed = filteredTasks.filter(t => ["Finalizado","Cancelado"].includes(t.state)).length;
+      const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
+      resumenContent.innerHTML = `
+        <p><strong>Total de Tareas:</strong> ${totalTasks}</p>
+        <p><strong>En Proceso:</strong> ${inProgress} (${totalTasks > 0 ? ((inProgress / totalTasks) * 100).toFixed(1) : 0}%)</p>
+        <p><strong>Pendientes:</strong> ${pending} (${totalTasks > 0 ? ((pending / totalTasks) * 100).toFixed(1) : 0}%)</p>
+        <p><strong>Finalizadas:</strong> ${completed} (${totalTasks > 0 ? ((completed / totalTasks) * 100).toFixed(1) : 0}%)</p>
+        <p><strong>Avance Promedio:</strong> ${avgProgress.toFixed(1)}%</p>
+      `;
+    }
+
+    // Renderizar Tareas
+    let mostrarFinalizados = false;// El tablero inicia ocultando los terminados
+    function renderTasks(filteredTasks = tasks) {
+      filteredTasks = filteredTasks.filter(task => {
+        if (task.visible === false) return false;
+        if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+        return true;
+      });
+      const taskList = document.getElementById('taskList');
+      taskList.innerHTML = '';
+      if (filteredTasks.length === 0) {
+        taskList.innerHTML = '<p class="no-results">No se encontraron tareas con los filtros aplicados.</p>';
+        return;
+      }
+      filteredTasks.forEach(task => {
+            // Lógica de alerta por fecha de compromiso
+      const fechaCompromiso = parseDate(task.fechaCompromisoCliente);
+      let colorTitulo = '#1a1a1a'; // Color negro por defecto
+      
+      // NUEVO: Solo evaluar si NO está finalizado y NO está al 100%
+      const estaPendiente = task.progress < 100 && task.state !== "Finalizado";
+
+      if (fechaCompromiso && estaPendiente) {
+        const hoy = new Date();
+        // Normalizamos "hoy" para que la comparación sea solo por días
+        hoy.setHours(0, 0, 0, 0); 
+        
+        const diferenciaTiempo = fechaCompromiso - hoy;
+        const diasRestantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24));
+
+        if (diasRestantes <= 3) {
+          colorTitulo = '#dc3545'; // Rojo: ¡Crítico!
+        } else if (diasRestantes <= 7) {
+          colorTitulo = '#fd7e14'; // Naranja: Atención
+        }
+      }
+        const taskCard = document.createElement('div');
+        taskCard.className = 'card task-card';
+        taskCard.innerHTML = `
+          <div class="card-body">
+            <h5 style="color: ${colorTitulo}; font-weight: bold;">
+              ${task.id} - ${task.title} 
+              ${colorTitulo === '#dc3545' ? ' <i class="fas fa-exclamation-triangle"></i>' : ''}
+            </h5>
+            <div class="d-flex flex-wrap gap-3 mb-2" style="font-size: 0.9em; color: #555;">
+            <div><strong>Persona:</strong> ${task.assigned}</div>
+            <div><strong>Estado:</strong> ${task.state}</div>
+            <div><strong>Avance:</strong> ${task.progress}%</div>
+            <div><strong>Unidad:</strong> ${task.unit}</div>
+            <div><strong>Compromiso:</strong> ${task.fechaCompromisoCliente || 'Pendiente'}</div>
+            <div><strong>Producción:</strong> ${task.produccion || 'N/A'}</div>
+          </div>
+            <div class="progress mb-2">
+              <div class="progress-bar ${task.progress === 100 ? 'bg-verde-finalizado' : 'bg-info'}"
+                role="progressbar"
+                style="width: ${task.progress}%;"
+                aria-valuenow="${task.progress}"
+                aria-valuemin="0"
+                aria-valuemax="100">
+                ${task.progress}%
+              </div>
+            </div>
+            <a href="#" class="toggle-details" data-id="${task.id}">Más</a>
+
+           <div id="details-${task.id}" style="display: none; border-top: 1px dashed #ccc; margin-top: 10px; padding-top: 10px;">
+          
+          <div class="d-flex flex-wrap gap-3 mb-3" style="font-size: 0.95em;">
+          <div><strong>Fecha Inicio:</strong> ${task.startDate || 'N/A'}</div>
+          <div><strong>Entrega Estimada:</strong> ${task.fechaEstimadaEntrega || 'Pendiente'}</div>
+          <div><strong>Días Estimados:</strong> ${task.diasEstimadosDesarrollo || 0}</div>
+          <div><strong>Fecha Fin:</strong> ${task.endDate || 'Sin Finalizar'}</div>
+          <div>
+            <strong>Días Totales:</strong> 
+            <span style="color: ${task.diasTotalDesarrollo > task.diasEstimadosDesarrollo ? '#dc3545' : '#28a745'}; font-weight: bold;">
+              ${task.diasTotalDesarrollo || 0}
+            </span>
+          </div>
+        </div>
+
+          <div class="detail-toggle">
+         <a href="#" class="toggle-detail-text" data-id="${task.id}">[+] Ver Detalle Requerimiento</a>
+                <div id="detail-text-${task.id}" class="detail-text" style="display: none; margin-top: 5px;">
+                  <div class="detail-text">${formatearDetalle(task.detail)}</div>
+                </div>
+              </div>
+              <p><strong>Observaciones:</strong><br>
+               <pre style="white-space: pre-wrap; font-family: inherit;">${(task.observations || '').replace(/\[(.*?)\]/g, '<strong>$1</strong>')}</pre>
+              </p>
+            </div>
+          </div>
+        `;
+        taskList.appendChild(taskCard);
+      });
+      document.querySelectorAll('.toggle-detail-text').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = this.dataset.id;
+          const detailDiv = document.getElementById(`detail-text-${id}`);
+          const isVisible = detailDiv.style.display === 'block';
+          detailDiv.style.display = isVisible ? 'none' : 'block';
+          this.textContent = isVisible ? '[+] Ver Detalle Requerimiento' : '[-] Ocultar Detalle Requerimiento';
+        });
+      });
+      document.querySelectorAll('.toggle-details').forEach(button => {
+        button.addEventListener('click', e => {
+          e.preventDefault();
+          const taskId = e.target.getAttribute('data-id');
+          const details = document.getElementById(`details-${taskId}`);
+          if (details.style.display === 'none') {
+            details.style.display = 'block';
+            e.target.textContent = 'Menos';
+          } else {
+            details.style.display = 'none';
+            e.target.textContent = 'Más';
+          }
+        });
+      });
+    }
+
+    // Renderizar Estadísticas
+    function updateStatistics(filteredTasks = tasks) {
+      filteredTasks = filteredTasks.filter(task => {
+        if (task.visible === false) return false;
+        if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+        return true;
+      });
+      const estadisticasContent = document.getElementById('estadisticasContent');
+      estadisticasContent.innerHTML = '';
+      if (filteredTasks.length === 0) {
+        estadisticasContent.innerHTML = '<p class="no-results"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para estadísticas con los filtros aplicados.</p>';
+        return;
+      }
+      const statesCount = filteredTasks.reduce((acc, task) => {
+        acc[task.state] = (acc[task.state] || 0) + 1;
+        return acc;
+      }, {});
+      let statesHtml = '<h5>Tareas por Estado:</h5><ul>';
+      for (const state in statesCount) {
+        statesHtml += `<li><strong>${state}:</strong> ${statesCount[state]}</li>`;
+      }
+      statesHtml += '</ul>';
+      const assignedCount = filteredTasks.reduce((acc, task) => {
+        const assignedName = task.assigned ? task.assigned.split(' ').map(namePart => namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase()).join(' ') : 'Sin Asignar';
+        acc[assignedName] = (acc[assignedName] || 0) + 1;
+        return acc;
+      }, {});
+      let assignedHtml = '<h5>Tareas por Persona Asignada:</h5><ul>';
+      for (const assigned in assignedCount) {
+        assignedHtml += `<li><strong>${assigned}:</strong> ${assignedCount[assigned]}</li>`;
+      }
+      assignedHtml += '</ul>';      estadisticasContent.innerHTML = statesHtml + assignedHtml + '<hr><div id="lastUpdateByUnitContainer"></div>';
+    }
+
+    // --------------------------------------------------
+    // Última actualización por unidad
+    // --------------------------------------------------
+    // Extrae fechas entre corchetes [dd/mm/yyyy] dentro de un texto
+    function extractDatesFromText(text) {
+      if (!text || typeof text !== 'string') return [];
+      const regex = /\[(\d{1,2}\/\d{1,2}\/\d{4})\]/g;
+      const matches = [];
+      let m;
+      while ((m = regex.exec(text)) !== null) {
+        matches.push(m[1]);
+      }
+      return matches;
+    }
+
+    // Calcula y muestra la última fecha por unidad y tareas asociadas
+    function updateLastUpdatePerUnit(filteredTasks = tasks) {
+      const container = document.getElementById('lastUpdateByUnitContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const byUnit = {};
+
+      filteredTasks.forEach(task => {
+        if (task.visible === false) return;
+        const unit = task.unit || 'Sin Unidad';
+
+        // Recolectar posibles fechas de la tarea
+        const candidates = [];
+        if (task.startDate) candidates.push(task.startDate);
+        if (task.endDate) candidates.push(task.endDate);
+        let lastObservationText = null;
+let lastObservationDate = null;
+
+if (task.observations && typeof task.observations === 'string') {
+  const regex = /\[(\d{1,2}\/\d{1,2}\/\d{4})\]([\s\S]*?)(?=\[\d{1,2}\/\d{1,2}\/\d{4}\]|$)/g;
+  let match;
+
+  while ((match = regex.exec(task.observations)) !== null) {
+    const dateStr = match[1];
+    const text = match[2].trim();
+
+    const parsedDate = parseDate(dateStr);
+    if (!parsedDate) continue;
+
+    candidates.push(dateStr);
+
+    if (!lastObservationDate || parsedDate > lastObservationDate) {
+      lastObservationDate = parsedDate;
+      lastObservationText = text;
+    }
+  }
+}
+
+        // Parsear y mantener fechas válidas
+        const parsed = candidates
+          .map(d => parseDate(d))
+          .filter(d => d && !isNaN(d.getTime()));
+
+        if (parsed.length === 0) return;
+
+        const maxDate = parsed.reduce((a, b) => (a > b ? a : b));
+
+        if (!byUnit[unit] || byUnit[unit].date < maxDate) {
+          byUnit[unit] = { date: maxDate, tasks: [{ id: task.id, title: task.title, state: task.state, progress: task.progress, lastObservation: lastObservationText }] };
+        } else if (byUnit[unit].date.getTime() === maxDate.getTime()) {
+          byUnit[unit].tasks.push({ id: task.id, title: task.title, state: task.state, progress: task.progress, lastObservation: lastObservationText });
+        }
+      });
+
+      // Construir tabla HTML
+      const rows = Object.keys(byUnit).sort().map(unit => {
+        const info = byUnit[unit];
+        const date = info.date;
+        const dateStr = date ? `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}` : '-';
+        const MAX_LEN = 120;
+ // 1️⃣ PRIMER BLOQUE
+  const rowsByTask = info.tasks.map(t => {
+  const safeId = t.id.replace(/[^a-zA-Z0-9_-]/g, '');
+  const hasObs = !!t.lastObservation;
+
+  const fullText = hasObs ? t.lastObservation.trim() : '';
+  const isLong = fullText.length > MAX_LEN;
+  const shortText = isLong ? fullText.slice(0, MAX_LEN) + '...' : fullText;
+
+  return `
+    <tr>
+      <td style="vertical-align:top; padding:4px 6px;">
+        <strong>${t.id}</strong> - ${t.title}
+        (${t.state}, ${t.progress}%)
+      </td>
+      <td style="vertical-align:top; padding:4px 6px; word-wrap:break-word; white-space:normal;">
+        ${hasObs
+          ? `
+            <span id="obs-short-${safeId}">${shortText}</span>
+            <span id="obs-full-${safeId}" style="display:none;">${fullText}</span>
+            ${isLong
+              ? `<a href="#"
+                   data-id="${safeId}"
+                   class="toggle-obs"
+                   style="margin-left:6px; font-size:0.85em;">
+                   ver más
+                 </a>`
+              : ''}
+          `
+          : '-'}
+      </td>
+    </tr>
+  `;
+}).join('');
+
+
+  // 3️⃣ RETORNO FINAL
+ return `
+  <tr>
+    <td style="vertical-align:top;">${unit}</td>
+    <td style="vertical-align:top;">${dateStr}</td>
+    <td colspan="2" style="vertical-align:top;">
+      <table style="width:100%; border-collapse:collapse; text-align:left; table-layout:fixed;">
+        ${rowsByTask}
+      </table>
+    </td>
+  </tr>
+`;
+
+}).join('');
+      const html = `
+        <button id="export-last-update" class="btn btn-sm btn-secondary mb-2">Exportar CSV</button>
+        <div class="table-responsive">
+          <table class="table table-sm" style="table-layout:fixed; width:100%;">
+           <thead>
+             <tr>
+             <th style="width:05%;">Unidad</th>
+             <th style="width:10%;">Última Actualización</th>
+             <th style="width:30%;">Tareas (ID - Título - Estado - %)</th>
+             <th style="width:40%; text-align:center;">Última observación</th>
+            </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `;
+
+      container.innerHTML = html;
+      container.querySelectorAll('.toggle-obs').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const id = link.dataset.id;
+    const shortEl = document.getElementById(`obs-short-${id}`);
+    const fullEl = document.getElementById(`obs-full-${id}`);
+
+    if (!shortEl || !fullEl) return;
+
+    const expanded = fullEl.style.display === 'inline';
+    fullEl.style.display = expanded ? 'none' : 'inline';
+    shortEl.style.display = expanded ? 'inline' : 'none';
+    link.textContent = expanded ? 'ver más' : 'ver menos';
+  });
+});
+
+
+      // Añadir evento para exportar CSV
+      document.getElementById('export-last-update').addEventListener('click', () => {
+        const data = Object.keys(byUnit).map(u => ({ unit: u, date: byUnit[u].date, tasks: byUnit[u].tasks }));
+        exportLastUpdateCSV(data);
+      });
+    }
+
+    // Exportar CSV
+    function exportLastUpdateCSV(data) {
+  const SEP = ','; // separador CSV
+  const lines = [
+    `Unidad${SEP}Última Actualización${SEP}Requerimiento${SEP}Estado${SEP}Progreso${SEP}Última observación`
+  ];
+
+  data.forEach(row => {
+    const d = row.date;
+    const dateStr = d
+      ? `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`
+      : '';
+
+    row.tasks.forEach(t => {
+      const obs = (t.lastObservation || '')
+  .replace(/(\r\n|\n|\r)/g, ' ')   // elimina TODOS los saltos de línea
+  .replace(/\s+/g, ' ')           // colapsa espacios múltiples
+  .replace(/"/g, '""')            // escapa comillas
+  .trim();
+
+      const title = (t.title || '')
+  .replace(/(\r\n|\n|\r)/g, ' ')
+  .replace(/\s+/g, ' ')
+  .replace(/"/g, '""')
+  .trim();
+
+      const state = (t.state || '').replace(/"/g, '""');
+
+      lines.push(
+        `"${row.unit}"${SEP}` +
+        `"${dateStr}"${SEP}` +
+        `"${t.id} - ${title}"${SEP}` +
+        `"${state}"${SEP}` +
+        `"${t.progress}%"${SEP}` +
+        `"${obs}"`
+      );
+    });
+  });
+
+  // BOM UTF-8 para Excel
+  const csvContent = '\uFEFF' + lines.join('\n');
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `Ultima_Actualizacion_Por_Unidad_${formattedDate}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+    // Normaliza estados: quita acentos, pone minúsculas, colapsa espacios
+function normalizarEstado(estado) {
+  return (estado ?? '')
+    .normalize('NFD')                       // separa letras y acentos
+    .replace(/[\u0300-\u036f]/g, '')        // quita los acentos
+    .toLowerCase()                          // pasa todo a minúsculas
+    .replace(/\s+/g, ' ')                   // colapsa espacios múltiples
+    .trim();                                // elimina espacios iniciales/finales
+}
+
+    // Gráficos
+
+// Gráfico de distribución de estados
+function plotPieChart(filteredTasks = tasks) {
+  const pieDiv = document.getElementById('pie-chart');
+  document.getElementById('loadingPie').style.display = 'block';
+  pieDiv.style.display = 'none';
+
+  if (filteredTasks.length === 0) {
+    Plotly.newPlot(pieDiv, [], {}, { displayModeBar: false });
+    pieDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de estados.</p>';
+    document.getElementById('loadingPie').style.display = 'none';
+    pieDiv.style.display = 'block';
+    return;
+  }
+
+  // Filtrar tareas invisibles
+const visibleTasks = filteredTasks.filter(task => task.visible !== false);
+
+const stateCounts = visibleTasks.reduce((acc, task) => {
+  acc[task.state] = (acc[task.state] || 0) + 1;
+  return acc;
+}, {});
+
+  const data = [{
+    labels: Object.keys(stateCounts),
+    values: Object.values(stateCounts),
+    type: 'pie',
+    textinfo: 'label+percent',
+    insidetextorientation: 'radial'
+  }];
+
+  const layout = {
+    title: 'Distribución de Estados',
+    height: 500,
+    margin: { t: 80, b: 50, l: 50, r: 50 }
+  };
+
+  Plotly.newPlot(pieDiv, data, layout, { responsive: true, displayModeBar: false });
+  document.getElementById('loadingPie').style.display = 'none';
+  pieDiv.style.display = 'block';
+}
+
+// Gráfico de avance de tareas
+function plotBarChart(filteredTasks = tasks) {
+  filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+    return true;
+  });
+
+  document.getElementById('loadingBar').style.display = 'block';
+  const barChartDiv = document.getElementById('bar-chart');
+  barChartDiv.style.display = 'none';
+
+  if (filteredTasks.length === 0) {
+    Plotly.newPlot(barChartDiv, [], {}, { displayModeBar: false });
+    barChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de avance.</p>';
+    document.getElementById('loadingBar').style.display = 'none';
+    barChartDiv.style.display = 'block';
+    return;
+  }
+
+  const estadosEnCurso = [
+    "En Proceso",
+    "Entrenamiento",
+    "Pruebas Imagine",
+    "Paso A Produccion",
+    "En Test",
+    "Pruebas Cliente"
+  ];
+  console.log("DEBUG estadosEnCurso normalizados:", estadosEnCurso.map(e => normalizarEstado(e)));
+filteredTasks.forEach(t => {
+  console.log(
+    `Task ID ${t.id} => state original: "${t.state}", normalizado: "${normalizarEstado(t.state)}", progress: ${t.progress}`
+  );
+
+});
+
+  const inProgressTasks = filteredTasks.filter(task =>
+    estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(task.state)) &&
+    Number(task.progress) > 0
+  );
+console.log("DEBUG inProgressTasks (los que van al gráfico):", inProgressTasks);
+  if (inProgressTasks.length === 0) {
+    Plotly.newPlot(barChartDiv, [], {}, { displayModeBar: false });
+    barChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-info-circle me-2"></i>No hay tareas en curso con avance mayor a 0%.</p>';
+    document.getElementById('loadingBar').style.display = 'none';
+    barChartDiv.style.display = 'block';
+    return;
+  }
+
+  const ids       = inProgressTasks.map(t => t.id);
+  const progresses= inProgressTasks.map(t => Number(t.progress));
+  const titles    = inProgressTasks.map(t => t.title);
+  const states    = inProgressTasks.map(t => t.state);
+  const estadosPresentes = [...new Set(states)];
+
+  const data = [{
+  x: inProgressTasks.map(t => t.id),
+  y: progresses,
+  type: 'bar',
+  name: 'Avance',
+  marker: { color: '#1f77b4' },
+  hoverinfo: 'text',
+  text: inProgressTasks.map((t, i) =>
+    `<b>ID:</b> ${t.id}<br><b>Título:</b> ${t.title}<br><b>Estado:</b> ${t.state}<br><b>Avance:</b> ${progresses[i]}%`
+  ),
+}];
+
+  const layout = {
+    title: `Avance de Tareas<br><sub>Mostrando: ${estadosPresentes.join(', ')}</sub>`,
+    xaxis: { title: 'ID de Tarea', tickangle: -45, automargin: true },
+    yaxis: { title: '% Avance', range: [0, 100] },
+    height: 500,
+    margin: { t: 90, b: 150, l: 50, r: 50 },
+    hovermode: 'closest'
+  };
+
+  Plotly.newPlot(barChartDiv, data, layout, { responsive: true, displayModeBar: false });
+  document.getElementById('loadingBar').style.display = 'none';
+  barChartDiv.style.display = 'block';
+}
+
+// Gráfico de tareas por persona asignada
+function plotAssignmentsChart(filteredTasks = tasks) {
+  filteredTasks = filteredTasks.filter(task => {
+    if (task.visible === false) return false;
+    if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
+
+    const estadosEnCurso = [
+      "En Proceso",
+      "Entrenamiento",
+      "Pruebas Imagine",
+      "Paso A Produccion",
+      "En Test",
+      "Pruebas Cliente"
+    ];
+
+return estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(task.state))
+
+  });
+
+  document.getElementById('loadingAssignments').style.display = 'block';
+  const assignmentsChartDiv = document.getElementById('assignments-chart');
+  assignmentsChartDiv.style.display = 'none';
+
+  if (filteredTasks.length === 0) {
+    Plotly.newPlot(assignmentsChartDiv, [], {}, { displayModeBar: false });
+    assignmentsChartDiv.innerHTML = '<p class="no-results mt-4"><i class="fas fa-exclamation-circle me-2"></i>No hay datos para el gráfico de asignaciones.</p>';
+    document.getElementById('loadingAssignments').style.display = 'none';
+    assignmentsChartDiv.style.display = 'block';
+    return;
+  }
+
+  const assignedCounts = filteredTasks.reduce((acc, task) => {
+    const assignedName = task.assigned
+      ? task.assigned.split(' ')
+          .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+          .join(' ')
+      : 'Sin Asignar';
+    acc[assignedName] = (acc[assignedName] || 0) + 1;
+    return acc;
+  }, {});
+
+  const data = [{
+    x: Object.keys(assignedCounts),
+    y: Object.values(assignedCounts),
+    type: 'bar',
+    name: 'Número de Tareas Asignadas',
+    marker: { color: '#2ca02c' }
+  }];
+
+  const layout = {
+    title: 'Número de Tareas por Persona Asignada',
+    xaxis: { title: 'Persona Asignada', tickangle: -45, automargin: true },
+    yaxis: { title: 'Número de Tareas' },
+    height: 500,
+    margin: { t: 80, b: 150, l: 50, r: 50 }
+  };
+
+  Plotly.newPlot(assignmentsChartDiv, data, layout, { responsive: true, displayModeBar: false });
+  document.getElementById('loadingAssignments').style.display = 'none';
+  assignmentsChartDiv.style.display = 'block';
+}
+
+
+
+
+    // Lógica de Filtrado
+    function applyFilters() {
+  const estadoFiltro = document.getElementById('estadoFiltro').value.trim();
+  const unidadFiltro = document.getElementById('unidadFiltro').value.trim();
+  const fechaInicioFiltro = document.getElementById('fechaInicioFiltro').value.trim();
+  const fechaFinFiltro = document.getElementById('fechaFinFiltro').value.trim();
+  const idFiltro = document.getElementById('idFiltro').value.toLowerCase().trim();
+  const busqueda = document.getElementById('busqueda').value.toLowerCase().trim();
+
+  let filteredTasks = tasks.filter(task => {
+
+    // 1. Filtro "visible"
+    if (task.visible === false) return false;
+
+    // 2. Filtro ID (nuevo)
+    const matchesId = 
+      idFiltro === '' || 
+      (task.id && task.id.toLowerCase().includes(idFiltro));
+
+    // 3. Filtro Estado
+    const matchesEstado = 
+      estadoFiltro === '' ||
+      task.state.toLowerCase() === estadoFiltro.toLowerCase();
+
+    // 4. Filtro Unidad
+    const matchesUnidad =
+      unidadFiltro === '' ||
+      (task.unit && task.unit.toLowerCase() === unidadFiltro.toLowerCase());
+
+    // 5. Filtro fechas
+    const taskStartDate = parseDate(task.startDate);
+    const filterStartDate = fechaInicioFiltro ? new Date(fechaInicioFiltro) : null;
+    const matchesStartDate =
+      !filterStartDate || (taskStartDate && taskStartDate >= filterStartDate);
+
+    const taskEndDate = parseDate(task.endDate);
+    const filterEndDate = fechaFinFiltro ? new Date(fechaFinFiltro) : null;
+    const matchesEndDate =
+      !filterEndDate || (taskEndDate && taskEndDate <= filterEndDate);
+
+    // 6. Filtro búsqueda libre
+    const matchesBusqueda =
+      busqueda === '' ||
+      (task.title && task.title.toLowerCase().includes(busqueda)) ||
+      (task.assigned && task.assigned.toLowerCase().includes(busqueda));
+
+    // Validación final: debe cumplir TODOS
+    return (
+      matchesId &&
+      matchesEstado &&
+      matchesUnidad &&
+      matchesStartDate &&
+      matchesEndDate &&
+      matchesBusqueda
+    );
+  });
+
+  // Actualizar UI con los resultados filtrados
+  populateEstadoFilter(filteredTasks);
+  populateUnidadFilter(filteredTasks);
+  updateSummary(filteredTasks);
+  renderTasks(filteredTasks);
+  updateStatistics(filteredTasks);
+  updateLastUpdatePerUnit(filteredTasks);
+  plotPieChart(filteredTasks);
+  plotBarChart(filteredTasks);
+  plotAssignmentsChart(filteredTasks);
+}
+
+
+    // Exportación a PDF
+    function exportToPDF() {
+      const unsavedText = document.getElementById('observaciones-input').value.trim();
+      if (unsavedText !== '') {
+        if (!confirm('Hay observaciones no guardadas. ¿Deseas continuar con la exportación?')) {
+          return;
+        }
+      }
+      const element = document.querySelector('.content');
+      const opt = {
+        margin: 0.5,
+        filename: `Reporte_Requerimientos_${formattedDate}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      const loadingOverlay = document.createElement('div');
+      loadingOverlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; display: flex; justify-content: center; align-items: center; color: #1f77b4; font-size: 2em;';
+      loadingOverlay.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Generando PDF...';
+      document.body.appendChild(loadingOverlay);
+      document.querySelector('.sidebar').style.display = 'none';
+      document.querySelector('.content').style.marginLeft = '0';
+      html2pdf().set(opt).from(element).save().then(() => {
+        document.body.removeChild(loadingOverlay);
+        document.querySelector('.sidebar').style.display = 'block';
+        document.querySelector('.content').style.marginLeft = '270px';
+        initializeReport();
+        applyFilters();
+      }).catch(error => {
+        console.error('Error generating PDF:', error);
+        document.body.removeChild(loadingOverlay);
+        document.querySelector('.sidebar').style.display = 'block';
+        document.querySelector('.content').style.marginLeft = '270px';
+        alert('Error al generar el PDF. Por favor, intenta de nuevo.');
+      });
+    }
+
+    // Exportación a PNG
+    async function exportToPNG() {
+      document.querySelector('.sidebar').style.display = 'none';
+      document.querySelector('.content').style.marginLeft = '0';
+      const originalGraphsHtml = document.getElementById('graficos').innerHTML;
+      document.getElementById('graficos').innerHTML = '<div style="text-align: center; padding: 50px; font-size: 2em; color: #1f77b4;"><i class="fas fa-spinner fa-spin me-2"></i>Generando imágenes de gráficos...</div>';
+      const chartsToExport = ['pie-chart', 'bar-chart', 'assignments-chart'];
+      const zip = new JSZip();
+      for (const chartId of chartsToExport) {
+        const plotDiv = document.getElementById(chartId);
+        if (plotDiv && plotDiv.innerHTML.includes('<svg')) {
+          try {
+            const imageData = await Plotly.toImage(plotDiv, { format: 'png', height: 600, width: 800 });
+            const base64Data = imageData.split(',')[1];
+            zip.file(`${chartId}.png`, base64Data, { base64: true });
+          } catch (error) {
+            console.error(`Error al exportar el gráfico ${chartId}:`, error);
+          }
+        } else {
+          console.warn(`El div ${chartId} no contiene un gráfico Plotly o está vacío, se omitirá la exportación.`);
+        }
+      }
+      zip.generateAsync({ type: "blob" })
+        .then(function(content) {
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(content);
+          link.download = `Graficos_Requerimientos_${formattedDate}.zip`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(link.href);
+        })
+        .finally(() => {
+          document.getElementById('graficos').innerHTML = originalGraphsHtml;
+          document.querySelector('.sidebar').style.display = 'block';
+          document.querySelector('.content').style.marginLeft = '270px';
+          plotPieChart(tasks);
+          plotBarChart(tasks);
+          plotAssignmentsChart(tasks);
+        });
+    }
+
+    // Inicializar el reporte
+    function initializeReport() {
+      populateEstadoFilter(tasks);
+      document.getElementById('estadoFiltro').addEventListener('change', applyFilters);
+      document.getElementById('unidadFiltro').addEventListener('change', applyFilters);
+      document.getElementById('fechaInicioFiltro').addEventListener('change', applyFilters);
+      document.getElementById('fechaFinFiltro').addEventListener('change', applyFilters);
+      document.getElementById('busqueda').addEventListener('input', applyFilters);
+      document.getElementById('idFiltro').addEventListener('input', applyFilters);
+// opcional: permite filtrar al presionar Enter
+document.getElementById('idFiltro').addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
+
+      document.getElementById('btnLimpiarFiltros').addEventListener('click', () => {
+        document.getElementById('estadoFiltro').value = '';
+        document.getElementById('unidadFiltro').value = '';
+        document.getElementById('fechaInicioFiltro').value = '';
+        document.getElementById('fechaFinFiltro').value = '';
+        document.getElementById('idFiltro').value = ''; // <<< NUEVA
+        document.getElementById('busqueda').value = '';
+        applyFilters();
+      });
+    }
+
+    // Formatear detalle
+    function formatearDetalle(texto) {
+      if (!texto) return 'Sin detalle registrado.';
+      return texto
+        .replace(/\n/g, '<br>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/^- (.*)$/gm, '<li>$1</li>')
+        .replace(/(<li>.*<\/li>)/g, '<ul>$1</ul>');
+    }
+
+          // Toggle para tareas finalizadas
+        document.addEventListener('DOMContentLoaded', () => {
+        const btnFinalizados = document.getElementById("toggleFinalizados");
+        
+        // 1. Sincronizamos el texto inicial del botón con nuestra variable (que es false)
+        btnFinalizados.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
+        btnFinalizados.classList.toggle("modo-activo", mostrarFinalizados);
+
+        btnFinalizados.addEventListener("click", () => {
+          mostrarFinalizados = !mostrarFinalizados;
+          
+          // 2. Cambiamos el texto dinámicamente
+          btnFinalizados.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
+          
+          // 3. Cambiamos la clase visual
+          btnFinalizados.classList.toggle("modo-activo", mostrarFinalizados);
+          
+          // 4. Ejecutamos los filtros para que el tablero se actualice
+          applyFilters(); 
+        });
+      });
+
+    // Función para enviar observaciones al Google Form
+function submitObservation() {
+  const observacion = document.getElementById("observaciones-input").value.trim();
+  const nombre = document.getElementById("nombre-observador").value.trim();
+
+  // Validar que ambos campos estén llenos
+  if (!nombre) {
+    alert("Por favor, escribe tu nombre.");
+    return;
+  }
+
+  if (!observacion) {
+    alert("Por favor, escribe una observación.");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("entry.417936999", observacion);      // Campo Observación
+  formData.append("entry.1842471098", nombre);          // Campo Nombre
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSckJu7_1OG8F0PrX1M6JfcldPQdAWPYlOQOZlzQpd9fdTcsqA/formResponse", {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  }).then(() => {
+    document.getElementById("observaciones-input").value = "";
+    document.getElementById("nombre-observador").value = "";
+    alert("Observación guardada con éxito.");
+    loadObservations();
+  }).catch(error => {
+    console.error("Error al enviar la observación:", error);
+    alert("Ocurrió un error al guardar la observación.");
+  });
+}
+// Función para cargar observaciones (se implementará en el próximo paso)
+function loadObservations() {
+  const url = 'https://opensheet.elk.sh/1tifWNA450_RR83JM2TmI2q4RUyGLzNKAOsXy_sHJRFo/Form Responses 1';
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const contenedor = document.getElementById('saved-observations');
+// ⛔ CONTENEDOR NO EXISTE → salir sin error
+  if (!contenedor) {
+    console.warn('saved-observations no existe en el DOM, se omite carga.');
+    return;
+  }
+ if (!data || data.length === 0) {
+    contenedor.innerHTML = '<p class="no-results">Aún no hay observaciones registradas.</p>';
+    return;
+  }
+      contenedor.innerHTML = '';
+      data.reverse().forEach(obs => {
+        const texto = obs["Escribe tu observación"] || "";
+        const nombreKey = Object.keys(obs).find(k => k.toLowerCase().includes("nombre"));
+        const nombre = nombreKey ? obs[nombreKey] : "Anónimo";
+        const timestamp = obs["Marca temporal"] || "";
+
+        // Si la observación está vacía, no mostrar nada
+        if (!texto || texto.trim() === "") return;
+
+        const p = document.createElement('p');
+        p.innerHTML = `<strong>${nombre}</strong> (${timestamp}): ${texto}`;
+        contenedor.appendChild(p);
+      });
+    })
+    .catch(error => {
+      console.error('Error al cargar observaciones:', error);
+      document.getElementById('saved-observations').innerHTML = '<p class="no-results">Error al cargar observaciones.</p>';
+    });
+}
+
+// Cargar observaciones al iniciar la página
+document.addEventListener('DOMContentLoaded', loadObservations);
+  </script>
+</body>
+</html>

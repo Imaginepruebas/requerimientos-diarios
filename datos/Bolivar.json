@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 203,
+    "diasTotalDesarrollo": 204,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 16,
+    "diasTotalDesarrollo": 17,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "30/04/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 185,
+    "diasTotalDesarrollo": 186,
     "produccion": ""
   },
   {
@@ -428,7 +428,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 181,
+    "diasTotalDesarrollo": 182,
     "produccion": ""
   },
   {
@@ -932,7 +932,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
@@ -1274,7 +1274,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 130,
+    "diasTotalDesarrollo": 131,
     "produccion": ""
   },
   {
@@ -1537,7 +1537,7 @@
     "progress": 95,
     "startDate": "27/10/2025",
     "endDate": "21/11/2025",
-    "observations": "[27/10/2025]: Iniciara con la configuración de los sitios en local \n[31/10/2025]: Se avanza en la implementación del segundo factor de autenticación con validaciones de usuario y contraseña operativas en Laravel.\nPendiente:\nAjustar el control del flujo de autenticación para evitar logueo sin validación.\nIntegrar el flujo de listas blancas (usuarios exentos del doble factor).\nDefinir tiempo de expiración del token según políticas de seguridad (30 minutos actuales deben revisarse). \nSe escala Control de cambios MDSB-921839 a test.\nControl de cambios genero error  por lo cual se genero el MDSB-922162\n[04/11/2025]: Control de cambios ejecutado con exito \n[05/11/2025]: Se continúa con el ajuste final del desarrollo en Laravel, una vez concluya las pruebas locales, procederá a migrar el desarrollo a los demás sitios uno a uno y dejarlo en ambiente de test, para posteriormente definir quién realizará el despliegue a producción.\n[07/11/2025]: El 28 de octubre se envian HU  al cliente para su aprobación,Pendiente confirmación de tiempos de vigencia del token y unificación del proceso de autenticación. Enviada solicitud a Seguridad para definir tiempos de expiración\n[07/11/2025]: Ciente confirma que el tiempo del token debe ser de 1 minuto y no autorizan la unificación del proceso de autenticación.\n[20/11/2025]: Se realiza sesión con Wilson y Jesús para la entrega de los avances desarrollados por Wilson a Jesús.\nJesús continuará con la implementación de la autenticación por correo en los aplicativos Yii y Nativo, así como con la incorporación de las listas blancas correspondientes.\n[24/11/2025]: Se integró el trabajo previo con la lógica del Authenticator ajustando tablas y unificando la validación para las tres aplicaciones. Queda pendiente aplicar estilos al correo del código de verificación. Funcionalidad general opera correctamente\n[25/11/2025]: El 24 de noviembre se entrega desarrollo al cliente para sus pruebas y aprobación de paso a producción\n[26/11/2025]: El cliente esta realizando pruebas ayer y hoy. La funcionalidad está estable; pendiente acompañamiento para resolver cualquier incidencia que se presente durante su validación.\n[07/01/2026]: El cliente envía la relación de correos electrónicos actualizados para su respectiva validación y uso en el proceso.\n[08/01/2026]: Cliente da visto bueno para  realizar paso a producción, se solicitar control de cambios a producción.\n[09/01/2026]: Se escala control de cambios a produccion MDSB-958656\n[16/01/2026]: El cliente adjunta al requerimiento las pruebas realizadas en test, el control de cambios avanza hacia las aprobaciones de  QA / PO / Jefatura.\n[20/01/2026]: Control de cambios se encuentra pendiente  por aprobación  de Jefatura \n[21/01/2026]: Control de cambios ejecutado con exito,  se programa paso a producción para el 22 de enero.\n[22/01/2026]: No es posible realizar el despliegue a producción ya que hay una regla de seguridad que no permitió abrir la URL por ser muy larga,\n[26/01/2026]: Se solucionó el problema generado por la longitud de la URL. Se implementó un esquema basado en ID temporal encriptado, almacenando la información en tabla y transmitiendo únicamente el identificador. La solución ya funciona en Laravel y hoy  se implementara la soluciona en Yii y Nativo.\n[28/01/2026]: El 27 de enero se completaron las pruebas del nuevo esquema de doble factor, reemplazando el envío de datos en la URL por un ID temporal encriptado almacenado en base de datos. El cambio ya fue validado en Nativo, Yii y Bolívar y se encuentra listo para pasar a producción, pendiente únicamente de nuevas pruebas por parte del cliente.",
+    "observations": "[27/10/2025]: Iniciara con la configuración de los sitios en local \n[31/10/2025]: Se avanza en la implementación del segundo factor de autenticación con validaciones de usuario y contraseña operativas en Laravel.\nPendiente:\nAjustar el control del flujo de autenticación para evitar logueo sin validación.\nIntegrar el flujo de listas blancas (usuarios exentos del doble factor).\nDefinir tiempo de expiración del token según políticas de seguridad (30 minutos actuales deben revisarse). \nSe escala Control de cambios MDSB-921839 a test.\nControl de cambios genero error  por lo cual se genero el MDSB-922162\n[04/11/2025]: Control de cambios ejecutado con exito \n[05/11/2025]: Se continúa con el ajuste final del desarrollo en Laravel, una vez concluya las pruebas locales, procederá a migrar el desarrollo a los demás sitios uno a uno y dejarlo en ambiente de test, para posteriormente definir quién realizará el despliegue a producción.\n[07/11/2025]: El 28 de octubre se envian HU  al cliente para su aprobación,Pendiente confirmación de tiempos de vigencia del token y unificación del proceso de autenticación. Enviada solicitud a Seguridad para definir tiempos de expiración\n[07/11/2025]: Ciente confirma que el tiempo del token debe ser de 1 minuto y no autorizan la unificación del proceso de autenticación.\n[20/11/2025]: Se realiza sesión con Wilson y Jesús para la entrega de los avances desarrollados por Wilson a Jesús.\nJesús continuará con la implementación de la autenticación por correo en los aplicativos Yii y Nativo, así como con la incorporación de las listas blancas correspondientes.\n[24/11/2025]: Se integró el trabajo previo con la lógica del Authenticator ajustando tablas y unificando la validación para las tres aplicaciones. Queda pendiente aplicar estilos al correo del código de verificación. Funcionalidad general opera correctamente\n[25/11/2025]: El 24 de noviembre se entrega desarrollo al cliente para sus pruebas y aprobación de paso a producción\n[26/11/2025]: El cliente esta realizando pruebas ayer y hoy. La funcionalidad está estable; pendiente acompañamiento para resolver cualquier incidencia que se presente durante su validación.\n[07/01/2026]: El cliente envía la relación de correos electrónicos actualizados para su respectiva validación y uso en el proceso.\n[08/01/2026]: Cliente da visto bueno para  realizar paso a producción, se solicitar control de cambios a producción.\n[09/01/2026]: Se escala control de cambios a produccion MDSB-958656\n[16/01/2026]: El cliente adjunta al requerimiento las pruebas realizadas en test, el control de cambios avanza hacia las aprobaciones de  QA / PO / Jefatura.\n[20/01/2026]: Control de cambios se encuentra pendiente  por aprobación  de Jefatura \n[21/01/2026]: Control de cambios ejecutado con exito,  se programa paso a producción para el 22 de enero.\n[22/01/2026]: No es posible realizar el despliegue a producción ya que hay una regla de seguridad que no permitió abrir la URL por ser muy larga,\n[26/01/2026]: Se solucionó el problema generado por la longitud de la URL. Se implementó un esquema basado en ID temporal encriptado, almacenando la información en tabla y transmitiendo únicamente el identificador. La solución ya funciona en Laravel y hoy  se implementara la soluciona en Yii y Nativo.\n[28/01/2026]: El 27 de enero se completaron las pruebas del nuevo esquema de doble factor, reemplazando el envío de datos en la URL por un ID temporal encriptado almacenado en base de datos. El cambio ya fue validado en Nativo, Yii y Bolívar y se encuentra listo para pasar a producción, pendiente únicamente de nuevas pruebas por parte del cliente.\n[29/01/2026]: Durante el seguimiento, el cliente informa que las pruebas fueron exitosas; sin embargo, surgió un error en la creación de un usuario, ya que en Nativo se registró con un correo y en Yii con otro. Indican que realizarán nuevamente la prueba y nos confirmarán la descripción del proceso y el error.",
     "unit": "Bolivar",
     "detail": "Fecha de entrega al cliente: 14/11/2025\n\nDoble factor de autenticación  \n1. DESCRIPCIÓN DEL REQUERIMIENTO   \nSe requiere crear un doble factor de autenticación como control de seguridad en   \nambientes de test y producción para todos los aplicativos (nativo, YII, laravel)  \n1.2 OBJETIVO  \n Crear un doble factor de autenticación por correo electrónico  \n1.3 EQUIPO DE TRABAJO  \nNombre Área  \nLeidy Mayorga Administrativo  \n2. REQUERIMIENTOS FUNCIONALES  \n2.1 Creación de un doble factor de autenticación  \nSe requiere que al momento de loguearse los aplicativos nativo, YII y laravel soliciten   \nun doble factor de autenticación, el cual deberá ser remitido al correo electrónico   \nregistrado, teniendo en cuenta:  \n1. Si el usuario únicamente está en nativo deberá tomar el correo electrónico   \nregistrado   \n2. Si el usuario está en nativo y otro aplicativo (YII y laravel), deberá tomar el   \ncorreo electrónico registrado en nativo y homologarlo en todos los aplicativo;   \ngarantizando que en todos los aplicativos tenga el mismo correo electrónico.  \n3. Cuando se actualice un correo electrónico automáticamente se debe actualizar   \npara el doble factor de autenticación.  \nUna vez llegue el código del doble factor al correo electrónico, el usuario deberá   \nregistrarlo en el aplicativo para el acceso.  \nEl doble factor debe salir por Exchange.\nSEGUROS BOLÍVAR S.A.  \nOFICINA DE PROYECTOS (PMO)  \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO DE USUARIO   \nFORMATO ESPECIFICACIÓN DETALLADA DEL REQUERIMIENTO _ Versión Septiembre 2012  \nEste documento es propiedad intelectual de Seguros Bolívar S.A. Prohibido el uso, reproducción y/o distribución sin autorización de la compañía.  \n2  \n2.2 Omisión en listas blancas por usuario  \nSe requiere que al momento de loguearse no solicite el doble factor de autenticación   \npara los usuarios o IP que registran en las listas blancas, la omisión deberá aplicar para   \nnativo, YII y laravel.   \nSe debe poder incluir y eliminar IP y usuarios de la lista.  \nEsto con el propósito de mantener los RPA actuales.  \n2.3 Consulta listas blancas  \nSe requiere que las restricciones de listas blancas sean identificadas, por lo cual es   \nnecesario que en el módulo de consulta registre:  \n IP o usuario  \n Fecha en la cual se registro  \n Usuario que registró  \n Estado (activo o inactivo de la lista blanca)  \nEsto con el objetivo de conocer el estado de los usuarios e IP omitidas sin necesidad   \nde consultar el usuario puntual , si no que muestre las existentes.",
     "visible": true,
@@ -1567,12 +1567,12 @@
   },
   {
     "id": "GD772-168",
-    "title": "Nuevo proceso de incapacidades ARL",
+    "title": "Nuevo proceso de incapacidades ARL fase 1",
     "assigned": "JESUS",
     "state": "En Proceso",
     "progress": 70,
     "startDate": "29/12/2025",
-    "endDate": "",
+    "endDate": "21/01/2026",
     "observations": "[19/12/2025]: Jesus estima 6 dias de desarrollo\n[22/12/2025]: Se pretende dar comienzo al desarrollo el 29 de Diciembre\n[29/12/2025]: Se plantearon dos alternativas: consumo directo desde Arabel O uso de Python como intermediario. Se acordó evaluar ambas opciones en pruebas para definir la más eficiente y sostenible, considerando mantenibilidad y complejidad operativa.\n[02/01/2025]: Durante la semana se avanzó en pruebas técnicas basadas en los insumos enviados por el sr Hernan (PDFs y prompts). Se realizaron pruebas locales, creación de tablas y validaciones iniciales. El resultado actual no refleja completamente la expectativa del cliente, y se considera que podría requerir un replanteamiento parcial o total. El enfoque actual es experimental y altamente dependiente del uso de prompts, lo que limita el control del desarrollo. Se presentará el avance para recibir definición y lineamientos.\n[05/01/2026]: Despues de realizar algunas pruebas con gerencia el 2 de enero se acuereda el  esarrollo del módulo de incapacidades bajo un enfoque incremental, trabajando requerimiento por requerimiento mediante prompts controlados, validaciones funcionales y reutilización de scripts existentes, priorizando el entendimiento completo del flujo antes de avanzar al siguiente punto, el cual presenta un  avance aproximado del 30%.\n[07/01/2026]: Se encuentra en la implementación de los estilos definidos en el Figma entregados por Jenry.\n[09/01/2026]: Se encuentra en análisis la estrategia técnica para el almacenamiento de logs de consumo de APIs, Se tiene prevista la entrega de una primera parte funcional del desarrollo en el día de hoy.\n[14/01/2026]: Se trabaja en la construcción de la bandeja administrativa solicitada, reemplazando el botón de IA por una funcionalidad que permite visualizar el historial de respuestas del API, adicional   se radica jira MDSB-960532  debido a limitaciones de acceso en el ambiente de pruebas en el consumo del OCR.\n[16/01/2026]: Se desplegó en ambiente de pruebas la segunda consulta de la Fase 2 de incapacidades (lago de datos), incluyendo el comando de ejecución y la vista con secciones diferenciadas. Actualmente está pendiente el almacenamiento de la respuesta para mantener trazabilidad. Se estima la entrega de los demas consumos para el 23 de enero.\n[21/01/2026]: Se subió a ambiente de pruebas (TEST) todo el avance del portal de incapacidades, incluyendo el módulo OCR. Adicionalmente, se inició el desarrollo del tercer consumo del proceso (posterior a Data Lake), evidenciando un avance sostenido. El equipo se declara en ruta para presentar avances consolidados hacia el viernes.\n[26/01/2026]: El viernes 23 de enero se presentaron los avances del proyecto a Jenry y Liyibet. Como resultado de la sesión, quedaron definidos los siguientes ajustes, los cuales se abordarán una vez finalicen las actividades del requerimiento de doble factor de autenticación:\n\n1.Ajustar el campo Tipo de persona que radica para que sea un combo (IPS, empleador, etc.).\n2.Incluir la autorización de tratamiento de datos personales en la primera vista del portal.\n3.Incorporar plantillas de respuesta para los casos.\n4.Mejorar la visual reduciendo la barra de búsqueda en la ventana de gestión.\n5.Cambiar el label del portal por “Empresa”.\n6.Apuntar el API de cuenta al campo Número de empresa.\n7.Agregar el campo Cuenta en la trazabilidad, ubicado sobre el número de radicado Sisalud (trazabilidad estándar de la actividad Radicar IT).\n8.Realizar validaciones utilizando datos de prueba.\n[28/01/2026]: Se escala control de cambios a test MDSB-969303.\nEl OSR de incapacidades fue desplegado inicialmente en TEST, pero debido a bloqueos del ambiente solo funcionó vía Postman. Posteriormente se subió a producción, donde ya opera correctamente. Queda pendiente un ajuste visual menor de renderizado al cargar archivos. Por limitaciones técnicas entre ambientes, actualmente producción está apuntando a APIs de Stage para continuar pruebas, implementando controles (NIT fijo de pruebas) para evitar contaminación de datos reales y reportes. \nControl de cambios ejecutado con exito.",
     "unit": "Bolivar",
     "detail": "Orquestador de Incapacidades\nObjetivo\n\nAutomatizar el flujo completo de radicación, validación, liquidación y confirmación de incapacidades en el entorno ARL, integrando los sistemas IMAGINE, TRONADOR y SISALUD ARL mediante un orquestador de procesos, reduciendo la intervención manual y los errores operativos.\n\nAlcance\n\nEl desarrollo contempla:\n\nAutomatización de las etapas del proceso de incapacidades desde la radicación hasta la confirmación del giro de pago.\n\nIntegración de servicios y APIs entre IMAGINE, TRONADOR y SISALUD ARL.\n\nImplementación de validaciones automáticas de negocio y reglas parametrizables.\n\nGeneración de trazabilidad de cada fase dentro del flujo en IMAGINE.\n\nComunicación automática con el cliente final según resultado del proceso.\n\nDescripción funcional\n1. Registro de incapacidad\n\nEl cliente accede al portal de ARL y registra la incapacidad en IMAGINE.\n\nSe adjunta el soporte documental (PDF o imagen).\n\nSe invoca un servicio de OCR que extrae variables clave del documento.\n\nLos datos radicados se complementan automáticamente y se genera confirmación de radicación.\n\nSe consulta el API de TRON para precargar datos de cuenta. Si no están actualizados, se permite su actualización en línea.\n\n2. Análisis automático\n\nEl orquestador ejecuta reglas de validación para revisar consistencia y completitud de datos.\n\nSi se detectan errores o excepciones, IMAGINE asigna el caso al analista correspondiente.\n\nNo requiere intervención manual estándar.\n\n3. Radicación en SISALUD ARL\n\nEl orquestador identifica radicaciones en IMAGINE pendientes de procesamiento.\n\nConsulta datos de póliza desde TRONADOR y SISALUD ARL.\n\nEjecuta validaciones de negocio y registra automáticamente la incapacidad en SISALUD ARL.\n\nDevuelve el resultado a IMAGINE, actualizando el estado del flujo.\n\n4. Liquidación\n\nEl sistema consulta datos desde el lago de datos y aplica reglas de liquidación.\n\nSi el monto supera un parámetro configurado, el orquestador deriva el caso para revisión humana.\n\nReglas principales:\n\nValidar por número de cédula si la última novedad laboral es retiro previo a la incapacidad → liquidar por flujo manual.\n\nSi el siniestro presenta marca de fallo judicial, asignar automáticamente el caso al analista correspondiente.\n\n5. Confirmación de pago\n\nMediante un API de validación, se confirma la creación y ejecución de órdenes de pago en SISALUD ARL.\n\nSi la transacción es exitosa → IMAGINE notifica al cliente.\n\nSi presenta error → IMAGINE notifica la incidencia y genera tareas pendientes para el analista.\n\nIntegraciones\n\nIMAGINE: punto central del flujo, gestión documental y trazabilidad.\n\nTRONADOR: consulta de pólizas y datos de terceros.\n\nSISALUD ARL: radicación, liquidación y generación de órdenes de pago.\n\nOCR Service: lectura y extracción de datos del soporte de incapacidad.\n\nOrquestador de procesos: componente central de automatización e integración.\n\nParámetros configurables\n\nMonto máximo para liquidación automática.\n\nReglas de validación de negocio.\n\nReintentos y tiempos de espera para cada API.\n\nMensajes automáticos de notificación al cliente.\n\nBeneficios esperados\n\nReducción significativa del tiempo de gestión de incapacidades.\n\nEliminación de reprocesos manuales y errores de digitación.\n\nMejora en la trazabilidad y control del proceso.\n\nOptimización de la experiencia del cliente final.",
@@ -1580,7 +1580,7 @@
     "diasEstimadosDesarrollo": 9,
     "fechaEstimadaEntrega": "09/01/2026",
     "fechaCompromisoCliente": "27/01/2026",
-    "diasTotalDesarrollo": 21,
+    "diasTotalDesarrollo": 16,
     "produccion": ""
   },
   {
@@ -1692,20 +1692,38 @@
     "produccion": ""
   },
   {
+    "id": "GD772-168-2",
+    "title": "Nuevo proceso de incapacidades ARL fase 2",
+    "assigned": "JESUS",
+    "state": "En Proceso",
+    "progress": 20,
+    "startDate": "21/01/2026",
+    "endDate": "",
+    "observations": "[21/01/2026]: se inició el desarrollo del tercer consumo del proceso (posterior a Data Lake), evidenciando un avance sostenido. El equipo se declara en ruta para presentar avances consolidados hacia el viernes.\n[26/01/2026]: El viernes 23 de enero se presentaron los avances del proyecto a Jenry y Liyibet. Como resultado de la sesión, quedaron definidos los siguientes ajustes, los cuales se abordarán una vez finalicen las actividades del requerimiento de doble factor de autenticación:\n\n1.Ajustar el campo Tipo de persona que radica para que sea un combo (IPS, empleador, etc.).\n2.Incluir la autorización de tratamiento de datos personales en la primera vista del portal.\n3.Incorporar plantillas de respuesta para los casos.\n4.Mejorar la visual reduciendo la barra de búsqueda en la ventana de gestión.\n5.Cambiar el label del portal por “Empresa”.\n6.Apuntar el API de cuenta al campo Número de empresa.\n7.Agregar el campo Cuenta en la trazabilidad, ubicado sobre el número de radicado Sisalud (trazabilidad estándar de la actividad Radicar IT).\n8.Realizar validaciones utilizando datos de prueba.\n[29/01/2026]: Se deben enviar HU al cliente el dia 30 de enero.",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 7,
+    "fechaEstimadaEntrega": "29/01/2026",
+    "fechaCompromisoCliente": "30/01/2026",
+    "diasTotalDesarrollo": 7,
+    "produccion": ""
+  },
+  {
     "id": "MDSB-964818",
     "title": "Solicitud de Generación de Información",
     "assigned": "JESUS",
-    "state": "Pendiente",
+    "state": "En Proceso",
     "progress": 0,
-    "startDate": "",
+    "startDate": "02/02/2026",
     "endDate": "",
-    "observations": "[21/01/2026]: En espera de estimación por parte de imagine\n[23/01/2026]: Se asigna soplicitud a Jesus.\n[26/01/2026]: Se estima dedicar un espacio hoy para la extracion de dicha información .",
+    "observations": "[21/01/2026]: En espera de estimación por parte de imagine\n[23/01/2026]: Se asigna soplicitud a Jesus.\n[26/01/2026]: Se estima dedicar un espacio hoy para la extracion de dicha información .\n[29/01/2026]: De acuerdo a la priorización en segumiento se  iniciara la generación de la  información el Lunes 2 de febrero y queda como compromiso la entrega el 5 de Febrero. ",
     "unit": "Bolivar",
     "detail": "Cordial saludo, \n\nSe solicita la soiguiente información:\n\n*Cantidad de casos atendidos en el 2025 por tipologia (incluye, cerrados, anulados), para todos los procesos ARL. Incapacidades, Medicamentos, Fallos, Pensiones y Salud.\n\n*Promedio de actividades (interacciones) ejecutadas en cada una de las tipologia anteriores (que incluya las repetidas, las gestionadas por funcionario bolivar, cliente, imagine, web services y otras que apliquen).\n\nEjemplo:\n\nIncapacidades 9000 casos atentidos en el 2025 - interacciones promedio 108.000 en esos 9000 casos \n\n ",
     "visible": true,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "02/02/2026",
+    "fechaCompromisoCliente": "05/02/2026",
     "diasTotalDesarrollo": 0,
     "produccion": ""
   },
@@ -1778,7 +1796,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 126,
+    "diasTotalDesarrollo": 127,
     "produccion": ""
   },
   {
@@ -1976,7 +1994,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 123,
+    "diasTotalDesarrollo": 124,
     "produccion": ""
   },
   {
@@ -2030,7 +2048,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 123,
+    "diasTotalDesarrollo": 124,
     "produccion": ""
   },
   {
@@ -2156,7 +2174,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "29/01/2026",
-    "diasTotalDesarrollo": 18,
+    "diasTotalDesarrollo": 19,
     "produccion": ""
   },
   {
@@ -2210,7 +2228,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
@@ -2246,7 +2264,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 108,
+    "diasTotalDesarrollo": 109,
     "produccion": ""
   },
   {
@@ -2444,7 +2462,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 75,
+    "diasTotalDesarrollo": 76,
     "produccion": ""
   },
   {
@@ -2840,7 +2858,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "16/05/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 173,
+    "diasTotalDesarrollo": 174,
     "produccion": ""
   },
   {
@@ -3128,7 +3146,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 97,
+    "diasTotalDesarrollo": 98,
     "produccion": ""
   },
   {
@@ -3164,7 +3182,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 90,
+    "diasTotalDesarrollo": 91,
     "produccion": "30/12/2025"
   },
   {
@@ -3236,7 +3254,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 35,
+    "diasTotalDesarrollo": 36,
     "produccion": ""
   },
   {
@@ -3488,7 +3506,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 58,
+    "diasTotalDesarrollo": 59,
     "produccion": ""
   },
   {
@@ -3524,7 +3542,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 56,
+    "diasTotalDesarrollo": 57,
     "produccion": ""
   },
   {
@@ -3920,7 +3938,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 106,
+    "diasTotalDesarrollo": 107,
     "produccion": ""
   },
   {
@@ -3938,7 +3956,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 83,
+    "diasTotalDesarrollo": 84,
     "produccion": ""
   },
   {
@@ -4190,7 +4208,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 166,
+    "diasTotalDesarrollo": 167,
     "produccion": ""
   },
   {
@@ -4388,7 +4406,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 46,
+    "diasTotalDesarrollo": 47,
     "produccion": ""
   },
   {
@@ -4856,7 +4874,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "13/08/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 115,
+    "diasTotalDesarrollo": 116,
     "produccion": ""
   },
   {
@@ -5519,10 +5537,10 @@
     "unit": "Bolivar",
     "detail": "",
     "visible": true,
-    "diasEstimadosDesarrollo": 18,
-    "fechaEstimadaEntrega": "28/01/2026",
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "29/01/2026",
-    "diasTotalDesarrollo": 18,
+    "diasTotalDesarrollo": 19,
     "produccion": ""
   },
   {
@@ -5569,7 +5587,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[21/01/2026]: Las historias de usuario fueron respondidas por Imagine el [19/01/2026]. En sesión se acuerda que Imagine entregará la estimación del requerimiento el lunes [26/01/2026], considerando las tipologías actuales y sin esperar la depuración total.",
+    "observations": "[21/01/2026]: Las historias de usuario fueron respondidas por Imagine el [19/01/2026]. En sesión se acuerda que Imagine entregará la estimación del requerimiento el lunes [26/01/2026], considerando las tipologías actuales y sin esperar la depuración total.\n[29/01/2026]: se informa en sesion de seguimiento que se encuentra en  análisis por parte de la gerencia de Imagine, Se está evaluando el impacto administrativo, el mantenimiento y el soporte que requerirá, dado que es un desarrollo de gran tamaño",
     "unit": "Bolivar",
     "detail": "Actualmente, la gestión de imágenes y casos en el sistema Imagine se realiza  \nexclusivamente a través de su interfaz web. Esta limitación impide la comunicación directa  \ncon los sistemas satélites de la red corporativa, generando un cuello de botella operativo  \nque incrementa los tiempos de procesamiento y la propensión a errores humanos.  \nAnte la evolución del ecosistema tecnológico de la compañía, resulta imperativo habilitar  \nuna capacidad de integración automatizada que permita alimentar el repositorio central  \ncustodiado por Imagine de manera masiva y eficiente.  \nEl objetivo es canalizar la información desde los sistemas periféricos hacia Imagine  \nmediante una interfaz segura, reutilizando estrictamente los flujos de proceso y la lógica de  \nnegocio ya consolidados en la herramienta. Esta integración permitirá alcanzar una  \neficiencia operativa sustancial para la compañía, transformando tareas operativas en flujos  \ndigitales inmediatos y libres de fricción. Al hacerlo bajo la estricta gobernanza de Imagine,  \ngarantizamos no solo la agilidad del proceso, sino también la integridad de cada caso y la  \ncustodia de las imágenes, aplicando las validaciones actuales de manera transparente y sin  \nnecesidad de redefinir el funcionamiento interno del aplicativo.  ",
     "visible": false,
@@ -5666,7 +5684,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 27,
+    "diasTotalDesarrollo": 28,
     "produccion": ""
   },
   {
