@@ -250,7 +250,40 @@
          margin-top: 5px;
        ">
 </div>
-
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 border-start border-primary border-5 h-100" style="background: white;">
+            <div class="card-body py-3">
+                <small class="text-muted fw-bold text-uppercase" style="font-size: 0.7rem;">Total Requerimientos</small>
+                <h2 id="kpi-total" class="fw-bold mb-0 text-primary">0</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 border-start border-danger border-5 h-100" style="background: white;">
+            <div class="card-body py-3">
+                <small class="text-danger fw-bold text-uppercase" style="font-size: 0.7rem;">Críticos / Por Vencer</small>
+                <h2 id="kpi-criticos" class="fw-bold mb-0 text-danger">0</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 border-start border-warning border-5 h-100" style="background: white;">
+            <div class="card-body py-3">
+                <small class="text-warning fw-bold text-uppercase" style="font-size: 0.7rem;">Con Desviación (Días)</small>
+                <h2 id="kpi-desviacion" class="fw-bold mb-0 text-warning">0</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 border-start border-success border-5 h-100" style="background: white;">
+            <div class="card-body py-3">
+                <small class="text-success fw-bold text-uppercase" style="font-size: 0.7rem;">En Producción</small>
+                <h2 id="kpi-produccion" class="fw-bold mb-0 text-success">0</h2>
+            </div>
+        </div>
+    </div>
+</div>
     <div id="resumen" class="card">
       <div class="card-header">
         <h2>Resumen Ejecutivo</h2>
@@ -301,9 +334,15 @@
   <div class="col-md-1">
     <label class="d-none d-md-block">&nbsp;</label>
     <button id="btnLimpiarFiltros" class="btn btn-secondary btn-sm">Limpiar</button>
+    </div>
+    <div class="col-md-3 d-flex align-items-end">
+    <button class="btn btn-outline-primary btn-sm ms-2" onclick="exportarCSV()">
+      <i class="fas fa-file-csv me-1"></i> Exportar CSV
+    </button>
+  </div>
   </div>
 </div>
-
+      
         <div class="d-flex justify-content-start mb-2">
           
           <button id="toggleFinalizados" class="btn btn-sm btn-toggle-finalizados">Mostrar Finalizados</button>
@@ -446,7 +485,38 @@
   "pruebas cacol": "#f7b6d2",     // Rosa pastel
 };
 
+                          // --- MOTOR DE LAS TARJETAS (KPIs) ---
+          function actualizarTableroKPI(tareasParaCalcular) {
+    if (!tareasParaCalcular) return;
 
+    // --- NUEVA LÍNEA: Filtramos solo lo visible antes de contar ---
+    const tareasVisibles = tareasParaCalcular.filter(t => t.visible === true);
+
+    // Ahora usamos "tareasVisibles" en lugar de "tareasParaCalcular" en los conteos:
+    document.getElementById('kpi-total').innerText = tareasVisibles.length;
+
+    // Críticos (usando tareasVisibles)
+    const criticos = tareasVisibles.filter(t => {
+        const fechaComp = parseDate(t.fechaCompromisoCliente);
+        if (!fechaComp || t.progress === 100) return false;
+        const hoy = new Date();
+        const diasRestantes = Math.ceil((fechaComp - hoy) / (1000 * 60 * 60 * 24));
+        return diasRestantes <= 3;
+    }).length;
+    document.getElementById('kpi-criticos').innerText = criticos;
+
+    // Desviación (usando tareasVisibles)
+    const desviados = tareasVisibles.filter(t => 
+        Number(t.diasTotalDesarrollo) > Number(t.diasEstimadosDesarrollo)
+    ).length;
+    document.getElementById('kpi-desviacion').innerText = desviados;
+
+    // Producción (usando tareasVisibles)
+    const enProduccion = tareasVisibles.filter(t => 
+        t.produccion && t.produccion !== 'N/A' && t.produccion !== ''
+    ).length;
+    document.getElementById('kpi-produccion').innerText = enProduccion;
+}
     // Función para parsear fechas
     function parseDate(dateStr) {
   if (!dateStr || typeof dateStr !== 'string' || !dateStr.includes('/')) {
@@ -538,7 +608,9 @@
 
     // Renderizar Tareas
     let mostrarFinalizados = false;// El tablero inicia ocultando los terminados
-    function renderTasks(filteredTasks = tasks) {
+     function renderTasks(filteredTasks = tasks) {
+     // Esta línea es la que "enciende" las tarjetas
+    actualizarTableroKPI(filteredTasks);
       filteredTasks = filteredTasks.filter(task => {
         if (task.visible === false) return false;
         if (!mostrarFinalizados && task.state === "Finalizado" && task.progress === 100) return false;
@@ -571,6 +643,7 @@
         } else if (diasRestantes <= 7) {
           colorTitulo = '#fd7e14'; // Naranja: Atención
         }
+  
       }
         const taskCard = document.createElement('div');
         taskCard.className = 'card task-card';
@@ -1386,6 +1459,77 @@ function loadObservations() {
 
 // Cargar observaciones al iniciar la página
 document.addEventListener('DOMContentLoaded', loadObservations);
-  </script>
+// Función para descargar los datos en formato Excel (CSV)
+function exportarCSV() {
+    const estado = document.getElementById('estadoFiltro').value;
+    const unidad = document.getElementById('unidadFiltro').value;
+    const busqueda = document.getElementById('busqueda').value.toLowerCase();
+    const idBusqueda = (document.getElementById('idFiltro')) ? document.getElementById('idFiltro').value.toLowerCase() : "";
+
+    const tareasFiltradas = tasks.filter(t => {
+        if (t.visible !== true) return false;
+        const matchEstado = !estado || t.state === estado;
+        const matchUnidad = !unidad || t.unit === unidad;
+        const matchBusqueda = !busqueda || t.title.toLowerCase().includes(busqueda) || t.assigned.toLowerCase().includes(busqueda);
+        const matchId = !idBusqueda || t.id.toLowerCase().includes(idBusqueda);
+        return matchEstado && matchUnidad && matchBusqueda && matchId;
+    });
+
+    let csv = "\uFEFF"; 
+    // 1. Actualizamos el encabezado con las nuevas columnas
+    csv += "ALERTA;ID;Requerimiento;Unidad;Asignado;Estado;Fecha Inicio;Entrega Estimada;Compromiso Cliente;Fecha Fin;Dias Estimados;Dias Totales;Produccion\n";
+    
+    const hoy = new Date();
+    hoy.setHours(0, 0, 0, 0);
+
+    tareasFiltradas.forEach(t => {
+        const limpiar = (texto) => String(texto || "").replace(/[\n\r]+/g, ' ').replace(/;/g, ',');
+        
+        // --- LÓGICA DE ALERTAS ---
+        let alerta = "✅ OK";
+        const fechaComp = parseDate(t.fechaCompromisoCliente);
+        
+        if (fechaComp && t.progress < 100 && t.state !== "Finalizado") {
+            const diferenciaTiempo = fechaComp - hoy;
+            const diasRestantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24));
+            if (diasRestantes <= 3) {
+                alerta = "🚨 CRÍTICO / VENCIDO";
+            }
+        }
+
+        if (alerta === "✅ OK") {
+            const diasEst = Number(t.diasEstimadosDesarrollo) || 0;
+            const diasTot = Number(t.diasTotalDesarrollo) || 0;
+            if (diasTot > diasEst) {
+                alerta = "⚠️ DESVIACIÓN";
+            }
+        }
+
+        // 2. Construimos la fila incluyendo los nuevos campos de fecha
+        csv += `${alerta};` +
+               `${t.id};` +
+               `${limpiar(t.title)};` +
+               `${limpiar(t.unit)};` +
+               `${limpiar(t.assigned)};` +
+               `${limpiar(t.state)};` +
+               `${t.startDate || 'N/A'};` +           // Fecha Inicio
+               `${t.fechaEstimadaEntrega || 'N/A'};` + // Entrega Estimada
+               `${t.fechaCompromisoCliente || 'N/A'};` +
+               `${t.endDate || 'Sin Finalizar'};` +    // Fecha Fin
+               `${t.diasEstimadosDesarrollo || 0};` +
+               `${t.diasTotalDesarrollo || 0};` +
+               `${t.produccion || 'N/A'}\n`;
+    });
+    
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.setAttribute('href', url);
+    a.setAttribute('download', `reporte_imagine_full_${new Date().toISOString().slice(0,10)}.csv`);
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+</script>
 </body>
 </html>
