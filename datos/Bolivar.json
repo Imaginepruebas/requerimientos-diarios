@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 208,
+    "diasTotalDesarrollo": 210,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 21,
+    "diasTotalDesarrollo": 23,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "30/04/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 190,
+    "diasTotalDesarrollo": 192,
     "produccion": ""
   },
   {
@@ -411,24 +411,6 @@
     "fechaEstimadaEntrega": "20/06/2025",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 27,
-    "produccion": ""
-  },
-  {
-    "id": "INTERNO-D005",
-    "title": "Ajustar los portales para ser responsive ",
-    "assigned": "DANILO",
-    "state": "Pausado",
-    "progress": 5,
-    "startDate": "05/05/2025",
-    "endDate": "",
-    "observations": "",
-    "unit": "Bolivar",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 186,
     "produccion": ""
   },
   {
@@ -932,7 +914,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 8,
+    "diasTotalDesarrollo": 10,
     "produccion": ""
   },
   {
@@ -1274,7 +1256,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 135,
+    "diasTotalDesarrollo": 137,
     "produccion": ""
   },
   {
@@ -1695,7 +1677,7 @@
     "id": "GD772-168-2",
     "title": "Nuevo proceso de incapacidades ARL fase 2",
     "assigned": "JESUS",
-    "state": "En Proceso",
+    "state": "Pendiente Cliente",
     "progress": 80,
     "startDate": "21/01/2026",
     "endDate": "30/01/2026",
@@ -1713,18 +1695,18 @@
     "id": "INTERNO-JE031",
     "title": "Actualizacion Nativo",
     "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "state": "En Proceso",
+    "progress": 10,
+    "startDate": "04/02/2026",
     "endDate": "",
-    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.",
+    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.\n[06/02/2026]: Se completó la conexión con las variables de entorno y se habilitó el API de login en local. Se garantizó que el token de seguridad mantenga la misma persistencia de sesión que el sistema de Bolívar ",
     "unit": "Bolivar",
     "detail": "Diseñar y desarrollar un nuevo aplicativo que reemplace progresivamente la solución actual Nativo, con el objetivo de contar con una plataforma unificada, flexible y mantenible que permita gestionar de punta a punta los procesos operativos: creación de casos desde los portales, gestión interna, asignación por roles, seguimiento, consultas y generación de reportes.\n\nEl nuevo aplicativo debe cubrir el flujo completo del negocio, desde la radicación inicial hasta el cierre del caso, incorporando controles de trazabilidad, perfiles de usuario y visualización de información consolidada, eliminando las limitaciones técnicas y funcionales del sistema actual.\n\nAlcance inicial (MVP):\n\nCreación y radicación de casos desde portales.\n\nMódulo de gestión interna de casos.\n\nAsignación por roles y perfiles (administrador, gestor, consulta).\n\nBandejas de trabajo y estados del caso.\n\nConsulta y trazabilidad del proceso.\n\nMódulo básico de reportes.\n\nInterfaz moderna (uso de Tailwind).\n\nObjetivo:\nContar con un producto funcional de punta a punta que permita demostrar el flujo completo al cliente, sirviendo como base para la evolución progresiva del sistema y la migración controlada desde Nativo.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   },
   {
@@ -1756,6 +1738,24 @@
     "observations": "[28/01/2026]: Se realiza actualizacion del rol en la tabla de usuarios.",
     "unit": "Bolivar",
     "detail": "\nEstoy intentando asignar casos a un integrante nuevo de mi equipo Angela María Ochoa Estepa CC 52819945 y no me aparece disponible para asignación. Luego, intento revisar que tiene en bandeja y me aparece el siguiente error:\n\nERROR: invalid input syntax for type integer: \"\" LINE 1: select desc_rol,cod_ramo from rol where id_rol='' ^ -select desc_rol,cod_ramo from rol where id_rol=''\n\nConfirmo que le dejé la misma configuración que a las demás personas de mi equipo.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "MDSB-967290",
+    "title": "Jiras dia a dia - Ajuste Trim en Entidades (Jira)",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "06/02/2026",
+    "endDate": "06/02/2026",
+    "observations": "[06/02/2026]: Requerimiento pendiente para replicar la lógica de limpieza de datos (trim) utilizada en Portales. El objetivo es eliminar espacios en blanco en los campos de NIT o documento para evitar que los registros no se visualicen al ser consultados desde Nativo\nSe replica logica  en  portal entidades  y te autorizo     \nse realizó la corrección de los registros históricos que presentaban esta inconsistencia en la base de datos.",
+    "unit": "Bolivar",
+    "detail": "Se solicita por favor la validación de la siguiente incidencia:\n\nSe consulta por la cedula 77184027 y solo registra un caso para dicha cedula en el 2026, sin emabargo al validar el caso 43882280 registra para el mismo trabajador, en varias oportunidades se ha reportado la misma problematica, lo cual puede generar la atención erronea de información, no visulización de información existente, atención legal fuera de terminos.\n\nLa indicación de imagine en varias oportunidad ha sido que la información registra con un espacio, por lo cual se proponen los siguientes controles:\n\n*Control en la ofciina exprés y oficina de juntas al momento de la radicación, donde el aplicativo no permita los espacios antes, en medio o despues del numero de documento.\n*El mismo control para la radicación interna\n*Corrección de los numeros de documentos que ya tienen la problematica",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
@@ -1814,7 +1814,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 131,
+    "diasTotalDesarrollo": 133,
     "produccion": ""
   },
   {
@@ -2012,7 +2012,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 128,
+    "diasTotalDesarrollo": 130,
     "produccion": ""
   },
   {
@@ -2066,7 +2066,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 128,
+    "diasTotalDesarrollo": 130,
     "produccion": ""
   },
   {
@@ -2191,8 +2191,8 @@
     "visible": true,
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "30/01/2026",
-    "fechaCompromisoCliente": "29/01/2026",
-    "diasTotalDesarrollo": 23,
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 25,
     "produccion": ""
   },
   {
@@ -2253,11 +2253,11 @@
     "id": "GD772-156",
     "title": "ASIGNACION MEDICO BOLIVAR",
     "assigned": "JAIRO",
-    "state": "Control De Cambios Produccion",
-    "progress": 90,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "19/01/2026",
     "endDate": "21/01/2026",
-    "observations": "[27/10/2025]: Se analizar el detalle del GIRA 156 para aplicar los cambios de asignación en la tabla de usuarios.\n[28/11/2025]: Se iniciara la realización de algunos cambios en el cruce de facturas\n[19/01/2026]: Se espera reanudar y avanzar en este frente en paralelo con los ajustes de reembolsos, en la medida en que la capacidad lo permita.\n[20/01/2026]: Se solicita control de cambios a test con el jira MDSB-964282\n[21/01/2026]: Se incorporó un nuevo tab explicativo con el detalle del esquema de asignación y se incluyeron los ajustes solicitados para enfermería y médico adicional. Pendiente ejecucion del control de cambios.\n[22/01/2026]: Control de cambios ejecutado correctamente en test el 21 de enero.\n[26/01/2026]: El desarrollo ya se encuentra en ambiente de TEST. Se implementó la lógica de asignación automática: casos mayores a 50 millones se dirigen a médico y menores a 50 millones a enfermería. El paso a producción queda sujeto a decisión del área usuaria\n[28/01/2026]: Se aprueba paso aproducción.\n[30/01/2026]: Desarrollo listo, pendiente control de cambios a producción. No se han podido realizar pruebas por falta de acceso a TEST.\nSe escala control de cambios MDSB-971453 a produccion.\n[02/02/2026]: Control de cambios pendiente por  aprobaciones  de QA y PO cliente.\n[04/02/2026]: Control de cambios se encuentra pendiente por aprobación  de QA cliente.",
+    "observations": "[27/10/2025]: Se analizar el detalle del GIRA 156 para aplicar los cambios de asignación en la tabla de usuarios.\n[28/11/2025]: Se iniciara la realización de algunos cambios en el cruce de facturas\n[19/01/2026]: Se espera reanudar y avanzar en este frente en paralelo con los ajustes de reembolsos, en la medida en que la capacidad lo permita.\n[20/01/2026]: Se solicita control de cambios a test con el jira MDSB-964282\n[21/01/2026]: Se incorporó un nuevo tab explicativo con el detalle del esquema de asignación y se incluyeron los ajustes solicitados para enfermería y médico adicional. Pendiente ejecucion del control de cambios.\n[22/01/2026]: Control de cambios ejecutado correctamente en test el 21 de enero.\n[26/01/2026]: El desarrollo ya se encuentra en ambiente de TEST. Se implementó la lógica de asignación automática: casos mayores a 50 millones se dirigen a médico y menores a 50 millones a enfermería. El paso a producción queda sujeto a decisión del área usuaria\n[28/01/2026]: Se aprueba paso aproducción.\n[30/01/2026]: Desarrollo listo, pendiente control de cambios a producción. No se han podido realizar pruebas por falta de acceso a TEST.\nSe escala control de cambios MDSB-971453 a produccion.\n[02/02/2026]: Control de cambios pendiente por  aprobaciones  de QA y PO cliente.\n[04/02/2026]: Control de cambios se encuentra pendiente por aprobación  de QA cliente.\n[05/02/2026]: Control de cambios ejecutado con exito.\n[06/02/2026]: El 5 de febrero se implementó el paso a producción del módulo de asignación tras realizar simulaciones exitosas dentro del sistema para verificar el direccionamiento correcto entre médicos y enfermería.",
     "unit": "Bolivar",
     "detail": "De forma atenta me permito enviar solicitud de creación de carpetas para cada uno de los auditores con el fin de que las distribuciones de las facturas sea equitativa para los que tienen perfil de enfermería y a los médicos les sean asignadas las cuentas iguales o mayores a $50.000.000.\n\nCon respecto a la respuesta a glosa, lo ideal es que le sea asignada a la persona que revisó. En sus inicios debería ser asignada a mi(S.R.) bandeja ya que el usuario que está revisando las facturas es el mío (S.R.) y posterior cuando empiecen a llegar las respuestas de las vistas por cada uno de los usuarios, a ellos mismos.\n",
     "visible": true,
@@ -2265,7 +2265,7 @@
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 3,
-    "produccion": ""
+    "produccion": "05/02/2026"
   },
   {
     "id": "MDSB-972464",
@@ -2286,6 +2286,96 @@
     "produccion": ""
   },
   {
+    "id": "GD772-197",
+    "title": "Modificar texto de respuesta / Ajuste de cartas Reembolsos ARL",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/02/2026",
+    "endDate": "05/02/2026",
+    "observations": "[06/02/2026]: Modificaciónes y ajustes realizados y aplicados en el ambiente productivo el 5 de febrero.",
+    "unit": "Bolivar",
+    "detail": "Modificar en el texto de repsuesta de pagado en validación lo siguiente: \n\nDe conformidad con lo anterior en los próximos tres (3) días hábiles posteriores al recibido de esta comunicación se abonara el pago  a su cuenta bancaria por un valor de $XXXX , si no tiene una cuenta inscrita lo invitamos a inscribirla a través del siguiente link : \n\nFormulario de inscripción/actualización de cuentas bancarias (Para uso de Clientes, Intermediarios  y Proveedores)  \n\nSi no realiza la inscripción de la cuenta el pago no se vera reflejado o disponible.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": "05/02/2026"
+  },
+  {
+    "id": "GD772-196",
+    "title": " Editar Valor - Agregar Observación respuesta Reembolsos Salud",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/02/2026",
+    "endDate": "05/02/2026",
+    "observations": "[06/02/2026]: Cambios generados y aplicados en el ambiente productivo el 5 de febrero. ",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": "05/02/2026"
+  },
+  {
+    "id": "GD772-187",
+    "title": "INFORME GLOSAS",
+    "assigned": "JAIRO",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "06/02/2026",
+    "endDate": "",
+    "observations": "[06/02/2026]: Se estima dar inicio hoy al ajuste del informe.",
+    "unit": "Bolivar",
+    "detail": "Se solicita que en el informe de glosas para todos los ramos se traiga las mismas lineas que relacionan en la glosa realizada en modulo de imagine. Este informe debe quedar retroactivo para las atenciones glosadas previo a este requerimiento.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "18/02/2026",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "GD772-189",
+    "title": "Nueva tipologia Radicación Cartera Liviana",
+    "assigned": "JAIRO",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "06/02/2026",
+    "endDate": "",
+    "observations": "[14/01/2026]: Por Indicación de Jenry se asigna requerimiento\n[06/02/2026]: Se estima dar inicio hoy a la creación de la tipologia solicitada.",
+    "unit": "Bolivar",
+    "detail": "Se solicita crear un nueva tipología en la plataforma Imagine llamada; Radicación Cartera Liviana, esta tipología debe permitir radicar máximo 10 líneas de excel, con relación de las facturas a revisar, por lo que la plataforma debe verificar que el archivo que adjunta el proveedor no excede esta cantidad de líneas, adicional debe mostrar un mensaje al prestador que diga; “señor prestador este canal permite radicar cartera hasta 10 facturas, si excede esta cantidad su solicitud debe radicarse por tipología carteras y otros”, adicional la plataforma deberá identificar si la entidad que radica supero en el mes mas de 2 radicaciones por este canal, al superar estas 2 radicaciones la plataforma deberá mostrar el siguiente mensaje “ Señor prestador supero las radicaciones permitidas en el mes”.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "20/03/2026",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "GD772-183",
+    "title": "Mejoras REE Salud  segunda entrega",
+    "assigned": "JAIRO",
+    "state": "En Proceso",
+    "progress": 20,
+    "startDate": "04/02/2026",
+    "endDate": "",
+    "observations": "[04/02/2026]: Se plantea retomar este frente y avanzar en las entregas pendientes, priorizándolo mientras se define el camino de Alfa. Aún sin avance técnico reportado en esta sesión.\n[06/02/2026]: El avance es bajo debido a dudas iniciales sobre la lógica de \"reapertura\". Tras reunirse con el cliente, se definió que la reapertura debe funcionar como una nueva línea de factura (similar a una respuesta de glosa). Existe el riesgo técnico de generar pagos dobles o duplicidad de facturas abiertas",
+    "unit": "Bolivar",
+    "detail": "1.ATAR EL CASO DE DUDAS CON EL CASO EN GESTIÓN:\n2. DUPLICACIÓN DE CASO CUANDO VIENEN VARIAS FACTURAS\n3. MARCACIÓN DIGITACIÓN CASOS ESPECIALES \n\nMEJORAS REEMBOLSOS segundo entregable \n\n1.ATAR EL CASO DE DUDAS CON EL CASO EN GESTIÓN: \nSe requiere que cuando el asegurado indique el número de caso en la opción de tengo dudas sobre mi reembolso : debe buscar el caso en el aplicativo y realizar la reapertura del caso, como si se tratara de una reapertura por el canal que tenemos actualmente del módulo de consultas Se debe asignar a la persona que realizó la gestión del caso, si por alguna razón esa persona ya no se encuentra en el flujo, el sistema debe ir al flujo y asignarlo al usuario que se encuentre dentro de ese roll Esta opción estará habilitada para todos los estados de reembolso Si el caso que indica el asegurado en el cuadro de número de caso de dudas reembolsos no existe , debe crear el caso como duda y no lo ata a ningún caso , si el asegurado lo deja en blanco debe pasar lo mismo que se describe en este párrafo \n\n2. DUPLICACIÓN DE CASO CUANDO VIENEN VARIAS FACTURAS\nSe requiere que exista un botón de duplicación de caso, para que se pueda realizar la gestión de nuevas facturas, el estado al que debe pasar este caso es digitación pero debe tener una marcación de priorización para digitar el caso lo más rápido posible, se debe indicar cual es la factura nueva que llevará el caso. \n\n3. MARCACIÓN DIGITACIÓN CASOS ESPECIALES \n\nSe requiere contar con un mecanismo en el cual se pueda marcar la prioridad de los casos a digitar con el fin de que en la actividad digitación se marque de manera distintiva y el analista pueda realizar la digitación de manera prioritaria, esto sólo aplicará para los casos que se encuentren en la actividad digitación,\n",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
+  },
+  {
     "id": "INTERNO-JA010",
     "title": "Revisión  devolución de facturas pensionados",
     "assigned": "JAIRO",
@@ -2300,7 +2390,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 113,
+    "diasTotalDesarrollo": 115,
     "produccion": ""
   },
   {
@@ -2498,7 +2588,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 80,
+    "diasTotalDesarrollo": 82,
     "produccion": ""
   },
   {
@@ -2894,7 +2984,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "16/05/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 178,
+    "diasTotalDesarrollo": 180,
     "produccion": ""
   },
   {
@@ -3150,24 +3240,6 @@
     "produccion": ""
   },
   {
-    "id": "INTERNO-D025",
-    "title": "Mejoras Sistema de reembolsos Salud (mejoras solicitadas por gerencia)",
-    "assigned": "DANILO",
-    "state": "Reanudar",
-    "progress": 70,
-    "startDate": "02/09/2025",
-    "endDate": "15/09/2025",
-    "observations": "[05/09/2025]: Se registra un avance estimado del 15%. La labor ha requerido investigación y entendimiento del proceso, por lo cual el progreso ha sido gradual. Continúa en desarrollo.\n[08/09/2025]: El avance fue mínimo (aprox. 5%), debido a la priorización de la reinstalación del ambiente de desarrollo. El trabajo continuará hoy con mayor dedicación.\n[10/09/2025]: Desarrollo con tres actividades; una ya  se esta probando, Se estima entregar primer avance esta semana.\n121/09/2025: Se avanzó en la primera actividad del requerimiento, alcanzando un 50% de desarrollo. Se requiere desplegar en el ambiente de pruebas (test) para continuar con las validaciones.\n[15/09/2025]: El viernes  12 de deptiembre se trabajó en optimizar el tiempo de respuesta del sistema de reembolsos, reduciendo la demora causada por procesos adicionales en el consumo de la API. Se planea subir los cambios al ambiente de pruebas durante el día.\n[16/09/2025]: Cambios suibidos al ambiente de test  el 15 de septiembre para iniciar pruebas.\n[16/09/2025]: Se realizan pruebas y se identifican problemas en el consumo del servicio (API).\n[07/11/2025]: Proximo a reiniciar  ajustes  en el consumo",
-    "unit": "Bolivar",
-    "detail": "**Se requiere para el portal de Reembolsos:**\\n- Visualización de facturas: poder ver la factura que estoy radicando, consultar si ya fue radicada, en qué estado se encuentra y tener un tiempo estimado de respuesta.\\n- Gestión de casos y observaciones: cuando tenga un problema con un caso, poder digitar en la observación el número de caso y mi documento, para que el sistema asocie automáticamente el comentario al caso correspondiente y me permita reabrirlo si es necesario.",
-    "visible": true,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 10,
-    "produccion": ""
-  },
-  {
     "id": "INTERNO-D026",
     "title": "Optimización del ambiente de pruebas",
     "assigned": "DANILO",
@@ -3182,7 +3254,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 102,
+    "diasTotalDesarrollo": 104,
     "produccion": ""
   },
   {
@@ -3218,7 +3290,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 95,
+    "diasTotalDesarrollo": 97,
     "produccion": "30/12/2025"
   },
   {
@@ -3290,7 +3362,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 40,
+    "diasTotalDesarrollo": 42,
     "produccion": ""
   },
   {
@@ -3510,42 +3582,6 @@
     "produccion": ""
   },
   {
-    "id": "INTERNO-D029",
-    "title": "Implementar log del API de incapacidades",
-    "assigned": "DANILO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
-    "unit": "Bolivar",
-    "detail": "Se solicita implementar un mecanismo de registro (log) para el API de Incapacidades, ya publicado en producción, con el fin de capturar y monitorear las interacciones realizadas. El log debe permitir identificar si el API está siendo consumido, el volumen de consumo y los parámetros utilizados en la consulta (por cédula, fecha, caso, entre otros). Actualmente no se cuenta con este registro, lo cual limita la visibilidad sobre el uso real del API",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
-    "produccion": ""
-  },
-  {
-    "id": "INTERNO-D028",
-    "title": "Migración y creación de nueva instancia en Snapchat para el ambiente de desarrollo",
-    "assigned": "DANILO",
-    "state": "Pausado",
-    "progress": 90,
-    "startDate": "31/10/2025",
-    "endDate": "",
-    "observations": "[31/10/2025]: Se  reporta  en el  ticket  MDSB-921872 error en el arranque de la estancia de dev , y Se propone crear la instancia de DEV a partir de la de test, aprovechando su estabilidad y evitando reprocesos de instalación.\"\n[04/11/2025]: Informan que no se puede copiar la instancia i-0656b5dc31eab8a8d porque al hacerlo se dañan los paquetes de Python y la instancia no inicia. Se sugiere hacer los ajustes directamente en la instancia imaginen_imaginez_5_dev y solicitar una copia antes de realizar cambios que puedan afectarla.\n[05/11/2025]: Informan que cuando  se tengan lista la instancia con todo instalado, se les informa para crear la Imagen.\n[07/11/2025]: La instancia no se logró levantar por conflictos con ejecuciones de Python. Se debe reinstalar y configurar nuevamente el ambiente, estimado en dos días.\n[24/11/2025]: Instancia entregada y funcional. Pendiente iniciar instalación de paquetes y configuración para que las aplicaciones operen correctamente. Se deja en pausa hasta que se revise y retome.\n[26/11/2025]: La instancia ya está desplegada, pero el proceso está en pausa a la espera de instalar paquetes, configurar dependencias y habilitar la ejecución de scripts.\n[03/12/2025]: Se retomará el orden del ambiente de Desarrollo, para separar adecuadamente los ambientes Desarrollo, Pruebas y Producción, evitando la mezcla actual. El objetivo es reorganizar el flujo de despliegues.\n[05/12/2025]: Se reinstaló desde cero el ambiente de desarrollo, se instalaron librerías necesarias y se clonaron todos los repositorios. Sin embargo, el DNS aún apunta a una instancia anterior, lo que impide visualizar logs externos por CloudFront. Se radicará un ticket para que infraestructura actualice la asociación del DNS. También se organizarán las ramas, ya que DEV está desactualizada y se alineará con TEST según lo acordado.\n[10/12/2025]: El trabajo en el ambiente de desarrollo continúa bloqueado por falta de actualización del DNS. El ticket MDSB-942275 fue radicado desde el viernes 5 de diciembre y aún no ha sido atendido. Una vez se habilite el dominio correcto, se terminará la estabilización del entorno.\n[17/12/2025]: El montaje del ambiente de desarrollo estuvo bloqueado debido a que los dominios apuntaban a un balanceador incorrecto. Inicialmente, infraestructura entregó solo un formato genérico, pero tras un nuevo reporte el problema fue corregido. El ambiente ya permite continuar con la migración y creación, aunque actualmente no se considera prioridad inmediata frente a otros frentes activos. queda en pausa.\n[18/12/2025]: Se avanzó en la preparación del ambiente de desarrollo, actualmente se presenta bloqueo porque los subdominios de Desarrollo continúan apuntando al CloudFront del DNS anterior. El caso está radicado en el ticket MDSB-942275.\n[19/12/2025]: El ambiente de desarrollo ya se encuentra creado y funcional. Quedan pendientes ajustes finales menores, los cuales no se han priorizado debido a que el enfoque actual del equipo está en el requerimiento de Incapacidades de Colmena.",
-    "unit": "Bolivar",
-    "detail": "Descripción:\n\nComo equipo de desarrollo, se requiere reactivar y normalizar el ambiente de desarrollo (Dev), actualmente fuera de servicio por error 503, con el fin de disponer de un entorno funcional, estable y sincronizado con el ambiente de test.\n\nEste ambiente permitirá realizar pruebas internas, validar integraciones y revisar nuevos desarrollos antes de su despliegue en test, evitando depender de la ejecución de controles de cambio para validaciones iniciales.",
-    "visible": true,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 63,
-    "produccion": ""
-  },
-  {
     "id": "CNTI-387",
     "title": "Vulnerabilidades  portal ARL\n(CNTI-391,CNTI-445,CNTI-446,CNTI-447,CNTI-448,CNTI-449)",
     "assigned": "DANILO",
@@ -3578,7 +3614,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 61,
+    "diasTotalDesarrollo": 63,
     "produccion": ""
   },
   {
@@ -3974,7 +4010,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 111,
+    "diasTotalDesarrollo": 113,
     "produccion": ""
   },
   {
@@ -3992,7 +4028,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 88,
+    "diasTotalDesarrollo": 90,
     "produccion": ""
   },
   {
@@ -4122,24 +4158,6 @@
     "produccion": "02/12/2025"
   },
   {
-    "id": "GD772-183",
-    "title": "Mejoras REE Salud  segunda entrega",
-    "assigned": "JAIRO",
-    "state": "En Proceso",
-    "progress": 0,
-    "startDate": "04/02/2026",
-    "endDate": "",
-    "observations": "[04/02/2026]: Se plantea retomar este frente y avanzar en las entregas pendientes, priorizándolo mientras se define el camino de Alfa. Aún sin avance técnico reportado en esta sesión.",
-    "unit": "Bolivar",
-    "detail": "1.ATAR EL CASO DE DUDAS CON EL CASO EN GESTIÓN:\n2. DUPLICACIÓN DE CASO CUANDO VIENEN VARIAS FACTURAS\n3. MARCACIÓN DIGITACIÓN CASOS ESPECIALES \n\nMEJORAS REEMBOLSOS segundo entregable \n\n1.ATAR EL CASO DE DUDAS CON EL CASO EN GESTIÓN: \nSe requiere que cuando el asegurado indique el número de caso en la opción de tengo dudas sobre mi reembolso : debe buscar el caso en el aplicativo y realizar la reapertura del caso, como si se tratara de una reapertura por el canal que tenemos actualmente del módulo de consultas Se debe asignar a la persona que realizó la gestión del caso, si por alguna razón esa persona ya no se encuentra en el flujo, el sistema debe ir al flujo y asignarlo al usuario que se encuentre dentro de ese roll Esta opción estará habilitada para todos los estados de reembolso Si el caso que indica el asegurado en el cuadro de número de caso de dudas reembolsos no existe , debe crear el caso como duda y no lo ata a ningún caso , si el asegurado lo deja en blanco debe pasar lo mismo que se describe en este párrafo \n\n2. DUPLICACIÓN DE CASO CUANDO VIENEN VARIAS FACTURAS\nSe requiere que exista un botón de duplicación de caso, para que se pueda realizar la gestión de nuevas facturas, el estado al que debe pasar este caso es digitación pero debe tener una marcación de priorización para digitar el caso lo más rápido posible, se debe indicar cual es la factura nueva que llevará el caso. \n\n3. MARCACIÓN DIGITACIÓN CASOS ESPECIALES \n\nSe requiere contar con un mecanismo en el cual se pueda marcar la prioridad de los casos a digitar con el fin de que en la actividad digitación se marque de manera distintiva y el analista pueda realizar la digitación de manera prioritaria, esto sólo aplicará para los casos que se encuentren en la actividad digitación,\n",
-    "visible": true,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 1,
-    "produccion": ""
-  },
-  {
     "id": "GD772-184",
     "title": "Mejoras REE Salud  tercera entrega\nCambiar a experiencia móvil  ",
     "assigned": "JAIRO",
@@ -4244,7 +4262,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 171,
+    "diasTotalDesarrollo": 173,
     "produccion": ""
   },
   {
@@ -4442,25 +4460,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 51,
-    "produccion": ""
-  },
-  {
-    "id": "GD772-189",
-    "title": "Nueva tipologia Radicación Cartera Liviana",
-    "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[14/01/2026]: Por Indicación de Jenry se asigna requerimiento",
-    "unit": "Bolivar",
-    "detail": "Se solicita crear un nueva tipología en la plataforma Imagine llamada; Radicación Cartera Liviana, esta tipología debe permitir radicar máximo 10 líneas de excel, con relación de las facturas a revisar, por lo que la plataforma debe verificar que el archivo que adjunta el proveedor no excede esta cantidad de líneas, adicional debe mostrar un mensaje al prestador que diga; “señor prestador este canal permite radicar cartera hasta 10 facturas, si excede esta cantidad su solicitud debe radicarse por tipología carteras y otros”, adicional la plataforma deberá identificar si la entidad que radica supero en el mes mas de 2 radicaciones por este canal, al superar estas 2 radicaciones la plataforma deberá mostrar el siguiente mensaje “ Señor prestador supero las radicaciones permitidas en el mes”.",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 53,
     "produccion": ""
   },
   {
@@ -4910,7 +4910,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "13/08/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 120,
+    "diasTotalDesarrollo": 122,
     "produccion": ""
   },
   {
@@ -5562,21 +5562,39 @@
     "produccion": "05/06/2025"
   },
   {
+    "id": "GD772-141_13",
+    "title": "Oficina Express (Modelos y Tipologías)",
+    "assigned": "DANILO",
+    "state": "En Proceso",
+    "progress": 65,
+    "startDate": "05/02/2026",
+    "endDate": "",
+    "observations": "[06/02/2026]: El 5 de febrero se trabajó en el entrenamiento del modelo para diversos contextos y en la validación de la asignación de tipologías. Se detectó que las tipologías sin flujo se reasignaban erróneamente, por lo que se están corrigiendo para asegurar la radicación correcta. De un Excel de 60 casos, se revisaron 40; muchos ya funcionan porque las tipologías ahora tienen flujo, pero se requiere revisión manual uno a uno",
+    "unit": "Bolivar",
+    "detail": "El cliente necesita que el modelo de inteligencia artificial identifique y asigne correctamente la tipología de cada solicitud entrante. El problema identificado es que, anteriormente, cuando una solicitud no tenía un flujo definido, el sistema la reasignaba a otro tipo de solicitud de forma genérica. Aunque en las observaciones quedaba el registro de la reasignación, el \"ideal\" del cliente es que la radicación se asigne desde el inicio a la tipología correcta.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
+  },
+  {
     "id": "INTERNO-D041",
     "title": "Sistema de correspondencia Alfa",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 20,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "03/02/2026",
-    "endDate": "",
-    "observations": "[04/02/2026]: El avance estimado se sitúa alrededor del 30%, correspondiente principalmente a la fase de exploración y entendimiento del sistema. Se están identificando dependencias técnicas, reglas de negocio implícitas y posibles brechas frente a los requerimientos actuales del cliente, con el fin de establecer el nivel real de esfuerzo para su estabilización o evolución.\nComo siguiente paso, se consolidará un reporte de funcionamiento que incluirá hallazgos, limitaciones detectadas y oportunidades de mejora, el cual se tiene previsto compartir a más tardar el viernes. Este insumo permitirá definir si el sistema puede adaptarse al nuevo modelo operativo o si se requiere un rediseño parcial o total.",
+    "endDate": "05/02/2026",
+    "observations": "[04/02/2026]: El avance estimado se sitúa alrededor del 30%, correspondiente principalmente a la fase de exploración y entendimiento del sistema. Se están identificando dependencias técnicas, reglas de negocio implícitas y posibles brechas frente a los requerimientos actuales del cliente, con el fin de establecer el nivel real de esfuerzo para su estabilización o evolución.\nComo siguiente paso, se consolidará un reporte de funcionamiento que incluirá hallazgos, limitaciones detectadas y oportunidades de mejora, el cual se tiene previsto compartir a más tardar el viernes. Este insumo permitirá definir si el sistema puede adaptarse al nuevo modelo operativo o si se requiere un rediseño parcial o total.\n[06/02/2026]: Documentaión de la revision del sistema de correspondecia ya se encuentra finalizada, se realizo presentación a la gerencia el 5 de febrero ",
     "unit": "Bolivar",
     "detail": "Revisión funcional integral del sistema de correspondencia entregado por gerencia de Imagine, con el objetivo de comprender completamente su operación actual, flujos internos y puntos de integración. Durante esta primera etapa se está realizando un levantamiento de funcionalidades existentes, validando módulos de radicación, gestión, consulta y trazabilidad de casos.",
     "visible": true,
     "diasEstimadosDesarrollo": 4,
     "fechaEstimadaEntrega": "06/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 2,
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   },
   {
@@ -5584,35 +5602,107 @@
     "title": "Estabilidad del servidor / monitoreo",
     "assigned": "DANILO",
     "state": "En Proceso",
-    "progress": 10,
+    "progress": 15,
     "startDate": "03/02/2026",
     "endDate": "",
-    "observations": "[04/02/2026]: se comenzó la instrumentación de métricas más finas sobre uso de CPU, memoria y almacenamiento, así como el seguimiento a procesos que generan mayor carga. Adicionalmente, se está evaluando el comportamiento del sistema bajo picos de operación para aislar componentes que puedan estar impactando la estabilidad.",
+    "observations": "[04/02/2026]: se comenzó la instrumentación de métricas más finas sobre uso de CPU, memoria y almacenamiento, así como el seguimiento a procesos que generan mayor carga. Adicionalmente, se está evaluando el comportamiento del sistema bajo picos de operación para aislar componentes que puedan estar impactando la estabilidad.\n[06/02/2026]: El caché del servidor  impide acceder al detalle de los archivos, por lo que está evaluando una solución alternativa antes de reportarlo formalmente. de disponer de tiempo el día de hoy continuara la validación.",
     "unit": "Bolivar",
     "detail": "Se iniciaron acciones de fortalecimiento del monitoreo y estabilización de la infraestructura con el objetivo de anticipar degradaciones del servicio y evitar eventos de indisponibilidad. Durante la sesión se identificó que parte de la carga del servidor está asociada a procesos en segundo plano, uso intensivo de caché y consumo de disco, por lo cual se están implementando controles adicionales para detectar estos cuellos de botella en tiempo real.\n\nEste frente permanece activo, con enfoque preventivo: el objetivo no es únicamente reaccionar ante alertas, sino contar con visibilidad temprana que permita tomar acciones correctivas antes de que el servicio se vea afectado. El trabajo continúa orientado a identificar causas raíz y definir ajustes estructurales que garanticen mayor resiliencia de la plataforma.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 2,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
     "id": "INTERNO-D035",
     "title": "Portal  Libranzas  Alfa",
     "assigned": "DANILO",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 70,
     "startDate": "02/01/2026",
     "endDate": "",
-    "observations": "[05/01/2026]: El 2 de Enero inicion el desarrollo del backend del Portal de Libranzas – Alfa, incluyendo configuración del entorno, creación de servicios base y ejecución de pruebas funcionales iniciales. El avance se encuentra limitado por la priorización de incidencias en Oficina Express, generando retraso frente a la fecha planificada.\n[07/01/2026]: De Momento no se hapodido avanzar con el desarrollo y se pretende reiniciar mañana 8 de enero.\n[09/01/2026]: El desarrollo se encuentra en una etapa inicial, con un avance aproximado del 15%. El trabajo se ha concentrado en la configuración y estructuración del paquete base del backend, sin que aún se haya definido el frontend. No se identifican bloqueos ni riesgos actuales y se continuará avanzando de manera progresiva.\n[14/01/2026]: presenta un avance aproximado del 30%, con el backend prácticamente finalizado y validado mediante pruebas exitosas en Postman y servidor. Actualmente el enfoque está en iniciar el frontend, comenzando por el módulo de autenticación (login) y el acceso de usuarios de entidades financieras, alineado con el modelo de portales existentes. El equipo prioriza este desarrollo, por lo que otras actividades han quedado temporalmente en pausa\n[16/01/2026]: Se avanzó de manera significativa en el frontend del portal de libranzas, logrando la integración entre backend y frontend, autenticación con usuarios de prueba y creación de solicitudes. Actualmente se trabaja en la visualización del detalle de la solicitud, la reedición posterior a cambios y la trazabilidad del proceso. Quedan pendientes la asignación de solicitudes a usuarios según trazabilidad y el cierre completo del módulo de detall\n[19/01/2026]: El avance hasido satisfactorio sin bloqueos alcanzando un 40% de avance..\n[21/01/2026]: Se continúa avanzando en el desarrollo del portal de libranzas, manteniéndose como prioridad del equipo.\n[26/01/2026]: Se reporta un avance aproximado del 55%. Ya se encuentra casi finalizada la radicación y se avanzó en la asignación de casos, se trabajara en validaciones lógicas, gestión de casos y prefactura (1.5%).\n[28/01/2026]: Se avanzó significativamente en la radicación masiva, incluyendo cargue inicial, validación de datos, carga de adjuntos, generación de logs, visualización de resultados y detalle de solicitudes exitosas. También se alineó la radicación individual para reutilizar los mismos campos del proceso masivo. El avance global del portal se incrementó del 55% al 65%, con expectativa de llegar al 70% tras finalizar el dashboard con gráficos (libranzas radicadas, convenios 1.5%, entidades con convenio y solicitudes pendientes). Actualmente quedan pendientes la gestión completa de usuarios (devolución de casos y administración) y el cierre del módulo de reportes.\n[30/01/2026]: Avance se mantiene entre 65–70%. No se incrementa porcentaje debido a nuevos ajustes solicitados por el cliente deacuerdo a la sesion del 29 de enero que implican reestructurar funcionalidades ya desarrolladas.\n[04/02/2026]: Se continúa trabajando en los cambios solicitados por el cliente y por gerencia Imagine. Este frente sigue siendo prioridad del día, en paralelo con tareas de estabilización del servidor.",
+    "observations": "[05/01/2026]: El 2 de Enero inicion el desarrollo del backend del Portal de Libranzas – Alfa, incluyendo configuración del entorno, creación de servicios base y ejecución de pruebas funcionales iniciales. El avance se encuentra limitado por la priorización de incidencias en Oficina Express, generando retraso frente a la fecha planificada.\n[07/01/2026]: De Momento no se hapodido avanzar con el desarrollo y se pretende reiniciar mañana 8 de enero.\n[09/01/2026]: El desarrollo se encuentra en una etapa inicial, con un avance aproximado del 15%. El trabajo se ha concentrado en la configuración y estructuración del paquete base del backend, sin que aún se haya definido el frontend. No se identifican bloqueos ni riesgos actuales y se continuará avanzando de manera progresiva.\n[14/01/2026]: presenta un avance aproximado del 30%, con el backend prácticamente finalizado y validado mediante pruebas exitosas en Postman y servidor. Actualmente el enfoque está en iniciar el frontend, comenzando por el módulo de autenticación (login) y el acceso de usuarios de entidades financieras, alineado con el modelo de portales existentes. El equipo prioriza este desarrollo, por lo que otras actividades han quedado temporalmente en pausa\n[16/01/2026]: Se avanzó de manera significativa en el frontend del portal de libranzas, logrando la integración entre backend y frontend, autenticación con usuarios de prueba y creación de solicitudes. Actualmente se trabaja en la visualización del detalle de la solicitud, la reedición posterior a cambios y la trazabilidad del proceso. Quedan pendientes la asignación de solicitudes a usuarios según trazabilidad y el cierre completo del módulo de detall\n[19/01/2026]: El avance hasido satisfactorio sin bloqueos alcanzando un 40% de avance..\n[21/01/2026]: Se continúa avanzando en el desarrollo del portal de libranzas, manteniéndose como prioridad del equipo.\n[26/01/2026]: Se reporta un avance aproximado del 55%. Ya se encuentra casi finalizada la radicación y se avanzó en la asignación de casos, se trabajara en validaciones lógicas, gestión de casos y prefactura (1.5%).\n[28/01/2026]: Se avanzó significativamente en la radicación masiva, incluyendo cargue inicial, validación de datos, carga de adjuntos, generación de logs, visualización de resultados y detalle de solicitudes exitosas. También se alineó la radicación individual para reutilizar los mismos campos del proceso masivo. El avance global del portal se incrementó del 55% al 65%, con expectativa de llegar al 70% tras finalizar el dashboard con gráficos (libranzas radicadas, convenios 1.5%, entidades con convenio y solicitudes pendientes). Actualmente quedan pendientes la gestión completa de usuarios (devolución de casos y administración) y el cierre del módulo de reportes.\n[30/01/2026]: Avance se mantiene entre 65–70%. No se incrementa porcentaje debido a nuevos ajustes solicitados por el cliente deacuerdo a la sesion del 29 de enero que implican reestructurar funcionalidades ya desarrolladas.\n[04/02/2026]: Se continúa trabajando en los cambios solicitados por el cliente y por gerencia Imagine. Este frente sigue siendo prioridad del día, en paralelo con tareas de estabilización del servidor.\n[06/02/2026]: El proyecto se encuentra totalmente detenido (\"en stock\") por directrices superiores, sin permiso para avanzar hasta nueva orden.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 23,
+    "diasTotalDesarrollo": 25,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D005",
+    "title": "Ajustar los portales para ser responsive ",
+    "assigned": "DANILO",
+    "state": "Pausado",
+    "progress": 5,
+    "startDate": "05/05/2025",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 188,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D028",
+    "title": "Migración y creación de nueva instancia en Snapchat para el ambiente de desarrollo",
+    "assigned": "DANILO",
+    "state": "Pausado",
+    "progress": 90,
+    "startDate": "31/10/2025",
+    "endDate": "",
+    "observations": "[31/10/2025]: Se  reporta  en el  ticket  MDSB-921872 error en el arranque de la estancia de dev , y Se propone crear la instancia de DEV a partir de la de test, aprovechando su estabilidad y evitando reprocesos de instalación.\"\n[04/11/2025]: Informan que no se puede copiar la instancia i-0656b5dc31eab8a8d porque al hacerlo se dañan los paquetes de Python y la instancia no inicia. Se sugiere hacer los ajustes directamente en la instancia imaginen_imaginez_5_dev y solicitar una copia antes de realizar cambios que puedan afectarla.\n[05/11/2025]: Informan que cuando  se tengan lista la instancia con todo instalado, se les informa para crear la Imagen.\n[07/11/2025]: La instancia no se logró levantar por conflictos con ejecuciones de Python. Se debe reinstalar y configurar nuevamente el ambiente, estimado en dos días.\n[24/11/2025]: Instancia entregada y funcional. Pendiente iniciar instalación de paquetes y configuración para que las aplicaciones operen correctamente. Se deja en pausa hasta que se revise y retome.\n[26/11/2025]: La instancia ya está desplegada, pero el proceso está en pausa a la espera de instalar paquetes, configurar dependencias y habilitar la ejecución de scripts.\n[03/12/2025]: Se retomará el orden del ambiente de Desarrollo, para separar adecuadamente los ambientes Desarrollo, Pruebas y Producción, evitando la mezcla actual. El objetivo es reorganizar el flujo de despliegues.\n[05/12/2025]: Se reinstaló desde cero el ambiente de desarrollo, se instalaron librerías necesarias y se clonaron todos los repositorios. Sin embargo, el DNS aún apunta a una instancia anterior, lo que impide visualizar logs externos por CloudFront. Se radicará un ticket para que infraestructura actualice la asociación del DNS. También se organizarán las ramas, ya que DEV está desactualizada y se alineará con TEST según lo acordado.\n[10/12/2025]: El trabajo en el ambiente de desarrollo continúa bloqueado por falta de actualización del DNS. El ticket MDSB-942275 fue radicado desde el viernes 5 de diciembre y aún no ha sido atendido. Una vez se habilite el dominio correcto, se terminará la estabilización del entorno.\n[17/12/2025]: El montaje del ambiente de desarrollo estuvo bloqueado debido a que los dominios apuntaban a un balanceador incorrecto. Inicialmente, infraestructura entregó solo un formato genérico, pero tras un nuevo reporte el problema fue corregido. El ambiente ya permite continuar con la migración y creación, aunque actualmente no se considera prioridad inmediata frente a otros frentes activos. queda en pausa.\n[18/12/2025]: Se avanzó en la preparación del ambiente de desarrollo, actualmente se presenta bloqueo porque los subdominios de Desarrollo continúan apuntando al CloudFront del DNS anterior. El caso está radicado en el ticket MDSB-942275.\n[19/12/2025]: El ambiente de desarrollo ya se encuentra creado y funcional. Quedan pendientes ajustes finales menores, los cuales no se han priorizado debido a que el enfoque actual del equipo está en el requerimiento de Incapacidades de Colmena.",
+    "unit": "Bolivar",
+    "detail": "Descripción:\n\nComo equipo de desarrollo, se requiere reactivar y normalizar el ambiente de desarrollo (Dev), actualmente fuera de servicio por error 503, con el fin de disponer de un entorno funcional, estable y sincronizado con el ambiente de test.\n\nEste ambiente permitirá realizar pruebas internas, validar integraciones y revisar nuevos desarrollos antes de su despliegue en test, evitando depender de la ejecución de controles de cambio para validaciones iniciales.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 65,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D025",
+    "title": "Mejoras Sistema de reembolsos Salud (mejoras solicitadas por gerencia)",
+    "assigned": "DANILO",
+    "state": "Reanudar",
+    "progress": 70,
+    "startDate": "02/09/2025",
+    "endDate": "15/09/2025",
+    "observations": "[05/09/2025]: Se registra un avance estimado del 15%. La labor ha requerido investigación y entendimiento del proceso, por lo cual el progreso ha sido gradual. Continúa en desarrollo.\n[08/09/2025]: El avance fue mínimo (aprox. 5%), debido a la priorización de la reinstalación del ambiente de desarrollo. El trabajo continuará hoy con mayor dedicación.\n[10/09/2025]: Desarrollo con tres actividades; una ya  se esta probando, Se estima entregar primer avance esta semana.\n121/09/2025: Se avanzó en la primera actividad del requerimiento, alcanzando un 50% de desarrollo. Se requiere desplegar en el ambiente de pruebas (test) para continuar con las validaciones.\n[15/09/2025]: El viernes  12 de deptiembre se trabajó en optimizar el tiempo de respuesta del sistema de reembolsos, reduciendo la demora causada por procesos adicionales en el consumo de la API. Se planea subir los cambios al ambiente de pruebas durante el día.\n[16/09/2025]: Cambios suibidos al ambiente de test  el 15 de septiembre para iniciar pruebas.\n[16/09/2025]: Se realizan pruebas y se identifican problemas en el consumo del servicio (API).\n[07/11/2025]: Proximo a reiniciar  ajustes  en el consumo",
+    "unit": "Bolivar",
+    "detail": "**Se requiere para el portal de Reembolsos:**\\n- Visualización de facturas: poder ver la factura que estoy radicando, consultar si ya fue radicada, en qué estado se encuentra y tener un tiempo estimado de respuesta.\\n- Gestión de casos y observaciones: cuando tenga un problema con un caso, poder digitar en la observación el número de caso y mi documento, para que el sistema asocie automáticamente el comentario al caso correspondiente y me permita reabrirlo si es necesario.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 10,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D029",
+    "title": "Implementar log del API de incapacidades",
+    "assigned": "DANILO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "Se solicita implementar un mecanismo de registro (log) para el API de Incapacidades, ya publicado en producción, con el fin de capturar y monitorear las interacciones realizadas. El log debe permitir identificar si el API está siendo consumido, el volumen de consumo y los parámetros utilizados en la consulta (por cédula, fecha, caso, entre otros). Actualmente no se cuenta con este registro, lo cual limita la visibilidad sobre el uso real del API",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
     "produccion": ""
   },
   {
@@ -5756,7 +5846,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32,
+    "diasTotalDesarrollo": 34,
     "produccion": ""
   },
   {

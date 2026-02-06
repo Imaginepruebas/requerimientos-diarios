@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "20/07/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 137,
+    "diasTotalDesarrollo": 139,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "01/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 91,
+    "diasTotalDesarrollo": 93,
     "produccion": ""
   },
   {
@@ -1112,7 +1112,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "23/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 11,
+    "diasTotalDesarrollo": 13,
     "produccion": ""
   },
   {
@@ -1227,11 +1227,11 @@
     "id": "Interno-H16-11",
     "title": "Modificación de obtención de motivos y causas de rechazo. Se necesita crear lógica asincrona para mejorar tiempos de procedimiento",
     "assigned": "ALEJANDRO",
-    "state": "En Proceso",
-    "progress": 25,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "03/02/2026",
-    "endDate": "",
-    "observations": "",
+    "endDate": "04/02/2026",
+    "observations": "[04/02/2026] Se cambia la lógica actual que estaba presentando lentitud en la gestión del operador por una asyncrona que se renueva todos los días",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1239,6 +1239,60 @@
     "fechaEstimadaEntrega": "04/02/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 2,
+    "produccion": ""
+  },
+  {
+    "id": "Interno-H16-12",
+    "title": "Procesos de mejora de rendimiento de tiempo al aprovar y rechazar un documento. Trasladando el proceso síncrono a uno asíncrono",
+    "assigned": "ALEJANDRO",
+    "state": "En Test",
+    "progress": 80,
+    "startDate": "04/02/2026",
+    "endDate": "",
+    "observations": "[05/02/2026] Se agrega termina de cambiar la lógica y de agregar el script que ejecute asíncronamente el envió \n[06/02/2026] Se esta en proceso de pruebas y cambiosdebido a que se han presentado situaciones que deben de darse mantenimiento",
+    "unit": "Proteccion",
+    "detail": "Modificación de módulo de validación filenet",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "04/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
+  },
+  {
+    "id": "Interno-H16-13",
+    "title": "Adición de modulos para la asignación y filtro de información",
+    "assigned": "ALEJANDRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "04/02/2026",
+    "endDate": "05/02/2026",
+    "observations": "[05/02/2026] Se agrega los nuevos módulos, se prueban y se pasan a producción",
+    "unit": "Proteccion",
+    "detail": "Modificación de módulo de validación filenet",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "04/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": "05/02/2026"
+  },
+  {
+    "id": "Interno-H16-14",
+    "title": "Identificación de problemas con el servidor al momento de hacer cargues pesados",
+    "assigned": "ALEJANDRO",
+    "state": "En Proceso",
+    "progress": 25,
+    "startDate": "06/02/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Proteccion",
+    "detail": "Automatización de tarea para el proceso de cambios de fondos de cesantías",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "09/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   }
 ]

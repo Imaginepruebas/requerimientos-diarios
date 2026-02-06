@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 17,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 84,
+    "diasTotalDesarrollo": 86,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "26/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 106,
+    "diasTotalDesarrollo": 108,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 63,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 125,
+    "diasTotalDesarrollo": 127,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 67,
+    "diasTotalDesarrollo": 69,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 23,
     "fechaEstimadaEntrega": "28/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 67,
+    "diasTotalDesarrollo": 69,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 62,
+    "diasTotalDesarrollo": 64,
     "produccion": "30/01/2026"
   },
   {
@@ -709,7 +709,7 @@
     "progress": 100,
     "startDate": "13/01/2026",
     "endDate": "15/01/2026",
-    "observations": "[15/01/2026]: Se agrega nuevo estado de anulado",
+    "observations": "[15/01/2026]: Se agrega nuevo estado de anulado\n[30/01/2026]: Se realiza paso a producion de los cambios para habilitar nuevo estado.",
     "unit": "Colpatria",
     "detail": "Se requiere poder anular radicados masivos en estado de devolución",
     "visible": true,
@@ -727,7 +727,7 @@
     "progress": 100,
     "startDate": "26/01/2026",
     "endDate": "27/01/2026",
-    "observations": "[27/01/2026]: Se pasa a pruebas los cambios relacionados a la migración de versión de Nextjs",
+    "observations": "[27/01/2026]: Se pasa a pruebas los cambios relacionados a la migración de versión de Nextjs.\n[30/01/2026]: Se realiza paso a produccion de los cambios con la nueva version de NextJs.",
     "unit": "Colpatria",
     "detail": "Realizar migración del framework a la version 16",
     "visible": true,
@@ -745,7 +745,7 @@
     "progress": 100,
     "startDate": "26/01/2026",
     "endDate": "27/01/2026",
-    "observations": "[27/01/2026]: Se pasa a pruebas los cambios relacionados a la revisión de seguridad y los ajustes realizados para solventarlos",
+    "observations": "[27/01/2026]: Se pasa a pruebas los cambios relacionados a la revisión de seguridad y los ajustes realizados para solventarlos.\n[30/01/2026]: Se realiza paso a produccion de la nueva version con ajustes de seguridad.",
     "unit": "Colpatria",
     "detail": "Se requiere ejecutar y realizar correcciones para garantizar la seguridad del API Imagine de los procesos automaticos en nodejs",
     "visible": true,
