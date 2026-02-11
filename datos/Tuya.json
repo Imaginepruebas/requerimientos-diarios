@@ -10,11 +10,11 @@
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
     "unit": "Tuya",
     "detail": "Sistema Operativo, PHP",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 263,
+    "diasTotalDesarrollo": 266,
     "produccion": ""
   },
   {
@@ -28,11 +28,11 @@
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
     "unit": "Tuya",
     "detail": "Realizar pruebas con el fin de validar el correcto funcionamiento del aplicativo",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 263,
+    "diasTotalDesarrollo": 266,
     "produccion": ""
   },
   {
@@ -46,11 +46,11 @@
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
     "unit": "Tuya",
     "detail": "Sistema Operativo, PHP",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 263,
+    "diasTotalDesarrollo": 266,
     "produccion": ""
   },
   {
@@ -64,11 +64,11 @@
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
     "unit": "Tuya",
     "detail": "Realizar pruebas con el fin de validar el correcto funcionamiento del aplicativo",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 263,
+    "diasTotalDesarrollo": 266,
     "produccion": ""
   },
   {
@@ -82,11 +82,11 @@
     "observations": "Se encuentra pausado por el momendo debido a temas de definición de contrato con el cliente",
     "unit": "Tuya",
     "detail": "Se realiza reporte de 9 incidentes luego de pruebas realizadas en el aplicativo\n Se valida y a la fecha han sido solucionados 5 incidentes",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 263,
+    "diasTotalDesarrollo": 266,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 263,
+    "diasTotalDesarrollo": 266,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 263,
+    "diasTotalDesarrollo": 266,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 152,
+    "diasTotalDesarrollo": 155,
     "produccion": ""
   },
   {
@@ -158,7 +158,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 152,
+    "diasTotalDesarrollo": 155,
     "produccion": ""
   },
   {
@@ -176,7 +176,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 152,
+    "diasTotalDesarrollo": 155,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 152,
+    "diasTotalDesarrollo": 155,
     "produccion": ""
   },
   {
@@ -230,7 +230,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 154,
+    "diasTotalDesarrollo": 157,
     "produccion": ""
   },
   {
@@ -248,7 +248,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 154,
+    "diasTotalDesarrollo": 157,
     "produccion": ""
   },
   {
@@ -280,11 +280,11 @@
     "observations": "Esta pendiente de aprobación por Tuya",
     "unit": "Tuya",
     "detail": "Usuario envía archivo con clientes mororos de créditos, para validar soportes existentes en Imagine para los números de cédula enviados. Los documentos son Solicitud de crédito o actualización de datos del deudor y Anexo1 aceptación, autorización.",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 153,
+    "diasTotalDesarrollo": 156,
     "produccion": ""
   },
   {
@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 151,
+    "diasTotalDesarrollo": 154,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 86,
+    "diasTotalDesarrollo": 89,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 84,
+    "diasTotalDesarrollo": 87,
     "produccion": ""
   },
   {

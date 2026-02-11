@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32882,
+    "diasTotalDesarrollo": 32887,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 172,
+    "diasTotalDesarrollo": 177,
     "produccion": "30/05/2025"
   },
   {
@@ -374,7 +374,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 100,
+    "diasTotalDesarrollo": 105,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 107,
+    "diasTotalDesarrollo": 112,
     "produccion": ""
   },
   {
@@ -482,7 +482,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "25/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 90,
+    "diasTotalDesarrollo": 95,
     "produccion": ""
   },
   {
@@ -579,7 +579,7 @@
     "id": "316",
     "title": "Acreditación - Consulta Puntual en BDEX",
     "assigned": "JHON",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 30,
     "startDate": "03/10/2025",
     "endDate": "",
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 82,
+    "diasTotalDesarrollo": 87,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "10/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 83,
+    "diasTotalDesarrollo": 88,
     "produccion": "10/10/2025"
   },
   {
@@ -626,7 +626,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 59,
+    "diasTotalDesarrollo": 64,
     "produccion": ""
   },
   {
@@ -644,7 +644,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "10/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 63,
+    "diasTotalDesarrollo": 68,
     "produccion": "10/11/2025"
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 60,
+    "diasTotalDesarrollo": 65,
     "produccion": ""
   },
   {
@@ -698,7 +698,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 59,
+    "diasTotalDesarrollo": 64,
     "produccion": "20/11/2025"
   },
   {
@@ -716,7 +716,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 59,
+    "diasTotalDesarrollo": 64,
     "produccion": "20/11/2025"
   },
   {
@@ -734,7 +734,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32882,
+    "diasTotalDesarrollo": 32887,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "20/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 51,
+    "diasTotalDesarrollo": 56,
     "produccion": "20/11/2025"
   },
   {
@@ -824,7 +824,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32882,
+    "diasTotalDesarrollo": 32887,
     "produccion": ""
   },
   {
@@ -842,7 +842,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32882,
+    "diasTotalDesarrollo": 32887,
     "produccion": ""
   },
   {
@@ -860,7 +860,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32882,
+    "diasTotalDesarrollo": 32887,
     "produccion": ""
   },
   {
@@ -921,18 +921,18 @@
     "id": "OPT_21",
     "title": "Comercial - Modulo de Normalización",
     "assigned": "JENNIFER",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "state": "En Proceso",
+    "progress": 25,
+    "startDate": "05/02/2026",
     "endDate": "",
-    "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes",
+    "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2025] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las soliictadas\n[6/02/2025] se inicia con la adición de columnas y la modificación en query para obtener l dato",
     "unit": "Colmedica",
     "detail": "Mejoras al módulo para agilizar la auditoria y revisión de inconsistencias por parte de las Gestoras, ver inforción importante, eliminar datos innecesarios, mejorar ventana para visualización de información",
     "visible": true,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
+    "diasEstimadosDesarrollo": 7,
+    "fechaEstimadaEntrega": "13/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 5,
     "produccion": ""
   },
   {
@@ -950,7 +950,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "13/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 17,
+    "diasTotalDesarrollo": 22,
     "produccion": "13/01/2026"
   },
   {
@@ -968,7 +968,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "14/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 16,
+    "diasTotalDesarrollo": 21,
     "produccion": "14/01/2026"
   },
   {
@@ -977,16 +977,16 @@
     "assigned": "JENNIFER",
     "state": "En Proceso",
     "progress": 0,
-    "startDate": "",
+    "startDate": "11/02/2026",
     "endDate": "",
-    "observations": "[15/01/2026] revisar la generación actual del informe generla del módulo de Riesgo médico",
+    "observations": "[11/02/2026] revisar la generación actual del informe generla del módulo de Riesgo médico, y revisar resultado e identificar posible inconsistencia de duplicados",
     "unit": "Colmedica",
     "detail": "Revisar la generación de la data de seguimiento de la revisión por parte del área médica, e identificar posibles errores en el query o impresión, dado que se evidenciaron registros duplicados",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
@@ -1000,7 +1000,7 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
@@ -1018,7 +1018,7 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
@@ -1036,7 +1036,7 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
@@ -1054,7 +1054,7 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",

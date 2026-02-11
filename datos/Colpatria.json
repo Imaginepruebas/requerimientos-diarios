@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 17,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 86,
+    "diasTotalDesarrollo": 87,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "26/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 108,
+    "diasTotalDesarrollo": 109,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 63,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 127,
+    "diasTotalDesarrollo": 128,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 69,
+    "diasTotalDesarrollo": 70,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 23,
     "fechaEstimadaEntrega": "28/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 69,
+    "diasTotalDesarrollo": 70,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 64,
+    "diasTotalDesarrollo": 65,
     "produccion": "30/01/2026"
   },
   {
@@ -766,6 +766,24 @@
     "observations": "",
     "unit": "Colpatria",
     "detail": "Se requiere adicionar una funcionalidad que permita procesar las novedades del dia a dia, se busca agilizar el proceso de ajuste de datos y generación de planos.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "COLP26-0008",
+    "title": "Actualizar lista de EPS",
+    "assigned": "FAVER LOPEZ",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colpatria",
+    "detail": "Se requiere actualizar lista de EPS para procesos de MPP y HYC",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
