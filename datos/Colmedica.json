@@ -58,7 +58,7 @@
     "title": "Lectura XML PBS - Afiliaciones POS",
     "assigned": "JHON",
     "state": "Finalizado",
-    "progress": 99,
+    "progress": 100,
     "startDate": "08/08/2025",
     "endDate": "12/08/2025",
     "observations": "[27/05/2025] Nuevo - Cliente\n[18/06/2025] Entregan un nuevo ejemplo del XML\n[22/06/2025] Revision y Punteo de información del XML, frente a Formulario, para confirmar que se estuviera recibiendo la información y cómo se iba a recibir\n[24/06/2025] Reunión con el cliente para contextualización de la revisión del XML\n[27/06/2025] Entregan tablas paramétricas que se usan para unificar conceptos, e Imagine queda a la espera de un nuevo ejemplo y definicion final de cómo llegaría el XML\n[08/08/2025] Se comienza a realizar desarrollo\n[11/08/2025] El auto guardado la creación de tablas y columnas queda correcta en un 80% XML\n[12/08/2025] Se realiza ajuste para que el auto guardado del XML se realice de manera correcta en su totalidad\n[22/09/2025] Se revisan XML recibidos de pruebas, encontrando hallazgos en inconsistencias de etiquetas y almacenamiento de información de beneficiarios. Jennifer por correo electrónico solicita más ejemplos de afiliaciones. Se pide confirmacion de cómo será el proceso de consumo de imágenes, y aclaracion de una información entregada en el XML.\n[22/09/2025] Se realiza ajuste para desglose de cada una de las etiquetas XM para que se creen las tablas y las columnas correspondientes\n[23/09/2025] Se ajustan errores de guardado se hace rollback si se envia algun exception\n",
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32887,
+    "diasTotalDesarrollo": 0,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 177,
+    "diasTotalDesarrollo": 179,
     "produccion": "30/05/2025"
   },
   {
@@ -270,7 +270,7 @@
     "produccion": ""
   },
   {
-    "id": "OPT_1",
+    "id": "OPT_1_1",
     "title": "Cuentas Medicas UMD - Lectura OCR - PDF (Radicación Automática)",
     "assigned": "JHON",
     "state": "Finalizado",
@@ -374,7 +374,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 105,
+    "diasTotalDesarrollo": 107,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 112,
+    "diasTotalDesarrollo": 114,
     "produccion": ""
   },
   {
@@ -482,7 +482,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "25/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 95,
+    "diasTotalDesarrollo": 97,
     "produccion": ""
   },
   {
@@ -562,7 +562,7 @@
     "title": "Afiliaciones Pre - Sarlaft derivado del REQ-313",
     "assigned": "JHON",
     "state": "Finalizado",
-    "progress": 10,
+    "progress": 100,
     "startDate": "25/09/2025",
     "endDate": "25/09/2025",
     "observations": "[25/09/2025] Se valida el funcionamiento del script encargado y su proceso corresponde a la descripcion del req",
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 87,
+    "diasTotalDesarrollo": 89,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "10/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 88,
+    "diasTotalDesarrollo": 90,
     "produccion": "10/10/2025"
   },
   {
@@ -626,7 +626,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 64,
+    "diasTotalDesarrollo": 66,
     "produccion": ""
   },
   {
@@ -644,7 +644,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "10/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 68,
+    "diasTotalDesarrollo": 70,
     "produccion": "10/11/2025"
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 65,
+    "diasTotalDesarrollo": 67,
     "produccion": ""
   },
   {
@@ -698,7 +698,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 64,
+    "diasTotalDesarrollo": 66,
     "produccion": "20/11/2025"
   },
   {
@@ -716,7 +716,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 64,
+    "diasTotalDesarrollo": 66,
     "produccion": "20/11/2025"
   },
   {
@@ -734,7 +734,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32887,
+    "diasTotalDesarrollo": 32889,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "20/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 56,
+    "diasTotalDesarrollo": 58,
     "produccion": "20/11/2025"
   },
   {
@@ -824,7 +824,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32887,
+    "diasTotalDesarrollo": 32889,
     "produccion": ""
   },
   {
@@ -842,7 +842,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32887,
+    "diasTotalDesarrollo": 32889,
     "produccion": ""
   },
   {
@@ -860,7 +860,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32887,
+    "diasTotalDesarrollo": 32889,
     "produccion": ""
   },
   {
@@ -918,11 +918,11 @@
     "produccion": "06/01/2026"
   },
   {
-    "id": "OPT_21",
+    "id": "OPT_33",
     "title": "Comercial - Modulo de Normalización",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 25,
+    "progress": 35,
     "startDate": "05/02/2026",
     "endDate": "",
     "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2025] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las soliictadas\n[6/02/2025] se inicia con la adición de columnas y la modificación en query para obtener l dato",
@@ -932,7 +932,7 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "13/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 5,
+    "diasTotalDesarrollo": 7,
     "produccion": ""
   },
   {
@@ -950,11 +950,11 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "13/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 22,
+    "diasTotalDesarrollo": 24,
     "produccion": "13/01/2026"
   },
   {
-    "id": "OPT_23",
+    "id": "OPT_34",
     "title": "Afiliaciones Pos - Validación 7 campos",
     "assigned": "JENNIFER",
     "state": "Finalizado",
@@ -968,15 +968,15 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "14/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 21,
+    "diasTotalDesarrollo": 23,
     "produccion": "14/01/2026"
   },
   {
-    "id": "OPT_24",
+    "id": "OPT_35",
     "title": "Riesgo Médico - Informe General de Auditoria",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 0,
+    "progress": 10,
     "startDate": "11/02/2026",
     "endDate": "",
     "observations": "[11/02/2026] revisar la generación actual del informe generla del módulo de Riesgo médico, y revisar resultado e identificar posible inconsistencia de duplicados",
@@ -986,11 +986,11 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 1,
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   },
   {
-    "id": "OPT_25",
+    "id": "OPT_36",
     "title": "Convenios Medicos - Cargue Masivo de Planes a Nits",
     "assigned": "JENNIFER",
     "state": "Pendiente",
@@ -999,7 +999,7 @@
     "endDate": "",
     "observations": "",
     "unit": "Colmedica",
-    "detail": "",
+    "detail": "Cargue de excel para relacionar de manera masiva los planes creados nuevos por Colmédica a los diferentes prestadores",
     "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
@@ -1008,8 +1008,26 @@
     "produccion": ""
   },
   {
-    "id": "OPT_26",
-    "title": "Afiliaciones POS - Cargue de SAT - Completar el  proceso del cargue via web",
+    "id": "OPT_37",
+    "title": "Acreditacion - Actualización Masiva",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 95,
+    "startDate": "13/02/2026",
+    "endDate": "",
+    "observations": "[13/02/2026] revisar codigo de la pagina, Se optimizan querys y se hace actualización segmentada, permitiendo reducir tiempo de ejecución considerablemente. ",
+    "unit": "Colmedica",
+    "detail": "Optimizar la actualización masiva de datos de contratos y beneficiarios",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": "13/02/2026"
+  },
+  {
+    "id": "OPT_38",
+    "title": "Afiliaciones POS - Cargue de SAT",
     "assigned": "JENNIFER",
     "state": "Pendiente",
     "progress": 0,
@@ -1017,7 +1035,7 @@
     "endDate": "",
     "observations": "",
     "unit": "Colmedica",
-    "detail": "",
+    "detail": "Completar el  proceso del cargue via web, el cliente ya carga el excel por el sitio web de imagine, Y se quiere migrar lo que hace el access que corresponde a la radicación y distribucion en las tablas definitas de encabezado y detalle",
     "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
@@ -1026,7 +1044,7 @@
     "produccion": ""
   },
   {
-    "id": "OPT_27",
+    "id": "OPT_39",
     "title": "Afiliaciones POS - Completar descarga de cartas Derechos y Deberes",
     "assigned": "JENNIFER",
     "state": "Pendiente",
@@ -1044,10 +1062,10 @@
     "produccion": ""
   },
   {
-    "id": "OPT_28",
+    "id": "OPT_40",
     "title": "Afiliaciones POS - Consumo Puntual de las afiliaciones",
     "assigned": "JENNIFER",
-    "state": "Pendiente",
+    "state": "",
     "progress": 0,
     "startDate": "",
     "endDate": "",

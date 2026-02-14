@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tablero Integral de Requerimientos</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body { background:#f4f6f9; }
+.kpi-card h3 { font-weight:bold; }
+.table-warning-light { background:#fff3cd !important; }
+.table-danger-light { background:#f8d7da !important; }
+</style>
+</head>
+
+<body class="p-4">
+
+<h2 class="mb-4">Tablero Integral de Requerimientos</h2>
+
+<!-- ================= KPIs EJECUTIVOS ================= -->
+
+<div class="row mb-4">
+
+<div class="col-md-3">
+<div class="card bg-danger text-white kpi-card">
+<div class="card-body">
+<h6>Vencidos</h6>
+<h3 id="kpiVencidos">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card bg-warning text-dark kpi-card">
+<div class="card-body">
+<h6>Próximos a Vencer</h6>
+<h3 id="kpiProximos">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card bg-dark text-white kpi-card">
+<div class="card-body">
+<h6>Alta Prioridad en Riesgo</h6>
+<h3 id="kpiAltaRiesgo">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card bg-success text-white kpi-card">
+<div class="card-body">
+<h6>% Cumplimiento</h6>
+<h3 id="kpiCumplimiento">0%</h3>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- ================= FILTROS ================= -->
+
+<div class="row mb-4">
+
+<div class="col-md-3">
+<select id="filtroEstado" class="form-select">
+<option value="">Todos los Estados</option>
+<option>Abierto</option>
+<option>En Proceso</option>
+<option>Finalizado</option>
+</select>
+</div>
+
+<div class="col-md-3">
+<select id="filtroUnidad" class="form-select">
+<option value="">Todas las Unidades</option>
+</select>
+</div>
+
+<div class="col-md-3">
+<select id="filtroPrioridad" class="form-select">
+<option value="">Todas las Prioridades</option>
+<option>Alta</option>
+<option>Media</option>
+<option>Baja</option>
+</select>
+</div>
+
+</div>
+
+<!-- ================= TABLA ================= -->
+
+<div class="card mb-4">
+<div class="card-body table-responsive">
+<table class="table table-bordered table-hover">
+<thead class="table-dark">
+<tr>
+<th>ID</th>
+<th>Título</th>
+<th>Estado</th>
+<th>Prioridad</th>
+<th>Unidad</th>
+<th>Responsable</th>
+<th>Fecha Compromiso</th>
+<th>Días Restantes</th>
+</tr>
+</thead>
+<tbody id="tablaBody"></tbody>
+</table>
+</div>
+</div>
+
+<!-- ================= GRÁFICO ================= -->
+
+<div class="card">
+<div class="card-body">
+<canvas id="graficoEstados"></canvas>
+</div>
+</div>
+
+<script>
+
+// ================= CONFIGURACIÓN =================
+
+// Ajusta los nombres reales de tus 7 JSON
+const archivos = [
+  "unidad1.json",
+  "unidad2.json",
+  "unidad3.json",
+  "unidad4.json",
+  "unidad5.json",
+  "unidad6.json",
+  "unidad7.json"
+];
+
+let tasks = [];
+let chartEstados;
+
+// ================= FUNCIONES FECHA =================
+
+function calcularDiasRestantes(fecha) {
+    if (!fecha) return null;
+    const hoy = new Date();
+    const compromiso = new Date(fecha);
+    const diff = compromiso - hoy;
+    return Math.ceil(diff / (1000 * 60 * 60 * 24));
+}
+
+function esProximoAVencer(task, dias) {
+    if (dias === null || task.state === "Finalizado") return false;
+
+    const p = task.prioridad?.toLowerCase();
+
+    if (p === "alta" && dias <= 3 && dias >= 0) return true;
+    if (p === "media" && dias <= 5 && dias >= 0) return true;
+    if (p === "baja" && dias <= 7 && dias >= 0) return true;
+
+    return false;
+}
+
+// ================= FILTROS CENTRALIZADOS =================
+
+function getFilteredTasks() {
+
+    const estado = document.getElementById("filtroEstado").value;
+    const unidad = document.getElementById("filtroUnidad").value;
+    const prioridad = document.getElementById("filtroPrioridad").value;
+
+    return tasks.filter(t => {
+
+        if (!t.visible) return false;
+
+        return (
+            (!estado || t.state === estado) &&
+            (!unidad || t.unit === unidad) &&
+            (!prioridad || t.prioridad === prioridad)
+        );
+    });
+}
+
+// ================= TABLA =================
+
+function renderTasks(data) {
+
+    const tbody = document.getElementById("tablaBody");
+    tbody.innerHTML = "";
+
+    data.forEach(task => {
+
+        const dias = calcularDiasRestantes(task.fechaCompromisoCliente);
+        let claseFila = "";
+
+        if (dias !== null) {
+            if (dias < 0 && task.state !== "Finalizado") {
+                claseFila = "table-danger-light";
+            } else if (esProximoAVencer(task, dias)) {
+                claseFila = "table-warning-light";
+            }
+        }
+
+        const badgePrioridad =
+            task.prioridad === "Alta" ? "bg-danger" :
+            task.prioridad === "Media" ? "bg-warning text-dark" :
+            "bg-success";
+
+        tbody.innerHTML += `
+        <tr class="${claseFila}">
+            <td>${task.id}</td>
+            <td>${task.title}</td>
+            <td>${task.state}</td>
+            <td><span class="badge ${badgePrioridad}">${task.prioridad}</span></td>
+            <td>${task.unit}</td>
+            <td>${task.assigned}</td>
+            <td>${task.fechaCompromisoCliente || "-"}</td>
+            <td>${dias !== null ? dias : "-"}</td>
+        </tr>
+        `;
+    });
+}
+
+// ================= KPIs =================
+
+function actualizarKPIs(data) {
+
+    let vencidos = 0;
+    let proximos = 0;
+    let altaRiesgo = 0;
+    let finalizados = 0;
+    let finalizadosATiempo = 0;
+
+    data.forEach(t => {
+
+        const dias = calcularDiasRestantes(t.fechaCompromisoCliente);
+        if (dias === null) return;
+
+        if (dias < 0 && t.state !== "Finalizado") vencidos++;
+
+        if (esProximoAVencer(t, dias)) proximos++;
+
+        if (t.prioridad === "Alta" && dias <= 3 && t.state !== "Finalizado")
+            altaRiesgo++;
+
+        if (t.state === "Finalizado") {
+            finalizados++;
+            if (dias >= 0) finalizadosATiempo++;
+        }
+    });
+
+    const cumplimiento = finalizados > 0
+        ? ((finalizadosATiempo / finalizados) * 100).toFixed(1)
+        : 0;
+
+    document.getElementById("kpiVencidos").innerText = vencidos;
+    document.getElementById("kpiProximos").innerText = proximos;
+    document.getElementById("kpiAltaRiesgo").innerText = altaRiesgo;
+    document.getElementById("kpiCumplimiento").innerText = cumplimiento + "%";
+}
+
+// ================= GRÁFICO =================
+
+function actualizarGrafico(data) {
+
+    let abiertos = 0, proceso = 0, finalizados = 0;
+
+    data.forEach(t => {
+        if (t.state === "Abierto") abiertos++;
+        if (t.state === "En Proceso") proceso++;
+        if (t.state === "Finalizado") finalizados++;
+    });
+
+    if (chartEstados) chartEstados.destroy();
+
+    chartEstados = new Chart(document.getElementById("graficoEstados"), {
+        type: "bar",
+        data: {
+            labels: ["Abierto", "En Proceso", "Finalizado"],
+            datasets: [{
+                label: "Cantidad",
+                data: [abiertos, proceso, finalizados]
+            }]
+        }
+    });
+}
+
+// ================= UNIDADES DINÁMICAS =================
+
+function cargarUnidades() {
+    const select = document.getElementById("filtroUnidad");
+    const unidades = [...new Set(tasks.map(t => t.unit))];
+
+    unidades.forEach(u => {
+        const option = document.createElement("option");
+        option.value = u;
+        option.textContent = u;
+        select.appendChild(option);
+    });
+}
+
+// ================= ACTUALIZADOR MAESTRO =================
+
+function actualizarDashboard() {
+    const data = getFilteredTasks();
+    renderTasks(data);
+    actualizarKPIs(data);
+    actualizarGrafico(data);
+}
+
+// ================= EVENTOS =================
+
+document.getElementById("filtroEstado")
+    .addEventListener("change", actualizarDashboard);
+
+document.getElementById("filtroUnidad")
+    .addEventListener("change", actualizarDashboard);
+
+document.getElementById("filtroPrioridad")
+    .addEventListener("change", actualizarDashboard);
+
+// ================= CARGA INICIAL =================
+
+Promise.all(archivos.map(url => fetch(url)))
+.then(res => Promise.all(res.map(r => r.json())))
+.then(respuestas => {
+    tasks = respuestas.flat();
+    cargarUnidades();
+    actualizarDashboard();
+})
+.catch(error => console.error("Error cargando JSON:", error));
+
+</script>
+
+</body>
+</html>

@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 213,
+    "diasTotalDesarrollo": 215,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "30/04/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 195,
+    "diasTotalDesarrollo": 197,
     "produccion": ""
   },
   {
@@ -1292,7 +1292,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 140,
+    "diasTotalDesarrollo": 142,
     "produccion": ""
   },
   {
@@ -1717,7 +1717,7 @@
     "progress": 80,
     "startDate": "21/01/2026",
     "endDate": "30/01/2026",
-    "observations": "[21/01/2026]: se inició el desarrollo del tercer consumo del proceso (posterior a Data Lake), evidenciando un avance sostenido. El equipo se declara en ruta para presentar avances consolidados hacia el viernes.\n[26/01/2026]: El viernes 23 de enero se presentaron los avances del proyecto a Jenry y Liyibet. Como resultado de la sesión, quedaron definidos los siguientes ajustes, los cuales se abordarán una vez finalicen las actividades del requerimiento de doble factor de autenticación:\n\n1.Ajustar el campo Tipo de persona que radica para que sea un combo (IPS, empleador, etc.).\n2.Incluir la autorización de tratamiento de datos personales en la primera vista del portal.\n3.Incorporar plantillas de respuesta para los casos.\n4.Mejorar la visual reduciendo la barra de búsqueda en la ventana de gestión.\n5.Cambiar el label del portal por “Empresa”.\n6.Apuntar el API de cuenta al campo Número de empresa.\n7.Agregar el campo Cuenta en la trazabilidad, ubicado sobre el número de radicado Sisalud (trazabilidad estándar de la actividad Radicar IT).\n8.Realizar validaciones utilizando datos de prueba.\n[29/01/2026]: Se deben enviar HU al cliente el dia 30 de enero.\n[30/01/2026]: Desarrollo funcional y visual prácticamente terminado en local. Pendiente despliegue a testy pruebas con APIs reales.\n[30/01/2026]: Se realiza envio de HU para aprobación del cliente.\n[02/02/2026]: Se realizaron ajustes visuales solicitados y quedó pendiente la ejecución de pruebas funcionales, las cuales dependen de la disponibilidad de datos reales y de la respuesta de las APIs externas.\n[10/02/2026]: Se informa al cliente que la Fase II de incapacidades será entregada un (1) mes después de la puesta en producción del API de OCR.",
+    "observations": "[21/01/2026]: se inició el desarrollo del tercer consumo del proceso (posterior a Data Lake), evidenciando un avance sostenido. El equipo se declara en ruta para presentar avances consolidados hacia el viernes.\n[26/01/2026]: El viernes 23 de enero se presentaron los avances del proyecto a Jenry y Liyibet. Como resultado de la sesión, quedaron definidos los siguientes ajustes, los cuales se abordarán una vez finalicen las actividades del requerimiento de doble factor de autenticación:\n\n1.Ajustar el campo Tipo de persona que radica para que sea un combo (IPS, empleador, etc.).\n2.Incluir la autorización de tratamiento de datos personales en la primera vista del portal.\n3.Incorporar plantillas de respuesta para los casos.\n4.Mejorar la visual reduciendo la barra de búsqueda en la ventana de gestión.\n5.Cambiar el label del portal por “Empresa”.\n6.Apuntar el API de cuenta al campo Número de empresa.\n7.Agregar el campo Cuenta en la trazabilidad, ubicado sobre el número de radicado Sisalud (trazabilidad estándar de la actividad Radicar IT).\n8.Realizar validaciones utilizando datos de prueba.\n[29/01/2026]: Se deben enviar HU al cliente el dia 30 de enero.\n[30/01/2026]: Desarrollo funcional y visual prácticamente terminado en local. Pendiente despliegue a testy pruebas con APIs reales.\n[30/01/2026]: Se realiza envio de HU para aprobación del cliente.\n[02/02/2026]: Se realizaron ajustes visuales solicitados y quedó pendiente la ejecución de pruebas funcionales, las cuales dependen de la disponibilidad de datos reales y de la respuesta de las APIs externas.\n[10/02/2026]: Se informa al cliente que la Fase II de incapacidades será entregada un (1) mes después de la puesta en producción del API de OCR.\n[12/02/2026]: Se realiza  configuración de la url del OCR en prodcción.\nLa API de cuenta bancaria queda funcional en  producción.",
     "unit": "Bolivar",
     "detail": "",
     "visible": false,
@@ -1735,14 +1735,14 @@
     "progress": 50,
     "startDate": "04/02/2026",
     "endDate": "",
-    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.\n[06/02/2026]: Se completó la conexión con las variables de entorno y se habilitó el API de login en local. Se garantizó que el token de seguridad mantenga la misma persistencia de sesión que el sistema de Bolívar \n[09/02/2026]: Se avanzó significativamente en el desarrollo inicial del nuevo aplicativo. Ya se cuenta con login funcional (100%) y panel administrativo operativo, incluyendo menú lateral. Se inició la construcción del módulo de consulta de casos, con visualización de detalle similar al Nativo actual para reducir impacto visual al usuario. El avance de este frente se estima alrededor del 30% en la etapa de ingreso y consulta; el siguiente paso es completar la gestión del caso para poder presentar un flujo completo al cliente en el corto plazo.\n[11/02/2026]: Actualmente ya se encuentra funcional la Consulta de caso real, Visualización de información básica del caso y Visualización de trazabilidad. Se comenzara a trabajar en la fase de gestión del caso.",
+    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.\n[06/02/2026]: Se completó la conexión con las variables de entorno y se habilitó el API de login en local. Se garantizó que el token de seguridad mantenga la misma persistencia de sesión que el sistema de Bolívar \n[09/02/2026]: Se avanzó significativamente en el desarrollo inicial del nuevo aplicativo. Ya se cuenta con login funcional (100%) y panel administrativo operativo, incluyendo menú lateral. Se inició la construcción del módulo de consulta de casos, con visualización de detalle similar al Nativo actual para reducir impacto visual al usuario. El avance de este frente se estima alrededor del 30% en la etapa de ingreso y consulta; el siguiente paso es completar la gestión del caso para poder presentar un flujo completo al cliente en el corto plazo.\n[11/02/2026]: Actualmente ya se encuentra funcional la Consulta de caso real, Visualización de información básica del caso y Visualización de trazabilidad. Se comenzara a trabajar en la fase de gestión del caso.\n[13/02/2026]: El avance se encuentra en fase de construcción de vistas y endpoints base.",
     "unit": "Bolivar",
     "detail": "Diseñar y desarrollar un nuevo aplicativo que reemplace progresivamente la solución actual Nativo, con el objetivo de contar con una plataforma unificada, flexible y mantenible que permita gestionar de punta a punta los procesos operativos: creación de casos desde los portales, gestión interna, asignación por roles, seguimiento, consultas y generación de reportes.\n\nEl nuevo aplicativo debe cubrir el flujo completo del negocio, desde la radicación inicial hasta el cierre del caso, incorporando controles de trazabilidad, perfiles de usuario y visualización de información consolidada, eliminando las limitaciones técnicas y funcionales del sistema actual.\n\nAlcance inicial (MVP):\n\nCreación y radicación de casos desde portales.\n\nMódulo de gestión interna de casos.\n\nAsignación por roles y perfiles (administrador, gestor, consulta).\n\nBandejas de trabajo y estados del caso.\n\nConsulta y trazabilidad del proceso.\n\nMódulo básico de reportes.\n\nInterfaz moderna (uso de Tailwind).\n\nObjetivo:\nContar con un producto funcional de punta a punta que permita demostrar el flujo completo al cliente, sirviendo como base para la evolución progresiva del sistema y la migración controlada desde Nativo.",
     "visible": true,
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "13/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 6,
+    "diasTotalDesarrollo": 8,
     "produccion": ""
   },
   {
@@ -1839,14 +1839,32 @@
     "id": "MDSB-977822",
     "title": "Error en la creación casos Imagine - Tipología Título Ejecutivo ( masivo 143155)",
     "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "11/02/2026",
+    "endDate": "11/02/2026",
+    "observations": "[11/02/2026]: Se identifica que los casos si se estaban  visualizando  solo que no en la fecha correcta ya que este masivo se tuvo que ejecutar manualmante y esto ocasiono que  los casos quedaran con una  fecha antigua, se corrigio la fecha y los casos ya se muestran  correctamente. ",
+    "unit": "Bolivar",
+    "detail": "“Error en la creación casos Imagine - Tipología Título Ejecutivo“\n\nBuen día, cordial saludo\n\nSolicitamos su ayuda, dado que se evidenciaron 272 envíos de la tipología Título Ejecutivo que fueron confirmados como casos creados pero que finalmente no se evidencia la creación y envío en Imagine.\n\nAdjunto los pantallazos de la confirmación de la creación de los casos al momento del cargue del envío y el listado de los 272 aportantes que no cuentan con caso creado.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "MDSB-980852",
+    "title": "Error en la creación casos Imagine - Tipología Aviso de Incumplimiento,  masivo 147555 y 147576",
+    "assigned": "JESUS",
     "state": "En Proceso",
     "progress": 0,
-    "startDate": "11/02/2026",
+    "startDate": "13/02/2026",
     "endDate": "",
     "observations": "",
     "unit": "Bolivar",
-    "detail": "“Error en la creación casos Imagine - Tipología Título Ejecutivo“\n\nBuen día, cordial saludo\n\nSolicitamos su ayuda, dado que se evidenciaron 272 envíos de la tipología Título Ejecutivo que fueron confirmados como casos creados pero que finalmente no se evidencia la creación y envío en Imagine.\n\nAdjunto los pantallazos de la confirmación de la creación de los casos al momento del cargue del envío y el listado de los 272 aportantes que no cuentan con caso creado.",
-    "visible": false,
+    "detail": "Solicito amablemente su colaboración dado que el día de ayer se cargaron 3 envíos masivos a través de la tipología Aviso de incumplimiento, sin embargo, pese a que registran en etapa 5, no se recibió el correo de confirmación para los dos últimos envíos de cantidades 5.219 y 677. Al validar algunos de los NIT’s de dichos envíos no se evidencian los casos creados en Imagine. ",
+    "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
@@ -1904,7 +1922,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 136,
+    "diasTotalDesarrollo": 138,
     "produccion": ""
   },
   {
@@ -2102,7 +2120,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 133,
+    "diasTotalDesarrollo": 135,
     "produccion": ""
   },
   {
@@ -2156,7 +2174,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 133,
+    "diasTotalDesarrollo": 135,
     "produccion": ""
   },
   {
@@ -2282,7 +2300,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 28,
+    "diasTotalDesarrollo": 30,
     "produccion": ""
   },
   {
@@ -2325,11 +2343,11 @@
     "id": "GD772-190",
     "title": "REASIGNACION INCONSISTENCIA",
     "assigned": "JAIRO",
-    "state": "Control De Cambios Produccion",
-    "progress": 90,
+    "state": "Paso A Produccion",
+    "progress": 95,
     "startDate": "26/01/2026",
     "endDate": "27/01/2026",
-    "observations": "[26/01/2026]: Durante la jornada de hoy  se prioriza el Jira 190 indicado por Jenry, seguido del requerimiento de actualización de datos.\n[27/01/2026]: Se solicita control de cambios MDSB-968897 en test\n[28/01/2026]: Se desarrolló el botón para reasignación de causales, incluyendo validación de perfiles destino. \nControl de cambios MDSB-968897 ejecutado con exito.\n[30/01/2026]: Pendiente validación de los cambios en test  por favor de accesos a test.\n[02/02/2026]: Se solicita control de cambios MDSB-972397 a producción.\n[04/02/2026]: Control de cambios se encuentra pendiente por aprobación  de QA cliente.\n[09/02/2026]: Control de cambios se encuentra pendiente por aprobación  de QA cliente.",
+    "observations": "[26/01/2026]: Durante la jornada de hoy  se prioriza el Jira 190 indicado por Jenry, seguido del requerimiento de actualización de datos.\n[27/01/2026]: Se solicita control de cambios MDSB-968897 en test\n[28/01/2026]: Se desarrolló el botón para reasignación de causales, incluyendo validación de perfiles destino. \nControl de cambios MDSB-968897 ejecutado con exito.\n[30/01/2026]: Pendiente validación de los cambios en test  por favor de accesos a test.\n[02/02/2026]: Se solicita control de cambios MDSB-972397 a producción.\n[04/02/2026]: Control de cambios se encuentra pendiente por aprobación  de QA cliente.\n[09/02/2026]: Control de cambios se encuentra pendiente por aprobación  de QA cliente.\n[13/02/2026]: Se creó el campo requerido para identificar inconsistencias y ya cuenta con control de cambios ejecutado exitosamente el 12 de febrero. Pendiente coordinar despliegue a producción.",
     "unit": "Bolivar",
     "detail": "Se requiere reasignar inconsistencias, es decir, la inconsistencia que debe resolver un usuario requiere de la validación por un usuario diferente para que logre la gestión completa de la inconsistencia que le fue escalada, así las cosas la plataforma debe permitir reasignar la inconsistencia a diferente usuario.",
     "visible": true,
@@ -2415,11 +2433,11 @@
     "id": "GD772-187",
     "title": "INFORME GLOSAS",
     "assigned": "JAIRO",
-    "state": "En Proceso",
-    "progress": 20,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "10/02/2026",
-    "endDate": "",
-    "observations": "[06/02/2026]: Se estima dar inicio hoy al ajuste del informe.\n[09/02/2026]: Se requiere explicación del informe requerido, no esta muy claro. \n[11/02/2026]: el 10 de febrero se inició desarrollo del informe correspondiente. El ajuste consiste principalmente en modificación de consulta (query) y adición de columna requerida.\nSe estima que podría pasarse a producción el mismo día, sujeto a validación técnica del query.",
+    "endDate": "11/02/2026",
+    "observations": "[06/02/2026]: Se estima dar inicio hoy al ajuste del informe.\n[09/02/2026]: Se requiere explicación del informe requerido, no esta muy claro. \n[11/02/2026]: el 10 de febrero se inició desarrollo del informe correspondiente. El ajuste consiste principalmente en modificación de consulta (query) y adición de columna requerida.\nSe estima que podría pasarse a producción el mismo día, sujeto a validación técnica del query.\n[13/02/2026]: Se confirma que el ajuste ya fue pasado a producción el 11 de febrero, incluyendo modificación de query y visualización de información adicional.",
     "unit": "Bolivar",
     "detail": "Se solicita que en el informe de glosas para todos los ramos se traiga las mismas lineas que relacionan en la glosa realizada en modulo de imagine. Este informe debe quedar retroactivo para las atenciones glosadas previo a este requerimiento.",
     "visible": true,
@@ -2427,7 +2445,7 @@
     "fechaEstimadaEntrega": "11/02/2026",
     "fechaCompromisoCliente": "18/02/2026",
     "diasTotalDesarrollo": 2,
-    "produccion": ""
+    "produccion": "11/02/2026"
   },
   {
     "id": "GD772-189",
@@ -2462,20 +2480,38 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 6,
+    "diasTotalDesarrollo": 8,
+    "produccion": ""
+  },
+  {
+    "id": "GD772-199",
+    "title": "PASAR FACTURAS MULTIUSUARIO BAJA COMPLEJIDAD A BANDEJA MASIVO",
+    "assigned": "JAIRO",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "11/02/2026",
+    "endDate": "",
+    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.\n[13/02/2026]: Se realizó implementación en ambiente local. Pendiente estrategias de pruebas ",
+    "unit": "Bolivar",
+    "detail": "Se requiere pasar facturas multiusuario baja complejidad a bandeja masivo, los usuarios que no coincidan o no cumplan  con la siguiente regla deben ser asignados a bandeja analista baja complejidad.\n\nValor autorizado- deducible= valor pendiente\nValor factura- deducible= Valor cobrado\n\nSi los 2 coinciden pueden pasar a pago masivo.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   },
   {
     "id": "INTERNO-JA035",
-    "title": "Mejora Proceso masivo – Pago automático",
+    "title": "Ajustar cambio de estado en portal Salud (Reembolsas-Tengo dudas)",
     "assigned": "JAIRO",
-    "state": "En Proceso",
-    "progress": 0,
-    "startDate": "11/02/2026",
-    "endDate": "",
-    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "13/02/2026",
+    "endDate": "13/02/2026",
+    "observations": "[13/02/2026]: Se realizo ajuste mediante actualización masiva y validación de estados cerrados.",
     "unit": "Bolivar",
-    "detail": "Se requiere mejora del proceso masivo que actualmente solo toma facturas asociadas a un único usuario.\nEl requerimiento consiste en habilitar procesamiento de facturas multiusuario, ampliando la lógica ya desplegada en producción.\nEl proceso actual lleva aproximadamente dos meses funcionando en su versión inicial; se trabajará en la mejora para ampliar su alcance.",
+    "detail": "Se requiere validar el cambio de estado en el portal Salud para los casos clasificados como “Tengo dudas”, ya que aquellos que aparecen como cerrados en el portal se encuentran actualmente en estado “En proceso”.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
@@ -2498,7 +2534,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 118,
+    "diasTotalDesarrollo": 120,
     "produccion": ""
   },
   {
@@ -2696,7 +2732,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 85,
+    "diasTotalDesarrollo": 87,
     "produccion": ""
   },
   {
@@ -3092,7 +3128,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "16/05/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 183,
+    "diasTotalDesarrollo": 185,
     "produccion": ""
   },
   {
@@ -3344,7 +3380,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 107,
+    "diasTotalDesarrollo": 109,
     "produccion": ""
   },
   {
@@ -3380,7 +3416,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 100,
+    "diasTotalDesarrollo": 102,
     "produccion": "30/12/2025"
   },
   {
@@ -3452,7 +3488,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 45,
+    "diasTotalDesarrollo": 47,
     "produccion": ""
   },
   {
@@ -3704,7 +3740,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 66,
+    "diasTotalDesarrollo": 68,
     "produccion": ""
   },
   {
@@ -4100,7 +4136,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 116,
+    "diasTotalDesarrollo": 118,
     "produccion": ""
   },
   {
@@ -4118,7 +4154,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 93,
+    "diasTotalDesarrollo": 95,
     "produccion": ""
   },
   {
@@ -4352,7 +4388,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 176,
+    "diasTotalDesarrollo": 178,
     "produccion": ""
   },
   {
@@ -4550,7 +4586,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 56,
+    "diasTotalDesarrollo": 58,
     "produccion": ""
   },
   {
@@ -4564,6 +4600,24 @@
     "observations": "",
     "unit": "Bolivar",
     "detail": "Se requiere poder ajustar el flujo para el tipo de servicio odontología, lo que se busca es que exista una actividad en el  flujo que relacione directamente a un auditor de odontologia  y se asignen las tareas tal como corresponde .\n\nPor lo cual se debe crear una nueva actividad en el flujo tal como se muestra a continuación:  \"Auditor Odontologia\"\n\nUna vez se incluya esta actividad en el flujo se debe realizar la modificación de las reglas de asignación únicamente para el servicio de Odontología , es decir debe estar en el flujo la asignación por montos para este nuevo actor  tal como se evidencia a continuación.\n\nCon esta regla de asignación se busca que todos los casos que sean clasificados del tipo de servicio Odontología , lleguen directamente a la bandeja del auditor odontologico.\n",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "GD772-200",
+    "title": "AJUSTE CARTA DEVOLUCION",
+    "assigned": "JAIRO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "Se solicita que la carta de devolución identifique el motivo por el cual fue devuelta la factura, ejemplo; falta de soporte de HC, Discriminado incompleto, sin soporte de autorizaciones, etc.",
     "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
@@ -5018,7 +5072,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "13/08/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 125,
+    "diasTotalDesarrollo": 127,
     "produccion": ""
   },
   {
@@ -5677,14 +5731,14 @@
     "progress": 80,
     "startDate": "05/02/2026",
     "endDate": "",
-    "observations": "[06/02/2026]: El 5 de febrero se trabajó en el entrenamiento del modelo para diversos contextos y en la validación de la asignación de tipologías. Se detectó que las tipologías sin flujo se reasignaban erróneamente, por lo que se están corrigiendo para asegurar la radicación correcta. De un Excel de 60 casos, se revisaron 40; muchos ya funcionan porque las tipologías ahora tienen flujo, pero se requiere revisión manual uno a uno\n[11/02/2026]: Se continúa con el entrenamiento manual del modelo, validando registro por registro para asegurar correcta calibración. Además de entrenar nueva información, se está verificando que los datos previamente entrenados mantengan su comportamiento esperado y no se afecte la precisión del modelo. El entrenamiento se terminara hoy  para iniciar con el req  interfaz gráfica que permita al cliente entrenar el modelo directamente",
+    "observations": "[06/02/2026]: El 5 de febrero se trabajó en el entrenamiento del modelo para diversos contextos y en la validación de la asignación de tipologías. Se detectó que las tipologías sin flujo se reasignaban erróneamente, por lo que se están corrigiendo para asegurar la radicación correcta. De un Excel de 60 casos, se revisaron 40; muchos ya funcionan porque las tipologías ahora tienen flujo, pero se requiere revisión manual uno a uno\n[11/02/2026]: Se continúa con el entrenamiento manual del modelo, validando registro por registro para asegurar correcta calibración. Además de entrenar nueva información, se está verificando que los datos previamente entrenados mantengan su comportamiento esperado y no se afecte la precisión del modelo. El entrenamiento se terminara hoy  para iniciar con el req  interfaz gráfica que permita al cliente entrenar el modelo directamente\n[13/02/2026]: Se mantiene en curso con dedicación parcial",
     "unit": "Bolivar",
     "detail": "El cliente necesita que el modelo de inteligencia artificial identifique y asigne correctamente la tipología de cada solicitud entrante. El problema identificado es que, anteriormente, cuando una solicitud no tenía un flujo definido, el sistema la reasignaba a otro tipo de solicitud de forma genérica. Aunque en las observaciones quedaba el registro de la reasignación, el \"ideal\" del cliente es que la radicación se asigne desde el inicio a la tipología correcta.",
     "visible": true,
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "11/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 5,
+    "diasTotalDesarrollo": 7,
     "produccion": ""
   },
   {
@@ -5713,14 +5767,50 @@
     "progress": 0,
     "startDate": "11/02/2026",
     "endDate": "",
-    "observations": "[11/02/2026]: El día de hoy se finaliza el entrenamiento pendiente y se inicia la construcción de dicha interfaz.",
+    "observations": "[11/02/2026]: El día de hoy se finaliza el entrenamiento pendiente y se inicia la construcción de dicha interfaz.\n[13/02/2026]: Se identificó la necesidad de realizar reunión de entendimiento del requerimiento para definir correctamente el alcance funcional antes de avanzar en desarrollo, Revisión de historias de usuario ",
     "unit": "Bolivar",
     "detail": "Se identifica un nuevo requerimiento por parte de Bolívar: habilitar una interfaz gráfica que permita al cliente entrenar el modelo directamente, mediante formulario con prompt y tipo de solicitud.\n",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 1,
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D042",
+    "title": "Sistema de correspondencia Alfa",
+    "assigned": "DANILO",
+    "state": "En Proceso",
+    "progress": 15,
+    "startDate": "12/02/2026",
+    "endDate": "",
+    "observations": "[13/02/2026]: Se continúa el proceso de entendimiento y estabilización del sistema existente, Se montó la estructura inicial de base de datos y se logró levantar parcialmente la aplicación para poder analizar su funcionamiento. El trabajo actual está enfocado en Documentación del sistema, Revisión del sitio anterior y preparación para migración",
+    "unit": "Bolivar",
+    "detail": "Realizar el levantamiento, análisis y estabilización del Sistema de Correspondencia Alfa con el fin de documentar su funcionamiento actual, identificar dependencias técnicas y preparar la base para su migración o evolución. El requerimiento busca asegurar que la aplicación pueda operar de manera controlada y que exista claridad sobre su arquitectura, módulos y flujos antes de definir los siguientes pasos de mejora o reemplazo.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D043",
+    "title": "Construcción de dataset para entrenamiento (modelo incapacidades Colmena)",
+    "assigned": "DANILO",
+    "state": "En Proceso",
+    "progress": 30,
+    "startDate": "12/02/2026",
+    "endDate": "",
+    "observations": "[13/02/2026]: Se encuentra construyendo   un dataset aproximado de 5.000 registros, ejecutando el proceso de forma progresiva para evitar impacto en el servidor.",
+    "unit": "Bolivar",
+    "detail": "Construir un dataset estructurado para Colmena a partir de registros y documentos de incapacidades con el fin de entrenar y mejorar el desempeño del modelo de procesamiento y clasificación, garantizando mayor precisión en la extracción y análisis de la información.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
@@ -5731,14 +5821,14 @@
     "progress": 15,
     "startDate": "03/02/2026",
     "endDate": "",
-    "observations": "[04/02/2026]: se comenzó la instrumentación de métricas más finas sobre uso de CPU, memoria y almacenamiento, así como el seguimiento a procesos que generan mayor carga. Adicionalmente, se está evaluando el comportamiento del sistema bajo picos de operación para aislar componentes que puedan estar impactando la estabilidad.\n[06/02/2026]: El caché del servidor  impide acceder al detalle de los archivos, por lo que está evaluando una solución alternativa antes de reportarlo formalmente. de disponer de tiempo el día de hoy continuara la validación.\n[11/02/2026]: No se registran avances técnicos en esta sesión, ya que el recurso fue reasignado temporalmente para atender actividades prioritarias (dashboard, organización del modelo y preparación de presentación).\nEste frente queda pendiente de retomar.",
+    "observations": "[04/02/2026]: se comenzó la instrumentación de métricas más finas sobre uso de CPU, memoria y almacenamiento, así como el seguimiento a procesos que generan mayor carga. Adicionalmente, se está evaluando el comportamiento del sistema bajo picos de operación para aislar componentes que puedan estar impactando la estabilidad.\n[06/02/2026]: El caché del servidor  impide acceder al detalle de los archivos, por lo que está evaluando una solución alternativa antes de reportarlo formalmente. de disponer de tiempo el día de hoy continuara la validación.\n[11/02/2026]: No se registran avances técnicos en esta sesión, ya que el recurso fue reasignado temporalmente para atender actividades prioritarias (dashboard, organización del modelo y preparación de presentación).\nEste frente queda pendiente de retomar.\n[13/02/2026]: Se confirma que este frente permanece detenido y sin avances recientes debido a priorización de otras actividades. ( Preparación presentación Colmédica)",
     "unit": "Bolivar",
     "detail": "Se iniciaron acciones de fortalecimiento del monitoreo y estabilización de la infraestructura con el objetivo de anticipar degradaciones del servicio y evitar eventos de indisponibilidad. Durante la sesión se identificó que parte de la carga del servidor está asociada a procesos en segundo plano, uso intensivo de caché y consumo de disco, por lo cual se están implementando controles adicionales para detectar estos cuellos de botella en tiempo real.\n\nEste frente permanece activo, con enfoque preventivo: el objetivo no es únicamente reaccionar ante alertas, sino contar con visibilidad temprana que permita tomar acciones correctivas antes de que el servicio se vea afectado. El trabajo continúa orientado a identificar causas raíz y definir ajustes estructurales que garanticen mayor resiliencia de la plataforma.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 7,
+    "diasTotalDesarrollo": 9,
     "produccion": ""
   },
   {
@@ -5756,7 +5846,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 28,
+    "diasTotalDesarrollo": 30,
     "produccion": ""
   },
   {
@@ -5774,7 +5864,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 191,
+    "diasTotalDesarrollo": 193,
     "produccion": ""
   },
   {
@@ -5792,7 +5882,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 68,
+    "diasTotalDesarrollo": 70,
     "produccion": ""
   },
   {
@@ -5972,7 +6062,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 37,
+    "diasTotalDesarrollo": 39,
     "produccion": ""
   },
   {

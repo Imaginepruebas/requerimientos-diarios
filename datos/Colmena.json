@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 78,
+    "diasTotalDesarrollo": 83,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 69,
+    "diasTotalDesarrollo": 74,
     "produccion": ""
   },
   {
@@ -320,7 +320,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "22/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 16,
+    "diasTotalDesarrollo": 21,
     "produccion": ""
   },
   {
@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 13,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 18,
+    "diasTotalDesarrollo": 23,
     "produccion": ""
   },
   {
@@ -392,11 +392,11 @@
     "diasEstimadosDesarrollo": 11,
     "fechaEstimadaEntrega": "09/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 10,
+    "diasTotalDesarrollo": 15,
     "produccion": ""
   },
   {
-    "id": "mejora_13",
+    "id": "MEJORA_13",
     "title": "mejora acces novedades",
     "assigned": "BRAYAN DIAZ",
     "state": "En Test",
@@ -411,6 +411,42 @@
     "fechaEstimadaEntrega": "05/02/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "MEJORA_14",
+    "title": "migracion modulo cartera",
+    "assigned": "BRAYAN DIAZ",
+    "state": "En Proceso",
+    "progress": 35,
+    "startDate": "06/02/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "migracion del modulo y opciones de cartera de php a python ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 8,
+    "fechaEstimadaEntrega": "17/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 6,
+    "produccion": ""
+  },
+  {
+    "id": "MEJORA_15",
+    "title": "migracion reembolsos",
+    "assigned": "BRAYAN DIAZ",
+    "state": "En Proceso",
+    "progress": 25,
+    "startDate": "12/02/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "migracion de la opcion de reembolsos a python ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "16/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   }
 ]
