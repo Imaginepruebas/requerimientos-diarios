@@ -1390,79 +1390,80 @@ return estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(ta
 }
         // Lógica de Filtrado
     function applyFilters() {
-    // 1. CAPTURA DE TODOS LOS FILTROS
-    const estadoSel = document.getElementById('estadoFiltro').value;
-    const unidadSel = document.getElementById('unidadFiltro').value;
-    const idFiltro = document.getElementById('idFiltro').value.trim();
-    const busquedaTxt = document.getElementById('busqueda').value.toLowerCase();
-    const fechaInicioSel = document.getElementById('fechaInicioFiltro').value; 
-    const fechaFinSel = document.getElementById('fechaFinFiltro').value;
+    const estado = document.getElementById('estadoFiltro').value;
+    const unidad = document.getElementById('unidadFiltro').value;
+    const busqueda = document.getElementById('busqueda').value.toLowerCase();
+    const idFiltro = document.getElementById('idFiltro').value.toLowerCase();
+    const fechaInicio = document.getElementById('fechaInicioFiltro').value;
+    const fechaFin = document.getElementById('fechaFinFiltro').value;
 
-    const tareasFiltradas = tasks.filter(task => {
-        // --- A. FILTROS BÁSICOS ---
-        const cumpleID = idFiltro === "" || String(task.id).includes(idFiltro);
-        const cumpleEstado = estadoSel === "" || estadoSel === "Todos" || task.state === estadoSel;
-        const cumpleUnidad = unidadSel === "" || (task.unit || "Sin Unidad") === unidadSel;
-        const cumpleBusqueda = (task.title || "").toLowerCase().includes(busquedaTxt) || 
-                               (task.assigned || "").toLowerCase().includes(busquedaTxt);
+    // 🆕 NUEVO: Activar automáticamente el botón si se filtra por "Finalizado" o por ID específico
+  const btnFinalizados = document.getElementById('toggleFinalizados');
+  if ((estadoFiltro === "Finalizado" || idFiltro !== '') && !mostrarFinalizados) {
+      mostrarFinalizados = true;
+      btnFinalizados.textContent = "Ocultar Finalizados";
+      btnFinalizados.classList.add('modo-activo');
+  }
 
-        // --- B. FILTRO DE FECHAS ESTRICTO (Usando startDate o endDate) ---
-        let cumpleFechas = true;
-        if (fechaInicioSel !== "" || fechaFinSel !== "") {
-            const fechaTareaOriginal = task.endDate || task.startDate; 
-            if (fechaTareaOriginal) {
-                const d = parseDate(fechaTareaOriginal);
-                if (d) {
-                    const fechaTareaFormateada = d.toISOString().split('T')[0];
-                    const cumpleInicio = fechaInicioSel === "" || fechaTareaFormateada >= fechaInicioSel;
-                    const cumpleFin = fechaFinSel === "" || fechaTareaFormateada <= fechaFinSel;
-                    cumpleFechas = cumpleInicio && cumpleFin;
-                } else { cumpleFechas = false; }
-            } else { cumpleFechas = false; }
+    let tareasFiltradas = tasks.filter(task => {
+        // Filtro de Visibilidad (General)
+        if (task.visible === false) return false;
+
+        // Filtro de Estado y Unidad
+        const cumpleEstado = estado === "" || task.state === estado;
+        const cumpleUnidad = unidad === "" || task.unit === unidad;
+        
+        // Filtro de Texto (ID, Título o Asignado)
+        const cumpleTexto = task.title.toLowerCase().includes(busqueda) || 
+                            task.assigned.toLowerCase().includes(busqueda);
+        const cumpleID = task.id.toString().toLowerCase().includes(idFiltro);
+
+        // Filtro por Fechas
+       let cumpleFecha = true;
+
+        if (fechaInicio) {
+            const fechaInicioTarea = parseDate(task.startDate);
+            if (!fechaInicioTarea || fechaInicioTarea < new Date(fechaInicio)) {
+                cumpleFecha = false;
+            }
         }
 
-        // --- C. FILTROS DEL DASHBOARD (Vencidos, Próximos, etc.) ---
+        if (fechaFin) {
+            const fechaFinTarea = parseDate(task.endDate);
+            // Si hay filtro de fecha fin, la tarea DEBE tener endDate y estar dentro del rango
+            if (!fechaFinTarea || fechaFinTarea > new Date(fechaFin)) {
+                cumpleFecha = false;
+            }
+        }
+
+        // --- LÓGICA DE FILTRO POR TARJETAS DEL DASHBOARD ---
         let cumpleDashboard = true;
-        if (typeof filtroDashboard !== 'undefined' && filtroDashboard && filtroDashboard !== 'total') {
-            const hoy = new Date();
-            hoy.setHours(0,0,0,0);
-            
-            // Usamos fecha de compromiso para los cálculos de prioridad/vencimiento
-            const fechaTxt = task.fechaCompromisoCliente || task.fechaEstimadaEntrega;
-            const fecha = parseDate(fechaTxt);
-            let diff = null;
+        if (filtroDashboard) {
+            const hoy = new Date(); hoy.setHours(0,0,0,0);
+            const fechaControl = parseDate(task.fechaCompromisoCliente || task.fechaEstimadaEntrega);
+            const diffDias = fechaControl ? Math.ceil((fechaControl - hoy) / (1000 * 60 * 60 * 24)) : null;
 
-            if (fecha) {
-                fecha.setHours(0,0,0,0);
-                diff = Math.ceil((fecha - hoy) / (1000 * 60 * 60 * 24));
-            }
-
-            if (filtroDashboard === 'vencido') {
-                cumpleDashboard = (task.progress < 100 && diff !== null && diff < 0);
-            } else if (filtroDashboard === 'proximo') {
-                cumpleDashboard = (task.progress < 100 && diff !== null && diff >= 0 && diff <= 3);
-            } else if (filtroDashboard === 'alta') {
-                cumpleDashboard = (task.progress < 100 && diff !== null && diff >= 0 && diff <= 2);
-            } else if (filtroDashboard === 'media') {
-                cumpleDashboard = (task.progress < 100 && diff !== null && diff > 2 && diff <= 7);
-            } else if (filtroDashboard === 'baja') {
-                cumpleDashboard = (task.progress < 100 && (diff === null || diff > 7));
-            }
+            if (filtroDashboard === 'vencido') cumpleDashboard = (task.progress < 100 && diffDias !== null && diffDias < 0);
+            if (filtroDashboard === 'proximo') cumpleDashboard = (task.progress < 100 && diffDias !== null && diffDias >= 0 && diffDias <= 3);
+            if (filtroDashboard === 'alta') cumpleDashboard = (task.progress < 100 && diffDias !== null && diffDias >= 0 && diffDias <= 2);
+            if (filtroDashboard === 'media') cumpleDashboard = (task.progress < 100 && diffDias !== null && diffDias > 2 && diffDias <= 7);
+            if (filtroDashboard === 'baja') cumpleDashboard = (task.progress < 100 && (diffDias === null || diffDias > 7));
         }
 
-        // RESULTADO: Debe cumplir TODOS los criterios para mostrarse
-        return cumpleID && cumpleEstado && cumpleUnidad && cumpleBusqueda && cumpleFechas && cumpleDashboard;
+        return cumpleEstado && cumpleUnidad && cumpleTexto && cumpleID && cumpleFecha && cumpleDashboard;
     });
 
-    // 3. ACTUALIZACIÓN DE LA INTERFAZ
+    // Actualizar todos los componentes con los datos filtrados
     renderTasks(tareasFiltradas);
     updateSummary(tareasFiltradas);
+    updateDashboard(tasks); // El dashboard siempre muestra el conteo global o según filtros de arriba
+    updateStatistics(tareasFiltradas);
     
-    // Llamadas opcionales a gráficas si existen en tu código
-    if (typeof updateStatistics === 'function') updateStatistics(tareasFiltradas);
-    if (typeof updateDashboard === 'function') updateDashboard(tareasFiltradas);
+    // Actualizar gráficos (solo si las funciones existen)
     if (typeof plotPieChart === 'function') plotPieChart(tareasFiltradas);
     if (typeof plotBarChart === 'function') plotBarChart(tareasFiltradas);
+    if (typeof plotAssignmentsChart === 'function') plotAssignmentsChart(tareasFiltradas);
+    if (typeof updateLastUpdatePerUnit === 'function') updateLastUpdatePerUnit(tareasFiltradas);
 }
 
 
@@ -1546,29 +1547,43 @@ return estadosEnCurso.map(e => normalizarEstado(e)).includes(normalizarEstado(ta
     }
 
     // Inicializar el reporte
-    function initializeReport() {
-      populateEstadoFilter(tasks);
-      document.getElementById('estadoFiltro').addEventListener('change', applyFilters);
-      document.getElementById('unidadFiltro').addEventListener('change', applyFilters);
-      document.getElementById('fechaInicioFiltro').addEventListener('change', applyFilters);
-      document.getElementById('fechaFinFiltro').addEventListener('change', applyFilters);
-      document.getElementById('busqueda').addEventListener('input', applyFilters);
-      document.getElementById('idFiltro').addEventListener('input', applyFilters);
-// opcional: permite filtrar al presionar Enter
-document.getElementById('idFiltro').addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
+   function initializeReport() {
+    populateEstadoFilter(tasks);
+    populateUnidadFilter(tasks); // ¡Importante!
+    
+    // Eventos de Filtros
+    document.getElementById('estadoFiltro').addEventListener('change', applyFilters);
+    document.getElementById('unidadFiltro').addEventListener('change', applyFilters);
+    document.getElementById('fechaInicioFiltro').addEventListener('change', applyFilters);
+    document.getElementById('fechaFinFiltro').addEventListener('change', applyFilters);
+    document.getElementById('busqueda').addEventListener('input', applyFilters);
+    document.getElementById('idFiltro').addEventListener('input', applyFilters);
 
-      document.getElementById('btnLimpiarFiltros').addEventListener('click', () => {
+    // Botón Limpiar
+    document.getElementById('btnLimpiarFiltros').addEventListener('click', () => {
         document.getElementById('estadoFiltro').value = '';
         document.getElementById('unidadFiltro').value = '';
         document.getElementById('fechaInicioFiltro').value = '';
         document.getElementById('fechaFinFiltro').value = '';
-        document.getElementById('idFiltro').value = ''; // <<< NUEVA
+        document.getElementById('idFiltro').value = '';
         document.getElementById('busqueda').value = '';
         filtroDashboard = null; 
-    document.querySelectorAll('.dashboard-cards .card').forEach(t => t.classList.remove('card-activa'));
-    applyFilters();
-      });
-    }
+        document.querySelectorAll('.dashboard-cards .card').forEach(t => t.classList.remove('card-activa'));
+        applyFilters();
+    });
+
+    // Botón Mostrar Finalizados
+    document.getElementById('toggleFinalizados').addEventListener('click', function() {
+        mostrarFinalizados = !mostrarFinalizados;
+        this.classList.toggle('modo-activo');
+        this.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
+        applyFilters();
+        
+    });
+
+    // LLAMADA INICIAL PARA CARGAR TODO
+    applyFilters(); 
+}
 
     // Formatear detalle
     function formatearDetalle(texto) {
@@ -1580,30 +1595,9 @@ document.getElementById('idFiltro').addEventListener('keydown', (e) => { if (e.k
         .replace(/(<li>.*<\/li>)/g, '<ul>$1</ul>');
     }
 
-          // Toggle para tareas finalizadas
-        document.addEventListener('DOMContentLoaded', () => {
-        const btnFinalizados = document.getElementById("toggleFinalizados");
-        
-        // 1. Sincronizamos el texto inicial del botón con nuestra variable (que es false)
-        btnFinalizados.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
-        btnFinalizados.classList.toggle("modo-activo", mostrarFinalizados);
-
-        btnFinalizados.addEventListener("click", () => {
-          mostrarFinalizados = !mostrarFinalizados;
-          
-          // 2. Cambiamos el texto dinámicamente
-          btnFinalizados.textContent = mostrarFinalizados ? "Ocultar Finalizados" : "Mostrar Finalizados";
-          
-          // 3. Cambiamos la clase visual
-          btnFinalizados.classList.toggle("modo-activo", mostrarFinalizados);
-          
-          // 4. Ejecutamos los filtros para que el tablero se actualice
-          applyFilters(); 
-        });
-      });
 
     // Función para enviar observaciones al Google Form
-function submitObservation() {
+    function submitObservation() {
   const observacion = document.getElementById("observaciones-input").value.trim();
   const nombre = document.getElementById("nombre-observador").value.trim();
 
@@ -1743,6 +1737,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("highPriorityTasks").innerText = highPriority;
     document.getElementById("overdueTasks").innerText = overdue;
     document.getElementById("upcomingTasks").innerText = upcoming;
+        // Escuchar cambios en los nuevos filtros
+    document.getElementById('fechaInicioFiltro').addEventListener('change', applyFilters);
+    document.getElementById('fechaFinFiltro').addEventListener('change', applyFilters);
+    document.getElementById('idFiltro').addEventListener('input', applyFilters);
+    document.getElementById('estadoFiltro').addEventListener('change', applyFilters);
+    document.getElementById('unidadFiltro').addEventListener('change', applyFilters);
+    document.getElementById('busqueda').addEventListener('input', applyFilters);
+
+    // Configurar el botón Limpiar
+    document.getElementById('btnLimpiarFiltros').addEventListener('click', () => {
+        document.getElementById('estadoFiltro').value = 'Todos';
+        document.getElementById('unidadFiltro').value = '';
+        document.getElementById('fechaInicioFiltro').value = '';
+        document.getElementById('fechaFinFiltro').value = '';
+        document.getElementById('idFiltro').value = '';
+        document.getElementById('busqueda').value = '';
+        applyFilters();
+});
 
 });
 </script>
