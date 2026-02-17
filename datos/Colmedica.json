@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 32891,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 179,
+    "diasTotalDesarrollo": 181,
     "produccion": "30/05/2025"
   },
   {
@@ -374,7 +374,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 107,
+    "diasTotalDesarrollo": 109,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 114,
+    "diasTotalDesarrollo": 116,
     "produccion": ""
   },
   {
@@ -482,7 +482,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "25/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 97,
+    "diasTotalDesarrollo": 99,
     "produccion": ""
   },
   {
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 89,
+    "diasTotalDesarrollo": 91,
     "produccion": ""
   },
   {
@@ -608,15 +608,15 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "10/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 90,
+    "diasTotalDesarrollo": 92,
     "produccion": "10/10/2025"
   },
   {
     "id": "OPT_16",
     "title": "Afiliaciones Pos - Menores Duplicados - RC-CN",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 45,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "07/11/2025",
     "endDate": "",
     "observations": "[7/11/2025] Se inica el desarrollo, definiendo el query base con el que se hará la comparación y busqueda de posibles duplicados\n",
@@ -626,8 +626,8 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 66,
-    "produccion": ""
+    "diasTotalDesarrollo": 68,
+    "produccion": "14/11/2025"
   },
   {
     "id": "OPT_17",
@@ -644,7 +644,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "10/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 70,
+    "diasTotalDesarrollo": 72,
     "produccion": "10/11/2025"
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 67,
+    "diasTotalDesarrollo": 69,
     "produccion": ""
   },
   {
@@ -676,7 +676,7 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "Una vez se cargue la base de correos de los colectivos enviados, se debe enviar dicha base de manera automática al equipo de manteniemento de colectivos del área de Fidelización",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "18/11/2025",
     "fechaCompromisoCliente": "",
@@ -698,7 +698,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 66,
+    "diasTotalDesarrollo": 68,
     "produccion": "20/11/2025"
   },
   {
@@ -716,7 +716,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 66,
+    "diasTotalDesarrollo": 68,
     "produccion": "20/11/2025"
   },
   {
@@ -734,7 +734,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32889,
+    "diasTotalDesarrollo": 32891,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "20/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 58,
+    "diasTotalDesarrollo": 60,
     "produccion": "20/11/2025"
   },
   {
@@ -824,7 +824,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32889,
+    "diasTotalDesarrollo": 32891,
     "produccion": ""
   },
   {
@@ -842,7 +842,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32889,
+    "diasTotalDesarrollo": 32891,
     "produccion": ""
   },
   {
@@ -860,7 +860,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32889,
+    "diasTotalDesarrollo": 32891,
     "produccion": ""
   },
   {
@@ -932,7 +932,7 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "13/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 7,
+    "diasTotalDesarrollo": 9,
     "produccion": ""
   },
   {
@@ -950,7 +950,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "13/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 24,
+    "diasTotalDesarrollo": 26,
     "produccion": "13/01/2026"
   },
   {
@@ -968,7 +968,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "14/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 23,
+    "diasTotalDesarrollo": 25,
     "produccion": "14/01/2026"
   },
   {
@@ -986,7 +986,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 5,
     "produccion": ""
   },
   {
@@ -1011,8 +1011,8 @@
     "id": "OPT_37",
     "title": "Acreditacion - Actualización Masiva",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 95,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "13/02/2026",
     "endDate": "",
     "observations": "[13/02/2026] revisar codigo de la pagina, Se optimizan querys y se hace actualización segmentada, permitiendo reducir tiempo de ejecución considerablemente. ",
@@ -1022,7 +1022,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 1,
+    "diasTotalDesarrollo": 3,
     "produccion": "13/02/2026"
   },
   {
@@ -1045,9 +1045,27 @@
   },
   {
     "id": "OPT_39",
+    "title": "Afiliaciones PRE - Modificar opción de devoluciones por escalas encontradas en la consulta SARLAFT",
+    "assigned": "JENNIFER",
+    "state": "En Proceso",
+    "progress": 35,
+    "startDate": "17/02/2026",
+    "endDate": "",
+    "observations": "[17/02/2026] revisar la pagina donde se cargan los soportes de infolat, y se identifican las escalas, para que se pregunte por las escalas 1, 2, 5 y 6, solo para estas se deben generar las devoluciones",
+    "unit": "Colmedica",
+    "detail": "Modificar opción de devoluciones por escalas encontradas en la consulta SARLAFT, solo se deben devolver y reportar por correo las solicitude que en su consulta reporten las escalas se reportaran las escalas 1, 2, 5 y 6",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "18/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "OPT_40",
     "title": "Afiliaciones POS - Completar descarga de cartas Derechos y Deberes",
     "assigned": "JENNIFER",
-    "state": "Pendiente",
+    "state": "",
     "progress": 0,
     "startDate": "",
     "endDate": "",
@@ -1062,7 +1080,7 @@
     "produccion": ""
   },
   {
-    "id": "OPT_40",
+    "id": "OPT_41",
     "title": "Afiliaciones POS - Consumo Puntual de las afiliaciones",
     "assigned": "JENNIFER",
     "state": "",

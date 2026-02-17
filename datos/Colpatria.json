@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 17,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 91,
+    "diasTotalDesarrollo": 93,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "26/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 113,
+    "diasTotalDesarrollo": 115,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 63,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 132,
+    "diasTotalDesarrollo": 134,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 74,
+    "diasTotalDesarrollo": 76,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 23,
     "fechaEstimadaEntrega": "28/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 74,
+    "diasTotalDesarrollo": 76,
     "produccion": ""
   },
   {
@@ -507,11 +507,11 @@
     "id": "COLP25-0029",
     "title": "Migrar Ant Desing",
     "assigned": "FAVER LOPEZ",
-    "state": "Paso A Produccion",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "28/11/2025",
     "endDate": "28/11/2025",
-    "observations": "[28/11/2025]: Se actualiza Ant Desing a v6, se realiza ajustes necesarios los ajustes necesarios para la compatibilidad con la nueva versión.",
+    "observations": "[28/11/2025]: Se actualiza Ant Desing a v6, se realiza ajustes necesarios los ajustes necesarios para la compatibilidad con la nueva versión.\n[30/01/2026]: Se realiza el paso a produccion de la migración de la libreria de componentes.\n[13/02/2026]: Se han actualizado todos los componentes y realizado ajustes de propiedades deprecadas.",
     "unit": "Colpatria",
     "detail": "Se requiere migrar la libreria de componentes del FrontEnd Imagine  a la versión 6 de Ant Desing, este cambio requiere de ajustes en algunos componentes, mejora la compatibilidad con React 19 por defecto.",
     "visible": true,
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 69,
+    "diasTotalDesarrollo": 71,
     "produccion": "30/01/2026"
   },
   {
@@ -862,5 +862,77 @@
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 2,
     "produccion": "13/02/2026"
+  },
+  {
+    "id": "COLP26-0013",
+    "title": "Ajuste Planos Adicionales Independientes",
+    "assigned": "FAVER LOPEZ",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colpatria",
+    "detail": "Se requiere ajustar el proceso de planos adicionales de independientes, esto con el fin  de poder realizar entregas de planos adicionales de independendientes para lotes de devolución",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "COLP26-0014",
+    "title": "Ajuste Filtrado Semaforizacion",
+    "assigned": "FAVER LOPEZ",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "16/02/2026",
+    "endDate": "16/02/2026",
+    "observations": "[16/02/2026]: Se realiza el ajuste en el filtro por tiempos de vencimiento para excluir esos estados de los conteos",
+    "unit": "Colpatria",
+    "detail": "Se requiere ajustar el filtrado de los tramites, por tiempos, se requiere excluir los tramites de estados no procesables por Imagine (autorizar_devolucion, devuelto oficina)",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "16/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": "16/02/2026"
+  },
+  {
+    "id": "COLP26-0015",
+    "title": "Migrar Proceso de Afiliaciones Access",
+    "assigned": "FAVER LOPEZ",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colpatria",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "COLP26-0016",
+    "title": "Migrar Proceso de Novedades Access",
+    "assigned": "FAVER LOPEZ",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colpatria",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
   }
 ]
