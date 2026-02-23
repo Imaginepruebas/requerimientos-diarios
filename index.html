@@ -364,19 +364,33 @@
   <div class="container-fluid mt-4 px-4"></div>
   <nav class="sidebar">
     <h3 class="text-center text-white mb-4">Informe Requerimientos Imagine</h3>
-    <a href="#resumen"><i class="fas fa-chart-pie me-2"></i>Resumen Ejecutivo</a>
-    <a href="#tareas"><i class="fas fa-tasks me-2"></i>Tareas</a>
+    <a href="javascript:void(0)" onclick="mostrarSeccion('nuevo')"><i class="fas fa-rocket me-2"></i>Mi Nuevo Dashboard</a>
+    <a href="#resumen" onclick="mostrarSeccion('original')"><i class="fas fa-chart-pie me-2"></i>Resumen Ejecutivo</a>
+    <a href="#tareas" onclick="mostrarSeccion('original')"></i>Tareas</a>
     <a href="#lastUpdateByUnitContainer">
-  <i class="fas fa-clock me-2"></i>Última actualización por Unidad
-</a>
-    <a href="#estadisticas"><i class="fas fa-chart-bar me-2"></i>Estadísticas</a>
-    <a href="#graficos"><i class="fas fa-chart-line me-2"></i>Gráficos</a>
+  <i class="fas fa-clock me-2"></i>Última actualización por Unidad</a>
+    <a href="#estadisticas"onclick="mostrarSeccion('original')"><i class="fas fa-chart-bar me-2"></i>Estadísticas</a>
+    <a href="#graficos"onclick="mostrarSeccion('original')"><i class="fas fa-chart-line me-2"></i>Gráficos</a>
     <!-- <a href="#recomendaciones"><i class="fas fa-lightbulb me-2"></i>Recomendaciones</a> -->
    <!--  <a href="#observaciones"><i class="fas fa-comment me-2"></i>Observaciones</a> -->
   </nav>
 
   <div class="content">
-    <div id="dashboard">
+
+       <div id="seccion-nuevo-dashboard" style="display:none;">
+        <div class="card">
+            <div class="card-header"><h2>🚀 Mi Nuevo Dashboard</h2></div>
+            <div class="card-body" style="padding: 0; overflow: hidden;">
+           <iframe src="mi-dashboard.html" 
+                    style="width: 100%; height: 800px; border: none;">
+            </iframe>
+        </div>
+        </div>
+    </div>
+
+    <div id="seccion-contenido-original">
+
+    <div id="dashboard" style="display: none;"> //dashboard viejo//
 
     <h2>📊 Dashboard de Requerimientos</h2>
 
@@ -744,23 +758,99 @@
   }
 }
     // Renderizar Resumen Ejecutivo
-    function updateSummary(filteredTasks = tasks) {
+        function updateSummary(filteredTasks = tasks) {
       filteredTasks = filteredTasks.filter(t => t.visible !== false);
       const resumenContent = document.getElementById('resumenContent');
       const totalTasks = filteredTasks.length;
-      const inProgress = filteredTasks.filter(t => ["En Proceso", "Entrenamiento", "Pruebas Imagine", "Paso A Produccion", "En Test", "Estimar"].includes(t.state)).length;
-      const pending = filteredTasks.filter(t => ["Pendiente", "Pausado", "Detenido Cliente", "Pruebas Cliente","Pendiente Cliente","Reanudar","Control De Cambios Produccion"].includes(t.state)).length;
+      const inProgress = filteredTasks.filter(t => ["En Proceso","Entrenamiento","Pruebas Imagine","Paso A Produccion","En Test","Estimar"].includes(t.state)).length;
+      const pending = filteredTasks.filter(t => ["Pendiente","Pausado","Detenido Cliente","Pruebas Cliente","Pendiente Cliente","Reanudar","Control De Cambios Produccion"].includes(t.state)).length;
       const completed = filteredTasks.filter(t => ["Finalizado","Cancelado"].includes(t.state)).length;
       const avgProgress = totalTasks > 0 ? filteredTasks.reduce((sum, t) => sum + t.progress, 0) / totalTasks : 0;
-      resumenContent.innerHTML = `
-        <p><strong>Total de Tareas:</strong> ${totalTasks}</p>
-        <p><strong>En Proceso:</strong> ${inProgress} (${totalTasks > 0 ? ((inProgress / totalTasks) * 100).toFixed(1) : 0}%)</p>
-        <p><strong>Pendientes:</strong> ${pending} (${totalTasks > 0 ? ((pending / totalTasks) * 100).toFixed(1) : 0}%)</p>
-        <p><strong>Finalizadas:</strong> ${completed} (${totalTasks > 0 ? ((completed / totalTasks) * 100).toFixed(1) : 0}%)</p>
-        <p><strong>Avance Promedio:</strong> ${avgProgress.toFixed(1)}%</p>
+
+      // Totales globales (fila superior)
+      const pct = (n) => totalTasks > 0 ? ((n / totalTasks) * 100).toFixed(1) : 0;
+      let html = `
+        <div style="display:flex;flex-wrap:wrap;gap:24px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #e5e7eb;align-items:center;">
+          <div><span style="color:#6b7280;font-size:13px;">Total Tareas:</span> <strong style="color:#1f77b4;font-size:15px;">${totalTasks}</strong></div>
+          <div><span style="color:#6b7280;font-size:13px;">En Proceso:</span> <strong style="color:#3b82f6;font-size:15px;">${inProgress} (${pct(inProgress)}%)</strong></div>
+          <div><span style="color:#6b7280;font-size:13px;">Pendientes:</span> <strong style="color:#f59e0b;font-size:15px;">${pending} (${pct(pending)}%)</strong></div>
+          <div><span style="color:#6b7280;font-size:13px;">Finalizadas:</span> <strong style="color:#28a745;font-size:15px;">${completed} (${pct(completed)}%)</strong></div>
+          <div><span style="color:#6b7280;font-size:13px;">Avance Promedio:</span> <strong style="color:#7c3aed;font-size:15px;">${avgProgress.toFixed(1)}%</strong></div>
+        </div>
+        <p style="font-size:11px;color:#9ca3af;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;margin-bottom:12px;">Desglose por Unidad</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
       `;
-    }
-        function updateDashboard(filteredTasks = tasks) {
+
+      // Colores por unidad
+      const colores = {
+        'Bolivar':   '#016d38', 'Proteccion': '#0e9f6e', 'Alfa':      '#1da384',
+        'Colmedica': '#0dcaf0', 'Tuya':       '#dc2626', 'Colmena':   '#00899E',
+        'Colpatria': '#00008f'
+      };
+      const colorDefault = '#6b7280';
+
+      // Calcular stats por unidad
+      const unidades = [...new Set(filteredTasks.map(t => t.unit).filter(Boolean))].sort();
+
+      if (unidades.length === 0) {
+        html += `<p style="color:#9ca3af;font-size:13px;">No hay tareas que coincidan con los filtros.</p>`;
+      } else {
+        unidades.forEach(u => {
+          const tareas = filteredTasks.filter(t => t.unit === u);
+          const tot = tareas.length;
+          const enP = tareas.filter(t => ["En Proceso","Entrenamiento","Pruebas Imagine","Paso A Produccion","En Test","Estimar"].includes(t.state)).length;
+          const pend = tareas.filter(t => ["Pendiente","Pausado","Detenido Cliente","Pruebas Cliente","Pendiente Cliente","Reanudar","Control De Cambios Produccion"].includes(t.state)).length;
+          const fin = tareas.filter(t => ["Finalizado","Cancelado"].includes(t.state)).length;
+          const avg = tot > 0 ? Math.round(tareas.reduce((s, t) => s + t.progress, 0) / tot) : 0;
+          const color = colores[u] || colorDefault;
+          const pp = (n) => tot > 0 ? Math.round((n / tot) * 100) : 0;
+
+          html += `
+            <div style="background:#fff;border:2px solid #e5e7eb;border-radius:12px;min-width:170px;flex:1 1 170px;max-width:220px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.06);">
+              <div style="background:${color};padding:9px 14px;display:flex;align-items:center;justify-content:space-between;">
+                <span style="color:#fff;font-weight:700;font-size:13px;">${u}</span>
+                <span style="background:rgba(255,255,255,0.25);color:#fff;border-radius:20px;padding:1px 8px;font-size:12px;font-weight:600;">${tot}</span>
+              </div>
+              <div style="padding:12px 14px;">
+                <div style="margin-bottom:8px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+                    <span style="font-size:11px;color:#6b7280;">Avance</span>
+                    <span style="font-size:12px;font-weight:700;color:${color};">${avg}%</span>
+                  </div>
+                  <div style="background:#f3f4f6;border-radius:99px;height:5px;overflow:hidden;">
+                    <div style="width:${avg}%;height:100%;background:${color};border-radius:99px;"></div>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:4px;">
+                  <div style="display:flex;align-items:center;gap:6px;">
+                    <span style="width:7px;height:7px;border-radius:50%;background:#3b82f6;flex-shrink:0;"></span>
+                    <span style="font-size:11px;color:#6b7280;flex:1;">En Proceso</span>
+                    <span style="font-size:12px;font-weight:600;color:#374151;">${enP}</span>
+                    <span style="font-size:10px;color:#9ca3af;width:28px;text-align:right;">${pp(enP)}%</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:6px;">
+                    <span style="width:7px;height:7px;border-radius:50%;background:#f59e0b;flex-shrink:0;"></span>
+                    <span style="font-size:11px;color:#6b7280;flex:1;">Pendientes</span>
+                    <span style="font-size:12px;font-weight:600;color:#374151;">${pend}</span>
+                    <span style="font-size:10px;color:#9ca3af;width:28px;text-align:right;">${pp(pend)}%</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:6px;">
+                    <span style="width:7px;height:7px;border-radius:50%;background:#28a745;flex-shrink:0;"></span>
+                    <span style="font-size:11px;color:#6b7280;flex:1;">Finalizadas</span>
+                    <span style="font-size:12px;font-weight:600;color:#374151;">${fin}</span>
+                    <span style="font-size:10px;color:#9ca3af;width:28px;text-align:right;">${pp(fin)}%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+    html += `</div>`;
+    resumenContent.innerHTML = html;
+  }
+      function updateDashboard(filteredTasks = tasks) {
     const hoy = new Date();
     hoy.setHours(0, 0, 0, 0);
 
@@ -1757,7 +1847,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 });
+    </script>
+</div>
+      <script>
+      function mostrarSeccion(cual) {
+          if (cual === 'nuevo') {
+              document.getElementById('seccion-nuevo-dashboard').style.display = 'block';
+              document.getElementById('seccion-contenido-original').style.display = 'none';
+          } else {
+              document.getElementById('seccion-nuevo-dashboard').style.display = 'none';
+              document.getElementById('seccion-contenido-original').style.display = 'block';
+          }
+      }
 </script>
-
 </body>
 </html>

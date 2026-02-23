@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Cumplimiento - Imagine</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1f77b4 0%, #1557a0 100%);
+            color: white;
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .header .info {
+            text-align: right;
+        }
+        
+        .header .date {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .header .filters-active {
+            font-size: 12px;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        
+        /* Alertas Inteligentes */
+        .alerts-bar {
+            background: #f8f9fa;
+            padding: 15px 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .alert-item {
+            display: inline-block;
+            margin-right: 25px;
+            font-size: 13px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .alert-critical {
+            background: #fee;
+            color: #c62828;
+            border: 1px solid #ef5350;
+        }
+        
+        .alert-warning {
+            background: #fff3e0;
+            color: #e65100;
+            border: 1px solid #ff9800;
+        }
+        
+        .alert-info {
+            background: #e3f2fd;
+            color: #1565c0;
+            border: 1px solid #2196f3;
+        }
+        
+        .alert-success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+        }
+        
+        /* Dashboard Content */
+        .dashboard-content {
+            padding: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1f77b4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .export-btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+        
+        .export-btn:hover {
+            background: #45a049;
+        }
+        
+        /* Tarjetas principales de cumplimiento */
+        .compliance-main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .compliance-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            border-top: 5px solid;
+            position: relative;
+        }
+        
+        .compliance-card.global {
+            border-top-color: #2196f3;
+        }
+        
+        .compliance-card.internal {
+            border-top-color: #ff9800;
+        }
+        
+        .compliance-card.client {
+            border-top-color: #4caf50;
+        }
+        
+        .compliance-card h3 {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        
+        .compliance-value {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .compliance-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        
+        .status-good {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .status-warning {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .status-bad {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .compliance-detail {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Gráfico de tendencia */
+        .trend-chart {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .chart-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .chart-legend {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 3px;
+            border-radius: 2px;
+        }
+        
+        .chart-placeholder {
+            height: 300px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            position: relative;
+        }
+        
+        /* Requerimientos en riesgo */
+        .risk-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .risk-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .risk-category {
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .risk-category:hover {
+            transform: translateX(5px);
+        }
+        
+        .risk-high {
+            background: #ffebee;
+            border-left-color: #e74c3c;
+        }
+        
+        .risk-medium {
+            background: #fff3e0;
+            border-left-color: #ff9800;
+        }
+        
+        .risk-low {
+            background: #e8f5e9;
+            border-left-color: #4caf50;
+        }
+        
+        .risk-category-title {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .risk-category-count {
+            font-size: 32px;
+            font-weight: 700;
+        }
+        
+        .risk-list {
+            margin-top: 20px;
+        }
+        
+        .risk-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .risk-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        
+        .risk-item-id {
+            font-weight: 700;
+            color: #1f77b4;
+            font-size: 14px;
+        }
+        
+        .risk-item-title {
+            font-size: 14px;
+            color: #333;
+            margin-left: 10px;
+        }
+        
+        .risk-item-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .risk-item-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .risk-item-detail strong {
+            color: #333;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .risk-item-prediction {
+            background: #fff3e0;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #e65100;
+            border-left: 3px solid #ff9800;
+        }
+        
+        /* Tabla de incumplimientos */
+        .incompliance-table {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .table-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 13px;
+            background: white;
+            cursor: pointer;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background: #f5f5f5;
+        }
+        
+        th {
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        td {
+            padding: 15px 12px;
+            font-size: 13px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        tr:hover {
+            background: #fafafa;
+        }
+        
+        .table-badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .badge-internal {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .badge-client {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .badge-both {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .delay-value {
+            font-weight: 700;
+            color: #e74c3c;
+        }
+        
+        .checkmark {
+            color: #4caf50;
+            font-size: 16px;
+        }
+        
+        .crossmark {
+            color: #e74c3c;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 1200px) {
+            .compliance-main {
+                grid-template-columns: 1fr;
+            }
+            
+            .risk-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h1>⏱️ Dashboard de Cumplimiento de Tiempos</h1>
+                <div class="date">Actualizado: <span id="currentDate"></span></div>
+            </div>
+            <div class="info">
+                <div class="filters-active" id="filtrosActivos">
+                    🔍 Sin filtros aplicados
+                </div>
+                <div class="date" style="margin-top: 8px;" id="cantidadMostrada">
+                    Cargando datos...
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alertas Inteligentes -->
+        <div class="alerts-bar" id="alertsBar">
+            <div class="alert-item alert-info">⏳ Cargando datos del sistema...</div>
+        </div>
+        
+        <div class="dashboard-content">
+            <!-- Tarjetas Principales de Cumplimiento -->
+            <h2 class="section-title">
+                <span>📊 Métricas de Cumplimiento</span>
+                <span style="font-size: 14px; color: #999; font-weight: 400;">
+                    Meta global: 90% | Análisis dinámico
+                </span>
+            </h2>
+            
+            <div class="compliance-main">
+                <!-- Cumplimiento Global -->
+                <div class="compliance-card global">
+                    <h3>Cumplimiento Global</h3>
+                    <div class="compliance-value" style="color: #ff9800;" id="valorGlobal">0%</div>
+                    <div class="compliance-status status-warning" id="statusGlobal">
+                        🟡 Calculando...
+                    </div>
+                    <div class="compliance-detail" id="detalleGlobal">
+                        Analizando datos...
+                    </div>
+                </div>
+                
+                <!-- Cumplimiento Interno -->
+                <div class="compliance-card internal">
+                    <h3>Cumplimiento Interno (Desarrollador)</h3>
+                    <div class="compliance-value" style="color: #e74c3c;" id="valorInterno">0%</div>
+                    <div class="compliance-status status-bad" id="statusInterno">
+                        🔴 Calculando...
+                    </div>
+                    <div class="compliance-detail" id="detalleInterno">
+                        Analizando datos...
+                    </div>
+                </div>
+                
+                <!-- Cumplimiento Cliente -->
+                <div class="compliance-card client">
+                    <h3>Cumplimiento a Cliente (Entrega)</h3>
+                    <div class="compliance-value" style="color: #4caf50;" id="valorCliente">0%</div>
+                    <div class="compliance-status status-good" id="statusCliente">
+                        🟢 Calculando...
+                    </div>
+                    <div class="compliance-detail" id="detalleCliente">
+                        Analizando datos...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gráfico de Tendencia -->
+            <div class="trend-chart">
+                <div class="chart-header">
+                    <h3 class="chart-title">📈 Tendencia de Cumplimiento (Últimos 6 Meses)</h3>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #2196f3;"></div>
+                            <span>Cumplimiento Global</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #ff9800;"></div>
+                            <span>Cumplimiento Interno</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #4caf50;"></div>
+                            <span>Cumplimiento Cliente</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #999; border: 2px dashed #999; height: 0;"></div>
+                            <span>Meta 90%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    <svg width="100%" height="100%" viewBox="0 0 800 240" id="trendChart">
+                        <!-- El gráfico se generará dinámicamente -->
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Requerimientos en Riesgo -->
+            <h2 class="section-title">
+                <span>⚠️ Requerimientos Activos en Riesgo de Incumplimiento</span>
+                <span style="font-size: 14px; color: #999; font-weight: 400;">
+                    Predicción basada en avance actual y tiempo restante
+                </span>
+            </h2>
+            
+            <div class="risk-section">
+                <div class="risk-categories">
+                    <div class="risk-category risk-high">
+                        <div class="risk-category-title">🔴 Riesgo Alto</div>
+                        <div class="risk-category-count" style="color: #e74c3c;" id="riesgoAlto">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 8px;">
+                            NO cumplirán fecha de compromiso
+                        </div>
+                    </div>
+                    
+                    <div class="risk-category risk-medium">
+                        <div class="risk-category-title">🟡 Riesgo Medio</div>
+                        <div class="risk-category-count" style="color: #ff9800;" id="riesgoMedio">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 8px;">
+                            En el límite, requieren seguimiento
+                        </div>
+                    </div>
+                    
+                    <div class="risk-category risk-low">
+                        <div class="risk-category-title">🟢 Bajo Riesgo</div>
+                        <div class="risk-category-count" style="color: #4caf50;" id="riesgoBajo">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 8px;">
+                            Avance adecuado para cumplir
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="risk-list" id="riskList">
+                    <h4 style="margin-bottom: 15px; color: #333;">Detalle de Requerimientos en Riesgo Alto</h4>
+                    <div id="riskItems"></div>
+                </div>
+            </div>
+            
+            <!-- Tabla de Incumplimientos -->
+            <h2 class="section-title">
+                <span>📋 Análisis Detallado de Incumplimientos (Solo Finalizados)</span>
+                <button class="export-btn" onclick="exportarCumplimientoExcel()">
+                    <span>📥</span>
+                    <span>Exportar a Excel</span>
+                </button>
+            </h2>
+            
+            <div class="incompliance-table">
+                <div id="tablaIncumplimientos"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        let tasks = [];
+        const today = new Date();
+        
+        // Actualizar fecha
+        document.getElementById('currentDate').textContent = today.toLocaleDateString('es-CO', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+
+        // Cargar datos
+        const archivos = [
+            'datos/Bolivar.json',
+            'datos/Proteccion.json',
+            'datos/Alfa.json',
+            'datos/Colmedica.json',
+            'datos/Tuya.json',
+            'datos/Colmena.json',
+            'datos/Colpatria.json'
+        ];
+
+        Promise.all(archivos.map(url => fetch(url).then(r => {
+            if (!r.ok) throw new Error(`No se pudo cargar ${url}`);
+            return r.json();
+        })))
+        .then(respuestas => {
+            tasks = respuestas.flat();
+            console.log(`✅ ${tasks.length} requerimientos cargados`);
+            calcularYMostrarDatos();
+        })
+        .catch(error => {
+            console.error("Error al cargar datos:", error);
+            document.getElementById('alertsBar').innerHTML = 
+                '<div class="alert-item alert-critical">🔴 ERROR: No se pudieron cargar los datos - ' + error.message + '</div>';
+        });
+
+        // Función principal de cálculo
+        function calcularYMostrarDatos() {
+            const finalizados = tasks.filter(t => 
+                t.state === "Finalizado" && 
+                t.endDate && 
+                t.visible !== false
+            );
+            
+            const activos = tasks.filter(t => 
+                t.state !== "Finalizado" && 
+                t.state !== "Cancelado" && 
+                t.progress < 100 &&
+                t.visible !== false
+            );
+
+            // Calcular cumplimientos
+            const cumplimientos = calcularCumplimientos(finalizados);
+            mostrarCumplimientos(cumplimientos, finalizados.length);
+            
+            // Calcular riesgos
+            const riesgos = calcularRiesgos(activos);
+            mostrarRiesgos(riesgos, activos);
+            
+            // Mostrar tabla incumplimientos
+            mostrarTablaIncumplimientos(finalizados);
+            
+            // Actualizar alertas
+            actualizarAlertas(cumplimientos, riesgos);
+            
+            // Actualizar contador
+            document.getElementById('cantidadMostrada').textContent = 
+                `Mostrando: ${tasks.filter(t => t.visible !== false).length} de ${tasks.length} requerimientos`;
+        }
+
+        function parseDate(dateStr) {
+            if (!dateStr || typeof dateStr !== 'string' || !dateStr.includes('/')) return null;
+            const [day, month, year] = dateStr.split('/');
+            if (!day || !month || !year) return null;
+            return new Date(Number(year), Number(month) - 1, Number(day), 12, 0, 0);
+        }
+
+        function calcularCumplimientos(finalizados) {
+            if (finalizados.length === 0) {
+                return { interno: 0, cliente: 0, global: 0, cumplioInterno: 0, cumplioCliente: 0 };
+            }
+
+            const cumplioInterno = finalizados.filter(t => {
+                const estimado = parseDate(t.fechaEstimadaEntrega);
+                const real = parseDate(t.endDate);
+                return estimado && real && real <= estimado;
+            }).length;
+
+            const cumplioCliente = finalizados.filter(t => {
+                const compromiso = parseDate(t.fechaCompromisoCliente);
+                const real = parseDate(t.endDate);
+                return compromiso && real && real <= compromiso;
+            }).length;
+
+            const pctInterno = (cumplioInterno / finalizados.length) * 100;
+            const pctCliente = (cumplioCliente / finalizados.length) * 100;
+            const pctGlobal = (pctInterno + pctCliente) / 2;
+
+            return {
+                interno: pctInterno,
+                cliente: pctCliente,
+                global: pctGlobal,
+                cumplioInterno,
+                cumplioCliente
+            };
+        }
+
+        function mostrarCumplimientos(cumplimientos, totalFinalizados) {
+            // Global
+            const statusGlobal = getStatus(cumplimientos.global);
+            document.getElementById('valorGlobal').textContent = cumplimientos.global.toFixed(1) + '%';
+            document.getElementById('valorGlobal').style.color = statusGlobal.color;
+            document.getElementById('statusGlobal').textContent = statusGlobal.texto;
+            document.getElementById('statusGlobal').className = 'compliance-status ' + statusGlobal.clase;
+            document.getElementById('detalleGlobal').innerHTML = 
+                `<strong>${totalFinalizados} requerimientos</strong> finalizados analizados<br>` +
+                `Promedio de cumplimiento interno y cliente`;
+
+            // Interno
+            const statusInterno = getStatus(cumplimientos.interno);
+            document.getElementById('valorInterno').textContent = cumplimientos.interno.toFixed(1) + '%';
+            document.getElementById('statusInterno').textContent = statusInterno.texto;
+            document.getElementById('statusInterno').className = 'compliance-status ' + statusInterno.clase;
+            document.getElementById('detalleInterno').innerHTML = 
+                `<strong>${cumplimientos.cumplioInterno} de ${totalFinalizados}</strong> cumplieron la estimación del desarrollador<br>` +
+                `<div style="margin-top: 8px; color: ${statusInterno.color}; font-weight: 600;">` +
+                `${statusInterno.descripcion}</div>`;
+
+            // Cliente
+            const statusCliente = getStatus(cumplimientos.cliente);
+            document.getElementById('valorCliente').textContent = cumplimientos.cliente.toFixed(1) + '%';
+            document.getElementById('statusCliente').textContent = statusCliente.texto;
+            document.getElementById('statusCliente').className = 'compliance-status ' + statusCliente.clase;
+            document.getElementById('detalleCliente').innerHTML = 
+                `<strong>${cumplimientos.cumplioCliente} de ${totalFinalizados}</strong> cumplieron la fecha pactada con el cliente<br>` +
+                `<div style="margin-top: 8px; color: ${statusCliente.color}; font-weight: 600;">` +
+                `${statusCliente.descripcion}</div>`;
+        }
+
+        function getStatus(porcentaje) {
+            if (porcentaje >= 90) {
+                return {
+                    texto: '🟢 EXCELENTE - Sobre meta',
+                    clase: 'status-good',
+                    color: '#4caf50',
+                    descripcion: `+${(porcentaje - 90).toFixed(1)}% sobre la meta del 90%`
+                };
+            } else if (porcentaje >= 80) {
+                return {
+                    texto: `🟡 Cerca de meta (-${(90 - porcentaje).toFixed(1)}%)`,
+                    clase: 'status-warning',
+                    color: '#ff9800',
+                    descripcion: `Faltan ${(90 - porcentaje).toFixed(1)} puntos para alcanzar la meta`
+                };
+            } else {
+                return {
+                    texto: `🔴 Bajo meta (-${(90 - porcentaje).toFixed(1)}%)`,
+                    clase: 'status-bad',
+                    color: '#e74c3c',
+                    descripcion: `Se requiere mejorar ${(90 - porcentaje).toFixed(1)} puntos`
+                };
+            }
+        }
+
+        function calcularRiesgos(activos) {
+            let alto = 0, medio = 0, bajo = 0;
+            const itemsAlto = [];
+
+            activos.forEach(req => {
+                const compromiso = parseDate(req.fechaCompromisoCliente);
+                if (!compromiso) {
+                    bajo++;
+                    return;
+                }
+
+                const hoy = new Date();
+                hoy.setHours(0, 0, 0, 0);
+                const diasRestantes = Math.ceil((compromiso - hoy) / (1000 * 60 * 60 * 24));
+                const progresoRestante = 100 - req.progress;
+                const diasNecesarios = Math.ceil(progresoRestante / 10);
+
+                if (diasNecesarios > diasRestantes) {
+                    alto++;
+                    if (itemsAlto.length < 5) {
+                        const diasAtraso = diasNecesarios - diasRestantes;
+                        const fechaPrediccion = new Date(hoy);
+                        fechaPrediccion.setDate(fechaPrediccion.getDate() + diasNecesarios);
+                        
+                        itemsAlto.push({
+                            id: req.id,
+                            titulo: req.title,
+                            compromiso: req.fechaCompromisoCliente,
+                            diasRestantes,
+                            avance: req.progress,
+                            responsable: req.assigned,
+                            diasNecesarios,
+                            diasAtraso,
+                            fechaPrediccion: fechaPrediccion.toLocaleDateString('es-CO')
+                        });
+                    }
+                } else if (diasNecesarios >= diasRestantes * 0.8) {
+                    medio++;
+                } else {
+                    bajo++;
+                }
+            });
+
+            return { alto, medio, bajo, itemsAlto };
+        }
+
+        function mostrarRiesgos(riesgos, activos) {
+            document.getElementById('riesgoAlto').textContent = riesgos.alto;
+            document.getElementById('riesgoMedio').textContent = riesgos.medio;
+            document.getElementById('riesgoBajo').textContent = riesgos.bajo;
+
+            const riskItems = document.getElementById('riskItems');
+            if (riesgos.itemsAlto.length === 0) {
+                riskItems.innerHTML = '<p style="text-align:center; color:#666; padding:20px;">🎉 No hay requerimientos en riesgo alto - ¡Excelente trabajo!</p>';
+                return;
+            }
+
+            let html = '';
+            riesgos.itemsAlto.forEach(item => {
+                html += `
+                    <div class="risk-item">
+                        <div class="risk-item-header">
+                            <div>
+                                <span class="risk-item-id">${item.id}</span>
+                                <span class="risk-item-title">${item.titulo}</span>
+                            </div>
+                            <span class="risk-item-badge">INCUMPLIRÁ</span>
+                        </div>
+                        <div class="risk-item-details">
+                            <div class="risk-item-detail">
+                                <strong>Fecha Compromiso</strong>
+                                ${item.compromiso} (${item.diasRestantes} días restantes)
+                            </div>
+                            <div class="risk-item-detail">
+                                <strong>Avance Actual</strong>
+                                ${item.avance}% completado
+                            </div>
+                            <div class="risk-item-detail">
+                                <strong>Responsable</strong>
+                                ${item.responsable}
+                            </div>
+                        </div>
+                        <div class="risk-item-prediction">
+                            ⚠️ <strong>Predicción:</strong> Requiere ${item.diasNecesarios} días más para completar (${100 - item.avance}% restante × velocidad promedio). 
+                            Se entregará aproximadamente el <strong>${item.fechaPrediccion}</strong> (+${item.diasAtraso} días de retraso)
+                        </div>
+                    </div>
+                `;
+            });
+
+            if (riesgos.alto > 5) {
+                html += `
+                    <div style="text-align: center; margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                        <span style="color: #666; font-size: 13px;">
+                            + ${riesgos.alto - 5} requerimientos más en riesgo alto
+                        </span>
+                    </div>
+                `;
+            }
+
+            riskItems.innerHTML = html;
+        }
+
+        function mostrarTablaIncumplimientos(finalizados) {
+            const incumplidos = finalizados.filter(t => {
+                const estimado = parseDate(t.fechaEstimadaEntrega);
+                const compromiso = parseDate(t.fechaCompromisoCliente);
+                const real = parseDate(t.endDate);
+                const noCumplioInterno = estimado && real && real > estimado;
+                const noCumplioCliente = compromiso && real && real > compromiso;
+                return noCumplioInterno || noCumplioCliente;
+            });
+
+            if (incumplidos.length === 0) {
+                document.getElementById('tablaIncumplimientos').innerHTML = 
+                    '<p style="color:#4caf50;text-align:center;padding:40px;font-size:18px;">✅ ¡Excelente! No hay incumplimientos registrados</p>';
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Unidad</th>
+                            <th>Tipo Incumplimiento</th>
+                            <th>Días Est.</th>
+                            <th>Días Real</th>
+                            <th>Atraso Interno</th>
+                            <th>Cumplió Cliente</th>
+                            <th>Atraso Cliente</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            incumplidos.slice(0, 20).forEach(t => {
+                const estimado = parseDate(t.fechaEstimadaEntrega);
+                const compromiso = parseDate(t.fechaCompromisoCliente);
+                const real = parseDate(t.endDate);
+                
+                const atrasoInterno = estimado && real ? Math.ceil((real - estimado) / (1000*60*60*24)) : 0;
+                const atrasoCliente = compromiso && real ? Math.ceil((real - compromiso) / (1000*60*60*24)) : 0;
+                
+                const noCumplioInterno = atrasoInterno > 0;
+                const noCumplioCliente = atrasoCliente > 0;
+                
+                let tipo = '';
+                if (noCumplioInterno && noCumplioCliente) {
+                    tipo = '<span class="table-badge badge-both">Ambos</span>';
+                } else if (noCumplioInterno) {
+                    tipo = '<span class="table-badge badge-internal">Solo Interno</span>';
+                } else {
+                    tipo = '<span class="table-badge badge-client">Solo Cliente</span>';
+                }
+
+                html += `
+                    <tr>
+                        <td><strong>${t.id}</strong></td>
+                        <td>${t.title}</td>
+                        <td>${t.unit}</td>
+                        <td>${tipo}</td>
+                        <td>${t.diasEstimadosDesarrollo || '-'}</td>
+                        <td>${t.diasTotalDesarrollo || '-'}</td>
+                        <td>${noCumplioInterno ? '<span class="delay-value">+' + atrasoInterno + ' días</span>' : '<span class="checkmark">✓</span>'}</td>
+                        <td>${noCumplioCliente ? '<span class="crossmark">✗</span>' : '<span class="checkmark">✓</span>'}</td>
+                        <td>${noCumplioCliente ? '<span class="delay-value">+' + atrasoCliente + ' días</span>' : '-'}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            
+            if (incumplidos.length > 20) {
+                html += `<div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center; font-size: 13px; color: #666;">
+                    Mostrando 20 de ${incumplidos.length} incumplimientos
+                </div>`;
+            }
+
+            document.getElementById('tablaIncumplimientos').innerHTML = html;
+        }
+
+        function actualizarAlertas(cumplimientos, riesgos) {
+            let alertas = [];
+
+            if (cumplimientos.global < 90) {
+                alertas.push(`<div class="alert-item alert-warning">⚠️ ATENCIÓN: Cumplimiento global al ${cumplimientos.global.toFixed(1)}% (Meta: 90%)</div>`);
+            }
+
+            if (riesgos.alto > 0) {
+                alertas.push(`<div class="alert-item alert-critical">🔴 CRÍTICO: ${riesgos.alto} requerimientos NO cumplirán su fecha de compromiso</div>`);
+            }
+
+            if (cumplimientos.cliente >= 90) {
+                alertas.push(`<div class="alert-item alert-success">🟢 POSITIVO: Cumplimiento a cliente al ${cumplimientos.cliente.toFixed(1)}% - sobre meta</div>`);
+            }
+
+            if (cumplimientos.interno < 80) {
+                alertas.push(`<div class="alert-item alert-warning">⚠️ Las estimaciones internas necesitan mejorar (${cumplimientos.interno.toFixed(1)}%)</div>`);
+            }
+
+            document.getElementById('alertsBar').innerHTML = alertas.length > 0 ? alertas.join('') : 
+                '<div class="alert-item alert-success">🎉 Todos los indicadores en niveles aceptables</div>';
+        }
+
+        function exportarCumplimientoExcel() {
+            if (!window.XLSX) {
+                alert('Error: Librería Excel no cargada. Recarga la página.');
+                return;
+            }
+
+            const wb = XLSX.utils.book_new();
+            const formattedDate = today.toLocaleDateString('es-CO').replace(/\//g, '-');
+
+            // Hoja 1: Resumen
+            const valorGlobal = document.getElementById('valorGlobal').textContent;
+            const valorInterno = document.getElementById('valorInterno').textContent;
+            const valorCliente = document.getElementById('valorCliente').textContent;
+            const statusGlobal = document.getElementById('statusGlobal').textContent;
+            const statusInterno = document.getElementById('statusInterno').textContent;
+            const statusCliente = document.getElementById('statusCliente').textContent;
+
+            const resumenData = [
+                ['DASHBOARD DE CUMPLIMIENTO - ' + formattedDate],
+                [],
+                ['Métrica', 'Valor', 'Meta', 'Estado'],
+                ['Cumplimiento Global', valorGlobal, '90%', statusGlobal],
+                ['Cumplimiento Interno', valorInterno, '90%', statusInterno],
+                ['Cumplimiento Cliente', valorCliente, '90%', statusCliente],
+                [],
+                ['Riesgo Alto', document.getElementById('riesgoAlto').textContent],
+                ['Riesgo Medio', document.getElementById('riesgoMedio').textContent],
+                ['Riesgo Bajo', document.getElementById('riesgoBajo').textContent]
+            ];
+
+            const ws1 = XLSX.utils.aoa_to_sheet(resumenData);
+            XLSX.utils.book_append_sheet(wb, ws1, 'Resumen');
+
+            // Descargar
+            XLSX.writeFile(wb, `Cumplimiento_Requerimientos_${formattedDate}.xlsx`);
+            
+            // Mostrar confirmación
+            const alertsBar = document.getElementById('alertsBar');
+            const originalContent = alertsBar.innerHTML;
+            alertsBar.innerHTML = '<div class="alert-item alert-success">✅ Archivo Excel exportado correctamente</div>';
+            setTimeout(() => {
+                alertsBar.innerHTML = originalContent;
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

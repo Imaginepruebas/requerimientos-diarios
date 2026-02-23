@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32891,
+    "diasTotalDesarrollo": 32894,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 181,
+    "diasTotalDesarrollo": 184,
     "produccion": "30/05/2025"
   },
   {
@@ -374,7 +374,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 109,
+    "diasTotalDesarrollo": 112,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 116,
+    "diasTotalDesarrollo": 119,
     "produccion": ""
   },
   {
@@ -482,7 +482,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "25/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 99,
+    "diasTotalDesarrollo": 102,
     "produccion": ""
   },
   {
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 91,
+    "diasTotalDesarrollo": 94,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "10/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 92,
+    "diasTotalDesarrollo": 95,
     "produccion": "10/10/2025"
   },
   {
@@ -626,7 +626,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 68,
+    "diasTotalDesarrollo": 71,
     "produccion": "14/11/2025"
   },
   {
@@ -644,7 +644,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "10/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 72,
+    "diasTotalDesarrollo": 75,
     "produccion": "10/11/2025"
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 69,
+    "diasTotalDesarrollo": 72,
     "produccion": ""
   },
   {
@@ -698,7 +698,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 68,
+    "diasTotalDesarrollo": 71,
     "produccion": "20/11/2025"
   },
   {
@@ -716,7 +716,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 68,
+    "diasTotalDesarrollo": 71,
     "produccion": "20/11/2025"
   },
   {
@@ -734,7 +734,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32891,
+    "diasTotalDesarrollo": 32894,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "20/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 60,
+    "diasTotalDesarrollo": 63,
     "produccion": "20/11/2025"
   },
   {
@@ -824,7 +824,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32891,
+    "diasTotalDesarrollo": 32894,
     "produccion": ""
   },
   {
@@ -842,7 +842,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32891,
+    "diasTotalDesarrollo": 32894,
     "produccion": ""
   },
   {
@@ -860,7 +860,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32891,
+    "diasTotalDesarrollo": 32894,
     "produccion": ""
   },
   {
@@ -922,17 +922,17 @@
     "title": "Comercial - Modulo de Normalización",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 35,
+    "progress": 55,
     "startDate": "05/02/2026",
     "endDate": "",
-    "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2025] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las soliictadas\n[6/02/2025] se inicia con la adición de columnas y la modificación en query para obtener l dato",
+    "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2025] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las soliictadas\n[6/02/2025] se inicia con la adición de columnas y la modificación en query para obtener el dato",
     "unit": "Colmedica",
     "detail": "Mejoras al módulo para agilizar la auditoria y revisión de inconsistencias por parte de las Gestoras, ver inforción importante, eliminar datos innecesarios, mejorar ventana para visualización de información",
     "visible": true,
-    "diasEstimadosDesarrollo": 7,
-    "fechaEstimadaEntrega": "13/02/2026",
+    "diasEstimadosDesarrollo": 12,
+    "fechaEstimadaEntrega": "20/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 9,
+    "diasTotalDesarrollo": 12,
     "produccion": ""
   },
   {
@@ -950,7 +950,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "13/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 26,
+    "diasTotalDesarrollo": 29,
     "produccion": "13/01/2026"
   },
   {
@@ -968,7 +968,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "14/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 25,
+    "diasTotalDesarrollo": 28,
     "produccion": "14/01/2026"
   },
   {
@@ -986,7 +986,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 5,
+    "diasTotalDesarrollo": 8,
     "produccion": ""
   },
   {
@@ -1022,7 +1022,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 6,
     "produccion": "13/02/2026"
   },
   {
@@ -1047,54 +1047,36 @@
     "id": "OPT_39",
     "title": "Afiliaciones PRE - Modificar opción de devoluciones por escalas encontradas en la consulta SARLAFT",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 35,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "17/02/2026",
     "endDate": "",
-    "observations": "[17/02/2026] revisar la pagina donde se cargan los soportes de infolat, y se identifican las escalas, para que se pregunte por las escalas 1, 2, 5 y 6, solo para estas se deben generar las devoluciones",
+    "observations": "[17/02/2026] revisar la pagina donde se cargan los soportes de infolat, y se identifican las escalas, para que se pregunte por las escalas 1, 2, 5 y 6, solo para estas se deben generar las devoluciones\n",
     "unit": "Colmedica",
     "detail": "Modificar opción de devoluciones por escalas encontradas en la consulta SARLAFT, solo se deben devolver y reportar por correo las solicitude que en su consulta reporten las escalas se reportaran las escalas 1, 2, 5 y 6",
     "visible": true,
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "18/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 1,
-    "produccion": ""
+    "diasTotalDesarrollo": 4,
+    "produccion": "18/02/2026"
   },
   {
     "id": "OPT_40",
-    "title": "Afiliaciones POS - Completar descarga de cartas Derechos y Deberes",
+    "title": "Afiliaciones PRE - Proceso de anuladas",
     "assigned": "JENNIFER",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "18/02/2026",
     "endDate": "",
-    "observations": "",
+    "observations": "[18/02/2026] Se ajusta la tarea programada, para enviar el correo todos los días de lunes a viernes. y dentro del codigo se elimina la marca que se hacia para identificar que miercoles si se enviaba y que miercoles no",
     "unit": "Colmedica",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
+    "detail": "el correo que se envia cada 15 días, ahora se debe ajustar para envío diario de Lunes a viernes, y eliminar la macrcación que se hacia para enviarla los miercoles cada 15 días",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "18/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
-    "produccion": ""
-  },
-  {
-    "id": "OPT_41",
-    "title": "Afiliaciones POS - Consumo Puntual de las afiliaciones",
-    "assigned": "JENNIFER",
-    "state": "",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
-    "unit": "Colmedica",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
-    "produccion": ""
+    "diasTotalDesarrollo": 3,
+    "produccion": "18/02/2026"
   }
 ]
