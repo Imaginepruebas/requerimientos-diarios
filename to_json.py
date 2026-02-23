@@ -91,7 +91,7 @@ def excel_to_json_array(archivo_excel):
                 "startDate": start_date,
                 "endDate": end_date,
                 "observations": format_dates_in_observations(row.iloc[16]),
-                "unit": "Colmena",
+                "unit": "Tuya",
                 "detail": str(row.iloc[3]) if pd.notna(row.iloc[3]) else "",
                 "visible": parse_visible(row.iloc[17]),
                 "diasEstimadosDesarrollo": dias_estimados,
@@ -120,12 +120,12 @@ def guardar_json(json_array, archivo):
 
 if __name__ == "__main__":
 
-    archivo_excel = "Colmena.xlsx"
+    archivo_excel = "Tuya.xlsx"
 
     json_data = excel_to_json_array(archivo_excel)
 
     if json_data:
-        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Colmena.json")
+        guardar_json(json_data, "C:\\Users\\79220621\\Documents\\REPORTEDIARIO\\REPORTEDIARIO\\datos\\Tuya.json")
 
         print("Total registros:", len(json_data))
 

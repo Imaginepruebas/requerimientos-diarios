@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 270,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 270,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 270,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -68,7 +68,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 270,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 270,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 270,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 270,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 159,
+    "diasTotalDesarrollo": 162,
     "produccion": ""
   },
   {
@@ -158,7 +158,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 159,
+    "diasTotalDesarrollo": 162,
     "produccion": ""
   },
   {
@@ -176,7 +176,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 159,
+    "diasTotalDesarrollo": 162,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 159,
+    "diasTotalDesarrollo": 162,
     "produccion": ""
   },
   {
@@ -230,7 +230,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 161,
+    "diasTotalDesarrollo": 164,
     "produccion": ""
   },
   {
@@ -248,7 +248,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 161,
+    "diasTotalDesarrollo": 164,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 160,
+    "diasTotalDesarrollo": 163,
     "produccion": ""
   },
   {
@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 158,
+    "diasTotalDesarrollo": 161,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 93,
+    "diasTotalDesarrollo": 96,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 91,
+    "diasTotalDesarrollo": 94,
     "produccion": ""
   },
   {
@@ -1684,11 +1684,47 @@
     "observations": "[13/02/2025]: Se queda pendiente definir si se pueden mejorar algunos reportes",
     "unit": "Tuya",
     "detail": "Se tuvo reunion con persona del area antifraude para ver informes y log que se les puede proporcionara cceso para los procesos que ellos realizan",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "354",
+    "title": "Soporte Casos Sarita",
+    "assigned": "NATALIA Y FAVER",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/02/2026",
+    "endDate": "16/02/2026",
+    "observations": "Se validan casos y se genera respuesta, indicando que no es error de nosotros.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "355",
+    "title": "Reporte Venta Cartera",
+    "assigned": "FAVER",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Tuya",
+    "detail": "Solicitan entregar un reporte de documentos para validar la posibilidad para venta de cartera",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
     "produccion": ""
   }
 ]

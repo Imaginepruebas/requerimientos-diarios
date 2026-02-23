@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 17,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 93,
+    "diasTotalDesarrollo": 94,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "26/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 115,
+    "diasTotalDesarrollo": 116,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 63,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 134,
+    "diasTotalDesarrollo": 135,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 76,
+    "diasTotalDesarrollo": 77,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 23,
     "fechaEstimadaEntrega": "28/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 76,
+    "diasTotalDesarrollo": 77,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 71,
+    "diasTotalDesarrollo": 72,
     "produccion": "30/01/2026"
   },
   {
@@ -933,6 +933,24 @@
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "COLP26-0017",
+    "title": "Asignacion de Permisos",
+    "assigned": "FAVER LOPEZ",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "18/02/2026",
+    "endDate": "18/02/2026",
+    "observations": "[18/02/2026]: Se asignan permisos en los modulos de Imagien al usuario de acuerdo con la solicitud.",
+    "unit": "Colpatria",
+    "detail": "Solicitan asignar permisos a usuario nuevo en los modulos de radicación de Imagine",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "18/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   }
 ]

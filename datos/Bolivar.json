@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 220,
+    "diasTotalDesarrollo": 221,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "30/04/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 202,
+    "diasTotalDesarrollo": 203,
     "produccion": ""
   },
   {
@@ -1058,7 +1058,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 4,
+    "diasTotalDesarrollo": 5,
     "produccion": ""
   },
   {
@@ -1292,7 +1292,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 147,
+    "diasTotalDesarrollo": 148,
     "produccion": ""
   },
   {
@@ -1735,14 +1735,14 @@
     "progress": 90,
     "startDate": "04/02/2026",
     "endDate": "",
-    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.\n[06/02/2026]: Se completó la conexión con las variables de entorno y se habilitó el API de login en local. Se garantizó que el token de seguridad mantenga la misma persistencia de sesión que el sistema de Bolívar \n[09/02/2026]: Se avanzó significativamente en el desarrollo inicial del nuevo aplicativo. Ya se cuenta con login funcional (100%) y panel administrativo operativo, incluyendo menú lateral. Se inició la construcción del módulo de consulta de casos, con visualización de detalle similar al Nativo actual para reducir impacto visual al usuario. El avance de este frente se estima alrededor del 30% en la etapa de ingreso y consulta; el siguiente paso es completar la gestión del caso para poder presentar un flujo completo al cliente en el corto plazo.\n[11/02/2026]: Actualmente ya se encuentra funcional la Consulta de caso real, Visualización de información básica del caso y Visualización de trazabilidad. Se comenzara a trabajar en la fase de gestión del caso.\n[13/02/2026]: El avance se encuentra en fase de construcción de vistas y endpoints base.\n[17/02/2026]: Se esta  terminando la consulta general y  se pretende  iniciar la migración de  masivos\n[18/02/2026]: Consulta general desarrollada para mostrar más datos; falta implementar completamente la lógica por roles, e iniciara la renovacion de masivos\n[20/02/2026]: El desarrollo del flujo completo de masivos (incluyendo envío de correo) fue finalizado en ambiente local. Pendiente ejecución de pruebas integrales para la presentación.\nLa consulta fue implementada enfocada en la sección principal de casos. La gestión se considera funcional para demo, quedando ampliaciones por roles y otros módulos para fases posteriores.",
+    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.\n[06/02/2026]: Se completó la conexión con las variables de entorno y se habilitó el API de login en local. Se garantizó que el token de seguridad mantenga la misma persistencia de sesión que el sistema de Bolívar \n[09/02/2026]: Se avanzó significativamente en el desarrollo inicial del nuevo aplicativo. Ya se cuenta con login funcional (100%) y panel administrativo operativo, incluyendo menú lateral. Se inició la construcción del módulo de consulta de casos, con visualización de detalle similar al Nativo actual para reducir impacto visual al usuario. El avance de este frente se estima alrededor del 30% en la etapa de ingreso y consulta; el siguiente paso es completar la gestión del caso para poder presentar un flujo completo al cliente en el corto plazo.\n[11/02/2026]: Actualmente ya se encuentra funcional la Consulta de caso real, Visualización de información básica del caso y Visualización de trazabilidad. Se comenzara a trabajar en la fase de gestión del caso.\n[13/02/2026]: El avance se encuentra en fase de construcción de vistas y endpoints base.\n[17/02/2026]: Se esta  terminando la consulta general y  se pretende  iniciar la migración de  masivos\n[18/02/2026]: Consulta general desarrollada para mostrar más datos; falta implementar completamente la lógica por roles, e iniciara la renovacion de masivos\n[20/02/2026]: El desarrollo del flujo completo de masivos (incluyendo envío de correo) fue finalizado en ambiente local. Pendiente ejecución de pruebas integrales para la presentación.\nLa consulta fue implementada enfocada en la sección principal de casos. La gestión se considera funcional para demo, quedando ampliaciones por roles y otros módulos para fases posteriores.\n[23/02/2026]: La funcionalidad está construida y se continuará hoy con ajustes. El envio masivo está prácticamente finalizado, faltando pruebas con múltiples tipologías en local.",
     "unit": "Bolivar",
     "detail": "Diseñar y desarrollar un nuevo aplicativo que reemplace progresivamente la solución actual Nativo, con el objetivo de contar con una plataforma unificada, flexible y mantenible que permita gestionar de punta a punta los procesos operativos: creación de casos desde los portales, gestión interna, asignación por roles, seguimiento, consultas y generación de reportes.\n\nEl nuevo aplicativo debe cubrir el flujo completo del negocio, desde la radicación inicial hasta el cierre del caso, incorporando controles de trazabilidad, perfiles de usuario y visualización de información consolidada, eliminando las limitaciones técnicas y funcionales del sistema actual.\n\nAlcance inicial (MVP):\n\nCreación y radicación de casos desde portales.\n\nMódulo de gestión interna de casos.\n\nAsignación por roles y perfiles (administrador, gestor, consulta).\n\nBandejas de trabajo y estados del caso.\n\nConsulta y trazabilidad del proceso.\n\nMódulo básico de reportes.\n\nInterfaz moderna (uso de Tailwind).\n\nObjetivo:\nContar con un producto funcional de punta a punta que permita demostrar el flujo completo al cliente, sirviendo como base para la evolución progresiva del sistema y la migración controlada desde Nativo.",
     "visible": true,
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "13/02/2026",
-    "fechaCompromisoCliente": "20/02/2026",
-    "diasTotalDesarrollo": 13,
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 14,
     "produccion": ""
   },
   {
@@ -1940,7 +1940,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 143,
+    "diasTotalDesarrollo": 144,
     "produccion": ""
   },
   {
@@ -2138,7 +2138,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 140,
+    "diasTotalDesarrollo": 141,
     "produccion": ""
   },
   {
@@ -2192,7 +2192,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 140,
+    "diasTotalDesarrollo": 141,
     "produccion": ""
   },
   {
@@ -2318,7 +2318,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 35,
+    "diasTotalDesarrollo": 36,
     "produccion": ""
   },
   {
@@ -2498,7 +2498,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 13,
+    "diasTotalDesarrollo": 14,
     "produccion": ""
   },
   {
@@ -2509,14 +2509,14 @@
     "progress": 50,
     "startDate": "11/02/2026",
     "endDate": "",
-    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.\n[13/02/2026]: Se realizó implementación en ambiente local. Pendiente estrategias de pruebas \n[17/02/2026]: Funcionalidad ya desarrollada en local, Pendiente ejecución de pruebas\n[20/02/2026]: La lógica ya está construida, pero no se han desarrollado los procedimientos asociados. Estado intermedio con pendiente técnico claro.",
+    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.\n[13/02/2026]: Se realizó implementación en ambiente local. Pendiente estrategias de pruebas \n[17/02/2026]: Funcionalidad ya desarrollada en local, Pendiente ejecución de pruebas\n[20/02/2026]: La lógica ya está construida, pero no se han desarrollado los procedimientos asociados. Estado intermedio con pendiente técnico claro.\n[23/02/2026]: El desarrollo está listo a nivel funcional, pendiente despliegue a ambiente de pruebas (test) y solicitud de control de cambios. Posteriormente se debe ejecutar prueba con factura real para validar comportamiento del servicio de radicación masiva.",
     "unit": "Bolivar",
     "detail": "Se requiere pasar facturas multiusuario baja complejidad a bandeja masivo, los usuarios que no coincidan o no cumplan  con la siguiente regla deben ser asignados a bandeja analista baja complejidad.\n\nValor autorizado- deducible= valor pendiente\nValor factura- deducible= Valor cobrado\n\nSi los 2 coinciden pueden pasar a pago masivo.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 8,
+    "diasTotalDesarrollo": 9,
     "produccion": ""
   },
   {
@@ -2545,7 +2545,7 @@
     "progress": 80,
     "startDate": "16/02/2026",
     "endDate": "18/02/2026",
-    "observations": "[17/02/2026] : la fecha estimada de finalización del desarrolla 17 de febrero  para entrega al cliente  20 de febrero.\nValidacion del requerimiento para incluir  la columna que se requiere\n[18/02/2026]: Lógica implementada; pendiente pruebas con datos de producción, se estima finlizar hoy hacia el medio dia.\n[19/02/2026]: En pruebas imagine.\n[20/02/2026]: Se continuaron pruebas del flujo y ajustes asociados. Se mantienen pendientes funcionales menores.",
+    "observations": "[17/02/2026] : la fecha estimada de finalización del desarrolla 17 de febrero  para entrega al cliente  20 de febrero.\nValidacion del requerimiento para incluir  la columna que se requiere\n[18/02/2026]: Lógica implementada; pendiente pruebas con datos de producción, se estima finlizar hoy hacia el medio dia.\n[19/02/2026]: En pruebas imagine.\n[20/02/2026]: Se continuaron pruebas del flujo y ajustes asociados. Se mantienen pendientes funcionales menores.\n[23/02/2026]: El flujo ya se encuentra desplegado en test y se realizaron pruebas hasta glosa total, incluyendo validación de gestión de glosa. Se identificó pendiente previo (reasignación) que ya fue resuelto. Se planifica generación de más casos de prueba (odontología y auditoría normal) para validación funcional por usuarios.",
     "unit": "Bolivar",
     "detail": "Se requiere poder ajustar el flujo para el tipo de servicio odontología, lo que se busca es que exista una actividad en el  flujo que relacione directamente a un auditor de odontologia  y se asignen las tareas tal como corresponde .\n\nPor lo cual se debe crear una nueva actividad en el flujo tal como se muestra a continuación:  \"Auditor Odontologia\"\n\nUna vez se incluya esta actividad en el flujo se debe realizar la modificación de las reglas de asignación únicamente para el servicio de Odontología , es decir debe estar en el flujo la asignación por montos para este nuevo actor  tal como se evidencia a continuación.\n\nCon esta regla de asignación se busca que todos los casos que sean clasificados del tipo de servicio Odontología , lleguen directamente a la bandeja del auditor odontologico.\n",
     "visible": true,
@@ -2577,11 +2577,11 @@
     "id": "INTERNO-JA036",
     "title": "Validación de informe con respuesta “Glosa”",
     "assigned": "JAIRO",
-    "state": "En Proceso",
-    "progress": 10,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "17/02/2026",
-    "endDate": "",
-    "observations": "[18/02/2026]: Se esta en validación del query porque el informe muestra auditor incorrecto cuando la respuesta es glosa.\n[20/02/2026]; Se confirmó que el análisis está en curso; aún no se identifica la causa exacta en el query. Permanece abierto en etapa de diagnóstico.",
+    "endDate": "20/02/2026",
+    "observations": "[18/02/2026]: Se esta en validación del query porque el informe muestra auditor incorrecto cuando la respuesta es glosa.\n[20/02/2026]; Se confirmó que el análisis está en curso; aún no se identifica la causa exacta en el query. Permanece abierto en etapa de diagnóstico.\n[23/02/2026]: El viernes 20 de febrero se corrigió error técnico asociado a actualización sobre objeto en caché que sobrescribía estado en base de datos. Se realizaron actualizaciones históricas hasta abril de 2025. El requerimiento se considera resuelto a nivel técnico",
     "unit": "Bolivar",
     "detail": "El  informe  no está trayendo bien el nombre normal del auditor muestra Imagine. Pero eso solo es cuando la respuesta es Glossa. Lo estoy validando.\n\n",
     "visible": true,
@@ -2589,7 +2589,7 @@
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 4,
-    "produccion": ""
+    "produccion": "20/02/2026"
   },
   {
     "id": "INTERNO-JA037",
@@ -2599,7 +2599,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[18/02/2026]: Actualmente, el avance se concentra en la etapa de entendimiento y planificación, lo que implica. No se reportan aún actividades de desarrollo",
+    "observations": "[18/02/2026]: Actualmente, el avance se concentra en la etapa de entendimiento y planificación, lo que implica. No se reportan aún actividades de desarrollo\n[23/02/2026]: Se mantiene como línea de trabajo prioritaria iniciar hoy.",
     "unit": "Bolivar",
     "detail": "Durante la sesión se indicó que el requerimiento se encuentra en fase inicial, ya que el desarrollo aún no ha comenzado a nivel técnico. Sin embargo, sí existe un enfoque claro de implementación, que consiste en reutilizar como base el flujo y la lógica previamente construidos para el proyecto de Alfa y adaptarlos a las necesidades específicas del cliente Seguros Bolívar.",
     "visible": true,
@@ -2660,7 +2660,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 125,
+    "diasTotalDesarrollo": 126,
     "produccion": ""
   },
   {
@@ -2858,7 +2858,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 92,
+    "diasTotalDesarrollo": 93,
     "produccion": ""
   },
   {
@@ -3254,7 +3254,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "16/05/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 190,
+    "diasTotalDesarrollo": 191,
     "produccion": ""
   },
   {
@@ -3506,7 +3506,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 114,
+    "diasTotalDesarrollo": 115,
     "produccion": ""
   },
   {
@@ -3542,7 +3542,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 107,
+    "diasTotalDesarrollo": 108,
     "produccion": "30/12/2025"
   },
   {
@@ -3614,7 +3614,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 52,
+    "diasTotalDesarrollo": 53,
     "produccion": ""
   },
   {
@@ -3644,6 +3644,24 @@
     "startDate": "19/02/2026",
     "endDate": "19/02/2026",
     "observations": "[19/02/2026]: Se realiza instructivo  y se envia para validación de Liyibet.",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-F019",
+    "title": "Implementación de tarjetas por unidad en tablero de requerimientos ",
+    "assigned": "FABIO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "23/02/2026",
+    "endDate": "23/02/2026",
+    "observations": "[23/02/2026]: Se realizó una modificación en el Tablero de Requerimientos para mejorar la visualización del Resumen Ejecutivo. Anteriormente, esta sección mostraba únicamente 5 indicadores globales en formato de texto plano (Total de Tareas, En Proceso, Pendientes, Finalizadas y Avance Promedio), sin distinción por unidad de negocio.\nCambio realizado:\nSe reemplazó el bloque de texto plano por un sistema de tarjetas visuales, una por cada unidad que registra requerimientos. Cada tarjeta muestra el total de tareas, una barra de avance con el porcentaje promedio, y el desglose de tareas En Proceso, Pendientes y Finalizadas",
     "unit": "Bolivar",
     "detail": "",
     "visible": true,
@@ -3902,7 +3920,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 73,
+    "diasTotalDesarrollo": 74,
     "produccion": ""
   },
   {
@@ -4298,7 +4316,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 123,
+    "diasTotalDesarrollo": 124,
     "produccion": ""
   },
   {
@@ -4316,7 +4334,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 100,
+    "diasTotalDesarrollo": 101,
     "produccion": ""
   },
   {
@@ -4694,7 +4712,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 63,
+    "diasTotalDesarrollo": 64,
     "produccion": ""
   },
   {
@@ -5800,28 +5818,46 @@
     "title": "Migracion  de correspondencia Alfa",
     "assigned": "DANILO",
     "state": "En Proceso",
-    "progress": 30,
+    "progress": 40,
     "startDate": "12/02/2026",
     "endDate": "",
-    "observations": "[13/02/2026]: Se continúa el proceso de entendimiento y estabilización del sistema existente, Se montó la estructura inicial de base de datos y se logró levantar parcialmente la aplicación para poder analizar su funcionamiento. El trabajo actual está enfocado en Documentación del sistema, Revisión del sitio anterior y preparación para migración\n[18/02/2026]: Actividad en desarrollo; se continúa trabajo y se podrán mostrar avances la próxima semana sin fecha final definida\n[20/02/2026]:El avance se ha visto impactado por replanteamientos en el enfoque de la migración. El trabajo continúa activo y concentrado en este frente como actividad principal.",
+    "observations": "[13/02/2026]: Se continúa el proceso de entendimiento y estabilización del sistema existente, Se montó la estructura inicial de base de datos y se logró levantar parcialmente la aplicación para poder analizar su funcionamiento. El trabajo actual está enfocado en Documentación del sistema, Revisión del sitio anterior y preparación para migración\n[18/02/2026]: Actividad en desarrollo; se continúa trabajo y se podrán mostrar avances la próxima semana sin fecha final definida\n[20/02/2026]:El avance se ha visto impactado por replanteamientos en el enfoque de la migración. El trabajo continúa activo y concentrado en este frente como actividad principal.\n[23/02/2026]: El trabajo se está realizando de forma incremental, construyendo previamente componentes necesarios (roles, tipologías, áreas) conforme se requieren para la migración. Se prevé presentación de avances en el transcurso de la semana.",
     "unit": "Bolivar",
     "detail": "Realizar el levantamiento, análisis y estabilización del Sistema de Correspondencia Alfa con el fin de documentar su funcionamiento actual, identificar dependencias técnicas y preparar la base para su migración o evolución. El requerimiento busca asegurar que la aplicación pueda operar de manera controlada y que exista claridad sobre su arquitectura, módulos y flujos antes de definir los siguientes pasos de mejora o reemplazo.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 7,
+    "diasTotalDesarrollo": 8,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D028",
+    "title": "Migración y creación de nueva instancia en Snapchat para el ambiente de desarrollo",
+    "assigned": "DANILO",
+    "state": "En Proceso",
+    "progress": 90,
+    "startDate": "31/10/2025",
+    "endDate": "",
+    "observations": "[31/10/2025]: Se  reporta  en el  ticket  MDSB-921872 error en el arranque de la estancia de dev , y Se propone crear la instancia de DEV a partir de la de test, aprovechando su estabilidad y evitando reprocesos de instalación.\"\n[04/11/2025]: Informan que no se puede copiar la instancia i-0656b5dc31eab8a8d porque al hacerlo se dañan los paquetes de Python y la instancia no inicia. Se sugiere hacer los ajustes directamente en la instancia imaginen_imaginez_5_dev y solicitar una copia antes de realizar cambios que puedan afectarla.\n[05/11/2025]: Informan que cuando  se tengan lista la instancia con todo instalado, se les informa para crear la Imagen.\n[07/11/2025]: La instancia no se logró levantar por conflictos con ejecuciones de Python. Se debe reinstalar y configurar nuevamente el ambiente, estimado en dos días.\n[24/11/2025]: Instancia entregada y funcional. Pendiente iniciar instalación de paquetes y configuración para que las aplicaciones operen correctamente. Se deja en pausa hasta que se revise y retome.\n[26/11/2025]: La instancia ya está desplegada, pero el proceso está en pausa a la espera de instalar paquetes, configurar dependencias y habilitar la ejecución de scripts.\n[03/12/2025]: Se retomará el orden del ambiente de Desarrollo, para separar adecuadamente los ambientes Desarrollo, Pruebas y Producción, evitando la mezcla actual. El objetivo es reorganizar el flujo de despliegues.\n[05/12/2025]: Se reinstaló desde cero el ambiente de desarrollo, se instalaron librerías necesarias y se clonaron todos los repositorios. Sin embargo, el DNS aún apunta a una instancia anterior, lo que impide visualizar logs externos por CloudFront. Se radicará un ticket para que infraestructura actualice la asociación del DNS. También se organizarán las ramas, ya que DEV está desactualizada y se alineará con TEST según lo acordado.\n[10/12/2025]: El trabajo en el ambiente de desarrollo continúa bloqueado por falta de actualización del DNS. El ticket MDSB-942275 fue radicado desde el viernes 5 de diciembre y aún no ha sido atendido. Una vez se habilite el dominio correcto, se terminará la estabilización del entorno.\n[17/12/2025]: El montaje del ambiente de desarrollo estuvo bloqueado debido a que los dominios apuntaban a un balanceador incorrecto. Inicialmente, infraestructura entregó solo un formato genérico, pero tras un nuevo reporte el problema fue corregido. El ambiente ya permite continuar con la migración y creación, aunque actualmente no se considera prioridad inmediata frente a otros frentes activos. queda en pausa.\n[18/12/2025]: Se avanzó en la preparación del ambiente de desarrollo, actualmente se presenta bloqueo porque los subdominios de Desarrollo continúan apuntando al CloudFront del DNS anterior. El caso está radicado en el ticket MDSB-942275.\n[19/12/2025]: El ambiente de desarrollo ya se encuentra creado y funcional. Quedan pendientes ajustes finales menores, los cuales no se han priorizado debido a que el enfoque actual del equipo está en el requerimiento de Incapacidades de Colmena.\n[20/02/2026]: Se retoma esta actividad  para realizar la¡os ajustes finales y dejar el ambiente de desarrollo funcional, se estima finalizar esta actividad para el  viernes 27 de febrero.",
+    "unit": "Bolivar",
+    "detail": "Descripción:\n\nComo equipo de desarrollo, se requiere reactivar y normalizar el ambiente de desarrollo (Dev), actualmente fuera de servicio por error 503, con el fin de disponer de un entorno funcional, estable y sincronizado con el ambiente de test.\n\nEste ambiente permitirá realizar pruebas internas, validar integraciones y revisar nuevos desarrollos antes de su despliegue en test, evitando depender de la ejecución de controles de cambio para validaciones iniciales.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 80,
+    "fechaEstimadaEntrega": "27/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 76,
     "produccion": ""
   },
   {
     "id": "INTERNO-D043",
     "title": "Construcción de dataset para entrenamiento (modelo incapacidades Colmena)",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 95,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "12/02/2026",
     "endDate": "17/02/2026",
-    "observations": "[13/02/2026]: Se encuentra construyendo   un dataset aproximado de 5.000 registros, ejecutando el proceso de forma progresiva para evitar impacto en el servidor.\n[17/02/2026]: Hoy  se entregara a Jhon el datasept\n[18/02/2026]; Dataset construido con la información disponible y pendiente validación con John para la entrega.\n[20/02/2026]: El dataset ya fue finalizado técnicamente. Queda pendiente la comunicación con el solicitante para confirmar su uso o entrega formal, por lo que el requerimiento está listo a nivel técnico pero abierto a nivel funcional.",
+    "observations": "[13/02/2026]: Se encuentra construyendo   un dataset aproximado de 5.000 registros, ejecutando el proceso de forma progresiva para evitar impacto en el servidor.\n[17/02/2026]: Hoy  se entregara a Jhon el datasept\n[18/02/2026]; Dataset construido con la información disponible y pendiente validación con John para la entrega.\n[20/02/2026]: El dataset ya fue finalizado técnicamente. Queda pendiente la comunicación con el solicitante para confirmar su uso o entrega formal, por lo que el requerimiento está listo a nivel técnico pero abierto a nivel funcional.\n[23/02/2026]: Actividad puntual pendiente de coordinación. No corresponde a desarrollo técnico sino a gestión de entrega, por tal motivo se da como cerrado el req.",
     "unit": "Bolivar",
     "detail": "Construir un dataset estructurado para Colmena a partir de registros y documentos de incapacidades con el fin de entrenar y mejorar el desempeño del modelo de procesamiento y clasificación, garantizando mayor precisión en la extracción y análisis de la información.",
     "visible": true,
@@ -5864,7 +5900,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 14,
+    "diasTotalDesarrollo": 15,
     "produccion": ""
   },
   {
@@ -5900,7 +5936,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 35,
+    "diasTotalDesarrollo": 36,
     "produccion": ""
   },
   {
@@ -5918,25 +5954,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 198,
-    "produccion": ""
-  },
-  {
-    "id": "INTERNO-D028",
-    "title": "Migración y creación de nueva instancia en Snapchat para el ambiente de desarrollo",
-    "assigned": "DANILO",
-    "state": "Pausado",
-    "progress": 90,
-    "startDate": "31/10/2025",
-    "endDate": "",
-    "observations": "[31/10/2025]: Se  reporta  en el  ticket  MDSB-921872 error en el arranque de la estancia de dev , y Se propone crear la instancia de DEV a partir de la de test, aprovechando su estabilidad y evitando reprocesos de instalación.\"\n[04/11/2025]: Informan que no se puede copiar la instancia i-0656b5dc31eab8a8d porque al hacerlo se dañan los paquetes de Python y la instancia no inicia. Se sugiere hacer los ajustes directamente en la instancia imaginen_imaginez_5_dev y solicitar una copia antes de realizar cambios que puedan afectarla.\n[05/11/2025]: Informan que cuando  se tengan lista la instancia con todo instalado, se les informa para crear la Imagen.\n[07/11/2025]: La instancia no se logró levantar por conflictos con ejecuciones de Python. Se debe reinstalar y configurar nuevamente el ambiente, estimado en dos días.\n[24/11/2025]: Instancia entregada y funcional. Pendiente iniciar instalación de paquetes y configuración para que las aplicaciones operen correctamente. Se deja en pausa hasta que se revise y retome.\n[26/11/2025]: La instancia ya está desplegada, pero el proceso está en pausa a la espera de instalar paquetes, configurar dependencias y habilitar la ejecución de scripts.\n[03/12/2025]: Se retomará el orden del ambiente de Desarrollo, para separar adecuadamente los ambientes Desarrollo, Pruebas y Producción, evitando la mezcla actual. El objetivo es reorganizar el flujo de despliegues.\n[05/12/2025]: Se reinstaló desde cero el ambiente de desarrollo, se instalaron librerías necesarias y se clonaron todos los repositorios. Sin embargo, el DNS aún apunta a una instancia anterior, lo que impide visualizar logs externos por CloudFront. Se radicará un ticket para que infraestructura actualice la asociación del DNS. También se organizarán las ramas, ya que DEV está desactualizada y se alineará con TEST según lo acordado.\n[10/12/2025]: El trabajo en el ambiente de desarrollo continúa bloqueado por falta de actualización del DNS. El ticket MDSB-942275 fue radicado desde el viernes 5 de diciembre y aún no ha sido atendido. Una vez se habilite el dominio correcto, se terminará la estabilización del entorno.\n[17/12/2025]: El montaje del ambiente de desarrollo estuvo bloqueado debido a que los dominios apuntaban a un balanceador incorrecto. Inicialmente, infraestructura entregó solo un formato genérico, pero tras un nuevo reporte el problema fue corregido. El ambiente ya permite continuar con la migración y creación, aunque actualmente no se considera prioridad inmediata frente a otros frentes activos. queda en pausa.\n[18/12/2025]: Se avanzó en la preparación del ambiente de desarrollo, actualmente se presenta bloqueo porque los subdominios de Desarrollo continúan apuntando al CloudFront del DNS anterior. El caso está radicado en el ticket MDSB-942275.\n[19/12/2025]: El ambiente de desarrollo ya se encuentra creado y funcional. Quedan pendientes ajustes finales menores, los cuales no se han priorizado debido a que el enfoque actual del equipo está en el requerimiento de Incapacidades de Colmena.",
-    "unit": "Bolivar",
-    "detail": "Descripción:\n\nComo equipo de desarrollo, se requiere reactivar y normalizar el ambiente de desarrollo (Dev), actualmente fuera de servicio por error 503, con el fin de disponer de un entorno funcional, estable y sincronizado con el ambiente de test.\n\nEste ambiente permitirá realizar pruebas internas, validar integraciones y revisar nuevos desarrollos antes de su despliegue en test, evitando depender de la ejecución de controles de cambio para validaciones iniciales.",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 75,
+    "diasTotalDesarrollo": 199,
     "produccion": ""
   },
   {
@@ -5996,20 +6014,20 @@
   {
     "id": "GD772-166",
     "title": "Encolamiento descarga masiva recobros",
-    "assigned": "POR ASIGNAR",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[21/01/2026]: El proceso continúa operando de forma manual mientras se resuelve la limitación de capacidad de la máquina. No se evidencian nuevos cambios frente a lo ya acordado. Se mantiene la entrega manual a demanda y la espera para retomar el desarrollo de la mejora.",
+    "assigned": "JESUS",
+    "state": "En Proceso",
+    "progress": 98,
+    "startDate": "23/02/2026",
+    "endDate": "23/02/2026",
+    "observations": "[21/01/2026]: El proceso continúa operando de forma manual mientras se resuelve la limitación de capacidad de la máquina. No se evidencian nuevos cambios frente a lo ya acordado. Se mantiene la entrega manual a demanda y la espera para retomar el desarrollo de la mejora.\n[23/02/2026]: se Inicia desarrollo \nSe finaliza ajuste y de despliega en producción  para  realizar prueba controlada.",
     "unit": "Bolivar",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
+    "detail": "Se debe implementar una funcionalidad que permita que, al momento en que el usuario presione la opción Descargar en el módulo de recobros, el sistema realice automáticamente la firma del archivo generado por apache  y entregue la descarga del archivo ya firmado mediante una URL temporal.\n\nEl objetivo es eliminar el proceso manual actual de firma y transferencia, optimizando los tiempos de descarga, especialmente para archivos de gran tamaño, y garantizando un flujo automático y transparente para el usuario.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "23/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
-    "produccion": ""
+    "diasTotalDesarrollo": 1,
+    "produccion": "23/02/2026"
   },
   {
     "id": "GD772-181",
@@ -6116,7 +6134,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 44,
+    "diasTotalDesarrollo": 45,
     "produccion": ""
   },
   {
