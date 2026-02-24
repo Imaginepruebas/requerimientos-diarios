@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32894,
+    "diasTotalDesarrollo": 32896,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 184,
+    "diasTotalDesarrollo": 186,
     "produccion": "30/05/2025"
   },
   {
@@ -374,7 +374,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 112,
+    "diasTotalDesarrollo": 114,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 119,
+    "diasTotalDesarrollo": 121,
     "produccion": ""
   },
   {
@@ -442,7 +442,7 @@
     "observations": "",
     "unit": "Colmedica",
     "detail": "Opción para marcación de soportes de las afiliaciones PBS, ya algunas se pueden pre-marcar dado la entrega de la data, y otras que si requerirán de validación del usuario y alguna captura adicional para la completa identificación.",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
@@ -471,8 +471,8 @@
     "id": "315",
     "title": "Afiliaciones PRE - Reporte de Sarlaf Solicitudes en Lista",
     "assigned": "JHON",
-    "state": "En Proceso",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "23/09/2025",
     "endDate": "",
     "observations": "[24/09/2024] Se realiza validacion de tablas base de datos y creacion del archivo .xlsx\n[25/09/2024] S e realiza ajuste para el envio de correos",
@@ -482,7 +482,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "25/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 102,
+    "diasTotalDesarrollo": 104,
     "produccion": ""
   },
   {
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 94,
+    "diasTotalDesarrollo": 96,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "10/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 95,
+    "diasTotalDesarrollo": 97,
     "produccion": "10/10/2025"
   },
   {
@@ -626,7 +626,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 71,
+    "diasTotalDesarrollo": 73,
     "produccion": "14/11/2025"
   },
   {
@@ -644,7 +644,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "10/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 75,
+    "diasTotalDesarrollo": 77,
     "produccion": "10/11/2025"
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 72,
+    "diasTotalDesarrollo": 74,
     "produccion": ""
   },
   {
@@ -698,7 +698,7 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 71,
+    "diasTotalDesarrollo": 73,
     "produccion": "20/11/2025"
   },
   {
@@ -716,26 +716,8 @@
     "diasEstimadosDesarrollo": 6,
     "fechaEstimadaEntrega": "14/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 71,
+    "diasTotalDesarrollo": 73,
     "produccion": "20/11/2025"
-  },
-  {
-    "id": "OPT_22",
-    "title": "Comercial - Error al guardar observación en el Reingreso",
-    "assigned": "JENNIFER",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
-    "unit": "Colmedica",
-    "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32894,
-    "produccion": ""
   },
   {
     "id": "OPT_23",
@@ -752,7 +734,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "20/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 63,
+    "diasTotalDesarrollo": 65,
     "produccion": "20/11/2025"
   },
   {
@@ -824,7 +806,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32894,
+    "diasTotalDesarrollo": 32896,
     "produccion": ""
   },
   {
@@ -842,7 +824,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32894,
+    "diasTotalDesarrollo": 32896,
     "produccion": ""
   },
   {
@@ -860,7 +842,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 32894,
+    "diasTotalDesarrollo": 32896,
     "produccion": ""
   },
   {
@@ -922,17 +904,17 @@
     "title": "Comercial - Modulo de Normalización",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 55,
+    "progress": 80,
     "startDate": "05/02/2026",
     "endDate": "",
     "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2025] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las soliictadas\n[6/02/2025] se inicia con la adición de columnas y la modificación en query para obtener el dato",
     "unit": "Colmedica",
     "detail": "Mejoras al módulo para agilizar la auditoria y revisión de inconsistencias por parte de las Gestoras, ver inforción importante, eliminar datos innecesarios, mejorar ventana para visualización de información",
     "visible": true,
-    "diasEstimadosDesarrollo": 12,
-    "fechaEstimadaEntrega": "20/02/2026",
+    "diasEstimadosDesarrollo": 15,
+    "fechaEstimadaEntrega": "25/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 12,
+    "diasTotalDesarrollo": 14,
     "produccion": ""
   },
   {
@@ -950,7 +932,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "13/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 29,
+    "diasTotalDesarrollo": 31,
     "produccion": "13/01/2026"
   },
   {
@@ -968,26 +950,26 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "14/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 28,
+    "diasTotalDesarrollo": 30,
     "produccion": "14/01/2026"
   },
   {
     "id": "OPT_35",
     "title": "Riesgo Médico - Informe General de Auditoria",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 10,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "11/02/2026",
     "endDate": "",
-    "observations": "[11/02/2026] revisar la generación actual del informe generla del módulo de Riesgo médico, y revisar resultado e identificar posible inconsistencia de duplicados",
+    "observations": "[11/02/2026] revisar la generación actual del informe generla del módulo de Riesgo médico, y revisar resultado e identificar posible inconsistencia de duplicados\n",
     "unit": "Colmedica",
     "detail": "Revisar la generación de la data de seguimiento de la revisión por parte del área médica, e identificar posibles errores en el query o impresión, dado que se evidenciaron registros duplicados",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 8,
-    "produccion": ""
+    "diasTotalDesarrollo": 10,
+    "produccion": "23/02/2026"
   },
   {
     "id": "OPT_36",
@@ -1022,7 +1004,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 6,
+    "diasTotalDesarrollo": 8,
     "produccion": "13/02/2026"
   },
   {
@@ -1058,7 +1040,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "18/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 4,
+    "diasTotalDesarrollo": 6,
     "produccion": "18/02/2026"
   },
   {
@@ -1076,7 +1058,43 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "18/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 5,
     "produccion": "18/02/2026"
+  },
+  {
+    "id": "OPT_41",
+    "title": "Afiliaciones POS - Completar descarga de cartas Derechos y Deberes",
+    "assigned": "JENNIFER",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "OPT_42",
+    "title": "Afiliaciones POS - Consumo Puntual de las afiliaciones",
+    "assigned": "JENNIFER",
+    "state": "",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colmedica",
+    "detail": "",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
   }
 ]

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnóstico de Archivos JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1f77b4;
+        }
+        .file-check {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .found {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        .not-found {
+            background: #ffebee;
+            border-left: 4px solid #e74c3c;
+        }
+        .loading {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+        }
+        .status {
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .status-ok {
+            background: #4caf50;
+            color: white;
+        }
+        .status-error {
+            background: #e74c3c;
+            color: white;
+        }
+        .status-checking {
+            background: #ff9800;
+            color: white;
+        }
+        .summary {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+        button {
+            background: #1f77b4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #1557a0;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Diagnóstico de Archivos JSON</h1>
+        <p>Verificando qué archivos puede encontrar el dashboard...</p>
+        
+        <button onclick="iniciarDiagnostico()">🔄 Iniciar Diagnóstico</button>
+        
+        <div id="resultados"></div>
+        
+        <div id="resumen" style="display:none;" class="summary">
+            <h3>📊 Resumen:</h3>
+            <div id="resumenTexto"></div>
+        </div>
+        
+        <div id="solucion" style="display:none; margin-top:20px; padding:20px; background:#fff3e0; border-radius:8px; border-left:4px solid #ff9800;">
+            <h3>💡 Solución Sugerida:</h3>
+            <div id="solucionTexto"></div>
+        </div>
+    </div>
+
+    <script>
+        const archivosEsperados = [
+            'datos/Bolivar.json',
+            'datos/Proteccion.json',
+            'datos/Alfa.json',
+            'datos/Colmedica.json',
+            'datos/Tuya.json',
+            'datos/Colmena.json',
+            'datos/Colpatria.json'
+        ];
+
+        async function iniciarDiagnostico() {
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = '<h3>Verificando archivos...</h3>';
+            
+            const resultados = [];
+            
+            for (const archivo of archivosEsperados) {
+                const divArchivo = document.createElement('div');
+                divArchivo.className = 'file-check loading';
+                divArchivo.innerHTML = `
+                    <span>${archivo}</span>
+                    <span class="status status-checking">Verificando...</span>
+                `;
+                resultadosDiv.appendChild(divArchivo);
+                
+                try {
+                    const response = await fetch(archivo);
+                    if (response.ok) {
+                        const data = await response.json();
+                        const count = Array.isArray(data) ? data.length : 0;
+                        divArchivo.className = 'file-check found';
+                        divArchivo.innerHTML = `
+                            <span>✅ ${archivo} <small>(${count} requerimientos)</small></span>
+                            <span class="status status-ok">ENCONTRADO</span>
+                        `;
+                        resultados.push({archivo, encontrado: true, count});
+                    } else {
+                        throw new Error('404');
+                    }
+                } catch (error) {
+                    divArchivo.className = 'file-check not-found';
+                    divArchivo.innerHTML = `
+                        <span>❌ ${archivo}</span>
+                        <span class="status status-error">NO ENCONTRADO</span>
+                    `;
+                    resultados.push({archivo, encontrado: false});
+                }
+                
+                // Esperar un poco para no saturar
+                await new Promise(resolve => setTimeout(resolve, 200));
+            }
+            
+            mostrarResumen(resultados);
+        }
+
+        function mostrarResumen(resultados) {
+            const encontrados = resultados.filter(r => r.encontrado);
+            const noEncontrados = resultados.filter(r => !r.encontrado);
+            const totalReqs = encontrados.reduce((sum, r) => sum + (r.count || 0), 0);
+            
+            document.getElementById('resumen').style.display = 'block';
+            document.getElementById('resumenTexto').innerHTML = `
+                <p><strong>Archivos encontrados:</strong> ${encontrados.length} de ${resultados.length}</p>
+                <p><strong>Archivos faltantes:</strong> ${noEncontrados.length}</p>
+                <p><strong>Total requerimientos cargados:</strong> ${totalReqs}</p>
+            `;
+            
+            if (noEncontrados.length > 0) {
+                document.getElementById('solucion').style.display = 'block';
+                
+                const listaFaltantes = noEncontrados.map(r => `<li><code>${r.archivo}</code></li>`).join('');
+                
+                document.getElementById('solucionTexto').innerHTML = `
+                    <p><strong>Los siguientes archivos NO se encontraron:</strong></p>
+                    <ul>${listaFaltantes}</ul>
+                    
+                    <p><strong>Opciones para solucionar:</strong></p>
+                    
+                    <p><strong>OPCIÓN 1:</strong> Si estos archivos no existen, elimínalos del código.</p>
+                    <p>Copia este código y reemplázalo en el dashboard:</p>
+                    <pre>const archivos = [
+    ${encontrados.map(r => `'${r.archivo}'`).join(',\n    ')}
+];</pre>
+                    
+                    <p><strong>OPCIÓN 2:</strong> Si estos archivos SÍ existen pero están en otra carpeta, ajusta la ruta.</p>
+                    <p>Por ejemplo, si están en la misma carpeta que el HTML:</p>
+                    <pre>const archivos = [
+    ${noEncontrados.map(r => `'${r.archivo.split('/').pop()}'  // ← Sin "datos/"`).join(',\n    ')}
+];</pre>
+                    
+                    <p><strong>OPCIÓN 3:</strong> Crea los archivos faltantes en la carpeta <code>datos/</code></p>
+                `;
+            } else {
+                document.getElementById('solucion').style.display = 'block';
+                document.getElementById('solucionTexto').innerHTML = `
+                    <p style="color:#4caf50;"><strong>✅ ¡Perfecto! Todos los archivos fueron encontrados.</strong></p>
+                    <p>El dashboard debería funcionar correctamente con estos datos.</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

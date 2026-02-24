@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 17,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 94,
+    "diasTotalDesarrollo": 98,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "26/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 116,
+    "diasTotalDesarrollo": 120,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 63,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 135,
+    "diasTotalDesarrollo": 139,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 77,
+    "diasTotalDesarrollo": 81,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 23,
     "fechaEstimadaEntrega": "28/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 77,
+    "diasTotalDesarrollo": 81,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 72,
+    "diasTotalDesarrollo": 76,
     "produccion": "30/01/2026"
   },
   {
@@ -907,9 +907,9 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[24/02/2026]: Se esta creando el frontend para el flujo de procesamiento de afiliaciones",
     "unit": "Colpatria",
-    "detail": "",
+    "detail": "Se requiere migrar el modulo de access a web para el procesamiento de afiliaciones",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
@@ -925,9 +925,9 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[24/02/2026]: Se estan creando funcionalidades para automarizar el procesamiento de novedades normales",
     "unit": "Colpatria",
-    "detail": "",
+    "detail": "Se requiere hacer la migracion del modulo de access a web",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
@@ -951,6 +951,42 @@
     "fechaEstimadaEntrega": "18/02/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "COLP26-0018",
+    "title": "Depuracion de Tramites en estado devuelto",
+    "assigned": "FAVER LOPEZ",
+    "state": "En Proceso",
+    "progress": 20,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[24/02/2026]: Se esta realizando la revision de los tramites en edvolucion para determinar como proceder con cada uno",
+    "unit": "Colpatria",
+    "detail": "Se requiere una depuración sobre los tramites en estado de devolución, esto es necesario para poder habilitar las notificaciones de pendientes en devolución que se solicito ajustar por parte del cliente para que se le envie notificación a cada usuario.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "COLP26-0019",
+    "title": "Migrar el Radicador al nuevo aplicativo",
+    "assigned": "FAVER LOPEZ",
+    "state": "En Proceso",
+    "progress": 40,
+    "startDate": "23/02/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Colpatria",
+    "detail": "Se requiere migrar el modulo de radicacion actualmente en PHP al nuevo aplicativo de Imagine",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   }
 ]
