@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "20/07/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 150,
+    "diasTotalDesarrollo": 152,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "01/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 104,
+    "diasTotalDesarrollo": 106,
     "produccion": ""
   },
   {
@@ -1112,7 +1112,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "23/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 24,
+    "diasTotalDesarrollo": 26,
     "produccion": ""
   },
   {
@@ -1353,11 +1353,11 @@
     "id": "Interno-H16-13-2",
     "title": "Adición de modulos que faciliten el proceso de la validación",
     "assigned": "ALEJANDRO",
-    "state": "Pruebas Imagine",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "19/02/2026",
     "endDate": "20/02/2026",
-    "observations": "[19/02/2026] Se habla con Harol para la identificación de cambios que faciliten el trabajo del módulo\n[20/02/2026] Se cargan cambios para la visualización del visor en distintas ventanas, además de el formateo de información para el tipo documental\n[21/02/2026] Se está a la espera de las retroalimentaciones",
+    "observations": "[19/02/2026] Se habla con Harol para la identificación de cambios que faciliten el trabajo del módulo\n[20/02/2026] Se cargan cambios para la visualización del visor en distintas ventanas, además de el formateo de información para el tipo documental\n[21/02/2026] Se está a la espera de las retroalimentaciones\n[24/02/2026] Se realizaron algunos cambios para extraer más datos pero el servicio solo carga hasta cierto punto y se debe revisar si es por alguna sobrecarga. De resto todo parece funcionar correctamente",
     "unit": "Proteccion",
     "detail": "Modificación de módulo de validación filenet",
     "visible": true,
@@ -1366,5 +1366,41 @@
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 2,
     "produccion": "20/02/2026"
+  },
+  {
+    "id": "REQ-24",
+    "title": "Se deben de dar respuesta a la cola de casos abiertos en la plataforma del cliente",
+    "assigned": "ALEJANDRO",
+    "state": "En Proceso",
+    "progress": 60,
+    "startDate": "23/02/2026",
+    "endDate": "",
+    "observations": "[23/02/2026] Se identifica que hay una cola de casos para soporte que se deben de gestionar. Se recibe documnetación para la atención en la plataforma\n[25/02/2026] Hasta el momento se han gestionado alrededor de 40 - 50 casos",
+    "unit": "Proteccion",
+    "detail": "Atención al soporte en plataforma del cliente",
+    "visible": true,
+    "diasEstimadosDesarrollo": 4,
+    "fechaEstimadaEntrega": "26/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
+  },
+  {
+    "id": "REQ-25",
+    "title": "Resultado de una falla lógica se debe de reenviar 1800 casos para finalizar etapa de documentación. Para ello se debe de crear un script que facilite la manualidad",
+    "assigned": "ALEJANDRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "23/02/2026",
+    "endDate": "24/02/2026",
+    "observations": "[25/02/2026] Se realiza la gestión para todos los casos asociados",
+    "unit": "Proteccion",
+    "detail": "Casos con eventos de finalización de documentación no ingresados a IMAGINE",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "24/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": "24/02/2026"
   }
 ]

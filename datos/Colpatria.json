@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 17,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 98,
+    "diasTotalDesarrollo": 99,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "26/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 120,
+    "diasTotalDesarrollo": 121,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 63,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 139,
+    "diasTotalDesarrollo": 140,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 81,
+    "diasTotalDesarrollo": 82,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 23,
     "fechaEstimadaEntrega": "28/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 81,
+    "diasTotalDesarrollo": 82,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 76,
+    "diasTotalDesarrollo": 77,
     "produccion": "30/01/2026"
   },
   {
@@ -904,7 +904,7 @@
     "title": "Migrar Proceso de Afiliaciones Access",
     "assigned": "FAVER LOPEZ",
     "state": "En Proceso",
-    "progress": 0,
+    "progress": 20,
     "startDate": "",
     "endDate": "",
     "observations": "[24/02/2026]: Se esta creando el frontend para el flujo de procesamiento de afiliaciones",
@@ -976,7 +976,7 @@
     "title": "Migrar el Radicador al nuevo aplicativo",
     "assigned": "FAVER LOPEZ",
     "state": "En Proceso",
-    "progress": 40,
+    "progress": 50,
     "startDate": "23/02/2026",
     "endDate": "",
     "observations": "",
@@ -986,7 +986,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 2,
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   }
 ]
