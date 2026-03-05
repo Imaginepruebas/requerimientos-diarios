@@ -7,7 +7,7 @@
     "progress": 90,
     "startDate": "27/02/2025",
     "endDate": "18/03/2025",
-    "observations": "[28/02/2025]: modificó el script para entrenar con lenguaje natural; el modelo propio (basado en Verner) reconoce respuestas rápidas (ej. segunda opinión médica) tras retirar el destilado. Es ligero y responde rápido. Planea ajustar, subir a dev/test y usar una base preentrenada para optimizar.\n[03/03/2025]: El viernes 28  se subieron las modificaciones  a un repositorio, pero aún falta un cambio que planea terminar y desplegar hoy, tras ajustes adicionales que retrasaron el despliegue inicial a dev y test.\n[04/03/2025]: Ajustó el algoritmo del modelo (impresión y entrenamiento) el día anterior, subiendo los cambios al repositorio, pero falta un ajuste en el API para desplegarlo, ya que se alojará en un servidor distinto al de Oficina Virtual por limitaciones de capacidad; espera terminarlo pronto.\n[05/03/2025]: No ha avanzado más en Radicación Express por priorizar el API de Recobros; habló con Jenry sobre cambios adicionales y planea retomarlo tras finalizar el API esta semana.\n\n[06/03/2025]: Trabajó en una modificación para Radicación Express, pero no la finalizó por requerir más cambios; no dio más detalles ni avances significativos.\n[07/03/2025]: Se detiene ya que se dedicara al API de recobros.\n[10/03/2025]: Detenido ya que se encuentra trabajando en la Lectura de incapacidadaes por Python\n[12/03/2025] : Si es posible y se da el espacio en la sesion de presentación del API de recobros se realizara presentación de este requerimiento. \n[14/03/2025]: Ayer se presentó el avance del proyecto al cliente y Se realizó un ajuste en la implementación, cambiando el modelo de multi-language a una versión en español para mejorar el rendimiento. Este cambio impactó parcialmente el entrenamiento, pero se espera recuperar la estabilidad durante la semana.\n[17/03/2025]: El viernes avanzó en Radicación Express, resolviendo problemas menores, y ajustó la lógica para llevar al usuario al segundo o tercer paso tras confirmar; hoy sigue dedicado a esto, ajustando los datos enviados al formulario para finalizar esa parte.\n[18/03/2025]: Terminó la integración del formulario de Radicación Express con autorizaciones médicas, autocompletando datos (ciudad, IPS, médico) si están completos o dejando en el primer paso si no; hoy subirá los cambios tras reunirse con Jenry para validar o ajustar.\n[19/03/2025]:  Desplegó Radicación Express en test, pero enfrentó problemas de capacidad en el servidor para entrenar el modelo (100 registros fallaron); ajustó el entrenamiento a un registro cada 15 minutos, logrando 3-4 ejemplos ayer, y hoy seguirá entrenando y ajustando.\n[20/03/2025]:Verificó el modelo ayer, ajustó un fallo donde Python mataba el proceso a la mitad, y continuó el entrenamiento (pocos ciclos aún); hoy planea alcanzar 100 ciclos con registros diferentes.\n[21/03/2025]: Revisó el entrenamiento del modelo, que ya superó 100 ejemplos sin problemas ayer; hoy seguirá monitoreando y avanzando en el entrenamiento\n[27/03/2025]: El modelo ya se entrenó con los casos previos y reconoce información; hoy buscará tiempo para añadir 200 registros más para entrenar entre hoy y mañana.\n[28/03/2025]: Ayer  no adiocno\n[28/03/2025]: No revisada ayer por falta de tiempo; hoy planea agregar 500 registros para entrenar y retomar el avance.\n[31/03/2025]: El viernes agregó 173 ejemplos más (total 473 casos); el modelo entrena bien, reconoce 4 de 5 casos con léxico colombiano; hoy o mañana terminará esta tanda y planea sumar 500 registros más.\n[01/04/2025]: Ayer insertó nuevos registros para entrenar el modelo esta semana.\n[09/04/2025]:  Entrenado con 800 casos, listo en test para pruebas por Santiago o usuarios; hoy se entregará oficialmente para pruebas por el cliente, con entrenamiento continuo; estiman 8 días para producción si se prioriza. \n[03/09/2025]: Se corrigieron errores recientes y se entregó una nueva versión a Santiago. Se encuentra en proceso de validación,",
+    "observations": "[28/02/2025]: modificó el script para entrenar con lenguaje natural; el modelo propio (basado en Verner) reconoce respuestas rápidas (ej. segunda opinión médica) tras retirar el destilado. Es ligero y responde rápido. Planea ajustar, subir a dev/test y usar una base preentrenada para optimizar.\n[03/03/2025]: El viernes 28  se subieron las modificaciones  a un repositorio, pero aún falta un cambio que planea terminar y desplegar hoy, tras ajustes adicionales que retrasaron el despliegue inicial a dev y test.\n[04/03/2025]: Ajustó el algoritmo del modelo (impresión y entrenamiento) el día anterior, subiendo los cambios al repositorio, pero falta un ajuste en el API para desplegarlo, ya que se alojará en un servidor distinto al de Oficina Virtual por limitaciones de capacidad; espera terminarlo pronto.\n[05/03/2025]: No ha avanzado más en Radicación Express por priorizar el API de Recobros; habló con Jenry sobre cambios adicionales y planea retomarlo tras finalizar el API esta semana.\n\n[06/03/2025]: Trabajó en una modificación para Radicación Express, pero no la finalizó por requerir más cambios; no dio más detalles ni avances significativos.\n[07/03/2025]: Se detiene ya que se dedicara al API de recobros.\n[10/03/2025]: Detenido ya que se encuentra trabajando en la Lectura de incapacidadaes por Python\n[12/03/2025] : Si es posible y se da el espacio en la sesion de presentación del API de recobros se realizara presentación de este requerimiento. \n[14/03/2025]: Ayer se presentó el avance del proyecto al cliente y Se realizó un ajuste en la implementación, cambiando el modelo de multi-language a una versión en español para mejorar el rendimiento. Este cambio impactó parcialmente el entrenamiento, pero se espera recuperar la estabilidad durante la semana.\n[17/03/2025]: El viernes avanzó en Radicación Express, resolviendo problemas menores, y ajustó la lógica para llevar al usuario al segundo o tercer paso tras confirmar; hoy sigue dedicado a esto, ajustando los datos enviados al formulario para finalizar esa parte.\n[18/03/2025]: Terminó la integración del formulario de Radicación Express con autorizaciones médicas, autocompletando datos (ciudad, IPS, médico) si están completos o dejando en el primer paso si no; hoy subirá los cambios tras reunirse con Jenry para validar o ajustar.\n[19/03/2025]:  Desplegó Radicación Express en test, pero enfrentó problemas de capacidad en el servidor para entrenar el modelo (100 registros fallaron); ajustó el entrenamiento a un registro cada 15 minutos, logrando 3-4 ejemplos ayer, y hoy seguirá entrenando y ajustando.\n[20/03/2025]:Verificó el modelo ayer, ajustó un fallo donde Python mataba el proceso a la mitad, y continuó el entrenamiento (pocos ciclos aún); hoy planea alcanzar 100 ciclos con registros diferentes.\n[21/03/2025]: Revisó el entrenamiento del modelo, que ya superó 100 ejemplos sin problemas ayer; hoy seguirá monitoreando y avanzando en el entrenamiento\n[27/03/2025]: El modelo ya se entrenó con los casos previos y reconoce información; hoy buscará tiempo para añadir 200 registros más para entrenar entre hoy y mañana.\n[28/03/2025]: Ayer  no adiocno\n[28/03/2025]: No revisada ayer por falta de tiempo; hoy planea agregar 500 registros para entrenar y retomar el avance.\n[31/03/2025]: El viernes agregó 173 ejemplos más (total 473 casos); el modelo entrena bien, reconoce 4 de 5 casos con léxico colombiano; hoy o mañana terminará esta tanda y planea sumar 500 registros más.\n[01/04/2025]: Ayer insertó nuevos registros para entrenar el modelo esta semana.\n[09/04/2025]:  Entrenado con 800 casos, listo en test para pruebas por Santiago o usuarios; hoy se entregará oficialmente para pruebas por el cliente, con entrenamiento continuo; estiman 8 días para producción si se prioriza. \n[03/09/2025]: Se corrigieron errores recientes y se entregó una nueva versión a Santiago. Se encuentra en proceso de validación,\n[27/02/2026]: Hasta la  fecha no se ha obtenido respuesta del cliente.",
     "unit": "Bolivar",
     "detail": "",
     "visible": false,
@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 223,
+    "diasTotalDesarrollo": 228,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "30/04/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 205,
+    "diasTotalDesarrollo": 210,
     "produccion": ""
   },
   {
@@ -1047,7 +1047,7 @@
     "id": "INTERNO-F016",
     "title": "Implementación  dashboard de cumplimiento en tablero de requerimientos",
     "assigned": "FABIO",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 30,
     "startDate": "17/02/2026",
     "endDate": "",
@@ -1058,7 +1058,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 7,
+    "diasTotalDesarrollo": 12,
     "produccion": ""
   },
   {
@@ -1292,7 +1292,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 150,
+    "diasTotalDesarrollo": 155,
     "produccion": ""
   },
   {
@@ -1587,11 +1587,11 @@
     "id": "GD772-168",
     "title": "Nuevo proceso de incapacidades ARL fase 1",
     "assigned": "JESUS",
-    "state": "En Proceso",
+    "state": "Pruebas Cliente",
     "progress": 70,
     "startDate": "29/12/2025",
     "endDate": "21/01/2026",
-    "observations": "[19/12/2025]: Jesus estima 6 dias de desarrollo\n[22/12/2025]: Se pretende dar comienzo al desarrollo el 29 de Diciembre\n[29/12/2025]: Se plantearon dos alternativas: consumo directo desde Arabel O uso de Python como intermediario. Se acordó evaluar ambas opciones en pruebas para definir la más eficiente y sostenible, considerando mantenibilidad y complejidad operativa.\n[02/01/2025]: Durante la semana se avanzó en pruebas técnicas basadas en los insumos enviados por el sr Hernan (PDFs y prompts). Se realizaron pruebas locales, creación de tablas y validaciones iniciales. El resultado actual no refleja completamente la expectativa del cliente, y se considera que podría requerir un replanteamiento parcial o total. El enfoque actual es experimental y altamente dependiente del uso de prompts, lo que limita el control del desarrollo. Se presentará el avance para recibir definición y lineamientos.\n[05/01/2026]: Despues de realizar algunas pruebas con gerencia el 2 de enero se acuereda el  esarrollo del módulo de incapacidades bajo un enfoque incremental, trabajando requerimiento por requerimiento mediante prompts controlados, validaciones funcionales y reutilización de scripts existentes, priorizando el entendimiento completo del flujo antes de avanzar al siguiente punto, el cual presenta un  avance aproximado del 30%.\n[07/01/2026]: Se encuentra en la implementación de los estilos definidos en el Figma entregados por Jenry.\n[09/01/2026]: Se encuentra en análisis la estrategia técnica para el almacenamiento de logs de consumo de APIs, Se tiene prevista la entrega de una primera parte funcional del desarrollo en el día de hoy.\n[14/01/2026]: Se trabaja en la construcción de la bandeja administrativa solicitada, reemplazando el botón de IA por una funcionalidad que permite visualizar el historial de respuestas del API, adicional   se radica jira MDSB-960532  debido a limitaciones de acceso en el ambiente de pruebas en el consumo del OCR.\n[16/01/2026]: Se desplegó en ambiente de pruebas la segunda consulta de la Fase 2 de incapacidades (lago de datos), incluyendo el comando de ejecución y la vista con secciones diferenciadas. Actualmente está pendiente el almacenamiento de la respuesta para mantener trazabilidad. Se estima la entrega de los demas consumos para el 23 de enero.\n[21/01/2026]: Se subió a ambiente de pruebas (TEST) todo el avance del portal de incapacidades, incluyendo el módulo OCR. Adicionalmente, se inició el desarrollo del tercer consumo del proceso (posterior a Data Lake), evidenciando un avance sostenido. El equipo se declara en ruta para presentar avances consolidados hacia el viernes.\n[26/01/2026]: El viernes 23 de enero se presentaron los avances del proyecto a Jenry y Liyibet. Como resultado de la sesión, quedaron definidos los siguientes ajustes, los cuales se abordarán una vez finalicen las actividades del requerimiento de doble factor de autenticación:\n\n1.Ajustar el campo Tipo de persona que radica para que sea un combo (IPS, empleador, etc.).\n2.Incluir la autorización de tratamiento de datos personales en la primera vista del portal.\n3.Incorporar plantillas de respuesta para los casos.\n4.Mejorar la visual reduciendo la barra de búsqueda en la ventana de gestión.\n5.Cambiar el label del portal por “Empresa”.\n6.Apuntar el API de cuenta al campo Número de empresa.\n7.Agregar el campo Cuenta en la trazabilidad, ubicado sobre el número de radicado Sisalud (trazabilidad estándar de la actividad Radicar IT).\n8.Realizar validaciones utilizando datos de prueba.\n[28/01/2026]: Se escala control de cambios a test MDSB-969303.\nEl OSR de incapacidades fue desplegado inicialmente en TEST, pero debido a bloqueos del ambiente solo funcionó vía Postman. Posteriormente se subió a producción, donde ya opera correctamente. Queda pendiente un ajuste visual menor de renderizado al cargar archivos. Por limitaciones técnicas entre ambientes, actualmente producción está apuntando a APIs de Stage para continuar pruebas, implementando controles (NIT fijo de pruebas) para evitar contaminación de datos reales y reportes. \nControl de cambios ejecutado con exito.\n[30/01/2026]: Se realizaron ajustes técnicos relevantes para mejorar la estabilidad del proceso de lectura de documentos PDF. Inicialmente, el sistema ejecutaba múltiples consultas simultáneas al servicio externo (una por cada archivo cargado), lo que generaba errores de timeout al procesar varios documentos. Para mitigar este comportamiento, se modificó la lógica de ejecución a un esquema secuencial, permitiendo procesar los archivos uno a uno y mostrar resultados progresivos, garantizando que, aunque algún documento falle, el resto del proceso continúe.\nActualmente, el principal bloqueo no corresponde al desarrollo interno, sino a la intermitencia del endpoint externo utilizado para la lectura de PDFs, el cual presenta comportamientos inconsistentes (en algunos momentos responde correctamente y en otros no devuelve resultados, incluso desde Postman). Esta situación ha impedido realizar una demostración estable al cliente.\n[02/02/2026]: Se completó el envío de la plantilla correspondiente al paso de pago, integrando este punto al flujo normal de gestión de incapacidades.\nSe muestra proceso de radicación en el Portal al cliente para que inicie sus pruebas , y se esta al pendiente de la validación del funcionamiento del OCR ya que esta intermitente.\n[24/02/2026]: se envió estimado de incapacidades por minuto para realizar parametrización del OCR. En este momento la tarea está a cargo del cliente.\n[25/02/2026]: Se entregan a Imagine nuevas URLs del API  e imagine debe general algunos ajustes  para que el  cliente  pueda volver a probar.",
+    "observations": "[19/12/2025]: Jesus estima 6 dias de desarrollo\n[22/12/2025]: Se pretende dar comienzo al desarrollo el 29 de Diciembre\n[29/12/2025]: Se plantearon dos alternativas: consumo directo desde Arabel O uso de Python como intermediario. Se acordó evaluar ambas opciones en pruebas para definir la más eficiente y sostenible, considerando mantenibilidad y complejidad operativa.\n[02/01/2025]: Durante la semana se avanzó en pruebas técnicas basadas en los insumos enviados por el sr Hernan (PDFs y prompts). Se realizaron pruebas locales, creación de tablas y validaciones iniciales. El resultado actual no refleja completamente la expectativa del cliente, y se considera que podría requerir un replanteamiento parcial o total. El enfoque actual es experimental y altamente dependiente del uso de prompts, lo que limita el control del desarrollo. Se presentará el avance para recibir definición y lineamientos.\n[05/01/2026]: Despues de realizar algunas pruebas con gerencia el 2 de enero se acuereda el  esarrollo del módulo de incapacidades bajo un enfoque incremental, trabajando requerimiento por requerimiento mediante prompts controlados, validaciones funcionales y reutilización de scripts existentes, priorizando el entendimiento completo del flujo antes de avanzar al siguiente punto, el cual presenta un  avance aproximado del 30%.\n[07/01/2026]: Se encuentra en la implementación de los estilos definidos en el Figma entregados por Jenry.\n[09/01/2026]: Se encuentra en análisis la estrategia técnica para el almacenamiento de logs de consumo de APIs, Se tiene prevista la entrega de una primera parte funcional del desarrollo en el día de hoy.\n[14/01/2026]: Se trabaja en la construcción de la bandeja administrativa solicitada, reemplazando el botón de IA por una funcionalidad que permite visualizar el historial de respuestas del API, adicional   se radica jira MDSB-960532  debido a limitaciones de acceso en el ambiente de pruebas en el consumo del OCR.\n[16/01/2026]: Se desplegó en ambiente de pruebas la segunda consulta de la Fase 2 de incapacidades (lago de datos), incluyendo el comando de ejecución y la vista con secciones diferenciadas. Actualmente está pendiente el almacenamiento de la respuesta para mantener trazabilidad. Se estima la entrega de los demas consumos para el 23 de enero.\n[21/01/2026]: Se subió a ambiente de pruebas (TEST) todo el avance del portal de incapacidades, incluyendo el módulo OCR. Adicionalmente, se inició el desarrollo del tercer consumo del proceso (posterior a Data Lake), evidenciando un avance sostenido. El equipo se declara en ruta para presentar avances consolidados hacia el viernes.\n[26/01/2026]: El viernes 23 de enero se presentaron los avances del proyecto a Jenry y Liyibet. Como resultado de la sesión, quedaron definidos los siguientes ajustes, los cuales se abordarán una vez finalicen las actividades del requerimiento de doble factor de autenticación:\n\n1.Ajustar el campo Tipo de persona que radica para que sea un combo (IPS, empleador, etc.).\n2.Incluir la autorización de tratamiento de datos personales en la primera vista del portal.\n3.Incorporar plantillas de respuesta para los casos.\n4.Mejorar la visual reduciendo la barra de búsqueda en la ventana de gestión.\n5.Cambiar el label del portal por “Empresa”.\n6.Apuntar el API de cuenta al campo Número de empresa.\n7.Agregar el campo Cuenta en la trazabilidad, ubicado sobre el número de radicado Sisalud (trazabilidad estándar de la actividad Radicar IT).\n8.Realizar validaciones utilizando datos de prueba.\n[28/01/2026]: Se escala control de cambios a test MDSB-969303.\nEl OSR de incapacidades fue desplegado inicialmente en TEST, pero debido a bloqueos del ambiente solo funcionó vía Postman. Posteriormente se subió a producción, donde ya opera correctamente. Queda pendiente un ajuste visual menor de renderizado al cargar archivos. Por limitaciones técnicas entre ambientes, actualmente producción está apuntando a APIs de Stage para continuar pruebas, implementando controles (NIT fijo de pruebas) para evitar contaminación de datos reales y reportes. \nControl de cambios ejecutado con exito.\n[30/01/2026]: Se realizaron ajustes técnicos relevantes para mejorar la estabilidad del proceso de lectura de documentos PDF. Inicialmente, el sistema ejecutaba múltiples consultas simultáneas al servicio externo (una por cada archivo cargado), lo que generaba errores de timeout al procesar varios documentos. Para mitigar este comportamiento, se modificó la lógica de ejecución a un esquema secuencial, permitiendo procesar los archivos uno a uno y mostrar resultados progresivos, garantizando que, aunque algún documento falle, el resto del proceso continúe.\nActualmente, el principal bloqueo no corresponde al desarrollo interno, sino a la intermitencia del endpoint externo utilizado para la lectura de PDFs, el cual presenta comportamientos inconsistentes (en algunos momentos responde correctamente y en otros no devuelve resultados, incluso desde Postman). Esta situación ha impedido realizar una demostración estable al cliente.\n[02/02/2026]: Se completó el envío de la plantilla correspondiente al paso de pago, integrando este punto al flujo normal de gestión de incapacidades.\nSe muestra proceso de radicación en el Portal al cliente para que inicie sus pruebas , y se esta al pendiente de la validación del funcionamiento del OCR ya que esta intermitente.\n[24/02/2026]: se envió estimado de incapacidades por minuto para realizar parametrización del OCR. En este momento la tarea está a cargo del cliente.\n[25/02/2026]: Se entregan a Imagine nuevas URLs del API  e imagine debe general algunos ajustes  para que el  cliente  pueda volver a probar.\n[27/02/2026]: El 26 de febrero quedan los  ajustes  solicitados, OCR esta funcionando en test y produccion",
     "unit": "Bolivar",
     "detail": "Orquestador de Incapacidades\nObjetivo\n\nAutomatizar el flujo completo de radicación, validación, liquidación y confirmación de incapacidades en el entorno ARL, integrando los sistemas IMAGINE, TRONADOR y SISALUD ARL mediante un orquestador de procesos, reduciendo la intervención manual y los errores operativos.\n\nAlcance\n\nEl desarrollo contempla:\n\nAutomatización de las etapas del proceso de incapacidades desde la radicación hasta la confirmación del giro de pago.\n\nIntegración de servicios y APIs entre IMAGINE, TRONADOR y SISALUD ARL.\n\nImplementación de validaciones automáticas de negocio y reglas parametrizables.\n\nGeneración de trazabilidad de cada fase dentro del flujo en IMAGINE.\n\nComunicación automática con el cliente final según resultado del proceso.\n\nDescripción funcional\n1. Registro de incapacidad\n\nEl cliente accede al portal de ARL y registra la incapacidad en IMAGINE.\n\nSe adjunta el soporte documental (PDF o imagen).\n\nSe invoca un servicio de OCR que extrae variables clave del documento.\n\nLos datos radicados se complementan automáticamente y se genera confirmación de radicación.\n\nSe consulta el API de TRON para precargar datos de cuenta. Si no están actualizados, se permite su actualización en línea.\n\n2. Análisis automático\n\nEl orquestador ejecuta reglas de validación para revisar consistencia y completitud de datos.\n\nSi se detectan errores o excepciones, IMAGINE asigna el caso al analista correspondiente.\n\nNo requiere intervención manual estándar.\n\n3. Radicación en SISALUD ARL\n\nEl orquestador identifica radicaciones en IMAGINE pendientes de procesamiento.\n\nConsulta datos de póliza desde TRONADOR y SISALUD ARL.\n\nEjecuta validaciones de negocio y registra automáticamente la incapacidad en SISALUD ARL.\n\nDevuelve el resultado a IMAGINE, actualizando el estado del flujo.\n\n4. Liquidación\n\nEl sistema consulta datos desde el lago de datos y aplica reglas de liquidación.\n\nSi el monto supera un parámetro configurado, el orquestador deriva el caso para revisión humana.\n\nReglas principales:\n\nValidar por número de cédula si la última novedad laboral es retiro previo a la incapacidad → liquidar por flujo manual.\n\nSi el siniestro presenta marca de fallo judicial, asignar automáticamente el caso al analista correspondiente.\n\n5. Confirmación de pago\n\nMediante un API de validación, se confirma la creación y ejecución de órdenes de pago en SISALUD ARL.\n\nSi la transacción es exitosa → IMAGINE notifica al cliente.\n\nSi presenta error → IMAGINE notifica la incidencia y genera tareas pendientes para el analista.\n\nIntegraciones\n\nIMAGINE: punto central del flujo, gestión documental y trazabilidad.\n\nTRONADOR: consulta de pólizas y datos de terceros.\n\nSISALUD ARL: radicación, liquidación y generación de órdenes de pago.\n\nOCR Service: lectura y extracción de datos del soporte de incapacidad.\n\nOrquestador de procesos: componente central de automatización e integración.\n\nParámetros configurables\n\nMonto máximo para liquidación automática.\n\nReglas de validación de negocio.\n\nReintentos y tiempos de espera para cada API.\n\nMensajes automáticos de notificación al cliente.\n\nBeneficios esperados\n\nReducción significativa del tiempo de gestión de incapacidades.\n\nEliminación de reprocesos manuales y errores de digitación.\n\nMejora en la trazabilidad y control del proceso.\n\nOptimización de la experiencia del cliente final.",
     "visible": true,
@@ -1599,6 +1599,24 @@
     "fechaEstimadaEntrega": "09/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 16,
+    "produccion": ""
+  },
+  {
+    "id": "GD772-168_3",
+    "title": "Mejora OCR Incapacidades — formulario manual",
+    "assigned": "JESUS",
+    "state": "En Test",
+    "progress": 90,
+    "startDate": "02/03/2026",
+    "endDate": "03/03/2026",
+    "observations": "[04/03/2026]: Se desarrolló un formulario completo para ingreso manual cuando falla el OCR, evitando redireccionar al sistema antiguo.\nEl flujo continúa normalmente después del ingreso manual.\nSe encuentra en ambiente de test pendiente validación final antes de producción.",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
@@ -1735,32 +1753,50 @@
     "progress": 90,
     "startDate": "04/02/2026",
     "endDate": "",
-    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.\n[06/02/2026]: Se completó la conexión con las variables de entorno y se habilitó el API de login en local. Se garantizó que el token de seguridad mantenga la misma persistencia de sesión que el sistema de Bolívar \n[09/02/2026]: Se avanzó significativamente en el desarrollo inicial del nuevo aplicativo. Ya se cuenta con login funcional (100%) y panel administrativo operativo, incluyendo menú lateral. Se inició la construcción del módulo de consulta de casos, con visualización de detalle similar al Nativo actual para reducir impacto visual al usuario. El avance de este frente se estima alrededor del 30% en la etapa de ingreso y consulta; el siguiente paso es completar la gestión del caso para poder presentar un flujo completo al cliente en el corto plazo.\n[11/02/2026]: Actualmente ya se encuentra funcional la Consulta de caso real, Visualización de información básica del caso y Visualización de trazabilidad. Se comenzara a trabajar en la fase de gestión del caso.\n[13/02/2026]: El avance se encuentra en fase de construcción de vistas y endpoints base.\n[17/02/2026]: Se esta  terminando la consulta general y  se pretende  iniciar la migración de  masivos\n[18/02/2026]: Consulta general desarrollada para mostrar más datos; falta implementar completamente la lógica por roles, e iniciara la renovacion de masivos\n[20/02/2026]: El desarrollo del flujo completo de masivos (incluyendo envío de correo) fue finalizado en ambiente local. Pendiente ejecución de pruebas integrales para la presentación.\nLa consulta fue implementada enfocada en la sección principal de casos. La gestión se considera funcional para demo, quedando ampliaciones por roles y otros módulos para fases posteriores.\n[23/02/2026]: La funcionalidad está construida y se continuará hoy con ajustes. El envio masivo está prácticamente finalizado, faltando pruebas con múltiples tipologías en local.\n[25/02/2026]: Ha realizado pruebas en local de 11 tipologías de un total de 28, debe  actualizar tablas de trazabilidad en el ambiente local.",
+    "observations": "[04/02/2026]: Se encuentra en fase de levantamiento de alcance, definición de módulos principales (radicación, gestión, roles, consulta y reportería) y programación de sesiones adicionales para aterrizar reglas de negocio y priorización de funcionalidades.\n[06/02/2026]: Se completó la conexión con las variables de entorno y se habilitó el API de login en local. Se garantizó que el token de seguridad mantenga la misma persistencia de sesión que el sistema de Bolívar \n[09/02/2026]: Se avanzó significativamente en el desarrollo inicial del nuevo aplicativo. Ya se cuenta con login funcional (100%) y panel administrativo operativo, incluyendo menú lateral. Se inició la construcción del módulo de consulta de casos, con visualización de detalle similar al Nativo actual para reducir impacto visual al usuario. El avance de este frente se estima alrededor del 30% en la etapa de ingreso y consulta; el siguiente paso es completar la gestión del caso para poder presentar un flujo completo al cliente en el corto plazo.\n[11/02/2026]: Actualmente ya se encuentra funcional la Consulta de caso real, Visualización de información básica del caso y Visualización de trazabilidad. Se comenzara a trabajar en la fase de gestión del caso.\n[13/02/2026]: El avance se encuentra en fase de construcción de vistas y endpoints base.\n[17/02/2026]: Se esta  terminando la consulta general y  se pretende  iniciar la migración de  masivos\n[18/02/2026]: Consulta general desarrollada para mostrar más datos; falta implementar completamente la lógica por roles, e iniciara la renovacion de masivos\n[20/02/2026]: El desarrollo del flujo completo de masivos (incluyendo envío de correo) fue finalizado en ambiente local. Pendiente ejecución de pruebas integrales para la presentación.\nLa consulta fue implementada enfocada en la sección principal de casos. La gestión se considera funcional para demo, quedando ampliaciones por roles y otros módulos para fases posteriores.\n[23/02/2026]: La funcionalidad está construida y se continuará hoy con ajustes. El envio masivo está prácticamente finalizado, faltando pruebas con múltiples tipologías en local.\n[25/02/2026]: Ha realizado pruebas en local de 11 tipologías de un total de 28, debe  actualizar tablas de trazabilidad en el ambiente local.\n[27/02/2026]: El 26 de febrero se finalizan las pruebas de masivos en local, se iniciara  la creacion del docker  para subir el nuevo nativo a test ",
     "unit": "Bolivar",
     "detail": "Diseñar y desarrollar un nuevo aplicativo que reemplace progresivamente la solución actual Nativo, con el objetivo de contar con una plataforma unificada, flexible y mantenible que permita gestionar de punta a punta los procesos operativos: creación de casos desde los portales, gestión interna, asignación por roles, seguimiento, consultas y generación de reportes.\n\nEl nuevo aplicativo debe cubrir el flujo completo del negocio, desde la radicación inicial hasta el cierre del caso, incorporando controles de trazabilidad, perfiles de usuario y visualización de información consolidada, eliminando las limitaciones técnicas y funcionales del sistema actual.\n\nAlcance inicial (MVP):\n\nCreación y radicación de casos desde portales.\n\nMódulo de gestión interna de casos.\n\nAsignación por roles y perfiles (administrador, gestor, consulta).\n\nBandejas de trabajo y estados del caso.\n\nConsulta y trazabilidad del proceso.\n\nMódulo básico de reportes.\n\nInterfaz moderna (uso de Tailwind).\n\nObjetivo:\nContar con un producto funcional de punta a punta que permita demostrar el flujo completo al cliente, sirviendo como base para la evolución progresiva del sistema y la migración controlada desde Nativo.",
     "visible": true,
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "13/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 16,
+    "diasTotalDesarrollo": 21,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-JE031_2",
+    "title": "Creacion docker para Nuevo Nativo en  dev y test ",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "27/02/2026",
+    "endDate": "27/02/2026",
+    "observations": "[27/02/2026]: Se inicia  creacion del docker  para subir el nuevos Nativo a test con Danilo.\n[02/03/2026]: Se construyó un nuevo contenedor con Nginx para centralizar el acceso a los servicios. Se resolvieron errores de compilación en frontend (TypeScript) y se logró ejecutar en local con una única URL simulando el entorno productivo.\nPendiente subir a repositorio y continuar con despliegue en ambiente de desarrollo.\n[04/03/2026]: Se consolidó backend y frontend en un solo repositorio.\nEl contenedor funciona correctamente en local. Al pendiente  que Danilo finalice la configuracion de la estancia de desarrollo  para subir y realizar pruebas.",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "27/02/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
     "id": "INTERNO-JE031_1",
-    "title": "Actualizacion Nativo-  Separación ARL / Salud",
+    "title": "Actualizacion Nativo-  Migracion vista  Workflow Radicación",
     "assigned": "JESUS",
-    "state": "Pendiente",
+    "state": "En Proceso",
     "progress": 0,
-    "startDate": "",
+    "startDate": "03/03/2026",
     "endDate": "",
-    "observations": "",
+    "observations": "[04/03/2026]: Se inició formalmente la migración de la vista Workflow Radicación dentro del proceso de renovación del aplicativo Nativo",
     "unit": "Bolivar",
-    "detail": "Se definió el diseño de navegación para separar ARL y Salud mediante pestañas dinámicas visibles según los negocios habilitados al usuario. Este ajuste queda planteado para ejecutarse una vez finalizada la consulta y gestión básica del caso.",
-    "visible": false,
+    "detail": "migración de la vista “Workflow Radicación”, incluyendo mejora visual en Administración de Tipologías para hacer más comprensible la estructura y relaciones.",
+    "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
@@ -1904,13 +1940,13 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 1,
+    "diasTotalDesarrollo": 6,
     "produccion": ""
   },
   {
     "id": "GD772-204",
     "title": "Incluir en la lectura IA la tipología renovación autorizaciones salud",
-    "assigned": "JESUS",
+    "assigned": "DANILO",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -1976,7 +2012,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 146,
+    "diasTotalDesarrollo": 151,
     "produccion": ""
   },
   {
@@ -2174,7 +2210,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 143,
+    "diasTotalDesarrollo": 148,
     "produccion": ""
   },
   {
@@ -2228,7 +2264,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 143,
+    "diasTotalDesarrollo": 148,
     "produccion": ""
   },
   {
@@ -2354,7 +2390,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 38,
+    "diasTotalDesarrollo": 43,
     "produccion": ""
   },
   {
@@ -2534,25 +2570,25 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 16,
+    "diasTotalDesarrollo": 21,
     "produccion": ""
   },
   {
     "id": "GD772-199",
     "title": "PASAR FACTURAS MULTIUSUARIO BAJA COMPLEJIDAD A BANDEJA MASIVO",
     "assigned": "JAIRO",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 50,
     "startDate": "11/02/2026",
     "endDate": "",
-    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.\n[13/02/2026]: Se realizó implementación en ambiente local. Pendiente estrategias de pruebas \n[17/02/2026]: Funcionalidad ya desarrollada en local, Pendiente ejecución de pruebas\n[20/02/2026]: La lógica ya está construida, pero no se han desarrollado los procedimientos asociados. Estado intermedio con pendiente técnico claro.\n[23/02/2026]: El desarrollo está listo a nivel funcional, pendiente despliegue a ambiente de pruebas (test) y solicitud de control de cambios. Posteriormente se debe ejecutar prueba con factura real para validar comportamiento del servicio de radicación masiva.\nSe escala  control de cambios MDSB-987316\n[24/02/2026]: C ontrol de cambios ejecutado correctamente.\n[25/02/2026]: Completar una parte faltante para subirlo a test.",
+    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.\n[13/02/2026]: Se realizó implementación en ambiente local. Pendiente estrategias de pruebas \n[17/02/2026]: Funcionalidad ya desarrollada en local, Pendiente ejecución de pruebas\n[20/02/2026]: La lógica ya está construida, pero no se han desarrollado los procedimientos asociados. Estado intermedio con pendiente técnico claro.\n[23/02/2026]: El desarrollo está listo a nivel funcional, pendiente despliegue a ambiente de pruebas (test) y solicitud de control de cambios. Posteriormente se debe ejecutar prueba con factura real para validar comportamiento del servicio de radicación masiva.\nSe escala  control de cambios MDSB-987316\n[24/02/2026]: C ontrol de cambios ejecutado correctamente.\n[25/02/2026]: Completar una parte faltante para subirlo a test.\n[27/02/2026]: Detenido  por avance en el req \"Nuevo desarrollo de incapacidades para Bolívar\"",
     "unit": "Bolivar",
     "detail": "Se requiere pasar facturas multiusuario baja complejidad a bandeja masivo, los usuarios que no coincidan o no cumplan  con la siguiente regla deben ser asignados a bandeja analista baja complejidad.\n\nValor autorizado- deducible= valor pendiente\nValor factura- deducible= Valor cobrado\n\nSi los 2 coinciden pueden pasar a pago masivo.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 11,
+    "diasTotalDesarrollo": 16,
     "produccion": ""
   },
   {
@@ -2577,11 +2613,11 @@
     "id": "GD772-198",
     "title": "Ajuste flujo odontologia",
     "assigned": "JAIRO",
-    "state": "Paso A Produccion",
-    "progress": 90,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "16/02/2026",
     "endDate": "18/02/2026",
-    "observations": "[17/02/2026] : la fecha estimada de finalización del desarrolla 17 de febrero  para entrega al cliente  20 de febrero.\nValidacion del requerimiento para incluir  la columna que se requiere\n[18/02/2026]: Lógica implementada; pendiente pruebas con datos de producción, se estima finlizar hoy hacia el medio dia.\n[19/02/2026]: En pruebas imagine.\n[20/02/2026]: Se continuaron pruebas del flujo y ajustes asociados. Se mantienen pendientes funcionales menores.\n[23/02/2026]: El flujo ya se encuentra desplegado en test y se realizaron pruebas hasta glosa total, incluyendo validación de gestión de glosa. Se identificó pendiente previo (reasignación) que ya fue resuelto. Se planifica generación de más casos de prueba (odontología y auditoría normal) para validación funcional por usuarios.\n[25/02/2026]: El 23 de febrero se entrego al cliente la modificación  y  el 24 de febrero confirma que se puede realizar el  paso a producción el cual es programado para el viernes 27 de febrero. (se aplazó de hoy miércoles para evitar conflictos con reuniones de gerencia)",
+    "observations": "[17/02/2026] : la fecha estimada de finalización del desarrolla 17 de febrero  para entrega al cliente  20 de febrero.\nValidacion del requerimiento para incluir  la columna que se requiere\n[18/02/2026]: Lógica implementada; pendiente pruebas con datos de producción, se estima finlizar hoy hacia el medio dia.\n[19/02/2026]: En pruebas imagine.\n[20/02/2026]: Se continuaron pruebas del flujo y ajustes asociados. Se mantienen pendientes funcionales menores.\n[23/02/2026]: El flujo ya se encuentra desplegado en test y se realizaron pruebas hasta glosa total, incluyendo validación de gestión de glosa. Se identificó pendiente previo (reasignación) que ya fue resuelto. Se planifica generación de más casos de prueba (odontología y auditoría normal) para validación funcional por usuarios.\n[25/02/2026]: El 23 de febrero se entrego al cliente la modificación  y  el 24 de febrero confirma que se puede realizar el  paso a producción el cual es programado para el viernes 27 de febrero. (se aplazó de hoy miércoles para evitar conflictos con reuniones de gerencia)\n[27/02/2026]:  Se realizara paso aproduccion hoy",
     "unit": "Bolivar",
     "detail": "Se requiere poder ajustar el flujo para el tipo de servicio odontología, lo que se busca es que exista una actividad en el  flujo que relacione directamente a un auditor de odontologia  y se asignen las tareas tal como corresponde .\n\nPor lo cual se debe crear una nueva actividad en el flujo tal como se muestra a continuación:  \"Auditor Odontologia\"\n\nUna vez se incluya esta actividad en el flujo se debe realizar la modificación de las reglas de asignación únicamente para el servicio de Odontología , es decir debe estar en el flujo la asignación por montos para este nuevo actor  tal como se evidencia a continuación.\n\nCon esta regla de asignación se busca que todos los casos que sean clasificados del tipo de servicio Odontología , lleguen directamente a la bandeja del auditor odontologico.\n",
     "visible": true,
@@ -2589,7 +2625,7 @@
     "fechaEstimadaEntrega": "17/02/2026",
     "fechaCompromisoCliente": "20/02/2026",
     "diasTotalDesarrollo": 3,
-    "produccion": ""
+    "produccion": "27/02/2026"
   },
   {
     "id": "GD772-202",
@@ -2632,18 +2668,36 @@
     "title": "Nuevo desarrollo de incapacidades para Bolívar",
     "assigned": "JAIRO",
     "state": "En Proceso",
-    "progress": 10,
+    "progress": 25,
     "startDate": "23/02/2026",
     "endDate": "",
-    "observations": "[18/02/2026]: Actualmente, el avance se concentra en la etapa de entendimiento y planificación, lo que implica. No se reportan aún actividades de desarrollo\n[23/02/2026]: Se mantiene como línea de trabajo prioritaria iniciar hoy.\n[25/02/2026]: Se definió el stack inicial y se integró la autenticación con doble factor, Se está trabajando en la optimización de consultas (queries) y creación de vistas materializadas para mejorar el rendimiento, pendiente completar tablas faltantes en la base de datos local para habilitar la bandeja de consulta.",
+    "observations": "[18/02/2026]: Actualmente, el avance se concentra en la etapa de entendimiento y planificación, lo que implica. No se reportan aún actividades de desarrollo\n[23/02/2026]: Se mantiene como línea de trabajo prioritaria iniciar hoy.\n[25/02/2026]: Se definió el stack inicial y se integró la autenticación con doble factor, Se está trabajando en la optimización de consultas (queries) y creación de vistas materializadas para mejorar el rendimiento, pendiente completar tablas faltantes en la base de datos local para habilitar la bandeja de consulta.\n[27/02/2026]: Se están corrigiendo errores en la consulta y se inició el desarrollo de la pantalla de detalle, otras actividades están pausadas mientras se avanza en este frente\n[02/03/2026]: El viernes 27 de febrero se avanzó en el análisis y migración de la lógica existente hacia el nuevo entorno, manteniendo las reglas actuales de negocio. Ya se construyó el menú y el listado conectado a base de datos; queda pendiente la configuración de permisos y la validación funcional para asegurar que lo implementado corresponde con el comportamiento esperado por el cliente.\n[04/03/2026]: Se continúa con la migración y ajuste del módulo. Se han corregido errores y se está organizando la lógica de gestión.",
     "unit": "Bolivar",
     "detail": "Durante la sesión se indicó que el requerimiento se encuentra en fase inicial, ya que el desarrollo aún no ha comenzado a nivel técnico. Sin embargo, sí existe un enfoque claro de implementación, que consiste en reutilizar como base el flujo y la lógica previamente construidos para el proyecto de Alfa y adaptarlos a las necesidades específicas del cliente Seguros Bolívar.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "01/03/2026",
-    "diasTotalDesarrollo": 3,
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 8,
     "produccion": ""
+  },
+  {
+    "id": "INTERNO-JA038",
+    "title": "Error informe de Glosas",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "27/02/2026",
+    "endDate": "27/02/2026",
+    "observations": "[27/02/2026]: Actualmente se encuentra en fase de diagnóstico para identificar la causa raíz (posible error en librerías, generación del archivo o conexión con la fuente de datos). No se ha iniciado corrección hasta confirmar el origen del problema.\n[02/03/2026]: Se identificó que la causa del problema era un error en el código que impedía la generación del archivo. El ajuste ya fue implementado y el informe se encuentra funcionando correctamente.",
+    "unit": "Bolivar",
+    "detail": "Se detectó que el proceso de descarga presenta una falla asociada a la ejecución del componente desarrollado en Python, lo que impide generar el archivo correctamente",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": "27/02/2026"
   },
   {
     "id": "GD772-206",
@@ -2661,6 +2715,24 @@
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-JA039",
+    "title": "Error consulta proveedores (administración cuentas médicas)",
+    "assigned": "JAIRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "27/02/2026",
+    "endDate": "02/03/2026",
+    "observations": "[02/03/2026]: Aún no se inicia la corrección hasta validar el origen exacto del problema\n[04/03/2026]: El 2 de marzo se identificó que el problema era la descarga de un archivo plano cuya ruta no estaba encriptada. Se realizó el ajuste correspondiente y el botón ya descarga correctamente el archivo.",
+    "unit": "Bolivar",
+    "detail": "Se revisará el error reportado mediante imagen, el cual parece estar relacionado con permisos o con la generación del archivo",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
@@ -2696,7 +2768,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 128,
+    "diasTotalDesarrollo": 133,
     "produccion": ""
   },
   {
@@ -2751,6 +2823,24 @@
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 6,
+    "produccion": ""
+  },
+  {
+    "id": "GD772-194_1",
+    "title": "Elaboracion de HU  Comunicados Independientes Voluntarios",
+    "assigned": "FABIO",
+    "state": "En Proceso",
+    "progress": 70,
+    "startDate": "03/03/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Bolivar",
+    "detail": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "04/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
@@ -2894,7 +2984,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 95,
+    "diasTotalDesarrollo": 100,
     "produccion": ""
   },
   {
@@ -3132,8 +3222,26 @@
     "produccion": ""
   },
   {
+    "id": "INTERNO-JE034",
+    "title": "Reenvío correos de notificación radicados entidades",
+    "assigned": "JESUS",
+    "state": "En Proceso",
+    "progress": 0,
+    "startDate": "04/03/2026",
+    "endDate": "",
+    "observations": "[04/03/2026]: Se aprobó el reproceso de radicados entre el 26 de febrero y el 3 de marzo.Se realizará consulta en base de datos para obtener IDs y ejecutar comando de reenvío agrupando registros.",
+    "unit": "Bolivar",
+    "detail": "Agradezco por favor la ayuda de ustedes para que se realice el reenvio de los radicados de juntas recibidos del 26 de febrero al 3 de marzo, con el objetivo de que las entidades reciban la confirmación del radicado; lo anterior teniendo en cuenta que no se estaba notificando de acuerdo a la falla transversal de la salida por Exchange.\n\n",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
     "id": "INTERNO-JE001",
-    "title": "Realizar Imagen de docker de nativo para Jesus",
+    "title": "Realizar Imagen de docker de nativo para Jesus ( Equipo de Bolivar)",
     "assigned": "JESUS",
     "state": "Pendiente",
     "progress": 0,
@@ -3290,7 +3398,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "16/05/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 193,
+    "diasTotalDesarrollo": 198,
     "produccion": ""
   },
   {
@@ -3542,7 +3650,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 117,
+    "diasTotalDesarrollo": 122,
     "produccion": ""
   },
   {
@@ -3578,7 +3686,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 110,
+    "diasTotalDesarrollo": 115,
     "produccion": "30/12/2025"
   },
   {
@@ -3625,7 +3733,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[02/03/2026]: Se discutió la necesidad de implementar una política de cambio de contraseña en los aplicativos por razones de seguridad. Se evaluó como alternativa implementar un proceso automático (cron).\nAún no se define la solución técnica ni se inicia desarrollo.",
     "unit": "Bolivar",
     "detail": "",
     "visible": false,
@@ -3650,7 +3758,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 55,
+    "diasTotalDesarrollo": 60,
     "produccion": ""
   },
   {
@@ -3956,7 +4064,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 76,
+    "diasTotalDesarrollo": 81,
     "produccion": ""
   },
   {
@@ -4352,7 +4460,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 126,
+    "diasTotalDesarrollo": 131,
     "produccion": ""
   },
   {
@@ -4370,7 +4478,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 103,
+    "diasTotalDesarrollo": 108,
     "produccion": ""
   },
   {
@@ -4748,7 +4856,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 66,
+    "diasTotalDesarrollo": 71,
     "produccion": ""
   },
   {
@@ -5461,7 +5569,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[02/03/2026]: Se indicó que el ajuste es menor y se tomará un espacio corto para finalizarlo. No se reportaron detalles técnicos adicionales durante la sesión.",
     "unit": "Bolivar",
     "detail": "Se reportó que un NIT específico no muestra información en el año 2024. El incidente genera dudas, ya que en otras fuentes sí aparece información parcial. Para avanzar en la validación, se requiere revisar directamente en la base de datos los registros asociados al NIT y confirmar si la información fue cargada o si existe algún error de consulta.",
     "visible": false,
@@ -5855,70 +5963,88 @@
     "assigned": "DANILO",
     "state": "Pendiente",
     "progress": 0,
-    "startDate": "02/03/2026",
+    "startDate": "04/03/2026",
     "endDate": "",
-    "observations": "[11/02/2026]: El día de hoy se finaliza el entrenamiento pendiente y se inicia la construcción de dicha interfaz.\n[13/02/2026]: Se identificó la necesidad de realizar reunión de entendimiento del requerimiento para definir correctamente el alcance funcional antes de avanzar en desarrollo, Revisión de historias de usuario \n[17/02/2026]: A un no se ha podido iniciar el desarrollo, por migracion del sistetema de correspondecia de Colmena \n[24/02/2026]: El desarrollo iniciara el 2 de Marzo",
+    "observations": "[11/02/2026]: El día de hoy se finaliza el entrenamiento pendiente y se inicia la construcción de dicha interfaz.\n[13/02/2026]: Se identificó la necesidad de realizar reunión de entendimiento del requerimiento para definir correctamente el alcance funcional antes de avanzar en desarrollo, Revisión de historias de usuario \n[17/02/2026]: A un no se ha podido iniciar el desarrollo, por migracion del sistetema de correspondecia de Colmena \n[24/02/2026]: El desarrollo iniciara el 2 de Marzo\n[04/03/2026]: No se ha iniciado formalmente el desarrollo. Se estima que el formulario podría construirse en un día; sin embargo, la lógica interna requiere mayor análisis para contemplar todos los escenarios y garantizar estabilidad. Se estima iniciar  hoy 4 de marzo  y Finalizar el 9 de Marzo.",
     "unit": "Bolivar",
     "detail": "Requerimiento:\nDe acuerdo con lo conversado en la sesión de Oficina Exprés, hemos identificado que el reentrenamiento de la IA debe ser un proceso constante tras la salida a producción. Por ello, y retomando la sugerencia de Danilo, solicitamos el desarrollo de una vista que permita a Negocio realizar este reentrenamiento de forma autónoma. Agradecemos su apoyo para avanzar con este requerimiento.\n\n\nDesarrollara  Imagine:\nVamos a construir una vista para que el funcionario de Bolívar pueda entrenar el modelo de forma controlada, es decir: tomar el prompt que necesite que el sistema entienda y seleccionar manualmente el tipo de solicitud al que debe clasificarse. Ese entrenamiento se guardará en una tabla junto con el tipo de solicitud. En la noche se ejecutará un proceso que tomará esos nuevos ejemplos y también incluirá solicitudes de otros tipos, para equilibrar el modelo y evitar pérdida de porcentaje de precisión en las demás tipologias. \nAl día siguiente, el usuario ya podrá usar Oficina Express con el nuevo contexto. \nImportante : internamente debemos implementar lógica y seguridad (validaciones, control de versiones, rollback y verificación de calidad) para que el entrenamiento nuevo no nos dañe el modelo, ni el desempeño.\n\nEl dashboard de Oficina Express muestra el volumen de casos y reporta las solicitudes bien clasificadas y mal clasificadas, con base en ese porcentaje, se asigna un estado de clasificación. Incluye un gráfico de Distribución general y un gráfico de barras con el top 8 de tipologias clasificadas, para identificar en qué tipos se concentra la mayor demanda. Con esto se busca monitorear el rendimiento díario.",
     "visible": true,
-    "diasEstimadosDesarrollo": 5,
-    "fechaEstimadaEntrega": "06/03/2026",
+    "diasEstimadosDesarrollo": 4,
+    "fechaEstimadaEntrega": "09/03/2026",
     "fechaCompromisoCliente": "10/03/2026",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
     "id": "INTERNO-D042",
     "title": "Migracion  de correspondencia Alfa",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 60,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "12/02/2026",
-    "endDate": "25/02/2026",
-    "observations": "[13/02/2026]: Se continúa el proceso de entendimiento y estabilización del sistema existente, Se montó la estructura inicial de base de datos y se logró levantar parcialmente la aplicación para poder analizar su funcionamiento. El trabajo actual está enfocado en Documentación del sistema, Revisión del sitio anterior y preparación para migración\n[18/02/2026]: Actividad en desarrollo; se continúa trabajo y se podrán mostrar avances la próxima semana sin fecha final definida\n[20/02/2026]:El avance se ha visto impactado por replanteamientos en el enfoque de la migración. El trabajo continúa activo y concentrado en este frente como actividad principal.\n[23/02/2026]: El trabajo se está realizando de forma incremental, construyendo previamente componentes necesarios (roles, tipologías, áreas) conforme se requieren para la migración. Se prevé presentación de avances en el transcurso de la semana.\n[25/02/2026]: Se han migrado 15 de las 28 opciones del menú principal, ya están desarrollados los módulos de radicación, imagen (punteo, bandeja, actualización), administración (roles, plantillas) y trazabilidad, se han detectado inconsistencias entre la base de datos de producción y test (campos inexistentes), lo que obliga a corregir el sitio viejo antes de migrar.",
+    "endDate": "26/02/2026",
+    "observations": "[13/02/2026]: Se continúa el proceso de entendimiento y estabilización del sistema existente, Se montó la estructura inicial de base de datos y se logró levantar parcialmente la aplicación para poder analizar su funcionamiento. El trabajo actual está enfocado en Documentación del sistema, Revisión del sitio anterior y preparación para migración\n[18/02/2026]: Actividad en desarrollo; se continúa trabajo y se podrán mostrar avances la próxima semana sin fecha final definida\n[20/02/2026]:El avance se ha visto impactado por replanteamientos en el enfoque de la migración. El trabajo continúa activo y concentrado en este frente como actividad principal.\n[23/02/2026]: El trabajo se está realizando de forma incremental, construyendo previamente componentes necesarios (roles, tipologías, áreas) conforme se requieren para la migración. Se prevé presentación de avances en el transcurso de la semana.\n[25/02/2026]: Se han migrado 15 de las 28 opciones del menú principal, ya están desarrollados los módulos de radicación, imagen (punteo, bandeja, actualización), administración (roles, plantillas) y trazabilidad, se han detectado inconsistencias entre la base de datos de producción y test (campos inexistentes), lo que obliga a corregir el sitio viejo antes de migrar.\n[27/02/2026]:Se confirmó que el sistema cuenta con aproximadamente 27–28 opciones de menú ya implementadas y operativas, Implementado con revisión funcional",
     "unit": "Bolivar",
     "detail": "Realizar el levantamiento, análisis y estabilización del Sistema de Correspondencia Alfa con el fin de documentar su funcionamiento actual, identificar dependencias técnicas y preparar la base para su migración o evolución. El requerimiento busca asegurar que la aplicación pueda operar de manera controlada y que exista claridad sobre su arquitectura, módulos y flujos antes de definir los siguientes pasos de mejora o reemplazo.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 10,
+    "diasTotalDesarrollo": 11,
     "produccion": ""
   },
   {
     "id": "GD772-103_1",
     "title": "Transferencia informacion FS a S3 ( Extraccion informacion del dia 24 de febrero)",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "03/03/2026",
+    "endDate": "03/03/2026",
+    "observations": "[27/02/2026]: Se validara con Liyibet  la viavilidad  de enviar esta  información.\nse evidenció una discusión sobre el nivel de acompañamiento del equipo, ya que brindar soporte directo en las pruebas podría interpretarse como asumir responsabilidad sobre la ejecución del proceso, el cual corresponde al cliente. Por esta razón, quedó pendiente una alineación interna para definir el alcance del apoyo y la forma en que se dará respuesta a la solicitud realizada por correo.\n[04/03/2026]: El 3 de marzo la información solicitada fue extraída y enviada por correo. Se guardaron los queries utilizados para futuras solicitudes similares.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D048",
+    "title": "Cambios correcpondencia Alfa",
+    "assigned": "DANILO",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "03/03/2026",
+    "endDate": "",
+    "observations": "[04/03/2026]: La mayoría de cambios  ya fueron implementados y se espera finalizar los restantes hoy. \nEl cambio de reglas es el punto más delicado, ya que requiere pruebas integrales para garantizar que no se impacten otros procesos.",
+    "unit": "Bolivar",
+    "detail": "Se realizó reunión de revisión funcional y se solicitaron más de 20 ajustes\n\nEntre los cambios relevantes:\n\nImplementación de visor de imágenes y PDFs con vista miniatura.\nDefinición de imagen principal siempre marcada.\nAjustes visuales y de experiencia de usuario.\nCambio solicitado a nivel de reglas de negocio (requiere validación completa de flujos para evitar afectaciones colaterales).",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "04/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
     "id": "INTERNO-D046",
     "title": "Nueva Instancia de Desarrollo",
     "assigned": "DANILO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
+    "state": "En Proceso",
+    "progress": 90,
+    "startDate": "27/02/2026",
     "endDate": "",
-    "observations": "[25/02/2026]: La actividad está detenida por orden de Don Hernán para priorizar el proyecto de Correspondencia (Migracion  de correspondencia Alfa)",
+    "observations": "[25/02/2026]: La actividad está detenida por orden de Don Hernán para priorizar el proyecto de Correspondencia (Migracion  de correspondencia Alfa)\n[27/02/2026]: Depende  reiniciar esta tarea  tras presentar problemas con el internet domestico, tan pronto le reestablescan el servicio iniciara la tarea .\n[02/03/2026]: El viernes 27 de febreror se avanzó aproximadamente un 30% en la configuración de la nueva instancia de desarrollo. Aunque no se logró completar lo previsto, se continuará el trabajo durante el día con el objetivo de finalizar la configuración, se solicita agregar la IP pública 38.9.217.196 con acceso a todas las instancias de las siguientes cuentas de AWS, con el ticket MDSB-991243\n[04/03/2026]: El ambiente se encuentra aproximadamente en un 90% de implementación. Inicialmente no se pudo validar por falta de accesos, los cuales ya fueron restablecidos. Se avanzó en la configuración general y solo quedan ajustes menores como construcción de carpetas con NPM, revisión de ramas y solución de pequeños inconvenientes detectados en los sitios.  Se proyecta dejarlo completamente operativo en el transcurso del día.",
     "unit": "Bolivar",
     "detail": "",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
-    "fechaEstimadaEntrega": "",
+    "visible": true,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "02/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
@@ -5936,7 +6062,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 78,
+    "diasTotalDesarrollo": 83,
     "produccion": ""
   },
   {
@@ -5976,6 +6102,42 @@
     "produccion": ""
   },
   {
+    "id": "MDSB-992223",
+    "title": "Jiras día a día (Error en radicación oficina Exprés )",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "03/03/2026",
+    "endDate": "03/03/2026",
+    "observations": "[04/03/2026]: El 3 de marzo se da respuesta indicando que ese es el comportamiento normal establecido y queda abierto a validaciones y ajustes que se puedan solicitar.",
+    "unit": "Bolivar",
+    "detail": "Por favor validar, puesto que laoficina expres esta saltando el flujo para descripción de la solicitud.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-D047",
+    "title": "Implementación de comunicación entre contenedores (Proxy Reverse)",
+    "assigned": "DANILO",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "02/03/2026",
+    "endDate": "",
+    "observations": "[27/02/2026]: Esta actividad se iniciara  tan pronto Jesus entrega el docker para el nuevo nativo.  \n[02/03/2026]: La implementación se mantiene pendiente, ya que se requiere la entrega previa de los contenedores (Dockers) por parte del equipo responsable. Una vez se disponga de estos artefactos, se procederá con la configuración de la comunicación y orquestación.\nSe estima que Jesus entregue hoy  los contenedores .",
+    "unit": "Bolivar",
+    "detail": "Se definió la necesidad de implementar un esquema de comunicación mediante proxy reverse entre los servicios (Apache y Nginx) para permitir la integración con los módulos de procesos masivos (backend y frontend). Aún no se inicia la configuración debido a que falta claridad sobre la arquitectura final del entorno, por lo que se mantiene como actividad técnica pendiente.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
+  },
+  {
     "id": "INTERNO-D040",
     "title": "Estabilidad del servidor / monitoreo",
     "assigned": "DANILO",
@@ -5990,7 +6152,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 17,
+    "diasTotalDesarrollo": 22,
     "produccion": ""
   },
   {
@@ -6026,7 +6188,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 38,
+    "diasTotalDesarrollo": 43,
     "produccion": ""
   },
   {
@@ -6044,7 +6206,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 201,
+    "diasTotalDesarrollo": 206,
     "produccion": ""
   },
   {
@@ -6242,7 +6404,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 47,
+    "diasTotalDesarrollo": 52,
     "produccion": ""
   },
   {

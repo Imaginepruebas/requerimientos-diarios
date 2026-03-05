@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 278,
+    "diasTotalDesarrollo": 283,
     "produccion": ""
   },
   {
@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 278,
+    "diasTotalDesarrollo": 283,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 278,
+    "diasTotalDesarrollo": 283,
     "produccion": ""
   },
   {
@@ -68,7 +68,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 278,
+    "diasTotalDesarrollo": 283,
     "produccion": ""
   },
   {
@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 278,
+    "diasTotalDesarrollo": 283,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 278,
+    "diasTotalDesarrollo": 283,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 278,
+    "diasTotalDesarrollo": 283,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 167,
+    "diasTotalDesarrollo": 172,
     "produccion": ""
   },
   {
@@ -158,7 +158,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 167,
+    "diasTotalDesarrollo": 172,
     "produccion": ""
   },
   {
@@ -176,7 +176,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 167,
+    "diasTotalDesarrollo": 172,
     "produccion": ""
   },
   {
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 167,
+    "diasTotalDesarrollo": 172,
     "produccion": ""
   },
   {
@@ -230,7 +230,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 169,
+    "diasTotalDesarrollo": 174,
     "produccion": ""
   },
   {
@@ -248,7 +248,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 169,
+    "diasTotalDesarrollo": 174,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 168,
+    "diasTotalDesarrollo": 173,
     "produccion": ""
   },
   {
@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 166,
+    "diasTotalDesarrollo": 171,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 101,
+    "diasTotalDesarrollo": 106,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 99,
+    "diasTotalDesarrollo": 104,
     "produccion": ""
   },
   {
@@ -1729,20 +1729,56 @@
   },
   {
     "id": "356",
-    "title": "Solicitud soportes y bases de morosos a corte 22 Enero",
+    "title": "Solicitud soportes y bases de morosos a corte 23 febrero",
     "assigned": "FAVER Y NATALIA",
     "state": "Finalizado",
     "progress": 100,
     "startDate": "23/02/2026",
-    "endDate": "",
-    "observations": "Se realiza proceso de generacion de documentación para el reporte de morosos del mes de Febrero de acuerdo a la solicitud, se entrega información.",
+    "endDate": "26/02/2026",
+    "observations": "[26/02/2026]: Se realiza proceso de generacion de documentación para el reporte de morosos del mes de Febrero de acuerdo a la solicitud, se entrega información.",
     "unit": "Tuya",
     "detail": "Solicitud de usuario para generar base de morosos...como este es un reporte que se genera dos veces al mes, ya se tiene el query para generar la información",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 4,
+    "produccion": ""
+  },
+  {
+    "id": "357",
+    "title": "Soporte Casos Sarita",
+    "assigned": "FAVER Y NATALIA",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "02/03/2026",
+    "endDate": "02/03/2026",
+    "observations": "[02/03/2026]: Se realiza la validación del caso, se reporta al área encargada ya que no es un error de Imagine y se da solución al usuario.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "02/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "358",
+    "title": "Soporte Casos Sarita",
+    "assigned": "NATALIA",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "04/03/2026",
+    "endDate": "04/03/2026",
+    "observations": "[02/03/2026]: Se realiza la validación del caso, se reporta al área encargada ya que no es un error de Imagine y se da solución al usuario.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "04/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   }
 ]

@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 91,
+    "diasTotalDesarrollo": 97,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 82,
+    "diasTotalDesarrollo": 88,
     "produccion": ""
   },
   {
@@ -284,13 +284,13 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "22/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 29,
+    "diasTotalDesarrollo": 35,
     "produccion": ""
   },
   {
     "id": "automatizacion",
     "title": "counsulta automatica senda",
-    "assigned": "BRAYAN DIAZ",
+    "assigned": "JHON BERMUDEZ",
     "state": "En Proceso",
     "progress": 5,
     "startDate": "14/01/2026",
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 13,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 31,
+    "diasTotalDesarrollo": 37,
     "produccion": ""
   },
   {
@@ -356,7 +356,7 @@
     "diasEstimadosDesarrollo": 11,
     "fechaEstimadaEntrega": "09/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 23,
+    "diasTotalDesarrollo": 29,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "17/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 14,
+    "diasTotalDesarrollo": 20,
     "produccion": ""
   },
   {
@@ -403,14 +403,14 @@
     "progress": 90,
     "startDate": "12/02/2026",
     "endDate": "",
-    "observations": "[25/02/2026]: Desarrollo en local ",
+    "observations": "[25/02/2026]: Desarrollo en local \n[05/03/2026] se dbe reaajsutar desarrollo usando la estructura de tablas y bases correctas para ajustarse al ambiente real de produccion ",
     "unit": "Colmena",
     "detail": "migracion de la opcion de reembolsos a python ",
     "visible": true,
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "16/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 10,
+    "diasTotalDesarrollo": 16,
     "produccion": ""
   },
   {
@@ -446,7 +446,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 6,
     "produccion": ""
   },
   {
@@ -464,7 +464,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 9,
     "produccion": ""
   },
   {
@@ -520,5 +520,23 @@
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 0,
     "produccion": ""
+  },
+  {
+    "id": "MEJORA_23",
+    "title": "mejora bandeja enfermedad laboral ",
+    "assigned": "BRAYAN DIAZ",
+    "state": "En Proceso",
+    "progress": 95,
+    "startDate": "04/03/2026",
+    "endDate": "04/03/2026",
+    "observations": "20260304 se implementa y se pasa a produccion despues de la revision de jennifer ",
+    "unit": "Colmena",
+    "detail": "se solicita mejorar la bandeja de trabajo de enfermedad laboral agraganod los filtros por cedula, juntas tipo servicio",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "04/03/2026",
+    "fechaCompromisoCliente": "04/03/2026",
+    "diasTotalDesarrollo": 1,
+    "produccion": "04/03/2026"
   }
 ]

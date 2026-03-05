@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "20/07/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 152,
+    "diasTotalDesarrollo": 157,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "01/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 106,
+    "diasTotalDesarrollo": 111,
     "produccion": ""
   },
   {
@@ -1112,7 +1112,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "23/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 26,
+    "diasTotalDesarrollo": 31,
     "produccion": ""
   },
   {
@@ -1371,19 +1371,19 @@
     "id": "REQ-24",
     "title": "Se deben de dar respuesta a la cola de casos abiertos en la plataforma del cliente",
     "assigned": "ALEJANDRO",
-    "state": "En Proceso",
-    "progress": 60,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "23/02/2026",
-    "endDate": "",
-    "observations": "[23/02/2026] Se identifica que hay una cola de casos para soporte que se deben de gestionar. Se recibe documnetación para la atención en la plataforma\n[25/02/2026] Hasta el momento se han gestionado alrededor de 40 - 50 casos",
+    "endDate": "27/02/2026",
+    "observations": "[23/02/2026] Se identifica que hay una cola de casos para soporte que se deben de gestionar. Se recibe documnetación para la atención en la plataforma\n[25/02/2026] Hasta el momento se han gestionado alrededor de 40 - 50 casos\n[27/02/2026] solo quedá a lo mucho 3 casos, pero es una tarea que será necesario trabajarle al mismo ritmo que llegan casos",
     "unit": "Proteccion",
     "detail": "Atención al soporte en plataforma del cliente",
     "visible": true,
     "diasEstimadosDesarrollo": 4,
     "fechaEstimadaEntrega": "26/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
-    "produccion": ""
+    "diasTotalDesarrollo": 5,
+    "produccion": "27/02/2026"
   },
   {
     "id": "REQ-25",
@@ -1402,5 +1402,59 @@
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 2,
     "produccion": "24/02/2026"
+  },
+  {
+    "id": "REQ-26",
+    "title": "Se debe de cargar servicios y actualizar aplicativo para el servidor de migraciones",
+    "assigned": "ALEJANDRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "26/02/2026",
+    "endDate": "03/03/2026",
+    "observations": "[26/02/2026] Se necesita poner en punta de nuevo el servidor que dejó de estar actualizada desde diciembre, por lo que es necesario cargar los servicios de validación fileNet\n[02/03/2026] Con los servicios ya cargados se cambia un proceso que no se había actualizado. Además se actualiza el repositorio para tener los datos tal cuál en producción\n[03/03/2026] Se termina de configurar, actualizar y cargar el repositorio. Además, se pasa el servidor de migraci´n a producción de 7 a 9 de la noche",
+    "unit": "Proteccion",
+    "detail": "Cargue de servicios y afinación de servidor para migración",
+    "visible": true,
+    "diasEstimadosDesarrollo": 4,
+    "fechaEstimadaEntrega": "03/03/2026",
+    "fechaCompromisoCliente": "03/03/2026",
+    "diasTotalDesarrollo": 4,
+    "produccion": "03/03/2026"
+  },
+  {
+    "id": "REQ-27",
+    "title": "Se debe de agregar una función que permita que si se valida mesa, se debe de identificar si se marco bonos para abrir dicha tarea",
+    "assigned": "ALEJANDRO",
+    "state": "En Test",
+    "progress": 80,
+    "startDate": "02/03/2026",
+    "endDate": "",
+    "observations": "[03/03/2026] Se termina de construir la lógica para que el evento de mesa unificada ok pueda evaluar e identificar si el trámite necesita abrir bonos",
+    "unit": "Proteccion",
+    "detail": "Corrección lógica de mesa unificada",
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "04/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
+  },
+  {
+    "id": "REQ-28",
+    "title": "Identificación y mantenimiento a cada una de las dificultades presentadas en el servidor nuevo",
+    "assigned": "ALEJANDRO",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "04/03/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Proteccion",
+    "detail": "Soporte a inconsistencias en la migración",
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "06/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
   }
 ]

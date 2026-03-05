@@ -473,8 +473,25 @@
             
             .risk-categories {
                 grid-template-columns: 1fr;
+                        }
+                    }
+                    .filter-select {
+                padding: 8px 12px;
+                border-radius: 8px;
+                border: 1px solid #e0e0e0;
+                background-color: white;
+                font-size: 14px;
+                color: #333;
+                outline: none;
+                cursor: pointer;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                transition: all 0.3s ease;
             }
-        }
+
+            .filter-select:hover {
+                border-color: #1f77b4;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
     </style>
 </head>
 <body>
@@ -494,7 +511,16 @@
                 </div>
             </div>
         </div>
-        
+         <select id="filtroCliente" class="filter-select" onchange="calcularYMostrarDatos()">
+        <option value="todos">🏢 Todas las Unidades</option>
+        <option value="Bolivar">Bolivar</option>
+        <option value="Proteccion">Proteccion</option>
+        <option value="Alfa">Alfa</option>
+        <option value="Colmedica">Colmedica</option>
+        <option value="Tuya">Tuya</option>
+        <option value="Colmena">Colmena</option>
+        <option value="Colpatria">Colpatria</option>
+        </select>
         <!-- Alertas Inteligentes -->
         <div class="alerts-bar" id="alertsBar">
             <div class="alert-item alert-info">⏳ Cargando datos del sistema...</div>
@@ -671,40 +697,51 @@
                 '<div class="alert-item alert-critical">🔴 ERROR: No se pudieron cargar los datos - ' + error.message + '</div>';
         });
 
-        // Función principal de cálculo
-        function calcularYMostrarDatos() {
-            const finalizados = tasks.filter(t => 
-                t.state === "Finalizado" && 
-                t.endDate && 
-                t.visible !== false
-            );
-            
-            const activos = tasks.filter(t => 
-                t.state !== "Finalizado" && 
-                t.state !== "Cancelado" && 
-                t.progress < 100 &&
-                t.visible !== false
-            );
+       // Función principal de cálculo
+           function calcularYMostrarDatos() {
+    try {
+        // 1. Obtener el filtro
+        const selector = document.getElementById('filtroCliente');
+        const clienteSeleccionado = selector ? selector.value : "todos";
 
-            // Calcular cumplimientos
+        // 2. Filtrar por Unidad (Evitamos errores si 'unit' no existe)
+        const tasksFiltradas = tasks.filter(t => {
+            if (clienteSeleccionado === "todos") return true;
+            return t.unit && t.unit.trim() === clienteSeleccionado;
+        });
+
+        // 3. Filtrar por estados (Normalizando a minúsculas)
+        const finalizados = tasksFiltradas.filter(t => {
+            const s = (t.state || "").toLowerCase();
+            return (s === "finalizado" || s === "terminado");
+        });
+
+        const activos = tasksFiltradas.filter(t => {
+            const s = (t.state || "").toLowerCase();
+            return s !== "finalizado" && s !== "terminado" && s !== "cancelado";
+        });
+
+        // 4. Actualizar visualización (Solo si los elementos existen)
+        if (typeof calcularCumplimientos === "function") {
             const cumplimientos = calcularCumplimientos(finalizados);
             mostrarCumplimientos(cumplimientos, finalizados.length);
-            
-            // Calcular riesgos
-            const riesgos = calcularRiesgos(activos);
-            mostrarRiesgos(riesgos, activos);
-            
-            // Mostrar tabla incumplimientos
-            mostrarTablaIncumplimientos(finalizados);
-            
-            // Actualizar alertas
-            actualizarAlertas(cumplimientos, riesgos);
-            
-            // Actualizar contador
-            document.getElementById('cantidadMostrada').textContent = 
-                `Mostrando: ${tasks.filter(t => t.visible !== false).length} de ${tasks.length} requerimientos`;
         }
 
+        // 5. Actualizar contadores (Con validación de ID)
+        const elContador = document.getElementById('cantidadMostrada');
+        if (elContador) {
+            elContador.textContent = `Mostrando: ${tasksFiltradas.length} de ${tasks.length} requerimientos`;
+        }
+
+        // 6. Dibujar gráfico
+        if (typeof dibujarGraficoTendencia === "function") {
+            dibujarGraficoTendencia(clienteSeleccionado);
+        }
+
+    } catch (e) {
+        console.error("Error crítico en el dashboard:", e);
+    }
+}
         function parseDate(dateStr) {
             if (!dateStr || typeof dateStr !== 'string' || !dateStr.includes('/')) return null;
             const [day, month, year] = dateStr.split('/');
@@ -1048,6 +1085,45 @@
             setTimeout(() => {
                 alertsBar.innerHTML = originalContent;
             }, 3000);
+        }
+                function dibujarGraficoTendencia() {
+            const svg = document.getElementById('trendChart');
+            const width = 800;
+            const height = 200; // Ajustado para que quepa bien
+            const padding = 40;
+            
+            // Datos de ejemplo: % de cumplimiento de los últimos 6 meses
+            const meses = ['Sep', 'Oct', 'Nov', 'Dic', 'Ene', 'Feb'];
+            const datosGlobal = [78, 85, 82, 91, 88, 93]; 
+            
+            // Funciones de ayuda para coordenadas
+            const getX = (i) => padding + (i * (width - 2 * padding) / (meses.length - 1));
+            const getY = (valor) => height - padding - (valor * (height - 2 * padding) / 100);
+
+            let contenido = '';
+
+            // 1. Dibujar línea de meta (90%)
+            const metaY = getY(90);
+            contenido += `<line x1="${padding}" y1="${metaY}" x2="${width-padding}" y2="${metaY}" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5" />`;
+            contenido += `<text x="${width-padding + 5}" y="${metaY + 5}" font-size="10" fill="#999">META 90%</text>`;
+
+            // 2. Dibujar la línea de tendencia (Azul)
+            let puntos = datosGlobal.map((d, i) => `${getX(i)},${getY(d)}`).join(' ');
+            contenido += `<polyline points="${puntos}" fill="none" stroke="#2196f3" stroke-width="3" stroke-linecap="round" />`;
+
+            // 3. Dibujar puntos y etiquetas de meses
+            meses.forEach((m, i) => {
+                const x = getX(i);
+                const y = getY(datosGlobal[i]);
+                // Punto
+                contenido += `<circle cx="${x}" cy="${y}" r="5" fill="#1f77b4" />`;
+                // Etiqueta Mes
+                contenido += `<text x="${x}" y="${height - 10}" font-size="12" text-anchor="middle" fill="#666">${m}</text>`;
+                // Valor % arriba del punto
+                contenido += `<text x="${x}" y="${y - 10}" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f77b4">${datosGlobal[i]}%</text>`;
+            });
+
+            svg.innerHTML = contenido;
         }
     </script>
 </body>
