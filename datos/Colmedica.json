@@ -374,7 +374,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "06/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 7,
+    "diasTotalDesarrollo": 8,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 128,
+    "diasTotalDesarrollo": 129,
     "produccion": ""
   },
   {
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 103,
+    "diasTotalDesarrollo": 104,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 81,
+    "diasTotalDesarrollo": 82,
     "produccion": ""
   },
   {
@@ -904,7 +904,7 @@
     "title": "Comercial - Modulo de Normalización",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 100,
+    "progress": 98,
     "startDate": "05/02/2026",
     "endDate": "25/02/2026",
     "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2026] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las solicitadas\n[6/02/2026] se inicia con la adición de columnas y la modificación en query para obtener el datos\n[9/02/2026] modificación en las vistas de modales con la información de devolucions y auditoria médica\n[11/02/2026] Se validan los filtros solicitados sobre los campos para consultas puntuales\n[27/02/2026] se confirman, cambios, y se informa al cliente para la revisión\n[3/03/2026] se hace reunión con el átrea para hacer retroalimentación, y piden unos ajustes de forma para poder pasar a producción\n[4/03/2026] se empiezan a hacer los ajustes solicitados en la reunión anterioir",
@@ -1065,11 +1065,11 @@
     "id": "OPT_41",
     "title": "Afiliaciones PRE - Consulta Sarlaft",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 85,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "25/02/2026",
-    "endDate": "",
-    "observations": "[25/02/2026] Se crea campo nuevo para diferenciar el titular del beneficiario.,se Realiza revisión del momento en el que se coloca la información en la tabla de consulta sarlaft para que se empiecen a almacenar los usuarios que sean mayores a 18 años\n[26/02/2026] en el proceso de consulta, de captura y verificación del sarlaft, se ajusta para omitir los registros que corresponden a beneficiarios, dado que por ellos no se recibirá documento, sino solo el del titular, más sin embargo si se llegase a devolver por alguna inconsistencia, los registros de los beneficiarios, tambien deben quedar devueltos, o de lo contrario enviarse para la consulta\n[3/03/2026] se inician los ajustes para la carga de los soportes y que no se renombren los soportes con solo el numero de solicitud, sino que queden solicitud y cc de la consulta. Se confirma el proceso que hace la lectura del PDF para guardar si  viene reportado en listas y ajustar tambien que lea el pdf afiliacion_identificacion\n[5/03/2026] confirmacion de la última parte del proceso, donde despues se valida el resultado de la lectura del pdf, para saber si la solicitud queda devuelta o continua el proceso normal, y se adjunta la imagen a cada afiliación",
+    "endDate": "05/03/2026",
+    "observations": "[25/02/2026] Se crea campo nuevo para diferenciar el titular del beneficiario.,se Realiza revisión del momento en el que se coloca la información en la tabla de consulta sarlaft para que se empiecen a almacenar los usuarios que sean mayores a 18 años\n[26/02/2026] en el proceso de consulta, de captura y verificación del sarlaft, se ajusta para omitir los registros que corresponden a beneficiarios, dado que por ellos no se recibirá documento, sino solo el del titular, más sin embargo si se llegase a devolver por alguna inconsistencia, los registros de los beneficiarios, tambien deben quedar devueltos, o de lo contrario enviarse para la consulta\n[3/03/2026] se inician los ajustes para la carga de los soportes y que no se renombren los soportes con solo el numero de solicitud, sino que queden solicitud y cc de la consulta. Se confirma el proceso que hace la lectura del PDF para guardar si  viene reportado en listas y ajustar tambien que lea el pdf afiliacion_identificacion\n[5/03/2026] confirmacion de la última parte del proceso, donde despues se valida el resultado de la lectura del pdf, para saber si la solicitud queda devuelta o continua el proceso normal, y se adjunta la imagen a cada afiliación. se dispone en pruebas y valida\n[6/03/2026] Se pasa a produccion y se hacen 2 pruebas controladas para revisar el proceso completo",
     "unit": "Colmedica",
     "detail": "Se debe hacer la consulta por el titular y los usuarios que vengan en el formulario mayores de edad, incluir en base de datos y se debe modificar el cargue de respuesta de infolat, por que ya se cargaran varios soportes a la misma solicitud",
     "visible": true,
@@ -1077,7 +1077,7 @@
     "fechaEstimadaEntrega": "06/03/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 7,
-    "produccion": ""
+    "produccion": "06/03/2026"
   },
   {
     "id": "OPT_42",

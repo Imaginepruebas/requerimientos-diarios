@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 283,
+    "diasTotalDesarrollo": 285,
     "produccion": ""
   },
   {
@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 283,
+    "diasTotalDesarrollo": 285,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 283,
+    "diasTotalDesarrollo": 285,
     "produccion": ""
   },
   {
@@ -68,7 +68,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 283,
+    "diasTotalDesarrollo": 285,
     "produccion": ""
   },
   {
@@ -86,14 +86,14 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 283,
+    "diasTotalDesarrollo": 285,
     "produccion": ""
   },
   {
     "id": "3",
     "title": "Migración Virtualización, Ajustar módulos",
     "assigned": "FAVER",
-    "state": "Finalizado",
+    "state": "Pausado",
     "progress": 100,
     "startDate": "10/01/2025",
     "endDate": "",
@@ -104,14 +104,14 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 283,
+    "diasTotalDesarrollo": 285,
     "produccion": ""
   },
   {
     "id": "3-1",
     "title": "Pruebas Migración Virtualización",
     "assigned": "NATALIA",
-    "state": "Finalizado",
+    "state": "Pausado",
     "progress": 100,
     "startDate": "10/01/2025",
     "endDate": "",
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 283,
+    "diasTotalDesarrollo": 285,
     "produccion": ""
   },
   {
@@ -132,7 +132,7 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
-    "endDate": "",
+    "endDate": "27/06/2025",
     "observations": "\"Estamos a la espera de la instalación de una librería para conexión a PCO, pero es Tuya quien hace dicha instalación, pero aún no hay fecha.\n[11/07/2025]: se tuvo una reunión en la cual realizaron una ampliación de requerimiento para que los anexos que no tengan una solicitud se queden en cola dos o tres días máximo, y cuando llegue la solicitud se indexen\"",
     "unit": "Tuya",
     "detail": "Crear un cliente en nodejs que una vez que se detecten los tipos de anexo envíe vía API el detalle de acuerdo a cada solicitud.\n\n\n",
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 172,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
@@ -150,7 +150,7 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
-    "endDate": "",
+    "endDate": "27/06/2025",
     "observations": "[27/06/2025]: Se realizó modificación del codigo de oficina como opcional",
     "unit": "Tuya",
     "detail": "El viernes 11 de julio, se tuvo una reunión en la cual realizaron una ampliación de requerimiento para que los anexos que no tengan una solicitud se queden en cola dos o tres días máximo, y cuando llegue la solicitud se indexen\"",
@@ -158,7 +158,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 172,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
@@ -168,7 +168,7 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
-    "endDate": "",
+    "endDate": "27/06/2025",
     "observations": "[27/06/2025]: Se realizaron ajustes necesarios y se modificó el documento con respecto a mensajes de error",
     "unit": "Tuya",
     "detail": "",
@@ -176,7 +176,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 172,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
@@ -186,7 +186,7 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "24/06/2025",
-    "endDate": "",
+    "endDate": "27/08/2025",
     "observations": "[24/07/2025]: Este pundo depende del cliente que se construye con el punto 1. la funcionalidad de envio a pendientes serviria para ambos servicios.\n[13/08/2025]: en el momento el cliente se encuentra haciendo pruebas de la indexación de anexos, y la cola de espera.\nEn cuanto el 3 punto, estamos en espera de la instalación de una libreria para el consumo de un servicio de Soap, esto ya que por medio de métodos manuales no fue posible para todos los casos. Apenas tenga la autorización lo único que haría falta es desarrollar el cliente y traer los datos que se requieren para indexar la solicitud y sus anexos.\nTambién en la reunión de entrega surgieron unas validaciones adicionales, pero de esa parte no nos han enviado el requerimiento ya que depende de definiciones de ellos.\n[20/08/2025]: con respecto a el desarrollo del Api, se realizó lo requerido, sin embargo surgió un cambio muy necesario al recibir los documentos, es el siguiente: \"Espero que te encuentres bien. Después de revisar la duda planteada, te cuento que:\nEl control para la operación de .zip\nSi la solicitud existe - no se vuelve a indexar\nSi los anexos existen – no se vuelven a indexar\nSi los anexos no existen – se adicionan a los documentos.\nEn caso de que todos los documentos existan devolver:  No se requieren agregar nuevamente los documentos.\nSi, se agrega al menos un documento: Los anexos faltantes fueron agregados a la solicitud.\nSi, todos se agregan: Proceso exitoso.\"\nVoy a agregar la lógica para estas validaciones y realizar pruebas nuevamente con la usuaria, con esto daríamos por finalizado este desarrollo, solo quedaría actualizar la documentación y el paso a producción.\n[22/08/2025]: en cuanto al Api, se realizó la entrega del último método con todos los ajustes y validaciones requeridas, adicionalmente se entregó la documentación técnica al día\nQueda la implementación por parte de ellos, pruebas de integración y paso a producción.\n[27/08/2025]: Se revisa en conjunto con el cliente  de funcionamiento del ultimo método, punto 4, se realizan ajustes de forma en la generación de mensajes de éxito y se ajusta documentación \nSe realiza ajuste para q reciba solamente documentación de la solicitud sin anexo, esto en caso de falla al momento de la generación de los anexos.",
     "unit": "Tuya",
     "detail": "Este proceso en una unica operación, la cual debe consumir el API de pendientes para registrar los documentos enviados",
@@ -194,7 +194,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 172,
+    "diasTotalDesarrollo": 44,
     "produccion": ""
   },
   {
@@ -203,8 +203,8 @@
     "assigned": "WILSON",
     "state": "Finalizado",
     "progress": 100,
-    "startDate": "",
-    "endDate": "",
+    "startDate": "01/08/2025",
+    "endDate": "14/08/2025",
     "observations": "[14/08/2025]: En cuanto a los desarrollo del Api, ayer definieron que no vamos a realizar la conexión si no que ellos nos envían los datos necesarios, les expliqué la lógica al respecto y como nos deben enviar los datos, surge el cambio en el servicio para recibir y validar los datos.\nEn este caso no quisieron avalar la librería solicitada y para poder poner la que nos ofrecieron nos tocaba migrar todo el Api.\nEn este caso ellos deben validar y enviar la información del producto a ingresar, realmente no es mucho lo que deben hacer para consultar y traer los datos que requerimos\nEn otras palabras es algo que genera un impacto muy bajo de quien lo deba hacer.",
     "unit": "Tuya",
     "detail": "Ddefinieron que no vamos a realizar la conexión si no que ellos nos envían los datos necesarios,",
@@ -212,7 +212,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 9,
     "produccion": ""
   },
   {
@@ -222,7 +222,7 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "19/06/2025",
-    "endDate": "",
+    "endDate": "24/06/2025",
     "observations": "Se realiza validación en el sistema y se envía respuesta al usuario solicitante",
     "unit": "Tuya",
     "detail": "Se requiere que con la base de datos que comparten, identificar si tienen documento de solicitud de crédito en Imagine",
@@ -230,7 +230,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 174,
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   },
   {
@@ -240,7 +240,7 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "19/06/2025",
-    "endDate": "",
+    "endDate": "24/06/2025",
     "observations": "Se realiza validación en el sistema y se envía respuesta al usuario solicitante",
     "unit": "Tuya",
     "detail": "Validación de 36665 clientes, por medio de archivo adjunto, donde se pueda identificar que clientes cuentan con una autorización de tratamiento de datos personales",
@@ -248,7 +248,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "24/06/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 174,
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 173,
+    "diasTotalDesarrollo": 175,
     "produccion": ""
   },
   {
@@ -330,7 +330,7 @@
     "state": "Finalizado",
     "progress": 100,
     "startDate": "25/06/2025",
-    "endDate": "",
+    "endDate": "13/11/2025",
     "observations": "Esta pendiente de aprobación por Tuya",
     "unit": "Tuya",
     "detail": "Se debe crear un nuevo método en el API en el cual se recibe archivo .zip y adicional el listado de tipos de documento que contiene de manera que se agregue un nuevo lote con un documento principal y sus anexos y adicionalmente se reporte a PCO vía API REST los documentos según configuración.",
@@ -338,8 +338,8 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 171,
-    "produccion": ""
+    "diasTotalDesarrollo": 97,
+    "produccion": "13/11/2025"
   },
   {
     "id": "171",
@@ -601,14 +601,14 @@
     "progress": 95,
     "startDate": "29/09/2025",
     "endDate": "",
-    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 2: se determina un tiempo de desarrollo de 4 semanas\noct 16: Faver realiza validación del requerimiento, con el fin de tener mas claridad de la solicitud por parte del cliente y el impacto que genera en el aplicativo \noct 23: Se realizan pruebas y se envían evidencias al cliente para pruebas por parte de ellos\noct 31: el cliente informa que las pruebas por parte de ellos fueron exitosas, se esta a la espera del paso a producción",
+    "observations": "oct 01: se tuvo reunión con usuarios para alcaración de dudas con respecto a requerimientos\noct 2: se determina un tiempo de desarrollo de 4 semanas\noct 16: Faver realiza validación del requerimiento, con el fin de tener mas claridad de la solicitud por parte del cliente y el impacto que genera en el aplicativo \noct 23: Se realizan pruebas y se envían evidencias al cliente para pruebas por parte de ellos\noct 31: el cliente informa que las pruebas por parte de ellos fueron exitosas, se esta a la espera del paso a producción\nMarzo 06:De parte del cliente completaron las pruebas pero solo se paso una parte a producción\nEllos deben terminar un ajuste y volver a probar el pendiente",
     "unit": "Tuya",
     "detail": "se requiere esta opción en el aparte de anexos, con el fin de que no se devuelva la acción de anulación. Se debe informar al usuario si esta seguro de realizar la anulación.",
     "visible": true,
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 106,
+    "diasTotalDesarrollo": 108,
     "produccion": ""
   },
   {
@@ -741,7 +741,7 @@
     "id": "301",
     "title": "Cambiar Servidor",
     "assigned": "FAVER",
-    "state": "En Proceso",
+    "state": "Pausado",
     "progress": 20,
     "startDate": "01/10/2025",
     "endDate": "",
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 104,
+    "diasTotalDesarrollo": 106,
     "produccion": ""
   },
   {
@@ -1720,7 +1720,7 @@
     "observations": "",
     "unit": "Tuya",
     "detail": "Solicitan entregar un reporte de documentos para validar la posibilidad para venta de cartera",
-    "visible": true,
+    "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
@@ -1778,6 +1778,42 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "04/03/2026",
     "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "359",
+    "title": "Reunión Seguimiento Febrero",
+    "assigned": "FAVER Y NATALIA",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "05/03/2026",
+    "endDate": "05/03/2026",
+    "observations": "[05/03/2026]: Se da siguimiento con el cliente a los casos recibidos el mes de febrero, se establecen compromisos de Imagine para entregar informacion de casos frecuentes.",
+    "unit": "Tuya",
+    "detail": "Reunión mensual de seguimiento a incidentes radicados a Imagine",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "360",
+    "title": "Enviar Reporte Casos Mas Escalados a Imagine",
+    "assigned": "FAVER Y NATALIA",
+    "state": "Finalizado",
+    "progress": 0,
+    "startDate": "06/03/2026",
+    "endDate": "06/03/2026",
+    "observations": "[06/03/2026]: se realiza informe y se envia al usuario solicitante, se esta a la espera de revisión.",
+    "unit": "Tuya",
+    "detail": "Se enviara un reporte detallado en el que informara la casuistica mas escaladas en Servicenow, en las cuales el usuario es el responsable directo de dar la solución sin necesidad de realizar un escalamiento adicional",
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "10/03/2026",
+    "fechaCompromisoCliente": "10/03/2026",
     "diasTotalDesarrollo": 1,
     "produccion": ""
   }

@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 97,
+    "diasTotalDesarrollo": 98,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 88,
+    "diasTotalDesarrollo": 89,
     "produccion": ""
   },
   {
@@ -284,13 +284,13 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "22/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 35,
+    "diasTotalDesarrollo": 36,
     "produccion": ""
   },
   {
     "id": "automatizacion",
     "title": "counsulta automatica senda",
-    "assigned": "JHON BERMUDEZ",
+    "assigned": "BRAYAN DIAZ",
     "state": "En Proceso",
     "progress": 5,
     "startDate": "14/01/2026",
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 13,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 37,
+    "diasTotalDesarrollo": 38,
     "produccion": ""
   },
   {
@@ -356,7 +356,7 @@
     "diasEstimadosDesarrollo": 11,
     "fechaEstimadaEntrega": "09/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 29,
+    "diasTotalDesarrollo": 30,
     "produccion": ""
   },
   {
@@ -364,9 +364,9 @@
     "title": "mejora acces novedades",
     "assigned": "BRAYAN DIAZ",
     "state": "Finalizado",
-    "progress": 95,
+    "progress": 100,
     "startDate": "05/02/2026",
-    "endDate": "",
+    "endDate": "05/02/2026",
     "observations": "20260205 se deja para la realizacion de pruebas ",
     "unit": "Colmena",
     "detail": "habilitar en php la opcion de modificacion en tablas temporales que actualmente se hacie en access",
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "17/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 20,
+    "diasTotalDesarrollo": 21,
     "produccion": ""
   },
   {
@@ -403,14 +403,14 @@
     "progress": 90,
     "startDate": "12/02/2026",
     "endDate": "",
-    "observations": "[25/02/2026]: Desarrollo en local \n[05/03/2026] se dbe reaajsutar desarrollo usando la estructura de tablas y bases correctas para ajustarse al ambiente real de produccion ",
+    "observations": "[25/02/2026]: Desarrollo en local ",
     "unit": "Colmena",
     "detail": "migracion de la opcion de reembolsos a python ",
     "visible": true,
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "16/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 16,
+    "diasTotalDesarrollo": 17,
     "produccion": ""
   },
   {
@@ -446,7 +446,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 6,
+    "diasTotalDesarrollo": 7,
     "produccion": ""
   },
   {
@@ -464,7 +464,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 9,
+    "diasTotalDesarrollo": 10,
     "produccion": ""
   },
   {
@@ -525,8 +525,8 @@
     "id": "MEJORA_23",
     "title": "mejora bandeja enfermedad laboral ",
     "assigned": "BRAYAN DIAZ",
-    "state": "En Proceso",
-    "progress": 95,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "04/03/2026",
     "endDate": "04/03/2026",
     "observations": "20260304 se implementa y se pasa a produccion despues de la revision de jennifer ",
