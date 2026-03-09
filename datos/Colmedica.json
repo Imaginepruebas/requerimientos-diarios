@@ -364,17 +364,17 @@
     "title": "Afiliaciones PRE - Generacion de Kits",
     "assigned": "JENNIFER",
     "state": "En Proceso",
-    "progress": 50,
+    "progress": 85,
     "startDate": "25/02/2026",
     "endDate": "",
-    "observations": "[9/09/2025] Se inicia con el levantamiento de información para iniciar con el desarrollo\n[11/09/2025] Creación de schema-tabla principal - el resto se revisarán si son necesarias o como se ajusta seguramente se puedan omitir\n[12/09/2025] Se inicia el desarrollo para traer la información (Pagina principal - página de funciones)\n[16/09/2025] Avance en los tipos de proceso que se ejectutan Normal,Chevron,Puntual\n[19/09/2025] Lectura del encabezado para ir sacando el registro tipo 1 (Encabezado)\n[25/02/2026] se retoma, el desarrollo dandole un vuelco para unificar el código y dejarlo de manera virtual\n[26/02/2026] ajustes a la pagina a conexiones de bases de datos dependiendo de la base donde se encuentre la tabla\n[27/02/2026] Ajuste de ciclos y querys según las funciones y/o clases defindas en la conexión ya existente. Ya no genera error el código, pero se le está haciendo seguimiento a los querys y ejecución para obtener el resultado de los respectivos archivos",
+    "observations": "[9/09/2025] Se inicia con el levantamiento de información para iniciar con el desarrollo\n[11/09/2025] Creación de schema-tabla principal - el resto se revisarán si son necesarias o como se ajusta seguramente se puedan omitir\n[12/09/2025] Se inicia el desarrollo para traer la información (Pagina principal - página de funciones)\n[16/09/2025] Avance en los tipos de proceso que se ejectutan Normal,Chevron,Puntual\n[19/09/2025] Lectura del encabezado para ir sacando el registro tipo 1 (Encabezado)\n[25/02/2026] se retoma, el desarrollo dandole un vuelco para unificar el código y dejarlo de manera virtual\n[26/02/2026] ajustes a la pagina a conexiones de bases de datos dependiendo de la base donde se encuentre la tabla\n[27/02/2026] Ajuste de ciclos y querys según las funciones y/o clases defindas en la conexión ya existente. Ya no genera error el código, pero se le está haciendo seguimiento a los querys y ejecución para obtener el resultado de los respectivos archivos\n[6/03/2026] se terminaron de ajustar los errores de la pagina en la generación de afiliaciones nuevas\n[9/03/2026] se empiezan a validar inconsistencias para la generación de Inclusiones. y como ya se generan archivos, pues se debe realizar la comparación de estructura y data con la generada actualmente por el access",
     "unit": "Colmedica",
     "detail": "Cambiar la plataforma del Access - Crear archivos planos enviados al proveedor que hace el envío de los Kits a los clientes de medicina prepagada, a partir del correo que ya se envía de confirmación del cargue de las preexistencias. Si todo esta Cargado, generar archivos planos, conectarse a la ruta y dejar los archivos, enviar correo notificando de la generación. En caso de que las preexistencias no esten todas cargadas, no se genera nada autmático, sin embargo se dispondrá una opción desde el Sitio Web de Imagine para que se generen dihos archivos.",
     "visible": true,
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "06/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 8,
+    "diasTotalDesarrollo": 9,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 129,
+    "diasTotalDesarrollo": 130,
     "produccion": ""
   },
   {
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 104,
+    "diasTotalDesarrollo": 105,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 82,
+    "diasTotalDesarrollo": 83,
     "produccion": ""
   },
   {

@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 285,
+    "diasTotalDesarrollo": 286,
     "produccion": ""
   },
   {
@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 285,
+    "diasTotalDesarrollo": 286,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 285,
+    "diasTotalDesarrollo": 286,
     "produccion": ""
   },
   {
@@ -68,7 +68,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 285,
+    "diasTotalDesarrollo": 286,
     "produccion": ""
   },
   {
@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 285,
+    "diasTotalDesarrollo": 286,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 285,
+    "diasTotalDesarrollo": 286,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 285,
+    "diasTotalDesarrollo": 286,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 175,
+    "diasTotalDesarrollo": 176,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 108,
+    "diasTotalDesarrollo": 109,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 106,
+    "diasTotalDesarrollo": 107,
     "produccion": ""
   },
   {
@@ -1720,7 +1720,7 @@
     "observations": "",
     "unit": "Tuya",
     "detail": "Solicitan entregar un reporte de documentos para validar la posibilidad para venta de cartera",
-    "visible": false,
+    "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
@@ -1804,7 +1804,7 @@
     "title": "Enviar Reporte Casos Mas Escalados a Imagine",
     "assigned": "FAVER Y NATALIA",
     "state": "Finalizado",
-    "progress": 0,
+    "progress": 100,
     "startDate": "06/03/2026",
     "endDate": "06/03/2026",
     "observations": "[06/03/2026]: se realiza informe y se envia al usuario solicitante, se esta a la espera de revisión.",
@@ -1814,6 +1814,42 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "10/03/2026",
     "fechaCompromisoCliente": "10/03/2026",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "361",
+    "title": "Soporte 3 Casos Sarita",
+    "assigned": "FAVER Y NATALIA",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "09/03/2026",
+    "endDate": "09/03/2026",
+    "observations": "[09/03/2026]: Se realiza la revision y validacion de cada uno de los casos asignados a Imagine, se realizan las gestiones correspondientes ya que no eran tema de Imagine, el cliente realiza las correcciones y se procede a dar respuesta a los usuarios que radicaron los incidentes.",
+    "unit": "Tuya",
+    "detail": "Clientes radican 3 casos en plataforma de servicenow",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "09/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "362",
+    "title": "Revision Servicios en Sala AZUL",
+    "assigned": "FAVER",
+    "state": "En Proceso",
+    "progress": 100,
+    "startDate": "09/03/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Tuya",
+    "detail": "el cliente solicita a imagine en sala azul para revisar incidente de afectacion general en las dematerialización de pagares",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
     "produccion": ""
   }

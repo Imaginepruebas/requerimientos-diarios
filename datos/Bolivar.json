@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 230,
+    "diasTotalDesarrollo": 231,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "30/04/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 212,
+    "diasTotalDesarrollo": 213,
     "produccion": ""
   },
   {
@@ -1058,7 +1058,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 14,
+    "diasTotalDesarrollo": 15,
     "produccion": ""
   },
   {
@@ -1292,7 +1292,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 157,
+    "diasTotalDesarrollo": 158,
     "produccion": ""
   },
   {
@@ -1760,7 +1760,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "13/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 23,
+    "diasTotalDesarrollo": 24,
     "produccion": ""
   },
   {
@@ -1786,17 +1786,17 @@
     "title": "Actualizacion Nativo-  Migracion vista  Workflow Radicación",
     "assigned": "JESUS",
     "state": "En Proceso",
-    "progress": 40,
+    "progress": 70,
     "startDate": "03/03/2026",
     "endDate": "",
-    "observations": "[04/03/2026]: Se inició formalmente la migración de la vista Workflow Radicación dentro del proceso de renovación del aplicativo Nativo\n[06/03/2026]: La  vista la  componen de 38 opciones  de las cuales se han  migrado  16, hoy  se continua con la migración.",
+    "observations": "[04/03/2026]: Se inició formalmente la migración de la vista Workflow Radicación dentro del proceso de renovación del aplicativo Nativo\n[06/03/2026]: La  vista la  componen de 38 opciones  de las cuales se han  migrado  16, hoy  se continua con la migración.\n[09/03/2026]; Se avanza en la  migración de las opciones de la vista, pendiente por migrar  10 opciones.",
     "unit": "Bolivar",
     "detail": "migración de la vista “Workflow Radicación”, incluyendo mejora visual en Administración de Tipologías para hacer más comprensible la estructura y relaciones.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 4,
+    "diasTotalDesarrollo": 5,
     "produccion": ""
   },
   {
@@ -1940,25 +1940,25 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 8,
+    "diasTotalDesarrollo": 9,
     "produccion": ""
   },
   {
     "id": "GD772-204",
     "title": "Incluir en la lectura IA la tipología renovación autorizaciones salud",
     "assigned": "DANILO",
-    "state": "Pendiente",
+    "state": "En Proceso",
     "progress": 0,
-    "startDate": "",
+    "startDate": "09/03/2026",
     "endDate": "",
-    "observations": "",
+    "observations": "[09/03/2026]: Se estima sacar el tiempo hoy  para  incluir la tipologia  solicitada.",
     "unit": "Bolivar",
     "detail": "Se solicita incluir en la lectura de la IA la tipología del portal Renovación de autorización el cual debe seguir las siguientes reglas : \n\n \n\nRadicado inicial,  entra a a la tipologia 10490 poliza de salud radicación:\n\nCUPS encuentra\n\nSI = asignar a tipologia Autorizaciones Línea Médica - codigo tipologia 10649\nNO= asignar a tipologia Preautorizaciones póliza de salud - Delegación Médicos - codigo tipologia 10491\n\nCuando no encontro coincidencia de cups se queda en la tipologia 10490.",
     "visible": false,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
@@ -2012,7 +2012,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 153,
+    "diasTotalDesarrollo": 154,
     "produccion": ""
   },
   {
@@ -2210,7 +2210,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 150,
+    "diasTotalDesarrollo": 151,
     "produccion": ""
   },
   {
@@ -2264,7 +2264,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 150,
+    "diasTotalDesarrollo": 151,
     "produccion": ""
   },
   {
@@ -2390,7 +2390,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 45,
+    "diasTotalDesarrollo": 46,
     "produccion": ""
   },
   {
@@ -2570,25 +2570,25 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 23,
+    "diasTotalDesarrollo": 24,
     "produccion": ""
   },
   {
     "id": "GD772-199",
     "title": "PASAR FACTURAS MULTIUSUARIO BAJA COMPLEJIDAD A BANDEJA MASIVO",
     "assigned": "JAIRO",
-    "state": "Pausado",
+    "state": "En Proceso",
     "progress": 50,
     "startDate": "11/02/2026",
     "endDate": "",
-    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.\n[13/02/2026]: Se realizó implementación en ambiente local. Pendiente estrategias de pruebas \n[17/02/2026]: Funcionalidad ya desarrollada en local, Pendiente ejecución de pruebas\n[20/02/2026]: La lógica ya está construida, pero no se han desarrollado los procedimientos asociados. Estado intermedio con pendiente técnico claro.\n[23/02/2026]: El desarrollo está listo a nivel funcional, pendiente despliegue a ambiente de pruebas (test) y solicitud de control de cambios. Posteriormente se debe ejecutar prueba con factura real para validar comportamiento del servicio de radicación masiva.\nSe escala  control de cambios MDSB-987316\n[24/02/2026]: C ontrol de cambios ejecutado correctamente.\n[25/02/2026]: Completar una parte faltante para subirlo a test.\n[27/02/2026]: Detenido  por avance en el req \"Nuevo desarrollo de incapacidades para Bolívar\"",
+    "observations": "[11/02/2026]: Se estima iniciar hoy  con esta mejora.\n[13/02/2026]: Se realizó implementación en ambiente local. Pendiente estrategias de pruebas \n[17/02/2026]: Funcionalidad ya desarrollada en local, Pendiente ejecución de pruebas\n[20/02/2026]: La lógica ya está construida, pero no se han desarrollado los procedimientos asociados. Estado intermedio con pendiente técnico claro.\n[23/02/2026]: El desarrollo está listo a nivel funcional, pendiente despliegue a ambiente de pruebas (test) y solicitud de control de cambios. Posteriormente se debe ejecutar prueba con factura real para validar comportamiento del servicio de radicación masiva.\nSe escala  control de cambios MDSB-987316\n[24/02/2026]: C ontrol de cambios ejecutado correctamente.\n[25/02/2026]: Completar una parte faltante para subirlo a test.\n[27/02/2026]: Detenido  por avance en el req \"Nuevo desarrollo de incapacidades para Bolívar\"\n[09/03/2026]: Se retomara y se terminara una parte pendiente del codigo.",
     "unit": "Bolivar",
     "detail": "Se requiere pasar facturas multiusuario baja complejidad a bandeja masivo, los usuarios que no coincidan o no cumplan  con la siguiente regla deben ser asignados a bandeja analista baja complejidad.\n\nValor autorizado- deducible= valor pendiente\nValor factura- deducible= Valor cobrado\n\nSi los 2 coinciden pueden pasar a pago masivo.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 18,
+    "diasTotalDesarrollo": 19,
     "produccion": ""
   },
   {
@@ -2668,17 +2668,17 @@
     "title": "Nuevo desarrollo de incapacidades para Bolívar",
     "assigned": "JAIRO",
     "state": "En Proceso",
-    "progress": 30,
+    "progress": 35,
     "startDate": "23/02/2026",
     "endDate": "",
-    "observations": "[18/02/2026]: Actualmente, el avance se concentra en la etapa de entendimiento y planificación, lo que implica. No se reportan aún actividades de desarrollo\n[23/02/2026]: Se mantiene como línea de trabajo prioritaria iniciar hoy.\n[25/02/2026]: Se definió el stack inicial y se integró la autenticación con doble factor, Se está trabajando en la optimización de consultas (queries) y creación de vistas materializadas para mejorar el rendimiento, pendiente completar tablas faltantes en la base de datos local para habilitar la bandeja de consulta.\n[27/02/2026]: Se están corrigiendo errores en la consulta y se inició el desarrollo de la pantalla de detalle, otras actividades están pausadas mientras se avanza en este frente\n[02/03/2026]: El viernes 27 de febrero se avanzó en el análisis y migración de la lógica existente hacia el nuevo entorno, manteniendo las reglas actuales de negocio. Ya se construyó el menú y el listado conectado a base de datos; queda pendiente la configuración de permisos y la validación funcional para asegurar que lo implementado corresponde con el comportamiento esperado por el cliente.\n[04/03/2026]: Se continúa con la migración y ajuste del módulo. Se han corregido errores y se está organizando la lógica de gestión.\n[06/03/2026]: Se continúa trabajando en el módulo relacionado con la gestión de incapacidades, específicamente en la revisión y ajuste de los diferentes modales y servicios asociados al proceso de gestión y resolución.\nAdicionalmente, se está evaluando la posibilidad de incorporar funcionalidades adicionales como un chat o mecanismo de interacción dentro del sistema, conforme a solicitudes recibidas.",
+    "observations": "[18/02/2026]: Actualmente, el avance se concentra en la etapa de entendimiento y planificación, lo que implica. No se reportan aún actividades de desarrollo\n[23/02/2026]: Se mantiene como línea de trabajo prioritaria iniciar hoy.\n[25/02/2026]: Se definió el stack inicial y se integró la autenticación con doble factor, Se está trabajando en la optimización de consultas (queries) y creación de vistas materializadas para mejorar el rendimiento, pendiente completar tablas faltantes en la base de datos local para habilitar la bandeja de consulta.\n[27/02/2026]: Se están corrigiendo errores en la consulta y se inició el desarrollo de la pantalla de detalle, otras actividades están pausadas mientras se avanza en este frente\n[02/03/2026]: El viernes 27 de febrero se avanzó en el análisis y migración de la lógica existente hacia el nuevo entorno, manteniendo las reglas actuales de negocio. Ya se construyó el menú y el listado conectado a base de datos; queda pendiente la configuración de permisos y la validación funcional para asegurar que lo implementado corresponde con el comportamiento esperado por el cliente.\n[04/03/2026]: Se continúa con la migración y ajuste del módulo. Se han corregido errores y se está organizando la lógica de gestión.\n[06/03/2026]: Se continúa trabajando en el módulo relacionado con la gestión de incapacidades, específicamente en la revisión y ajuste de los diferentes modales y servicios asociados al proceso de gestión y resolución.\nAdicionalmente, se está evaluando la posibilidad de incorporar funcionalidades adicionales como un chat o mecanismo de interacción dentro del sistema, conforme a solicitudes recibidas.\n",
     "unit": "Bolivar",
     "detail": "Durante la sesión se indicó que el requerimiento se encuentra en fase inicial, ya que el desarrollo aún no ha comenzado a nivel técnico. Sin embargo, sí existe un enfoque claro de implementación, que consiste en reutilizar como base el flujo y la lógica previamente construidos para el proyecto de Alfa y adaptarlos a las necesidades específicas del cliente Seguros Bolívar.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 10,
+    "diasTotalDesarrollo": 11,
     "produccion": ""
   },
   {
@@ -2768,7 +2768,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 135,
+    "diasTotalDesarrollo": 136,
     "produccion": ""
   },
   {
@@ -2840,7 +2840,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "04/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 4,
+    "diasTotalDesarrollo": 5,
     "produccion": ""
   },
   {
@@ -2984,7 +2984,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 102,
+    "diasTotalDesarrollo": 103,
     "produccion": ""
   },
   {
@@ -3243,19 +3243,37 @@
     "id": "MDSB-996108",
     "title": "Jiras día a dia (Solicitud de listado de usurios Activos)",
     "assigned": "JESUS",
-    "state": "Pendiente",
+    "state": "En Proceso",
     "progress": 0,
-    "startDate": "",
+    "startDate": "09/03/2026",
     "endDate": "",
-    "observations": "",
+    "observations": "[09/03/2026]: Se inicia  extracción  de información.",
     "unit": "Bolivar",
     "detail": "Solicitamos por favor la colaboración de ustedes para obtener el listado general de usuarios en estado activo que realizan alguna gestión dentro del aplicativo imagine (nativo, YII o laravel); excluyendo los usuarios que unicamente consultan o unicamente radican.\n\nCantidad\n\nlistado de usuarios (numero de documento, correo, nombres)",
-    "visible": false,
-    "diasEstimadosDesarrollo": 0,
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "09/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "MDSB-997453",
+    "title": "Jiras día a dia (Error en la descarga de informes de gestión)",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "09/03/2026",
+    "endDate": "09/03/2026",
+    "observations": "[09/03/2026]: Se realiza ajuste en test , se realiazan pruebas  exitosas, se realizara  paso a producción \nSe valida incidencia en la descarga del Informe de Gestión, identificando alto tiempo de procesamiento por múltiples consultas por registros en la generación del reporte. Se optimiza el proceso realizando una sola consulta por registro.",
+    "unit": "Bolivar",
+    "detail": "Por medio de la presente refiero que he intentado realizar la descarga en repetidas ocaciones de reportes de “Informe de Gestión”, los cuales son descargados pero no cargan aun cuando el periodo de tiempo elegido no es el mes completo sino por ejemplo se eligen solo 15 días.\n\nColicito por tanto validar la incidencia para poder disponder del respectivo archivo descargado.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
-    "produccion": ""
+    "diasTotalDesarrollo": 1,
+    "produccion": "09/03/2026"
   },
   {
     "id": "INTERNO-JE001",
@@ -3416,7 +3434,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "16/05/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 200,
+    "diasTotalDesarrollo": 201,
     "produccion": ""
   },
   {
@@ -3668,7 +3686,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 124,
+    "diasTotalDesarrollo": 125,
     "produccion": ""
   },
   {
@@ -3704,7 +3722,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 117,
+    "diasTotalDesarrollo": 118,
     "produccion": "30/12/2025"
   },
   {
@@ -3776,7 +3794,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 62,
+    "diasTotalDesarrollo": 63,
     "produccion": ""
   },
   {
@@ -4082,7 +4100,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 83,
+    "diasTotalDesarrollo": 84,
     "produccion": ""
   },
   {
@@ -4478,7 +4496,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 133,
+    "diasTotalDesarrollo": 134,
     "produccion": ""
   },
   {
@@ -4496,7 +4514,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 110,
+    "diasTotalDesarrollo": 111,
     "produccion": ""
   },
   {
@@ -4863,18 +4881,18 @@
     "id": "GD772-207",
     "title": "Agregar Botón de Xpertia al portal de proveedores",
     "assigned": "JAIRO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[03/03/2026]; Si necesitan que el logo se muestre en el botón es necesario mandarlo en formato que permita la manipulación, puede ser en formato SVG.\n[05/03/2026]: Liyibet envia el boton en el formato solicitado.\n[06/03/2026]: Se estima inciar desarrollo la proxima semana.",
+    "state": "En Proceso",
+    "progress": 50,
+    "startDate": "09/03/2026",
+    "endDate": "09/03/2026",
+    "observations": "[03/03/2026]; Si necesitan que el logo se muestre en el botón es necesario mandarlo en formato que permita la manipulación, puede ser en formato SVG.\n[05/03/2026]: Liyibet envia el boton en el formato solicitado.\n[06/03/2026]: Se estima inciar desarrollo la proxima semana.\n[09/03/2026]: Se le dedicara tiempo  hoy al este desarrollo.\nImplementaciòn en test , El archivo enviado, aunque tiene la extensión .svg, no corresponde realmente a un archivo con esa característica; en realidad se trata de un archivo PNG codificado en Base64.\n\nAdicionalmente, el botón no resulta claro en cuanto a su funcionalidad. Considero que sería necesario incluir un texto explicativo o un hablador que indique su propósito, ya que, desde la perspectiva de un proveedor que ingresa a la plataforma, no es evidente qué acción realiza o cuál es la función del nuevo botón.",
     "unit": "Bolivar",
     "detail": "GD772-207 - BOTON EXPERTIA\nSe requiere que en el portal de proveedores se agregue un direccionamiento al siguiente sitio :\nhttps://digital.experienciasbolivar.segurosbolivar.com/xpertia-web\nImagine debe crear un boton con el logo de Xpertia en el cajon que se muestra a continuación .\nLo que se espera es que este logo redireccione al sitio anteriormente mencionado abriendo una pestaña nueva.\nel logo de xpertia es el siguiente :",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
@@ -4892,7 +4910,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 73,
+    "diasTotalDesarrollo": 74,
     "produccion": ""
   },
   {
@@ -6001,14 +6019,14 @@
     "progress": 10,
     "startDate": "04/03/2026",
     "endDate": "",
-    "observations": "[11/02/2026]: El día de hoy se finaliza el entrenamiento pendiente y se inicia la construcción de dicha interfaz.\n[13/02/2026]: Se identificó la necesidad de realizar reunión de entendimiento del requerimiento para definir correctamente el alcance funcional antes de avanzar en desarrollo, Revisión de historias de usuario \n[17/02/2026]: A un no se ha podido iniciar el desarrollo, por migracion del sistetema de correspondecia de Colmena \n[24/02/2026]: El desarrollo iniciara el 2 de Marzo\n[04/03/2026]: No se ha iniciado formalmente el desarrollo. Se estima que el formulario podría construirse en un día; sin embargo, la lógica interna requiere mayor análisis para contemplar todos los escenarios y garantizar estabilidad. Se estima iniciar  hoy 4 de marzo  y Finalizar el 9 de Marzo.\n[06/03/2026]: Se iniciaron trabajos preliminares en la construcción de la interfaz destinada al entrenamiento del modelo utilizado en Oficina Express. El desarrollo comenzó durante la semana en horarios adicionales y se avanzó parcialmente en la estructura inicial.\n\nNo obstante, debido a la priorización de otras tareas técnicas (principalmente la infraestructura de contenedores y ajustes del ambiente), no se pudo dedicar tiempo reciente al desarrollo.",
+    "observations": "[11/02/2026]: El día de hoy se finaliza el entrenamiento pendiente y se inicia la construcción de dicha interfaz.\n[13/02/2026]: Se identificó la necesidad de realizar reunión de entendimiento del requerimiento para definir correctamente el alcance funcional antes de avanzar en desarrollo, Revisión de historias de usuario \n[17/02/2026]: A un no se ha podido iniciar el desarrollo, por migracion del sistetema de correspondecia de Colmena \n[24/02/2026]: El desarrollo iniciara el 2 de Marzo\n[04/03/2026]: No se ha iniciado formalmente el desarrollo. Se estima que el formulario podría construirse en un día; sin embargo, la lógica interna requiere mayor análisis para contemplar todos los escenarios y garantizar estabilidad. Se estima iniciar  hoy 4 de marzo  y Finalizar el 9 de Marzo.\n[06/03/2026]: Se iniciaron trabajos preliminares en la construcción de la interfaz destinada al entrenamiento del modelo utilizado en Oficina Express. El desarrollo comenzó durante la semana en horarios adicionales y se avanzó parcialmente en la estructura inicial.\n\nNo obstante, debido a la priorización de otras tareas técnicas (principalmente la infraestructura de contenedores y ajustes del ambiente), no se pudo dedicar tiempo reciente al desarrollo.\n[09/03/2026]: Se reiniara interfaz  hoy .",
     "unit": "Bolivar",
     "detail": "Requerimiento:\nDe acuerdo con lo conversado en la sesión de Oficina Exprés, hemos identificado que el reentrenamiento de la IA debe ser un proceso constante tras la salida a producción. Por ello, y retomando la sugerencia de Danilo, solicitamos el desarrollo de una vista que permita a Negocio realizar este reentrenamiento de forma autónoma. Agradecemos su apoyo para avanzar con este requerimiento.\n\n\nDesarrollara  Imagine:\nVamos a construir una vista para que el funcionario de Bolívar pueda entrenar el modelo de forma controlada, es decir: tomar el prompt que necesite que el sistema entienda y seleccionar manualmente el tipo de solicitud al que debe clasificarse. Ese entrenamiento se guardará en una tabla junto con el tipo de solicitud. En la noche se ejecutará un proceso que tomará esos nuevos ejemplos y también incluirá solicitudes de otros tipos, para equilibrar el modelo y evitar pérdida de porcentaje de precisión en las demás tipologias. \nAl día siguiente, el usuario ya podrá usar Oficina Express con el nuevo contexto. \nImportante : internamente debemos implementar lógica y seguridad (validaciones, control de versiones, rollback y verificación de calidad) para que el entrenamiento nuevo no nos dañe el modelo, ni el desempeño.\n\nEl dashboard de Oficina Express muestra el volumen de casos y reporta las solicitudes bien clasificadas y mal clasificadas, con base en ese porcentaje, se asigna un estado de clasificación. Incluye un gráfico de Distribución general y un gráfico de barras con el top 8 de tipologias clasificadas, para identificar en qué tipos se concentra la mayor demanda. Con esto se busca monitorear el rendimiento díario.",
     "visible": true,
     "diasEstimadosDesarrollo": 4,
     "fechaEstimadaEntrega": "09/03/2026",
     "fechaCompromisoCliente": "10/03/2026",
-    "diasTotalDesarrollo": 3,
+    "diasTotalDesarrollo": 4,
     "produccion": ""
   },
   {
@@ -6066,6 +6084,24 @@
     "produccion": ""
   },
   {
+    "id": "INTERNO-D050",
+    "title": "Refactorizacion codigo node ",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "06/03/2026",
+    "endDate": "06/03/2026",
+    "observations": "[09/03/2026]: El 6 de marzo  se realiza refactorización del codigo para que la lectura se realizara  uno a uno (1.5 segundos).",
+    "unit": "Bolivar",
+    "detail": "EL correo esta leyendo todos los  correos al mismo tiempo y  crean subprocesos  que hacia que dejara sin subprocesos a las aplicaciones y esto estaba generando la caida  presentada el  viernes 6 de Marzo.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
     "id": "INTERNO-D049",
     "title": "Segunda solicitud de Cambios correcpondencia Alfa ",
     "assigned": "DANILO",
@@ -6116,7 +6152,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 85,
+    "diasTotalDesarrollo": 86,
     "produccion": ""
   },
   {
@@ -6177,11 +6213,11 @@
     "id": "INTERNO-D047",
     "title": "Implementación de comunicación entre contenedores (Proxy Reverse) dev",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 20,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "05/03/2026",
-    "endDate": "",
-    "observations": "[27/02/2026]: Esta actividad se iniciara  tan pronto Jesus entrega el docker para el nuevo nativo.  \n[02/03/2026]: La implementación se mantiene pendiente, ya que se requiere la entrega previa de los contenedores (Dockers) por parte del equipo responsable. Una vez se disponga de estos artefactos, se procederá con la configuración de la comunicación y orquestación.\nSe estima que Jesus entregue hoy  los contenedores .\n[06/03/2026]: Se inició la implementación de contenedores necesarios para soportar el procesamiento masivo desarrollado previamente. Durante la sesión se reportó que ya se descargó el repositorio correspondiente, se comenzaron a ejecutar los Dockerfiles y se inició la construcción de los contenedores necesarios para el despliegue.\n\nTambién se comenzó la configuración del proxy para permitir la comunicación entre los componentes del sistema. Durante estas pruebas se detectó un consumo de memoria mayor al esperado en el servidor (aproximadamente 1 GB de RAM disponible), lo cual ocasionó caídas temporales durante la ejecución de comandos de compilación como NPM.",
+    "endDate": "06/03/2026",
+    "observations": "[27/02/2026]: Esta actividad se iniciara  tan pronto Jesus entrega el docker para el nuevo nativo.  \n[02/03/2026]: La implementación se mantiene pendiente, ya que se requiere la entrega previa de los contenedores (Dockers) por parte del equipo responsable. Una vez se disponga de estos artefactos, se procederá con la configuración de la comunicación y orquestación.\nSe estima que Jesus entregue hoy  los contenedores .\n[06/03/2026]: Se inició la implementación de contenedores necesarios para soportar el procesamiento masivo desarrollado previamente. Durante la sesión se reportó que ya se descargó el repositorio correspondiente, se comenzaron a ejecutar los Dockerfiles y se inició la construcción de los contenedores necesarios para el despliegue.\n\nTambién se comenzó la configuración del proxy para permitir la comunicación entre los componentes del sistema. Durante estas pruebas se detectó un consumo de memoria mayor al esperado en el servidor (aproximadamente 1 GB de RAM disponible), lo cual ocasionó caídas temporales durante la ejecución de comandos de compilación como NPM.\n[09/03/2026]: El Viernes 6 de marzo quedo implementada la infraestructura en dev para el sitio entregado de nativo entregado  por Jesus.",
     "unit": "Bolivar",
     "detail": "Se definió la necesidad de implementar un esquema de comunicación mediante proxy reverse entre los servicios (Apache y Nginx) para permitir la integración con los módulos de procesos masivos (backend y frontend). Aún no se inicia la configuración debido a que falta claridad sobre la arquitectura final del entorno, por lo que se mantiene como actividad técnica pendiente.",
     "visible": true,
@@ -6206,7 +6242,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 24,
+    "diasTotalDesarrollo": 25,
     "produccion": ""
   },
   {
@@ -6242,7 +6278,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 45,
+    "diasTotalDesarrollo": 46,
     "produccion": ""
   },
   {
@@ -6260,7 +6296,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 208,
+    "diasTotalDesarrollo": 209,
     "produccion": ""
   },
   {
@@ -6458,7 +6494,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 54,
+    "diasTotalDesarrollo": 55,
     "produccion": ""
   },
   {
