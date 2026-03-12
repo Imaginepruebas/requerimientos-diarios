@@ -374,7 +374,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "06/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 9,
+    "diasTotalDesarrollo": 10,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 130,
+    "diasTotalDesarrollo": 131,
     "produccion": ""
   },
   {
@@ -590,7 +590,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 105,
+    "diasTotalDesarrollo": 106,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 83,
+    "diasTotalDesarrollo": 84,
     "produccion": ""
   },
   {
@@ -903,11 +903,11 @@
     "id": "OPT_33",
     "title": "Comercial - Modulo de Normalización",
     "assigned": "JENNIFER",
-    "state": "En Proceso",
-    "progress": 98,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "05/02/2026",
     "endDate": "25/02/2026",
-    "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2026] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las solicitadas\n[6/02/2026] se inicia con la adición de columnas y la modificación en query para obtener el datos\n[9/02/2026] modificación en las vistas de modales con la información de devolucions y auditoria médica\n[11/02/2026] Se validan los filtros solicitados sobre los campos para consultas puntuales\n[27/02/2026] se confirman, cambios, y se informa al cliente para la revisión\n[3/03/2026] se hace reunión con el átrea para hacer retroalimentación, y piden unos ajustes de forma para poder pasar a producción\n[4/03/2026] se empiezan a hacer los ajustes solicitados en la reunión anterioir",
+    "observations": "[7/01/2026] se hace reunión con el área comercial, para ver mejoras del módulode normalización, y mejorar la revisión de las solicitudes\n[5/02/2026] Se revisa documento enviado por el área comercial, para validar los ajustes solicitados para la plataforma de Normalización de Afiliaciones, Se renombfran columnas y eliminan las solicitadas\n[6/02/2026] se inicia con la adición de columnas y la modificación en query para obtener el datos\n[9/02/2026] modificación en las vistas de modales con la información de devolucions y auditoria médica\n[11/02/2026] Se validan los filtros solicitados sobre los campos para consultas puntuales\n[27/02/2026] se confirman, cambios, y se informa al cliente para la revisión\n[3/03/2026] se hace reunión con el átrea para hacer retroalimentación, y piden unos ajustes de forma para poder pasar a producción\n[4/03/2026] se empiezan a hacer los ajustes solicitados en la reunión anterioir\n[10/03/2026] se hace reunión para mostrar los ajustes según la última reunión, y se aprueban por parte del área para paso a producción",
     "unit": "Colmedica",
     "detail": "Mejoras al módulo para agilizar la auditoria y revisión de inconsistencias por parte de las Gestoras, ver inforción importante, eliminar datos innecesarios, mejorar ventana para visualización de información",
     "visible": true,
@@ -915,7 +915,7 @@
     "fechaEstimadaEntrega": "25/02/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 15,
-    "produccion": ""
+    "produccion": "10/03/2026"
   },
   {
     "id": "OPT_22",

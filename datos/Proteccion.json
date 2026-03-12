@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "20/07/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 159,
+    "diasTotalDesarrollo": 161,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "01/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 113,
+    "diasTotalDesarrollo": 115,
     "produccion": ""
   },
   {
@@ -1425,10 +1425,10 @@
     "id": "REQ-27",
     "title": "Se debe de agregar una función que permita que si se valida mesa, se debe de identificar si se marco bonos para abrir dicha tarea",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "02/03/2026",
-    "endDate": "",
+    "endDate": "09/03/2026",
     "observations": "[03/03/2026] Se termina de construir la lógica para que el evento de mesa unificada ok pueda evaluar e identificar si el trámite necesita abrir bonos",
     "unit": "Proteccion",
     "detail": "Corrección lógica de mesa unificada",
@@ -1436,17 +1436,17 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "04/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 5,
-    "produccion": ""
+    "diasTotalDesarrollo": 6,
+    "produccion": "09/03/2026"
   },
   {
     "id": "REQ-28",
     "title": "Identificación y mantenimiento a cada una de las dificultades presentadas en el servidor nuevo",
     "assigned": "ALEJANDRO",
-    "state": "En Proceso",
-    "progress": 80,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "04/03/2026",
-    "endDate": "",
+    "endDate": "10/03/2026",
     "observations": "[06/03/2026] Se han hecho trabajos de soporte para distintos m[odulos que incurrieron en errores en el momento de la migraci[on. IOnluyendo reporter[ia, consumos, formularios, visores, etc> no Se ha terminado el proceso de normalizaci[on del sistema y se siguen realizando correcciones",
     "unit": "Proteccion",
     "detail": "Soporte a inconsistencias en la migración",
@@ -1454,7 +1454,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "06/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 3,
-    "produccion": ""
+    "diasTotalDesarrollo": 5,
+    "produccion": "10/03/2026"
   }
 ]
