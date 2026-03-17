@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 286,
+    "diasTotalDesarrollo": 292,
     "produccion": ""
   },
   {
@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 286,
+    "diasTotalDesarrollo": 292,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 286,
+    "diasTotalDesarrollo": 292,
     "produccion": ""
   },
   {
@@ -68,7 +68,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 286,
+    "diasTotalDesarrollo": 292,
     "produccion": ""
   },
   {
@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 286,
+    "diasTotalDesarrollo": 292,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 286,
+    "diasTotalDesarrollo": 292,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 286,
+    "diasTotalDesarrollo": 292,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 176,
+    "diasTotalDesarrollo": 182,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 109,
+    "diasTotalDesarrollo": 115,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 107,
+    "diasTotalDesarrollo": 113,
     "produccion": ""
   },
   {
@@ -1815,7 +1815,7 @@
     "fechaEstimadaEntrega": "10/03/2026",
     "fechaCompromisoCliente": "10/03/2026",
     "diasTotalDesarrollo": 1,
-    "produccion": ""
+    "produccion": "06/03/2026"
   },
   {
     "id": "361",
@@ -1839,18 +1839,54 @@
     "id": "362",
     "title": "Revision Servicios en Sala AZUL",
     "assigned": "FAVER",
-    "state": "En Proceso",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "09/03/2026",
-    "endDate": "",
-    "observations": "",
+    "endDate": "09/03/2026",
+    "observations": "[09/03/2026]: Se realiza el acompañamineto por parte de Imagine, se realizan todas las validaciones y se descarta fallas de nuestro aplicativo, se entregan evidencias de los errores de consumo del servicio de pagare el cual es de otro proveedor.",
     "unit": "Tuya",
     "detail": "el cliente solicita a imagine en sala azul para revisar incidente de afectacion general en las dematerialización de pagares",
-    "visible": false,
+    "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "363",
+    "title": "Soporte Casos Sarita",
+    "assigned": "FAVER Y NATALIA",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "12/03/2026",
+    "endDate": "12/03/2026",
+    "observations": "[12/03/2026]: Se realiza la validación del caso y se da solución al usuario.",
+    "unit": "Tuya",
+    "detail": "Clientes radican casos en plataforma ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "12/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "364",
+    "title": "Validación con cliente",
+    "assigned": "FAVER Y NATALIA",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "24/03/2026",
+    "endDate": "",
+    "observations": "[16/03/2026]: Cliente se comunica para validar disponibilidad para agendamiento de proceso contingencia, se esta a la espera del email por parte de ellos\n[17/03/2026]: Notifican agendamiento prueba de continuidad para el [24/03/2026]",
+    "unit": "Tuya",
+    "detail": "Agendamiento para contingencia",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
     "produccion": ""
   }
 ]

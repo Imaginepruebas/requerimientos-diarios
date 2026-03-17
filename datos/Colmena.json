@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 98,
+    "diasTotalDesarrollo": 105,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 89,
+    "diasTotalDesarrollo": 96,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "22/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 36,
+    "diasTotalDesarrollo": 43,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 13,
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 38,
+    "diasTotalDesarrollo": 45,
     "produccion": ""
   },
   {
@@ -356,7 +356,7 @@
     "diasEstimadosDesarrollo": 11,
     "fechaEstimadaEntrega": "09/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 30,
+    "diasTotalDesarrollo": 37,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "17/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 21,
+    "diasTotalDesarrollo": 28,
     "produccion": ""
   },
   {
@@ -410,7 +410,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "16/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 17,
+    "diasTotalDesarrollo": 24,
     "produccion": ""
   },
   {
@@ -436,7 +436,7 @@
     "title": "requerimiento sat 1 y 2",
     "assigned": "BRAYAN DIAZ",
     "state": "Pendiente",
-    "progress": 0,
+    "progress": 10,
     "startDate": "26/02/2026",
     "endDate": "",
     "observations": "",
@@ -446,7 +446,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 7,
+    "diasTotalDesarrollo": 14,
     "produccion": ""
   },
   {
@@ -464,7 +464,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 10,
+    "diasTotalDesarrollo": 17,
     "produccion": ""
   },
   {
@@ -538,5 +538,59 @@
     "fechaCompromisoCliente": "04/03/2026",
     "diasTotalDesarrollo": 1,
     "produccion": "04/03/2026"
+  },
+  {
+    "id": "reqerimiento",
+    "title": "solicitud inclusion en zehux ",
+    "assigned": "BRAYAN DIAZ",
+    "state": "Pruebas Cliente",
+    "progress": 97,
+    "startDate": "10/03/2026",
+    "endDate": "",
+    "observations": "se  estan realzando pruebas por parte del cliente para confirmar el paso a produccion \n20260317 el cliente aun esta realizando pruebas, ya confirmom 3 de los 4 puntos ",
+    "unit": "Colmena",
+    "detail": "se solictan 4 puntos de mejoras en el aplicativo zehux, \ninclusion de usaurios a lista de asignacion masiva, \nfiltro de bandeja de sistemas \nasignacion automatica movimiento renovacion y expedicion\nvisualizar prima estimada en pagina de radicado",
+    "visible": true,
+    "diasEstimadosDesarrollo": 4,
+    "fechaEstimadaEntrega": "13/03/2026",
+    "fechaCompromisoCliente": "17/03/2026",
+    "diasTotalDesarrollo": 6,
+    "produccion": ""
+  },
+  {
+    "id": "requerimiento",
+    "title": "retirar validacion retiros retroactivos ",
+    "assigned": "BRAYAN DIAZ",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "12/03/2026",
+    "endDate": "17/03/2026",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "se solicita retirar la validacion de 161 dias que no deja tomar retiros retroactivos en el proceso pila ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 4,
+    "fechaEstimadaEntrega": "17/03/2026",
+    "fechaCompromisoCliente": "17/03/2026",
+    "diasTotalDesarrollo": 4,
+    "produccion": "17/03/2026"
+  },
+  {
+    "id": "solicitud",
+    "title": "creacion e inclusion nueva tipologia ",
+    "assigned": "BRAYAN DIAZ",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "17/03/2026",
+    "endDate": "17/03/2026",
+    "observations": "",
+    "unit": "Colmena",
+    "detail": "se solicita la creacion de la nueva tipologia NI GENERACION CARNETS y agregarla al flujo de buzon SP ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "17/03/2026",
+    "fechaCompromisoCliente": "17/03/2026",
+    "diasTotalDesarrollo": 1,
+    "produccion": "17/03/2026"
   }
 ]

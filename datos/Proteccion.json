@@ -338,7 +338,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "20/07/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 161,
+    "diasTotalDesarrollo": 166,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "01/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 115,
+    "diasTotalDesarrollo": 120,
     "produccion": ""
   },
   {
@@ -957,11 +957,11 @@
     "id": "Interno-H16-2",
     "title": "Creación de la base del proyecto para la extrrasión de datos de filenet",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "19/12/2025",
     "endDate": "29/12/2025",
-    "observations": "[29/12/2025] Se habia aplazado en muchos momentos durante diciembre y debido a permisos en la bandeja se dificultó el acceso\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[29/12/2025] Se habia aplazado en muchos momentos durante diciembre y debido a permisos en la bandeja se dificultó el acceso\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -969,17 +969,17 @@
     "fechaEstimadaEntrega": "26/12/2025",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 6,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "Interno-H16-3",
     "title": "Creacion de servicio para la captura y trabajo dentro de la plataforma de bonos",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "30/12/2025",
     "endDate": "13/01/2026",
-    "observations": "[05/01/2026] Se crea servicio que se comunica con la extracción de filente y que además captura el inicio de sesión de la plataforma para empezar a trabajar automatizadamente con esta \n[13/01/2026] se completa el servicio, se se divide la lógica en tareas ejecutables y se desarrolla la persistencia \n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[05/01/2026] Se crea servicio que se comunica con la extracción de filente y que además captura el inicio de sesión de la plataforma para empezar a trabajar automatizadamente con esta \n[13/01/2026] se completa el servicio, se se divide la lógica en tareas ejecutables y se desarrolla la persistencia \n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -987,7 +987,7 @@
     "fechaEstimadaEntrega": "09/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 9,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "REQ-21",
@@ -1011,11 +1011,11 @@
     "id": "Interno-H16-4",
     "title": "Creacion de servicio place holder con agentes para la identificación de información capturada y análisis OCR",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "14/01/2026",
     "endDate": "16/01/2026",
-    "observations": "[14/01/2026] Se crea lógica de persistencia para activar servicio\n[16/01/2026] Se completa la llógica del servicio, se construye la base y se da respuesta constante para luego poder realizar implementación\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[14/01/2026] Se crea lógica de persistencia para activar servicio\n[16/01/2026] Se completa la llógica del servicio, se construye la base y se da respuesta constante para luego poder realizar implementación\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1023,7 +1023,7 @@
     "fechaEstimadaEntrega": "19/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 3,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "REQ-17",
@@ -1047,11 +1047,11 @@
     "id": "Interno-H16-5",
     "title": "Construcción y conexiónd del Front con la lógica generada hasta el momento",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "19/01/2026",
     "endDate": "28/01/2026",
-    "observations": "[26/01/2026] Se retoma el trabajo después de identificar las correcciones y nuevos elementos por analizar en el back. Sin embargo, hace falta un escenario por parametrizar que no se pudo encontrar un ejemplo\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[26/01/2026] Se retoma el trabajo después de identificar las correcciones y nuevos elementos por analizar en el back. Sin embargo, hace falta un escenario por parametrizar que no se pudo encontrar un ejemplo\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1059,7 +1059,7 @@
     "fechaEstimadaEntrega": "22/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 8,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "Interno-H16-6",
@@ -1101,11 +1101,11 @@
     "id": "Interno-H16-7",
     "title": "Corrección de datos para acoplar a las necesidades y todos los casos posibles del proceso",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "21/01/2026",
     "endDate": "28/01/2026",
-    "observations": "[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1113,7 +1113,7 @@
     "fechaEstimadaEntrega": "23/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 6,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "REQ-20",
@@ -1155,11 +1155,11 @@
     "id": "Interno-H16-8",
     "title": "Conexión front - servicio - filenet para la visualización de archivos y gestionar aprovaciones y rechazos",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "23/01/2026",
     "endDate": "28/01/2026",
-    "observations": "[28/01/2026] Se encontraron dificultades en el acomplamiento de los servicios sobre todo hacia filenet, pero se puedo implementar todo el flujo\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[28/01/2026] Se encontraron dificultades en el acomplamiento de los servicios sobre todo hacia filenet, pero se puedo implementar todo el flujo\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1167,17 +1167,17 @@
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 4,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "Interno-H16-9",
     "title": "Acople de resultados con procesos ya existentes en Imagine",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "28/01/2026",
     "endDate": "03/02/2026",
-    "observations": "[29/01/2026] Se termina la implementación y me encuentro en pruebas de funcionamiento\n[03/02/2026] Se pudo lograr realizar una prueba depunto a punto exitosa\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[29/01/2026] Se termina la implementación y me encuentro en pruebas de funcionamiento\n[03/02/2026] Se pudo lograr realizar una prueba depunto a punto exitosa\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1185,17 +1185,17 @@
     "fechaEstimadaEntrega": "29/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 5,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "Interno-H16-10",
     "title": "Creación de pestaña de consultas de radicados y cédulas tanto para procesos históricos y procesos gestionados con la herramienta",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "29/01/2026",
     "endDate": "03/02/2026",
-    "observations": "[29/01/2026] Se termina la implementación y me encuentro en pruebas de funcionamiento\n[03/02/2026] Se pudo lograr realizar una prueba depunto a punto exitosa\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[29/01/2026] Se termina la implementación y me encuentro en pruebas de funcionamiento\n[03/02/2026] Se pudo lograr realizar una prueba depunto a punto exitosa\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1203,7 +1203,7 @@
     "fechaEstimadaEntrega": "30/01/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 4,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "REQ-22",
@@ -1227,11 +1227,11 @@
     "id": "Interno-H16-11",
     "title": "Modificación de obtención de motivos y causas de rechazo. Se necesita crear lógica asincrona para mejorar tiempos de procedimiento",
     "assigned": "ALEJANDRO",
-    "state": "En Test",
+    "state": "Finalizado",
     "progress": 100,
     "startDate": "03/02/2026",
     "endDate": "04/02/2026",
-    "observations": "[04/02/2026] Se cambia la lógica actual que estaba presentando lentitud en la gestión del operador por una asyncrona que se renueva todos los días\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO",
+    "observations": "[04/02/2026] Se cambia la lógica actual que estaba presentando lentitud en la gestión del operador por una asyncrona que se renueva todos los días\n[06/03/2026] Hace parte de un grupo de funcionalidades que ya están probadas y son funcionales, pero el módulo aún le hace falta y todavía nada se ha pasado a producción. Esto último se debe a que se han priorizado otras tareas incluyendo el tema de migración el cual debía realizarse antes de pasar todo el proyecto y pedir los permisos de conexión al portal de BPO\n[11/03/2026] Se migra la lógica y los servicios del local a producción",
     "unit": "Proteccion",
     "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
     "visible": true,
@@ -1239,7 +1239,7 @@
     "fechaEstimadaEntrega": "04/02/2026",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 2,
-    "produccion": ""
+    "produccion": "11/03/2026"
   },
   {
     "id": "Interno-H16-12",
@@ -1456,5 +1456,59 @@
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 5,
     "produccion": "10/03/2026"
+  },
+  {
+    "id": "Interno-H16-16",
+    "title": "Pruebas y acople del desarrollo al ambiente nuevo en producción",
+    "assigned": "ALEJANDRO",
+    "state": "En Proceso",
+    "progress": 80,
+    "startDate": "11/03/2026",
+    "endDate": "",
+    "observations": "",
+    "unit": "Proteccion",
+    "detail": "Proyecto de validación automática de documentación de fileNet con integración en BPO e historia laboral",
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "13/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 5,
+    "produccion": ""
+  },
+  {
+    "id": "Interno-H16-17",
+    "title": "Identificación y validación del código proporcionado por Don Hernan",
+    "assigned": "ALEJANDRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "10/03/2026",
+    "endDate": "12/03/2026",
+    "observations": "[12/03/2026] Se termina de realizar la validacion del código y su funcionamiento. Se encuentra que el código fuie prepadrado para otra unidada y se le indica a Don Hernan",
+    "unit": "Proteccion",
+    "detail": "Migración de módulo de auxilios a tecnologías más modernas",
+    "visible": true,
+    "diasEstimadosDesarrollo": 3,
+    "fechaEstimadaEntrega": "12/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 3,
+    "produccion": ""
+  },
+  {
+    "id": "REQ-28-2",
+    "title": "Identificación y mantenimiento a cada una de las dificultades presentadas en el servidor nuevo",
+    "assigned": "ALEJANDRO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "13/03/2026",
+    "endDate": "16/03/2026",
+    "observations": "[13/03/2026] Se encontraron errores en el proceso que estaba presentando problemas problemas delicacdos en el flujo, tanto para las trámites abiertos en investigación como los trámites gestionados en glosas. Se realizan todas las validaciones, cambios y verificaciones y se consigue solventar los problemas\n[16/03/2026] Se terminan de validar unos casos asociados al problema y se corrigen",
+    "unit": "Proteccion",
+    "detail": "Soporte a inconsistencias en la migración",
+    "visible": true,
+    "diasEstimadosDesarrollo": 1,
+    "fechaEstimadaEntrega": "13/03/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 2,
+    "produccion": "13/03/2026"
   }
 ]
