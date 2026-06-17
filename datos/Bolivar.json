@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 291,
+    "diasTotalDesarrollo": 295,
     "produccion": ""
   },
   {
@@ -183,11 +183,11 @@
     "id": "MDSB-1045072",
     "title": "Extracción histórica de Casos existentes en Nativo de los años de 2001 a 2016",
     "assigned": "JESUS",
-    "state": "En Proceso",
-    "progress": 99,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "28/05/2026",
     "endDate": "29/05/2026",
-    "observations": "[28/05/2026]: Se identificó que antes de 2016 el sistema manejaba una estructura distinta sin flujos ni tipologías para lo cual se deben ubicar casos históricos de referencia e identificar tablas relacionadas.. \n[02/06/2026]: Los informes correspondientes a este jira ya se encuentran disponibles y a la espera de la confirmación de Jenry  para hacer la entrega al cliente.",
+    "observations": "[28/05/2026]: Se identificó que antes de 2016 el sistema manejaba una estructura distinta sin flujos ni tipologías para lo cual se deben ubicar casos históricos de referencia e identificar tablas relacionadas.. \n[02/06/2026]: Los informes correspondientes a este jira ya se encuentran disponibles y a la espera de la confirmación de Jenry  para hacer la entrega al cliente.\n[10/06/2026]: Se realiza entrega a cliente  de la  información  solicitada ",
     "unit": "Bolivar",
     "detail": "Se solicita por favor una base de datos con la relación de caso, fecha de radicación, tipologia y área; de los casos correspondientes a los años de 2001 a 2016, por favor entregar la información en excel un archivo por año (la información con todos los estados, anulados, cerrados, pendientes, todo)\n\nEjemplo de estructura esperada:\n\nCASO , FECHA DE RADICACIÓN, ÁREA DE CIERRE, TIPOLOGIA DE CIERRE\n\n(1234566) , (1/01/2001), (Administrativo), (Novedades)\n\nPor favor me confirman si se requiere crear un Jira por cada año o si en este mismo se pueden realizar entrega parciales.",
     "visible": true,
@@ -223,14 +223,50 @@
     "progress": 40,
     "startDate": "02/06/2026",
     "endDate": "",
-    "observations": "[04/06/2026]: Se desarrolló un script para verificar la existencia física de archivos históricos registrados en las diferentes tablas de almacenamiento documental de Nativo. El objetivo es validar aproximadamente 25 años de información almacenada. Durante las pruebas se evidenció que consultar simultáneamente los diferentes repositorios de almacenamiento generaba tiempos de respuesta muy altos, por lo que el proceso fue optimizado para ejecutarse por períodos y consultar inicialmente únicamente el almacenamiento histórico. El resultado se genera progresivamente en archivos CSV para evitar problemas de memoria.\nSe verificara si el proceso actualmente en ejecución finalizó correctamente, revisar los resultados generados y continuar con la validación masiva del histórico documental.\n[05/06/2026]: Se ajusta lalogica para la descarga del informe para que permita relacionar el numero del  caso,  Se  programan la  generaciòn de reportes, desde el 2001 al 2025. \n[09/06/2026]: Se desarrolló un proceso para generar un inventario histórico de imágenes asociadas a casos de los últimos 25 años. El proceso consulta aproximadamente 10 u 11 tablas documentales de Nativo y genera archivos consolidados. Tras ejecutarse masivamente durante el fin de semana, se detectó una posible afectación al rendimiento del servidor, motivo por el cual la tarea fue cancelada y los resultados eliminados. Se espera realizar una reevaluaciòn de como ejecutar el proceso de extraccón  para no afcectar el redimiento del servidor.",
+    "observations": "[04/06/2026]: Se desarrolló un script para verificar la existencia física de archivos históricos registrados en las diferentes tablas de almacenamiento documental de Nativo. El objetivo es validar aproximadamente 25 años de información almacenada. Durante las pruebas se evidenció que consultar simultáneamente los diferentes repositorios de almacenamiento generaba tiempos de respuesta muy altos, por lo que el proceso fue optimizado para ejecutarse por períodos y consultar inicialmente únicamente el almacenamiento histórico. El resultado se genera progresivamente en archivos CSV para evitar problemas de memoria.\nSe verificara si el proceso actualmente en ejecución finalizó correctamente, revisar los resultados generados y continuar con la validación masiva del histórico documental.\n[05/06/2026]: Se ajusta lalogica para la descarga del informe para que permita relacionar el numero del  caso,  Se  programan la  generaciòn de reportes, desde el 2001 al 2025. \n[09/06/2026]: Se desarrolló un proceso para generar un inventario histórico de imágenes asociadas a casos de los últimos 25 años. El proceso consulta aproximadamente 10 u 11 tablas documentales de Nativo y genera archivos consolidados. Tras ejecutarse masivamente durante el fin de semana, se detectó una posible afectación al rendimiento del servidor, motivo por el cual la tarea fue cancelada y los resultados eliminados. Se espera realizar una reevaluaciòn de como ejecutar el proceso de extraccón  para no afcectar el redimiento del servidor.\n[11/06/2026]: Se estima entrega al cliente el 26 de junio",
     "unit": "Bolivar",
     "detail": "Se solicita un consolidado general con la siguiente información: Teniendo en cuenta desde el 2001 hasta el 2025 y todos los productos.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "26/06/2026",
+    "diasTotalDesarrollo": 9,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-JE051",
+    "title": "Optimización y monitoreo de colas Default PM2",
+    "assigned": "JESUS",
+    "state": "En Proceso",
+    "progress": 30,
+    "startDate": "12/06/2026",
+    "endDate": "",
+    "observations": "[16/06/2026]: El 12 de Junio se realizó una investigación técnica sobre los problemas presentados en la cola Default. Durante el análisis se identificó que existen configuraciones nativas del Ecosystem de PM2 que permiten ejecutar múltiples procesos para una misma cola, configurar redundancia ante fallos y mejorar la resiliencia del procesamiento sin necesidad de realizar desarrollos adicionales. El objetivo es evitar bloqueos que afecten el envío de correos y otros procesos críticos.\n\nHoy se continura con la implementarción y pruebas de  configuraciones avanzadas de PM2, validar el comportamiento bajo carga, definir mecanismos de recuperación automática y complementar el monitoreo para detectar oportunamente problemas en las colas de procesamiento.",
+    "unit": "Bolivar",
+    "detail": "Se reportó una acumulación cercana a 700 procesos pendientes en la cola principal del sistema, afectando funcionalidades críticas como el envío de correos, replicación de casos y otros procesos automáticos. La situación fue mitigada mediante el reinicio de los servicios, restableciendo el procesamiento normal.\n\nSe requiere implementar un mecanismo de monitoreo y notificación automática que alerte al equipo de soporte y desarrollo cuando la cantidad de elementos en cola supere los umbrales definidos, permitiendo actuar de manera preventiva antes de que el cliente perciba la afectación o reporte la incidencia.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 5,
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
+  },
+  {
+    "id": "INTERNO-JE069",
+    "title": "Validación de usuario  1065580157 no visible en tablero de efectividad de cuidado al trabajador /Drummond",
+    "assigned": "JESUS",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/06/2026",
+    "endDate": "16/06/2026",
+    "observations": "[16/06/2026]: Se identifico  faltaba insertar la cedula en la tabla wf_efec_funcionarios",
+    "unit": "Bolivar",
+    "detail": "El cliente reporta un caso donde el usuario 1065580157  no aparece reflejado en un tablero de efectividad de cuidado al trabajador /Drummond. Se verificaron controles básicos, estados de nómina y configuraciones visibles, sin encontrar inconsistencias evidentes.",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
@@ -338,7 +374,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 14,
+    "diasTotalDesarrollo": 18,
     "produccion": ""
   },
   {
@@ -572,7 +608,7 @@
     "diasEstimadosDesarrollo": 3,
     "fechaEstimadaEntrega": "30/04/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 273,
+    "diasTotalDesarrollo": 277,
     "produccion": ""
   },
   {
@@ -1220,7 +1256,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 75,
+    "diasTotalDesarrollo": 79,
     "produccion": ""
   },
   {
@@ -1454,7 +1490,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 218,
+    "diasTotalDesarrollo": 222,
     "produccion": ""
   },
   {
@@ -1965,37 +2001,37 @@
     "id": "GD772-168_6",
     "title": "Ampliación del Reporte de Trazabilidad del Flujo de Incapacidades.",
     "assigned": "JESUS",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[09/06/2026]: Las actividades iniciarán una vez finalice el desarrollo  del Botón de Devolución de Casos desde Gestión OCR.",
+    "state": "En Proceso",
+    "progress": 95,
+    "startDate": "10/06/2026",
+    "endDate": "12/06/2026",
+    "observations": "[09/06/2026]: Las actividades iniciarán una vez finalice el desarrollo  del Botón de Devolución de Casos desde Gestión OCR.\n[11/06/2026]: El 10 de junio Inicio con los ajustes a l informe de incapacidades.\n[16/06/2026]: El 12 de Junio se entrego  se finalizo el desarrollo y entregó un informe especial solicitado para la gestión de incapacidades OCR. El informe fue entregado para validación y revisión funcional a jenry. Según la retroalimentación inicial, el resultado cumple con lo solicitado y actualmente no existen actividades adicionales asociadas, salvo posibles ajustes o mejoras que puedan surgir en futuras revisiones con el cliente.\nEl informe se entregara al cliente el proximo 22 de Junio",
     "unit": "Bolivar",
     "detail": "Realizar ajustes al reporte de seguimiento de incapacidades para incluir el detalle del comportamiento de cada radicado a través de las integraciones y servicios involucrados en el proceso. El reporte deberá permitir identificar el resultado obtenido en cada etapa de procesamiento (OCR, Radicación y Liquidación), así como determinar si la gestión fue ejecutada de manera automática o requirió intervención manual. Esta mejora busca fortalecer la trazabilidad operativa, facilitar el análisis de fallas y proporcionar mayor visibilidad sobre el recorrido de cada caso dentro del flujo de atención.\n\nAlcance funcional:\n\nIncorporar columnas que indiquen el resultado de cada integración:\nOCR (Exitoso, Fallido, Lectura incompleta).\nRadicación DataLake (Exitoso, Fallido, No aplicado).\nRadicación Sisalud (Exitoso, Fallido, No aplicado).\nLiquidación DataLake (Exitoso, Fallido, No aplicado).\nLiquidación Sisalud (Exitoso, Fallido, No aplicado).\nIdentificar si el procesamiento del caso fue Automático o Manual.\nIndicar si la ejecución automática fue realizada en el primer intento o mediante reintentos.\nPermitir diferenciar los casos que requirieron gestión manual por agotamiento de reintentos o aplicación de reglas de negocio.",
-    "visible": false,
+    "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
-    "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 0,
+    "fechaCompromisoCliente": "22/06/2026",
+    "diasTotalDesarrollo": 3,
     "produccion": ""
   },
   {
     "id": "GD772-168_7",
     "title": "Botón de Devolución de Casos desde Gestión OCR.",
     "assigned": "JESUS",
-    "state": "En Proceso",
-    "progress": 60,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "05/06/2026",
-    "endDate": "",
-    "observations": "[09/06/2026]: Se está desarrollando una funcionalidad que permitirá devolver casos de incapacidad desde el sistema, generando notificaciones por correo electrónico y aplicando plantillas específicas según la causal de devolución. El principal reto actual es la validación de las distintas plantillas requeridas para cada causal.",
+    "endDate": "10/06/2026",
+    "observations": "[09/06/2026]: Se está desarrollando una funcionalidad que permitirá devolver casos de incapacidad desde el sistema, generando notificaciones por correo electrónico y aplicando plantillas específicas según la causal de devolución. El principal reto actual es la validación de las distintas plantillas requeridas para cada causal.\n[11/06/2026]: Boton  finalizado  e implementado en producciòn  el 10 de  Junio.",
     "unit": "Bolivar",
     "detail": "Implementar una funcionalidad de devolución directa de radicados desde la pantalla de gestión de actividades OCR, permitiendo a los usuarios generar devoluciones sin necesidad de trasladar el caso a etapas posteriores del flujo. La solución deberá reutilizar las mismas causales parametrizadas en la bandeja de analista, garantizar la actualización inmediata del estado del radicado, registrar la trazabilidad de la gestión realizada y ejecutar automáticamente el proceso de notificación correspondiente al usuario o empresa involucrada.\n\nAlcance funcional:\n\nIncorporación del botón \"Generar Devolución\" en la gestión OCR.\nHomologación de causales de devolución con la bandeja de analista.\nActualización automática del estado y cierre de la actividad OCR.\nRegistro de auditoría (fecha, hora, usuario y causal).\nDisparo automático del proceso de notificación asociado a la devolución.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 2,
-    "produccion": ""
+    "diasTotalDesarrollo": 3,
+    "produccion": "10/06/2026"
   },
   {
     "id": "GD772-168-2",
@@ -2005,7 +2041,7 @@
     "progress": 80,
     "startDate": "21/01/2026",
     "endDate": "30/01/2026",
-    "observations": "[21/01/2026]: se inició el desarrollo del tercer consumo del proceso (posterior a Data Lake), evidenciando un avance sostenido. El equipo se declara en ruta para presentar avances consolidados hacia el viernes.\n[26/01/2026]: El viernes 23 de enero se presentaron los avances del proyecto a Jenry y Liyibet. Como resultado de la sesión, quedaron definidos los siguientes ajustes, los cuales se abordarán una vez finalicen las actividades del requerimiento de doble factor de autenticación:\n\n1.Ajustar el campo Tipo de persona que radica para que sea un combo (IPS, empleador, etc.).\n2.Incluir la autorización de tratamiento de datos personales en la primera vista del portal.\n3.Incorporar plantillas de respuesta para los casos.\n4.Mejorar la visual reduciendo la barra de búsqueda en la ventana de gestión.\n5.Cambiar el label del portal por “Empresa”.\n6.Apuntar el API de cuenta al campo Número de empresa.\n7.Agregar el campo Cuenta en la trazabilidad, ubicado sobre el número de radicado Sisalud (trazabilidad estándar de la actividad Radicar IT).\n8.Realizar validaciones utilizando datos de prueba.\n[29/01/2026]: Se deben enviar HU al cliente el dia 30 de enero.\n[30/01/2026]: Desarrollo funcional y visual prácticamente terminado en local. Pendiente despliegue a testy pruebas con APIs reales.\n[30/01/2026]: Se realiza envio de HU para aprobación del cliente.\n[02/02/2026]: Se realizaron ajustes visuales solicitados y quedó pendiente la ejecución de pruebas funcionales, las cuales dependen de la disponibilidad de datos reales y de la respuesta de las APIs externas.\n[10/02/2026]: Se informa al cliente que la Fase II de incapacidades será entregada un (1) mes después de la puesta en producción del API de OCR.\n[12/02/2026]: Se realiza  configuración de la url del OCR en prodcción.\nLa API de cuenta bancaria queda funcional en  producción.",
+    "observations": "",
     "unit": "Bolivar",
     "detail": "",
     "visible": false,
@@ -2030,7 +2066,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "13/02/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 84,
+    "diasTotalDesarrollo": 88,
     "produccion": ""
   },
   {
@@ -2210,7 +2246,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 69,
+    "diasTotalDesarrollo": 73,
     "produccion": ""
   },
   {
@@ -2282,7 +2318,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 214,
+    "diasTotalDesarrollo": 218,
     "produccion": ""
   },
   {
@@ -2480,7 +2516,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 211,
+    "diasTotalDesarrollo": 215,
     "produccion": ""
   },
   {
@@ -2534,7 +2570,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 211,
+    "diasTotalDesarrollo": 215,
     "produccion": ""
   },
   {
@@ -2930,7 +2966,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 71,
+    "diasTotalDesarrollo": 75,
     "produccion": ""
   },
   {
@@ -3128,7 +3164,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 28,
+    "diasTotalDesarrollo": 32,
     "produccion": ""
   },
   {
@@ -3218,7 +3254,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 11,
+    "diasTotalDesarrollo": 15,
     "produccion": ""
   },
   {
@@ -3244,17 +3280,17 @@
     "title": "Portal Publico Incapacidades Alfa ",
     "assigned": "JAIRO",
     "state": "En Proceso",
-    "progress": 60,
+    "progress": 30,
     "startDate": "02/01/2026",
     "endDate": "",
-    "observations": "[02/01/2026]: El desarrollo se encuentra en una fase inicial de planeación y análisis, con un avance estimado del 2%. Se realizó la creación inicial del entorno y revisión conceptual. Aún no se ha iniciado desarrollo funcional significativo debido a la priorización de otros frentes críticos.\n[05/01/2026]: El 2 de enero inicia con el desarrollo inicial del backend\n[07/01/2026]: Se ha trabajado principalmente en el backend durante los últimos dos días.\n[09/01/2026]: Se ha estado trabajando en el desarrollo del  backend del portal de incapacidades presenta un avance estimado entre el 10% y 12%. Se han trabajado los flujos principales\n[14/01/2026]: El portal de incapacidades presenta un avance cercano al 20%, con la lógica de backend significativamente desarrollada, incluyendo gestión de incapacidades, siniestros y el esqueleto de la orden de pago. Se espera finalizar el backend e iniciar funcionalidades básicas de frontend, como la radicación de incapacidades, durante la jornada actual.\n[16/01/2026]: Se avanzó de forma relevante en el módulo de radicación de incapacidades, alcanzando aproximadamente un 80% del desarrollo del wizard. Actualmente se presenta una incidencia puntual en la comunicación al momento de realizar la radicación, la cual se encuentra en análisis. El avance global del requerimiento se estima en un 25% adicional respecto al último seguimiento, con expectativa de mostrar funcionalidad operativa de radicación.\n[19/01/2026]: El backend del portal de incapacidades se encuentra mayoritariamente implementado, con capas técnicas definidas y uso de base de datos Postgres. La arquitectura contempla separación entre portal público, portal privado y capa de servicios, con entidades como incapacidad, impresiones y flujos de gestión ya modeladas. A pesar del avance técnico, el porcentaje global del requerimiento se mantiene entre 25% y 30%, dado que gran parte del desarrollo aún no es visible para el usuario final.\n[26/01/2026]: El sistema interno ya cuenta con estructura base (menú, header, footer) y una primera tabla de pendientes de incapacidad. Este frente entró en pausa temporal para atender requerimientos priorizados (Jira), pero se retomará en los próximos días\n[28/01/2026]: Se avanzó en el flujo interno de aprobación de incapacidades, logrando la ejecución del proceso hasta aprobación y la visualización de una tabla de pendientes. Aún están pendientes componentes clave como asignación de usuarios, asociación de siniestros y módulo de pagos. Se trabaja en la construcción de un dashboard administrativo con gráficos para presentar un estado resumido del proceso. El avance estimado de este frente se sitúa alrededor del 40%.\n[29/01/2026]: Se realiza presentación a ALFA del portal de incapacidades.\n[30/01/2026]: Avance aproximado del 45%. Pendientes módulos de liquidación y reglas operativas de asignación. Se incorporanran ajustes solicitados para alineación con procesos actuales de acuerdo a la sesion  con el cliente el 29 de enero.\n[02/02/2026]: Se continúa trabajando en la validación e incorporación de los cambios solicitados por el cliente, con el objetivo de presentar una versión actualizada. El foco del día se concentra principalmente en este frente.\n[04/02/2026]: Se avanzó en el tema de auditoría, específicamente en escenarios de pago parcial. Sin embargo, este frente queda momentáneamente en pausa mientras el cliente define si continúa con la propuesta\n[26/05/2026]: El 25 de Mayo se reactivo el requerimiento, levantando  el sitio y retomando las validaciones sobre el ambiente técnico\n[28/05/2026]:  El 27 de mayo el aplicativo fue levantado en ambiente de desarrollo local y se realizaron correcciones iniciales sobre errores detectados, así como ajustes en la organización de carpetas, estructura interna y documentación técnica del proyecto. Adicionalmente, se inició una revisión preliminar de posibles conflictos entre versiones y dependencias, junto con la evaluación de nuevas técnicas y herramientas de apoyo para optimizar el análisis del sistema. Como parte del proceso, se identificó la necesidad de retomar validaciones funcionales detalladas y solicitar a Alfa los videos funcionales actuales para comparar el comportamiento esperado frente a la implementación existente\n[02/06/2026]: se comenzará la implementación de un mecanismo de autenticación para proveedores, debido a que el enfoque inicial de acceso completamente público fue replanteado. También se está trabajando en la definición de estructuras base de tablas y listas para minimizar ajustes posteriores cuando se formalicen las definiciones funcionales por parte del cliente.\nPendiente: Definir junto con el cliente el modelo de autenticación y administración de usuarios, implementar el proceso de inicio de sesión para proveedores, finalizar la estructura de datos requerida y continuar con el desarrollo de las funcionalidades del portal de incapacidades.\n[04/06/2026]: Se generó documentación funcional apoyándose en herramientas de inteligencia artificial y fue publicada en el repositorio compartido. Sin embargo, se identificó que parte de la información fue generada tomando como base desarrollos previos y requerimientos iniciales, por lo que puede no reflejar completamente los cambios y ajustes realizados posteriormente. Se prevé una revisión y actualización de la documentación para alinearla con el estado actual del desarrollo.\nEl paso a seguir es analizar la documentación generada, identificar inconsistencias frente al desarrollo actual y actualizar los documentos antes de incorporarlos como referencia oficial del proyecto.\n[09/06/2026]: Se implementó una nueva lógica denominada \"pre-incapacidad\", que incorpora validaciones posteriores a la radicación y genera alertas para revisión por parte de auditores. El nuevo enfoque reemplaza validaciones previas basadas en consultas manuales de identificación y permite que el sistema procese la información recibida, identifique inconsistencias y presente observaciones para gestión posterior. Este componente no estaba contemplado inicialmente dentro del alcance y agrega valor al proceso de validación. Se continua con la finalización de  validaciones internas, presentar avances en reunión funcional y continuar desarrollo del portal privado de gestión.",
+    "observations": "[02/01/2026]: El desarrollo se encuentra en una fase inicial de planeación y análisis, con un avance estimado del 2%. Se realizó la creación inicial del entorno y revisión conceptual. Aún no se ha iniciado desarrollo funcional significativo debido a la priorización de otros frentes críticos.\n[05/01/2026]: El 2 de enero inicia con el desarrollo inicial del backend\n[07/01/2026]: Se ha trabajado principalmente en el backend durante los últimos dos días.\n[09/01/2026]: Se ha estado trabajando en el desarrollo del  backend del portal de incapacidades presenta un avance estimado entre el 10% y 12%. Se han trabajado los flujos principales\n[14/01/2026]: El portal de incapacidades presenta un avance cercano al 20%, con la lógica de backend significativamente desarrollada, incluyendo gestión de incapacidades, siniestros y el esqueleto de la orden de pago. Se espera finalizar el backend e iniciar funcionalidades básicas de frontend, como la radicación de incapacidades, durante la jornada actual.\n[16/01/2026]: Se avanzó de forma relevante en el módulo de radicación de incapacidades, alcanzando aproximadamente un 80% del desarrollo del wizard. Actualmente se presenta una incidencia puntual en la comunicación al momento de realizar la radicación, la cual se encuentra en análisis. El avance global del requerimiento se estima en un 25% adicional respecto al último seguimiento, con expectativa de mostrar funcionalidad operativa de radicación.\n[19/01/2026]: El backend del portal de incapacidades se encuentra mayoritariamente implementado, con capas técnicas definidas y uso de base de datos Postgres. La arquitectura contempla separación entre portal público, portal privado y capa de servicios, con entidades como incapacidad, impresiones y flujos de gestión ya modeladas. A pesar del avance técnico, el porcentaje global del requerimiento se mantiene entre 25% y 30%, dado que gran parte del desarrollo aún no es visible para el usuario final.\n[26/01/2026]: El sistema interno ya cuenta con estructura base (menú, header, footer) y una primera tabla de pendientes de incapacidad. Este frente entró en pausa temporal para atender requerimientos priorizados (Jira), pero se retomará en los próximos días\n[28/01/2026]: Se avanzó en el flujo interno de aprobación de incapacidades, logrando la ejecución del proceso hasta aprobación y la visualización de una tabla de pendientes. Aún están pendientes componentes clave como asignación de usuarios, asociación de siniestros y módulo de pagos. Se trabaja en la construcción de un dashboard administrativo con gráficos para presentar un estado resumido del proceso. El avance estimado de este frente se sitúa alrededor del 40%.\n[29/01/2026]: Se realiza presentación a ALFA del portal de incapacidades.\n[30/01/2026]: Avance aproximado del 45%. Pendientes módulos de liquidación y reglas operativas de asignación. Se incorporanran ajustes solicitados para alineación con procesos actuales de acuerdo a la sesion  con el cliente el 29 de enero.\n[02/02/2026]: Se continúa trabajando en la validación e incorporación de los cambios solicitados por el cliente, con el objetivo de presentar una versión actualizada. El foco del día se concentra principalmente en este frente.\n[04/02/2026]: Se avanzó en el tema de auditoría, específicamente en escenarios de pago parcial. Sin embargo, este frente queda momentáneamente en pausa mientras el cliente define si continúa con la propuesta\n[26/05/2026]: El 25 de Mayo se reactivo el requerimiento, levantando  el sitio y retomando las validaciones sobre el ambiente técnico\n[28/05/2026]:  El 27 de mayo el aplicativo fue levantado en ambiente de desarrollo local y se realizaron correcciones iniciales sobre errores detectados, así como ajustes en la organización de carpetas, estructura interna y documentación técnica del proyecto. Adicionalmente, se inició una revisión preliminar de posibles conflictos entre versiones y dependencias, junto con la evaluación de nuevas técnicas y herramientas de apoyo para optimizar el análisis del sistema. Como parte del proceso, se identificó la necesidad de retomar validaciones funcionales detalladas y solicitar a Alfa los videos funcionales actuales para comparar el comportamiento esperado frente a la implementación existente\n[02/06/2026]: se comenzará la implementación de un mecanismo de autenticación para proveedores, debido a que el enfoque inicial de acceso completamente público fue replanteado. También se está trabajando en la definición de estructuras base de tablas y listas para minimizar ajustes posteriores cuando se formalicen las definiciones funcionales por parte del cliente.\nPendiente: Definir junto con el cliente el modelo de autenticación y administración de usuarios, implementar el proceso de inicio de sesión para proveedores, finalizar la estructura de datos requerida y continuar con el desarrollo de las funcionalidades del portal de incapacidades.\n[04/06/2026]: Se generó documentación funcional apoyándose en herramientas de inteligencia artificial y fue publicada en el repositorio compartido. Sin embargo, se identificó que parte de la información fue generada tomando como base desarrollos previos y requerimientos iniciales, por lo que puede no reflejar completamente los cambios y ajustes realizados posteriormente. Se prevé una revisión y actualización de la documentación para alinearla con el estado actual del desarrollo.\nEl paso a seguir es analizar la documentación generada, identificar inconsistencias frente al desarrollo actual y actualizar los documentos antes de incorporarlos como referencia oficial del proyecto.\n[09/06/2026]: Se implementó una nueva lógica denominada \"pre-incapacidad\", que incorpora validaciones posteriores a la radicación y genera alertas para revisión por parte de auditores. El nuevo enfoque reemplaza validaciones previas basadas en consultas manuales de identificación y permite que el sistema procese la información recibida, identifique inconsistencias y presente observaciones para gestión posterior. Este componente no estaba contemplado inicialmente dentro del alcance y agrega valor al proceso de validación. Se continua con la finalización de  validaciones internas, presentar avances en reunión funcional y continuar desarrollo del portal privado de gestión.\n[11/06/2026]: Se continuó trabajando en el desarrollo del portal. Durante la sesión se informó la implementación de cambios orientados a eliminar pasos intermedios entre la radicación y la auditoría, mostrando directamente al usuario las validaciones que no cumple durante el proceso. Adicionalmente se ejecutaron actividades de hardening de seguridad para actualizar dependencias y validar configuraciones técnicas. Sin embargo, se acordó mantener un porcentaje de avance conservador debido a que el cliente aún no ha revisado ni validado funcionalmente la solución desarrollada.\nSe continuara  con la preparaciòn de  la presentación funcional para el cliente, recopilar observaciones durante la validación y ajustar el desarrollo según los comentarios recibidos antes de continuar con nuevas funcionalidades.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 106,
+    "diasTotalDesarrollo": 110,
     "produccion": ""
   },
   {
@@ -3265,7 +3301,7 @@
     "progress": 85,
     "startDate": "28/05/2026",
     "endDate": "01/06/2026",
-    "observations": "[14/04/2026]: Requerimiento identificado a nivel conceptual. Se entiende que implica nuevos eventos al momento de radicación de soportes, pero aún no hay definición técnica ni funcional clara.\n[16/04/2026]: Requerimiento aún no definido por negocio, existen dudas funcionales\n[28/04/2026]: El 24 y 27 de Abril se avanzó en el análisis del nuevo requerimiento asociado al reporte de facturación hacia el Ministerio de Salud (SIIFA) Se identificaron consideraciones técnicas relevantes como manejo de grandes volúmenes de información, definición de momentos de reporte y posibles estrategias de ejecución (procesos batch o tareas programadas). Actualmente el requerimiento se encuentra en fase de análisis, a la espera de definiciones adicionales por parte del cliente antes de iniciar desarrollo.\n[30/04/2026]: Actualmente se encuentra bloqueado debido a dependencias externas, específicamente la creación de contratos necesarios para poder consumir y visualizar información de facturación.\n[28/05/2026]: Se continúa trabajando en la integración con SIIFA, priorizando la construcción de un comando que permita consultar la información disponible desde el 1 de mayo y realizar la radicación de facturas de acuerdo con la lógica actual del sistema. Adicionalmente, se avanza en la validación de la generación de consecutivos únicos requeridos para cada radicación, tomando como referencia información existente en tablas del sistema. Como parte de las actividades en curso, también se contempla la generación de un reporte con los registros que no ingresaron correctamente, con el fin de facilitar su control y seguimiento. El desarrollo se encuentra priorizado debido al compromiso operativo establecido para el 1 de junio.\n[02/06/2026]: Se desarrolló y ejecutó un proceso que consulta facturas desde producción y posteriormente las radica mediante el API correspondiente. Se realizaron pruebas exitosas de descarga y conciliación de información, verificando que los registros obtenidos coinciden con la información disponible en SIIFA. Se confirmó la descarga de grandes volúmenes de información y se identificó únicamente una inconsistencia puntual correspondiente al día 9. Funcionalmente la Fase 1 fue completada.\nPendiente: Formalizar la creación de las tablas requeridas en los ambientes de pruebas y producción mediante el proceso de control de cambios correspondiente. Una vez aprobados estos controles se podrá considerar completamente cerrada la fase.\n[04/06/2026]: El 3 de junio se completó la descarga de los cargues disponibles de SIIFA correspondientes a los cortes 16, 23 y 30. Se realizó una primera ejecución del proceso logrando radicar aproximadamente 4.000 registros. Antes de continuar con el procesamiento masivo, se decidió realizar una validación de los resultados obtenidos para confirmar el comportamiento esperado. Se identificó además la necesidad de filtrar registros con estados específicos (glosadas, devueltas o anuladas) para evitar radicaciones incorrectas.\nEl paso a seguir  es validar las radicaciones realizadas, ejecutar nuevamente el proceso sobre los registros pendientes y revisar resultados durante la reunión de seguimiento, y determinar si hay mas cambios de lo contrario se solicitaran los controles de cambios a test.\n[09/06/2026]: Los desarrollos requeridos para el cumplimiento normativo de SIIFA se encuentran funcionales en producción. Actualmente se opera mediante tablas temporales creadas directamente en producción mientras se valida el comportamiento esperado antes de formalizar controles de cambio y componentes visuales definitivos, se continuara con la ejecucion  nuevas cargas, validar resultados y preparar control de cambios para ambiente de pruebas.",
+    "observations": "[14/04/2026]: Requerimiento identificado a nivel conceptual. Se entiende que implica nuevos eventos al momento de radicación de soportes, pero aún no hay definición técnica ni funcional clara.\n[16/04/2026]: Requerimiento aún no definido por negocio, existen dudas funcionales\n[28/04/2026]: El 24 y 27 de Abril se avanzó en el análisis del nuevo requerimiento asociado al reporte de facturación hacia el Ministerio de Salud (SIIFA) Se identificaron consideraciones técnicas relevantes como manejo de grandes volúmenes de información, definición de momentos de reporte y posibles estrategias de ejecución (procesos batch o tareas programadas). Actualmente el requerimiento se encuentra en fase de análisis, a la espera de definiciones adicionales por parte del cliente antes de iniciar desarrollo.\n[30/04/2026]: Actualmente se encuentra bloqueado debido a dependencias externas, específicamente la creación de contratos necesarios para poder consumir y visualizar información de facturación.\n[28/05/2026]: Se continúa trabajando en la integración con SIIFA, priorizando la construcción de un comando que permita consultar la información disponible desde el 1 de mayo y realizar la radicación de facturas de acuerdo con la lógica actual del sistema. Adicionalmente, se avanza en la validación de la generación de consecutivos únicos requeridos para cada radicación, tomando como referencia información existente en tablas del sistema. Como parte de las actividades en curso, también se contempla la generación de un reporte con los registros que no ingresaron correctamente, con el fin de facilitar su control y seguimiento. El desarrollo se encuentra priorizado debido al compromiso operativo establecido para el 1 de junio.\n[02/06/2026]: Se desarrolló y ejecutó un proceso que consulta facturas desde producción y posteriormente las radica mediante el API correspondiente. Se realizaron pruebas exitosas de descarga y conciliación de información, verificando que los registros obtenidos coinciden con la información disponible en SIIFA. Se confirmó la descarga de grandes volúmenes de información y se identificó únicamente una inconsistencia puntual correspondiente al día 9. Funcionalmente la Fase 1 fue completada.\nPendiente: Formalizar la creación de las tablas requeridas en los ambientes de pruebas y producción mediante el proceso de control de cambios correspondiente. Una vez aprobados estos controles se podrá considerar completamente cerrada la fase.\n[04/06/2026]: El 3 de junio se completó la descarga de los cargues disponibles de SIIFA correspondientes a los cortes 16, 23 y 30. Se realizó una primera ejecución del proceso logrando radicar aproximadamente 4.000 registros. Antes de continuar con el procesamiento masivo, se decidió realizar una validación de los resultados obtenidos para confirmar el comportamiento esperado. Se identificó además la necesidad de filtrar registros con estados específicos (glosadas, devueltas o anuladas) para evitar radicaciones incorrectas.\nEl paso a seguir  es validar las radicaciones realizadas, ejecutar nuevamente el proceso sobre los registros pendientes y revisar resultados durante la reunión de seguimiento, y determinar si hay mas cambios de lo contrario se solicitaran los controles de cambios a test.\n[09/06/2026]: Los desarrollos requeridos para el cumplimiento normativo de SIIFA se encuentran funcionales en producción. Actualmente se opera mediante tablas temporales creadas directamente en producción mientras se valida el comportamiento esperado antes de formalizar controles de cambio y componentes visuales definitivos, se continuara con la ejecucion  nuevas cargas, validar resultados y preparar control de cambios para ambiente de pruebas.\n[11/06/2026]: Se revisó el estado actual del procesamiento de facturas provenientes de SIIFA. Se indicó que actualmente solo se han descargado y procesado parcialmente algunos conjuntos de información, mientras que otros lotes permanecen pendientes. También se discutió la necesidad de continuar enviando información para obtener retroalimentación temprana sobre el resultado del proceso.\nSe continuara con la descarga de información pendiente, ejecutar el procesamiento de los lotes restantes y validar los resultados obtenidos con los usuarios involucrados.",
     "unit": "Bolivar",
     "detail": "Se identificó la necesidad de realizar mejoras sobre la bandeja de reasignación, específicamente en la adición de nuevos campos visibles y la incorporación de filtros que faciliten la gestión operativa. No se requieren cambios en la lógica de reasignación, sino ajustes en la visualización y consulta de la información. Para esto, se contempla la creación de una nueva estructura (tabla) que soporte dichos cambios antes de su implementación.",
     "visible": true,
@@ -3283,7 +3319,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[04/06/2026]: Se revisara el alcance completo del requerimiento en la sesión  funcional programada hoy  4 de junio a las 4pm, donde se  documentara las reglas de negocio, definir fecha de vigencia y establecer comportamiento por cada causal de devolución.",
+    "observations": "[04/06/2026]: Se revisara el alcance completo del requerimiento en la sesión  funcional programada hoy  4 de junio a las 4pm, donde se  documentara las reglas de negocio, definir fecha de vigencia y establecer comportamiento por cada causal de devolución.\n[11/06/2026]: Continúan existiendo dudas funcionales relacionadas con la aplicación de las nuevas reglas asociadas a notas crédito. La principal incertidumbre consiste en determinar desde qué fecha deben aplicarse las validaciones y cuál debe ser el criterio utilizado para identificar las facturas sujetas a la nueva normativa. Esta definición continúa pendiente por parte del negocio.",
     "unit": "Bolivar",
     "detail": "1.Se requiere validación fecha de emisión de la factura para contar 22 días hábiles, si las facturas superan este tiempo no es posible permitir su radicación, debe generar una alerta manifestando que “supera los 22 días según fecha de emisión de la factura, debe generar NC, refacturación y volver a radicar” según resolución 948 del 2026. Enviar Carta adjunta.\n\nSi la factura fue presentada a BIRC y supera los 22 días frente a fecha de emisión de la factura, se debe generar devolución de la factura. Carta adjunta.\n\nSe debe crear un bloqueo que no permita radicar nuevamente la factura una vez devuelta al prestador por la causal DE5601.",
     "visible": false,
@@ -3578,7 +3614,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 163,
+    "diasTotalDesarrollo": 167,
     "produccion": ""
   },
   {
@@ -3956,7 +3992,25 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 20,
+    "diasTotalDesarrollo": 24,
+    "produccion": ""
+  },
+  {
+    "id": "GD772-168_8",
+    "title": "Boton devolución de incapacidades a flujo automático",
+    "assigned": "JESUS",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[16/06/2026]: En esperar definición y aprobación por parte de negocio, validar alcance funcional y definir las actividades de desarrollo necesarias para su implementación.",
+    "unit": "Bolivar",
+    "detail": "Se debe implementar una nueva funcionalidad orientada a permitir que los casos gestionados manualmente puedan ser corregidos y posteriormente devueltos al flujo automatizado de procesamiento por API. La solución permitiría que un analista realice ajustes sobre una incapacidad que no cumple validaciones y posteriormente la reincorpore al flujo automático sin necesidad de reprocesos manuales completos.",
+    "visible": false,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
     "produccion": ""
   },
   {
@@ -3974,7 +4028,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 31,
+    "diasTotalDesarrollo": 35,
     "produccion": ""
   },
   {
@@ -3992,7 +4046,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 30,
+    "diasTotalDesarrollo": 34,
     "produccion": ""
   },
   {
@@ -4262,7 +4316,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "01/04/2026",
     "fechaCompromisoCliente": "10/04/2026",
-    "diasTotalDesarrollo": 46,
+    "diasTotalDesarrollo": 50,
     "produccion": ""
   },
   {
@@ -4442,7 +4496,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "16/05/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 261,
+    "diasTotalDesarrollo": 265,
     "produccion": ""
   },
   {
@@ -4712,7 +4766,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 185,
+    "diasTotalDesarrollo": 189,
     "produccion": ""
   },
   {
@@ -4748,7 +4802,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 178,
+    "diasTotalDesarrollo": 182,
     "produccion": "30/12/2025"
   },
   {
@@ -5126,7 +5180,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 144,
+    "diasTotalDesarrollo": 148,
     "produccion": ""
   },
   {
@@ -5540,7 +5594,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 171,
+    "diasTotalDesarrollo": 175,
     "produccion": ""
   },
   {
@@ -5720,7 +5774,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 194,
+    "diasTotalDesarrollo": 198,
     "produccion": ""
   },
   {
@@ -5738,7 +5792,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 196,
+    "diasTotalDesarrollo": 200,
     "produccion": ""
   },
   {
@@ -5756,7 +5810,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 84,
+    "diasTotalDesarrollo": 88,
     "produccion": ""
   },
   {
@@ -5972,7 +6026,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 134,
+    "diasTotalDesarrollo": 138,
     "produccion": ""
   },
   {
@@ -6764,7 +6818,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 43,
+    "diasTotalDesarrollo": 47,
     "produccion": ""
   },
   {
@@ -7286,7 +7340,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 146,
+    "diasTotalDesarrollo": 150,
     "produccion": ""
   },
   {
@@ -7689,36 +7743,54 @@
     "id": "MDSB-1055508",
     "title": "Análisis de causa raíz del incidente de navegación en Zona Virtual ARL",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 0,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "09/06/2026",
-    "endDate": "",
-    "observations": "",
+    "endDate": "10/06/2026",
+    "observations": "[11/06/2026]: El análisis ya fue completado y se notificara  en el ticket  MDSB-1055508 junto  con la implementaciòn de monitoreo.\n",
     "unit": "Bolivar",
     "detail": "Realizar una revisión detallada de los registros (logs), eventos y componentes involucrados en la Oficina Virtual ARL para identificar la causa raíz del incidente presentado el 09/06/2026, en el cual las opciones del menú principal no direccionaban correctamente a los formularios y se visualizaban elementos superpuestos en la interfaz.\n\nEl análisis deberá incluir la validación de eventos ocurridos desde el día anterior al incidente, así como la verificación de procesos de compilación, generación de recursos estáticos, manejo de caché y cualquier otro factor que pudiera haber ocasionado la degradación del servicio.\n\nEntregable:\nInforme con hallazgos, causa raíz identificada, impacto generado y recomendaciones para evitar la recurrencia del incidente.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "10/06/2026",
+    "diasTotalDesarrollo": 2,
+    "produccion": ""
+  },
+  {
+    "id": "MDSB-1060707",
+    "title": "FALLA RADICACIÓN DE CASOS OFICINA EXPRESS ACCESO RAPIDO- 16 de junio",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "16/06/2026",
+    "endDate": "16/06/2026",
+    "observations": "[16/06/2026]: se efectuaron los ajustes necesarios y se realizó un nuevo balanceo del modelo de clasificación para corregir el comportamiento identificado",
+    "unit": "Bolivar",
+    "detail": "Buen día de la manera más atenta se reporta que por la oficina express se donde los clientes radican las solicitudes se esta presentando el erro de que cuando se escoge la opción de viáticos la solicitud la esta asignando para la tipología de novedades, se adjunta error que se evidencia y casos que se han encontrado el día de hoy. ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
     "id": "MDSB-1055508_1",
-    "title": "Implementación de monitoreo para la Oficina Virtual ARL",
+    "title": "Implementación de monitoreo para la Oficina Virtual ARL ( Bot)",
     "assigned": "DANILO",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "",
+    "state": "En Proceso",
+    "progress": 90,
+    "startDate": "12/06/2026",
+    "endDate": "12/06/2026",
+    "observations": "[16/06/2026]: El 12 de junio se desarrolló una solución de monitoreo automático para verificar la disponibilidad del portal y generar alertas cuando se detecten fallas de respuesta. Durante la revisión se identificó que algunas alertas recientes indicaban fallos de respuesta HTTP, aunque el portal continuaba operativo, por lo que se requiere validar si se trata de un problema de configuración, permisos o falsos positivos en el monitoreo.",
     "unit": "Bolivar",
     "detail": "Implementar mecanismos de monitoreo sobre la Oficina Virtual ARL que permitan detectar oportunamente fallas de disponibilidad, errores de navegación, problemas de carga de recursos estáticos o comportamientos anómalos que puedan afectar la experiencia de los usuarios.\n\nLa solución deberá contemplar alertamiento y seguimiento de la operación de los componentes críticos de la plataforma, con el fin de reducir los tiempos de detección y atención ante futuros incidentes.\n\nEntregable:\nMonitoreo implementado y evidencia de su configuración y funcionamiento.\n\nResponsable: Danilo Ramírez\n\nFecha compromiso: 12/06/2026",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "12/06/2026",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
@@ -7726,35 +7798,35 @@
     "title": "Proyecto Aula Alfa",
     "assigned": "DANILO",
     "state": "En Proceso",
-    "progress": 15,
+    "progress": 25,
     "startDate": "28/05/2026",
     "endDate": "",
-    "observations": "[28/05/2026]:  Se dara inicio de revisión funcional y técnica del proyecto Aula Alfa, incluyendo accesos, navegación, estilos visuales y análisis de procesos.\n[02/06/2026]: Se avanzó en la definición del modelo relacional de la solución. Para ello se revisaron las grabaciones y acuerdos de reuniones previas con el fin de construir una estructura de base de datos alineada con las necesidades identificadas. El modelo relacional se encuentra prácticamente terminado y se tiene previsto iniciar la implementación física de la base de datos y posteriormente el desarrollo de las vistas asociadas al proyecto.\nSiguiente paso, implementar la base de datos, desarrollar las vistas del sistema, construir las funcionalidades definidas en los requerimientos y continuar con el desarrollo de las historias de usuario y demás componentes funcionales del proyecto.\n[04/06/2026]: El  3 de junio se completó la construcción e implementación del modelo relacional que servirá como base para el desarrollo del proyecto. Con esta actividad finalizada, se cuenta con la estructura de datos necesaria para iniciar la construcción del backend y de los servicios API requeridos por la solución\n[09/06/2026]: Se realizaron ajustes de estilos visuales, configuración de roles en base de datos y parametrización de menús asociados a cada rol. Estas actividades corresponden a la preparación de la estructura base de la aplicación antes de continuar con funcionalidades de negocio y servicios backend.\nSe continuara con la construcción de funcionalidades backend y validar comportamiento de roles y menús.",
+    "observations": "[28/05/2026]:  Se dara inicio de revisión funcional y técnica del proyecto Aula Alfa, incluyendo accesos, navegación, estilos visuales y análisis de procesos.\n[02/06/2026]: Se avanzó en la definición del modelo relacional de la solución. Para ello se revisaron las grabaciones y acuerdos de reuniones previas con el fin de construir una estructura de base de datos alineada con las necesidades identificadas. El modelo relacional se encuentra prácticamente terminado y se tiene previsto iniciar la implementación física de la base de datos y posteriormente el desarrollo de las vistas asociadas al proyecto.\nSiguiente paso, implementar la base de datos, desarrollar las vistas del sistema, construir las funcionalidades definidas en los requerimientos y continuar con el desarrollo de las historias de usuario y demás componentes funcionales del proyecto.\n[04/06/2026]: El  3 de junio se completó la construcción e implementación del modelo relacional que servirá como base para el desarrollo del proyecto. Con esta actividad finalizada, se cuenta con la estructura de datos necesaria para iniciar la construcción del backend y de los servicios API requeridos por la solución\n[09/06/2026]: Se realizaron ajustes de estilos visuales, configuración de roles en base de datos y parametrización de menús asociados a cada rol. Estas actividades corresponden a la preparación de la estructura base de la aplicación antes de continuar con funcionalidades de negocio y servicios backend.\nSe continuara con la construcción de funcionalidades backend y validar comportamiento de roles y menús.\n[11/06/2026]: Se continúa con el desarrollo del proyecto alcanzando  un incremento del avance del  20% y se avanzara en los componentes pendientes\n[16/06/2026]: La semana anterior se implementó el módulo Biblioteca Alfa para la administración y consulta de recursos. También se desarrolló el módulo de Herramientas Alfa para la gestión de enlaces y recursos externos. Se construyeron los endpoints para crear, editar, consultar e inactivar recursos, así como las vistas de usuario conservando el diseño definido por el cliente. Adicionalmente, se mejoró el manejo de sesiones expiradas mediante mensajes amigables al usuario y se ajustó el tratamiento de errores HTTP (401, 403, 500) para evitar la exposición de mensajes técnicos.",
     "unit": "Bolivar",
     "detail": "Aula Alfa  es una plataforma virtual de formación de ARL Alfa orientada a ofrecer contenidos educativos en seguridad, salud en el trabajo y prevención de riesgos laborales. Su propósito es facilitar el acceso a cursos, microcursos, capacitaciones, encuentros educativos, biblioteca de recursos, herramientas de apoyo y certificación.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 8,
+    "diasTotalDesarrollo": 12,
     "produccion": ""
   },
   {
     "id": "MDSB-1051904",
     "title": "Incidencias 3 de junio– Entrenamiento Oficina Express",
     "assigned": "DANILO",
-    "state": "En Proceso",
-    "progress": 0,
+    "state": "Finalizado",
+    "progress": 100,
     "startDate": "09/06/2026",
-    "endDate": "",
-    "observations": "[04/06/2026]: Se evaluara restricciones sobre el entrenamiento, revisar el modelo actual y analizar la implementación de un modelo independiente para administración de entrenamiento.\n[09/06/2026]; No presentó avances durante los últimos días debido a la priorización de otras tareas relacionadas con instalaciones y despliegues de Alfa (INTERNO-D070).\nHoy se pretende analizar y corregir las incidencias reportadas.",
+    "endDate": "10/06/2026",
+    "observations": "[04/06/2026]: Se evaluara restricciones sobre el entrenamiento, revisar el modelo actual y analizar la implementación de un modelo independiente para administración de entrenamiento.\n[09/06/2026]; No presentó avances durante los últimos días debido a la priorización de otras tareas relacionadas con instalaciones y despliegues de Alfa (INTERNO-D070).\nHoy se pretende analizar y corregir las incidencias reportadas.\n[11/06/2026]: El 10 de junio se informó el cierre técnico de las incidencias reportadas en Oficina Express. Durante el análisis se identificó que el modelo presentaba comportamientos inconsistentes debido a que algunas solicitudes obtenían porcentajes de confianza similares, provocando respuestas diferentes ante consultas equivalentes. También se detectó que el reconocimiento dependía excesivamente de textos muy parecidos a los utilizados durante el entrenamiento. Como solución se ajustó el balance del modelo y se incorporaron nuevas variantes de redacción para mejorar el reconocimiento de solicitudes expresadas de distintas formas.",
     "unit": "Bolivar",
     "detail": "Se identificó que el entrenamiento realizado por usuarios está generando cambios no deseados en la clasificación de tipologías. También se requiere reconocer variaciones de texto que representen la misma intención.",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 1,
+    "diasTotalDesarrollo": 2,
     "produccion": ""
   },
   {
@@ -7779,36 +7851,36 @@
     "id": "INTERNO-D068",
     "title": "Implementación y migración de ambiente de TEST a PHP 8.5",
     "assigned": "DANILO",
-    "state": "En Proceso",
+    "state": "Pendiente Cliente",
     "progress": 0,
     "startDate": "03/06/2026",
     "endDate": "",
-    "observations": "[03/06/2026]: Se escala solicitud MDSB-1052621  solicitando  la habilitación de las instancias del ambiente Stage, cuenta 886662616829, para continuar con el proceso de migración\n[04/06/2026]: La solicitud  fue cancelada  indicando   \"Hacer esta solicitud a Infracloud\"\n[09/06/2026]: Se escala ticket MDSB-1055779 realizando la solicitud de habilitación de las instancias del ambiente Stage a Infraestructura.",
+    "observations": "[03/06/2026]: Se escala solicitud MDSB-1052621  solicitando  la habilitación de las instancias del ambiente Stage, cuenta 886662616829, para continuar con el proceso de migración\n[04/06/2026]: La solicitud  fue cancelada  indicando   \"Hacer esta solicitud a Infracloud\"\n[09/06/2026]: Se escala ticket MDSB-1055779 realizando la solicitud de habilitación de las instancias del ambiente Stage a Infraestructura.\n[11/06/2026]: A la fecha no hemos recibido respuesta por parte del área de Infraestructura respecto al ticket de solicitud de habilitación de las instancias del ambiente Stage.\n[16/06/2026]: Continúa pendiente la entrega de las instancias de pruebas por parte del cliente. El avance del requerimiento depende completamente de la resolución del ticket gestionado por el equipo del cliente, por lo que actualmente no es posible iniciar las actividades técnicas asociadas a estos ambientes.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 4,
+    "diasTotalDesarrollo": 8,
     "produccion": ""
   },
   {
     "id": "INTERNO-D064",
     "title": "Implementación y migración de ambiente de desarrollo a PHP 8.5",
     "assigned": "DANILO",
-    "state": "Pendiente Cliente",
+    "state": "En Proceso",
     "progress": 90,
     "startDate": "08/05/2026",
     "endDate": "",
-    "observations": "[12/05/2026]: Durante el viernes 8  y el  11 de mayo se avanzó en la construcción de las nuevas instancias de ambientes de desarrollo, incluyendo la instalación de aplicaciones, configuraciones de seguridad y adecuaciones necesarias para soportar PHP 8.5. Se realizaron trabajos conjuntos con Jairo para resolver configuraciones y validar funcionamiento general de los ambientes. También se confirmó que Ubuntu 26 instala PHP 8.5 por defecto, por lo que el equipo decidió continuar inicialmente con esta versión mientras se evalúa la compatibilidad de las aplicaciones. Adicionalmente, se definió como estrategia futura desplegar producción sobre una nueva instancia Ubuntu 26 en lugar de realizar actualizaciones progresivas desde Ubuntu 20. Se identificó que el mayor esfuerzo estará en adaptar funciones deprecadas, librerías y módulos de Nativo para compatibilidad con la nueva versión de PHP.\n[21/05/2026]: La mayoria  de los aplicativos se encuentran  listos  para realizar la  migración  al ambiente de desarrollo . \n\nSe escala el jira MDSB-1044663  solicitan ajustar los privilegios del usuario app_imagine_dev para que pueda realizar cualquier acción sobre cualquier esquema, tablas y secuencia, conservando el mismo comportamiento tradicional, con el que se ha trabajado siempre en los ambientes de desarrollo.\n\n[22/05/2026]: Confirman asignación de privilegios.\n[26/05/2026]: Se confirma que el portal de  ARL y Salud ya fueron desplegados al ambiente de desarrollo practicamente listo para pruebas.. Se realizaron validaciones sobre la base de datos y se identificó que gran parte de las fallas funcionales dependen directamente de su estabilización una vez completado este ajuste, los portales actuales deberían quedar operativos nuevamente.\n[28/05/2026]: El 27 de mayo se confirma normalización en la base de datos, quedaria pendiente por finalizar pruebas de seguridad y validar comportamiento funcional posterior a migración.\n[02/06/2026]: se tiene prevista una evaluación de seguridad sobre el ambiente de desarrollo con el objetivo de alcanzar una calificación mínima de nivel A antes de solicitar la habilitación del ambiente de test\nSe identifica que el usurio no tiene permisos para acceder a DEV confirmando que la IP no ha cambiado, de acuardo a validaciones posiblemente debe conectarse a la VPN pero tambien presenta inconvenientes para la conexion, .\nSe escala Ticket MDSB-1051697 solicitando ayuda para conexión a la VPN.\n[04/06/2026]: Pendiente confirmaciòn de informaiòn del solicitante  requerida en el ticket. ",
+    "observations": "[12/05/2026]: Durante el viernes 8  y el  11 de mayo se avanzó en la construcción de las nuevas instancias de ambientes de desarrollo, incluyendo la instalación de aplicaciones, configuraciones de seguridad y adecuaciones necesarias para soportar PHP 8.5. Se realizaron trabajos conjuntos con Jairo para resolver configuraciones y validar funcionamiento general de los ambientes. También se confirmó que Ubuntu 26 instala PHP 8.5 por defecto, por lo que el equipo decidió continuar inicialmente con esta versión mientras se evalúa la compatibilidad de las aplicaciones. Adicionalmente, se definió como estrategia futura desplegar producción sobre una nueva instancia Ubuntu 26 en lugar de realizar actualizaciones progresivas desde Ubuntu 20. Se identificó que el mayor esfuerzo estará en adaptar funciones deprecadas, librerías y módulos de Nativo para compatibilidad con la nueva versión de PHP.\n[21/05/2026]: La mayoria  de los aplicativos se encuentran  listos  para realizar la  migración  al ambiente de desarrollo . \n\nSe escala el jira MDSB-1044663  solicitan ajustar los privilegios del usuario app_imagine_dev para que pueda realizar cualquier acción sobre cualquier esquema, tablas y secuencia, conservando el mismo comportamiento tradicional, con el que se ha trabajado siempre en los ambientes de desarrollo.\n\n[22/05/2026]: Confirman asignación de privilegios.\n[26/05/2026]: Se confirma que el portal de  ARL y Salud ya fueron desplegados al ambiente de desarrollo practicamente listo para pruebas.. Se realizaron validaciones sobre la base de datos y se identificó que gran parte de las fallas funcionales dependen directamente de su estabilización una vez completado este ajuste, los portales actuales deberían quedar operativos nuevamente.\n[28/05/2026]: El 27 de mayo se confirma normalización en la base de datos, quedaria pendiente por finalizar pruebas de seguridad y validar comportamiento funcional posterior a migración.\n[02/06/2026]: se tiene prevista una evaluación de seguridad sobre el ambiente de desarrollo con el objetivo de alcanzar una calificación mínima de nivel A antes de solicitar la habilitación del ambiente de test\nSe identifica que el usurio no tiene permisos para acceder a DEV confirmando que la IP no ha cambiado, de acuardo a validaciones posiblemente debe conectarse a la VPN pero tambien presenta inconvenientes para la conexion, .\nSe escala Ticket MDSB-1051697 solicitando ayuda para conexión a la VPN.\n[04/06/2026]: Pendiente confirmaciòn de informaiòn del solicitante  requerida en el ticket. \n[16/06/2026]: Las actividades relacionadas con pruebas de seguridad permanecen bloqueadas debido a la falta de acceso VPN y permisos sobre los ambientes requeridos. Hasta que el cliente habilite los accesos correspondientes no será posible continuar con las validaciones programadas.\n\nHoy  sobre las 12 m confirman que el acceso a la VPN ha quedado solucionado con exito.",
     "unit": "Bolivar",
     "detail": "",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 21,
+    "diasTotalDesarrollo": 25,
     "produccion": ""
   },
   {
@@ -7880,7 +7952,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "20/05/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 15,
+    "diasTotalDesarrollo": 19,
     "produccion": ""
   },
   {
@@ -7898,7 +7970,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 13,
+    "diasTotalDesarrollo": 17,
     "produccion": ""
   },
   {
@@ -7945,14 +8017,14 @@
     "progress": 30,
     "startDate": "16/04/2026",
     "endDate": "",
-    "observations": "[16/04/2026]: Hoy se iniciara análisis del requerimiento y revisión de documentación, tras finalizar los ajustes de oficina express\n[21/04/2026]: Se cuenta con una base funcional para la lectura de correos (implementación en FastAPI).  El desarrollo  es pausado por un cambio de prioridades de parte de gerencia para el req \"Implementación Sistema de Cuentas Médicas (Ollama)\"\n[23/04/2026]: El desarrollo de este módulo se encuentra pausado, dado que existen otras prioridades activas. No se proyectan avances en el corto plazo.\n[05/05/2026]: Continua en  pausa  por atension de otras prioridades.\n[07/05/2025]: El requerimiento se encuentra pausado temporalmente mientras se prioriza la estabilización y configuración del ambiente Alpha.\n[21/05/2026]: Se envian HU al cliente para su analisis y aprobación,  el inicio de desarrollo  queda pendientes  debido a la prieoridad de gestionar los ambientes bajos",
+    "observations": "[16/04/2026]: Hoy se iniciara análisis del requerimiento y revisión de documentación, tras finalizar los ajustes de oficina express\n[21/04/2026]: Se cuenta con una base funcional para la lectura de correos (implementación en FastAPI).  El desarrollo  es pausado por un cambio de prioridades de parte de gerencia para el req \"Implementación Sistema de Cuentas Médicas (Ollama)\"\n[23/04/2026]: El desarrollo de este módulo se encuentra pausado, dado que existen otras prioridades activas. No se proyectan avances en el corto plazo.\n[05/05/2026]: Continua en  pausa  por atension de otras prioridades.\n[07/05/2025]: El requerimiento se encuentra pausado temporalmente mientras se prioriza la estabilización y configuración del ambiente Alpha.\n[21/05/2026]: Se envian HU al cliente para su analisis y aprobación,  el inicio de desarrollo  queda pendientes  debido a la prieoridad de gestionar los ambientes bajos\n[11/06/2026]: se estimó que únicamente la etapa de entrenamiento y pruebas podría requerir entre 15 y 20 días de dedicación, mientras que la implementación completa podría extenderse hasta aproximadamente 3 meses dependiendo de la disponibilidad del equipo y las prioridades actuales.",
     "unit": "Bolivar",
     "detail": "1. DESCRIPCIÓN DEL REQUERIMIENTO   \n\nSe requiere crear módulo para la administración del correo electrónico  \nnotificaciones.calificacionarl@segurosbolivar.com donde se realice la radicación  \nautomatica en el aplicativo imagine bajo las mismas condiciones del correo  \noperacioninternaarl@segurosbolivar.com  \n\n1.2 OBJETIVO  \n● Radicar en el aplicativo imagine la información que ingresa a la cuenta de  \ncorreo notificaciones.calificacionarl@segurosbolivar.com  \n\n2. REQUERIMIENTOS FUNCIONALES  \n2.1 Creación de caso en imagine  \nSe requiere que toda la información que ingresa al correo  \nnotificaciones.calificacionarl@segurosbolivar.com sea radica de manera  \nautomatica en el aplicativo de imagine manteniendo la totalidad de los adjuntos,  \nteniendo en cuenta:  \nInformación de radicación  \nSe debe poder visualizar el correo desde imagine cómo funciona actualmente el  \ncorreo operacioninternaarl@segurosbolivar.com  \n\nSe deben cargar las imagenes al caso de acuerdo a los adjuntos que remite el  \ncorreo electrónico  \n\nDebe permitir la corrección de tipología [Requerimientos / Correcciones],  \nduplicidad de caso con los adjuntos, retomar y cierre de caso como lo permite  \noperacioninternaarl@segurosbolivar.com  \n\nDebe buscar el número de documento relacionado en el asunto y cuerpo de correo  \nen las tablas de trabajadores y empresas, y asignar ese nit o número de  \ndocumento al caso, si no se encuentra información debe asignar el nit 999999999  \ncomo funciona operacioninternaarl@segurosbolivar.com  \n\nParámetros de asignación:  \n\nSe debe realizar la asignación a las tipologías teniendo en cuenta las palabras  \nclaves en asunto (parámetro 1), palabras claves en cuerpo del correo (parámetro  \n2) y los remitentes o dominios (parámetro 3), por lo cual se espera poder tener  \nparametrizar de la siguiente manera:  \nEjemplo: Si llega un correo de @juntaregionalcesar.com y en asunto indica  \n“Notificación”, debe quedar asignado a la tipología “Dictamen junta regional”.  \nDebe ser obligatorio mínimo un solo parámetro y opcional entre dos y tres.  \nSi la información no se encuentra clasificada, el sistema deberá dejarlo en la  \nbandeja del funcionario para asignación manual (como funciona actualmente).  \nExcepciones para la creación de caso:  \nNo se debe radicar lo que llega como copia de caso de la oficina de juntas  \n\n2.1.1 Bloqueo de correo de asignación  \nSe requiere poder bloquear un asunto específico como “Confirmación de lectura:  \nComunicación de salida”, este llegará al correo pero no será radicado.  \n2.1.2 Informe y control  \nSe requiere poder contar con un informe descargable por rango de fechas donde se  \npuedan obtener los siguientes datos:  \n● Radicado  \n● Asunto  \n● Fecha (fecha en la cual llegó el correo y se radicó)  \n● Remitente  \n● Asignación (manual si llego a la bandeja de funcionario para asignar o Automática  \nsi fue clasificado por palabra clave)  \n● Usuario que asignó (nombre si fue manual, y si fue automático Buzón ARL)  \nComo control se requiere poder tener un informe diario donde se indique la cantidad de  \ncorreos que llegaron (correo) y la cantidad radicados (imagine), en caso de que un correo  \nllegó pero no esté radicado se debe poder obtener el listado de los casos para radicación  \nmanual (no leído), el listado debe tener asunto y remitente.  \nRegla: Crear una categoría en el informe para errores de sistema (ej. caída de conexión  \ncon el servidor de Imagine). Esto permite diferenciar un correo \"no leído\" de uno que no  \nse radicó por una falla técnica.  \n2.1.3 Acciones masivas  \nSe requiere tener la posibilidad de realizar anulación masiva de casos o reasignación  \nmasiva a una tipología.  \n2.1.4 Validación de adjuntos  \nProblema: Un correo puede ser radicado, pero si los adjuntos fallan al cargar en el visor  \nde imágenes, el caso queda incompleto.  \nRegla: Si el sistema detecta un error en la carga de adjuntos (formato no soportado o  \narchivo dañado), el caso debe marcarse con una etiqueta de alerta \"Revisión de Adjuntos\"  \npara que el funcionario sepa que debe verificar el correo original.  ",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 36,
+    "diasTotalDesarrollo": 40,
     "produccion": ""
   },
   {
@@ -7992,6 +8064,24 @@
     "produccion": ""
   },
   {
+    "id": "INTERNO-D063_1",
+    "title": "Documentación técnica Docker para Colmena",
+    "assigned": "DANILO",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "11/06/2026",
+    "endDate": "11/06/2026",
+    "observations": "[16/06/2026];  El 11 de junior se finalizó la elaboración de la documentación solicitada por Colmena relacionada con la infraestructura y componentes técnicos implementados. El documento fue preparado y entregado internamente(Jenry) para su posterior envío al cliente.",
+    "unit": "Bolivar",
+    "detail": "Se reportó la necesidad de generar documentación técnica destinada a explicar el uso de Docker en producción, especialmente en lo relacionado con licenciamiento, costos y condiciones de uso. El objetivo es brindar claridad al cliente respecto a que la solución implementada no generará costos adicionales y que utiliza componentes permitidos dentro del esquema de despliegue actual",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
     "id": "INTERNO-D061",
     "title": "Nuevo portal  de Cuentas Médicas Bolivar",
     "assigned": "DANILO",
@@ -8024,7 +8114,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 33,
+    "diasTotalDesarrollo": 37,
     "produccion": ""
   },
   {
@@ -8096,7 +8186,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 85,
+    "diasTotalDesarrollo": 89,
     "produccion": ""
   },
   {
@@ -8132,7 +8222,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 106,
+    "diasTotalDesarrollo": 110,
     "produccion": ""
   },
   {
@@ -8150,7 +8240,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 269,
+    "diasTotalDesarrollo": 273,
     "produccion": ""
   },
   {
@@ -8312,7 +8402,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 115,
+    "diasTotalDesarrollo": 119,
     "produccion": ""
   },
   {
