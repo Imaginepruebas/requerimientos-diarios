@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 351,
+    "diasTotalDesarrollo": 354,
     "produccion": ""
   },
   {
@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 351,
+    "diasTotalDesarrollo": 354,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 351,
+    "diasTotalDesarrollo": 354,
     "produccion": ""
   },
   {
@@ -68,7 +68,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 351,
+    "diasTotalDesarrollo": 354,
     "produccion": ""
   },
   {
@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 351,
+    "diasTotalDesarrollo": 354,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 351,
+    "diasTotalDesarrollo": 354,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 351,
+    "diasTotalDesarrollo": 354,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 241,
+    "diasTotalDesarrollo": 244,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 174,
+    "diasTotalDesarrollo": 177,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 172,
+    "diasTotalDesarrollo": 175,
     "produccion": ""
   },
   {
@@ -1904,7 +1904,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "19/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 58,
+    "diasTotalDesarrollo": 61,
     "produccion": ""
   },
   {
@@ -2427,6 +2427,42 @@
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "10/06/2026",
     "diasTotalDesarrollo": 0,
+    "produccion": ""
+  },
+  {
+    "id": "396",
+    "title": "Reunión Seguimiento",
+    "assigned": "NATALIA",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "18/06/2026",
+    "endDate": "18/06/2026",
+    "observations": "[19/06/2026]: Se asiste a reunión de seguimiento con el cliente ",
+    "unit": "Tuya",
+    "detail": "Agendamiento reunión con cliente de seguiimiento",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "395",
+    "title": "Soporte Casos Sarita",
+    "assigned": "NATALIA",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "19/06/2026",
+    "endDate": "19/06/2026",
+    "observations": "[19/06/2026]: Se realiza validación de caso radicado por el usuario, se da solución ",
+    "unit": "Tuya",
+    "detail": "Cliente radican casos en plataforma ",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   }
 ]
