@@ -356,7 +356,7 @@
     "diasEstimadosDesarrollo": 8,
     "fechaEstimadaEntrega": "06/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 74,
+    "diasTotalDesarrollo": 79,
     "produccion": "11/03/2026"
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 195,
+    "diasTotalDesarrollo": 200,
     "produccion": ""
   },
   {
@@ -572,7 +572,7 @@
     "diasEstimadosDesarrollo": 15,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 170,
+    "diasTotalDesarrollo": 175,
     "produccion": ""
   },
   {
@@ -662,7 +662,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "13/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 63,
+    "diasTotalDesarrollo": 68,
     "produccion": "17/03/2026"
   },
   {
@@ -986,7 +986,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "18/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 60,
+    "diasTotalDesarrollo": 65,
     "produccion": "24/03/2026"
   },
   {
@@ -1004,7 +1004,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "18/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 59,
+    "diasTotalDesarrollo": 64,
     "produccion": "18/03/2026"
   },
   {
@@ -1022,7 +1022,7 @@
     "diasEstimadosDesarrollo": 7,
     "fechaEstimadaEntrega": "28/04/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 39,
+    "diasTotalDesarrollo": 44,
     "produccion": "04/05/2026"
   },
   {
@@ -1040,7 +1040,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 53,
+    "diasTotalDesarrollo": 58,
     "produccion": ""
   },
   {
@@ -1148,7 +1148,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "26/05/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 15,
+    "diasTotalDesarrollo": 20,
     "produccion": "26/05/2026"
   },
   {
@@ -1166,7 +1166,7 @@
     "diasEstimadosDesarrollo": 2,
     "fechaEstimadaEntrega": "28/05/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 14,
+    "diasTotalDesarrollo": 19,
     "produccion": "28/05/2026"
   },
   {
@@ -1195,14 +1195,14 @@
     "progress": 80,
     "startDate": "28/05/2026",
     "endDate": "",
-    "observations": "[25/05/2026] Se entrega documento con el requerimiento a Don HErnán y el crea la opción\n[26/05/2026] Se piden ajustes sobre la información pintada en pantalla y y se realizan primeras pruebas de subir soportes\n[27/05/2026] se solicita una adición de validación a la cantidad de folios, y se pide nuevamente ajustes a la  pantalla principal que muestra información innecesaria y satura la vista\n[28/05/2026] Se confirma que puede ser entregado el proyecto para ponerlo en desarrollo y empezar a hacer los ajsutes relacionados a conexión base de datos y url destino de las imágenes adecuadas al servidor",
+    "observations": "[25/05/2026] Se entrega documento con el requerimiento a Don HErnán y el crea la opción\n[26/05/2026] Se piden ajustes sobre la información pintada en pantalla y y se realizan primeras pruebas de subir soportes\n[27/05/2026] se solicita una adición de validación a la cantidad de folios, y se pide nuevamente ajustes a la  pantalla principal que muestra información innecesaria y satura la vista\n[28/05/2026] Se confirma que puede ser entregado el proyecto para ponerlo en desarrollo y empezar a hacer los ajsutes relacionados a conexión base de datos\n[23/06/2026] Se explica a Jhon, para ajuste de url destino de las imágenes adecuadas al servidor, y que no cargeu pagina de logueo, sino que se incoque el usuario del logueo incial y se lleve a ese link",
     "unit": "Colmedica",
     "detail": "Realizar el indexador de hojas de vida y dejar de usar el access de indexación actual y el de importación, se escanerarn las guias de las hojas de vida  por paquete documental y se debe crear opción donde se consulte la guia y se adjunten los soportes, para que queden publicados en la carpeta del funcionario",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 13,
+    "diasTotalDesarrollo": 18,
     "produccion": ""
   },
   {
@@ -1220,7 +1220,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 9,
+    "diasTotalDesarrollo": 14,
     "produccion": ""
   },
   {
@@ -1260,6 +1260,24 @@
     "produccion": ""
   },
   {
+    "id": "OPT_53",
+    "title": "Tutelas - Ajuste de Visor Imagenes",
+    "assigned": "JENNIFER",
+    "state": "Pruebas Cliente",
+    "progress": 100,
+    "startDate": "18/06/2026",
+    "endDate": "",
+    "observations": "[18/06/2026] se evalua y revisa el visor actual de las archivos que se suben de tutelas y se inicia el ajuste según visro actual de afiliaciones\n[19/06/2026] se pasa a pruebas y se informa al cliente para que revisen la visualización",
+    "unit": "Colmedica",
+    "detail": "Ajustar el visor para ver imágenes tiff,pdf,jpg,png",
+    "visible": false,
+    "diasEstimadosDesarrollo": 2,
+    "fechaEstimadaEntrega": "19/06/2026",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 5,
+    "produccion": ""
+  },
+  {
     "id": "",
     "title": "Afiliaciones POS - Completar descarga de cartas Derechos y Deberes",
     "assigned": "JENNIFER",
@@ -1267,7 +1285,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[19/11/2025] Posible mejora detectada por Imagine -Jennifer",
     "unit": "Colmedica",
     "detail": "",
     "visible": false,
@@ -1285,7 +1303,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[19/11/2025] Posible mejora detectada por Imagine -Jennifer",
+    "observations": "",
     "unit": "Colmedica",
     "detail": "Opción para eliminar imágenes duplicadas dentro de la ya actual de reproceso de Afiliaciones Pre",
     "visible": false,
@@ -1298,7 +1316,7 @@
   {
     "id": "",
     "title": "Afiliaciones POS - Consumo Puntual de las afiliaciones",
-    "assigned": "JENNIFER",
+    "assigned": "",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -1321,7 +1339,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "[19/11/2025] Posible mejora detectada por Imagine -Jennifer",
     "unit": "Colmedica",
     "detail": "",
     "visible": false,
@@ -1339,7 +1357,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "[19/11/2025] Posible mejora detectada por Imagine -Jennifer",
+    "observations": "",
     "unit": "Colmedica",
     "detail": "Opción para eliminar imágenes duplicadas dentro de la ya actual de reproceso de Afiliaciones Pre",
     "visible": false,
@@ -1357,7 +1375,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "",
+    "observations": "01/2026 Posible mejora detectada por Imagine -Jennifer",
     "unit": "Colmedica",
     "detail": "",
     "visible": false,
@@ -1370,7 +1388,7 @@
   {
     "id": "",
     "title": "Convenios Medicos - Cargue Masivo de Planes a Nits",
-    "assigned": "",
+    "assigned": "JENNIFER",
     "state": "Pendiente",
     "progress": 0,
     "startDate": "",
@@ -1393,7 +1411,7 @@
     "progress": 0,
     "startDate": "",
     "endDate": "",
-    "observations": "01/2026 Posible mejora detectada por Imagine -Jennifer",
+    "observations": "",
     "unit": "Colmedica",
     "detail": "Completar el  proceso del cargue via web, el cliente ya carga el excel por el sitio web de imagine, Y se quiere migrar lo que hace el access que corresponde a la radicación y distribucion en las tablas definitas de encabezado y detalle",
     "visible": false,

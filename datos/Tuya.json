@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 354,
+    "diasTotalDesarrollo": 356,
     "produccion": ""
   },
   {
@@ -32,7 +32,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 354,
+    "diasTotalDesarrollo": 356,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 354,
+    "diasTotalDesarrollo": 356,
     "produccion": ""
   },
   {
@@ -68,7 +68,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 354,
+    "diasTotalDesarrollo": 356,
     "produccion": ""
   },
   {
@@ -86,7 +86,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 354,
+    "diasTotalDesarrollo": 356,
     "produccion": ""
   },
   {
@@ -104,7 +104,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 354,
+    "diasTotalDesarrollo": 356,
     "produccion": ""
   },
   {
@@ -122,7 +122,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 354,
+    "diasTotalDesarrollo": 356,
     "produccion": ""
   },
   {
@@ -284,7 +284,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 244,
+    "diasTotalDesarrollo": 246,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 18,
     "fechaEstimadaEntrega": "23/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 177,
+    "diasTotalDesarrollo": 179,
     "produccion": ""
   },
   {
@@ -752,7 +752,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 175,
+    "diasTotalDesarrollo": 177,
     "produccion": ""
   },
   {
@@ -1904,7 +1904,7 @@
     "diasEstimadosDesarrollo": 1,
     "fechaEstimadaEntrega": "19/03/2026",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 61,
+    "diasTotalDesarrollo": 63,
     "produccion": ""
   },
   {
@@ -2415,22 +2415,22 @@
     "id": "394",
     "title": "Solicitud Revision Permisos Usuario",
     "assigned": "FAVER",
-    "state": "Pendiente",
-    "progress": 0,
-    "startDate": "",
-    "endDate": "",
-    "observations": "[04/06/2026]: Se realiza reunión con los usuarios para aclarar el alcance de la solicitud.",
+    "state": "Finalizado",
+    "progress": 100,
+    "startDate": "22/06/2026",
+    "endDate": "22/06/2026",
+    "observations": "[04/06/2026]: Se realiza reunión con los usuarios para aclarar el alcance de la solicitud.\n[23/06/2026]: Se genera el informe y se envia al usuario.",
     "unit": "Tuya",
     "detail": "Desde seguridad solicitan entregar un informe de uso de pemrisos en el aplicativo de Imagine sobre varios usuarios",
     "visible": true,
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "10/06/2026",
-    "diasTotalDesarrollo": 0,
+    "diasTotalDesarrollo": 1,
     "produccion": ""
   },
   {
-    "id": "396",
+    "id": "395",
     "title": "Reunión Seguimiento",
     "assigned": "NATALIA",
     "state": "Finalizado",
@@ -2448,7 +2448,7 @@
     "produccion": ""
   },
   {
-    "id": "395",
+    "id": "396",
     "title": "Soporte Casos Sarita",
     "assigned": "NATALIA",
     "state": "Finalizado",
@@ -2463,6 +2463,24 @@
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
     "diasTotalDesarrollo": 1,
+    "produccion": ""
+  },
+  {
+    "id": "397",
+    "title": "Solicitud soporte base moroso ",
+    "assigned": "FAVER Y NATALIA",
+    "state": "Pendiente",
+    "progress": 0,
+    "startDate": "",
+    "endDate": "",
+    "observations": "[23/06/2026]: Cliente envia email con solicitud morosos\n",
+    "unit": "Tuya",
+    "detail": "Cliente envía solicitud de archivos para un documento en especifico a 23 de junio",
+    "visible": true,
+    "diasEstimadosDesarrollo": 0,
+    "fechaEstimadaEntrega": "",
+    "fechaCompromisoCliente": "",
+    "diasTotalDesarrollo": 0,
     "produccion": ""
   }
 ]

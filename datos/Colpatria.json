@@ -14,7 +14,7 @@
     "diasEstimadosDesarrollo": 17,
     "fechaEstimadaEntrega": "24/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 175,
+    "diasTotalDesarrollo": 177,
     "produccion": ""
   },
   {
@@ -50,7 +50,7 @@
     "diasEstimadosDesarrollo": 20,
     "fechaEstimadaEntrega": "26/09/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 197,
+    "diasTotalDesarrollo": 199,
     "produccion": ""
   },
   {
@@ -140,7 +140,7 @@
     "diasEstimadosDesarrollo": 63,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 216,
+    "diasTotalDesarrollo": 218,
     "produccion": ""
   },
   {
@@ -302,7 +302,7 @@
     "diasEstimadosDesarrollo": 5,
     "fechaEstimadaEntrega": "31/10/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 158,
+    "diasTotalDesarrollo": 160,
     "produccion": ""
   },
   {
@@ -392,7 +392,7 @@
     "diasEstimadosDesarrollo": 23,
     "fechaEstimadaEntrega": "28/11/2025",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 158,
+    "diasTotalDesarrollo": 160,
     "produccion": ""
   },
   {
@@ -608,7 +608,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 153,
+    "diasTotalDesarrollo": 155,
     "produccion": "30/01/2026"
   },
   {
@@ -1256,7 +1256,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 23,
+    "diasTotalDesarrollo": 25,
     "produccion": ""
   },
   {
@@ -1310,7 +1310,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 28,
+    "diasTotalDesarrollo": 30,
     "produccion": ""
   },
   {
@@ -1328,7 +1328,7 @@
     "diasEstimadosDesarrollo": 0,
     "fechaEstimadaEntrega": "",
     "fechaCompromisoCliente": "",
-    "diasTotalDesarrollo": 28,
+    "diasTotalDesarrollo": 30,
     "produccion": ""
   },
   {
@@ -1479,7 +1479,7 @@
     "id": "COLP26-0047",
     "title": "Crear un nuevo Informe del radicador",
     "assigned": "FAVER LOPEZ",
-    "state": "En Proceso",
+    "state": "En Test",
     "progress": 100,
     "startDate": "11/06/2026",
     "endDate": "",
